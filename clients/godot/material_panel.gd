@@ -56,7 +56,10 @@ func update_world(value: Dictionary, can_act: bool) -> void:
 		return
 	var source: Dictionary = value.materialAccess
 	var reservation = source.currentReservation
-	summary.text = "未采木材 %d / 6 · 剩余来源额度 %d" % [source.stockWood, 12 - source.generatedWood]
+	if source.version == 2:
+		summary.text = "未采木材 %d / 6 · 累计产出 %d\n每10服务秒最多产3，不计停服时间" % [source.stockWood, source.generatedWood]
+	else:
+		summary.text = "未采木材 %d / 6 · 剩余来源额度 %d" % [source.stockWood, 12 - source.generatedWood]
 	request_button.disabled = not can_act or not source.active or reservation != null
 	travel_button.disabled = not can_act
 	harvest_button.disabled = true
@@ -65,7 +68,7 @@ func update_world(value: Dictionary, can_act: bool) -> void:
 		reservation_label.text = "采集区尚未开启。此处可通行，保留用于采集。"
 	elif not reservation is Dictionary:
 		reservation_label.text = "预约后按顺序获得3份采集资格。\n需要亲自到达采集区，每次采集1木材。"
-		if source.stockWood + 12 - source.generatedWood < 3:
+		if source.version == 1 and source.stockWood + 12 - source.generatedWood < 3:
 			reservation_label.text = "本来源剩余材料不足3份，无法接受新预约。"
 			request_button.disabled = true
 	else:

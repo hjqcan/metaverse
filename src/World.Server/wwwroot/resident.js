@@ -371,6 +371,9 @@
       ? "材料入口领取已核实：原预约 → 亲自领取 3 木材；建造另行确认。"
       : material.reserved && material.consistent ? `已确认原预约 · 领取 ${material.count} / 3 木材；尚未全部领取。`
       : "尚未核实本任务材料领取；排队、余额或来源存量不能代替原领取事实。" : "");
+    const sourceDescription = window.MaterialReport.sourceDescription(data);
+    $("material-source-policy").hidden = sourceDescription === "";
+    put("material-source-policy", sourceDescription);
     $("query-budget-item").hidden = b.limits.queries === undefined;
     const warnings = [];
     if (!notes.consistent) warnings.push("手记汇总与原命令、正文、引用或作者记录不一致。");

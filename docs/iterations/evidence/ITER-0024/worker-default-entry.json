@@ -1,0 +1,45 @@
+{
+  "suite": "continuous-material-mission-http",
+  "validationLevel": "builder-self-check",
+  "actualModelCalls": 0,
+  "passed": true,
+  "testsRun": 1,
+  "tests": [
+    {
+      "test": "__main__.ContinuousMaterialMissionAcceptance.test_02_first_failed_query_budgets_and_shared_note_startup",
+      "passed": true,
+      "seconds": 2.1715551000088453
+    }
+  ],
+  "skipped": [],
+  "sourceHashesBefore": {
+    "scripts/resident_material_access.py": "785278aaff3e5889c312fb8fdfcfed746572125193d14d407341ff045b30e55f",
+    "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+    "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+    "tests/continuous_material_mission_api.py": "ebe5a47b18e88e4d7769d71b0712e66c3421182be8527f46c77169683d42bcf3",
+    "tests/fixtures/continuous-material-platform.json": "281e29127f49e432d94b48272a811a1a409b1f5c04e7a9cc47e7a3a1f8e3c86e"
+  },
+  "sourceHashesAfter": {
+    "scripts/resident_material_access.py": "785278aaff3e5889c312fb8fdfcfed746572125193d14d407341ff045b30e55f",
+    "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+    "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+    "tests/continuous_material_mission_api.py": "ebe5a47b18e88e4d7769d71b0712e66c3421182be8527f46c77169683d42bcf3",
+    "tests/fixtures/continuous-material-platform.json": "281e29127f49e432d94b48272a811a1a409b1f5c04e7a9cc47e7a3a1f8e3c86e"
+  },
+  "sourceStable": true,
+  "allStartedServicesStopped": true,
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T060522Z-d1cc5d/seed/test_01_same_instance_two_authors_reference_return_and_old_facts",
+  "baselineSha256": "03b714414fb29e3d0df9e6ad3b20e4dd55871d26ec48704fd2bc890542a8ca12",
+  "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T060522Z-d1cc5d/bin/World.Server.dll",
+  "dllSha256": "82e77563c9571185988a84a30b5511d9b7701329bfc2ec949cfa5c07f1be2da3",
+  "priorPython": "/home/wangjunfeng/文档/Workspace/metaverse/scripts",
+  "actualPreviousPython": false,
+  "priorPythonHashes": {
+    "resident_material_access.py": "785278aaff3e5889c312fb8fdfcfed746572125193d14d407341ff045b30e55f",
+    "resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+    "resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e"
+  },
+  "failureDetails": [],
+  "temporaryRuntimeRemoved": true,
+  "sourceDll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/core-v1/bin/World.Server.dll"
+}

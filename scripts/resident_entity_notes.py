@@ -20,21 +20,21 @@ class StartupBudget(RuntimeError):
     """An unbound task exhausted its original budget without inventing an identity."""
 
 
-def new_startup(spec, endpoint, now):
-    return {'schemaVersion': 1, 'kind': STARTUP, 'spec': deepcopy(spec), 'endpoint': deepcopy(endpoint),
+def new_startup(spec, endpoint, now, *, kind=STARTUP):
+    return {'schemaVersion': 1, 'kind': kind, 'spec': deepcopy(spec), 'endpoint': deepcopy(endpoint),
             'startedEpoch': now, 'used': {'queries': 0, 'seconds': 0}, 'queries': []}
 
 
-def valid_queries(log, count):
+def valid_queries(log, count, *, kinds=('observation', 'receipt', 'entity_note_event')):
     return (isinstance(log, list) and integer(count) and len(log) == count
             and all(isinstance(q, dict) and set(q) == {'index', 'kind'} and type(q['index']) is int
-                    and q['index'] == i and q['kind'] in ('observation', 'receipt', 'entity_note_event')
+                    and q['index'] == i and q['kind'] in kinds
                     for i, q in enumerate(log, 1)))
 
 
-def validate_startup(value, spec, endpoint):
+def validate_startup(value, spec, endpoint, *, kind=STARTUP):
     if (not isinstance(value, dict) or set(value) != {'schemaVersion', 'kind', 'spec', 'endpoint', 'startedEpoch', 'used', 'queries'}
-            or type(value['schemaVersion']) is not int or value['schemaVersion'] != 1 or value['kind'] != STARTUP
+            or type(value['schemaVersion']) is not int or value['schemaVersion'] != 1 or value['kind'] != kind
             or not equal(value['spec'], spec) or not equal(value['endpoint'], endpoint)
             or not nav.finite(value['startedEpoch']) or value['startedEpoch'] <= 0
             or not isinstance(value['used'], dict) or set(value['used']) != {'queries', 'seconds'}
@@ -42,7 +42,7 @@ def validate_startup(value, spec, endpoint):
             or value['used']['queries'] > spec['budgets']['queries']
             or not nav.finite(value['used'].get('seconds')) or value['used']['seconds'] < 0
             or any(q['kind'] != 'observation' for q in value['queries'])):
-        raise ValueError('Original entity note startup binding or budget is damaged')
+        raise ValueError('Original query-budgeted startup binding or budget is damaged')
 
 
 def identifier(value):

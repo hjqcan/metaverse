@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "testsRun": 10,
+  "results": [
+    {
+      "name": "legacy_report_without_source_remains_readable",
+      "passed": true
+    },
+    {
+      "name": "actual_continuous_cli_separates_supply_from_claims_and_fifth_platform",
+      "passed": true
+    },
+    {
+      "name": "actual_query_four_keeps_confirmed_reservation_without_harvest_or_build",
+      "passed": true
+    },
+    {
+      "name": "unknown_or_incomplete_source_policy_is_rejected_preserving_original",
+      "passed": true
+    },
+    {
+      "name": "inconsistent_phase_and_adoption_facts_are_rejected",
+      "passed": true
+    },
+    {
+      "name": "source_production_alone_does_not_confirm_reservation_or_material_acquisition",
+      "passed": true
+    },
+    {
+      "name": "historical_report_without_optional_source_snapshot_remains_valid",
+      "passed": true
+    },
+    {
+      "name": "queries_over_budget_remain_visible",
+      "passed": true
+    },
+    {
+      "name": "continuous_mobile_report_keeps_source_claims_and_budget_readable",
+      "passed": true
+    },
+    {
+      "name": "report_is_readonly_without_runtime_errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "worldRequests": [],
+  "browserVersion": "152.0.7977.82",
+  "actualModelCalls": 0
+}

@@ -99,7 +99,7 @@ internal static class MaterialSourceRules
         }
     }
 
-    public static bool Advance(SqliteConnection c, SqliteTransaction t, long now)
+    public static bool Advance(SqliteConnection c, SqliteTransaction t, long now, bool continuous = false)
     {
         var before = Scalar(c, t, "SELECT state_version FROM worlds");
         var source = Read(c, t);
@@ -119,7 +119,8 @@ internal static class MaterialSourceRules
             }
             if (source.NextProductionAtMs == next)
             {
-                var quantity = Math.Min(Quantity, Math.Min(Capacity - source.StockWood, InputBudget - source.GeneratedWood));
+                var quantity = Math.Min(Quantity, Capacity - source.StockWood);
+                if (!continuous) quantity = Math.Min(quantity, InputBudget - source.GeneratedWood);
                 var periods = quantity == 0 ? Math.Max(1, (Math.Min(now, expiry) - next) / IntervalMs + 1) : 1;
                 var period = checked(source.ProductionPeriod + periods);
                 Run(c, t, "UPDATE material_source SET next_production_ms=$next,production_period=$period,generated_wood=generated_wood+$q,stock_wood=stock_wood+$q WHERE id=1",
@@ -149,7 +150,7 @@ internal sealed partial class WorldService
     {
         if (!Scenario.SupportsMaterialAccess || materialClock is null) return;
         using var c = database.Open(); using var t = c.BeginTransaction(deferred: false);
-        var changed = MaterialSourceRules.Advance(c, t, materialClock.Now);
+        var changed = MaterialSourceRules.Advance(c, t, materialClock.Now, database.ProductionPolicy is not null);
         var fault = configuration.FaultsEnabled ? Environment.GetEnvironmentVariable("WORLD_MATERIAL_TEST_FAULT") : null;
         if (changed && fault == "before-commit") Environment.Exit(83);
         t.Commit();
@@ -162,11 +163,12 @@ internal sealed partial class WorldService
         var roster = new List<object>();
         using (var command = Command(c, t, "SELECT actor_id,operator_id FROM residents ORDER BY actor_id"))
         using (var r = command.ExecuteReader()) while (r.Read()) roster.Add(new { actorId = r.GetString(0), operatorId = r.GetString(1) });
-        body["materialAccess"] = new { version = 1, sourceId = MaterialSourceRules.SourceId,
+        body["materialAccess"] = new { version = database.ProductionPolicy is null ? 1 : 2, sourceId = MaterialSourceRules.SourceId,
             position = MaterialSourceRules.Position, buildExclusion = MaterialSourceRules.BuildExclusion,
             source.Active, source.ServiceMs, source.EnabledAtServiceMs, source.NextProductionAtMs, source.GeneratedWood, source.StockWood,
             freeWood = source.StockWood - reservations.Where(r => r.Status == "active").Sum(r => r.Remaining),
-            inputBudget = MaterialSourceRules.InputBudget, capacity = MaterialSourceRules.Capacity,
+            inputBudget = database.ProductionPolicy is null ? (long?)MaterialSourceRules.InputBudget : null,
+            productionPolicy = database.ProductionPolicy, capacity = MaterialSourceRules.Capacity,
             reservationQuantity = MaterialSourceRules.Quantity, leaseMs = MaterialSourceRules.LeaseMs,
             productionIntervalMs = MaterialSourceRules.IntervalMs,
             currentReservation = reservations.SingleOrDefault(r => r.OperatorId == identity.OperatorId && r.Status is "queued" or "active"),
@@ -187,7 +189,7 @@ internal sealed partial class WorldService
             if (reservations.Any(r => r.OperatorId == identity.OperatorId && r.Status is "queued" or "active"))
                 return (409, new("RESERVATION_ALREADY_ACTIVE", "同一已知控制组已有排队或待采预约"));
             var demand = 3 * reservations.LongCount(r => r.Status == "queued") + reservations.Where(r => r.Status == "active").Sum(r => r.Remaining);
-            if (demand + 3 > source.StockWood + MaterialSourceRules.InputBudget - source.GeneratedWood)
+            if (database.ProductionPolicy is null && demand + 3 > source.StockWood + MaterialSourceRules.InputBudget - source.GeneratedWood)
                 return (422, new("SOURCE_BUDGET_EXHAUSTED", "有限来源剩余材料不足以接纳新预约"));
             return null;
         }

@@ -1,0 +1,198 @@
+{
+  "passed": true,
+  "scope": "independent core-v2 real HTTP/SQLite",
+  "binarySha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+  "manifestSha256": "844938e0b63fcb936e901dfa283d6f661493d4e39b5412f8b04dce0e7dadeec9",
+  "seed": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-preflight/20261026T054234754936Z/world.db",
+  "seedSha256": "b3cfc119ac4ec264154714db6fa1fa4d98a089b4abe1a5e24e4dd53841be9d8a",
+  "cases": {
+    "malformed_storage": {
+      "passed": true,
+      "cases": [
+        {
+          "defect": "missing-policy-table",
+          "coldStartExit": -6,
+          "repeatAdoption": {
+            "exitCode": 1,
+            "output": "离线管理失败：InvalidOperationException\n"
+          },
+          "noDatabaseMutation": true
+        },
+        {
+          "defect": "missing-policy-row",
+          "coldStartExit": -6,
+          "repeatAdoption": {
+            "exitCode": 1,
+            "output": "离线管理失败：InvalidOperationException\n"
+          },
+          "noDatabaseMutation": true
+        },
+        {
+          "defect": "missing-policy-trigger",
+          "coldStartExit": -6,
+          "repeatAdoption": {
+            "exitCode": 1,
+            "output": "离线管理失败：InvalidOperationException\n"
+          },
+          "noDatabaseMutation": true
+        },
+        {
+          "defect": "missing-adoption-actor",
+          "coldStartExit": -6,
+          "repeatAdoption": {
+            "exitCode": -6,
+            "output": "Unhandled exception. System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.\n   at System.Text.Json.JsonElement.GetProperty(String propertyName)\n   at World.Server.ContinuousMaterialRules.ReadPolicy(SqliteConnection c, SqliteTransaction t, String instance) in /home/wangjunfeng/文档/Workspace/metaverse/src/World.Server/ContinuousMaterials.cs:line 78\n   at World.Server.WorldDatabase.AdoptContinuousMaterialSource(String expectedInstance) in /home/wangjunfeng/文档/Workspace/metaverse/src/World.Server/ContinuousMaterials.cs:line 144\n   at Program.<Main>$(String[] args) in /home/wangjunfeng/文档/Workspace/metaverse/src/World.Server/Program.cs:line 15\n   at Program.<Main>(String[] args)\n"
+          },
+          "noDatabaseMutation": true
+        },
+        {
+          "defect": "null-adoption-policy",
+          "coldStartExit": -6,
+          "repeatAdoption": {
+            "exitCode": 1,
+            "output": "离线管理失败：InvalidOperationException\n"
+          },
+          "noDatabaseMutation": true
+        },
+        {
+          "defect": "missing-production-actor",
+          "coldStartExit": -6,
+          "repeatAdoption": {
+            "exitCode": 1,
+            "output": "离线管理失败：InvalidOperationException\n"
+          },
+          "noDatabaseMutation": true
+        },
+        {
+          "defect": "null-production-quantity",
+          "coldStartExit": -6,
+          "repeatAdoption": {
+            "exitCode": 1,
+            "output": "离线管理失败：InvalidOperationException\n"
+          },
+          "noDatabaseMutation": true
+        },
+        {
+          "defect": "fraction-source-service",
+          "coldStartExit": -6,
+          "repeatAdoption": {
+            "exitCode": 1,
+            "output": "离线管理失败：InvalidOperationException\n"
+          },
+          "noDatabaseMutation": true
+        },
+        {
+          "defect": "fraction-source-enabled",
+          "coldStartExit": -6,
+          "repeatAdoption": {
+            "exitCode": 1,
+            "output": "离线管理失败：InvalidOperationException\n"
+          },
+          "noDatabaseMutation": true
+        },
+        {
+          "defect": "pre-adoption production quantity NULL",
+          "firstAdoption": {
+            "exitCode": 1,
+            "output": "离线管理失败：InvalidOperationException\n"
+          },
+          "noDatabaseMutation": true
+        }
+      ],
+      "classification": "isolated deliberately corrupted copies, no legitimate world actions",
+      "expectedRejections": 10,
+      "actualBusinessCommands": 0
+    }
+  },
+  "worlds": [
+    {
+      "name": "valid-policy-anchor",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/valid-policy-anchor",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-preflight/20261026T054234754936Z",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "invalid-missing-policy-table",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/invalid-missing-policy-table",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/valid-policy-anchor",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "invalid-missing-policy-row",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/invalid-missing-policy-row",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/valid-policy-anchor",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "invalid-missing-policy-trigger",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/invalid-missing-policy-trigger",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/valid-policy-anchor",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "invalid-missing-adoption-actor",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/invalid-missing-adoption-actor",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/valid-policy-anchor",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "invalid-null-adoption-policy",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/invalid-null-adoption-policy",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/valid-policy-anchor",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "invalid-missing-production-actor",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/invalid-missing-production-actor",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/valid-policy-anchor",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "invalid-null-production-quantity",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/invalid-null-production-quantity",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/valid-policy-anchor",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "invalid-fraction-source-service",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/invalid-fraction-source-service",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/valid-policy-anchor",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "invalid-fraction-source-enabled",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/invalid-fraction-source-enabled",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/valid-policy-anchor",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "pre-adopt-null-production",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/pre-adopt-null-production",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-preflight/20261026T054234754936Z",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    }
+  ],
+  "actualModelCalls": 0,
+  "naturalDirectSqlEdits": false,
+  "naturalClockControlled": false,
+  "runtimeReuse": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/core-v2/bin/World.Server.dll",
+    "sha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+    "readOnlySharedFrozenBinary": true,
+    "perRunRuntimeCopy": false
+  },
+  "originalSourceFilesUnchanged": true,
+  "frozenPreflightFilesUnchanged": true,
+  "allStartedProcessesExited": true
+}

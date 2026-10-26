@@ -1,0 +1,237 @@
+{
+  "passed": true,
+  "groups": 4,
+  "assertions": 47,
+  "results": [
+    {
+      "name": "ui",
+      "checks": [
+        {
+          "name": "native adapter accepts adopted original r10 world",
+          "passed": true
+        },
+        {
+          "name": "five original entities and two old notes visible",
+          "passed": true
+        },
+        {
+          "name": "continuous UI distinguishes stock rate and cumulative production",
+          "passed": true
+        },
+        {
+          "name": "exhausted original lifetime budget no longer disables new explicit request",
+          "passed": true
+        },
+        {
+          "name": "old bridge notes readable through actual panel",
+          "passed": true
+        },
+        {
+          "name": "original reference preserved",
+          "passed": true
+        },
+        {
+          "name": "rendered old-notes",
+          "passed": true
+        },
+        {
+          "name": "mouse request confirms original receipt and event",
+          "passed": true
+        },
+        {
+          "name": "real service production grants original request",
+          "passed": true
+        },
+        {
+          "name": "actual late resident walks to source",
+          "passed": true
+        },
+        {
+          "name": "own original harvest enabled 0",
+          "passed": true
+        },
+        {
+          "name": "actual harvest confirmed 0",
+          "passed": true
+        },
+        {
+          "name": "own original harvest enabled 1",
+          "passed": true
+        },
+        {
+          "name": "actual harvest confirmed 1",
+          "passed": true
+        },
+        {
+          "name": "own original harvest enabled 2",
+          "passed": true
+        },
+        {
+          "name": "actual harvest confirmed 2",
+          "passed": true
+        },
+        {
+          "name": "three actual source units in late resident inventory",
+          "passed": true
+        },
+        {
+          "name": "actual fifth platform build confirmed",
+          "passed": true
+        },
+        {
+          "name": "new platform consumes three units while old entities remain",
+          "passed": true
+        },
+        {
+          "name": "new platform belongs to late resident",
+          "passed": true
+        },
+        {
+          "name": "material actions preserve original note text author and reference",
+          "passed": true
+        },
+        {
+          "name": "completed original restores controls for next explicit action",
+          "passed": true
+        },
+        {
+          "name": "rendered built",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "policy",
+      "checks": [
+        {
+          "name": "complete policy accepted from real service",
+          "passed": true
+        },
+        {
+          "name": "missing policy id pauses observation",
+          "passed": true
+        },
+        {
+          "name": "missing policy version pauses observation",
+          "passed": true
+        },
+        {
+          "name": "missing policy adoptedAtServiceMs pauses observation",
+          "passed": true
+        },
+        {
+          "name": "missing policy adoptedAtStateVersion pauses observation",
+          "passed": true
+        },
+        {
+          "name": "missing policy adoptedAtEventCursor pauses observation",
+          "passed": true
+        },
+        {
+          "name": "missing policy generatedWoodAtAdoption pauses observation",
+          "passed": true
+        },
+        {
+          "name": "missing policy productionPeriodAtAdoption pauses observation",
+          "passed": true
+        },
+        {
+          "name": "v2 cannot masquerade as finite lifetime budget",
+          "passed": true
+        },
+        {
+          "name": "v1 cannot silently carry adopted policy",
+          "passed": true
+        },
+        {
+          "name": "future adoption clock cannot pass current capability",
+          "passed": true
+        },
+        {
+          "name": "notes capability continues in adopted material world",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "before",
+      "checks": [
+        {
+          "name": "actual policy adapter authenticated",
+          "passed": true
+        },
+        {
+          "name": "unknown request retains shared original v4 record",
+          "passed": true
+        },
+        {
+          "name": "unchanged r10 body and before facts remain recoverable",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original material request",
+          "passed": true
+        },
+        {
+          "name": "original pending disk record settles",
+          "passed": true
+        },
+        {
+          "name": "same original qualification observed",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "after",
+      "checks": [
+        {
+          "name": "actual policy adapter authenticated",
+          "passed": true
+        },
+        {
+          "name": "unknown request retains shared original v4 record",
+          "passed": true
+        },
+        {
+          "name": "unchanged r10 body and before facts remain recoverable",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original material request",
+          "passed": true
+        },
+        {
+          "name": "original pending disk record settles",
+          "passed": true
+        },
+        {
+          "name": "same original qualification observed",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "actualModelCalls": 0,
+  "sourceSha256": {
+    "clients/godot/command_evidence.gd": "f4e28ddfea3f372e6174f45f07b87792fcf3f2d7c86625f49d2f70585398bf5d",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/entity_notes_panel.gd": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803",
+    "clients/godot/main.gd": "4086812666a4b56f395c5e571d8fa607ee5fce33c1216ca4df7dfeebf23b93b9",
+    "clients/godot/material_panel.gd": "0ca9ce3e6eef38690d9bbc7e77b7e8d75f4bb654e1ab2495e7598aaa632a9798",
+    "clients/godot/pending_store.gd": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/world_client.gd": "9d30e2c8bcfc0287b68605ecdab6f046f575410a069b2ddf3a6bc729e0aca193",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "ebf2271dd1541216ec7f0785600032e18607e1b027a95a5100f41f37395535d2",
+    "tests/continuous_material_godot.py": "acd75ba3688459e0e71217cd206e92a6dc976fb84a870d32afec55b65b5fcfaa",
+    "tests/godot/continuous_material.gd": "9ef512baca6edb8cf90c26d1603623da4c7522c31c77fd12941a6a00dc1f928f"
+  },
+  "sourceUnchanged": true,
+  "dllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/baseline"
+}

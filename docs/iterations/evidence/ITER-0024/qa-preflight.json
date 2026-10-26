@@ -1,0 +1,479 @@
+{
+  "passed": true,
+  "iteration": "ITER-0024 preflight",
+  "checkedAtUtc": "2026-10-26T05:43:41.931361+00:00",
+  "headAtAudit": "c6a2406703a86304edf66a0a3cf73a8346267e01",
+  "sourceDatabase": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T045853080038Z/natural/world.db",
+  "sourceDatabaseSha256": "aa3af5bab37c1fbcb4b888de629da8e33177edfb1c0d37051742e365c9d4b9df",
+  "sourceWalSha256": "7c2ba078ecc61e1b2ada4a2d42184a74fa3022773c58fcf87fcad9df3876be79",
+  "sourceWalBytes": 4152,
+  "reusableStoppedDatabase": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-preflight/20261026T054234754936Z/world.db",
+  "reusableDatabaseSha256": "b3cfc119ac4ec264154714db6fa1fa4d98a089b4abe1a5e24e4dd53841be9d8a",
+  "accessConfigCopy": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-preflight/20261026T054234754936Z/original-files/access.json",
+  "accessConfigSha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+  "rawBackupDirectory": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-preflight/20261026T054234754936Z/original-files",
+  "facts": {
+    "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+    "schemaVersion": 10,
+    "world": {
+      "id": "foundation-01",
+      "scenario_id": "wilderness-material-access-v1",
+      "rules_version": "r10",
+      "state_version": 623,
+      "issued_wood": 24,
+      "depot_wood": 0
+    },
+    "entities": [
+      {
+        "entity_id": "efbde20b258d74a0eaca3a86e8d455755",
+        "world_id": "foundation-01",
+        "owner_actor_id": "a1",
+        "recipe_id": "bridge.v1",
+        "definition_id": "bridge",
+        "definition_version": 1,
+        "rules_version": "r10",
+        "x": 18.0,
+        "y": 12.0,
+        "embodied_wood": 6
+      },
+      {
+        "entity_id": "eca67171501f8438e9fe790bfdbef9789",
+        "world_id": "foundation-01",
+        "owner_actor_id": "a3",
+        "recipe_id": "platform.v1",
+        "definition_id": "platform",
+        "definition_version": 1,
+        "rules_version": "r10",
+        "x": 30.0,
+        "y": 14.0,
+        "embodied_wood": 3
+      },
+      {
+        "entity_id": "e9df7ee47564546f098a988085e93ce3d",
+        "world_id": "foundation-01",
+        "owner_actor_id": "a3",
+        "recipe_id": "platform.v1",
+        "definition_id": "platform",
+        "definition_version": 1,
+        "rules_version": "r10",
+        "x": 30.0,
+        "y": 17.0,
+        "embodied_wood": 3
+      },
+      {
+        "entity_id": "eb40dd030a24941f28c3fb5313fe44784",
+        "world_id": "foundation-01",
+        "owner_actor_id": "a3",
+        "recipe_id": "platform.v1",
+        "definition_id": "platform",
+        "definition_version": 1,
+        "rules_version": "r10",
+        "x": 27.0,
+        "y": 14.0,
+        "embodied_wood": 3
+      },
+      {
+        "entity_id": "e76a6cc3bf333423e874d310f1f0371a0",
+        "world_id": "foundation-01",
+        "owner_actor_id": "a3",
+        "recipe_id": "platform.v1",
+        "definition_id": "platform",
+        "definition_version": 1,
+        "rules_version": "r10",
+        "x": 27.0,
+        "y": 17.0,
+        "embodied_wood": 3
+      }
+    ],
+    "residentPublicState": [
+      {
+        "actor_id": "a1",
+        "operator_id": "local-operator",
+        "x": 15.7,
+        "y": 12.0,
+        "wood": 6
+      },
+      {
+        "actor_id": "a2",
+        "operator_id": "declared-late",
+        "x": 26.0,
+        "y": 17.0,
+        "wood": 0
+      },
+      {
+        "actor_id": "a1_alias",
+        "operator_id": "local-operator",
+        "x": 5.0,
+        "y": 7.0,
+        "wood": 0
+      },
+      {
+        "actor_id": "a3",
+        "operator_id": "declared-third",
+        "x": 27.0,
+        "y": 10.0,
+        "wood": 0
+      }
+    ],
+    "resourceNodes": [
+      {
+        "world_id": "foundation-01",
+        "node_id": "tree-west-north",
+        "kind": "tree",
+        "x": 6.2,
+        "y": 7.8,
+        "initial_wood": 3,
+        "remaining_wood": 0
+      },
+      {
+        "world_id": "foundation-01",
+        "node_id": "tree-west-south",
+        "kind": "tree",
+        "x": 9.2,
+        "y": 16.3,
+        "initial_wood": 3,
+        "remaining_wood": 0
+      },
+      {
+        "world_id": "foundation-01",
+        "node_id": "tree-east-north",
+        "kind": "tree",
+        "x": 25.4,
+        "y": 5.8,
+        "initial_wood": 3,
+        "remaining_wood": 0
+      },
+      {
+        "world_id": "foundation-01",
+        "node_id": "tree-east-south",
+        "kind": "tree",
+        "x": 25.7,
+        "y": 18.2,
+        "initial_wood": 3,
+        "remaining_wood": 0
+      }
+    ],
+    "source": {
+      "id": 1,
+      "active": 1,
+      "service_ms": 83816,
+      "enabled_at_ms": 21047,
+      "next_production_ms": 91047,
+      "production_period": 6,
+      "generated_wood": 12,
+      "stock_wood": 0
+    },
+    "production": [
+      {
+        "production_period": 1,
+        "service_ms": 31047,
+        "quantity": 3,
+        "event_seq": 258
+      },
+      {
+        "production_period": 2,
+        "service_ms": 41047,
+        "quantity": 3,
+        "event_seq": 287
+      },
+      {
+        "production_period": 3,
+        "service_ms": 51047,
+        "quantity": 3,
+        "event_seq": 337
+      },
+      {
+        "production_period": 4,
+        "service_ms": 61047,
+        "quantity": 3,
+        "event_seq": 364
+      }
+    ],
+    "reservations": [
+      {
+        "queue_sequence": 1,
+        "reservation_id": "m697f513ca56c497a9127c82571c1500c",
+        "world_id": "foundation-01",
+        "actor_id": "a3",
+        "operator_id": "declared-third",
+        "request_command_id": "3ceff92c31c04f62ac06567c8645c0a6",
+        "status": "completed",
+        "requested_at_ms": 21208,
+        "granted_at_ms": 31082,
+        "expires_at_ms": 91082,
+        "remaining": 0
+      },
+      {
+        "queue_sequence": 2,
+        "reservation_id": "m002a1ab802704b5584ebd090f400a589",
+        "world_id": "foundation-01",
+        "actor_id": "a3",
+        "operator_id": "declared-third",
+        "request_command_id": "1bf417a34ffc4271a6124ea3e8a68a79",
+        "status": "completed",
+        "requested_at_ms": 33017,
+        "granted_at_ms": 41082,
+        "expires_at_ms": 101082,
+        "remaining": 0
+      },
+      {
+        "queue_sequence": 3,
+        "reservation_id": "meb72146e737b4e62af46602198c3391f",
+        "world_id": "foundation-01",
+        "actor_id": "a3",
+        "operator_id": "declared-third",
+        "request_command_id": "83429349591e48a98540d5df7fd3e969",
+        "status": "completed",
+        "requested_at_ms": 44943,
+        "granted_at_ms": 51082,
+        "expires_at_ms": 111082,
+        "remaining": 0
+      },
+      {
+        "queue_sequence": 4,
+        "reservation_id": "mc771317178e149829c18438a0bf8fc8e",
+        "world_id": "foundation-01",
+        "actor_id": "a3",
+        "operator_id": "declared-third",
+        "request_command_id": "fd7a4a32787d4597963c40993e453094",
+        "status": "completed",
+        "requested_at_ms": 53072,
+        "granted_at_ms": 61082,
+        "expires_at_ms": 121082,
+        "remaining": 0
+      }
+    ],
+    "entityNoteAdoption": [
+      {
+        "singleton": 1,
+        "capability": "entity-notes-v1",
+        "version": 1,
+        "entity_id": "efbde20b258d74a0eaca3a86e8d455755",
+        "instance_id": "w_15ced6889f624d8da8a3d2129ba26874",
+        "state_version": 412,
+        "event_seq": 413
+      }
+    ],
+    "notes": [
+      {
+        "note_id": "nd82d4590c877499d8ac290bad573c568",
+        "world_id": "foundation-01",
+        "entity_id": "efbde20b258d74a0eaca3a86e8d455755",
+        "author_actor_id": "a2",
+        "operator_id": "declared-late",
+        "command_id": "6c18e433ad78416887ec5d2de8df02d4",
+        "text": "树木已采尽，旧桥还在。今天我从东岸走来，在桥中央看了一会儿水。",
+        "reply_to_note_id": null,
+        "state_version": 476,
+        "event_seq": 477,
+        "shared_at_utc": "2026-10-26T04:58:59.4231885+00:00",
+        "x": 18.0,
+        "y": 12.0,
+        "inventory_wood": 0
+      },
+      {
+        "note_id": "n1f837f35ff4e49548ceb17a3de4609fd",
+        "world_id": "foundation-01",
+        "entity_id": "efbde20b258d74a0eaca3a86e8d455755",
+        "author_actor_id": "a3",
+        "operator_id": "declared-third",
+        "command_id": "76e951fc8db542169f50ae37381ba10b",
+        "text": "读到你在桥中央看水，我也来停了一会儿。桥不是新的，今天的相遇是新的。",
+        "reply_to_note_id": "nd82d4590c877499d8ac290bad573c568",
+        "state_version": 517,
+        "event_seq": 518,
+        "shared_at_utc": "2026-10-26T04:59:03.0137497+00:00",
+        "x": 18.0,
+        "y": 12.0,
+        "inventory_wood": 0
+      }
+    ],
+    "counts": {
+      "entities": 5,
+      "entity_note_adoption": 1,
+      "entity_notes": 2,
+      "events": 624,
+      "material_production": 4,
+      "material_reservations": 4,
+      "material_source": 1,
+      "receipts": 616,
+      "recipes": 2,
+      "residents": 4,
+      "resource_ledger": 34,
+      "resource_nodes": 4,
+      "sessions": 4,
+      "sqlite_sequence": 2,
+      "visits": 0,
+      "world_instance": 1,
+      "worlds": 1
+    },
+    "priorReceiptCount": 404,
+    "naturalCommandCount": 212,
+    "allReceiptCount": 616,
+    "conservation": {
+      "issuedWood": 24,
+      "inventoryWood": 6,
+      "embodiedWood": 18,
+      "wildWood": 0,
+      "sourceWood": 0,
+      "depotWood": 0
+    }
+  },
+  "checks": [
+    {
+      "name": "ITER22 stopped seed hash matches recorded manifest",
+      "passed": true
+    },
+    {
+      "name": "ITER22 normalized seed has no pending WAL",
+      "passed": true
+    },
+    {
+      "name": "SQLite integrity_check",
+      "passed": true
+    },
+    {
+      "name": "SQLite foreign_key_check",
+      "passed": true
+    },
+    {
+      "name": "same original instance",
+      "passed": true
+    },
+    {
+      "name": "r10 final world version and issued wood",
+      "passed": true
+    },
+    {
+      "name": "one original bridge and four platforms",
+      "passed": true
+    },
+    {
+      "name": "ITER22 world_instance preserved exactly",
+      "passed": true
+    },
+    {
+      "name": "ITER22 entities preserved exactly",
+      "passed": true
+    },
+    {
+      "name": "ITER22 resource_nodes preserved exactly",
+      "passed": true
+    },
+    {
+      "name": "ITER22 resource_ledger preserved exactly",
+      "passed": true
+    },
+    {
+      "name": "ITER22 material_production preserved exactly",
+      "passed": true
+    },
+    {
+      "name": "ITER22 material_reservations preserved exactly",
+      "passed": true
+    },
+    {
+      "name": "original inventories including empty a2",
+      "passed": true
+    },
+    {
+      "name": "all four natural trees depleted",
+      "passed": true
+    },
+    {
+      "name": "active source generated12 stock0",
+      "passed": true
+    },
+    {
+      "name": "four original production lots total12",
+      "passed": true
+    },
+    {
+      "name": "no unfinished material reservation",
+      "passed": true
+    },
+    {
+      "name": "wood conserved at 24 = 6 inventory + 18 embodied",
+      "passed": true
+    },
+    {
+      "name": "receipts 404 original + 212 natural commands = 616",
+      "passed": true
+    },
+    {
+      "name": "all 404 prior receipt fields and exact result_json unchanged",
+      "passed": true
+    },
+    {
+      "name": "all 212 natural command receipts match saved HTTP traces",
+      "passed": true
+    },
+    {
+      "name": "natural commands use 212 distinct new original IDs",
+      "passed": true
+    },
+    {
+      "name": "two original notes and exact reply reference",
+      "passed": true
+    },
+    {
+      "name": "original note nd82d4590c877499d8ac290bad573c568 matches saved confirmation",
+      "passed": true
+    },
+    {
+      "name": "note receipt/event agreement nd82d4590c877499d8ac290bad573c568",
+      "passed": true
+    },
+    {
+      "name": "original note n1f837f35ff4e49548ceb17a3de4609fd matches saved confirmation",
+      "passed": true
+    },
+    {
+      "name": "note receipt/event agreement n1f837f35ff4e49548ceb17a3de4609fd",
+      "passed": true
+    },
+    {
+      "name": "natural case passed and recorded stopped",
+      "passed": true
+    },
+    {
+      "name": "natural evidence matches accepted independent record",
+      "passed": true
+    },
+    {
+      "name": "WAL-resolved service clock matches final stop audit",
+      "passed": true
+    },
+    {
+      "name": "every original source file remains byte-identical with unchanged mtime",
+      "passed": true
+    },
+    {
+      "name": "backup bytes remained unchanged during audit",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "provenance": {
+    "naturalResult": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T045853080038Z/results.json",
+    "naturalResultSha256": "aba94245bd8f2e76b7c57d109781195db4b14fbb627adde7b044eff87337270a",
+    "naturalCasePassed": true,
+    "wholeOriginalRunPassed": false,
+    "wholeRunFailureReason": "Later protocol case had a QA HTTP400 vs403 expectation error; accepted natural case completed first and remains valid. See independent accepted record.",
+    "acceptedRecord": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-core-independent-acceptance.json",
+    "acceptedRecordSha256": "8459b9a0071309bca095b16b76ad117e972a9cfe0c24c4614354e3e79feaa400",
+    "earlierSeed": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-exhausted-baseline-20261026T045741197461Z/world.db",
+    "earlierSeedSha256": "543f34f773904e5ada52951ff890d508ac3203a45b330ad256d10b505ff26e5f",
+    "earlierSeedHasNoNotes": true
+  },
+  "limits": {
+    "servicesStarted": 0,
+    "worldActions": 0,
+    "modelCalls": 0,
+    "oldFilesEdited": 0,
+    "newPolicyNotAdopted": true,
+    "candidateNotFrozen": true,
+    "nextNaturalContinuationMustUseThisStoppedBackup": true,
+    "laterFaultExperimentsMustBeSeparateLabeledBranches": true
+  }
+}

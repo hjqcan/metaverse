@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "testsRun": 1,
+  "results": [
+    {
+      "name": "run",
+      "passed": false,
+      "error": "Error: ENOENT: no such file or directory, open '/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T062738Z-9e4e32/query4-confirmed-reservation-report.json'\n    at Object.readFileSync (node:fs:484:20)\n    at file:///home/wangjunfeng/%E6%96%87%E6%A1%A3/Workspace/metaverse/tests/browser/continuous-material-resident.mjs:46:33\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+    }
+  ],
+  "errors": [],
+  "worldRequests": [],
+  "actualModelCalls": 0
+}

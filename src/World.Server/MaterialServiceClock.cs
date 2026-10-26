@@ -20,7 +20,12 @@ internal sealed class MaterialServiceClock : IDisposable
         try
         {
             using var connection = database.Open();
-            checkpoint = Scalar(connection, null, "SELECT service_ms FROM material_source WHERE id=1");
+            using var transaction = connection.BeginTransaction(deferred: true);
+            // Adoption may have committed after Initialize read the old schema.
+            // The running policy must be read while this clock owns the lock.
+            database.ReloadMaterialPolicy(connection, transaction);
+            checkpoint = Scalar(connection, transaction, "SELECT service_ms FROM material_source WHERE id=1");
+            transaction.Commit();
             elapsed = Stopwatch.StartNew();
         }
         catch { ownership.Dispose(); throw; }

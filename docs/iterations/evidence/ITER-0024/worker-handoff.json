@@ -1,0 +1,80 @@
+{
+  "task": "ITER0024 Python continuous material adaptation",
+  "validationLevel": "worker-self-check",
+  "files": {
+    "scripts/resident_material_access.py": "a144eafc8ba4e12d1cf88ef147a2179b7808a1cd0b2f5a8a0e0dc01046b717e4",
+    "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+    "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+    "tests/continuous_material_mission_api.py": "49ca21ba8ff15f40ae8d0d408c4a8ece03014e404c901c6e6da987e5f4a00b62",
+    "tests/fixtures/continuous-material-platform.json": "281e29127f49e432d94b48272a811a1a409b1f5c04e7a9cc47e7a3a1f8e3c86e"
+  },
+  "currentTreeSuite": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T060809Z-9d2bf5/results.json",
+  "testsPassed": 10,
+  "testsSkipped": 0,
+  "actualPreviousPython": true,
+  "priorRevision": "c6a2406703a86304edf66a0a3cf73a8346267e01",
+  "priorPythonHashes": {
+    "resident_material_access.py": "0e9aa7bc9bfd89bc65270a0cc49fd8a2c128cdaff2fc95b6dcde3d56ad081d68",
+    "resident_mission.py": "0b4e4fc3aa81649fe4bfa48f144446b2f8673e5da9e258fd5f4f4440b82789c8",
+    "resident_entity_notes.py": "b15f9efaf3ad1dc6980e5d084689005efad36d2b37017f7b53dff048ccad36dc"
+  },
+  "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/core-v1/bin/World.Server.dll",
+  "dllSha256": "82e77563c9571185988a84a30b5511d9b7701329bfc2ec949cfa5c07f1be2da3",
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/baseline",
+  "baselineSha256": "b3cfc119ac4ec264154714db6fa1fa4d98a089b4abe1a5e24e4dd53841be9d8a",
+  "cliReport": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T060809Z-9d2bf5/test_01_actual_cli_fifth_platform_and_later_production-world/cli-report.json",
+  "cliCommandEvidence": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T060809Z-9d2bf5/test_01_actual_cli_fifth_platform_and_later_production-world/cli-command.json",
+  "cliBudget": {
+    "commands": 30,
+    "wood": 3,
+    "modelCalls": 1,
+    "seconds": 13.185898303985596,
+    "queries": 41
+  },
+  "query4ConfirmedReservationReport": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T060809Z-9d2bf5/query4-confirmed-reservation-report.json",
+  "originalNoteCount": 2,
+  "platform": {
+    "commandId": "7d1d28d96d984357a527f112c2437aa6",
+    "entityId": "edc11b73e70a44aa68e745d404cff0bab",
+    "recipeId": "platform.v1",
+    "definitionId": "platform",
+    "ownerActorId": "a2",
+    "position": [
+      24,
+      16
+    ],
+    "woodSpent": 3,
+    "stateVersion": 646
+  },
+  "actualModelCalls": 0,
+  "defaultBaselineEntrypointCheck": {
+    "results": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T060522Z-d1cc5d/results.json",
+    "passed": true,
+    "generatedBaseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T060522Z-d1cc5d/seed/test_01_same_instance_two_authors_reference_return_and_old_facts",
+    "scope": "Real exhaustion and two-note baseline built without a supplied private baseline; this preceding run predates the cursor check and shared-runtime optimization. Baseline generator unchanged."
+  },
+  "environmentFailure": {
+    "results": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T055633Z-511db3/results.json",
+    "kind": "disk_full",
+    "lastDurableCommands": 10,
+    "lastDurableQueries": 20,
+    "originalReservationConfirmed": true,
+    "pending": null,
+    "validationCredit": false,
+    "finalSuiteUsesANewIndependentCopy": true
+  },
+  "preFixTypeProbes": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/review-probes/before.json",
+  "runtimeMode": "shared frozen core-v1; no new temporary binary copy",
+  "allStartedServicesStopped": true,
+  "cleanup": {
+    "currentTemporaryBinariesRemoved": true,
+    "priorCacheCleanup": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/prior-runtime-cleanup.json",
+    "retained": "World databases, original pending states, failures, receipts, logs and compact acceptance reports"
+  },
+  "limits": [
+    "No independent QA claim",
+    "No live model calls",
+    "No claim about human experience or long-term economics"
+  ],
+  "ownership": "All five files frozen at these hashes; Python author stops writes and returns integration ownership to root"
+}

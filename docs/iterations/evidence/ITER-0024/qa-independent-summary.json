@@ -1,0 +1,202 @@
+{
+  "passed": true,
+  "validationLevel": "independent participation and isolated HTTP/SQLite, native Godot, Python CLI, Chrome",
+  "generatedAtUtc": "2026-10-26T06:31:25.051539+00:00",
+  "actualModelCalls": 0,
+  "candidate": {
+    "core-v2-dll": {
+      "path": ".local/iter0024/core-v2/bin/World.Server.dll",
+      "sha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25"
+    },
+    "core-v2": {
+      "path": ".local/iter0024/core-v2/manifest.json",
+      "sha256": "844938e0b63fcb936e901dfa283d6f661493d4e39b5412f8b04dce0e7dadeec9"
+    },
+    "godot-v1": {
+      "path": ".local/iter0024/godot-v1/manifest.json",
+      "sha256": "f6f00c0bff1c1731420756b2899526adf6c0a9ef2c0fdae8634fa092d24fea1e"
+    },
+    "python-v1": {
+      "path": ".local/iter0024/python-v1/manifest.json",
+      "sha256": "b860d7bde427cb0a2398c811409275be83498736399c40977f5fbe754afe236f"
+    },
+    "web-v1": {
+      "path": ".local/iter0024/web-v1/manifest.json",
+      "sha256": "aac647d689648712c971f850d75271ce68b0c550b5d7af956bb8aa20666180e4"
+    }
+  },
+  "evidence": [
+    {
+      "scope": "core-v1 historical natural activity",
+      "path": ".local/qa/20261026-test-agent/continuous-http-20261026T055809257311Z/results.json",
+      "sha256": "c84ec1f39f3c729e415dc4a41de117ce2c618521215ebafa98a37444800add49",
+      "acceptedCases": [
+        "natural"
+      ],
+      "sourceRunOverallPassed": true,
+      "caseResultsPassed": true
+    },
+    {
+      "scope": "core-v2 independent core",
+      "path": ".local/qa/20261026-test-agent/continuous-http-20261026T061604041742Z/results.json",
+      "sha256": "c934be10748940dcef058117998f6aec0064757dd33c02da8ff0b25a8e79556a",
+      "acceptedCases": [
+        "policy_types",
+        "continued_natural_v2",
+        "adoption_atomic",
+        "production_atomic"
+      ],
+      "sourceRunOverallPassed": true,
+      "caseResultsPassed": true
+    },
+    {
+      "scope": "core-v2 queue and capacity",
+      "path": ".local/qa/20261026-test-agent/continuous-http-20261026T062006962154Z/results.json",
+      "sha256": "912e0e4f43cf8d66746f0fde3eae532b078a59319d29621d1c8d225bef1545fd",
+      "acceptedCases": [
+        "queue_across_adoption",
+        "capacity_offline"
+      ],
+      "sourceRunOverallPassed": true,
+      "caseResultsPassed": true
+    },
+    {
+      "scope": "core-v2 invalid storage",
+      "path": ".local/qa/20261026-test-agent/continuous-http-20261026T062852034790Z/results.json",
+      "sha256": "9367dc899ce3b6879bb158c4de906b928e08e1fc2bbb7a94a5fd10539daffa92",
+      "acceptedCases": [
+        "malformed_storage"
+      ],
+      "sourceRunOverallPassed": true,
+      "caseResultsPassed": true
+    },
+    {
+      "scope": "Godot current UI and recovery",
+      "path": ".local/qa/20261026-test-agent/continuous-godot-20261026T062222869863Z/results.json",
+      "sha256": "d4bf56b1301c01c8451167d1db7ae40220c54d0df97d43d4935a6e37de230ea3",
+      "acceptedCases": [
+        "ui",
+        "policy",
+        "recovery"
+      ],
+      "sourceRunOverallPassed": true,
+      "caseResultsPassed": true
+    },
+    {
+      "scope": "Godot actual prior client pending",
+      "path": ".local/qa/20261026-test-agent/continuous-godot-20261026T062522975258Z/results.json",
+      "sha256": "86877cb70a1ff7d22d33751a1034a08f0a5759ea7b4883b485681ca95faa98e9",
+      "acceptedCases": [
+        "prior_pending"
+      ],
+      "sourceRunOverallPassed": true,
+      "caseResultsPassed": true
+    },
+    {
+      "scope": "Python actual CLI completed case",
+      "path": ".local/qa/20261026-test-agent/continuous-python-20261026T062453124018Z/results.json",
+      "sha256": "f692f0db162eb954393ae972928f387b3007474265b6120bafebc4dba5bffb4a",
+      "acceptedCases": [
+        "actual_cli"
+      ],
+      "sourceRunOverallPassed": false,
+      "caseResultsPassed": true
+    },
+    {
+      "scope": "Python budgets and malformed policy",
+      "path": ".local/qa/20261026-test-agent/continuous-python-20261026T062550351532Z/results.json",
+      "sha256": "5a18c3aba8c5288a1ba2fe49b94985a2afb47af072d301005468afb4aba0ef79",
+      "acceptedCases": [
+        "query4",
+        "first_query_failure",
+        "malformed_policy"
+      ],
+      "sourceRunOverallPassed": true,
+      "caseResultsPassed": true
+    },
+    {
+      "scope": "Python actual prior pending and terminal",
+      "path": ".local/qa/20261026-test-agent/continuous-python-20261026T062704556846Z/results.json",
+      "sha256": "5055f7c7031f5217163647dc884a878c5f4d4f7c322c5cc95fbaa2ebc25368e1",
+      "acceptedCases": [
+        "prior_pending_and_terminal"
+      ],
+      "sourceRunOverallPassed": true,
+      "caseResultsPassed": true
+    },
+    {
+      "scope": "Web actual independent reports",
+      "path": ".local/qa/20261026-test-agent/continuous-web-2026-10-26T06-29-01-635Z/results.json",
+      "sha256": "e54dc5a784be959ef8ae164d713bf0ba693964eb0b79bc5b363f319ded89784e",
+      "acceptedCases": null,
+      "sourceRunOverallPassed": true,
+      "caseResultsPassed": true
+    }
+  ],
+  "counts": {
+    "coreV2IndependentGroups": 7,
+    "historicalCoreV1NaturalGroup": 1,
+    "godotIndependentGroups": 4,
+    "godotPriorPendingActionFaultCombinations": 8,
+    "pythonIndependentGroups": 5,
+    "pythonPriorPendingActionFaultCombinations": 8,
+    "webIndependentChecks": 8
+  },
+  "continuousHistory": {
+    "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+    "latestStoppedWorld": ".local/qa/20261026-test-agent/continuous-http-20261026T061604041742Z/continued-natural-v2",
+    "stateVersion": 754,
+    "events": 755,
+    "receipts": 736,
+    "generatedWood": 30,
+    "stockWood": 3,
+    "entities": 6,
+    "oldNotes": 2,
+    "issuedWood": 42,
+    "inventoryWood": 18,
+    "embodiedWood": 21,
+    "oldSuccessesRepeatedAsNewWorldActions": false
+  },
+  "knownAndFixedProductDefect": {
+    "candidate": "core-v1",
+    "actualCounterexample": ".local/qa/20261026-test-agent/continuous-policy-fraction-20261026T060759447841Z/results.json",
+    "description": "SQLite REAL policy anchors were truncated by GetInt64; actual adopted_service_ms 83816.5 was accepted",
+    "retest": "original copied counterexample and five fractional policy fields reject startup and repeated adoption with core-v2, no mutation"
+  },
+  "harnessCorrections": [
+    {
+      "run": "continuous-godot-20261026T062338420436Z/results.json",
+      "reason": "QA incorrectly expected healthy=true after transport loss; valid pending and old v1 observation were preserved; eight real prior cases rerun passed"
+    },
+    {
+      "run": "continuous-python-20261026T062453124018Z/results.json",
+      "reason": "actual_cli passed; later query4 QA incorrectly required elapsed seconds frozen; rerun allows only nondecreasing elapsed seconds and preserves queries/pending/facts, zero new HTTP"
+    },
+    {
+      "run": "continuous-web-2026-10-26T06-28-19-704Z/results.json",
+      "reason": "all eight browser checks passed; QA stop predicate omitted SIGTERM exit signal; fixed predicate and complete eight-check rerun passed"
+    }
+  ],
+  "authorDefaultBrowserDriverChange": {
+    "messageId": "msg_cb1a46fa804d",
+    "affected": "tests/browser/continuous-material-resident.mjs argv only",
+    "independentWebUsedAuthorDriver": false,
+    "allFrozenWebProductHashesVerified": true
+  },
+  "cleanup": {
+    "sharedFrozenRuntime": true,
+    "newRuntimeCopies": 0,
+    "allOwnedServersAndGodotExited": true,
+    "godotImportCachesRemovedByEachRun": true,
+    "pythonBytecodeDisabled": true,
+    "preserveCriticalWorldsCounterexampleReports": true
+  },
+  "limits": [
+    "Finite observed service-time activity, not indefinite economic or C16/C17 proof",
+    "Branch fixtures explicitly separated from the original natural continuation",
+    "Old service compatibility is cold-start rejection after old process exit, not a fix for old initialization/clock race",
+    "Old Godot without pending rejects v2 observations; existing pending GET404 may still resubmit unchanged r10 body",
+    "Report page verifies imported evidence structure; it makes no live world API requests",
+    "Source-run overall failure for one Python run is retained; only its independently completed actual_cli case is accepted"
+  ]
+}

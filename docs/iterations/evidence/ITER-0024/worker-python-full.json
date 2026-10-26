@@ -1,0 +1,92 @@
+{
+  "suite": "continuous-material-mission-http",
+  "validationLevel": "builder-self-check",
+  "actualModelCalls": 0,
+  "passed": true,
+  "testsRun": 10,
+  "tests": [
+    {
+      "test": "__main__.ContinuousMaterialMissionAcceptance.test_01_actual_cli_fifth_platform_and_later_production",
+      "passed": true,
+      "seconds": 18.522593191009946
+    },
+    {
+      "test": "__main__.ContinuousMaterialMissionAcceptance.test_02_first_failed_query_budgets_and_shared_note_startup",
+      "passed": true,
+      "seconds": 1.8881799739901908
+    },
+    {
+      "test": "__main__.ContinuousMaterialMissionAcceptance.test_03_unknown_and_damaged_policy_is_not_material_authority",
+      "passed": true,
+      "seconds": 0.9880760770174675
+    },
+    {
+      "test": "__main__.ContinuousMaterialMissionAcceptance.test_04_confirmed_reservation_and_query_limit_coexist",
+      "passed": true,
+      "seconds": 2.6637759329751134
+    },
+    {
+      "test": "__main__.ContinuousMaterialMissionAcceptance.test_05_permissions_and_damaged_saved_state_are_zero_io",
+      "passed": true,
+      "seconds": 1.4900940750376321
+    },
+    {
+      "test": "__main__.ContinuousMaterialMissionAcceptance.test_06_old_exhausted_terminal_never_reopens_after_adoption",
+      "passed": true,
+      "seconds": 1.0201337529579177
+    },
+    {
+      "test": "__main__.ContinuousMaterialMissionAcceptance.test_07_prior_reserve_pending_retains_original_id_across_adoption",
+      "passed": true,
+      "seconds": 3.693119772011414
+    },
+    {
+      "test": "__main__.ContinuousMaterialMissionAcceptance.test_08_prior_harvest_and_build_receipts_survive_adoption",
+      "passed": true,
+      "seconds": 36.28514339000685
+    },
+    {
+      "test": "__main__.ContinuousMaterialMissionAcceptance.test_09_prior_note_pending_keeps_text_reference_and_three_proofs",
+      "passed": true,
+      "seconds": 24.01897871500114
+    },
+    {
+      "test": "__main__.ContinuousMaterialMissionAcceptance.test_10_actual_process_exit_and_session_rotation_keep_reserve",
+      "passed": true,
+      "seconds": 3.8422925940249115
+    }
+  ],
+  "skipped": [],
+  "sourceHashesBefore": {
+    "scripts/resident_material_access.py": "a144eafc8ba4e12d1cf88ef147a2179b7808a1cd0b2f5a8a0e0dc01046b717e4",
+    "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+    "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+    "tests/continuous_material_mission_api.py": "49ca21ba8ff15f40ae8d0d408c4a8ece03014e404c901c6e6da987e5f4a00b62",
+    "tests/fixtures/continuous-material-platform.json": "281e29127f49e432d94b48272a811a1a409b1f5c04e7a9cc47e7a3a1f8e3c86e"
+  },
+  "sourceHashesAfter": {
+    "scripts/resident_material_access.py": "a144eafc8ba4e12d1cf88ef147a2179b7808a1cd0b2f5a8a0e0dc01046b717e4",
+    "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+    "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+    "tests/continuous_material_mission_api.py": "49ca21ba8ff15f40ae8d0d408c4a8ece03014e404c901c6e6da987e5f4a00b62",
+    "tests/fixtures/continuous-material-platform.json": "281e29127f49e432d94b48272a811a1a409b1f5c04e7a9cc47e7a3a1f8e3c86e"
+  },
+  "sourceStable": true,
+  "allStartedServicesStopped": true,
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/baseline",
+  "baselineSha256": "b3cfc119ac4ec264154714db6fa1fa4d98a089b4abe1a5e24e4dd53841be9d8a",
+  "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/core-v1/bin/World.Server.dll",
+  "dllSha256": "82e77563c9571185988a84a30b5511d9b7701329bfc2ec949cfa5c07f1be2da3",
+  "priorPython": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/prior-c6a2406",
+  "actualPreviousPython": true,
+  "priorPythonHashes": {
+    "resident_material_access.py": "0e9aa7bc9bfd89bc65270a0cc49fd8a2c128cdaff2fc95b6dcde3d56ad081d68",
+    "resident_mission.py": "0b4e4fc3aa81649fe4bfa48f144446b2f8673e5da9e258fd5f4f4440b82789c8",
+    "resident_entity_notes.py": "b15f9efaf3ad1dc6980e5d084689005efad36d2b37017f7b53dff048ccad36dc"
+  },
+  "failureDetails": [],
+  "runtimeMode": "shared-immutable-input",
+  "temporaryRuntimeCreated": false,
+  "dllStable": true,
+  "sourceDll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/core-v1/bin/World.Server.dll"
+}

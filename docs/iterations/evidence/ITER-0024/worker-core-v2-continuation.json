@@ -1,0 +1,2229 @@
+{
+  "validationLevel": "worker-self-check",
+  "sameDataDirectory": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T060809Z-9d2bf5/test_01_actual_cli_fifth_platform_and_later_production-world",
+  "sourceV1Report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T060809Z-9d2bf5/test_01_actual_cli_fifth_platform_and_later_production-world/cli-report.json",
+  "v1BoundarySnapshot": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/core-v2-continuation/before-v1-world.db",
+  "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/core-v2/bin/World.Server.dll",
+  "dllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+  "actualModelCalls": 0,
+  "beforeHashes": {
+    "world_instance": "940456eaeeaa9c77bd3e0cbd54349d15a496254f3085792a411194b4a008fe4d",
+    "entities": "2f90fb30705fbf0513f4542a67708b2a0c9255e2af0b504934d4bb01eaaac06f",
+    "entity_notes": "f15216c2e32f6fe4978b81e8017b5834b9f3802cddca20d5ac77c13bc0b7e95f",
+    "material_source_policy": "fc6c8bb2246dd819dc6c15f70ec187731a2fc45779c37065923da7806e19d9fd",
+    "receipts": "69677a2e0138b55c38d7e1c95bc8349bb4ff238885333fb62634fbe723cb6b77",
+    "resource_ledger": "947396656023b60a3f94300f95ebe26a8e9a1a37942c9ddb669d4f6f36f0e5eb",
+    "material_production": "41b5afb0797a684387398448e0bf86aa284fcf3cb4c7c79cf3644ad07c0c615e",
+    "material_source": "600f4de62b4d5d3592abba5f8f9b049b4f5b85742bca6a486c1944f3dd675797",
+    "residents": "10bbdb835d9fef870c333ae9de22f86564ba524a71b1d4e1025c37eda477e538"
+  },
+  "passed": true,
+  "firstObservation": {
+    "schemaVersion": 1,
+    "rulesVersion": "r10",
+    "stateVersion": 662,
+    "commandId": null,
+    "identity": {
+      "operatorId": "declared-third",
+      "actorId": "a3",
+      "sessionId": "sa423548f7dce496895be25120daedb09"
+    },
+    "eventCursor": 663,
+    "error": null,
+    "world": {
+      "id": "foundation-01",
+      "scenarioId": "wilderness-material-access-v1",
+      "width": 32,
+      "height": 24,
+      "coordinateSystem": "continuous-xz",
+      "bounds": [
+        0,
+        0,
+        32,
+        24
+      ],
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    "movement": {
+      "version": 1,
+      "kind": "continuous",
+      "speed": 3,
+      "radius": 0.28,
+      "maxStepDistance": 0.6,
+      "gatherReach": 1.6,
+      "buildReach": 3.2
+    },
+    "terrain": {
+      "version": 1,
+      "river": {
+        "polygon": [
+          [
+            14.6,
+            0
+          ],
+          [
+            14.506445312499999,
+            0.5
+          ],
+          [
+            14.364062500000001,
+            1
+          ],
+          [
+            14.1927734375,
+            1.5
+          ],
+          [
+            14.0125,
+            2
+          ],
+          [
+            13.8431640625,
+            2.5
+          ],
+          [
+            13.7046875,
+            3
+          ],
+          [
+            13.6169921875,
+            3.5
+          ],
+          [
+            13.6,
+            4
+          ],
+          [
+            13.658789062499999,
+            4.5
+          ],
+          [
+            13.7765625,
+            5
+          ],
+          [
+            13.940429687499998,
+            5.5
+          ],
+          [
+            14.1375,
+            6
+          ],
+          [
+            14.3548828125,
+            6.5
+          ],
+          [
+            14.579687499999999,
+            7
+          ],
+          [
+            14.799023437499999,
+            7.5
+          ],
+          [
+            14.999999999999998,
+            8
+          ],
+          [
+            15.208203124999999,
+            8.5
+          ],
+          [
+            15.446874999999997,
+            9
+          ],
+          [
+            15.699609375,
+            9.5
+          ],
+          [
+            15.949999999999998,
+            10
+          ],
+          [
+            16.181640625,
+            10.5
+          ],
+          [
+            16.378125,
+            11
+          ],
+          [
+            16.523046875,
+            11.5
+          ],
+          [
+            16.6,
+            12
+          ],
+          [
+            16.604199218750004,
+            12.5
+          ],
+          [
+            16.54921875,
+            13
+          ],
+          [
+            16.44619140625,
+            13.5
+          ],
+          [
+            16.30625,
+            14
+          ],
+          [
+            16.14052734375,
+            14.5
+          ],
+          [
+            15.960156250000002,
+            15
+          ],
+          [
+            15.77626953125,
+            15.5
+          ],
+          [
+            15.6,
+            16
+          ],
+          [
+            15.411425781249998,
+            16.5
+          ],
+          [
+            15.191406250000002,
+            17
+          ],
+          [
+            14.95224609375,
+            17.5
+          ],
+          [
+            14.706249999999999,
+            18
+          ],
+          [
+            14.46572265625,
+            18.5
+          ],
+          [
+            14.24296875,
+            19
+          ],
+          [
+            14.050292968749998,
+            19.5
+          ],
+          [
+            13.9,
+            20
+          ],
+          [
+            13.79345703125,
+            20.5
+          ],
+          [
+            13.719531250000001,
+            21
+          ],
+          [
+            13.67177734375,
+            21.5
+          ],
+          [
+            13.64375,
+            22
+          ],
+          [
+            13.62900390625,
+            22.5
+          ],
+          [
+            13.621093750000002,
+            23
+          ],
+          [
+            13.613574218750003,
+            23.5
+          ],
+          [
+            13.600000000000003,
+            24
+          ],
+          [
+            16.400000000000002,
+            24
+          ],
+          [
+            16.413574218750004,
+            23.5
+          ],
+          [
+            16.42109375,
+            23
+          ],
+          [
+            16.42900390625,
+            22.5
+          ],
+          [
+            16.44375,
+            22
+          ],
+          [
+            16.47177734375,
+            21.5
+          ],
+          [
+            16.51953125,
+            21
+          ],
+          [
+            16.59345703125,
+            20.5
+          ],
+          [
+            16.7,
+            20
+          ],
+          [
+            16.850292968749997,
+            19.5
+          ],
+          [
+            17.04296875,
+            19
+          ],
+          [
+            17.26572265625,
+            18.5
+          ],
+          [
+            17.506249999999998,
+            18
+          ],
+          [
+            17.75224609375,
+            17.5
+          ],
+          [
+            17.99140625,
+            17
+          ],
+          [
+            18.211425781249996,
+            16.5
+          ],
+          [
+            18.4,
+            16
+          ],
+          [
+            18.57626953125,
+            15.5
+          ],
+          [
+            18.76015625,
+            15
+          ],
+          [
+            18.94052734375,
+            14.5
+          ],
+          [
+            19.106249999999996,
+            14
+          ],
+          [
+            19.24619140625,
+            13.5
+          ],
+          [
+            19.34921875,
+            13
+          ],
+          [
+            19.40419921875,
+            12.5
+          ],
+          [
+            19.4,
+            12
+          ],
+          [
+            19.323046874999996,
+            11.5
+          ],
+          [
+            19.178124999999998,
+            11
+          ],
+          [
+            18.981640624999997,
+            10.5
+          ],
+          [
+            18.749999999999996,
+            10
+          ],
+          [
+            18.499609375,
+            9.5
+          ],
+          [
+            18.246874999999996,
+            9
+          ],
+          [
+            18.008203124999998,
+            8.5
+          ],
+          [
+            17.799999999999997,
+            8
+          ],
+          [
+            17.599023437499998,
+            7.5
+          ],
+          [
+            17.3796875,
+            7
+          ],
+          [
+            17.1548828125,
+            6.5
+          ],
+          [
+            16.9375,
+            6
+          ],
+          [
+            16.740429687499997,
+            5.5
+          ],
+          [
+            16.5765625,
+            5
+          ],
+          [
+            16.4587890625,
+            4.5
+          ],
+          [
+            16.4,
+            4
+          ],
+          [
+            16.4169921875,
+            3.5
+          ],
+          [
+            16.5046875,
+            3
+          ],
+          [
+            16.6431640625,
+            2.5
+          ],
+          [
+            16.8125,
+            2
+          ],
+          [
+            16.9927734375,
+            1.5
+          ],
+          [
+            17.1640625,
+            1
+          ],
+          [
+            17.3064453125,
+            0.5
+          ],
+          [
+            17.4,
+            0
+          ]
+        ],
+        "centerline": [
+          [
+            16,
+            0
+          ],
+          [
+            15.906445312499999,
+            0.5
+          ],
+          [
+            15.764062500000001,
+            1
+          ],
+          [
+            15.5927734375,
+            1.5
+          ],
+          [
+            15.4125,
+            2
+          ],
+          [
+            15.2431640625,
+            2.5
+          ],
+          [
+            15.1046875,
+            3
+          ],
+          [
+            15.0169921875,
+            3.5
+          ],
+          [
+            15,
+            4
+          ],
+          [
+            15.058789062499999,
+            4.5
+          ],
+          [
+            15.176562500000001,
+            5
+          ],
+          [
+            15.340429687499999,
+            5.5
+          ],
+          [
+            15.5375,
+            6
+          ],
+          [
+            15.7548828125,
+            6.5
+          ],
+          [
+            15.979687499999999,
+            7
+          ],
+          [
+            16.1990234375,
+            7.5
+          ],
+          [
+            16.4,
+            8
+          ],
+          [
+            16.608203125,
+            8.5
+          ],
+          [
+            16.846874999999997,
+            9
+          ],
+          [
+            17.099609375,
+            9.5
+          ],
+          [
+            17.349999999999998,
+            10
+          ],
+          [
+            17.581640625,
+            10.5
+          ],
+          [
+            17.778125,
+            11
+          ],
+          [
+            17.923046874999997,
+            11.5
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18.004199218750003,
+            12.5
+          ],
+          [
+            17.94921875,
+            13
+          ],
+          [
+            17.84619140625,
+            13.5
+          ],
+          [
+            17.706249999999997,
+            14
+          ],
+          [
+            17.54052734375,
+            14.5
+          ],
+          [
+            17.360156250000003,
+            15
+          ],
+          [
+            17.17626953125,
+            15.5
+          ],
+          [
+            17,
+            16
+          ],
+          [
+            16.811425781249998,
+            16.5
+          ],
+          [
+            16.591406250000002,
+            17
+          ],
+          [
+            16.35224609375,
+            17.5
+          ],
+          [
+            16.10625,
+            18
+          ],
+          [
+            15.86572265625,
+            18.5
+          ],
+          [
+            15.64296875,
+            19
+          ],
+          [
+            15.450292968749999,
+            19.5
+          ],
+          [
+            15.3,
+            20
+          ],
+          [
+            15.19345703125,
+            20.5
+          ],
+          [
+            15.119531250000001,
+            21
+          ],
+          [
+            15.07177734375,
+            21.5
+          ],
+          [
+            15.043750000000001,
+            22
+          ],
+          [
+            15.02900390625,
+            22.5
+          ],
+          [
+            15.021093750000002,
+            23
+          ],
+          [
+            15.013574218750003,
+            23.5
+          ],
+          [
+            15.000000000000004,
+            24
+          ]
+        ],
+        "halfWidth": 1.4
+      },
+      "obstacles": [
+        {
+          "id": "rock-west",
+          "kind": "rock",
+          "position": [
+            10.5,
+            8.5
+          ],
+          "radius": 1.05
+        },
+        {
+          "id": "rock-south",
+          "kind": "rock",
+          "position": [
+            5.6,
+            19.7
+          ],
+          "radius": 0.8
+        },
+        {
+          "id": "rock-east",
+          "kind": "rock",
+          "position": [
+            23,
+            12.5
+          ],
+          "radius": 1.2
+        },
+        {
+          "id": "rock-north",
+          "kind": "rock",
+          "position": [
+            21.8,
+            3.2
+          ],
+          "radius": 0.75
+        }
+      ]
+    },
+    "self": {
+      "actorId": "a3",
+      "position": [
+        28,
+        10
+      ],
+      "inventory": {
+        "wood": 1
+      }
+    },
+    "residents": [
+      {
+        "actorId": "a1",
+        "position": [
+          15.7,
+          12
+        ]
+      },
+      {
+        "actorId": "a1_alias",
+        "position": [
+          5,
+          7
+        ]
+      },
+      {
+        "actorId": "a2",
+        "position": [
+          26,
+          17
+        ]
+      },
+      {
+        "actorId": "a3",
+        "position": [
+          28,
+          10
+        ]
+      }
+    ],
+    "resourceNodes": [
+      {
+        "nodeId": "tree-east-north",
+        "kind": "tree",
+        "position": [
+          25.4,
+          5.8
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-east-south",
+        "kind": "tree",
+        "position": [
+          25.7,
+          18.2
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-west-north",
+        "kind": "tree",
+        "position": [
+          6.2,
+          7.8
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-west-south",
+        "kind": "tree",
+        "position": [
+          9.2,
+          16.3
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      }
+    ],
+    "entities": [
+      {
+        "entityId": "e76a6cc3bf333423e874d310f1f0371a0",
+        "definitionId": "platform",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a3",
+        "position": [
+          27,
+          17
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "e9df7ee47564546f098a988085e93ce3d",
+        "definitionId": "platform",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a3",
+        "position": [
+          30,
+          17
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "eb40dd030a24941f28c3fb5313fe44784",
+        "definitionId": "platform",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a3",
+        "position": [
+          27,
+          14
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "eca67171501f8438e9fe790bfdbef9789",
+        "definitionId": "platform",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a3",
+        "position": [
+          30,
+          14
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "edc11b73e70a44aa68e745d404cff0bab",
+        "definitionId": "platform",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a2",
+        "position": [
+          24,
+          16
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+        "definitionId": "bridge",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a1",
+        "position": [
+          18,
+          12
+        ],
+        "embodiedWood": 6
+      }
+    ],
+    "recipes": [
+      {
+        "id": "platform.v1",
+        "definitionId": "platform",
+        "woodCost": 3
+      },
+      {
+        "id": "bridge.v1",
+        "definitionId": "bridge",
+        "woodCost": 6
+      }
+    ],
+    "gathering": {
+      "version": 1,
+      "quantityPerAction": 1
+    },
+    "depot": {
+      "wood": 0,
+      "available": false
+    },
+    "resourceAudit": {
+      "initialWood": 12,
+      "issuedWood": 30,
+      "generatedWood": 18,
+      "sourceWood": 2,
+      "wildWood": 0,
+      "depotWood": 0,
+      "inventoryWood": 7,
+      "embodiedWood": 21,
+      "conserved": true
+    },
+    "materialAccess": {
+      "version": 2,
+      "sourceId": "wood-source-east",
+      "position": [
+        28,
+        10
+      ],
+      "buildExclusion": [
+        27,
+        9,
+        29,
+        11
+      ],
+      "active": true,
+      "serviceMs": 101635,
+      "enabledAtServiceMs": 21047,
+      "nextProductionAtMs": 111047,
+      "generatedWood": 18,
+      "stockWood": 2,
+      "freeWood": 0,
+      "inputBudget": null,
+      "productionPolicy": {
+        "id": "continuous-service-time-v1",
+        "version": 1,
+        "adoptedAtServiceMs": 84121,
+        "adoptedAtStateVersion": 624,
+        "adoptedAtEventCursor": 625,
+        "generatedWoodAtAdoption": 12,
+        "productionPeriodAtAdoption": 6
+      },
+      "capacity": 6,
+      "reservationQuantity": 3,
+      "leaseMs": 60000,
+      "productionIntervalMs": 10000,
+      "currentReservation": {
+        "reservationId": "mc8cb9df855284dc0aa2a968abf92f422",
+        "actorId": "a3",
+        "operatorId": "declared-third",
+        "requestCommandId": "5c4f065d2fb04e4fa2ec815c49da9cc5",
+        "queueSequence": 6,
+        "status": "active",
+        "requestedAtMs": 97631,
+        "grantedAtMs": 101191,
+        "expiresAtMs": 161191,
+        "remaining": 2
+      },
+      "recentReservations": [
+        {
+          "reservationId": "mc8cb9df855284dc0aa2a968abf92f422",
+          "actorId": "a3",
+          "operatorId": "declared-third",
+          "requestCommandId": "5c4f065d2fb04e4fa2ec815c49da9cc5",
+          "queueSequence": 6,
+          "status": "active",
+          "requestedAtMs": 97631,
+          "grantedAtMs": 101191,
+          "expiresAtMs": 161191,
+          "remaining": 2
+        },
+        {
+          "reservationId": "mc771317178e149829c18438a0bf8fc8e",
+          "actorId": "a3",
+          "operatorId": "declared-third",
+          "requestCommandId": "fd7a4a32787d4597963c40993e453094",
+          "queueSequence": 4,
+          "status": "completed",
+          "requestedAtMs": 53072,
+          "grantedAtMs": 61082,
+          "expiresAtMs": 121082,
+          "remaining": 0
+        },
+        {
+          "reservationId": "meb72146e737b4e62af46602198c3391f",
+          "actorId": "a3",
+          "operatorId": "declared-third",
+          "requestCommandId": "83429349591e48a98540d5df7fd3e969",
+          "queueSequence": 3,
+          "status": "completed",
+          "requestedAtMs": 44943,
+          "grantedAtMs": 51082,
+          "expiresAtMs": 111082,
+          "remaining": 0
+        },
+        {
+          "reservationId": "m002a1ab802704b5584ebd090f400a589",
+          "actorId": "a3",
+          "operatorId": "declared-third",
+          "requestCommandId": "1bf417a34ffc4271a6124ea3e8a68a79",
+          "queueSequence": 2,
+          "status": "completed",
+          "requestedAtMs": 33017,
+          "grantedAtMs": 41082,
+          "expiresAtMs": 101082,
+          "remaining": 0
+        },
+        {
+          "reservationId": "m697f513ca56c497a9127c82571c1500c",
+          "actorId": "a3",
+          "operatorId": "declared-third",
+          "requestCommandId": "3ceff92c31c04f62ac06567c8645c0a6",
+          "queueSequence": 1,
+          "status": "completed",
+          "requestedAtMs": 21208,
+          "grantedAtMs": 31082,
+          "expiresAtMs": 91082,
+          "remaining": 0
+        }
+      ],
+      "queue": [],
+      "controlBasis": "declared-local-fixture",
+      "controlRoster": [
+        {
+          "actorId": "a1",
+          "operatorId": "local-operator"
+        },
+        {
+          "actorId": "a1_alias",
+          "operatorId": "local-operator"
+        },
+        {
+          "actorId": "a2",
+          "operatorId": "declared-late"
+        },
+        {
+          "actorId": "a3",
+          "operatorId": "declared-third"
+        }
+      ]
+    },
+    "entityNotes": {
+      "capability": "entity-notes-v1",
+      "version": 1,
+      "target": {
+        "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+        "definitionId": "bridge",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a1",
+        "position": [
+          18,
+          12
+        ],
+        "embodiedWood": 6
+      },
+      "reach": 1.6,
+      "maxTextScalars": 160,
+      "maxPerOperator": 2,
+      "maxTotal": 6,
+      "selfCount": 1,
+      "totalCount": 2,
+      "notes": [
+        {
+          "noteId": "nd82d4590c877499d8ac290bad573c568",
+          "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "6c18e433ad78416887ec5d2de8df02d4",
+          "text": "树木已采尽，旧桥还在。今天我从东岸走来，在桥中央看了一会儿水。",
+          "replyToNoteId": null,
+          "stateVersion": 476,
+          "eventCursor": 477,
+          "sharedAtUtc": "2026-10-26T04:58:59.4231885+00:00",
+          "position": [
+            18,
+            12
+          ],
+          "inventoryWood": 0,
+          "capabilityVersion": 1
+        },
+        {
+          "noteId": "n1f837f35ff4e49548ceb17a3de4609fd",
+          "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+          "authorActorId": "a3",
+          "operatorId": "declared-third",
+          "commandId": "76e951fc8db542169f50ae37381ba10b",
+          "text": "读到你在桥中央看水，我也来停了一会儿。桥不是新的，今天的相遇是新的。",
+          "replyToNoteId": "nd82d4590c877499d8ac290bad573c568",
+          "stateVersion": 517,
+          "eventCursor": 518,
+          "sharedAtUtc": "2026-10-26T04:59:03.0137497+00:00",
+          "position": [
+            18,
+            12
+          ],
+          "inventoryWood": 0,
+          "capabilityVersion": 1
+        }
+      ]
+    },
+    "materialTransfer": {
+      "version": 1,
+      "resource": "wood",
+      "maxQuantity": 12,
+      "reach": 1.6,
+      "recipientConfirmation": false
+    },
+    "recentTransfers": {
+      "items": [],
+      "limit": 20,
+      "truncated": false
+    },
+    "commandBinding": {
+      "version": 1,
+      "required": true,
+      "header": "World-Instance-Id"
+    },
+    "commandConcurrency": {
+      "version": 1,
+      "supportedModes": [
+        "actor-state-v1"
+      ]
+    }
+  },
+  "originalCommand": {
+    "schemaVersion": 1,
+    "rulesVersion": "r10",
+    "commandId": "ec6070aa225c4c70b9410c7027e9c5c0",
+    "preconditionMode": "actor-state-v1",
+    "expectedStateVersion": 662,
+    "action": {
+      "type": "harvest_material",
+      "reservationId": "mc8cb9df855284dc0aa2a968abf92f422"
+    }
+  },
+  "receipt": {
+    "schemaVersion": 1,
+    "rulesVersion": "r10",
+    "stateVersion": 663,
+    "commandId": "ec6070aa225c4c70b9410c7027e9c5c0",
+    "identity": {
+      "operatorId": "declared-third",
+      "actorId": "a3",
+      "sessionId": "sa423548f7dce496895be25120daedb09"
+    },
+    "eventCursor": 664,
+    "error": null,
+    "status": "committed",
+    "result": {
+      "action": "harvest_material",
+      "reservationId": "mc8cb9df855284dc0aa2a968abf92f422",
+      "sourceId": "wood-source-east",
+      "quantity": 1,
+      "remainingBefore": 2,
+      "remaining": 1,
+      "inventoryWoodBefore": 1,
+      "inventoryWood": 2,
+      "position": [
+        28,
+        10
+      ]
+    },
+    "execution": {
+      "preconditionMode": "actor-state-v1",
+      "observedStateVersion": 662,
+      "appliedOnStateVersion": 662
+    }
+  },
+  "lastObservation": {
+    "schemaVersion": 1,
+    "rulesVersion": "r10",
+    "stateVersion": 664,
+    "commandId": null,
+    "identity": {
+      "operatorId": "declared-third",
+      "actorId": "a3",
+      "sessionId": "sa423548f7dce496895be25120daedb09"
+    },
+    "eventCursor": 665,
+    "error": null,
+    "world": {
+      "id": "foundation-01",
+      "scenarioId": "wilderness-material-access-v1",
+      "width": 32,
+      "height": 24,
+      "coordinateSystem": "continuous-xz",
+      "bounds": [
+        0,
+        0,
+        32,
+        24
+      ],
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    "movement": {
+      "version": 1,
+      "kind": "continuous",
+      "speed": 3,
+      "radius": 0.28,
+      "maxStepDistance": 0.6,
+      "gatherReach": 1.6,
+      "buildReach": 3.2
+    },
+    "terrain": {
+      "version": 1,
+      "river": {
+        "polygon": [
+          [
+            14.6,
+            0
+          ],
+          [
+            14.506445312499999,
+            0.5
+          ],
+          [
+            14.364062500000001,
+            1
+          ],
+          [
+            14.1927734375,
+            1.5
+          ],
+          [
+            14.0125,
+            2
+          ],
+          [
+            13.8431640625,
+            2.5
+          ],
+          [
+            13.7046875,
+            3
+          ],
+          [
+            13.6169921875,
+            3.5
+          ],
+          [
+            13.6,
+            4
+          ],
+          [
+            13.658789062499999,
+            4.5
+          ],
+          [
+            13.7765625,
+            5
+          ],
+          [
+            13.940429687499998,
+            5.5
+          ],
+          [
+            14.1375,
+            6
+          ],
+          [
+            14.3548828125,
+            6.5
+          ],
+          [
+            14.579687499999999,
+            7
+          ],
+          [
+            14.799023437499999,
+            7.5
+          ],
+          [
+            14.999999999999998,
+            8
+          ],
+          [
+            15.208203124999999,
+            8.5
+          ],
+          [
+            15.446874999999997,
+            9
+          ],
+          [
+            15.699609375,
+            9.5
+          ],
+          [
+            15.949999999999998,
+            10
+          ],
+          [
+            16.181640625,
+            10.5
+          ],
+          [
+            16.378125,
+            11
+          ],
+          [
+            16.523046875,
+            11.5
+          ],
+          [
+            16.6,
+            12
+          ],
+          [
+            16.604199218750004,
+            12.5
+          ],
+          [
+            16.54921875,
+            13
+          ],
+          [
+            16.44619140625,
+            13.5
+          ],
+          [
+            16.30625,
+            14
+          ],
+          [
+            16.14052734375,
+            14.5
+          ],
+          [
+            15.960156250000002,
+            15
+          ],
+          [
+            15.77626953125,
+            15.5
+          ],
+          [
+            15.6,
+            16
+          ],
+          [
+            15.411425781249998,
+            16.5
+          ],
+          [
+            15.191406250000002,
+            17
+          ],
+          [
+            14.95224609375,
+            17.5
+          ],
+          [
+            14.706249999999999,
+            18
+          ],
+          [
+            14.46572265625,
+            18.5
+          ],
+          [
+            14.24296875,
+            19
+          ],
+          [
+            14.050292968749998,
+            19.5
+          ],
+          [
+            13.9,
+            20
+          ],
+          [
+            13.79345703125,
+            20.5
+          ],
+          [
+            13.719531250000001,
+            21
+          ],
+          [
+            13.67177734375,
+            21.5
+          ],
+          [
+            13.64375,
+            22
+          ],
+          [
+            13.62900390625,
+            22.5
+          ],
+          [
+            13.621093750000002,
+            23
+          ],
+          [
+            13.613574218750003,
+            23.5
+          ],
+          [
+            13.600000000000003,
+            24
+          ],
+          [
+            16.400000000000002,
+            24
+          ],
+          [
+            16.413574218750004,
+            23.5
+          ],
+          [
+            16.42109375,
+            23
+          ],
+          [
+            16.42900390625,
+            22.5
+          ],
+          [
+            16.44375,
+            22
+          ],
+          [
+            16.47177734375,
+            21.5
+          ],
+          [
+            16.51953125,
+            21
+          ],
+          [
+            16.59345703125,
+            20.5
+          ],
+          [
+            16.7,
+            20
+          ],
+          [
+            16.850292968749997,
+            19.5
+          ],
+          [
+            17.04296875,
+            19
+          ],
+          [
+            17.26572265625,
+            18.5
+          ],
+          [
+            17.506249999999998,
+            18
+          ],
+          [
+            17.75224609375,
+            17.5
+          ],
+          [
+            17.99140625,
+            17
+          ],
+          [
+            18.211425781249996,
+            16.5
+          ],
+          [
+            18.4,
+            16
+          ],
+          [
+            18.57626953125,
+            15.5
+          ],
+          [
+            18.76015625,
+            15
+          ],
+          [
+            18.94052734375,
+            14.5
+          ],
+          [
+            19.106249999999996,
+            14
+          ],
+          [
+            19.24619140625,
+            13.5
+          ],
+          [
+            19.34921875,
+            13
+          ],
+          [
+            19.40419921875,
+            12.5
+          ],
+          [
+            19.4,
+            12
+          ],
+          [
+            19.323046874999996,
+            11.5
+          ],
+          [
+            19.178124999999998,
+            11
+          ],
+          [
+            18.981640624999997,
+            10.5
+          ],
+          [
+            18.749999999999996,
+            10
+          ],
+          [
+            18.499609375,
+            9.5
+          ],
+          [
+            18.246874999999996,
+            9
+          ],
+          [
+            18.008203124999998,
+            8.5
+          ],
+          [
+            17.799999999999997,
+            8
+          ],
+          [
+            17.599023437499998,
+            7.5
+          ],
+          [
+            17.3796875,
+            7
+          ],
+          [
+            17.1548828125,
+            6.5
+          ],
+          [
+            16.9375,
+            6
+          ],
+          [
+            16.740429687499997,
+            5.5
+          ],
+          [
+            16.5765625,
+            5
+          ],
+          [
+            16.4587890625,
+            4.5
+          ],
+          [
+            16.4,
+            4
+          ],
+          [
+            16.4169921875,
+            3.5
+          ],
+          [
+            16.5046875,
+            3
+          ],
+          [
+            16.6431640625,
+            2.5
+          ],
+          [
+            16.8125,
+            2
+          ],
+          [
+            16.9927734375,
+            1.5
+          ],
+          [
+            17.1640625,
+            1
+          ],
+          [
+            17.3064453125,
+            0.5
+          ],
+          [
+            17.4,
+            0
+          ]
+        ],
+        "centerline": [
+          [
+            16,
+            0
+          ],
+          [
+            15.906445312499999,
+            0.5
+          ],
+          [
+            15.764062500000001,
+            1
+          ],
+          [
+            15.5927734375,
+            1.5
+          ],
+          [
+            15.4125,
+            2
+          ],
+          [
+            15.2431640625,
+            2.5
+          ],
+          [
+            15.1046875,
+            3
+          ],
+          [
+            15.0169921875,
+            3.5
+          ],
+          [
+            15,
+            4
+          ],
+          [
+            15.058789062499999,
+            4.5
+          ],
+          [
+            15.176562500000001,
+            5
+          ],
+          [
+            15.340429687499999,
+            5.5
+          ],
+          [
+            15.5375,
+            6
+          ],
+          [
+            15.7548828125,
+            6.5
+          ],
+          [
+            15.979687499999999,
+            7
+          ],
+          [
+            16.1990234375,
+            7.5
+          ],
+          [
+            16.4,
+            8
+          ],
+          [
+            16.608203125,
+            8.5
+          ],
+          [
+            16.846874999999997,
+            9
+          ],
+          [
+            17.099609375,
+            9.5
+          ],
+          [
+            17.349999999999998,
+            10
+          ],
+          [
+            17.581640625,
+            10.5
+          ],
+          [
+            17.778125,
+            11
+          ],
+          [
+            17.923046874999997,
+            11.5
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18.004199218750003,
+            12.5
+          ],
+          [
+            17.94921875,
+            13
+          ],
+          [
+            17.84619140625,
+            13.5
+          ],
+          [
+            17.706249999999997,
+            14
+          ],
+          [
+            17.54052734375,
+            14.5
+          ],
+          [
+            17.360156250000003,
+            15
+          ],
+          [
+            17.17626953125,
+            15.5
+          ],
+          [
+            17,
+            16
+          ],
+          [
+            16.811425781249998,
+            16.5
+          ],
+          [
+            16.591406250000002,
+            17
+          ],
+          [
+            16.35224609375,
+            17.5
+          ],
+          [
+            16.10625,
+            18
+          ],
+          [
+            15.86572265625,
+            18.5
+          ],
+          [
+            15.64296875,
+            19
+          ],
+          [
+            15.450292968749999,
+            19.5
+          ],
+          [
+            15.3,
+            20
+          ],
+          [
+            15.19345703125,
+            20.5
+          ],
+          [
+            15.119531250000001,
+            21
+          ],
+          [
+            15.07177734375,
+            21.5
+          ],
+          [
+            15.043750000000001,
+            22
+          ],
+          [
+            15.02900390625,
+            22.5
+          ],
+          [
+            15.021093750000002,
+            23
+          ],
+          [
+            15.013574218750003,
+            23.5
+          ],
+          [
+            15.000000000000004,
+            24
+          ]
+        ],
+        "halfWidth": 1.4
+      },
+      "obstacles": [
+        {
+          "id": "rock-west",
+          "kind": "rock",
+          "position": [
+            10.5,
+            8.5
+          ],
+          "radius": 1.05
+        },
+        {
+          "id": "rock-south",
+          "kind": "rock",
+          "position": [
+            5.6,
+            19.7
+          ],
+          "radius": 0.8
+        },
+        {
+          "id": "rock-east",
+          "kind": "rock",
+          "position": [
+            23,
+            12.5
+          ],
+          "radius": 1.2
+        },
+        {
+          "id": "rock-north",
+          "kind": "rock",
+          "position": [
+            21.8,
+            3.2
+          ],
+          "radius": 0.75
+        }
+      ]
+    },
+    "self": {
+      "actorId": "a3",
+      "position": [
+        28,
+        10
+      ],
+      "inventory": {
+        "wood": 2
+      }
+    },
+    "residents": [
+      {
+        "actorId": "a1",
+        "position": [
+          15.7,
+          12
+        ]
+      },
+      {
+        "actorId": "a1_alias",
+        "position": [
+          5,
+          7
+        ]
+      },
+      {
+        "actorId": "a2",
+        "position": [
+          26,
+          17
+        ]
+      },
+      {
+        "actorId": "a3",
+        "position": [
+          28,
+          10
+        ]
+      }
+    ],
+    "resourceNodes": [
+      {
+        "nodeId": "tree-east-north",
+        "kind": "tree",
+        "position": [
+          25.4,
+          5.8
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-east-south",
+        "kind": "tree",
+        "position": [
+          25.7,
+          18.2
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-west-north",
+        "kind": "tree",
+        "position": [
+          6.2,
+          7.8
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-west-south",
+        "kind": "tree",
+        "position": [
+          9.2,
+          16.3
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      }
+    ],
+    "entities": [
+      {
+        "entityId": "e76a6cc3bf333423e874d310f1f0371a0",
+        "definitionId": "platform",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a3",
+        "position": [
+          27,
+          17
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "e9df7ee47564546f098a988085e93ce3d",
+        "definitionId": "platform",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a3",
+        "position": [
+          30,
+          17
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "eb40dd030a24941f28c3fb5313fe44784",
+        "definitionId": "platform",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a3",
+        "position": [
+          27,
+          14
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "eca67171501f8438e9fe790bfdbef9789",
+        "definitionId": "platform",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a3",
+        "position": [
+          30,
+          14
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "edc11b73e70a44aa68e745d404cff0bab",
+        "definitionId": "platform",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a2",
+        "position": [
+          24,
+          16
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+        "definitionId": "bridge",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a1",
+        "position": [
+          18,
+          12
+        ],
+        "embodiedWood": 6
+      }
+    ],
+    "recipes": [
+      {
+        "id": "platform.v1",
+        "definitionId": "platform",
+        "woodCost": 3
+      },
+      {
+        "id": "bridge.v1",
+        "definitionId": "bridge",
+        "woodCost": 6
+      }
+    ],
+    "gathering": {
+      "version": 1,
+      "quantityPerAction": 1
+    },
+    "depot": {
+      "wood": 0,
+      "available": false
+    },
+    "resourceAudit": {
+      "initialWood": 12,
+      "issuedWood": 33,
+      "generatedWood": 21,
+      "sourceWood": 4,
+      "wildWood": 0,
+      "depotWood": 0,
+      "inventoryWood": 8,
+      "embodiedWood": 21,
+      "conserved": true
+    },
+    "materialAccess": {
+      "version": 2,
+      "sourceId": "wood-source-east",
+      "position": [
+        28,
+        10
+      ],
+      "buildExclusion": [
+        27,
+        9,
+        29,
+        11
+      ],
+      "active": true,
+      "serviceMs": 111193,
+      "enabledAtServiceMs": 21047,
+      "nextProductionAtMs": 121047,
+      "generatedWood": 21,
+      "stockWood": 4,
+      "freeWood": 3,
+      "inputBudget": null,
+      "productionPolicy": {
+        "id": "continuous-service-time-v1",
+        "version": 1,
+        "adoptedAtServiceMs": 84121,
+        "adoptedAtStateVersion": 624,
+        "adoptedAtEventCursor": 625,
+        "generatedWoodAtAdoption": 12,
+        "productionPeriodAtAdoption": 6
+      },
+      "capacity": 6,
+      "reservationQuantity": 3,
+      "leaseMs": 60000,
+      "productionIntervalMs": 10000,
+      "currentReservation": {
+        "reservationId": "mc8cb9df855284dc0aa2a968abf92f422",
+        "actorId": "a3",
+        "operatorId": "declared-third",
+        "requestCommandId": "5c4f065d2fb04e4fa2ec815c49da9cc5",
+        "queueSequence": 6,
+        "status": "active",
+        "requestedAtMs": 97631,
+        "grantedAtMs": 101191,
+        "expiresAtMs": 161191,
+        "remaining": 1
+      },
+      "recentReservations": [
+        {
+          "reservationId": "mc8cb9df855284dc0aa2a968abf92f422",
+          "actorId": "a3",
+          "operatorId": "declared-third",
+          "requestCommandId": "5c4f065d2fb04e4fa2ec815c49da9cc5",
+          "queueSequence": 6,
+          "status": "active",
+          "requestedAtMs": 97631,
+          "grantedAtMs": 101191,
+          "expiresAtMs": 161191,
+          "remaining": 1
+        },
+        {
+          "reservationId": "mc771317178e149829c18438a0bf8fc8e",
+          "actorId": "a3",
+          "operatorId": "declared-third",
+          "requestCommandId": "fd7a4a32787d4597963c40993e453094",
+          "queueSequence": 4,
+          "status": "completed",
+          "requestedAtMs": 53072,
+          "grantedAtMs": 61082,
+          "expiresAtMs": 121082,
+          "remaining": 0
+        },
+        {
+          "reservationId": "meb72146e737b4e62af46602198c3391f",
+          "actorId": "a3",
+          "operatorId": "declared-third",
+          "requestCommandId": "83429349591e48a98540d5df7fd3e969",
+          "queueSequence": 3,
+          "status": "completed",
+          "requestedAtMs": 44943,
+          "grantedAtMs": 51082,
+          "expiresAtMs": 111082,
+          "remaining": 0
+        },
+        {
+          "reservationId": "m002a1ab802704b5584ebd090f400a589",
+          "actorId": "a3",
+          "operatorId": "declared-third",
+          "requestCommandId": "1bf417a34ffc4271a6124ea3e8a68a79",
+          "queueSequence": 2,
+          "status": "completed",
+          "requestedAtMs": 33017,
+          "grantedAtMs": 41082,
+          "expiresAtMs": 101082,
+          "remaining": 0
+        },
+        {
+          "reservationId": "m697f513ca56c497a9127c82571c1500c",
+          "actorId": "a3",
+          "operatorId": "declared-third",
+          "requestCommandId": "3ceff92c31c04f62ac06567c8645c0a6",
+          "queueSequence": 1,
+          "status": "completed",
+          "requestedAtMs": 21208,
+          "grantedAtMs": 31082,
+          "expiresAtMs": 91082,
+          "remaining": 0
+        }
+      ],
+      "queue": [],
+      "controlBasis": "declared-local-fixture",
+      "controlRoster": [
+        {
+          "actorId": "a1",
+          "operatorId": "local-operator"
+        },
+        {
+          "actorId": "a1_alias",
+          "operatorId": "local-operator"
+        },
+        {
+          "actorId": "a2",
+          "operatorId": "declared-late"
+        },
+        {
+          "actorId": "a3",
+          "operatorId": "declared-third"
+        }
+      ]
+    },
+    "entityNotes": {
+      "capability": "entity-notes-v1",
+      "version": 1,
+      "target": {
+        "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+        "definitionId": "bridge",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a1",
+        "position": [
+          18,
+          12
+        ],
+        "embodiedWood": 6
+      },
+      "reach": 1.6,
+      "maxTextScalars": 160,
+      "maxPerOperator": 2,
+      "maxTotal": 6,
+      "selfCount": 1,
+      "totalCount": 2,
+      "notes": [
+        {
+          "noteId": "nd82d4590c877499d8ac290bad573c568",
+          "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "6c18e433ad78416887ec5d2de8df02d4",
+          "text": "树木已采尽，旧桥还在。今天我从东岸走来，在桥中央看了一会儿水。",
+          "replyToNoteId": null,
+          "stateVersion": 476,
+          "eventCursor": 477,
+          "sharedAtUtc": "2026-10-26T04:58:59.4231885+00:00",
+          "position": [
+            18,
+            12
+          ],
+          "inventoryWood": 0,
+          "capabilityVersion": 1
+        },
+        {
+          "noteId": "n1f837f35ff4e49548ceb17a3de4609fd",
+          "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+          "authorActorId": "a3",
+          "operatorId": "declared-third",
+          "commandId": "76e951fc8db542169f50ae37381ba10b",
+          "text": "读到你在桥中央看水，我也来停了一会儿。桥不是新的，今天的相遇是新的。",
+          "replyToNoteId": "nd82d4590c877499d8ac290bad573c568",
+          "stateVersion": 517,
+          "eventCursor": 518,
+          "sharedAtUtc": "2026-10-26T04:59:03.0137497+00:00",
+          "position": [
+            18,
+            12
+          ],
+          "inventoryWood": 0,
+          "capabilityVersion": 1
+        }
+      ]
+    },
+    "materialTransfer": {
+      "version": 1,
+      "resource": "wood",
+      "maxQuantity": 12,
+      "reach": 1.6,
+      "recipientConfirmation": false
+    },
+    "recentTransfers": {
+      "items": [],
+      "limit": 20,
+      "truncated": false
+    },
+    "commandBinding": {
+      "version": 1,
+      "required": true,
+      "header": "World-Instance-Id"
+    },
+    "commandConcurrency": {
+      "version": 1,
+      "supportedModes": [
+        "actor-state-v1"
+      ]
+    }
+  },
+  "savedTypeProbes": [
+    {
+      "name": "float-budget",
+      "rejectedBeforeIO": true
+    },
+    {
+      "name": "boolean-harvest",
+      "rejectedBeforeIO": true
+    }
+  ],
+  "allStartedServicesStopped": true,
+  "afterHashes": {
+    "world_instance": "940456eaeeaa9c77bd3e0cbd54349d15a496254f3085792a411194b4a008fe4d",
+    "entities": "2f90fb30705fbf0513f4542a67708b2a0c9255e2af0b504934d4bb01eaaac06f",
+    "entity_notes": "f15216c2e32f6fe4978b81e8017b5834b9f3802cddca20d5ac77c13bc0b7e95f",
+    "material_source_policy": "fc6c8bb2246dd819dc6c15f70ec187731a2fc45779c37065923da7806e19d9fd",
+    "receipts": "eda3b23fc946cfd0ef61a39e511e76f318583f207345e97cd2acb2eadc6a5cd8",
+    "resource_ledger": "511a8d1685626f6d871da6320f8459d98b2ace35e367b180f8135f97bfe6bc0c",
+    "material_production": "7f5789024dc4202191a1d0ab9eae41ed188c2b7492678af4c19a84692b0b4b28",
+    "material_source": "aaab3bb2fc5dabf7bd0432e5650e5b154deb40432e74eaa6e557c5f22903a914",
+    "residents": "118b7e1572e593b2cb3f67c9e64dda011fb2e77ca0453b0c9e025ba4db7154c5"
+  }
+}

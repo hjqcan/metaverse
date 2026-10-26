@@ -1,0 +1,16 @@
+{
+  "missionId": "continuous-material-platform",
+  "objective": "在原世界显式采用持续来源后，仅预约并亲自领取3木材，建造本人第五个平台并返回。",
+  "goals": [{
+    "id": "platform",
+    "label": "持续来源与本人平台",
+    "target": [24, 16],
+    "buildRecipeId": "platform.v1",
+    "materialAccess": {"sourceId": "wood-source-east", "quantity": 3}
+  }],
+  "allowMaterialAccess": true,
+  "allowBuild": true,
+  "allowGather": false,
+  "allowTransfer": false,
+  "budgets": {"commands": 160, "wood": 3, "seconds": 180, "modelCalls": 1, "queries": 300}
+}

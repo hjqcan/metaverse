@@ -1,0 +1,17 @@
+{
+  "suite": "continuous-material-http-v1",
+  "passed": true,
+  "testsRun": 1,
+  "tests": [
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_13_fractional_policy_anchors_refuse_without_truncation",
+      "passed": true,
+      "seconds": 7.268633308005519
+    }
+  ],
+  "actualModelCalls": 0,
+  "dllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/baseline",
+  "clock": "real Stopwatch in natural operation; isolated damage cases deliberately alter invalid rows/schema, never to fund success",
+  "failureDetails": []
+}

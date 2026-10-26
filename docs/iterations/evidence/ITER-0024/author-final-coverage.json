@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "singleFullRunPassed": false,
+  "basis": "Original 27 HTTP suites and 18 prior browser suites passed; new browser default entry passed in targeted retest after two harness wiring fixes. No product change between runs.",
+  "httpTests": 316,
+  "browserChecks": 180,
+  "skippedTests": [],
+  "nativeSuites": 10,
+  "nativeGroups": 60,
+  "nativeAssertions": 814,
+  "nativeVersionScope": "Original per-run DLL identities retained; current continuous material 4 groups/47 assertions also passed against final core-v2.",
+  "actualModelCalls": 0,
+  "sources": {
+    "initialFull": ".local/checks/20261026T061307Z-268415/results.json",
+    "expandedFull": ".local/iter0024/author-full-expanded.json",
+    "browserDefaultFinal": ".local/iter0024/browser/2026-10-26T06-30-42-399Z/results.json",
+    "browserDefaultActualMissionInputs": ".local/iter0024/python/20261026T063042Z-611738/results.json",
+    "nativeAll": ".local/iter0024/author-godot-all.json",
+    "nativeV2": ".local/iter0024/godot/20261026T061552Z-393915/results.json",
+    "sourceAudit": ".local/iter0024/final-source-audit.json"
+  }
+}

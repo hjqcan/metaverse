@@ -10,6 +10,11 @@ if (args.Length > 0)
 {
     try
     {
+        if (args.Length == 3 && args[0] == "adopt-continuous-material-source" && args[1] == "--instance")
+        {
+            Console.WriteLine(database.AdoptContinuousMaterialSource(args[2]) ? "持续材料政策已在原实例采用。" : "持续材料政策已采用，原进度保持。");
+            return 0;
+        }
         if (args.Length == 5 && args[0] == "adopt-entity-notes" && args[1] == "--instance" && args[3] == "--entity")
         {
             Console.WriteLine(database.AdoptEntityNotes(args[2], args[4]) ? "共同手记已在原桥开启。" : "共同手记已采用，原内容和额度保持。");

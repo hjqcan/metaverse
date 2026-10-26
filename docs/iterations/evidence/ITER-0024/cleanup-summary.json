@@ -1,0 +1,21 @@
+{
+  "scope": "Completed test binary/runtime cleanup; no source tests or critical world/command/result data deleted. Logical bytes are not claimed as physical disk space because earlier files shared inodes.",
+  "sources": [
+    ".local/iter0024/root-test-cleanup.json",
+    ".local/iter0024/completed-run-cleanup.json",
+    ".local/iter0024/final-run-cleanup.json",
+    ".local/iter0024/python/prior-runtime-cleanup.json",
+    ".local/research/cleanup-20261026-completed-binaries.json",
+    ".local/qa/20261026-test-agent/continuous-cleanup-20261026T060521350442Z.json"
+  ],
+  "automaticFullRegressionCleanup": {
+    "entries": 19,
+    "logicalBytes": 4896552
+  },
+  "retained": [
+    "Final and old-version frozen binaries needed for validation",
+    "Original natural continuation and policy counterexample",
+    "Database snapshots, receipts, mission states, logs, results and selected screenshots"
+  ],
+  "futureCheckEntry": "scripts/check.py cleanup_binaries only scans completed evidence directories and skips live process references"
+}

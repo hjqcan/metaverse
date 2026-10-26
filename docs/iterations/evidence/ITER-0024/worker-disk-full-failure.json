@@ -1,0 +1,61 @@
+{
+  "suite": "continuous-material-mission-http",
+  "validationLevel": "builder-self-check",
+  "actualModelCalls": 0,
+  "passed": false,
+  "testsRun": 2,
+  "tests": [
+    {
+      "test": "__main__.ContinuousMaterialMissionAcceptance.test_01_actual_cli_fifth_platform_and_later_production",
+      "passed": false,
+      "seconds": 10.221197935985401
+    },
+    {
+      "test": "__main__.ContinuousMaterialMissionAcceptance.test_04_confirmed_reservation_and_query_limit_coexist",
+      "passed": false,
+      "seconds": 0.0014762079808861017
+    }
+  ],
+  "skipped": [],
+  "sourceHashesBefore": {
+    "scripts/resident_material_access.py": "5c11201fe27c64b0324938af38a8f131548e83f1b288000e6e029d3a9a6d452b",
+    "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+    "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+    "tests/continuous_material_mission_api.py": "b5bc57a0f9928df7fcb5f9a5811f94a5853a6525dd30a4ee72bc1649f0ca1d5c",
+    "tests/fixtures/continuous-material-platform.json": "281e29127f49e432d94b48272a811a1a409b1f5c04e7a9cc47e7a3a1f8e3c86e"
+  },
+  "sourceHashesAfter": {
+    "scripts/resident_material_access.py": "5c11201fe27c64b0324938af38a8f131548e83f1b288000e6e029d3a9a6d452b",
+    "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+    "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+    "tests/continuous_material_mission_api.py": "b5bc57a0f9928df7fcb5f9a5811f94a5853a6525dd30a4ee72bc1649f0ca1d5c",
+    "tests/fixtures/continuous-material-platform.json": "281e29127f49e432d94b48272a811a1a409b1f5c04e7a9cc47e7a3a1f8e3c86e"
+  },
+  "sourceStable": true,
+  "allStartedServicesStopped": true,
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/baseline",
+  "baselineSha256": "b3cfc119ac4ec264154714db6fa1fa4d98a089b4abe1a5e24e4dd53841be9d8a",
+  "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T055633Z-511db3/bin/World.Server.dll",
+  "dllSha256": "82e77563c9571185988a84a30b5511d9b7701329bfc2ec949cfa5c07f1be2da3",
+  "priorPython": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/prior-c6a2406",
+  "actualPreviousPython": true,
+  "priorPythonHashes": {
+    "resident_material_access.py": "0e9aa7bc9bfd89bc65270a0cc49fd8a2c128cdaff2fc95b6dcde3d56ad081d68",
+    "resident_mission.py": "0b4e4fc3aa81649fe4bfa48f144446b2f8673e5da9e258fd5f4f4440b82789c8",
+    "resident_entity_notes.py": "b15f9efaf3ad1dc6980e5d084689005efad36d2b37017f7b53dff048ccad36dc"
+  },
+  "failureDetails": [
+    [
+      "test_01_actual_cli_fifth_platform_and_later_production (__main__.ContinuousMaterialMissionAcceptance.test_01_actual_cli_fifth_platform_and_later_production)",
+      "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_material_mission_api.py\", line 157, in tearDown\n    early = next(row for row in world.original['residents'] if row[0] == 'a1')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nStopIteration\n"
+    ],
+    [
+      "test_04_confirmed_reservation_and_query_limit_coexist (__main__.ContinuousMaterialMissionAcceptance.test_04_confirmed_reservation_and_query_limit_coexist)",
+      "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_material_mission_api.py\", line 97, in setUp\n    self.world = self.copy('world')\n                 ^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_material_mission_api.py\", line 105, in copy\n    world = Continued(SOURCE, RUN / (self._testMethodName + '-' + suffix), DLL)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_material_api.py\", line 71, in __init__\n    src.backup(dst)\nsqlite3.OperationalError: database or disk is full\n"
+    ],
+    [
+      "test_01_actual_cli_fifth_platform_and_later_production (__main__.ContinuousMaterialMissionAcceptance.test_01_actual_cli_fifth_platform_and_later_production)",
+      "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_material_mission_api.py\", line 211, in test_01_actual_cli_fifth_platform_and_later_production\n    self.assertEqual(0, result.returncode, result.stderr)\nAssertionError: 0 != 1 : Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/resident_mission.py\", line 149, in _save\n    stream.flush()\nOSError: [Errno 28] No space left on device\n\nDuring handling of the above exception, another exception occurred:\n\nOSError: [Errno 28] No space left on device\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/run_resident.py\", line 47, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/run_resident.py\", line 38, in main\n    report = run_mission(WorldClient(args.url, token), spec, args.state, choose, max_steps=args.max_steps)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/resident_mission.py\", line 849, in run_mission\n    save()\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/resident_mission.py\", line 562, in save\n    _save(path, state)\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/resident_mission.py\", line 146, in _save\n    with os.fdopen(fd, \"w\", encoding=\"utf-8\") as stream:\nOSError: [Errno 28] No space left on device\n\n"
+    ]
+  ]
+}

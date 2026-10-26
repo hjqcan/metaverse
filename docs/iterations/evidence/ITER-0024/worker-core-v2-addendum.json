@@ -1,0 +1,34 @@
+{
+  "primaryHandoff": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/handoff-20261026T0610Z.json",
+  "fiveSourceHashesUnchanged": {
+    "scripts/resident_material_access.py": "a144eafc8ba4e12d1cf88ef147a2179b7808a1cd0b2f5a8a0e0dc01046b717e4",
+    "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+    "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+    "tests/continuous_material_mission_api.py": "49ca21ba8ff15f40ae8d0d408c4a8ece03014e404c901c6e6da987e5f4a00b62",
+    "tests/fixtures/continuous-material-platform.json": "281e29127f49e432d94b48272a811a1a409b1f5c04e7a9cc47e7a3a1f8e3c86e"
+  },
+  "coreV2Continuation": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/core-v2-continuation/results.json",
+  "passed": true,
+  "sameOriginalDataDirectory": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T060809Z-9d2bf5/test_01_actual_cli_fifth_platform_and_later_production-world",
+  "v1BoundarySnapshot": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/core-v2-continuation/before-v1-world.db",
+  "v1BoundarySnapshotSha256": "cbb0201abb2b82f3f2ca7823a71463d93407d24f6ea6c901dc26d26f179757d3",
+  "coreV1FullSuitePassed": 10,
+  "coreV1NotRelabeledAsV2": true,
+  "coreV2DllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+  "generatedBefore": 18,
+  "generatedAfter": 21,
+  "originalReservationRemainingBefore": 2,
+  "originalReservationRemainingAfter": 1,
+  "pythonSavedTypeProbes": [
+    {
+      "name": "float-budget",
+      "rejectedBeforeIO": true
+    },
+    {
+      "name": "boolean-harvest",
+      "rejectedBeforeIO": true
+    }
+  ],
+  "allStartedServicesStopped": true,
+  "runtimeCleanup": "No temporary runtime created for final suite or v2 continuation; prior completed caches removed."
+}

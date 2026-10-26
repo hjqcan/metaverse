@@ -1,0 +1,1229 @@
+{
+  "passed": true,
+  "scope": "independent core-v2 real HTTP/SQLite",
+  "binarySha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+  "manifestSha256": "844938e0b63fcb936e901dfa283d6f661493d4e39b5412f8b04dce0e7dadeec9",
+  "seed": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-preflight/20261026T054234754936Z/world.db",
+  "seedSha256": "b3cfc119ac4ec264154714db6fa1fa4d98a089b4abe1a5e24e4dd53841be9d8a",
+  "cases": {
+    "queue_across_adoption": {
+      "passed": true,
+      "classification": "new isolated fixture via actual commands and real service time",
+      "adoption": {
+        "stoppedProcess": {
+          "pid": 4163930,
+          "exitCode": 0
+        },
+        "adoption": {
+          "exitCode": 0,
+          "output": "持续材料政策已在原实例采用。\n"
+        },
+        "repeat": {
+          "exitCode": 0,
+          "output": "持续材料政策已采用，原进度保持。\n"
+        },
+        "sourceBefore": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 10100,
+          "enabled_at_ms": 0,
+          "next_production_ms": 20000,
+          "production_period": 1,
+          "generated_wood": 3,
+          "stock_wood": 2
+        },
+        "sourceAfter": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 10100,
+          "enabled_at_ms": 0,
+          "next_production_ms": 20000,
+          "production_period": 1,
+          "generated_wood": 3,
+          "stock_wood": 2
+        },
+        "policyEvent": {
+          "seq": 9,
+          "stateVersion": 8,
+          "actorId": null,
+          "commandId": null,
+          "type": "continuousMaterialSourceAdopted",
+          "sourceId": "wood-source-east",
+          "serviceMs": 10100,
+          "worldInstanceId": "w_9028fc2501f0410fb771f9d3eda728ac",
+          "productionPolicy": {
+            "id": "continuous-service-time-v1",
+            "version": 1,
+            "adoptedAtServiceMs": 10100,
+            "adoptedAtStateVersion": 8,
+            "adoptedAtEventCursor": 9,
+            "generatedWoodAtAdoption": 3,
+            "productionPeriodAtAdoption": 1
+          }
+        },
+        "newEventCount": 1
+      },
+      "allReservationRowsUnchangedAtAdoption": true,
+      "partialOriginal": {
+        "reservationId": "mc9ec6dfe6e1c44648d5c9c1d4b900b13",
+        "actorId": "a3",
+        "operatorId": "declared-third",
+        "requestCommandId": "2c9576b67cd940849c5d3ff0f6a3118b",
+        "queueSequence": 1,
+        "status": "active",
+        "requestedAtMs": 190,
+        "grantedAtMs": 10045,
+        "expiresAtMs": 70045,
+        "remaining": 2
+      },
+      "firstClaim": [
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "33049f48eb04430cb762b46792cc7d16",
+            "expectedStateVersion": 4,
+            "action": {
+              "type": "harvest_material",
+              "reservationId": "mc9ec6dfe6e1c44648d5c9c1d4b900b13"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 5,
+            "commandId": "33049f48eb04430cb762b46792cc7d16",
+            "identity": {
+              "operatorId": "declared-third",
+              "actorId": "a3",
+              "sessionId": "s27e54f40246f4c2f8904aadb9b53efbb"
+            },
+            "eventCursor": 6,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "harvest_material",
+              "reservationId": "mc9ec6dfe6e1c44648d5c9c1d4b900b13",
+              "sourceId": "wood-source-east",
+              "quantity": 1,
+              "remainingBefore": 3,
+              "remaining": 2,
+              "inventoryWoodBefore": 0,
+              "inventoryWood": 1,
+              "position": [
+                28,
+                10
+              ]
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 4,
+              "appliedOnStateVersion": 4
+            }
+          },
+          "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":5,\"commandId\":\"33049f48eb04430cb762b46792cc7d16\",\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"s27e54f40246f4c2f8904aadb9b53efbb\"},\"eventCursor\":6,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mc9ec6dfe6e1c44648d5c9c1d4b900b13\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":3,\"remaining\":2,\"inventoryWoodBefore\":0,\"inventoryWood\":1,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":4,\"appliedOnStateVersion\":4}}"
+        }
+      ],
+      "remainingClaims": [
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "f3c689a532ac4c47a1d4ba21d9e6c25b",
+            "expectedStateVersion": 8,
+            "action": {
+              "type": "harvest_material",
+              "reservationId": "mc9ec6dfe6e1c44648d5c9c1d4b900b13"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 9,
+            "commandId": "f3c689a532ac4c47a1d4ba21d9e6c25b",
+            "identity": {
+              "operatorId": "declared-third",
+              "actorId": "a3",
+              "sessionId": "s27e54f40246f4c2f8904aadb9b53efbb"
+            },
+            "eventCursor": 10,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "harvest_material",
+              "reservationId": "mc9ec6dfe6e1c44648d5c9c1d4b900b13",
+              "sourceId": "wood-source-east",
+              "quantity": 1,
+              "remainingBefore": 2,
+              "remaining": 1,
+              "inventoryWoodBefore": 1,
+              "inventoryWood": 2,
+              "position": [
+                28,
+                10
+              ]
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 8,
+              "appliedOnStateVersion": 8
+            }
+          },
+          "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":9,\"commandId\":\"f3c689a532ac4c47a1d4ba21d9e6c25b\",\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"s27e54f40246f4c2f8904aadb9b53efbb\"},\"eventCursor\":10,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mc9ec6dfe6e1c44648d5c9c1d4b900b13\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":2,\"remaining\":1,\"inventoryWoodBefore\":1,\"inventoryWood\":2,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":8,\"appliedOnStateVersion\":8}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "1d1378ff3ad24082a30cce7a7c91d93e",
+            "expectedStateVersion": 9,
+            "action": {
+              "type": "harvest_material",
+              "reservationId": "mc9ec6dfe6e1c44648d5c9c1d4b900b13"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 10,
+            "commandId": "1d1378ff3ad24082a30cce7a7c91d93e",
+            "identity": {
+              "operatorId": "declared-third",
+              "actorId": "a3",
+              "sessionId": "s27e54f40246f4c2f8904aadb9b53efbb"
+            },
+            "eventCursor": 11,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "harvest_material",
+              "reservationId": "mc9ec6dfe6e1c44648d5c9c1d4b900b13",
+              "sourceId": "wood-source-east",
+              "quantity": 1,
+              "remainingBefore": 1,
+              "remaining": 0,
+              "inventoryWoodBefore": 2,
+              "inventoryWood": 3,
+              "position": [
+                28,
+                10
+              ]
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 9,
+              "appliedOnStateVersion": 9
+            }
+          },
+          "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":10,\"commandId\":\"1d1378ff3ad24082a30cce7a7c91d93e\",\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"s27e54f40246f4c2f8904aadb9b53efbb\"},\"eventCursor\":11,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mc9ec6dfe6e1c44648d5c9c1d4b900b13\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":1,\"remaining\":0,\"inventoryWoodBefore\":2,\"inventoryWood\":3,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":9,\"appliedOnStateVersion\":9}}"
+        }
+      ],
+      "aliasDenied": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 7,
+        "commandId": "140f167cfc83469a91c34a7da30163a0",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1_alias",
+          "sessionId": "se966367184924680aa386f2ac49a5fb1"
+        },
+        "eventCursor": 8,
+        "error": {
+          "code": "RESERVATION_ALREADY_ACTIVE",
+          "message": "同一已知控制组已有排队或待采预约",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected",
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 7,
+          "appliedOnStateVersion": 7
+        }
+      },
+      "queueBeforeGrants": [
+        {
+          "reservationId": "ma726df89bc89463fba6c273e6cd0fff3",
+          "actorId": "a1",
+          "operatorId": "local-operator",
+          "requestCommandId": "4010bd3d1cd544c88659228f0270f9a5",
+          "queueSequence": 2,
+          "status": "queued",
+          "requestedAtMs": 10092,
+          "grantedAtMs": null,
+          "expiresAtMs": null,
+          "remaining": 3
+        },
+        {
+          "reservationId": "mdb234256bb74407c8538cec5da421157",
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "requestCommandId": "69cac721e82c460db81d52cb3666b53f",
+          "queueSequence": 3,
+          "status": "queued",
+          "requestedAtMs": 10097,
+          "grantedAtMs": null,
+          "expiresAtMs": null,
+          "remaining": 3
+        },
+        {
+          "reservationId": "me80a5e5096fc4528adc7357080a7056c",
+          "actorId": "a3",
+          "operatorId": "declared-third",
+          "requestCommandId": "1d8dd63910d3430e9e182a69d9e874ce",
+          "queueSequence": 4,
+          "status": "queued",
+          "requestedAtMs": 10328,
+          "grantedAtMs": null,
+          "expiresAtMs": null,
+          "remaining": 3
+        }
+      ],
+      "orderedGrants": [
+        {
+          "reservationId": "ma726df89bc89463fba6c273e6cd0fff3",
+          "actorId": "a1",
+          "operatorId": "local-operator",
+          "requestCommandId": "4010bd3d1cd544c88659228f0270f9a5",
+          "queueSequence": 2,
+          "status": "active",
+          "requestedAtMs": 10092,
+          "grantedAtMs": 20148,
+          "expiresAtMs": 80148,
+          "remaining": 3
+        },
+        {
+          "reservationId": "mdb234256bb74407c8538cec5da421157",
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "requestCommandId": "69cac721e82c460db81d52cb3666b53f",
+          "queueSequence": 3,
+          "status": "active",
+          "requestedAtMs": 10097,
+          "grantedAtMs": 20399,
+          "expiresAtMs": 80399,
+          "remaining": 3
+        },
+        {
+          "reservationId": "me80a5e5096fc4528adc7357080a7056c",
+          "actorId": "a3",
+          "operatorId": "declared-third",
+          "requestCommandId": "1d8dd63910d3430e9e182a69d9e874ce",
+          "queueSequence": 4,
+          "status": "active",
+          "requestedAtMs": 10328,
+          "grantedAtMs": 20648,
+          "expiresAtMs": 80648,
+          "remaining": 3
+        }
+      ],
+      "cancelResults": [
+        {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 14,
+          "commandId": "2c48ba7123914da39de63f17f3b27880",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "sf59c0acd85414e56b2545f4e600d4a64"
+          },
+          "eventCursor": 15,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "cancel_reservation",
+            "reservationId": "ma726df89bc89463fba6c273e6cd0fff3",
+            "sourceId": "wood-source-east",
+            "status": "cancelled",
+            "releasedQuantity": 3
+          },
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 13,
+            "appliedOnStateVersion": 13
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 16,
+          "commandId": "08f6eea5d78248cb840d956728b2897a",
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s6c2e40ed379a476c900bcee52fc04f91"
+          },
+          "eventCursor": 17,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "cancel_reservation",
+            "reservationId": "mdb234256bb74407c8538cec5da421157",
+            "sourceId": "wood-source-east",
+            "status": "cancelled",
+            "releasedQuantity": 3
+          },
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 15,
+            "appliedOnStateVersion": 15
+          }
+        }
+      ],
+      "partialBeforeExpiry": [
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "ee1b39ad366d4e2f9757afa23f04c3a9",
+            "expectedStateVersion": 17,
+            "action": {
+              "type": "harvest_material",
+              "reservationId": "me80a5e5096fc4528adc7357080a7056c"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 18,
+            "commandId": "ee1b39ad366d4e2f9757afa23f04c3a9",
+            "identity": {
+              "operatorId": "declared-third",
+              "actorId": "a3",
+              "sessionId": "s27e54f40246f4c2f8904aadb9b53efbb"
+            },
+            "eventCursor": 19,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "harvest_material",
+              "reservationId": "me80a5e5096fc4528adc7357080a7056c",
+              "sourceId": "wood-source-east",
+              "quantity": 1,
+              "remainingBefore": 3,
+              "remaining": 2,
+              "inventoryWoodBefore": 3,
+              "inventoryWood": 4,
+              "position": [
+                28,
+                10
+              ]
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 17,
+              "appliedOnStateVersion": 17
+            }
+          },
+          "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":18,\"commandId\":\"ee1b39ad366d4e2f9757afa23f04c3a9\",\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"s27e54f40246f4c2f8904aadb9b53efbb\"},\"eventCursor\":19,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"me80a5e5096fc4528adc7357080a7056c\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":3,\"remaining\":2,\"inventoryWoodBefore\":3,\"inventoryWood\":4,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":17,\"appliedOnStateVersion\":17}}"
+        }
+      ],
+      "expiredReservation": {
+        "reservationId": "me80a5e5096fc4528adc7357080a7056c",
+        "actorId": "a3",
+        "operatorId": "declared-third",
+        "requestCommandId": "1d8dd63910d3430e9e182a69d9e874ce",
+        "queueSequence": 4,
+        "status": "expired",
+        "requestedAtMs": 10328,
+        "grantedAtMs": 20648,
+        "expiresAtMs": 80648,
+        "remaining": 2
+      },
+      "expiryEvent": {
+        "seq": 22,
+        "stateVersion": 21,
+        "actorId": null,
+        "commandId": null,
+        "type": "materialReservationExpired",
+        "sourceId": "wood-source-east",
+        "serviceMs": 80648,
+        "reservationId": "me80a5e5096fc4528adc7357080a7056c",
+        "reservationActorId": "a3",
+        "releasedQuantity": 2
+      },
+      "expiredHarvestDenied": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 21,
+        "commandId": "bc8cc771f8054138959bddae0a7e8c12",
+        "identity": {
+          "operatorId": "declared-third",
+          "actorId": "a3",
+          "sessionId": "s27e54f40246f4c2f8904aadb9b53efbb"
+        },
+        "eventCursor": 22,
+        "error": {
+          "code": "RESERVATION_NOT_ACTIVE",
+          "message": "原预约尚未授予或已经结束，请核对原预约",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected",
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 21,
+          "appliedOnStateVersion": 21
+        }
+      },
+      "audit": {
+        "schemaVersion": 11,
+        "source": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 80749,
+          "enabled_at_ms": 0,
+          "next_production_ms": 90000,
+          "production_period": 8,
+          "generated_wood": 10,
+          "stock_wood": 6
+        },
+        "issuedWood": 22,
+        "inventoryWood": 4,
+        "embodiedWood": 0,
+        "sourceWood": 6,
+        "wildWood": 12,
+        "stateVersion": 21,
+        "receipts": 12,
+        "originalReceiptsPreserved": 0,
+        "originalEventsPreserved": 1,
+        "notes": 0,
+        "entities": 0,
+        "requests": 12,
+        "processStopped": {
+          "pid": 4164534,
+          "exitCode": 0
+        },
+        "allStartedProcessesExited": true
+      }
+    },
+    "capacity_offline": {
+      "passed": true,
+      "adoption": {
+        "stoppedProcess": null,
+        "adoption": {
+          "exitCode": 0,
+          "output": "持续材料政策已在原实例采用。\n"
+        },
+        "repeat": {
+          "exitCode": 0,
+          "output": "持续材料政策已采用，原进度保持。\n"
+        },
+        "sourceBefore": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 83816,
+          "enabled_at_ms": 21047,
+          "next_production_ms": 91047,
+          "production_period": 6,
+          "generated_wood": 12,
+          "stock_wood": 0
+        },
+        "sourceAfter": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 83816,
+          "enabled_at_ms": 21047,
+          "next_production_ms": 91047,
+          "production_period": 6,
+          "generated_wood": 12,
+          "stock_wood": 0
+        },
+        "policyEvent": {
+          "seq": 625,
+          "stateVersion": 624,
+          "actorId": null,
+          "commandId": null,
+          "type": "continuousMaterialSourceAdopted",
+          "sourceId": "wood-source-east",
+          "serviceMs": 83816,
+          "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+          "productionPolicy": {
+            "id": "continuous-service-time-v1",
+            "version": 1,
+            "adoptedAtServiceMs": 83816,
+            "adoptedAtStateVersion": 624,
+            "adoptedAtEventCursor": 625,
+            "generatedWoodAtAdoption": 12,
+            "productionPeriodAtAdoption": 6
+          }
+        },
+        "newEventCount": 1
+      },
+      "firstFull": {
+        "version": 2,
+        "sourceId": "wood-source-east",
+        "position": [
+          28,
+          10
+        ],
+        "buildExclusion": [
+          27,
+          9,
+          29,
+          11
+        ],
+        "active": true,
+        "serviceMs": 101129,
+        "enabledAtServiceMs": 21047,
+        "nextProductionAtMs": 111047,
+        "generatedWood": 18,
+        "stockWood": 6,
+        "freeWood": 6,
+        "inputBudget": null,
+        "productionPolicy": {
+          "id": "continuous-service-time-v1",
+          "version": 1,
+          "adoptedAtServiceMs": 83816,
+          "adoptedAtStateVersion": 624,
+          "adoptedAtEventCursor": 625,
+          "generatedWoodAtAdoption": 12,
+          "productionPeriodAtAdoption": 6
+        },
+        "capacity": 6,
+        "reservationQuantity": 3,
+        "leaseMs": 60000,
+        "productionIntervalMs": 10000,
+        "currentReservation": null,
+        "recentReservations": [
+          {
+            "reservationId": "mc771317178e149829c18438a0bf8fc8e",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "fd7a4a32787d4597963c40993e453094",
+            "queueSequence": 4,
+            "status": "completed",
+            "requestedAtMs": 53072,
+            "grantedAtMs": 61082,
+            "expiresAtMs": 121082,
+            "remaining": 0
+          },
+          {
+            "reservationId": "meb72146e737b4e62af46602198c3391f",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "83429349591e48a98540d5df7fd3e969",
+            "queueSequence": 3,
+            "status": "completed",
+            "requestedAtMs": 44943,
+            "grantedAtMs": 51082,
+            "expiresAtMs": 111082,
+            "remaining": 0
+          },
+          {
+            "reservationId": "m002a1ab802704b5584ebd090f400a589",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "1bf417a34ffc4271a6124ea3e8a68a79",
+            "queueSequence": 2,
+            "status": "completed",
+            "requestedAtMs": 33017,
+            "grantedAtMs": 41082,
+            "expiresAtMs": 101082,
+            "remaining": 0
+          },
+          {
+            "reservationId": "m697f513ca56c497a9127c82571c1500c",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "3ceff92c31c04f62ac06567c8645c0a6",
+            "queueSequence": 1,
+            "status": "completed",
+            "requestedAtMs": 21208,
+            "grantedAtMs": 31082,
+            "expiresAtMs": 91082,
+            "remaining": 0
+          }
+        ],
+        "queue": [],
+        "controlBasis": "declared-local-fixture",
+        "controlRoster": [
+          {
+            "actorId": "a1",
+            "operatorId": "local-operator"
+          },
+          {
+            "actorId": "a1_alias",
+            "operatorId": "local-operator"
+          },
+          {
+            "actorId": "a2",
+            "operatorId": "declared-late"
+          },
+          {
+            "actorId": "a3",
+            "operatorId": "declared-third"
+          }
+        ]
+      },
+      "afterTwoSkippedPeriods": {
+        "version": 2,
+        "sourceId": "wood-source-east",
+        "position": [
+          28,
+          10
+        ],
+        "buildExclusion": [
+          27,
+          9,
+          29,
+          11
+        ],
+        "active": true,
+        "serviceMs": 121129,
+        "enabledAtServiceMs": 21047,
+        "nextProductionAtMs": 131047,
+        "generatedWood": 18,
+        "stockWood": 6,
+        "freeWood": 6,
+        "inputBudget": null,
+        "productionPolicy": {
+          "id": "continuous-service-time-v1",
+          "version": 1,
+          "adoptedAtServiceMs": 83816,
+          "adoptedAtStateVersion": 624,
+          "adoptedAtEventCursor": 625,
+          "generatedWoodAtAdoption": 12,
+          "productionPeriodAtAdoption": 6
+        },
+        "capacity": 6,
+        "reservationQuantity": 3,
+        "leaseMs": 60000,
+        "productionIntervalMs": 10000,
+        "currentReservation": null,
+        "recentReservations": [
+          {
+            "reservationId": "mc771317178e149829c18438a0bf8fc8e",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "fd7a4a32787d4597963c40993e453094",
+            "queueSequence": 4,
+            "status": "completed",
+            "requestedAtMs": 53072,
+            "grantedAtMs": 61082,
+            "expiresAtMs": 121082,
+            "remaining": 0
+          },
+          {
+            "reservationId": "meb72146e737b4e62af46602198c3391f",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "83429349591e48a98540d5df7fd3e969",
+            "queueSequence": 3,
+            "status": "completed",
+            "requestedAtMs": 44943,
+            "grantedAtMs": 51082,
+            "expiresAtMs": 111082,
+            "remaining": 0
+          },
+          {
+            "reservationId": "m002a1ab802704b5584ebd090f400a589",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "1bf417a34ffc4271a6124ea3e8a68a79",
+            "queueSequence": 2,
+            "status": "completed",
+            "requestedAtMs": 33017,
+            "grantedAtMs": 41082,
+            "expiresAtMs": 101082,
+            "remaining": 0
+          },
+          {
+            "reservationId": "m697f513ca56c497a9127c82571c1500c",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "3ceff92c31c04f62ac06567c8645c0a6",
+            "queueSequence": 1,
+            "status": "completed",
+            "requestedAtMs": 21208,
+            "grantedAtMs": 31082,
+            "expiresAtMs": 91082,
+            "remaining": 0
+          }
+        ],
+        "queue": [],
+        "controlBasis": "declared-local-fixture",
+        "controlRoster": [
+          {
+            "actorId": "a1",
+            "operatorId": "local-operator"
+          },
+          {
+            "actorId": "a1_alias",
+            "operatorId": "local-operator"
+          },
+          {
+            "actorId": "a2",
+            "operatorId": "declared-late"
+          },
+          {
+            "actorId": "a3",
+            "operatorId": "declared-third"
+          }
+        ]
+      },
+      "stoppedSource": {
+        "id": 1,
+        "active": 1,
+        "service_ms": 121129,
+        "enabled_at_ms": 21047,
+        "next_production_ms": 131047,
+        "production_period": 10,
+        "generated_wood": 18,
+        "stock_wood": 6
+      },
+      "offlineWallSeconds": 12.002415937022306,
+      "afterRestart": {
+        "version": 2,
+        "sourceId": "wood-source-east",
+        "position": [
+          28,
+          10
+        ],
+        "buildExclusion": [
+          27,
+          9,
+          29,
+          11
+        ],
+        "active": true,
+        "serviceMs": 121129,
+        "enabledAtServiceMs": 21047,
+        "nextProductionAtMs": 131047,
+        "generatedWood": 18,
+        "stockWood": 6,
+        "freeWood": 6,
+        "inputBudget": null,
+        "productionPolicy": {
+          "id": "continuous-service-time-v1",
+          "version": 1,
+          "adoptedAtServiceMs": 83816,
+          "adoptedAtStateVersion": 624,
+          "adoptedAtEventCursor": 625,
+          "generatedWoodAtAdoption": 12,
+          "productionPeriodAtAdoption": 6
+        },
+        "capacity": 6,
+        "reservationQuantity": 3,
+        "leaseMs": 60000,
+        "productionIntervalMs": 10000,
+        "currentReservation": null,
+        "recentReservations": [
+          {
+            "reservationId": "mc771317178e149829c18438a0bf8fc8e",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "fd7a4a32787d4597963c40993e453094",
+            "queueSequence": 4,
+            "status": "completed",
+            "requestedAtMs": 53072,
+            "grantedAtMs": 61082,
+            "expiresAtMs": 121082,
+            "remaining": 0
+          },
+          {
+            "reservationId": "meb72146e737b4e62af46602198c3391f",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "83429349591e48a98540d5df7fd3e969",
+            "queueSequence": 3,
+            "status": "completed",
+            "requestedAtMs": 44943,
+            "grantedAtMs": 51082,
+            "expiresAtMs": 111082,
+            "remaining": 0
+          },
+          {
+            "reservationId": "m002a1ab802704b5584ebd090f400a589",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "1bf417a34ffc4271a6124ea3e8a68a79",
+            "queueSequence": 2,
+            "status": "completed",
+            "requestedAtMs": 33017,
+            "grantedAtMs": 41082,
+            "expiresAtMs": 101082,
+            "remaining": 0
+          },
+          {
+            "reservationId": "m697f513ca56c497a9127c82571c1500c",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "3ceff92c31c04f62ac06567c8645c0a6",
+            "queueSequence": 1,
+            "status": "completed",
+            "requestedAtMs": 21208,
+            "grantedAtMs": 31082,
+            "expiresAtMs": 91082,
+            "remaining": 0
+          }
+        ],
+        "queue": [],
+        "controlBasis": "declared-local-fixture",
+        "controlRoster": [
+          {
+            "actorId": "a1",
+            "operatorId": "local-operator"
+          },
+          {
+            "actorId": "a1_alias",
+            "operatorId": "local-operator"
+          },
+          {
+            "actorId": "a2",
+            "operatorId": "declared-late"
+          },
+          {
+            "actorId": "a3",
+            "operatorId": "declared-third"
+          }
+        ]
+      },
+      "reservation": {
+        "reservationId": "mdb8f4f2199494440bd369a0b1f6bf9c2",
+        "actorId": "a3",
+        "operatorId": "declared-third",
+        "requestCommandId": "7a8371b63d1e45f0ab605bb6a351ae16",
+        "queueSequence": 5,
+        "status": "active",
+        "requestedAtMs": 121290,
+        "grantedAtMs": 121429,
+        "expiresAtMs": 181429,
+        "remaining": 3
+      },
+      "claims": [
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "19ca3df01705444e82d07be2c3995af7",
+            "expectedStateVersion": 628,
+            "action": {
+              "type": "harvest_material",
+              "reservationId": "mdb8f4f2199494440bd369a0b1f6bf9c2"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 629,
+            "commandId": "19ca3df01705444e82d07be2c3995af7",
+            "identity": {
+              "operatorId": "declared-third",
+              "actorId": "a3",
+              "sessionId": "sa423548f7dce496895be25120daedb09"
+            },
+            "eventCursor": 630,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "harvest_material",
+              "reservationId": "mdb8f4f2199494440bd369a0b1f6bf9c2",
+              "sourceId": "wood-source-east",
+              "quantity": 1,
+              "remainingBefore": 3,
+              "remaining": 2,
+              "inventoryWoodBefore": 0,
+              "inventoryWood": 1,
+              "position": [
+                28,
+                10
+              ]
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 628,
+              "appliedOnStateVersion": 628
+            }
+          },
+          "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":629,\"commandId\":\"19ca3df01705444e82d07be2c3995af7\",\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"sa423548f7dce496895be25120daedb09\"},\"eventCursor\":630,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mdb8f4f2199494440bd369a0b1f6bf9c2\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":3,\"remaining\":2,\"inventoryWoodBefore\":0,\"inventoryWood\":1,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":628,\"appliedOnStateVersion\":628}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "bc8c66b6a2094a9dabba239679645ff7",
+            "expectedStateVersion": 629,
+            "action": {
+              "type": "harvest_material",
+              "reservationId": "mdb8f4f2199494440bd369a0b1f6bf9c2"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 630,
+            "commandId": "bc8c66b6a2094a9dabba239679645ff7",
+            "identity": {
+              "operatorId": "declared-third",
+              "actorId": "a3",
+              "sessionId": "sa423548f7dce496895be25120daedb09"
+            },
+            "eventCursor": 631,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "harvest_material",
+              "reservationId": "mdb8f4f2199494440bd369a0b1f6bf9c2",
+              "sourceId": "wood-source-east",
+              "quantity": 1,
+              "remainingBefore": 2,
+              "remaining": 1,
+              "inventoryWoodBefore": 1,
+              "inventoryWood": 2,
+              "position": [
+                28,
+                10
+              ]
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 629,
+              "appliedOnStateVersion": 629
+            }
+          },
+          "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":630,\"commandId\":\"bc8c66b6a2094a9dabba239679645ff7\",\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"sa423548f7dce496895be25120daedb09\"},\"eventCursor\":631,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mdb8f4f2199494440bd369a0b1f6bf9c2\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":2,\"remaining\":1,\"inventoryWoodBefore\":1,\"inventoryWood\":2,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":629,\"appliedOnStateVersion\":629}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "de77b934e70f4fc1be1b43bcff65bd7b",
+            "expectedStateVersion": 630,
+            "action": {
+              "type": "harvest_material",
+              "reservationId": "mdb8f4f2199494440bd369a0b1f6bf9c2"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 631,
+            "commandId": "de77b934e70f4fc1be1b43bcff65bd7b",
+            "identity": {
+              "operatorId": "declared-third",
+              "actorId": "a3",
+              "sessionId": "sa423548f7dce496895be25120daedb09"
+            },
+            "eventCursor": 632,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "harvest_material",
+              "reservationId": "mdb8f4f2199494440bd369a0b1f6bf9c2",
+              "sourceId": "wood-source-east",
+              "quantity": 1,
+              "remainingBefore": 1,
+              "remaining": 0,
+              "inventoryWoodBefore": 2,
+              "inventoryWood": 3,
+              "position": [
+                28,
+                10
+              ]
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 630,
+              "appliedOnStateVersion": 630
+            }
+          },
+          "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":631,\"commandId\":\"de77b934e70f4fc1be1b43bcff65bd7b\",\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"sa423548f7dce496895be25120daedb09\"},\"eventCursor\":632,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mdb8f4f2199494440bd369a0b1f6bf9c2\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":1,\"remaining\":0,\"inventoryWoodBefore\":2,\"inventoryWood\":3,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":630,\"appliedOnStateVersion\":630}}"
+        }
+      ],
+      "afterCapacityFreed": {
+        "version": 2,
+        "sourceId": "wood-source-east",
+        "position": [
+          28,
+          10
+        ],
+        "buildExclusion": [
+          27,
+          9,
+          29,
+          11
+        ],
+        "active": true,
+        "serviceMs": 131179,
+        "enabledAtServiceMs": 21047,
+        "nextProductionAtMs": 141047,
+        "generatedWood": 21,
+        "stockWood": 6,
+        "freeWood": 6,
+        "inputBudget": null,
+        "productionPolicy": {
+          "id": "continuous-service-time-v1",
+          "version": 1,
+          "adoptedAtServiceMs": 83816,
+          "adoptedAtStateVersion": 624,
+          "adoptedAtEventCursor": 625,
+          "generatedWoodAtAdoption": 12,
+          "productionPeriodAtAdoption": 6
+        },
+        "capacity": 6,
+        "reservationQuantity": 3,
+        "leaseMs": 60000,
+        "productionIntervalMs": 10000,
+        "currentReservation": null,
+        "recentReservations": [
+          {
+            "reservationId": "mdb8f4f2199494440bd369a0b1f6bf9c2",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "7a8371b63d1e45f0ab605bb6a351ae16",
+            "queueSequence": 5,
+            "status": "completed",
+            "requestedAtMs": 121290,
+            "grantedAtMs": 121429,
+            "expiresAtMs": 181429,
+            "remaining": 0
+          },
+          {
+            "reservationId": "mc771317178e149829c18438a0bf8fc8e",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "fd7a4a32787d4597963c40993e453094",
+            "queueSequence": 4,
+            "status": "completed",
+            "requestedAtMs": 53072,
+            "grantedAtMs": 61082,
+            "expiresAtMs": 121082,
+            "remaining": 0
+          },
+          {
+            "reservationId": "meb72146e737b4e62af46602198c3391f",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "83429349591e48a98540d5df7fd3e969",
+            "queueSequence": 3,
+            "status": "completed",
+            "requestedAtMs": 44943,
+            "grantedAtMs": 51082,
+            "expiresAtMs": 111082,
+            "remaining": 0
+          },
+          {
+            "reservationId": "m002a1ab802704b5584ebd090f400a589",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "1bf417a34ffc4271a6124ea3e8a68a79",
+            "queueSequence": 2,
+            "status": "completed",
+            "requestedAtMs": 33017,
+            "grantedAtMs": 41082,
+            "expiresAtMs": 101082,
+            "remaining": 0
+          },
+          {
+            "reservationId": "m697f513ca56c497a9127c82571c1500c",
+            "actorId": "a3",
+            "operatorId": "declared-third",
+            "requestCommandId": "3ceff92c31c04f62ac06567c8645c0a6",
+            "queueSequence": 1,
+            "status": "completed",
+            "requestedAtMs": 21208,
+            "grantedAtMs": 31082,
+            "expiresAtMs": 91082,
+            "remaining": 0
+          }
+        ],
+        "queue": [],
+        "controlBasis": "declared-local-fixture",
+        "controlRoster": [
+          {
+            "actorId": "a1",
+            "operatorId": "local-operator"
+          },
+          {
+            "actorId": "a1_alias",
+            "operatorId": "local-operator"
+          },
+          {
+            "actorId": "a2",
+            "operatorId": "declared-late"
+          },
+          {
+            "actorId": "a3",
+            "operatorId": "declared-third"
+          }
+        ]
+      },
+      "onlyNewProduction": {
+        "production_period": 11,
+        "service_ms": 131047,
+        "quantity": 3,
+        "event_seq": 633
+      },
+      "noOfflineGrowth": true,
+      "noSkippedPeriodBackfill": true,
+      "audit": {
+        "schemaVersion": 11,
+        "source": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 131179,
+          "enabled_at_ms": 21047,
+          "next_production_ms": 141047,
+          "production_period": 11,
+          "generated_wood": 21,
+          "stock_wood": 6
+        },
+        "issuedWood": 33,
+        "inventoryWood": 9,
+        "embodiedWood": 18,
+        "sourceWood": 6,
+        "wildWood": 0,
+        "stateVersion": 632,
+        "receipts": 620,
+        "originalReceiptsPreserved": 616,
+        "originalEventsPreserved": 624,
+        "notes": 2,
+        "entities": 5,
+        "requests": 4,
+        "processStopped": {
+          "pid": 4171070,
+          "exitCode": 0
+        },
+        "allStartedProcessesExited": true
+      }
+    }
+  },
+  "worlds": [
+    {
+      "name": "partial-queue-upgrade",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062006962154Z/partial-queue-upgrade",
+      "source": "None",
+      "branch": true,
+      "instanceId": "w_9028fc2501f0410fb771f9d3eda728ac"
+    },
+    {
+      "name": "full-capacity-no-catchup",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T062006962154Z/full-capacity-no-catchup",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-preflight/20261026T054234754936Z",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    }
+  ],
+  "actualModelCalls": 0,
+  "naturalDirectSqlEdits": false,
+  "naturalClockControlled": false,
+  "runtimeReuse": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/core-v2/bin/World.Server.dll",
+    "sha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+    "readOnlySharedFrozenBinary": true,
+    "perRunRuntimeCopy": false
+  },
+  "originalSourceFilesUnchanged": true,
+  "frozenPreflightFilesUnchanged": true,
+  "allStartedProcessesExited": true
+}

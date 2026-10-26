@@ -1,0 +1,68 @@
+{
+  "passed": false,
+  "scope": "independent frozen Godot v1 with core-v2",
+  "binarySha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+  "manifestSha256": "844938e0b63fcb936e901dfa283d6f661493d4e39b5412f8b04dce0e7dadeec9",
+  "seed": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-preflight/20261026T054234754936Z/world.db",
+  "seedSha256": "b3cfc119ac4ec264154714db6fa1fa4d98a089b4abe1a5e24e4dd53841be9d8a",
+  "cases": {},
+  "worlds": [
+    {
+      "name": "prior-material-fixture",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-godot-20261026T062338420436Z/prior-material-fixture",
+      "source": "None",
+      "branch": true,
+      "instanceId": "w_ade2102f6f1544fd8c19f9e326602b41"
+    },
+    {
+      "name": "prior-note-fixture",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-godot-20261026T062338420436Z/prior-note-fixture",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-preflight/20261026T054234754936Z",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "prior-reserve_material-before",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-godot-20261026T062338420436Z/prior-reserve_material-before",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-godot-20261026T062338420436Z/prior-material-fixture",
+      "branch": true,
+      "instanceId": "w_ade2102f6f1544fd8c19f9e326602b41"
+    }
+  ],
+  "actualModelCalls": 0,
+  "naturalDirectSqlEdits": false,
+  "naturalClockControlled": false,
+  "runtimeReuse": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/core-v2/bin/World.Server.dll",
+    "sha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+    "readOnlySharedFrozenBinary": true,
+    "perRunRuntimeCopy": false
+  },
+  "godotManifest": {
+    "clients/godot/command_evidence.gd": "f4e28ddfea3f372e6174f45f07b87792fcf3f2d7c86625f49d2f70585398bf5d",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/entity_notes_panel.gd": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803",
+    "clients/godot/main.gd": "4086812666a4b56f395c5e571d8fa607ee5fce33c1216ca4df7dfeebf23b93b9",
+    "clients/godot/main.tscn": "58496e2c5357a2774f2a70f19d0dcb9a015167d8bf9849dc68f4f20a7841e6b1",
+    "clients/godot/material_panel.gd": "0ca9ce3e6eef38690d9bbc7e77b7e8d75f4bb654e1ab2495e7598aaa632a9798",
+    "clients/godot/pending_store.gd": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+    "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/world_client.gd": "9d30e2c8bcfc0287b68605ecdab6f046f575410a069b2ddf3a6bc729e0aca193",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "ebf2271dd1541216ec7f0785600032e18607e1b027a95a5100f41f37395535d2",
+    "tests/continuous_material_api.py": "becbaa89b4e28971f657f51352bf18433e183828544b04ac202139690a29c3a6",
+    "tests/continuous_material_godot.py": "acd75ba3688459e0e71217cd206e92a6dc976fb84a870d32afec55b65b5fcfaa",
+    "tests/godot/continuous_material.gd": "9ef512baca6edb8cf90c26d1603623da4c7522c31c77fd12941a6a00dc1f928f"
+  },
+  "shaderSha256": "b5de02167c429ce338fff61bb0ad180aa4d2d1b7c5c1e96f3cbce3f4ba88631b",
+  "wrapperSha256": "bfe1a81d8e9b88f1aea28b5fcd79393592a945243f426b05f46d6be5563e4b36",
+  "failure": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-godot.py\", line 179, in <module>\n    report['cases'][name]=globals()[name]()\n                          ^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-godot.py\", line 146, in prior_pending\n    assert first['healthy'] and first['pending'] and not first['lastReceipt'],first\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'canAct': False, 'foreignPending': 0, 'healthy': False, 'lastReceipt': {}, 'message': '动作结果待确认。原请求已保留；可查询或原样重试。', 'observation': {'commandBinding': {'header': 'World-Instance-Id', 'required': True, 'version': 1}, 'commandConcurrency': {'supportedModes': ['actor-state-v1'], 'version': 1}, 'commandId': None, 'depot': {'available': False, 'wood': 0}, 'entities': [], 'error': None, 'eventCursor': 11, 'gathering': {'quantityPerAction': 1, 'version': 1}, 'identity': {'actorId': 'a2', 'operatorId': 'declared-late', 'sessionId': 's9d9a7f21d34a45cbad8a98b9ecff9286'}, 'materialAccess': {'active': True, 'buildExclusion': [27, 9, 29, 11], 'capacity': 6, 'controlBasis': 'declared-local-fixture', 'controlRoster': [{'actorId': 'a1', 'operatorId': 'local-operator'}, {'actorId': 'a1_alias', 'operatorId': 'local-operator'}, {'actorId': 'a2', 'operatorId': 'declared-late'}, {'actorId': 'a3', 'operatorId': 'declared-third'}], 'currentReservation': None, 'enabledAtServiceMs': 0, 'freeWood': 0, 'generatedWood': 6, 'inputBudget': 12, 'leaseMs': 60000, 'nextProductionAtMs': 30000, 'position': [28, 10], 'productionIntervalMs': 10000, 'productionPolicy': None, 'queue': [], 'recentReservations': [], 'reservationQuantity': 3, 'serviceMs': 20045, 'sourceId': 'wood-source-east', 'stockWood': 3, 'version': 1}, 'materialTransfer': {'maxQuantity': 12, 'reach': 1.6, 'recipientConfirmation': False, 'resource': 'wood', 'version': 1}, 'movement': {'buildReach': 3.2, 'gatherReach': 1.6, 'kind': 'continuous', 'maxStepDistance': 0.6, 'radius': 0.28, 'speed': 3, 'version': 1}, 'recentTransfers': {'items': [], 'limit': 20, 'truncated': False}, 'recipes': [{'definitionId': 'platform', 'id': 'platform.v1', 'woodCost': 3}, {'definitionId': 'bridge', 'id': 'bridge.v1', 'woodCost': 6}], 'residents': [{'actorId': 'a1', 'position': [5, 7]}, {'actorId': 'a1_alias', 'position': [5, 7]}, {'actorId': 'a2', 'position': [26, 17]}, {'actorId': 'a3', 'position': [27, 10]}], 'resourceAudit': {'conserved': True, 'depotWood': 0, 'embodiedWood': 0, 'generatedWood': 6, 'initialWood': 12, 'inventoryWood': 3, 'issuedWood': 18, 'sourceWood': 3, 'wildWood': 12}, 'resourceNodes': [{'initialWood': 3, 'kind': 'tree', 'nodeId': 'tree-east-north', 'position': [25.4, 5.8], 'remainingWood': 3}, {'initialWood': 3, 'kind': 'tree', 'nodeId': 'tree-east-south', 'position': [25.7, 18.2], 'remainingWood': 3}, {'initialWood': 3, 'kind': 'tree', 'nodeId': 'tree-west-north', 'position': [6.2, 7.8], 'remainingWood': 3}, {'initialWood': 3, 'kind': 'tree', 'nodeId': 'tree-west-south', 'position': [9.2, 16.3], 'remainingWood': 3}], 'rulesVersion': 'r10', 'schemaVersion': 1, 'self': {'actorId': 'a2', 'inventory': {'wood': 0}, 'position': [26, 17]}, 'stateVersion': 10, 'terrain': {'obstacles': [{'id': 'rock-west', 'kind': 'rock', 'position': [10.5, 8.5], 'radius': 1.05}, {'id': 'rock-south', 'kind': 'rock', 'position': [5.6, 19.7], 'radius': 0.8}, {'id': 'rock-east', 'kind': 'rock', 'position': [23, 12.5], 'radius': 1.2}, {'id': 'rock-north', 'kind': 'rock', 'position': [21.8, 3.2], 'radius': 0.75}], 'river': {'centerline': [[16, 0], [15.9064453125, 0.5], [15.7640625, 1], [15.5927734375, 1.5], [15.4125, 2], [15.2431640625, 2.5], [15.1046875, 3], [15.0169921875, 3.5], [15, 4], [15.0587890625, 4.5], [15.1765625, 5], [15.3404296875, 5.5], [15.5375, 6], [15.7548828125, 6.5], [15.9796875, 7], [16.1990234375, 7.5], [16.4, 8], [16.608203125, 8.5], [16.846875, 9], [17.099609375, 9.5], [17.35, 10], [17.581640625, 10.5], [17.778125, 11], [17.923046875, 11.5], [18, 12], [18.00419921875, 12.5], [17.94921875, 13], [17.84619140625, 13.5], [17.70625, 14], [17.54052734375, 14.5], [17.36015625, 15], [17.17626953125, 15.5], [17, 16], [16.81142578125, 16.5], [16.59140625, 17], [16.35224609375, 17.5], [16.10625, 18], [15.86572265625, 18.5], [15.64296875, 19], [15.45029296875, 19.5], [15.3, 20], [15.19345703125, 20.5], [15.11953125, 21], [15.07177734375, 21.5], [15.04375, 22], [15.02900390625, 22.5], [15.02109375, 23], [15.01357421875, 23.5], [15.0, 24]], 'halfWidth': 1.4, 'polygon': [[14.6, 0], [14.5064453125, 0.5], [14.3640625, 1], [14.1927734375, 1.5], [14.0125, 2], [13.8431640625, 2.5], [13.7046875, 3], [13.6169921875, 3.5], [13.6, 4], [13.6587890625, 4.5], [13.7765625, 5], [13.9404296875, 5.5], [14.1375, 6], [14.3548828125, 6.5], [14.5796875, 7], [14.7990234375, 7.5], [15.0, 8], [15.208203125, 8.5], [15.446875, 9], [15.699609375, 9.5], [15.95, 10], [16.181640625, 10.5], [16.378125, 11], [16.523046875, 11.5], [16.6, 12], [16.60419921875, 12.5], [16.54921875, 13], [16.44619140625, 13.5], [16.30625, 14], [16.14052734375, 14.5], [15.96015625, 15], [15.77626953125, 15.5], [15.6, 16], [15.41142578125, 16.5], [15.19140625, 17], [14.95224609375, 17.5], [14.70625, 18], [14.46572265625, 18.5], [14.24296875, 19], [14.05029296875, 19.5], [13.9, 20], [13.79345703125, 20.5], [13.71953125, 21], [13.67177734375, 21.5], [13.64375, 22], [13.62900390625, 22.5], [13.62109375, 23], [13.61357421875, 23.5], [13.6, 24], [16.4, 24], [16.41357421875, 23.5], [16.42109375, 23], [16.42900390625, 22.5], [16.44375, 22], [16.47177734375, 21.5], [16.51953125, 21], [16.59345703125, 20.5], [16.7, 20], [16.85029296875, 19.5], [17.04296875, 19], [17.26572265625, 18.5], [17.50625, 18], [17.75224609375, 17.5], [17.99140625, 17], [18.21142578125, 16.5], [18.4, 16], [18.57626953125, 15.5], [18.76015625, 15], [18.94052734375, 14.5], [19.10625, 14], [19.24619140625, 13.5], [19.34921875, 13], [19.40419921875, 12.5], [19.4, 12], [19.323046875, 11.5], [19.178125, 11], [18.981640625, 10.5], [18.75, 10], [18.499609375, 9.5], [18.246875, 9], [18.008203125, 8.5], [17.8, 8], [17.5990234375, 7.5], [17.3796875, 7], [17.1548828125, 6.5], [16.9375, 6], [16.7404296875, 5.5], [16.5765625, 5], [16.4587890625, 4.5], [16.4, 4], [16.4169921875, 3.5], [16.5046875, 3], [16.6431640625, 2.5], [16.8125, 2], [16.9927734375, 1.5], [17.1640625, 1], [17.3064453125, 0.5], [17.4, 0]]}, 'version': 1}, 'world': {'bounds': [0, 0, 32, 24], 'coordinateSystem': 'continuous-xz', 'height': 24, 'id': 'foundation-01', 'instanceId': 'w_ade2102f6f1544fd8c19f9e326602b41', 'scenarioId': 'wilderness-material-access-v1', 'width': 32}}, 'pending': {'actorId': 'a2', 'before': '{\"inventoryWood\":0,\"materialActorId\":\"a2\",\"position\":[26,17],\"serviceMs\":20045,\"sourceId\":\"wood-source-east\"}', 'body': '{\"action\":{\"sourceId\":\"wood-source-east\",\"type\":\"reserve_material\"},\"commandId\":\"godot_887a6cb458e72d384f8348434eda2488\",\"expectedStateVersion\":10,\"preconditionMode\":\"actor-state-v1\",\"rulesVersion\":\"r10\",\"schemaVersion\":1}', 'commandId': 'godot_887a6cb458e72d384f8348434eda2488', 'endpoint': 'http://127.0.0.1:34415', 'instanceId': 'w_ade2102f6f1544fd8c19f9e326602b41', 'recordVersion': 4, 'worldId': 'foundation-01'}, 'storageOk': True}\n",
+  "originalSourceFilesUnchanged": true,
+  "frozenPreflightFilesUnchanged": true,
+  "allStartedProcessesExited": true,
+  "cleanedRegenerableCaches": [
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-godot-20261026T062338420436Z/prior-c6a2406/.godot",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-godot-20261026T062338420436Z/clients/godot/.godot"
+  ]
+}

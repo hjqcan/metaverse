@@ -1,0 +1,3475 @@
+{
+  "originalFullRunPassed": false,
+  "httpTests": 316,
+  "browserRecordedItemsIncludingFailedWrapper": 171,
+  "skippedEntries": [],
+  "failedSuites": [
+    "browser-continuous-material-resident"
+  ],
+  "source": ".local/checks/20261026T061307Z-268415/results.json",
+  "results": [
+    {
+      "name": "restore",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/restore.log",
+      "evidence": null,
+      "removedTemporaryBinaries": [],
+      "sourceSha256": null,
+      "report": null
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/build.log",
+      "evidence": null,
+      "removedTemporaryBinaries": [],
+      "sourceSha256": null,
+      "report": null
+    },
+    {
+      "name": "http-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-foundation.log",
+      "evidence": ".local/iter0001/api/20261026T141308-3bf59e/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "ce6244660a981ce041c49ff0086ed0bc7fa89cb735e8cd317238df2302300b11",
+      "report": {
+        "suite": "foundation-http-v1",
+        "recordedAtUtc": "2026-10-26T06:13:18.816395+00:00",
+        "passed": true,
+        "testsRun": 17,
+        "tests": [
+          {
+            "test": "__main__.FoundationAcceptance.test_01_initial_identity_and_world_boundary",
+            "passed": true,
+            "seconds": 0.3503587900195271
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_02_move_rejects_wall_boundary_and_invalid_shape",
+            "passed": true,
+            "seconds": 0.4390684509999119
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_03_finite_source_build_and_stable_rejection",
+            "passed": true,
+            "seconds": 0.37750441103708
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_04_parallel_duplicates_and_normalized_payload",
+            "passed": true,
+            "seconds": 1.2698389849974774
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_05_compete_for_last_material",
+            "passed": true,
+            "seconds": 0.5005077859968878
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_06_compete_for_build_cell",
+            "passed": true,
+            "seconds": 0.5173421369981952
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_07_identity_override_revoke_and_renew",
+            "passed": true,
+            "seconds": 1.0745658759842627
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_08_expired_session",
+            "passed": true,
+            "seconds": 0.7234811030211858
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_09_restart_preserves_world_and_receipts",
+            "passed": true,
+            "seconds": 0.6858166099991649
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_10_events_are_ordered_and_paginated",
+            "passed": true,
+            "seconds": 0.7025875200051814
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_11_exception_rolls_back_and_original_id_retries",
+            "passed": true,
+            "seconds": 0.34796722600003704
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_12_exit_before_commit",
+            "passed": true,
+            "seconds": 0.6423593779909424
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_13_exit_after_commit_before_response",
+            "passed": true,
+            "seconds": 0.6552047369768843
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_14_fault_injection_is_disabled_by_default",
+            "passed": true,
+            "seconds": 0.5223176830331795
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_15_fixed_resident_reaches_goal_without_work",
+            "passed": true,
+            "seconds": 0.35423513397108763
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_16_same_id_in_different_actor_scopes",
+            "passed": true,
+            "seconds": 0.32124760502483696
+          },
+          {
+            "test": "__main__.FoundationAcceptance.test_17_separate_candidates_do_not_share_tokens_or_assets",
+            "passed": true,
+            "seconds": 0.6525440859841183
+          }
+        ],
+        "failures": [],
+        "dataRoot": ".local/iter0001/api/20261026T141308-3bf59e"
+      }
+    },
+    {
+      "name": "http-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-passage.log",
+      "evidence": ".local/iter0002/api/20261026T141308-2ddf6e/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "42244135620b4f50fa790fba0f38b211965a364a7d45c7c6519261764d51a686",
+      "report": {
+        "suite": "passage-http-v1",
+        "recordedAtUtc": "2026-10-26T06:13:18.746161+00:00",
+        "passed": true,
+        "testsRun": 13,
+        "tests": [
+          {
+            "test": "__main__.PassageAcceptance.test_01_water_blocks_goal_and_walk_only_control",
+            "passed": true,
+            "seconds": 0.3462165099917911
+          },
+          {
+            "test": "__main__.PassageAcceptance.test_02_progressive_bridge_changes_reachability",
+            "passed": true,
+            "seconds": 0.6670940790208988
+          },
+          {
+            "test": "__main__.PassageAcceptance.test_03_invalid_construction_and_insufficient_material",
+            "passed": true,
+            "seconds": 0.42208778898930177
+          },
+          {
+            "test": "__main__.PassageAcceptance.test_04_parallel_duplicate_bridge_and_parameter_conflict",
+            "passed": true,
+            "seconds": 0.5293205950292759
+          },
+          {
+            "test": "__main__.PassageAcceptance.test_05_two_actors_compete_for_same_water_cell",
+            "passed": true,
+            "seconds": 0.558076155022718
+          },
+          {
+            "test": "__main__.PassageAcceptance.test_06_failure_after_debit_rolls_back_bridge",
+            "passed": true,
+            "seconds": 0.37983205798082054
+          },
+          {
+            "test": "__main__.PassageAcceptance.test_07_bridge_exit_before_commit",
+            "passed": true,
+            "seconds": 0.6899613470304757
+          },
+          {
+            "test": "__main__.PassageAcceptance.test_08_bridge_exit_after_commit",
+            "passed": true,
+            "seconds": 0.7199992740061134
+          },
+          {
+            "test": "__main__.PassageAcceptance.test_09_scenario_persists_and_cannot_be_reinterpreted",
+            "passed": true,
+            "seconds": 2.138900952995755
+          },
+          {
+            "test": "__main__.PassageAcceptance.test_10_populated_schema_v1_keeps_original_facts",
+            "passed": true,
+            "seconds": 0.887477073003538
+          },
+          {
+            "test": "__main__.PassageAcceptance.test_11_fixed_builder_and_free_traveler_comparison",
+            "passed": true,
+            "seconds": 0.49620666494593024
+          },
+          {
+            "test": "__main__.PassageAcceptance.test_12_rules_rejection_and_all_state_envelopes",
+            "passed": true,
+            "seconds": 0.3438058019964956
+          },
+          {
+            "test": "__main__.PassageAcceptance.test_13_resident_unknown_bridge_recovers_same_trip_and_id",
+            "passed": true,
+            "seconds": 1.8951758240000345
+          }
+        ],
+        "failures": [],
+        "dataRoot": ".local/iter0002/api/20261026T141308-2ddf6e"
+      }
+    },
+    {
+      "name": "http-resident_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-resident_mission.log",
+      "evidence": ".local/iter0003/api/20261026T141308-662f84/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "0cce3ee43bb1660d4105e73c4136247cdc580f4ff3a14bc4b55d87363167e36d",
+      "report": {
+        "suite": "resident-mission-http-v1",
+        "decisionSource": "test-double",
+        "realModelCalls": 0,
+        "recordedAtUtc": "2026-10-26T06:13:18.760082+00:00",
+        "passed": true,
+        "testsRun": 14,
+        "tests": [
+          {
+            "test": "__main__.MissionAcceptance.test_01_builder_verified_and_completed_resume_is_noop",
+            "passed": true,
+            "seconds": 0.5534113090252504
+          },
+          {
+            "test": "__main__.MissionAcceptance.test_02_pause_resume_retains_full_task_and_cumulative_budget",
+            "passed": true,
+            "seconds": 0.9129177880240604
+          },
+          {
+            "test": "__main__.MissionAcceptance.test_03_command_budget_never_resets_on_resume",
+            "passed": true,
+            "seconds": 0.35950751800555736
+          },
+          {
+            "test": "__main__.MissionAcceptance.test_04_material_budget_is_not_bypassed_by_existing_inventory",
+            "passed": true,
+            "seconds": 0.344006911967881
+          },
+          {
+            "test": "__main__.MissionAcceptance.test_05_unlisted_goal_is_rejected_before_any_world_action",
+            "passed": true,
+            "seconds": 0.31131084403023124
+          },
+          {
+            "test": "__main__.MissionAcceptance.test_06_model_failure_does_not_retry_or_change_world",
+            "passed": true,
+            "seconds": 0.3285203999839723
+          },
+          {
+            "test": "__main__.MissionAcceptance.test_07_invalid_spec_boolean_budget_and_duplicate_goals",
+            "passed": true,
+            "seconds": 0.33821385202463716
+          },
+          {
+            "test": "__main__.MissionAcceptance.test_08_bridge_commit_then_service_exit_recovers_original_id",
+            "passed": true,
+            "seconds": 0.8398420300218277
+          },
+          {
+            "test": "__main__.MissionAcceptance.test_09_process_exit_after_receipt_before_local_settlement",
+            "passed": true,
+            "seconds": 0.5552329559577629
+          },
+          {
+            "test": "__main__.MissionAcceptance.test_10_identity_and_spec_binding_cannot_be_replaced",
+            "passed": true,
+            "seconds": 0.37031383998692036
+          },
+          {
+            "test": "__main__.MissionAcceptance.test_11_same_state_file_is_mutually_exclusive_across_processes",
+            "passed": true,
+            "seconds": 2.577542145969346
+          },
+          {
+            "test": "__main__.MissionAcceptance.test_12_elapsed_budget_survives_pause",
+            "passed": true,
+            "seconds": 1.451391777023673
+          },
+          {
+            "test": "__main__.MissionAcceptance.test_13_context_has_no_credentials_and_free_traveler_uses_public_work",
+            "passed": true,
+            "seconds": 0.5805184259661473
+          },
+          {
+            "test": "__main__.MissionAcceptance.test_14_query_routing_error_cannot_reject_original_pending_command",
+            "passed": true,
+            "seconds": 0.5611342070042156
+          }
+        ],
+        "dataRoot": ".local/iter0003/api/20261026T141308-662f84",
+        "failures": []
+      }
+    },
+    {
+      "name": "http-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-activities.log",
+      "evidence": ".local/iter0004/api/20261026T141318-4e185b/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "28c66c01e5942e9bd9b1c66682ad1ef2fb9950c269037191dbe7c0619c3f04d8",
+      "report": {
+        "suite": "activity-http-v1",
+        "decisionSource": "test-double-or-fixed-reference",
+        "actualModelCalls": 0,
+        "recordedAtUtc": "2026-10-26T06:13:27.561030+00:00",
+        "passed": true,
+        "testsRun": 15,
+        "tests": [
+          {
+            "test": "__main__.ActivityAcceptance.test_01_catalog_and_identity_private_visits",
+            "passed": true,
+            "seconds": 0.312148999015335
+          },
+          {
+            "test": "__main__.ActivityAcceptance.test_02_not_at_unknown_and_invalid_visit_never_change_world",
+            "passed": true,
+            "seconds": 0.3409388830186799
+          },
+          {
+            "test": "__main__.ActivityAcceptance.test_03_visit_transaction_idempotence_and_other_actor_scope",
+            "passed": true,
+            "seconds": 0.6734763800050132
+          },
+          {
+            "test": "__main__.ActivityAcceptance.test_04_concurrent_same_visit_id_creates_one_record",
+            "passed": true,
+            "seconds": 0.5327059179544449
+          },
+          {
+            "test": "__main__.ActivityAcceptance.test_05_visit_exit_before_commit_is_atomic",
+            "passed": true,
+            "seconds": 0.6875569150433876
+          },
+          {
+            "test": "__main__.ActivityAcceptance.test_06_visit_exit_after_commit_keeps_original_receipt",
+            "passed": true,
+            "seconds": 0.6495193729642779
+          },
+          {
+            "test": "__main__.ActivityAcceptance.test_07_arrival_without_visit_is_not_activity_completion",
+            "passed": true,
+            "seconds": 0.3792231560219079
+          },
+          {
+            "test": "__main__.ActivityAcceptance.test_08_activity_roundtrip_completed_resume_noop",
+            "passed": true,
+            "seconds": 0.4219603950041346
+          },
+          {
+            "test": "__main__.ActivityAcceptance.test_09_pending_visit_after_service_exit_recovers_same_task",
+            "passed": true,
+            "seconds": 0.7336590249906294
+          },
+          {
+            "test": "__main__.ActivityAcceptance.test_10_previous_visit_cannot_complete_new_mission",
+            "passed": true,
+            "seconds": 0.502872187003959
+          },
+          {
+            "test": "__main__.ActivityAcceptance.test_11_invalid_catalog_binding_precedes_choice_and_actions",
+            "passed": true,
+            "seconds": 0.3616955099860206
+          },
+          {
+            "test": "__main__.ActivityAcceptance.test_12_cost_baseline_uses_feasibility_and_counts_visit",
+            "passed": true,
+            "seconds": 0.4777101769577712
+          },
+          {
+            "test": "__main__.ActivityAcceptance.test_13_wrong_activity_in_success_receipt_retains_pending",
+            "passed": true,
+            "seconds": 0.47793266497319564
+          },
+          {
+            "test": "__main__.ActivityAcceptance.test_14_existing_schema2_world_unchanged_and_visit_unavailable",
+            "passed": true,
+            "seconds": 1.0674285110435449
+          },
+          {
+            "test": "__main__.ActivityAcceptance.test_15_recent_visits_are_ordered_bounded_and_without_rewards",
+            "passed": true,
+            "seconds": 1.055486277968157
+          }
+        ],
+        "dataRoot": ".local/iter0004/api/20261026T141318-4e185b",
+        "failures": []
+      }
+    },
+    {
+      "name": "http-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-postcards.log",
+      "evidence": ".local/iter0005/api/20261026T141318-5451a3/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "45649ba626a80376d197f71c8c51990442fb33beb2cc9c8b32dca57e93c389be",
+      "report": {
+        "suite": "postcards-http-v1",
+        "decisionSource": "explicit-test-double",
+        "actualModelCalls": 0,
+        "recordedAtUtc": "2026-10-26T06:13:30.665130+00:00",
+        "passed": true,
+        "testsRun": 17,
+        "tests": [
+          {
+            "test": "__main__.PostcardAcceptance.test_01_author_public_read_and_restart",
+            "passed": true,
+            "seconds": 0.7018622679752298
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_02_location_visit_and_identity_constraints",
+            "passed": true,
+            "seconds": 0.44840367801953107
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_03_original_id_and_one_share_per_visit",
+            "passed": true,
+            "seconds": 0.39296418498270214
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_04_concurrent_original_id_commits_once",
+            "passed": true,
+            "seconds": 0.5208381499978714
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_05_before_commit_exit_rolls_back",
+            "passed": true,
+            "seconds": 0.749042081006337
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_06_after_commit_exit_preserves_original",
+            "passed": true,
+            "seconds": 0.681609423016198
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_07_unicode_scalars_and_invalid_content",
+            "passed": true,
+            "seconds": 0.3890908369794488
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_08_task_budget_stops_after_visit_before_share",
+            "passed": true,
+            "seconds": 0.4101196869742125
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_09_pause_share_and_complete_resume_noop",
+            "passed": true,
+            "seconds": 0.482400118955411
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_10_task_after_commit_exit_recovers_same_share",
+            "passed": true,
+            "seconds": 0.8132521859952249
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_11_previous_share_cannot_complete_new_task",
+            "passed": true,
+            "seconds": 0.5704918039846234
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_12_unmatched_share_evidence_keeps_pending",
+            "passed": true,
+            "seconds": 0.4952778639853932
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_13_query_failure_is_not_original_rejection",
+            "passed": true,
+            "seconds": 0.6188701990176924
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_14_capability_and_goal_validation_before_model",
+            "passed": true,
+            "seconds": 0.8323428220464848
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_15_missing_draft_fails_without_world_action_and_old_spec_still_runs",
+            "passed": true,
+            "seconds": 0.5413253570441157
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_16_existing_populated_schema3_world_is_unchanged",
+            "passed": true,
+            "seconds": 1.0020661119488068
+          },
+          {
+            "test": "__main__.PostcardAcceptance.test_17_recent_feeds_and_model_context_are_bounded",
+            "passed": true,
+            "seconds": 2.1286016270169057
+          }
+        ],
+        "dataRoot": ".local/iter0005/api/20261026T141318-5451a3",
+        "failures": []
+      }
+    },
+    {
+      "name": "http-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-mosaic.log",
+      "evidence": ".local/iter0006/api/20261026T141318-0d8ac6/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "337d0fd14116aa9fc34eee3d5e3ae8b52c4486f8a6f9a62741ea928cd73554fd",
+      "report": {
+        "suite": "mosaic-http-v1",
+        "decisionSource": "explicit-test-double",
+        "actualModelCalls": 0,
+        "recordedAtUtc": "2026-10-26T06:13:32.092080+00:00",
+        "passed": true,
+        "testsRun": 17,
+        "tests": [
+          {
+            "test": "__main__.MosaicAcceptance.test_01_public_tiles_authorship_restart_and_immutable_history",
+            "passed": true,
+            "seconds": 0.7116942180437036
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_02_location_identity_visit_and_independent_postcard_slots",
+            "passed": true,
+            "seconds": 0.5066661640303209
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_03_original_id_patch_order_and_one_edit_per_visit",
+            "passed": true,
+            "seconds": 0.40532087202882394
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_04_parallel_duplicate_and_two_authors_cannot_lose_update",
+            "passed": true,
+            "seconds": 0.590015817026142
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_05_atomic_batch_strict_shape_and_same_color_reject",
+            "passed": true,
+            "seconds": 0.4698084280244075
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_06_before_commit_exit_rolls_back_entire_patch",
+            "passed": true,
+            "seconds": 0.7189874940086156
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_07_after_commit_exit_retains_entire_patch",
+            "passed": true,
+            "seconds": 0.6588362469919957
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_08_budget_stops_after_visit_before_paint",
+            "passed": true,
+            "seconds": 0.41852128703612834
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_09_pause_resume_uses_one_decision_and_completed_is_noop",
+            "passed": true,
+            "seconds": 0.5284060109988786
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_10_after_commit_exit_task_recovers_original_edit",
+            "passed": true,
+            "seconds": 0.8231665130006149
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_11_old_edit_never_completes_new_task",
+            "passed": true,
+            "seconds": 0.6615155239705928
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_12_wrong_evidence_and_query_failure_keep_original_pending",
+            "passed": true,
+            "seconds": 0.5832777690375224
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_13_changed_board_stops_frozen_draft_without_overwrite",
+            "passed": true,
+            "seconds": 0.7403872419963591
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_14_capabilities_bad_goals_and_invalid_draft_fail_before_actions",
+            "passed": true,
+            "seconds": 0.8141879600007087
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_15_populated_r4_unchanged_and_postcards_still_work_on_r5",
+            "passed": true,
+            "seconds": 1.0086075480212457
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_16_bounded_public_own_history_and_public_model_context",
+            "passed": true,
+            "seconds": 2.8041520140250213
+          },
+          {
+            "test": "__main__.MosaicAcceptance.test_17_committed_edit_remains_true_after_later_overwrite",
+            "passed": true,
+            "seconds": 0.7117010780493729
+          }
+        ],
+        "dataRoot": ".local/iter0006/api/20261026T141318-0d8ac6",
+        "failures": []
+      }
+    },
+    {
+      "name": "http-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-consent.log",
+      "evidence": ".local/iter0007/api/20261026T141327-d830fe/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "9ad1fd64745bd50fbbeeb8fcc94670507d170db5b70883dabb5e92e0b3bd21e9",
+      "report": {
+        "suite": "mosaic-consent-http-v1",
+        "decisionSource": "explicit-test-double",
+        "actualModelCalls": 0,
+        "recordedAtUtc": "2026-10-26T06:13:48.517302+00:00",
+        "passed": true,
+        "testsRun": 19,
+        "tests": [
+          {
+            "test": "__main__.ConsentAcceptance.test_01_proposal_is_public_immutable_and_does_not_paint",
+            "passed": true,
+            "seconds": 1.0213756230077706
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_02_direct_edit_requires_consent_including_erased_foreign_cells",
+            "passed": true,
+            "seconds": 0.7578036399791017
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_03_proposal_shape_target_visit_and_one_per_visit",
+            "passed": true,
+            "seconds": 0.6924144409713335
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_04_accept_preserves_proposer_and_records_actual_reviewer_edit",
+            "passed": true,
+            "seconds": 0.9473303850390948
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_05_reject_does_not_paint_and_cannot_be_reopened",
+            "passed": true,
+            "seconds": 0.7498769660014659
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_06_only_target_can_review_and_requires_own_visit",
+            "passed": true,
+            "seconds": 0.7114124369691126
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_07_stale_accept_fails_but_stale_reject_is_allowed",
+            "passed": true,
+            "seconds": 0.7616142029874027
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_08_concurrent_reviews_have_only_one_terminal_decision",
+            "passed": true,
+            "seconds": 0.8857759840320796
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_09_before_commit_exit_rolls_back_review_and_all_tiles",
+            "passed": true,
+            "seconds": 0.8568038599914871
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_10_after_commit_exit_retains_review_and_all_tiles",
+            "passed": true,
+            "seconds": 0.8073747809976339
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_11_proposer_pause_resume_and_budget_visit_only",
+            "passed": true,
+            "seconds": 0.6166152919759043
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_12_reviewer_accept_and_reject_reports_distinguish_actual_paint",
+            "passed": true,
+            "seconds": 0.9026067249942571
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_13_lost_review_commit_recovers_original_once",
+            "passed": true,
+            "seconds": 0.9918986879638396
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_14_stale_frozen_review_stops_without_new_decision",
+            "passed": true,
+            "seconds": 0.5936904159607366
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_15_wrong_receipt_and_query_failure_keep_original_pending",
+            "passed": true,
+            "seconds": 0.6834706049994566
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_16_capabilities_and_bad_draft_fail_before_world_actions",
+            "passed": true,
+            "seconds": 0.4657873009564355
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_17_populated_r5_stays_unchanged_with_original_overwrite_rules",
+            "passed": true,
+            "seconds": 1.055052854004316
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_18_history_limits_preserve_complete_database",
+            "passed": true,
+            "seconds": 6.531036243017297
+          },
+          {
+            "test": "__main__.ConsentAcceptance.test_19_world_stale_retries_only_settled_attempt_with_same_frozen_decision",
+            "passed": true,
+            "seconds": 0.75463005900383
+          }
+        ],
+        "dataRoot": ".local/iter0007/api/20261026T141327-d830fe",
+        "failures": []
+      }
+    },
+    {
+      "name": "http-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-inbox.log",
+      "evidence": ".local/iter0008/api/20261026T141330-b473f7/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "158ecfc20292833f00013b4073651c1ac49da472f2c40e8a55eb5b133e80d43c",
+      "report": {
+        "suite": "mosaic-inbox-http-v1",
+        "decisionSource": "explicit-test-double",
+        "actualModelCalls": 0,
+        "recordedAtUtc": "2026-10-26T06:13:53.707291+00:00",
+        "passed": true,
+        "testsRun": 17,
+        "tests": [
+          {
+            "test": "__main__.InboxAcceptance.test_01_oldest_pending_survives_recent_50_and_own_100_limits",
+            "passed": true,
+            "seconds": 7.435886911000125
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_02_scope_is_derived_from_authenticated_resident",
+            "passed": true,
+            "seconds": 0.632085369026754
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_03_status_counts_and_cursor_are_independent",
+            "passed": true,
+            "seconds": 1.378523376013618
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_04_get_and_errors_leave_complete_logical_database_unchanged",
+            "passed": true,
+            "seconds": 0.54891058197245
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_05_strict_query_and_detail_path_validation",
+            "passed": true,
+            "seconds": 0.5311308649834245
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_06_new_insert_does_not_repeat_or_skip_older_page",
+            "passed": true,
+            "seconds": 0.9700880940072238
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_07_review_changes_filter_and_detail_but_not_proposal_order",
+            "passed": true,
+            "seconds": 0.6004499529954046
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_08_read_is_public_but_review_authority_and_authentication_remain",
+            "passed": true,
+            "seconds": 0.5094329880084842
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_09_populated_r6_is_read_without_migration_or_logical_changes",
+            "passed": true,
+            "seconds": 0.953797038004268
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_10_old_scenarios_reject_new_reads_without_querying_absent_tables",
+            "passed": true,
+            "seconds": 1.9521920169936493
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_11_new_task_reads_original_older_proposal_before_single_choice",
+            "passed": true,
+            "seconds": 3.667531289975159
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_12_lookup_failure_cannot_fallback_to_recent_list_or_call_model",
+            "passed": true,
+            "seconds": 0.5497050049598329
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_13_wrong_lookup_identity_reference_and_evidence_fail_before_choice",
+            "passed": true,
+            "seconds": 0.6391923340270296
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_14_newer_detail_refreshes_observation_without_replacing_original",
+            "passed": true,
+            "seconds": 0.5577101579983719
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_15_old_service_capability_absence_preserves_existing_review_path",
+            "passed": true,
+            "seconds": 0.5920301119913347
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_16_resume_and_completed_task_do_not_lookup_again",
+            "passed": true,
+            "seconds": 0.8856251649558544
+          },
+          {
+            "test": "__main__.InboxAcceptance.test_17_malformed_capability_and_reference_do_not_start_task",
+            "passed": true,
+            "seconds": 0.5243336230050772
+          }
+        ],
+        "dataRoot": ".local/iter0008/api/20261026T141330-b473f7",
+        "failures": []
+      }
+    },
+    {
+      "name": "http-entry_guide",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-entry_guide.log",
+      "evidence": ".local/iter0009/api/20261026T141332-4bee68/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "f5a3a5c86a8edee39eafe6891a3bb9df525f25ba4c918b203bae727c05e4af43",
+      "report": {
+        "suite": "entry-guide-http-v1",
+        "recordedAtUtc": "2026-10-26T06:13:38.576579+00:00",
+        "passed": true,
+        "testsRun": 9,
+        "tests": [
+          {
+            "test": "__main__.EntryAcceptance.test_01_unbuilt_recipe_does_not_claim_existing_access",
+            "passed": true,
+            "seconds": 0.4117062690202147
+          },
+          {
+            "test": "__main__.EntryAcceptance.test_02_one_bridge_is_not_a_complete_route",
+            "passed": true,
+            "seconds": 0.45808637904701754
+          },
+          {
+            "test": "__main__.EntryAcceptance.test_03_later_resident_reuses_actual_bridges_without_material_or_rebuilding",
+            "passed": true,
+            "seconds": 0.7343212279956788
+          },
+          {
+            "test": "__main__.EntryAcceptance.test_04_here_zero_steps_and_identity_specific_routes",
+            "passed": true,
+            "seconds": 0.4574992809793912
+          },
+          {
+            "test": "__main__.EntryAcceptance.test_05_empty_shared_stock_is_reported_but_free_participation_remains",
+            "passed": true,
+            "seconds": 0.436770781991072
+          },
+          {
+            "test": "__main__.EntryAcceptance.test_06_reading_and_restart_leave_complete_logical_database_unchanged",
+            "passed": true,
+            "seconds": 0.68093474797206
+          },
+          {
+            "test": "__main__.EntryAcceptance.test_07_old_scenarios_and_populated_database_keep_rules_and_materials",
+            "passed": true,
+            "seconds": 2.1587072359980084
+          },
+          {
+            "test": "__main__.EntryAcceptance.test_08_public_model_input_uses_whitelist_and_legacy_service_remains_usable",
+            "passed": true,
+            "seconds": 0.5038937620120123
+          },
+          {
+            "test": "__main__.EntryAcceptance.test_09_new_task_receives_same_guide_before_actions",
+            "passed": true,
+            "seconds": 0.49252616602461785
+          }
+        ],
+        "actualModelCalls": 0,
+        "decisionSource": "explicit-program-and-test-double",
+        "dataRoot": ".local/iter0009/api/20261026T141332-4bee68",
+        "failures": []
+      }
+    },
+    {
+      "name": "http-wilderness",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-wilderness.log",
+      "evidence": ".local/iter0010/api/20261026T141338-c293c8/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "3c8522188643dc9bee0049623d5de55c2bd1d8f88bf79732dc91dc4edaf481a4",
+      "report": {
+        "suite": "wilderness-http-v1",
+        "recordedAtUtc": "2026-10-26T06:13:49.410834+00:00",
+        "passed": true,
+        "testsRun": 16,
+        "tests": [
+          {
+            "test": "__main__.WildernessAcceptance.test_01_scattered_empty_hands_natural_sources_and_no_prefabricated_services",
+            "passed": true,
+            "seconds": 0.31143945502117276
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_02_public_claim_and_build_without_collected_wood_are_rejected",
+            "passed": true,
+            "seconds": 0.33570463897194713
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_03_gather_depletes_source_unblocks_land_and_build_spends_actual_inventory",
+            "passed": true,
+            "seconds": 0.3752811729791574
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_04_distance_unknown_node_strict_fields_and_identity",
+            "passed": true,
+            "seconds": 0.37216204102151096
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_05_original_command_replay_has_one_receipt_and_changed_node_conflicts",
+            "passed": true,
+            "seconds": 0.6276777380262502
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_06_failure_after_tree_debit_rolls_back_every_material_fact",
+            "passed": true,
+            "seconds": 0.3799251300515607
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_07_exit_before_commit_keeps_tree_and_inventory_atomic",
+            "passed": true,
+            "seconds": 0.6441234080120921
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_08_exit_after_commit_recovers_original_cut_once",
+            "passed": true,
+            "seconds": 0.6459608570439741
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_09_two_actors_compete_for_final_unit",
+            "passed": true,
+            "seconds": 0.6531014810316265
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_10_collection_builds_shared_bridge_and_other_resident_reuses_it",
+            "passed": true,
+            "seconds": 0.5563097830163315
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_11_restart_never_refills_depleted_trees_or_resets_scattered_residents",
+            "passed": true,
+            "seconds": 0.690838343987707
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_12_guide_routes_respect_live_trees_and_update_after_felling",
+            "passed": true,
+            "seconds": 0.3705439880141057
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_13_old_scenarios_and_populated_r6_are_not_migrated_or_given_trees",
+            "passed": true,
+            "seconds": 2.6512839130009525
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_14_public_context_has_natural_sources_without_claiming_automatic_collection",
+            "passed": true,
+            "seconds": 0.30465441796695814
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_15_completed_wood_sources_do_not_regenerate_and_unsupported_creative_services_stay_absent",
+            "passed": true,
+            "seconds": 0.9005067740217783
+          },
+          {
+            "test": "__main__.WildernessAcceptance.test_16_fresh_unspecified_world_defaults_to_wilderness",
+            "passed": true,
+            "seconds": 0.9010766299907118
+          }
+        ],
+        "actualModelCalls": 0,
+        "decisionSource": "explicit-fixed-program",
+        "dataRoot": ".local/iter0010/api/20261026T141338-c293c8",
+        "failures": []
+      }
+    },
+    {
+      "name": "http-wilderness_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-wilderness_mission.log",
+      "evidence": ".local/iter0013/api/20261026T061348Z-331a85/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "f288cd7bc8cff55bc34ae0d8bc6b55f141a21662db3c8c7d80b4184b2cd6f4ba",
+      "report": {
+        "suite": "wilderness-resident-http",
+        "actualModelCalls": 0,
+        "decisionSource": "test-double",
+        "recordedAtUtc": "2026-10-26T06:13:56.926457+00:00",
+        "passed": true,
+        "testsRun": 13,
+        "tests": [
+          {
+            "test": "__main__.WildernessMissionAcceptance.test_01_empty_hands_build_bridge_and_later_resident_reuses_without_harvesting",
+            "passed": true,
+            "seconds": 0.8086403280030936
+          },
+          {
+            "test": "__main__.WildernessMissionAcceptance.test_02_absent_permission_preserves_legacy_no_gather_behavior",
+            "passed": true,
+            "seconds": 0.3225144049501978
+          },
+          {
+            "test": "__main__.WildernessMissionAcceptance.test_03_wood_budget_blocks_before_collecting_and_commands_survive_resume",
+            "passed": true,
+            "seconds": 0.38622485898667946
+          },
+          {
+            "test": "__main__.WildernessMissionAcceptance.test_04_unreachable_sources_are_not_counted_as_available_supply",
+            "passed": true,
+            "seconds": 0.3646739920368418
+          },
+          {
+            "test": "__main__.WildernessMissionAcceptance.test_05_preexisting_inventory_only_collects_the_remaining_shortage",
+            "passed": true,
+            "seconds": 0.6275856019929051
+          },
+          {
+            "test": "__main__.WildernessMissionAcceptance.test_06_exit_after_cut_commit_recovers_original_once",
+            "passed": true,
+            "seconds": 0.9663728779996745
+          },
+          {
+            "test": "__main__.WildernessMissionAcceptance.test_07_exit_before_commit_retries_same_cut",
+            "passed": true,
+            "seconds": 0.920501527027227
+          },
+          {
+            "test": "__main__.WildernessMissionAcceptance.test_08_wrong_node_receipt_stays_pending_until_original_is_recovered",
+            "passed": true,
+            "seconds": 0.7434466630220413
+          },
+          {
+            "test": "__main__.WildernessMissionAcceptance.test_09_stale_cut_replans_only_after_confirmed_rejection",
+            "passed": true,
+            "seconds": 0.6154162249877118
+          },
+          {
+            "test": "__main__.WildernessMissionAcceptance.test_10_process_exit_after_cut_receipt_before_local_settlement",
+            "passed": true,
+            "seconds": 0.6528818280203268
+          },
+          {
+            "test": "__main__.WildernessMissionAcceptance.test_11_permission_and_identity_binding_survive_pause",
+            "passed": true,
+            "seconds": 0.9104765559895895
+          },
+          {
+            "test": "__main__.WildernessMissionAcceptance.test_12_planning_is_readonly_and_untrusted_extra_fields_are_not_exposed",
+            "passed": true,
+            "seconds": 0.3172518180217594
+          },
+          {
+            "test": "__main__.WildernessMissionAcceptance.test_13_fixed_reference_cli_exports_actual_gather_report_without_models",
+            "passed": true,
+            "seconds": 0.6376360870199278
+          }
+        ],
+        "failures": []
+      }
+    },
+    {
+      "name": "http-continuous",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-continuous.log",
+      "evidence": ".local/iter0014/api/20261026T061349Z-4b7296/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "52b79883383aba1a2d0e29ee27ce0c63b1ea2beb7a3300627e7894119c04529b",
+      "report": {
+        "passed": true,
+        "testsRun": 12,
+        "failures": 0,
+        "errors": 0,
+        "failureDetails": []
+      }
+    },
+    {
+      "name": "http-continuous_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-continuous_mission.log",
+      "evidence": ".local/iter0015/api/20261026T061353Z-944708/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "15511ba8c2be9997c6437b1048f390ee12e979b0a06f270f93e844c8dfe5763f",
+      "report": {
+        "suite": "continuous-mission-http",
+        "actualModelCalls": 0,
+        "decisionSource": "test-double",
+        "passed": true,
+        "testsRun": 11,
+        "tests": [
+          {
+            "test": "__main__.ContinuousMissionAcceptance.test_01_fractional_target_obstacle_detour_and_return",
+            "passed": true,
+            "seconds": 9.978762569953687
+          },
+          {
+            "test": "__main__.ContinuousMissionAcceptance.test_02_lost_walk_response_recovers_original_position_once",
+            "passed": true,
+            "seconds": 3.8387531499611214
+          },
+          {
+            "test": "__main__.ContinuousMissionAcceptance.test_03_wrong_walk_receipt_cannot_confirm_a_teleport",
+            "passed": true,
+            "seconds": 3.5843469950486906
+          },
+          {
+            "test": "__main__.ContinuousMissionAcceptance.test_04_actual_gather_bridge_crossing_and_later_resident_reuse",
+            "passed": true,
+            "seconds": 89.18182538700057
+          },
+          {
+            "test": "__main__.ContinuousMissionAcceptance.test_05_budget_and_gather_permission_prevent_material_actions",
+            "passed": true,
+            "seconds": 0.8873139400384389
+          },
+          {
+            "test": "__main__.ContinuousMissionAcceptance.test_06_pause_preserves_identity_permissions_and_command_budget",
+            "passed": true,
+            "seconds": 3.928994339017663
+          },
+          {
+            "test": "__main__.ContinuousMissionAcceptance.test_07_query_identity_version_and_collision_evidence",
+            "passed": true,
+            "seconds": 3.6368580120033585
+          },
+          {
+            "test": "__main__.ContinuousMissionAcceptance.test_08_fixed_reference_cli_exports_fractional_report",
+            "passed": true,
+            "seconds": 10.689516650047153
+          },
+          {
+            "test": "__main__.ContinuousMissionAcceptance.test_09_actual_collision_receipt_stops_without_claiming_arrival",
+            "passed": true,
+            "seconds": 8.706203957961407
+          },
+          {
+            "test": "__main__.ContinuousMissionAcceptance.test_10_stale_walk_replans_after_authoritative_rejection",
+            "passed": true,
+            "seconds": 4.346852901973762
+          },
+          {
+            "test": "__main__.ContinuousMissionAcceptance.test_11_planning_time_counts_before_any_material_mutation",
+            "passed": true,
+            "seconds": 0.6272474270081148
+          }
+        ],
+        "failures": []
+      }
+    },
+    {
+      "name": "http-world_instance",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-world_instance.log",
+      "evidence": ".local/world-instance/api/20261026T061357Z-d9c980/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "11b249699ed202cd872eb103066effa9c87f466b6bc42f6c8f848bfc4b4ca16f",
+      "report": {
+        "passed": true,
+        "testsRun": 8,
+        "failures": [],
+        "actualModelCalls": 0
+      }
+    },
+    {
+      "name": "http-construction_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-construction_mission.log",
+      "evidence": ".local/iter0017/api/20261026T061403Z-9bb916/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "605a8aa44f05774652bb03323535cc14b4c2f5e40372574a7be3564ce2294d2c",
+      "report": {
+        "suite": "construction-mission-http",
+        "actualModelCalls": 0,
+        "decisionSource": "test-double",
+        "passed": true,
+        "testsRun": 13,
+        "tests": [
+          {
+            "test": "__main__.ConstructionAcceptance.test_01_platform_is_built_with_actual_material_and_return",
+            "passed": true,
+            "seconds": 10.88624411803903
+          },
+          {
+            "test": "__main__.ConstructionAcceptance.test_02_explicit_bridge_then_later_platform_and_free_visit",
+            "passed": true,
+            "seconds": 86.66939643101068
+          },
+          {
+            "test": "__main__.ConstructionAcceptance.test_03_lost_build_response_restores_same_entity_once",
+            "passed": true,
+            "seconds": 4.807083719002549
+          },
+          {
+            "test": "__main__.ConstructionAcceptance.test_04_server_exit_before_commit_retries_original_build",
+            "passed": true,
+            "seconds": 4.877649911039043
+          },
+          {
+            "test": "__main__.ConstructionAcceptance.test_05_client_process_exit_after_commit_restores_original_build",
+            "passed": true,
+            "seconds": 12.65029154199874
+          },
+          {
+            "test": "__main__.ConstructionAcceptance.test_06_mismatched_receipt_and_absent_entity_keep_original_pending",
+            "passed": true,
+            "seconds": 5.026005703024566
+          },
+          {
+            "test": "__main__.ConstructionAcceptance.test_07_permissions_material_budget_and_geometry_prevent_actions",
+            "passed": true,
+            "seconds": 5.068345882988069
+          },
+          {
+            "test": "__main__.ConstructionAcceptance.test_08_existing_facility_is_not_this_tasks_construction",
+            "passed": true,
+            "seconds": 4.647296533046756
+          },
+          {
+            "test": "__main__.ConstructionAcceptance.test_09_pause_freezes_recipe_target_actor_and_permissions",
+            "passed": true,
+            "seconds": 4.551857507962268
+          },
+          {
+            "test": "__main__.ConstructionAcceptance.test_10_stale_build_requires_original_rejection_then_new_attempt",
+            "passed": true,
+            "seconds": 4.570550336968154
+          },
+          {
+            "test": "__main__.ConstructionAcceptance.test_11_fixed_reference_cli_exports_construction_facts",
+            "passed": true,
+            "seconds": 11.41119015699951
+          },
+          {
+            "test": "__main__.ConstructionAcceptance.test_12_visit_before_build_does_not_replace_visiting_completed_facility",
+            "passed": true,
+            "seconds": 6.779011463979259
+          },
+          {
+            "test": "__main__.ConstructionAcceptance.test_13_observation_failure_after_confirmation_keeps_built_fact",
+            "passed": true,
+            "seconds": 4.548774548980873
+          }
+        ],
+        "failures": []
+      }
+    },
+    {
+      "name": "http-instance_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-instance_mission.log",
+      "evidence": ".local/instance-mission/api/20261026T061415Z-3869af/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "2ba762df157c7333b98b472d4f2477bf47041c7b190a72bfe20b03e2504a2537",
+      "report": {
+        "suite": "instance-mission-http",
+        "actualModelCalls": 0,
+        "decisionSource": "test-double",
+        "passed": true,
+        "testsRun": 5,
+        "tests": [
+          {
+            "test": "__main__.InstanceMissionAcceptance.test_01_same_url_new_database_never_replays_old_pending",
+            "passed": true,
+            "seconds": 11.107321457995567
+          },
+          {
+            "test": "__main__.InstanceMissionAcceptance.test_02_same_instance_new_endpoint_recovers_original_request",
+            "passed": true,
+            "seconds": 3.8534221070003696
+          },
+          {
+            "test": "__main__.InstanceMissionAcceptance.test_03_legacy_unbound_task_cannot_adopt_current_instance",
+            "passed": true,
+            "seconds": 0.7850750400102697
+          },
+          {
+            "test": "__main__.InstanceMissionAcceptance.test_04_missing_or_invalid_protected_identity_never_downgrades",
+            "passed": true,
+            "seconds": 0.8094973670085892
+          },
+          {
+            "test": "__main__.InstanceMissionAcceptance.test_05_completed_report_is_historical_without_contacting_new_world",
+            "passed": true,
+            "seconds": 3.7027271880069748
+          }
+        ],
+        "failures": []
+      }
+    },
+    {
+      "name": "http-actor_state",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-actor_state.log",
+      "evidence": ".local/iter0019/api/20261026T061435Z-e0c05a/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "6593d00e9ca14a5c1a73208e9a12e9351637d4da09cae71ca1109d0b781d076a",
+      "report": {
+        "suite": "actor-state-http-v1",
+        "recordedAtUtc": "2026-10-26T06:16:09.709515+00:00",
+        "passed": true,
+        "testsRun": 10,
+        "tests": [
+          {
+            "test": "__main__.ActorStateAcceptance.test_01_capability_legacy_and_existing_strict_receipt",
+            "passed": true,
+            "seconds": 1.552659455977846
+          },
+          {
+            "test": "__main__.ActorStateAcceptance.test_02_twenty_unrelated_moves_allow_actual_progress",
+            "passed": true,
+            "seconds": 1.1059728240361437
+          },
+          {
+            "test": "__main__.ActorStateAcceptance.test_03_unrelated_walk_does_not_block_gather_or_build",
+            "passed": true,
+            "seconds": 0.5116826019948348
+          },
+          {
+            "test": "__main__.ActorStateAcceptance.test_04_same_actor_concurrency_and_ABA_remain_rejected",
+            "passed": true,
+            "seconds": 0.590607818972785
+          },
+          {
+            "test": "__main__.ActorStateAcceptance.test_05_partial_and_final_resource_competition",
+            "passed": true,
+            "seconds": 34.72991818503942
+          },
+          {
+            "test": "__main__.ActorStateAcceptance.test_06_same_build_space_is_revalidated_without_double_debit",
+            "passed": true,
+            "seconds": 16.310163737041876
+          },
+          {
+            "test": "__main__.ActorStateAcceptance.test_07_walk_rechecks_new_bridge_and_keeps_speed_limit",
+            "passed": true,
+            "seconds": 36.36732885095989
+          },
+          {
+            "test": "__main__.ActorStateAcceptance.test_08_same_id_mode_changes_conflict_and_replays_keep_original_execution",
+            "passed": true,
+            "seconds": 0.8869368379819207
+          },
+          {
+            "test": "__main__.ActorStateAcceptance.test_09_invalid_modes_future_anchor_and_instance_errors_do_not_execute",
+            "passed": true,
+            "seconds": 0.4434101970400661
+          },
+          {
+            "test": "__main__.ActorStateAcceptance.test_10_before_and_after_commit_crashes_recover_original_mode",
+            "passed": true,
+            "seconds": 1.282511143013835
+          }
+        ],
+        "actualModelCalls": 0,
+        "sourceSha256": {
+          "src/World.Server/Protocol.cs": "e2df643975e1750a462c969180f5988ad51415717ed88eb27ac4efd397867831",
+          "src/World.Server/WorldService.cs": "7aca4fda2b74f4b537e3c0bfe4f6462db8bd5c2c9c75609775af99a90d94d6ef",
+          "tests/actor_state_api.py": "41f93c2bff865302cd6b009165883fd557e9a2d43d09d47ebf2632a3562f664e"
+        },
+        "failureDetails": []
+      }
+    },
+    {
+      "name": "http-actor_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-actor_mission.log",
+      "evidence": ".local/iter0019/python/20261026T061609Z-18e90a/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "915aefe07c7fa5251c04a8e7c60a22e5e0adb517648a886e0f98491b9a0d33a0",
+      "report": {
+        "suite": "actor-mission-http",
+        "actualModelCalls": 0,
+        "decisionSource": "test-double",
+        "passed": true,
+        "testsRun": 12,
+        "tests": [
+          {
+            "test": "__main__.ActorMissionAcceptance.test_01_real_interference_all_actions_finish_one_platform",
+            "passed": true,
+            "seconds": 14.662724731024355
+          },
+          {
+            "test": "__main__.ActorMissionAcceptance.test_02_same_actor_aba_stops_original_task_after_rejection",
+            "passed": true,
+            "seconds": 0.7643388240248896
+          },
+          {
+            "test": "__main__.ActorMissionAcceptance.test_03_other_resident_takes_one_wood_before_the_same_gather",
+            "passed": true,
+            "seconds": 45.691281007020734
+          },
+          {
+            "test": "__main__.ActorMissionAcceptance.test_04_before_commit_exit_retries_same_mode_body_and_id",
+            "passed": true,
+            "seconds": 5.154033947037533
+          },
+          {
+            "test": "__main__.ActorMissionAcceptance.test_05_after_commit_exit_keeps_execution_and_completed_offline_read",
+            "passed": true,
+            "seconds": 5.134560799982864
+          },
+          {
+            "test": "__main__.ActorMissionAcceptance.test_06_false_walk_execution_retains_pending",
+            "passed": true,
+            "seconds": 3.9721710149897262
+          },
+          {
+            "test": "__main__.ActorMissionAcceptance.test_07_false_gather_execution_retains_pending",
+            "passed": true,
+            "seconds": 5.058597094961442
+          },
+          {
+            "test": "__main__.ActorMissionAcceptance.test_08_false_build_execution_retains_pending",
+            "passed": true,
+            "seconds": 4.965722116001416
+          },
+          {
+            "test": "__main__.ActorMissionAcceptance.test_09_false_gather_transaction_quantities_retain_pending",
+            "passed": true,
+            "seconds": 4.722021173976827
+          },
+          {
+            "test": "__main__.ActorMissionAcceptance.test_10_legacy_and_new_strict_tasks_do_not_upgrade_on_resume",
+            "passed": true,
+            "seconds": 1.692675082013011
+          },
+          {
+            "test": "__main__.ActorMissionAcceptance.test_11_mode_and_before_record_corruption_never_contacts_world",
+            "passed": true,
+            "seconds": 4.7206179720233195
+          },
+          {
+            "test": "__main__.ActorMissionAcceptance.test_12_rejected_execution_must_match_before_pending_is_cleared",
+            "passed": true,
+            "seconds": 0.6138494149781764
+          }
+        ],
+        "sourceHashesBefore": {
+          "scripts/command_preconditions.py": "fe4bb88eb0222b68ea071e34c1316a13c69969d02e94af9a6aacb7aab969d1c8",
+          "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+          "scripts/continuous_navigation.py": "0303f9ade6ce90e48a85fbf8e5a5aaff145ca0a305562cee4c0d0bb1cb21e578",
+          "scripts/wilderness_materials.py": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6",
+          "scripts/resident_construction.py": "eef4aa235fb0fdf2428b17005381074bb1f773f3ac21d600b2c095e96c1b6411",
+          "scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+          "src/World.Server/wwwroot/resident.js": "4b4c6b12a69a7dad72d02753a52c7c764f50cab230b392993f82859ecad91d6a",
+          "tests/actor_mission_api.py": "5151c1a1d6dff76df082262fe222e4b1fc43de819fc7c4298e4b9cb15e19e796"
+        },
+        "sourceHashesAfter": {
+          "scripts/command_preconditions.py": "fe4bb88eb0222b68ea071e34c1316a13c69969d02e94af9a6aacb7aab969d1c8",
+          "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+          "scripts/continuous_navigation.py": "0303f9ade6ce90e48a85fbf8e5a5aaff145ca0a305562cee4c0d0bb1cb21e578",
+          "scripts/wilderness_materials.py": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6",
+          "scripts/resident_construction.py": "eef4aa235fb0fdf2428b17005381074bb1f773f3ac21d600b2c095e96c1b6411",
+          "scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+          "src/World.Server/wwwroot/resident.js": "4b4c6b12a69a7dad72d02753a52c7c764f50cab230b392993f82859ecad91d6a",
+          "tests/actor_mission_api.py": "5151c1a1d6dff76df082262fe222e4b1fc43de819fc7c4298e4b9cb15e19e796"
+        },
+        "sourceStable": true,
+        "allStartedServicesStopped": true,
+        "serverDllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+        "failures": []
+      }
+    },
+    {
+      "name": "http-material_transfer",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-material_transfer.log",
+      "evidence": ".local/iter0020/api/20261026T061613Z-0fa8eb/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "7f255d8700e182604dc829ecf8fd43485583e2c5594698958eea78c3f8d7befc",
+      "report": {
+        "suite": "material-transfer-http-v1",
+        "recordedAtUtc": "2026-10-26T06:17:20.060203+00:00",
+        "passed": true,
+        "testsRun": 9,
+        "tests": [
+          {
+            "test": "__main__.TransferAcceptance.test_01_cooperation_real_materials_received_then_built_and_original_receipt",
+            "passed": true,
+            "seconds": 42.26562904397724
+          },
+          {
+            "test": "__main__.TransferAcceptance.test_02_refusal_control_can_cross_but_cannot_build",
+            "passed": true,
+            "seconds": 15.005684192001354
+          },
+          {
+            "test": "__main__.TransferAcceptance.test_03_protocol_invalid_and_old_worlds_remain_unavailable",
+            "passed": true,
+            "seconds": 0.702767662005499
+          },
+          {
+            "test": "__main__.TransferAcceptance.test_04_same_id_changes_conflict_and_different_actors_do_not_share_receipts",
+            "passed": true,
+            "seconds": 1.101758269011043
+          },
+          {
+            "test": "__main__.TransferAcceptance.test_05_incoming_transfer_invalidates_all_four_actions_and_aba",
+            "passed": true,
+            "seconds": 0.6854732719948515
+          },
+          {
+            "test": "__main__.TransferAcceptance.test_06_sender_stable_receiver_movement_rechecked_and_obstacle_blocks",
+            "passed": true,
+            "seconds": 4.345088520960417
+          },
+          {
+            "test": "__main__.TransferAcceptance.test_07_competing_build_and_gift_do_not_double_spend",
+            "passed": true,
+            "seconds": 0.7807969090063125
+          },
+          {
+            "test": "__main__.TransferAcceptance.test_08_debit_rollback_and_both_process_exit_points_recover_once",
+            "passed": true,
+            "seconds": 1.1473235970479436
+          },
+          {
+            "test": "__main__.TransferAcceptance.test_09_recent_history_is_bounded_but_public_events_remain_complete",
+            "passed": true,
+            "seconds": 0.6625627919565886
+          }
+        ],
+        "actualModelCalls": 0,
+        "fixture": "cold isolated copies of an actual HTTP-created world; creation-trace.json retained",
+        "dllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+        "sourceSha256": {
+          "src/World.Server/ContinuousMaterials.cs": "4902e9095f94900dbd5032fcd339626aa0fc548d982f99bb60bd3a2329afb340",
+          "src/World.Server/ContinuousWorld.cs": "13821d283a0863f488c50202ea11d826a5df6c037324dd97b0865bd092575f71",
+          "src/World.Server/EntityNotes.cs": "fc61a3eb54a1730fdf374bcafcdab251d89cfea00dac3cdea00fa08e17a8379d",
+          "src/World.Server/EntryGuide.cs": "097a08ad3f90f72e25743708e4f9a32e1cf2baec401c275bf7001a92655f3e8d",
+          "src/World.Server/MaterialAccess.cs": "84f1f37823c06ffee01e1bf154effaf531ce0256cccf1868b725664c89f682f8",
+          "src/World.Server/MaterialServiceClock.cs": "edec7589b0ff66179aa8a321212388928033b45ae350331c4dbd61b1db9336e2",
+          "src/World.Server/MaterialTransfer.cs": "413db75abfec5f98f7fc35344c7820ffd45b5f10c05f889918e0155e194befe1",
+          "src/World.Server/Program.cs": "b95b710bde007b36b6c5222b33540e90da75e3762e5ee3d4f781f7fc5549ecc9",
+          "src/World.Server/Protocol.cs": "e2df643975e1750a462c969180f5988ad51415717ed88eb27ac4efd397867831",
+          "src/World.Server/ServerConfiguration.cs": "8b33f7b3aae70229397362d0571769198303507712accd624ecedb1320eea8d1",
+          "src/World.Server/WorldDatabase.cs": "97e403cd27187bb505753300e41ca1deb2f52ea7b1afa34506fa182b011e3da6",
+          "src/World.Server/WorldInstance.cs": "f865654d13b63ac9659fa119353b5e32b303484eab49215bb7796a49a5b3fd1b",
+          "src/World.Server/WorldScenario.cs": "ea63aa8b79740cc1a603447dcbc8ae808f3632460db87bc9df6145f2003ff816",
+          "src/World.Server/WorldService.cs": "7aca4fda2b74f4b537e3c0bfe4f6462db8bd5c2c9c75609775af99a90d94d6ef",
+          "tests/material_transfer_api.py": "bc0d889878d3b2ee8597df20df8c2135561bfd39d26e187c8afd6e2376c9fca6"
+        },
+        "failureDetails": []
+      }
+    },
+    {
+      "name": "http-transfer_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-transfer_mission.log",
+      "evidence": ".local/iter0020/python/20261026T061650Z-fe7172/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "f86381a36c5fe19fcc2dfc262fddf22820596ff095ffd3c34c6e074ee56bc1f1",
+      "report": {
+        "suite": "transfer-mission-v1",
+        "passed": true,
+        "testsRun": 10,
+        "tests": [
+          {
+            "test": "__main__.TransferMissionAcceptance.test_01_real_meeting_gift_return_and_recipient_build",
+            "passed": true,
+            "seconds": 42.672821999993175
+          },
+          {
+            "test": "__main__.TransferMissionAcceptance.test_02_authorization_budget_material_and_meeting_bounds",
+            "passed": true,
+            "seconds": 0.6102353329770267
+          },
+          {
+            "test": "__main__.TransferMissionAcceptance.test_03_lost_reply_new_session_after_recipient_spends_recovers_original",
+            "passed": true,
+            "seconds": 0.9954776089871302
+          },
+          {
+            "test": "__main__.TransferMissionAcceptance.test_04_before_commit_exit_resends_original_with_original_budget",
+            "passed": true,
+            "seconds": 0.9025413990020752
+          },
+          {
+            "test": "__main__.TransferMissionAcceptance.test_05_corrupt_receipts_keep_original_until_authoritative_query",
+            "passed": true,
+            "seconds": 0.7602685390156694
+          },
+          {
+            "test": "__main__.TransferMissionAcceptance.test_06_incoming_gift_stops_original_receiver_task_without_budget_reset",
+            "passed": true,
+            "seconds": 2.233622935018502
+          },
+          {
+            "test": "__main__.TransferMissionAcceptance.test_07_damaged_pending_authorization_and_before_facts_make_no_request",
+            "passed": true,
+            "seconds": 0.7341434000409208
+          },
+          {
+            "test": "__main__.TransferMissionAcceptance.test_08_same_url_new_instance_never_receives_old_pending",
+            "passed": true,
+            "seconds": 1.5056311590014957
+          },
+          {
+            "test": "__main__.TransferMissionAcceptance.test_09_initial_cross_river_no_permission_stops_without_exception_or_actions",
+            "passed": true,
+            "seconds": 7.6819997759885155
+          },
+          {
+            "test": "__main__.TransferMissionAcceptance.test_10_initial_collect_bridge_then_collect_gift_with_total_budget_nine",
+            "passed": true,
+            "seconds": 54.569994883961044
+          }
+        ],
+        "actualModelCalls": 0,
+        "dllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+        "sourceSha256": {
+          "scripts/activity_choice.py": "84bd020783870725947663eb41500977096c86e366099b4fb8607c9d1c049b5a",
+          "scripts/agent_accounts.py": "f1844d9db668e864ab215d0d811b884b6301500bfe260bb9bf9d9cfdbc481f10",
+          "scripts/check.py": "73fbfe4e2341395b41a1518af57a23b18219da8479f9a69ba8089f3d8c8bc691",
+          "scripts/codex_goal_selector.py": "3a455c2906aaa3764c85794cb581300979f57cb3f24b46fe437fbd287a8b6936",
+          "scripts/command_preconditions.py": "fe4bb88eb0222b68ea071e34c1316a13c69969d02e94af9a6aacb7aab969d1c8",
+          "scripts/continuous_navigation.py": "0303f9ade6ce90e48a85fbf8e5a5aaff145ca0a305562cee4c0d0bb1cb21e578",
+          "scripts/entry_guide.py": "9b768237d39f2e4b4820e0178508c132408215aa6653c996eaf9b6e913d79dbb",
+          "scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+          "scripts/mosaic_consent.py": "cb3acc34abe43c6988359bc307755ad6d2743ac5e850bccaf165f14ae561eae9",
+          "scripts/mosaic_inbox.py": "a9c0772e5946af581c3b423c8e5986b05413348a3e528c8d5a0b18401367aa59",
+          "scripts/mosaic_patch.py": "4abdb035967733e4aacbe175a37f8b32686de6182ded2fee888203726b0461a6",
+          "scripts/passage_agent.py": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e",
+          "scripts/postcard_text.py": "db3429983b8ee2062ab70f4c7e46b763c5839934f65a2a6776638f8c0a280a4c",
+          "scripts/resident_construction.py": "eef4aa235fb0fdf2428b17005381074bb1f773f3ac21d600b2c095e96c1b6411",
+          "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+          "scripts/resident_material_access.py": "a144eafc8ba4e12d1cf88ef147a2179b7808a1cd0b2f5a8a0e0dc01046b717e4",
+          "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+          "scripts/resident_transfer.py": "957067bc33585e1fb5f7f9b21b703aa1c8decf8f4148fcb2fe24e4ce50329a83",
+          "scripts/run_resident.py": "5b8f536d9e354b043fa7af35fec96dd2a781d1896092bce03277bbce90c5b521",
+          "scripts/test_agent_accounts.py": "07c9e2e66bcfec99a9d57ed7b9ba3497769d06bee5b838ca6c24a0264647df5c",
+          "scripts/wilderness_materials.py": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6"
+        },
+        "failureDetails": []
+      }
+    },
+    {
+      "name": "http-material_access",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-material_access.log",
+      "evidence": ".local/iter0022/api/20261026T061720Z-1620cd/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "e4b16bab99263ac308d075430a9b6280b865fc96458c415163307b526d77485b",
+      "report": {
+        "suite": "material-access-http-v1",
+        "recordedAtUtc": "2026-10-26T06:21:38.311029+00:00",
+        "passed": true,
+        "testsRun": 8,
+        "tests": [
+          {
+            "test": "__main__.MaterialAccessAcceptance.test_01_initial_identity_inactive_protocol_and_offline_activation_lock",
+            "passed": true,
+            "seconds": 2.315961498010438
+          },
+          {
+            "test": "__main__.MaterialAccessAcceptance.test_02_same_instance_refusal_then_real_reservation_harvest_and_platform",
+            "passed": true,
+            "seconds": 54.82384356303373
+          },
+          {
+            "test": "__main__.MaterialAccessAcceptance.test_03_alias_one_slot_fifo_rejoin_and_original_receipt",
+            "passed": true,
+            "seconds": 30.603234752023127
+          },
+          {
+            "test": "__main__.MaterialAccessAcceptance.test_04_partial_harvest_restart_expiry_preserves_inventory_and_releases_only_remaining",
+            "passed": true,
+            "seconds": 72.04502848099219
+          },
+          {
+            "test": "__main__.MaterialAccessAcceptance.test_05_budget_capacity_and_exhausted_budget_does_not_reset",
+            "passed": true,
+            "seconds": 41.05804478301434
+          },
+          {
+            "test": "__main__.MaterialAccessAcceptance.test_06_empty_and_full_plot_walkable_but_reserved_for_building",
+            "passed": true,
+            "seconds": 32.87078266800381
+          },
+          {
+            "test": "__main__.MaterialAccessAcceptance.test_07_harvest_transaction_faults_keep_original_id",
+            "passed": true,
+            "seconds": 11.27487848896999
+          },
+          {
+            "test": "__main__.MaterialAccessAcceptance.test_08_production_crash_boundaries_and_restart",
+            "passed": true,
+            "seconds": 13.140707457030658
+          }
+        ],
+        "actualModelCalls": 0,
+        "clock": "real monotonic service clock; no SQL time or material edits",
+        "dllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+        "sourceSha256": {
+          "src/World.Server/ContinuousMaterials.cs": "4902e9095f94900dbd5032fcd339626aa0fc548d982f99bb60bd3a2329afb340",
+          "src/World.Server/ContinuousWorld.cs": "13821d283a0863f488c50202ea11d826a5df6c037324dd97b0865bd092575f71",
+          "src/World.Server/EntityNotes.cs": "fc61a3eb54a1730fdf374bcafcdab251d89cfea00dac3cdea00fa08e17a8379d",
+          "src/World.Server/EntryGuide.cs": "097a08ad3f90f72e25743708e4f9a32e1cf2baec401c275bf7001a92655f3e8d",
+          "src/World.Server/MaterialAccess.cs": "84f1f37823c06ffee01e1bf154effaf531ce0256cccf1868b725664c89f682f8",
+          "src/World.Server/MaterialServiceClock.cs": "edec7589b0ff66179aa8a321212388928033b45ae350331c4dbd61b1db9336e2",
+          "src/World.Server/MaterialTransfer.cs": "413db75abfec5f98f7fc35344c7820ffd45b5f10c05f889918e0155e194befe1",
+          "src/World.Server/Program.cs": "b95b710bde007b36b6c5222b33540e90da75e3762e5ee3d4f781f7fc5549ecc9",
+          "src/World.Server/Protocol.cs": "e2df643975e1750a462c969180f5988ad51415717ed88eb27ac4efd397867831",
+          "src/World.Server/ServerConfiguration.cs": "8b33f7b3aae70229397362d0571769198303507712accd624ecedb1320eea8d1",
+          "src/World.Server/WorldDatabase.cs": "97e403cd27187bb505753300e41ca1deb2f52ea7b1afa34506fa182b011e3da6",
+          "src/World.Server/WorldInstance.cs": "f865654d13b63ac9659fa119353b5e32b303484eab49215bb7796a49a5b3fd1b",
+          "src/World.Server/WorldScenario.cs": "ea63aa8b79740cc1a603447dcbc8ae808f3632460db87bc9df6145f2003ff816",
+          "src/World.Server/WorldService.cs": "7aca4fda2b74f4b537e3c0bfe4f6462db8bd5c2c9c75609775af99a90d94d6ef",
+          "tests/material_access_api.py": "71ccde5bbfeaffc590f7799d19345e33100c6911fe54eaeb39e1e83426c06413"
+        },
+        "failureDetails": []
+      }
+    },
+    {
+      "name": "http-material_access_time",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-material_access_time.log",
+      "evidence": ".local/iter0022/time/20261026T061747Z-84aa3d/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "136688aef145851e8e61f85dce20220fbc36ff2b5efa50beabeb13cb11c86d20",
+      "report": {
+        "passed": true,
+        "testsRun": 2,
+        "tests": [
+          {
+            "test": "__main__.MaterialClockAcceptance.test_01_get_is_read_only_while_writer_is_locked_across_production_boundary",
+            "passed": true,
+            "seconds": 11.413359859958291
+          },
+          {
+            "test": "__main__.MaterialClockAcceptance.test_02_queued_before_process_pause_gets_full_lease_from_actual_resume_time",
+            "passed": true,
+            "seconds": 12.85928066901397
+          }
+        ],
+        "actualModelCalls": 0,
+        "clock": "real Stopwatch; SQLite lock or SIGSTOP only, no time/material row edits",
+        "dllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+        "sourceSha256": {
+          "tests/material_access_api.py": "71ccde5bbfeaffc590f7799d19345e33100c6911fe54eaeb39e1e83426c06413",
+          "tests/material_access_time_api.py": "fdb93904421ab9241c446570a892a3d15037b50dce4e09968208858e4fcfe852",
+          "src/World.Server/ContinuousMaterials.cs": "4902e9095f94900dbd5032fcd339626aa0fc548d982f99bb60bd3a2329afb340",
+          "src/World.Server/ContinuousWorld.cs": "13821d283a0863f488c50202ea11d826a5df6c037324dd97b0865bd092575f71",
+          "src/World.Server/EntityNotes.cs": "fc61a3eb54a1730fdf374bcafcdab251d89cfea00dac3cdea00fa08e17a8379d",
+          "src/World.Server/EntryGuide.cs": "097a08ad3f90f72e25743708e4f9a32e1cf2baec401c275bf7001a92655f3e8d",
+          "src/World.Server/MaterialAccess.cs": "84f1f37823c06ffee01e1bf154effaf531ce0256cccf1868b725664c89f682f8",
+          "src/World.Server/MaterialServiceClock.cs": "edec7589b0ff66179aa8a321212388928033b45ae350331c4dbd61b1db9336e2",
+          "src/World.Server/MaterialTransfer.cs": "413db75abfec5f98f7fc35344c7820ffd45b5f10c05f889918e0155e194befe1",
+          "src/World.Server/Program.cs": "b95b710bde007b36b6c5222b33540e90da75e3762e5ee3d4f781f7fc5549ecc9",
+          "src/World.Server/Protocol.cs": "e2df643975e1750a462c969180f5988ad51415717ed88eb27ac4efd397867831",
+          "src/World.Server/ServerConfiguration.cs": "8b33f7b3aae70229397362d0571769198303507712accd624ecedb1320eea8d1",
+          "src/World.Server/WorldDatabase.cs": "97e403cd27187bb505753300e41ca1deb2f52ea7b1afa34506fa182b011e3da6",
+          "src/World.Server/WorldInstance.cs": "f865654d13b63ac9659fa119353b5e32b303484eab49215bb7796a49a5b3fd1b",
+          "src/World.Server/WorldScenario.cs": "ea63aa8b79740cc1a603447dcbc8ae808f3632460db87bc9df6145f2003ff816",
+          "src/World.Server/WorldService.cs": "7aca4fda2b74f4b537e3c0bfe4f6462db8bd5c2c9c75609775af99a90d94d6ef"
+        },
+        "sourceUnchanged": true,
+        "failureDetails": []
+      }
+    },
+    {
+      "name": "http-material_access_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-material_access_mission.log",
+      "evidence": ".local/iter0022/python/20261026T061811Z-fbcae5/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "4fbc65f9f7dc81b43d27d8527e4b1af342b8ec08c08d805964f999e6c1b5fe32",
+      "report": {
+        "suite": "material-access-mission-http",
+        "validationLevel": "builder-self-check",
+        "actualModelCalls": 0,
+        "clock": "real service monotonic time; no time injection",
+        "dll": "/home/wangjunfeng/文档/Workspace/metaverse/src/World.Server/bin/Debug/net10.0/World.Server.dll",
+        "dllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+        "sourceSha256": {
+          "scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+          "scripts/mosaic_inbox.py": "a9c0772e5946af581c3b423c8e5986b05413348a3e528c8d5a0b18401367aa59",
+          "scripts/check.py": "73fbfe4e2341395b41a1518af57a23b18219da8479f9a69ba8089f3d8c8bc691",
+          "scripts/postcard_text.py": "db3429983b8ee2062ab70f4c7e46b763c5839934f65a2a6776638f8c0a280a4c",
+          "scripts/activity_choice.py": "84bd020783870725947663eb41500977096c86e366099b4fb8607c9d1c049b5a",
+          "scripts/passage_agent.py": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e",
+          "scripts/test_agent_accounts.py": "07c9e2e66bcfec99a9d57ed7b9ba3497769d06bee5b838ca6c24a0264647df5c",
+          "scripts/resident_material_access.py": "a144eafc8ba4e12d1cf88ef147a2179b7808a1cd0b2f5a8a0e0dc01046b717e4",
+          "scripts/agent_accounts.py": "f1844d9db668e864ab215d0d811b884b6301500bfe260bb9bf9d9cfdbc481f10",
+          "scripts/resident_transfer.py": "957067bc33585e1fb5f7f9b21b703aa1c8decf8f4148fcb2fe24e4ce50329a83",
+          "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+          "scripts/wilderness_materials.py": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6",
+          "scripts/codex_goal_selector.py": "3a455c2906aaa3764c85794cb581300979f57cb3f24b46fe437fbd287a8b6936",
+          "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+          "scripts/continuous_navigation.py": "0303f9ade6ce90e48a85fbf8e5a5aaff145ca0a305562cee4c0d0bb1cb21e578",
+          "scripts/entry_guide.py": "9b768237d39f2e4b4820e0178508c132408215aa6653c996eaf9b6e913d79dbb",
+          "scripts/mosaic_consent.py": "cb3acc34abe43c6988359bc307755ad6d2743ac5e850bccaf165f14ae561eae9",
+          "scripts/run_resident.py": "5b8f536d9e354b043fa7af35fec96dd2a781d1896092bce03277bbce90c5b521",
+          "scripts/mosaic_patch.py": "4abdb035967733e4aacbe175a37f8b32686de6182ded2fee888203726b0461a6",
+          "scripts/command_preconditions.py": "fe4bb88eb0222b68ea071e34c1316a13c69969d02e94af9a6aacb7aab969d1c8",
+          "scripts/resident_construction.py": "eef4aa235fb0fdf2428b17005381074bb1f773f3ac21d600b2c095e96c1b6411",
+          "tests/material_access_mission_api.py": "03c90a5d6bea028667dca8c617299832231187af87869ad64234807397357568",
+          "tests/fixtures/material-access-platform.json": "4be419aa7bad271c5bc2adf915124d2ab5ab6ca9abc87ba10fc1cecbb45011f3"
+        },
+        "sourceSha256Before": {
+          "scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+          "scripts/mosaic_inbox.py": "a9c0772e5946af581c3b423c8e5986b05413348a3e528c8d5a0b18401367aa59",
+          "scripts/check.py": "73fbfe4e2341395b41a1518af57a23b18219da8479f9a69ba8089f3d8c8bc691",
+          "scripts/postcard_text.py": "db3429983b8ee2062ab70f4c7e46b763c5839934f65a2a6776638f8c0a280a4c",
+          "scripts/activity_choice.py": "84bd020783870725947663eb41500977096c86e366099b4fb8607c9d1c049b5a",
+          "scripts/passage_agent.py": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e",
+          "scripts/test_agent_accounts.py": "07c9e2e66bcfec99a9d57ed7b9ba3497769d06bee5b838ca6c24a0264647df5c",
+          "scripts/resident_material_access.py": "a144eafc8ba4e12d1cf88ef147a2179b7808a1cd0b2f5a8a0e0dc01046b717e4",
+          "scripts/agent_accounts.py": "f1844d9db668e864ab215d0d811b884b6301500bfe260bb9bf9d9cfdbc481f10",
+          "scripts/resident_transfer.py": "957067bc33585e1fb5f7f9b21b703aa1c8decf8f4148fcb2fe24e4ce50329a83",
+          "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+          "scripts/wilderness_materials.py": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6",
+          "scripts/codex_goal_selector.py": "3a455c2906aaa3764c85794cb581300979f57cb3f24b46fe437fbd287a8b6936",
+          "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+          "scripts/continuous_navigation.py": "0303f9ade6ce90e48a85fbf8e5a5aaff145ca0a305562cee4c0d0bb1cb21e578",
+          "scripts/entry_guide.py": "9b768237d39f2e4b4820e0178508c132408215aa6653c996eaf9b6e913d79dbb",
+          "scripts/mosaic_consent.py": "cb3acc34abe43c6988359bc307755ad6d2743ac5e850bccaf165f14ae561eae9",
+          "scripts/run_resident.py": "5b8f536d9e354b043fa7af35fec96dd2a781d1896092bce03277bbce90c5b521",
+          "scripts/mosaic_patch.py": "4abdb035967733e4aacbe175a37f8b32686de6182ded2fee888203726b0461a6",
+          "scripts/command_preconditions.py": "fe4bb88eb0222b68ea071e34c1316a13c69969d02e94af9a6aacb7aab969d1c8",
+          "scripts/resident_construction.py": "eef4aa235fb0fdf2428b17005381074bb1f773f3ac21d600b2c095e96c1b6411",
+          "tests/material_access_mission_api.py": "03c90a5d6bea028667dca8c617299832231187af87869ad64234807397357568",
+          "tests/fixtures/material-access-platform.json": "4be419aa7bad271c5bc2adf915124d2ab5ab6ca9abc87ba10fc1cecbb45011f3"
+        },
+        "sourceStable": true,
+        "tests": 11,
+        "testResults": [
+          {
+            "test": "__main__.MaterialMissionAcceptance.test_01_same_instance_refusal_cli_platform_and_restart",
+            "passed": true,
+            "seconds": 55.99715582898352
+          },
+          {
+            "test": "__main__.MaterialMissionAcceptance.test_02_permission_query_wood_budgets_and_reserved_plot",
+            "passed": true,
+            "seconds": 0.8685862540150993
+          },
+          {
+            "test": "__main__.MaterialMissionAcceptance.test_03_reserve_event_binding_corruption_unknown_query_and_new_session",
+            "passed": true,
+            "seconds": 16.409901641018223
+          },
+          {
+            "test": "__main__.MaterialMissionAcceptance.test_04_lost_harvest_recovery_checks_original_remaining_not_source_stock",
+            "passed": true,
+            "seconds": 25.914830124995206
+          },
+          {
+            "test": "__main__.MaterialMissionAcceptance.test_05_cancelled_original_stops_without_new_reservation",
+            "passed": true,
+            "seconds": 0.7611870489781722
+          },
+          {
+            "test": "__main__.MaterialMissionAcceptance.test_06_unsent_harvest_expiry_keeps_original_id_and_never_requeues",
+            "passed": true,
+            "seconds": 70.65713593002874
+          },
+          {
+            "test": "__main__.MaterialMissionAcceptance.test_07_damaged_saved_authority_and_query_budget_make_no_requests",
+            "passed": true,
+            "seconds": 0.9806255709845573
+          },
+          {
+            "test": "__main__.MaterialMissionAcceptance.test_08_alias_cannot_adopt_group_reservation_or_unknown_actor_session",
+            "passed": true,
+            "seconds": 0.8078923900029622
+          },
+          {
+            "test": "__main__.MaterialMissionAcceptance.test_09_reserve_recovers_original_event_beyond_recent_twenty",
+            "passed": true,
+            "seconds": 0.984214611002244
+          },
+          {
+            "test": "__main__.MaterialMissionAcceptance.test_10_query_exhaustion_after_commit_retains_pending_without_budget_refill",
+            "passed": true,
+            "seconds": 0.7563288030214608
+          },
+          {
+            "test": "__main__.MaterialMissionAcceptance.test_11_corrupt_harvest_receipts_and_pending_reservation_are_not_facts",
+            "passed": true,
+            "seconds": 16.30171180999605
+          }
+        ],
+        "successful": true,
+        "failures": [],
+        "errors": []
+      }
+    },
+    {
+      "name": "http-entity_notes",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-entity_notes.log",
+      "evidence": ".local/iter0023/api/20261026T061842Z-7eb78f/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "bad51e9bdd07ae50531b815424ba5b2f7f7044f6a0fc20d7e58ae30102c32dd2",
+      "report": {
+        "suite": "entity-notes-http-v1",
+        "passed": true,
+        "testsRun": 2,
+        "tests": [
+          {
+            "test": "__main__.EntityNotesAcceptance.test_01_same_instance_two_authors_reference_return_and_old_facts",
+            "passed": true,
+            "seconds": 25.815343492024112
+          },
+          {
+            "test": "__main__.EntityNotesAcceptance.test_02_frozen_text_reference_quota_and_original_receipt",
+            "passed": true,
+            "seconds": 5.996191750979051
+          }
+        ],
+        "actualModelCalls": 0,
+        "dllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+        "failureDetails": []
+      }
+    },
+    {
+      "name": "http-entity_notes_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-entity_notes_mission.log",
+      "evidence": ".local/iter0023/python/20261026T062038Z-687e30/results.json",
+      "removedTemporaryBinaries": [
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/bin/World.Server.runtimeconfig.json",
+          "logicalBytes": 401
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/bin/SQLitePCLRaw.batteries_v2.dll",
+          "logicalBytes": 5632
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/bin/World.Server.dll",
+          "logicalBytes": 605184
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/bin/World.Server.deps.json",
+          "logicalBytes": 9316
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/bin/World.Server.pdb",
+          "logicalBytes": 68824
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/bin/Microsoft.Data.Sqlite.dll",
+          "logicalBytes": 177464
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/bin/World.Server.staticwebassets.endpoints.json",
+          "logicalBytes": 92534
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/bin/SQLitePCLRaw.provider.e_sqlite3.dll",
+          "logicalBytes": 36864
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/bin/SQLitePCLRaw.core.dll",
+          "logicalBytes": 51712
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/bin/World.Server",
+          "logicalBytes": 78256
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/bin/runtimes",
+          "logicalBytes": 1470824
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/old-bin/World.Server.runtimeconfig.json",
+          "logicalBytes": 401
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/old-bin/SQLitePCLRaw.batteries_v2.dll",
+          "logicalBytes": 5632
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/old-bin/World.Server.dll",
+          "logicalBytes": 547328
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/old-bin/World.Server.deps.json",
+          "logicalBytes": 9316
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/old-bin/Microsoft.Data.Sqlite.dll",
+          "logicalBytes": 177464
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/old-bin/SQLitePCLRaw.provider.e_sqlite3.dll",
+          "logicalBytes": 36864
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/old-bin/SQLitePCLRaw.core.dll",
+          "logicalBytes": 51712
+        },
+        {
+          "path": ".local/iter0023/python/20261026T062038Z-687e30/old-bin/runtimes",
+          "logicalBytes": 1470824
+        }
+      ],
+      "sourceSha256": "8ec30d8544d35bf8fc37332de9cb17b3473f31d8907d828b141da1b5995bd66e",
+      "report": {
+        "suite": "entity-note-mission-http",
+        "validationLevel": "builder-self-check",
+        "actualModelCalls": 0,
+        "passed": true,
+        "testsRun": 13,
+        "tests": [
+          {
+            "test": "__main__.EntityNoteMissionAcceptance.test_01_actual_cli_first_note_and_original_reference_reply",
+            "passed": true,
+            "seconds": 36.56956618401455
+          },
+          {
+            "test": "__main__.EntityNoteMissionAcceptance.test_02_before_and_after_commit_process_exit_and_session_rotation",
+            "passed": true,
+            "seconds": 22.437614561000373
+          },
+          {
+            "test": "__main__.EntityNoteMissionAcceptance.test_03_false_receipt_full_note_event_and_instance_keep_pending",
+            "passed": true,
+            "seconds": 6.365355446992908
+          },
+          {
+            "test": "__main__.EntityNoteMissionAcceptance.test_04_query_exhaustion_after_commit_and_cumulative_command_seconds",
+            "passed": true,
+            "seconds": 7.842659627960529
+          },
+          {
+            "test": "__main__.EntityNoteMissionAcceptance.test_05_damaged_saved_binding_body_permission_and_facts_are_zero_io",
+            "passed": true,
+            "seconds": 5.93512317200657
+          },
+          {
+            "test": "__main__.EntityNoteMissionAcceptance.test_06_later_self_action_stops_original_note_without_rewriting",
+            "passed": true,
+            "seconds": 6.216191079991404
+          },
+          {
+            "test": "__main__.EntityNoteMissionAcceptance.test_07_old_service_with_and_without_original_receipt_never_blindly_posts",
+            "passed": true,
+            "seconds": 12.895204850996379
+          },
+          {
+            "test": "__main__.EntityNoteMissionAcceptance.test_08_unknown_queries_and_parse_rejections_do_not_settle_original",
+            "passed": true,
+            "seconds": 6.286754658969585
+          },
+          {
+            "test": "__main__.EntityNoteMissionAcceptance.test_09_permissions_reference_and_unused_flags",
+            "passed": true,
+            "seconds": 0.7562589590088464
+          },
+          {
+            "test": "__main__.EntityNoteMissionAcceptance.test_10_existing_material_task_recovery_regression",
+            "passed": true,
+            "seconds": 17.706826247042045
+          },
+          {
+            "test": "__main__.EntityNoteMissionAcceptance.test_11_first_failed_observation_is_durable_and_cannot_refill",
+            "passed": true,
+            "seconds": 1.992108509002719
+          },
+          {
+            "test": "__main__.EntityNoteMissionAcceptance.test_12_four_queries_project_confirmed_note_atomically",
+            "passed": true,
+            "seconds": 5.826695042022038
+          },
+          {
+            "test": "__main__.EntityNoteMissionAcceptance.test_13_original_reference_body_cannot_change_between_observations",
+            "passed": true,
+            "seconds": 10.383578507055063
+          }
+        ],
+        "skipped": [],
+        "sourceHashesBefore": {
+          "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+          "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+          "scripts/command_preconditions.py": "fe4bb88eb0222b68ea071e34c1316a13c69969d02e94af9a6aacb7aab969d1c8",
+          "scripts/run_resident.py": "5b8f536d9e354b043fa7af35fec96dd2a781d1896092bce03277bbce90c5b521",
+          "tests/entity_notes_mission_api.py": "b7bfe1ce4fd5df3e77aca9d8c83e82647f8de94d06b596533d5e1014e5c6b4ad",
+          "tests/fixtures/entity-note.json": "89631943906fc1b7ef445399410a94ae6e94a9e13ee89402d6989a2a92f7cf84"
+        },
+        "sourceHashesAfter": {
+          "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+          "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+          "scripts/command_preconditions.py": "fe4bb88eb0222b68ea071e34c1316a13c69969d02e94af9a6aacb7aab969d1c8",
+          "scripts/run_resident.py": "5b8f536d9e354b043fa7af35fec96dd2a781d1896092bce03277bbce90c5b521",
+          "tests/entity_notes_mission_api.py": "b7bfe1ce4fd5df3e77aca9d8c83e82647f8de94d06b596533d5e1014e5c6b4ad",
+          "tests/fixtures/entity-note.json": "89631943906fc1b7ef445399410a94ae6e94a9e13ee89402d6989a2a92f7cf84"
+        },
+        "sourceStable": true,
+        "allStartedServicesStopped": true,
+        "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0023/api/20261026T062038Z-0a0309/test_05_budget_capacity_and_exhausted_budget_does_not_reset-world",
+        "baselineSha256": "81a9ad66206cdf53d2ded19e24c377dbaf1837ab3c684a2de533eca5a6dbc4b8",
+        "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0023/python/20261026T062038Z-687e30/bin/World.Server.dll",
+        "dllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+        "oldDllSha256": "4a66fd0a2382bb71597d3ae25f2b169bc70af8a469b33d6cb149b748a6b96b37",
+        "failureDetails": []
+      }
+    },
+    {
+      "name": "http-continuous_material",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-continuous_material.log",
+      "evidence": ".local/iter0024/api/20261026T062122Z-7834ab/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "ca19acca237dea7ff36060660c523789e3e8d44595a734bc72761b6674898a69",
+      "report": {
+        "suite": "continuous-material-http-v1",
+        "passed": true,
+        "testsRun": 13,
+        "tests": [
+          {
+            "test": "__main__.ContinuousMaterialAcceptance.test_01_explicit_offline_adoption_preserves_phase_rows_and_is_idempotent",
+            "passed": true,
+            "seconds": 0.9168664350290783
+          },
+          {
+            "test": "__main__.ContinuousMaterialAcceptance.test_02_original_world_late_platform_and_production_beyond_another_twelve",
+            "passed": true,
+            "seconds": 51.00196699495427
+          },
+          {
+            "test": "__main__.ContinuousMaterialAcceptance.test_03_adoption_crash_rolls_back_or_commits_once",
+            "passed": true,
+            "seconds": 1.2985000080079772
+          },
+          {
+            "test": "__main__.ContinuousMaterialAcceptance.test_04_old_binary_cold_start_refuses_and_new_restarts",
+            "passed": true,
+            "seconds": 2.1657872140058316
+          },
+          {
+            "test": "__main__.ContinuousMaterialAcceptance.test_05_original_committed_and_404_intents_survive_adoption",
+            "passed": true,
+            "seconds": 0.8098395420238376
+          },
+          {
+            "test": "__main__.ContinuousMaterialAcceptance.test_06_full_capacity_skips_without_debt_and_offline_time_does_not_produce",
+            "passed": true,
+            "seconds": 32.35434509400511
+          },
+          {
+            "test": "__main__.ContinuousMaterialAcceptance.test_07_production_crash_preserves_exact_period_and_ledger",
+            "passed": true,
+            "seconds": 2.268509896006435
+          },
+          {
+            "test": "__main__.ContinuousMaterialAcceptance.test_08_policy_damage_refuses_instead_of_falling_back_to_old_budget",
+            "passed": true,
+            "seconds": 1.946859608986415
+          },
+          {
+            "test": "__main__.ContinuousMaterialAcceptance.test_09_incomplete_old_production_event_cannot_be_adopted",
+            "passed": true,
+            "seconds": 0.9156358260079287
+          },
+          {
+            "test": "__main__.ContinuousMaterialAcceptance.test_10_missing_policy_constraint_or_trigger_refuses_startup",
+            "passed": true,
+            "seconds": 2.821601314994041
+          },
+          {
+            "test": "__main__.ContinuousMaterialAcceptance.test_11_partial_active_and_fifo_queue_keep_original_lease_across_adoption",
+            "passed": true,
+            "seconds": 31.400114882038906
+          },
+          {
+            "test": "__main__.ContinuousMaterialAcceptance.test_12_null_phase_and_fractional_source_cannot_be_adopted",
+            "passed": true,
+            "seconds": 1.2465197900310159
+          },
+          {
+            "test": "__main__.ContinuousMaterialAcceptance.test_13_fractional_policy_anchors_refuse_without_truncation",
+            "passed": true,
+            "seconds": 7.200517245975789
+          }
+        ],
+        "actualModelCalls": 0,
+        "dllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+        "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/api/20261026T062122Z-7834ab/seed/test_01_same_instance_two_authors_reference_return_and_old_facts",
+        "clock": "real Stopwatch in natural operation; isolated damage cases deliberately alter invalid rows/schema, never to fund success",
+        "failureDetails": []
+      }
+    },
+    {
+      "name": "http-continuous_material_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/http-continuous_material_mission.log",
+      "evidence": ".local/iter0024/python/20261026T062138Z-6a9474/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "984c00dc9c1947e6f3933fe100e2ab259b9497bc5181d0fa043678b561c64c05",
+      "report": {
+        "suite": "continuous-material-mission-http",
+        "validationLevel": "builder-self-check",
+        "actualModelCalls": 0,
+        "passed": true,
+        "testsRun": 10,
+        "tests": [
+          {
+            "test": "__main__.ContinuousMaterialMissionAcceptance.test_01_actual_cli_fifth_platform_and_later_production",
+            "passed": true,
+            "seconds": 11.317682820023037
+          },
+          {
+            "test": "__main__.ContinuousMaterialMissionAcceptance.test_02_first_failed_query_budgets_and_shared_note_startup",
+            "passed": true,
+            "seconds": 1.8821525090024807
+          },
+          {
+            "test": "__main__.ContinuousMaterialMissionAcceptance.test_03_unknown_and_damaged_policy_is_not_material_authority",
+            "passed": true,
+            "seconds": 0.9932634449796751
+          },
+          {
+            "test": "__main__.ContinuousMaterialMissionAcceptance.test_04_confirmed_reservation_and_query_limit_coexist",
+            "passed": true,
+            "seconds": 2.6247999769984744
+          },
+          {
+            "test": "__main__.ContinuousMaterialMissionAcceptance.test_05_permissions_and_damaged_saved_state_are_zero_io",
+            "passed": true,
+            "seconds": 1.0896136760129593
+          },
+          {
+            "test": "__main__.ContinuousMaterialMissionAcceptance.test_06_old_exhausted_terminal_never_reopens_after_adoption",
+            "passed": true,
+            "seconds": 0.9964776489650831
+          },
+          {
+            "test": "__main__.ContinuousMaterialMissionAcceptance.test_07_prior_reserve_pending_retains_original_id_across_adoption",
+            "passed": true,
+            "seconds": 2.972608468029648
+          },
+          {
+            "test": "__main__.ContinuousMaterialMissionAcceptance.test_08_prior_harvest_and_build_receipts_survive_adoption",
+            "passed": true,
+            "seconds": 34.92165900504915
+          },
+          {
+            "test": "__main__.ContinuousMaterialMissionAcceptance.test_09_prior_note_pending_keeps_text_reference_and_three_proofs",
+            "passed": true,
+            "seconds": 13.039539472025353
+          },
+          {
+            "test": "__main__.ContinuousMaterialMissionAcceptance.test_10_actual_process_exit_and_session_rotation_keep_reserve",
+            "passed": true,
+            "seconds": 3.2044467970263213
+          }
+        ],
+        "skipped": [],
+        "sourceHashesBefore": {
+          "scripts/resident_material_access.py": "a144eafc8ba4e12d1cf88ef147a2179b7808a1cd0b2f5a8a0e0dc01046b717e4",
+          "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+          "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+          "tests/continuous_material_mission_api.py": "49ca21ba8ff15f40ae8d0d408c4a8ece03014e404c901c6e6da987e5f4a00b62",
+          "tests/fixtures/continuous-material-platform.json": "281e29127f49e432d94b48272a811a1a409b1f5c04e7a9cc47e7a3a1f8e3c86e"
+        },
+        "sourceHashesAfter": {
+          "scripts/resident_material_access.py": "a144eafc8ba4e12d1cf88ef147a2179b7808a1cd0b2f5a8a0e0dc01046b717e4",
+          "scripts/resident_mission.py": "e70e8b7b54ee1eaea4c0ac2c50bad4a3c132e63f838746511eb9af488227073b",
+          "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+          "tests/continuous_material_mission_api.py": "49ca21ba8ff15f40ae8d0d408c4a8ece03014e404c901c6e6da987e5f4a00b62",
+          "tests/fixtures/continuous-material-platform.json": "281e29127f49e432d94b48272a811a1a409b1f5c04e7a9cc47e7a3a1f8e3c86e"
+        },
+        "sourceStable": true,
+        "allStartedServicesStopped": true,
+        "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/20261026T062138Z-6a9474/seed/test_01_same_instance_two_authors_reference_return_and_old_facts",
+        "baselineSha256": "7bef87518bf0e80957c284b0c9fb0848e3554244cc524cd5e8eb615a5026a8bc",
+        "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/core-v2/bin/World.Server.dll",
+        "dllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+        "priorPython": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/python/prior-c6a2406",
+        "actualPreviousPython": true,
+        "priorPythonHashes": {
+          "resident_material_access.py": "0e9aa7bc9bfd89bc65270a0cc49fd8a2c128cdaff2fc95b6dcde3d56ad081d68",
+          "resident_mission.py": "0b4e4fc3aa81649fe4bfa48f144446b2f8673e5da9e258fd5f4f4440b82789c8",
+          "resident_entity_notes.py": "b15f9efaf3ad1dc6980e5d084689005efad36d2b37017f7b53dff048ccad36dc"
+        },
+        "failureDetails": [],
+        "runtimeMode": "shared-immutable-input",
+        "temporaryRuntimeCreated": false,
+        "dllStable": true,
+        "sourceDll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/core-v2/bin/World.Server.dll"
+      }
+    },
+    {
+      "name": "browser-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-foundation.log",
+      "evidence": ".local/iter0001/browser/2026-10-26T06-24-23-790Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "a4f9518a0798f0285bbe583f76352239a332ff94cb1608fd4a6d927e8c92f28c",
+      "report": {
+        "suite": "foundation-real-chrome-v1",
+        "recordedAtUtc": "2026-10-26T06:24:32.957Z",
+        "passed": true,
+        "tests": [
+          {
+            "name": "connect_claim_build_and_reject",
+            "passed": true,
+            "milliseconds": 701
+          },
+          {
+            "name": "human_navigation_and_wall_rejection",
+            "passed": true,
+            "milliseconds": 587
+          },
+          {
+            "name": "fixed_resident_and_shared_observation",
+            "passed": true,
+            "milliseconds": 1595
+          },
+          {
+            "name": "keyboard_after_button_focus_and_input_isolation",
+            "passed": true,
+            "milliseconds": 438
+          },
+          {
+            "name": "offline_then_fresh_snapshot",
+            "passed": true,
+            "milliseconds": 20
+          },
+          {
+            "name": "committed_response_lost_then_query",
+            "passed": true,
+            "milliseconds": 415
+          },
+          {
+            "name": "not_sent_404_then_same_command_retry",
+            "passed": true,
+            "milliseconds": 382
+          },
+          {
+            "name": "service_restart_preserves_visible_world",
+            "passed": true,
+            "milliseconds": 2951
+          },
+          {
+            "name": "mobile_layout_and_accessible_controls",
+            "passed": true,
+            "milliseconds": 369
+          },
+          {
+            "name": "revocation_clears_browser_access",
+            "passed": true,
+            "milliseconds": 1136
+          }
+        ],
+        "javascriptErrors": [],
+        "dataRoot": ".local/iter0001/browser/2026-10-26T06-24-23-790Z"
+      }
+    },
+    {
+      "name": "browser-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-passage.log",
+      "evidence": ".local/iter0002/browser/2026-10-26T06-24-33-200Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "fbdcdcb7590c26feb20c7be4589f3867524c7c95d48f588202e31a9441899421",
+      "report": {
+        "suite": "passage-real-chrome-v1",
+        "recordedAtUtc": "2026-10-26T06:24:41.263Z",
+        "passed": true,
+        "tests": [
+          {
+            "name": "passage_connect_recipes_and_land_rejection",
+            "passed": true,
+            "milliseconds": 493
+          },
+          {
+            "name": "river_blocks_movement_and_platform_cannot_pave_water",
+            "passed": true,
+            "milliseconds": 396
+          },
+          {
+            "name": "first_bridge_is_walkable_but_second_water_cell_blocks",
+            "passed": true,
+            "milliseconds": 230
+          },
+          {
+            "name": "second_bridge_lost_response_reload_queries_original_receipt",
+            "passed": true,
+            "milliseconds": 385
+          },
+          {
+            "name": "human_crosses_and_returns_other_resident_uses_free_bridge",
+            "passed": true,
+            "milliseconds": 2291
+          },
+          {
+            "name": "restart_retains_bridge_ids_and_live_ui",
+            "passed": true,
+            "milliseconds": 3048
+          },
+          {
+            "name": "recipe_keyboard_does_not_move_actor",
+            "passed": true,
+            "milliseconds": 359
+          },
+          {
+            "name": "mobile_water_bridge_selection_and_layout",
+            "passed": true,
+            "milliseconds": 326
+          }
+        ],
+        "javascriptErrors": [],
+        "dataRoot": ".local/iter0002/browser/2026-10-26T06-24-33-200Z"
+      }
+    },
+    {
+      "name": "browser-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-resident.log",
+      "evidence": ".local/iter0003/browser/2026-10-26T06-24-41-505Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "4245ad8f69546fcb558cda3b9a338d9cbbf4891cb295084ce54ad16af3137fc7",
+      "report": {
+        "suite": "resident-real-report-chrome-v1",
+        "recordedAtUtc": "2026-10-26T06:24:42.964Z",
+        "browser": "152.0.7977.82",
+        "passed": true,
+        "tests": [
+          {
+            "name": "actual_gpt6_builder_report_facts_usage_actions",
+            "passed": true,
+            "milliseconds": 268
+          },
+          {
+            "name": "keyboard_and_step_position_replay_of_actual_report",
+            "passed": true,
+            "milliseconds": 55
+          },
+          {
+            "name": "actual_traveler_uses_existing_bridges_without_materials",
+            "passed": true,
+            "milliseconds": 59
+          },
+          {
+            "name": "actual_http_paused_and_decision_failed_records",
+            "passed": true,
+            "milliseconds": 16
+          },
+          {
+            "name": "adversarial_text_and_false_completion_not_rendered_as_success",
+            "passed": true,
+            "milliseconds": 11
+          },
+          {
+            "name": "invalid_json_schema_steps_and_size_preserve_valid_report",
+            "passed": true,
+            "milliseconds": 177
+          },
+          {
+            "name": "default_missing_report_still_allows_actual_file_import",
+            "passed": true,
+            "milliseconds": 157
+          },
+          {
+            "name": "mobile_390px_actual_report_no_overflow_or_world_calls",
+            "passed": true,
+            "milliseconds": 218
+          }
+        ],
+        "javascriptErrors": [],
+        "worldRequests": [],
+        "actualModelCallsDuringUiTest": 0,
+        "dataRoot": ".local/iter0003/browser/2026-10-26T06-24-41-505Z"
+      }
+    },
+    {
+      "name": "browser-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-activities.log",
+      "evidence": ".local/iter0004/browser/2026-10-26T06-24-43-016Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "1125b20814397d280b3692633aee9b8707591894a6d8dc5e6a2eea75e110d0a0",
+      "report": {
+        "suite": "activities-real-chrome-v1",
+        "recordedAtUtc": "2026-10-26T06:24:48.539Z",
+        "browser": "152.0.7977.82",
+        "passed": true,
+        "tests": [
+          {
+            "name": "three_live_activities_and_select_keyboard_isolation",
+            "passed": true,
+            "milliseconds": 310
+          },
+          {
+            "name": "human_walk_and_visit_commit_real_fact_without_resources",
+            "passed": true,
+            "milliseconds": 344
+          },
+          {
+            "name": "actual_stale_visit_rejection_is_shown_and_never_written",
+            "passed": true,
+            "milliseconds": 123
+          },
+          {
+            "name": "lost_visit_response_reload_recovers_original_id_once",
+            "passed": true,
+            "milliseconds": 275
+          },
+          {
+            "name": "server_restart_retains_live_visit_history",
+            "passed": true,
+            "milliseconds": 2915
+          },
+          {
+            "name": "mobile_world_catalog_and_controls_390px",
+            "passed": true,
+            "milliseconds": 284
+          },
+          {
+            "name": "actual_gpt6_activity_report_requires_verified_visit",
+            "passed": true,
+            "milliseconds": 149
+          },
+          {
+            "name": "paired_evidence_shows_purpose_mismatch_and_real_call_counts",
+            "passed": true,
+            "milliseconds": 247
+          },
+          {
+            "name": "arrival_only_forged_completion_and_legacy_report_separated",
+            "passed": true,
+            "milliseconds": 79
+          },
+          {
+            "name": "mobile_comparison_no_overflow_or_live_world_requests",
+            "passed": true,
+            "milliseconds": 281
+          }
+        ],
+        "javascriptErrors": [],
+        "reportWorldRequests": [],
+        "actualModelCallsDuringUiTest": 0,
+        "dataRoot": ".local/iter0004/browser/2026-10-26T06-24-43-016Z"
+      }
+    },
+    {
+      "name": "browser-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-postcards.log",
+      "evidence": ".local/iter0005/browser/2026-10-26T06-24-43-207Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "2ccdb8faed2cb2ae9672318d967073d3f463e8c31ef9610ddc40d25324492bd3",
+      "report": {
+        "suite": "postcards-real-chrome-v1",
+        "recordedAtUtc": "2026-10-26T06:24:52.300Z",
+        "browser": "152.0.7977.82",
+        "passed": true,
+        "tests": [
+          {
+            "name": "public_notice_draft_persists_polling_and_keyboard_does_not_move",
+            "passed": true,
+            "milliseconds": 2013
+          },
+          {
+            "name": "human_visit_and_share_create_public_fact_and_clear_only_after_success",
+            "passed": true,
+            "milliseconds": 370
+          },
+          {
+            "name": "another_resident_reads_shared_text_and_place_filter_is_real",
+            "passed": true,
+            "milliseconds": 1560
+          },
+          {
+            "name": "unicode_limit_counts_scalars_and_preserves_draft_by_place",
+            "passed": true,
+            "milliseconds": 95
+          },
+          {
+            "name": "actual_stale_share_rejection_preserves_draft",
+            "passed": true,
+            "milliseconds": 125
+          },
+          {
+            "name": "lost_share_response_reload_recovers_same_id_once",
+            "passed": true,
+            "milliseconds": 360
+          },
+          {
+            "name": "server_restart_preserves_public_and_author_records",
+            "passed": true,
+            "milliseconds": 2843
+          },
+          {
+            "name": "unsent_drafts_are_isolated_between_actor_logins",
+            "passed": true,
+            "milliseconds": 176
+          },
+          {
+            "name": "mobile_world_read_and_write_layout_390px",
+            "passed": true,
+            "milliseconds": 319
+          },
+          {
+            "name": "actual_two_gpt6_reports_separate_draft_and_confirmed_share",
+            "passed": true,
+            "milliseconds": 319
+          },
+          {
+            "name": "visit_only_and_forged_share_never_show_completed_and_legacy_still_loads",
+            "passed": true,
+            "milliseconds": 86
+          },
+          {
+            "name": "mobile_report_no_overflow_javascript_errors_or_world_requests",
+            "passed": true,
+            "milliseconds": 240
+          }
+        ],
+        "javascriptErrors": [],
+        "reportWorldRequests": [],
+        "actualModelCallsDuringUiTest": 0,
+        "dataRoot": ".local/iter0005/browser/2026-10-26T06-24-43-207Z"
+      }
+    },
+    {
+      "name": "browser-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-mosaic.log",
+      "evidence": ".local/iter0006/browser/2026-10-26T06-24-48-768Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "2c71f1d1b8599fd823ec38de26dfa561bd7d6327fb92ccfd5d8c66748ea40832",
+      "report": {
+        "suite": "mosaic-real-chrome-v1",
+        "recordedAtUtc": "2026-10-26T06:25:00.047Z",
+        "browser": "152.0.7977.82",
+        "passed": true,
+        "tests": [
+          {
+            "name": "draft_is_separate_keyboard_does_not_move_and_poll_keeps_colors",
+            "passed": true,
+            "milliseconds": 2132
+          },
+          {
+            "name": "human_visit_publishes_batch_with_author_and_clears_draft",
+            "passed": true,
+            "milliseconds": 639
+          },
+          {
+            "name": "second_human_reads_and_continues_actual_shared_picture",
+            "passed": true,
+            "milliseconds": 1482
+          },
+          {
+            "name": "eight_cell_limit_draft_reload_and_actor_isolation",
+            "passed": true,
+            "milliseconds": 636
+          },
+          {
+            "name": "concurrent_board_revision_keeps_old_draft_and_never_overwrites",
+            "passed": true,
+            "milliseconds": 1562
+          },
+          {
+            "name": "real_world_stale_rejection_preserves_unpublished_patch",
+            "passed": true,
+            "milliseconds": 239
+          },
+          {
+            "name": "lost_commit_response_reload_recovers_original_patch_once",
+            "passed": true,
+            "milliseconds": 307
+          },
+          {
+            "name": "server_restart_preserves_picture_and_edit_sources",
+            "passed": true,
+            "milliseconds": 2842
+          },
+          {
+            "name": "mobile_world_picture_editor_layout_390px",
+            "passed": true,
+            "milliseconds": 379
+          },
+          {
+            "name": "actual_model_reports_show_proposal_confirmed_edit_and_shared_picture",
+            "passed": true,
+            "milliseconds": 313
+          },
+          {
+            "name": "forged_patch_and_visit_only_cannot_claim_completed_and_old_reports_work",
+            "passed": true,
+            "milliseconds": 32
+          },
+          {
+            "name": "mobile_actual_report_layout_390px",
+            "passed": true,
+            "milliseconds": 195
+          }
+        ],
+        "javascriptErrors": [],
+        "reportWorldRequests": [],
+        "actualModelCallsDuringUiTest": 0,
+        "dataRoot": ".local/iter0006/browser/2026-10-26T06-24-48-768Z"
+      }
+    },
+    {
+      "name": "browser-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-consent.log",
+      "evidence": ".local/iter0007/browser/2026-10-26T06-24-52-539Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "a82eff046c5b5ebade4ae5dd8927599137d4a686158f4cde555fa761d287c6a0",
+      "report": {
+        "suite": "mosaic-consent-real-chrome-v1",
+        "recordedAtUtc": "2026-10-26T06:25:09.105Z",
+        "browser": "152.0.7977.82",
+        "passed": true,
+        "tests": [
+          {
+            "name": "original_author_creates_picture_through_shared_interface",
+            "passed": true,
+            "milliseconds": 1476
+          },
+          {
+            "name": "peer_proposal_draft_survives_poll_reload_and_cannot_paint_directly",
+            "passed": true,
+            "milliseconds": 2844
+          },
+          {
+            "name": "target_accepts_after_own_visit_and_both_contributions_are_attributed",
+            "passed": true,
+            "milliseconds": 400
+          },
+          {
+            "name": "reject_keeps_picture_and_renders_proposal_text_literally",
+            "passed": true,
+            "milliseconds": 1695
+          },
+          {
+            "name": "mixed_draft_is_split_and_stale_proposal_cannot_overwrite_new_picture",
+            "passed": true,
+            "milliseconds": 3453
+          },
+          {
+            "name": "lost_accept_response_reload_recovers_original_review_once",
+            "passed": true,
+            "milliseconds": 4880
+          },
+          {
+            "name": "restart_preserves_proposals_reviews_and_picture",
+            "passed": true,
+            "milliseconds": 315
+          },
+          {
+            "name": "mobile_world_negotiation_layout_390px",
+            "passed": true,
+            "milliseconds": 381
+          },
+          {
+            "name": "actual_reports_separate_proposed_reviewed_and_painted_facts",
+            "passed": true,
+            "milliseconds": 345
+          },
+          {
+            "name": "forged_review_rejected_report_and_legacy_report_remain_distinct",
+            "passed": true,
+            "milliseconds": 38
+          },
+          {
+            "name": "mobile_actual_review_report_layout_390px",
+            "passed": true,
+            "milliseconds": 234
+          }
+        ],
+        "javascriptErrors": [],
+        "reportWorldRequests": [],
+        "actualModelCallsDuringUiTest": 0,
+        "dataRoot": ".local/iter0007/browser/2026-10-26T06-24-52-539Z"
+      }
+    },
+    {
+      "name": "browser-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-inbox.log",
+      "evidence": ".local/iter0008/browser/2026-10-26T06-25-00-294Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "d63040f4fa48e50b9fb8c297153738231b9d07c749b018c5e88d6ad9aab5b392",
+      "report": {
+        "suite": "mosaic-inbox-real-chrome-v1",
+        "recordedAtUtc": "2026-10-26T06:25:12.653Z",
+        "browser": "152.0.7977.82",
+        "passed": true,
+        "tests": [
+          {
+            "name": "default_inbox_finds_oldest_pending_beyond_recent_50_without_world_commands",
+            "passed": true,
+            "milliseconds": 232
+          },
+          {
+            "name": "scope_status_cursor_pages_remain_stable_when_new_record_arrives",
+            "passed": true,
+            "milliseconds": 1778
+          },
+          {
+            "name": "reason_dom_focus_and_selection_survive_poll_and_new_proposal",
+            "passed": true,
+            "milliseconds": 1274
+          },
+          {
+            "name": "onsite_visit_shortcut_and_failed_reads_preserve_list_and_disable_review",
+            "passed": true,
+            "milliseconds": 772
+          },
+          {
+            "name": "late_filter_response_cannot_replace_current_pending_page",
+            "passed": true,
+            "milliseconds": 517
+          },
+          {
+            "name": "identity_switch_ignores_late_response_and_isolates_draft_and_filters",
+            "passed": true,
+            "milliseconds": 669
+          },
+          {
+            "name": "original_older_proposal_accepts_once_and_history_exposes_confirmed_result",
+            "passed": true,
+            "milliseconds": 481
+          },
+          {
+            "name": "legacy_r6_service_uses_recent50_and_explicitly_marks_incomplete_scope",
+            "passed": true,
+            "milliseconds": 2023
+          },
+          {
+            "name": "lost_reject_response_and_reload_recover_original_command_without_resubmit",
+            "passed": true,
+            "milliseconds": 218
+          },
+          {
+            "name": "restart_preserves_inbox_counts_and_original_details",
+            "passed": true,
+            "milliseconds": 500
+          },
+          {
+            "name": "mobile_inbox_and_history_controls_fit_390px",
+            "passed": true,
+            "milliseconds": 339
+          },
+          {
+            "name": "actual_report_verifies_original_older_proposal_without_recent_list_membership",
+            "passed": true,
+            "milliseconds": 348
+          },
+          {
+            "name": "mobile_actual_inbox_review_report_fits_390px",
+            "passed": true,
+            "milliseconds": 210
+          }
+        ],
+        "javascriptErrors": [],
+        "reportWorldRequests": [],
+        "actualModelCallsDuringUiTest": 0,
+        "fixtureSource": "explicit-program-normal-HTTP",
+        "dataRoot": ".local/iter0008/browser/2026-10-26T06-25-00-294Z"
+      }
+    },
+    {
+      "name": "browser-consent-experience",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-consent-experience.log",
+      "evidence": ".local/consent-experience/browser/2026-10-26T06-25-09-342Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "2544b7a698f4e7e9ea4244837cbaa631d089449dcb1f0de52a01c47efcdd29ae",
+      "report": {
+        "suite": "consent-experience-real-chrome",
+        "passed": true,
+        "recordedAtUtc": "2026-10-26T06:25:18.698Z",
+        "browser": "152.0.7977.82",
+        "tests": [
+          {
+            "name": "fresh_proposal_compares_live_picture_and_exact_change_without_mutation",
+            "passed": true,
+            "milliseconds": 180
+          },
+          {
+            "name": "reason_errors_explain_disabled_submission_and_preserve_unicode_count",
+            "passed": true,
+            "milliseconds": 120
+          },
+          {
+            "name": "comparison_refresh_preserves_review_focus_selection_and_draft",
+            "passed": true,
+            "milliseconds": 1307
+          },
+          {
+            "name": "accepted_picture_is_confirmed_history_without_unpublished_markers",
+            "passed": true,
+            "milliseconds": 1933
+          },
+          {
+            "name": "expired_state_is_visible_offsite_to_both_authors_and_never_auto_rejects",
+            "passed": true,
+            "milliseconds": 1605
+          },
+          {
+            "name": "rejected_proposal_labels_unapplied_colors_and_preserves_picture",
+            "passed": true,
+            "milliseconds": 1514
+          },
+          {
+            "name": "later_changes_do_not_rewrite_confirmed_edit_or_confuse_current_picture",
+            "passed": true,
+            "milliseconds": 1562
+          },
+          {
+            "name": "mobile_comparison_has_readable_labels_and_no_horizontal_overflow",
+            "passed": true,
+            "milliseconds": 82
+          }
+        ],
+        "javascriptErrors": [],
+        "actualModelCalls": 0,
+        "serviceStopped": true,
+        "dataRoot": ".local/consent-experience/browser/2026-10-26T06-25-09-342Z"
+      }
+    },
+    {
+      "name": "browser-entry",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-entry.log",
+      "evidence": ".local/iter0009/browser/2026-10-26T06-25-12-890Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "e4e408574c65a8ca504f7ba12e2ed6f3e6c8217929f88ef64331dd4e56957495",
+      "report": {
+        "suite": "entry-guide-real-chrome-v1",
+        "recordedAtUtc": "2026-10-26T06:25:27.778Z",
+        "browser": "152.0.7977.82",
+        "passed": true,
+        "tests": [
+          {
+            "name": "arrival_shows_actual_routes_and_selection_does_not_act",
+            "passed": true,
+            "milliseconds": 657
+          },
+          {
+            "name": "one_built_bridge_stays_blocked_then_complete_route_becomes_available",
+            "passed": true,
+            "milliseconds": 2605
+          },
+          {
+            "name": "newcomer_first_connection_uses_existing_bridges_and_returns_without_work",
+            "passed": true,
+            "milliseconds": 2062
+          },
+          {
+            "name": "exhausted_public_stock_is_honest_about_building_and_free_creative_options",
+            "passed": true,
+            "milliseconds": 1781
+          },
+          {
+            "name": "failed_observation_marks_old_guide_and_disables_selection_until_recovery",
+            "passed": true,
+            "milliseconds": 2782
+          },
+          {
+            "name": "identity_switch_refreshes_own_materials_and_disconnect_clears_guide",
+            "passed": true,
+            "milliseconds": 260
+          },
+          {
+            "name": "malformed_route_is_not_shown_as_confirmed_access",
+            "passed": true,
+            "milliseconds": 3287
+          },
+          {
+            "name": "legacy_service_without_guide_preserves_existing_interface",
+            "passed": true,
+            "milliseconds": 219
+          },
+          {
+            "name": "restart_keeps_same_guide_and_world_state",
+            "passed": true,
+            "milliseconds": 289
+          },
+          {
+            "name": "mobile_arrival_390px_routes_and_access_controls_are_readable",
+            "passed": true,
+            "milliseconds": 480
+          }
+        ],
+        "javascriptErrors": [],
+        "actualModelCalls": 0,
+        "decisionSource": "explicit-program-and-human-UI",
+        "dataRoot": ".local/iter0009/browser/2026-10-26T06-25-12-890Z"
+      }
+    },
+    {
+      "name": "browser-wilderness",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-wilderness.log",
+      "evidence": ".local/iter0010/browser/2026-10-26T06-25-18-929Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "0e08360ff5fb934a4feabbed9bdc4a96c8c53ec1b0c778a00365a55b2b2522fd",
+      "report": {
+        "suite": "wilderness-real-chrome-v1",
+        "recordedAtUtc": "2026-10-26T06:25:24.708Z",
+        "browser": "152.0.7977.82",
+        "passed": true,
+        "tests": [
+          {
+            "name": "empty_hands_scattered_residents_trees_and_no_depot_or_ready_made_creative_services",
+            "passed": true,
+            "milliseconds": 436
+          },
+          {
+            "name": "selecting_tree_does_not_harvest_and_distance_gates_cutting",
+            "passed": true,
+            "milliseconds": 20
+          },
+          {
+            "name": "real_cut_reduces_tree_and_credits_only_current_resident",
+            "passed": true,
+            "milliseconds": 80
+          },
+          {
+            "name": "version_conflict_does_not_double_credit_and_new_cut_uses_new_command",
+            "passed": true,
+            "milliseconds": 208
+          },
+          {
+            "name": "collected_wood_builds_real_platform_on_cleared_tree_ground",
+            "passed": true,
+            "milliseconds": 265
+          },
+          {
+            "name": "other_scattered_identity_starts_empty_and_sees_previous_work",
+            "passed": true,
+            "milliseconds": 160
+          },
+          {
+            "name": "lost_committed_cut_response_reload_recovers_original_id_once",
+            "passed": true,
+            "milliseconds": 171
+          },
+          {
+            "name": "mismatched_cut_receipt_stays_unresolved_until_original_receipt_is_queried",
+            "passed": true,
+            "milliseconds": 198
+          },
+          {
+            "name": "observation_failure_keeps_known_materials_and_pauses_cutting",
+            "passed": true,
+            "milliseconds": 2985
+          },
+          {
+            "name": "restart_preserves_tree_stumps_materials_and_resident_positions",
+            "passed": true,
+            "milliseconds": 318
+          },
+          {
+            "name": "mobile_390px_tree_selection_cut_and_material_labels_are_usable",
+            "passed": true,
+            "milliseconds": 469
+          }
+        ],
+        "javascriptErrors": [],
+        "actualModelCalls": 0,
+        "decisionSource": "explicit-program-and-human-UI",
+        "dataRoot": ".local/iter0010/browser/2026-10-26T06-25-18-929Z"
+      }
+    },
+    {
+      "name": "browser-wilderness-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-wilderness-resident.log",
+      "evidence": ".local/iter0013/browser/2026-10-26T06-25-24-957Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "3f64c70f03abfc81960c3e49c9ce1403af7e61bcf7907eb1add17f79ff943642",
+      "report": {
+        "suite": "wilderness-resident-chrome",
+        "passed": true,
+        "recordedAtUtc": "2026-10-26T06:25:26.621Z",
+        "actualModelCalls": 0,
+        "browser": "152.0.7977.82",
+        "javascriptErrors": [],
+        "worldRequests": [],
+        "port": 33749,
+        "serviceStopped": true,
+        "tests": [
+          {
+            "name": "actual_fixed_reference_gather_and_bridge_facts",
+            "passed": true
+          },
+          {
+            "name": "gather_replay_retains_resident_position",
+            "passed": true
+          },
+          {
+            "name": "unknown_cut_is_not_counted_as_collected",
+            "passed": true
+          },
+          {
+            "name": "mismatched_gather_total_cannot_present_verified_completion",
+            "passed": true
+          },
+          {
+            "name": "invalid_source_rejected_during_import",
+            "passed": true
+          },
+          {
+            "name": "390px_material_summary_and_readonly_report",
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "browser-continuous-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-continuous-resident.log",
+      "evidence": ".local/iter0015/browser/2026-10-26T06-25-26-894Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "091a8833ec8b33a590feb8ac9fd94d0792cb01df305d01cc9052cb2671092259",
+      "report": {
+        "suite": "continuous-resident-chrome",
+        "passed": true,
+        "recordedAtUtc": "2026-10-26T06:25:38.247Z",
+        "actualModelCalls": 0,
+        "browser": "152.0.7977.82",
+        "javascriptErrors": [],
+        "worldRequests": [],
+        "port": 43173,
+        "serviceStopped": true,
+        "tests": [
+          {
+            "name": "actual_continuous_cli_report_and_meter_coordinates",
+            "passed": true
+          },
+          {
+            "name": "fractional_replay_uses_confirmed_position_and_natural_geometry",
+            "passed": true
+          },
+          {
+            "name": "unknown_walk_does_not_turn_target_into_confirmed_position",
+            "passed": true
+          },
+          {
+            "name": "completion_requires_actual_arrival_and_return_trace",
+            "passed": true
+          },
+          {
+            "name": "invalid_continuous_geometry_retains_previous_report",
+            "passed": true
+          },
+          {
+            "name": "actual_bridge_report_has_r8_gather_facts_and_full_footprint",
+            "passed": true
+          },
+          {
+            "name": "390px_continuous_map_readonly_without_overflow",
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "browser-construction-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-construction-resident.log",
+      "evidence": ".local/iter0017/browser/2026-10-26T06-25-28-037Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "175cde61374d790c89f116d19e7c23fa5cb94034a521ab417fc90effdfc77dd0",
+      "report": {
+        "suite": "construction-resident-chrome",
+        "passed": true,
+        "recordedAtUtc": "2026-10-26T06:25:40.263Z",
+        "actualModelCalls": 0,
+        "browser": "152.0.7977.82",
+        "javascriptErrors": [],
+        "worldRequests": [],
+        "port": 36637,
+        "serviceStopped": true,
+        "tests": [
+          {
+            "name": "actual_cli_construction_requires_command_entity_and_material",
+            "passed": true
+          },
+          {
+            "name": "arrival_and_existing_entity_cannot_substitute_for_this_build",
+            "passed": true
+          },
+          {
+            "name": "unknown_build_retains_unconfirmed_fact",
+            "passed": true
+          },
+          {
+            "name": "mismatched_identity_permission_material_and_step_are_not_completed",
+            "passed": true
+          },
+          {
+            "name": "malformed_construction_retains_previous_report",
+            "passed": true
+          },
+          {
+            "name": "construction_requires_visit_after_original_build",
+            "passed": true
+          },
+          {
+            "name": "legacy_bridge_report_does_not_acquire_a_construction_goal",
+            "passed": true
+          },
+          {
+            "name": "390px_construction_report_is_readonly_without_overflow",
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "browser-actor-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-actor-resident.log",
+      "evidence": ".local/iter0019/browser/2026-10-26T06-25-29-514Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "31e39eec6f560ba5aef798ce653f2e5281cfd25fad571f575baf36f4ad10d91d",
+      "report": {
+        "suite": "actor-resident-chrome",
+        "passed": true,
+        "recordedAtUtc": "2026-10-26T06:25:44.635Z",
+        "actualModelCalls": 0,
+        "browser": "152.0.7977.82",
+        "sourceBefore": "4b4c6b12a69a7dad72d02753a52c7c764f50cab230b392993f82859ecad91d6a",
+        "sourceAfter": "4b4c6b12a69a7dad72d02753a52c7c764f50cab230b392993f82859ecad91d6a",
+        "actualReportPath": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0019/python/20261026T062529Z-eb6dd5/test_01_real_interference_all_actions_finish_one_platform/actual-report.json",
+        "javascriptErrors": [],
+        "worldRequests": [],
+        "port": 44953,
+        "serviceStopped": true,
+        "tests": [
+          {
+            "name": "real_interference_report_has_verified_build_and_return",
+            "passed": true
+          },
+          {
+            "name": "missing_wrong_or_noninteger_execution_preserves_last_valid_report",
+            "passed": true
+          },
+          {
+            "name": "missing_mission_mode_cannot_downgrade_actor_steps",
+            "passed": true
+          },
+          {
+            "name": "wrong_step_anchor_or_mode_is_not_a_confirmed_command",
+            "passed": true
+          },
+          {
+            "name": "unknown_build_has_no_confirmed_execution_or_construction",
+            "passed": true
+          },
+          {
+            "name": "unsettled_step_cannot_keep_a_success_execution",
+            "passed": true
+          },
+          {
+            "name": "rejected_execution_uses_current_version_and_future_anchor_boundary",
+            "passed": true
+          },
+          {
+            "name": "old_strict_construction_report_remains_readable",
+            "passed": true
+          },
+          {
+            "name": "390px_report_is_readonly_and_has_no_horizontal_overflow",
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "browser-transfer-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-transfer-resident.log",
+      "evidence": ".local/iter0020/browser/2026-10-26T06-25-38-491Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "6c0f1e889b21712f83c9861c1ad7cbd3f1f66433e99a72d226f3327145b62244",
+      "report": {
+        "passed": true,
+        "testsRun": 11,
+        "results": [
+          {
+            "name": "legacy_report_still_loads_without_transfer_controls",
+            "passed": true
+          },
+          {
+            "name": "actual_gift_report_has_original_sender_recipient_and_amount",
+            "passed": true
+          },
+          {
+            "name": "actual_recipient_separately_shows_received_event_and_own_construction",
+            "passed": true
+          },
+          {
+            "name": "wrong_transfer_facts_or_authorization_never_claim_verified",
+            "passed": true
+          },
+          {
+            "name": "missing_execution_and_mixed_rules_are_rejected_without_replacing_valid_report",
+            "passed": true
+          },
+          {
+            "name": "coordinated_self_gift_fields_are_rejected_as_an_impossible_transfer",
+            "passed": true
+          },
+          {
+            "name": "matching_step_and_fact_cannot_place_the_gift_outside_the_frozen_meeting",
+            "passed": true
+          },
+          {
+            "name": "unknown_gift_remains_unconfirmed_even_when_an_incoming_event_exists",
+            "passed": true
+          },
+          {
+            "name": "recent_events_keep_sender_scope_and_truncation",
+            "passed": true
+          },
+          {
+            "name": "mobile_report_keeps_actual_gift_and_build_readable",
+            "passed": true
+          },
+          {
+            "name": "report_view_has_no_world_commands_or_runtime_errors",
+            "passed": true
+          }
+        ],
+        "errors": [],
+        "worldRequests": [],
+        "browserVersion": "152.0.7977.82",
+        "actualModelCalls": 0
+      }
+    },
+    {
+      "name": "browser-material-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-material-resident.log",
+      "evidence": ".local/iter0022/browser/2026-10-26T06-25-40-487Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "f934b274caa0c5cc2c6ee76e2b521d6a39f9dd7f6d2a4e879982ff214e0c5140",
+      "report": {
+        "passed": true,
+        "testsRun": 8,
+        "results": [
+          {
+            "name": "legacy_report_hides_material_facts_and_query_budget",
+            "passed": true
+          },
+          {
+            "name": "real_material_report_separates_reservation_harvest_and_own_build",
+            "passed": true
+          },
+          {
+            "name": "reservation_only_does_not_claim_harvest_or_completed_construction",
+            "passed": true
+          },
+          {
+            "name": "unrelated_identity_id_permission_or_duplicate_claim_never_settles_materials",
+            "passed": true
+          },
+          {
+            "name": "missing_evidence_query_budget_or_wrong_rules_rejected_preserving_original",
+            "passed": true
+          },
+          {
+            "name": "query_budget_overrun_is_visible",
+            "passed": true
+          },
+          {
+            "name": "mobile_material_report_keeps_facts_and_budget_readable",
+            "passed": true
+          },
+          {
+            "name": "report_is_readonly_and_has_no_runtime_errors",
+            "passed": true
+          }
+        ],
+        "errors": [],
+        "worldRequests": [],
+        "browserVersion": "152.0.7977.82",
+        "actualModelCalls": 0
+      }
+    },
+    {
+      "name": "browser-entity-note-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T061307Z-268415/browser-entity-note-resident.log",
+      "evidence": ".local/iter0023/browser/2026-10-26T06-25-44-865Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "30c99fdbcd8e980d093ca33401f7a09f89aa9e124966bed49288302ca16b99ee",
+      "report": {
+        "passed": true,
+        "testsRun": 8,
+        "actualModelCalls": 0,
+        "version": "152.0.7977.82",
+        "results": [
+          {
+            "name": "old_report_hides_note_panel",
+            "passed": true
+          },
+          {
+            "name": "actual_cli_text_reference_and_author_match",
+            "passed": true
+          },
+          {
+            "name": "draft_or_arrival_never_claims_publication",
+            "passed": true
+          },
+          {
+            "name": "mismatched_note_author_reference_target_or_permission_is_unconfirmed",
+            "passed": true
+          },
+          {
+            "name": "damaged_evidence_or_query_budget_rejected",
+            "passed": true
+          },
+          {
+            "name": "literal_text_never_executes_markup",
+            "passed": true
+          },
+          {
+            "name": "repeat_import_has_no_world_writes",
+            "passed": true
+          },
+          {
+            "name": "mobile_notes_readable_without_overflow",
+            "passed": true
+          }
+        ],
+        "errors": [],
+        "worldRequests": []
+      }
+    },
+    {
+      "name": "browser-continuous-material-resident",
+      "exitCode": 1,
+      "log": ".local/checks/20261026T061307Z-268415/browser-continuous-material-resident.log",
+      "evidence": ".local/iter0024/browser/2026-10-26T06-26-23-072Z/results.json",
+      "removedTemporaryBinaries": [],
+      "sourceSha256": "bb9c354e48b466c9c709cf36f6b0d14c320efef4aa5507a0cb56bea000c673bf",
+      "report": {
+        "passed": false,
+        "testsRun": 1,
+        "results": [
+          {
+            "name": "run",
+            "passed": false,
+            "error": "AssertionError [ERR_ASSERTION]: Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 403, in __init__\n    testMethod = getattr(self, methodName)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'ContinuousMaterialMissionAcceptance' object has no attribute 'ContinuousMaterialMissionAcceptance.test_01_actual_cli_fifth_platform_and_later_production'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_material_mission_api.py\", line 412, in <module>\n    suite = (unittest.TestSuite(ContinuousMaterialMissionAcceptance(name) for name in sys.argv[1:]) if sys.argv[1:]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/unittest/suite.py\", line 24, in __init__\n    self.addTests(tests)\n  File \"/usr/lib/python3.12/unittest/suite.py\", line 57, in addTests\n    for test in tests:\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_material_mission_api.py\", line 412, in <genexpr>\n    suite = (unittest.TestSuite(ContinuousMaterialMissionAcceptance(name) for name in sys.argv[1:]) if sys.argv[1:]\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/unittest/case.py\", line 408, in __init__\n    raise ValueError(\"no such test method in %s: %s\" %\nValueError: no such test method in <class '__main__.ContinuousMaterialMissionAcceptance'>: ContinuousMaterialMissionAcceptance.test_01_actual_cli_fifth_platform_and_later_production\n\n\n1 !== 0\n\n    at file:///home/wangjunfeng/%E6%96%87%E6%A1%A3/Workspace/metaverse/tests/browser/continuous-material-resident.mjs:40:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+          }
+        ],
+        "errors": [],
+        "worldRequests": [],
+        "actualModelCalls": 0
+      }
+    }
+  ]
+}

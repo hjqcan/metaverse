@@ -1,0 +1,23 @@
+{
+  "passed": false,
+  "testsRun": 3,
+  "results": [
+    {
+      "name": "legacy_report_without_source_remains_readable",
+      "passed": true
+    },
+    {
+      "name": "actual_continuous_cli_separates_supply_from_claims_and_fifth_platform",
+      "passed": true
+    },
+    {
+      "name": "run",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /原预约已确认.*0 \\/ 3/. Input:\n\n'已确认原预约 · 领取 0 / 3 木材；尚未全部领取。'\n\n    at file:///home/wangjunfeng/%E6%96%87%E6%A1%A3/Workspace/metaverse/tests/browser/continuous-material-resident.mjs:89:12\n    at async check (file:///home/wangjunfeng/%E6%96%87%E6%A1%A3/Workspace/metaverse/tests/browser/continuous-material-resident.mjs:21:38)\n    at async file:///home/wangjunfeng/%E6%96%87%E6%A1%A3/Workspace/metaverse/tests/browser/continuous-material-resident.mjs:81:3"
+    }
+  ],
+  "errors": [],
+  "worldRequests": [],
+  "browserVersion": "152.0.7977.82",
+  "actualModelCalls": 0
+}

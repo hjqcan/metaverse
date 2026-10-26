@@ -21,8 +21,39 @@
   const action = a => object(a) && (a.type === "reserve_material" ? a.sourceId === "wood-source-east"
     : a.type === "harvest_material" && reservationId(a.reservationId));
 
+  function sourcePolicy(data) {
+    const source = data.world.materialAccess;
+    if (!object(source) || ![1, 2].includes(source.version) || source.sourceId !== "wood-source-east"
+      || source.capacity !== 6 || source.reservationQuantity !== 3 || source.productionIntervalMs !== 10000 || source.leaseMs !== 60000
+      || typeof source.active !== "boolean" || !integer(source.serviceMs) || !integer(source.generatedWood)
+      || !integer(source.stockWood) || source.stockWood > Math.min(6, source.generatedWood)
+      || !integer(source.freeWood) || source.freeWood > source.stockWood) return false;
+    if (source.version === 1) return source.inputBudget === 12 && source.generatedWood <= 12 && source.productionPolicy == null;
+    const p = source.productionPolicy;
+    return source.active && Object.hasOwn(source, "inputBudget") && source.inputBudget === null && object(p)
+      && p.id === "continuous-service-time-v1" && p.version === 1
+      && ["adoptedAtServiceMs", "adoptedAtStateVersion", "adoptedAtEventCursor", "generatedWoodAtAdoption", "productionPeriodAtAdoption"].every(k => integer(p[k]))
+      && integer(source.enabledAtServiceMs) && integer(source.nextProductionAtMs)
+      && source.enabledAtServiceMs <= p.adoptedAtServiceMs && p.adoptedAtServiceMs <= source.serviceMs
+      && source.nextProductionAtMs > source.serviceMs && (source.nextProductionAtMs - source.enabledAtServiceMs) % 10000 === 0
+      && p.productionPeriodAtAdoption === Math.floor((p.adoptedAtServiceMs - source.enabledAtServiceMs) / 10000)
+      && p.generatedWoodAtAdoption <= Math.min(12, source.generatedWood, p.productionPeriodAtAdoption * 3)
+      && p.adoptedAtStateVersion > 0 && p.adoptedAtStateVersion <= data.facts.endStateVersion
+      && p.adoptedAtEventCursor === p.adoptedAtStateVersion + 1;
+  }
+
+  function sourceDescription(data) {
+    const source = data.world.materialAccess;
+    if (!source || !sourcePolicy(data)) return "";
+    return source.version === 2
+      ? `持续材料来源 · 每10服务秒最多产3 · 当前未采 ${source.stockWood} / 6 · 累计产出 ${source.generatedWood}（采用前 ${source.productionPolicy.generatedWoodAtAdoption}）。停服不产出，库存满时跳过，不补发。`
+      : `有限材料来源 · 累计产出 ${source.generatedWood} / 12 · 当前未采 ${source.stockWood} / 6。`;
+  }
+
   function validate(data, require) {
     const { mission: m, facts: f, budget: b, steps } = data, uses = m.goal?.materialAccess !== undefined;
+    require(data.world.materialAccess === undefined || data.world.materialAccess === null
+      || m.rulesVersion === "r10" && sourcePolicy(data), "材料来源快照的版本、政策或累计数量不一致。");
     require(m.allowMaterialAccess === undefined || typeof m.allowMaterialAccess === "boolean", "材料入口权限应为布尔值。");
     require(!uses || m.rulesVersion === "r10" && m.preconditionMode === "actor-state-v1"
       && object(m.goal.materialAccess) && m.goal.materialAccess.sourceId === "wood-source-east"
@@ -68,5 +99,5 @@
       || records[2].stateVersion < f.construction?.stateVersion));
     return { uses, reserved, consistent, verified, count: records.length };
   }
-  window.MaterialReport = { validate, assess, action };
+  window.MaterialReport = { validate, assess, action, sourcePolicy, sourceDescription };
 })();

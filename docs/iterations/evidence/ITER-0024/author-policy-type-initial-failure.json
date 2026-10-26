@@ -1,0 +1,38 @@
+{
+  "suite": "continuous-material-http-v1",
+  "passed": false,
+  "testsRun": 1,
+  "tests": [
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_13_fractional_policy_anchors_refuse_without_truncation",
+      "passed": true,
+      "seconds": 7.1004227079683915
+    }
+  ],
+  "actualModelCalls": 0,
+  "dllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/baseline",
+  "clock": "real Stopwatch in natural operation; isolated damage cases deliberately alter invalid rows/schema, never to fund success",
+  "failureDetails": [
+    [
+      "test_13_fractional_policy_anchors_refuse_without_truncation (__main__.ContinuousMaterialAcceptance.test_13_fractional_policy_anchors_refuse_without_truncation) (field='adopted_service_ms')",
+      "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_material_api.py\", line 379, in test_13_fractional_policy_anchors_refuse_without_truncation\n    self.assertIn('持续材料政策字段类型不匹配',run.stdout+run.stderr)\nAssertionError: '持续材料政策字段类型不匹配' not found in '离线管理失败：InvalidOperationException\\n'\n"
+    ],
+    [
+      "test_13_fractional_policy_anchors_refuse_without_truncation (__main__.ContinuousMaterialAcceptance.test_13_fractional_policy_anchors_refuse_without_truncation) (field='state_version')",
+      "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_material_api.py\", line 379, in test_13_fractional_policy_anchors_refuse_without_truncation\n    self.assertIn('持续材料政策字段类型不匹配',run.stdout+run.stderr)\nAssertionError: '持续材料政策字段类型不匹配' not found in '离线管理失败：InvalidOperationException\\n'\n"
+    ],
+    [
+      "test_13_fractional_policy_anchors_refuse_without_truncation (__main__.ContinuousMaterialAcceptance.test_13_fractional_policy_anchors_refuse_without_truncation) (field='event_seq')",
+      "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_material_api.py\", line 379, in test_13_fractional_policy_anchors_refuse_without_truncation\n    self.assertIn('持续材料政策字段类型不匹配',run.stdout+run.stderr)\nAssertionError: '持续材料政策字段类型不匹配' not found in '离线管理失败：InvalidOperationException\\n'\n"
+    ],
+    [
+      "test_13_fractional_policy_anchors_refuse_without_truncation (__main__.ContinuousMaterialAcceptance.test_13_fractional_policy_anchors_refuse_without_truncation) (field='generated_at_adoption')",
+      "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_material_api.py\", line 379, in test_13_fractional_policy_anchors_refuse_without_truncation\n    self.assertIn('持续材料政策字段类型不匹配',run.stdout+run.stderr)\nAssertionError: '持续材料政策字段类型不匹配' not found in '离线管理失败：InvalidOperationException\\n'\n"
+    ],
+    [
+      "test_13_fractional_policy_anchors_refuse_without_truncation (__main__.ContinuousMaterialAcceptance.test_13_fractional_policy_anchors_refuse_without_truncation) (field='production_period_at_adoption')",
+      "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_material_api.py\", line 379, in test_13_fractional_policy_anchors_refuse_without_truncation\n    self.assertIn('持续材料政策字段类型不匹配',run.stdout+run.stderr)\nAssertionError: '持续材料政策字段类型不匹配' not found in '离线管理失败：InvalidOperationException\\n'\n"
+    ]
+  ]
+}

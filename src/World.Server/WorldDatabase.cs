@@ -11,6 +11,7 @@ internal sealed partial class WorldDatabase(ServerConfiguration configuration)
     public string Path { get; } = System.IO.Path.Combine(configuration.DataDirectory, "world.db");
     public WorldScenario Scenario { get; private set; } = null!;
     public string? InstanceId { get; private set; }
+    public MaterialProductionPolicy? ProductionPolicy { get; private set; }
 
     public SqliteConnection Open(bool existingOnly = true)
     {
@@ -35,6 +36,18 @@ internal sealed partial class WorldDatabase(ServerConfiguration configuration)
         return (string)command.ExecuteScalar()!;
     }
 
+    public void ReloadMaterialPolicy(SqliteConnection connection, SqliteTransaction transaction)
+    {
+        var storage = Scalar(connection, transaction, "PRAGMA user_version");
+        var current = ReadScenario(connection, transaction, storage);
+        if (current != Scenario || !current.SupportsMaterialAccess || WorldInstance.Read(connection, transaction) != InstanceId)
+            throw new InvalidOperationException("计时锁内的原世界身份不一致");
+        ProductionPolicy = ContinuousMaterialRules.ReadPolicy(connection, transaction, InstanceId);
+        if ((storage == 11) != (ProductionPolicy is not null))
+            throw new InvalidOperationException("计时锁内的持续政策与存储不一致");
+        if (ProductionPolicy is not null) ContinuousMaterialRules.ValidateState(connection, transaction, ProductionPolicy);
+    }
+
     public void Initialize()
     {
         Directory.CreateDirectory(configuration.DataDirectory);
@@ -51,6 +64,10 @@ internal sealed partial class WorldDatabase(ServerConfiguration configuration)
             if (EntityNoteRules.ReadAdoption(connection, transaction) is { } notes &&
                 (!Scenario.SupportsMaterialAccess || notes.InstanceId != InstanceId))
                 throw new InvalidOperationException("手记能力不属于这个世界实例");
+            ProductionPolicy = ContinuousMaterialRules.ReadPolicy(connection, transaction, InstanceId);
+            if ((schemaVersion == 11) != (ProductionPolicy is not null))
+                throw new InvalidOperationException("存储版本与持续材料政策不一致");
+            if (ProductionPolicy is not null) ContinuousMaterialRules.ValidateState(connection, transaction, ProductionPolicy);
             transaction.Commit();
             return;
         }
@@ -128,7 +145,7 @@ internal sealed partial class WorldDatabase(ServerConfiguration configuration)
 
     private WorldScenario ReadScenario(SqliteConnection connection, SqliteTransaction transaction, long schemaVersion)
     {
-        if (schemaVersion is not (1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9 or 10)) throw new InvalidOperationException("不支持的数据库版本");
+        if (schemaVersion is not (1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9 or 10 or 11)) throw new InvalidOperationException("不支持的数据库版本");
         // v1 predates scenario persistence and is always the original world. Do not migrate it,
         // rewrite historical objects/receipts, or infer a different world from environment values.
         using var command = Command(connection, transaction, schemaVersion == 1
@@ -140,7 +157,8 @@ internal sealed partial class WorldDatabase(ServerConfiguration configuration)
         var scenario = WorldScenario.FromId(reader.GetString(1));
         if (reader.GetString(2) != scenario.RulesVersion || reader.Read())
             throw new InvalidOperationException("数据库场景或规则版本不匹配");
-        if (schemaVersion != scenario.StorageVersion && !(schemaVersion == 1 && scenario == WorldScenario.Foundation))
+        if (schemaVersion != scenario.StorageVersion && !(schemaVersion == 1 && scenario == WorldScenario.Foundation)
+            && !(schemaVersion == 11 && scenario == WorldScenario.MaterialAccess))
             throw new InvalidOperationException("数据库场景与存储版本不匹配");
         if (configuration.RequestedScenario is not null && configuration.RequestedScenario != scenario)
             throw new InvalidOperationException("WORLD_SCENARIO 与数据库已存场景不一致，拒绝切换世界");

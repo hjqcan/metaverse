@@ -5,13 +5,48 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
-HTTP = ('foundation', 'passage', 'resident_mission', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'entry_guide', 'wilderness', 'wilderness_mission', 'continuous', 'continuous_mission', 'world_instance', 'construction_mission', 'instance_mission', 'actor_state', 'actor_mission', 'material_transfer', 'transfer_mission', 'material_access', 'material_access_time', 'material_access_mission', 'entity_notes', 'entity_notes_mission')
-BROWSER = ('foundation', 'passage', 'resident', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'consent-experience', 'entry', 'wilderness', 'wilderness-resident', 'continuous-resident', 'construction-resident', 'actor-resident', 'transfer-resident', 'material-resident', 'entity-note-resident')
+HTTP = ('foundation', 'passage', 'resident_mission', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'entry_guide', 'wilderness', 'wilderness_mission', 'continuous', 'continuous_mission', 'world_instance', 'construction_mission', 'instance_mission', 'actor_state', 'actor_mission', 'material_transfer', 'transfer_mission', 'material_access', 'material_access_time', 'material_access_mission', 'entity_notes', 'entity_notes_mission', 'continuous_material', 'continuous_material_mission')
+BROWSER = ('foundation', 'passage', 'resident', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'consent-experience', 'entry', 'wilderness', 'wilderness-resident', 'continuous-resident', 'construction-resident', 'actor-resident', 'transfer-resident', 'material-resident', 'entity-note-resident', 'continuous-material-resident')
+
+
+def cleanup_binaries(evidence):
+    """Discard finished run's reproducible binaries, retaining worlds and evidence."""
+    if not evidence or not Path('/proc').is_dir():
+        return []
+    directory = (ROOT / evidence).resolve().parent
+    if not directory.is_relative_to(ROOT / '.local'):
+        return []
+    references = []
+    for process in Path('/proc').glob('[0-9]*'):
+        try:
+            references.append((process / 'cmdline').read_bytes().replace(b'\0', b' ').decode(errors='replace'))
+            references.append((process / 'maps').read_text())
+        except OSError:
+            continue
+    removed = []
+    for marker in list(directory.rglob('World.Server.deps.json')):
+        binary = marker.parent
+        if any(str(binary) in ref or str(binary.relative_to(ROOT)) in ref for ref in references):
+            continue
+        paths = [p for p in binary.iterdir() if p.is_file() and
+                 (p.suffix in ('.dll', '.pdb', '.xml') or p.name in
+                  ('World.Server', 'World.Server.deps.json', 'World.Server.runtimeconfig.json', 'World.Server.staticwebassets.endpoints.json'))]
+        if (binary / 'runtimes').is_dir():
+            paths.append(binary / 'runtimes')
+        for path in paths:
+            size = sum(p.stat().st_size for p in path.rglob('*') if p.is_file()) if path.is_dir() else path.stat().st_size
+            if path.is_dir():
+                shutil.rmtree(path)
+            else:
+                path.unlink()
+            removed.append({'path': str(path.relative_to(ROOT)), 'logicalBytes': size})
+    return removed
 
 
 def evidence_path(lines):
@@ -41,8 +76,9 @@ def main():
         print(f'{name}: {"PASS" if result.returncode == 0 else "FAIL"}', flush=True)
         if result.returncode:
             print('\n'.join(lines[-25:]), flush=True)
+        evidence = evidence_path(lines)
         return {'name': name, 'exitCode': result.returncode, 'log': str(log.relative_to(ROOT)),
-                'evidence': evidence_path(lines)}
+                'evidence': evidence, 'removedTemporaryBinaries': cleanup_binaries(evidence)}
 
     results = []
     for name, command in (

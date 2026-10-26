@@ -1,0 +1,87 @@
+{
+  "passed": false,
+  "validationLevel": "independent frozen Web-v1 with actual independently generated core-v2 Python reports",
+  "actualModelCalls": 0,
+  "files": {
+    "src/World.Server/wwwroot/app.js": "bdbd751b03854e6ae192ccd5fdf0b9165e20433ed111d069a1d9e1b305f57acd",
+    "src/World.Server/wwwroot/consent.js": "396ad8dca4ea121124e7a771e47c3dd5dd966f71bb67f62eab580a38f3b92d91",
+    "src/World.Server/wwwroot/entity-note-report.js": "98cf1fd79e0303a34d2c9fb90cf850650363a317a3d4a3ce16fbb907b514a753",
+    "src/World.Server/wwwroot/entry-guide.js": "5bc3a6eef9dc93b22dc0a14c86ee0c6f41013f8e8c2cc5b4cb9edd199236c5a8",
+    "src/World.Server/wwwroot/index.html": "b1617698950c81f092b91556f1c67b0215900c51cce3f60f888e2315df8ceff2",
+    "src/World.Server/wwwroot/material-report.js": "fac2aa41b97c336be37ab96a4c9ec3f5078a0701870475e59e7d67c5d9d649d4",
+    "src/World.Server/wwwroot/mosaic-inbox.js": "96a7180337ee21f496ec62a38d85e4cbca5e1aa3c822912480ba36ceb498e1f6",
+    "src/World.Server/wwwroot/mosaic.js": "8f6ef59b7d9538ee0cb93d0e04b16c55ebdbf41cd04fab8a6296b889052ee08b",
+    "src/World.Server/wwwroot/resident.css": "cd3986c35631c56a0e9e751edd958c0b5df3b3b4de1c9d40bba906c539d1c83c",
+    "src/World.Server/wwwroot/resident.html": "9c5633efe2ce532ada29a27e6746cd98a62674f9ea22a809be361206bc3cc750",
+    "src/World.Server/wwwroot/resident.js": "4b4c6b12a69a7dad72d02753a52c7c764f50cab230b392993f82859ecad91d6a",
+    "src/World.Server/wwwroot/styles.css": "dc2634a1f15e012aa4e638dc35ca0a697a1fea5a6bdb05885eb7a02946c27195"
+  },
+  "originalCompleteManifest": {
+    "src/World.Server/wwwroot/app.js": "bdbd751b03854e6ae192ccd5fdf0b9165e20433ed111d069a1d9e1b305f57acd",
+    "src/World.Server/wwwroot/consent.js": "396ad8dca4ea121124e7a771e47c3dd5dd966f71bb67f62eab580a38f3b92d91",
+    "src/World.Server/wwwroot/entity-note-report.js": "98cf1fd79e0303a34d2c9fb90cf850650363a317a3d4a3ce16fbb907b514a753",
+    "src/World.Server/wwwroot/entry-guide.js": "5bc3a6eef9dc93b22dc0a14c86ee0c6f41013f8e8c2cc5b4cb9edd199236c5a8",
+    "src/World.Server/wwwroot/index.html": "b1617698950c81f092b91556f1c67b0215900c51cce3f60f888e2315df8ceff2",
+    "src/World.Server/wwwroot/material-report.js": "fac2aa41b97c336be37ab96a4c9ec3f5078a0701870475e59e7d67c5d9d649d4",
+    "src/World.Server/wwwroot/mosaic-inbox.js": "96a7180337ee21f496ec62a38d85e4cbca5e1aa3c822912480ba36ceb498e1f6",
+    "src/World.Server/wwwroot/mosaic.js": "8f6ef59b7d9538ee0cb93d0e04b16c55ebdbf41cd04fab8a6296b889052ee08b",
+    "src/World.Server/wwwroot/resident.css": "cd3986c35631c56a0e9e751edd958c0b5df3b3b4de1c9d40bba906c539d1c83c",
+    "src/World.Server/wwwroot/resident.html": "9c5633efe2ce532ada29a27e6746cd98a62674f9ea22a809be361206bc3cc750",
+    "src/World.Server/wwwroot/resident.js": "4b4c6b12a69a7dad72d02753a52c7c764f50cab230b392993f82859ecad91d6a",
+    "src/World.Server/wwwroot/styles.css": "dc2634a1f15e012aa4e638dc35ca0a697a1fea5a6bdb05885eb7a02946c27195",
+    "tests/browser/continuous-material-resident.mjs": "0181cf25c2390fe32246974778af91257c0c57d152ffa510e996055a59b0912e"
+  },
+  "authorTestDriverUsed": false,
+  "legacySha256": "191ffa5aac83d734be48827cfb239c13c548f33e70b44d4fd90d51464b3ce71f",
+  "inputs": [
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-python-20261026T062453124018Z/actual-cli/run-report.json",
+      "sha256": "ae2089868ac48682e6c57411da8aad63d0676348728d5f914010fd80804c344e"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-python-20261026T062550351532Z/query4/run-report.json",
+      "sha256": "6b5959743654b8430ea592a2848301844818e6aae627326469d8bf6b63daf6fd"
+    }
+  ],
+  "checks": [
+    {
+      "name": "previous report without material snapshot remains readable",
+      "passed": true
+    },
+    {
+      "name": "actual CLI supply, individual claims and construction are separate",
+      "passed": true
+    },
+    {
+      "name": "actual four-query task retains reservation but no claimed wood or build",
+      "passed": true
+    },
+    {
+      "name": "unknown missing fractional or inconsistent policy rejects without replacing original report",
+      "passed": true
+    },
+    {
+      "name": "synthetic supply alone cannot establish claimed wood or a platform",
+      "passed": true
+    },
+    {
+      "name": "missing optional historical source snapshot preserves actual command evidence",
+      "passed": true
+    },
+    {
+      "name": "390-pixel mobile layout retains source and budget text without horizontal scrolling",
+      "passed": true
+    },
+    {
+      "name": "report page produces no world API requests or JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "browserVersion": "152.0.7977.82",
+  "malformedPolicies": 10,
+  "errors": [],
+  "worldRequests": [],
+  "staticServerStopped": false,
+  "checkCount": 8,
+  "frozenCopiesUnchanged": true
+}

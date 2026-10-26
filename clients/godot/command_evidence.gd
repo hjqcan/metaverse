@@ -15,22 +15,47 @@ static func material_supported(observed: Dictionary) -> bool:
 	var source = observed.get("materialAccess")
 	if observed.get("rulesVersion") != "r10" or not continuous_world(observed) or not source is Dictionary:
 		return false
-	if source.get("version") != 1 or source.get("sourceId") != "wood-source-east" \
+	if source.get("version") not in [1, 2] or source.get("sourceId") != "wood-source-east" \
 		or source.get("position") != [28, 10] or source.get("buildExclusion") != [27, 9, 29, 11] \
-		or source.get("inputBudget") != 12 or source.get("capacity") != 6 or source.get("reservationQuantity") != 3 \
+		or source.get("capacity") != 6 or source.get("reservationQuantity") != 3 \
 		or source.get("leaseMs") != 60000 or source.get("productionIntervalMs") != 10000 or not source.get("active") is bool:
 		return false
 	for field in ["serviceMs", "stockWood", "freeWood", "generatedWood"]:
 		if not whole(source.get(field)):
 			return false
+	if source.version == 1 and (source.get("inputBudget") != 12 or source.generatedWood > 12 or source.get("productionPolicy") != null):
+		return false
+	if source.version == 2 and not continuous_material_policy(observed):
+		return false
 	if not source.get("queue") is Array or not source.get("recentReservations") is Array:
 		return false
 	for reservation in source.queue + source.recentReservations:
 		if not valid_reservation(reservation):
 			return false
 	return source.stockWood <= 6 and source.freeWood <= source.stockWood and source.stockWood <= source.generatedWood \
-		and source.generatedWood <= 12 and source.get("queue") is Array and source.get("recentReservations") is Array \
+		and source.get("queue") is Array and source.get("recentReservations") is Array \
 		and source.has("currentReservation") and (source.currentReservation == null or valid_reservation(source.currentReservation))
+
+static func continuous_material_policy(observed: Dictionary) -> bool:
+	var source = observed.get("materialAccess")
+	if not source is Dictionary or source.get("version") != 2 or not source.has("inputBudget") or source.inputBudget != null or source.get("active") != true:
+		return false
+	var policy = source.get("productionPolicy")
+	if not policy is Dictionary or policy.get("id") != "continuous-service-time-v1" or policy.get("version") != 1:
+		return false
+	for field in ["adoptedAtServiceMs", "adoptedAtStateVersion", "adoptedAtEventCursor", "generatedWoodAtAdoption", "productionPeriodAtAdoption"]:
+		if not whole(policy.get(field)):
+			return false
+	return whole(source.get("serviceMs")) and whole(source.get("generatedWood")) \
+		and whole(source.get("enabledAtServiceMs")) and whole(source.get("nextProductionAtMs")) \
+		and whole(observed.get("stateVersion")) and whole(observed.get("eventCursor")) \
+		and source.enabledAtServiceMs <= policy.adoptedAtServiceMs and policy.adoptedAtServiceMs <= source.serviceMs \
+		and source.nextProductionAtMs > source.serviceMs and (int(source.nextProductionAtMs) - int(source.enabledAtServiceMs)) % 10000 == 0 \
+		and policy.productionPeriodAtAdoption == floor((policy.adoptedAtServiceMs - source.enabledAtServiceMs) / 10000.0) \
+		and policy.adoptedAtStateVersion > 0 \
+		and policy.adoptedAtStateVersion <= observed.stateVersion and policy.adoptedAtEventCursor == policy.adoptedAtStateVersion + 1 \
+		and policy.adoptedAtEventCursor <= observed.eventCursor and policy.generatedWoodAtAdoption <= 12 \
+		and policy.generatedWoodAtAdoption <= source.generatedWood and policy.generatedWoodAtAdoption <= 3 * policy.productionPeriodAtAdoption
 
 static func valid_reservation(value: Variant) -> bool:
 	if not value is Dictionary:

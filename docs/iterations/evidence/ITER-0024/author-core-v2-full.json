@@ -1,0 +1,77 @@
+{
+  "suite": "continuous-material-http-v1",
+  "passed": true,
+  "testsRun": 13,
+  "tests": [
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_01_explicit_offline_adoption_preserves_phase_rows_and_is_idempotent",
+      "passed": true,
+      "seconds": 0.9168664350290783
+    },
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_02_original_world_late_platform_and_production_beyond_another_twelve",
+      "passed": true,
+      "seconds": 51.00196699495427
+    },
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_03_adoption_crash_rolls_back_or_commits_once",
+      "passed": true,
+      "seconds": 1.2985000080079772
+    },
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_04_old_binary_cold_start_refuses_and_new_restarts",
+      "passed": true,
+      "seconds": 2.1657872140058316
+    },
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_05_original_committed_and_404_intents_survive_adoption",
+      "passed": true,
+      "seconds": 0.8098395420238376
+    },
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_06_full_capacity_skips_without_debt_and_offline_time_does_not_produce",
+      "passed": true,
+      "seconds": 32.35434509400511
+    },
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_07_production_crash_preserves_exact_period_and_ledger",
+      "passed": true,
+      "seconds": 2.268509896006435
+    },
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_08_policy_damage_refuses_instead_of_falling_back_to_old_budget",
+      "passed": true,
+      "seconds": 1.946859608986415
+    },
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_09_incomplete_old_production_event_cannot_be_adopted",
+      "passed": true,
+      "seconds": 0.9156358260079287
+    },
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_10_missing_policy_constraint_or_trigger_refuses_startup",
+      "passed": true,
+      "seconds": 2.821601314994041
+    },
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_11_partial_active_and_fifo_queue_keep_original_lease_across_adoption",
+      "passed": true,
+      "seconds": 31.400114882038906
+    },
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_12_null_phase_and_fractional_source_cannot_be_adopted",
+      "passed": true,
+      "seconds": 1.2465197900310159
+    },
+    {
+      "test": "__main__.ContinuousMaterialAcceptance.test_13_fractional_policy_anchors_refuse_without_truncation",
+      "passed": true,
+      "seconds": 7.200517245975789
+    }
+  ],
+  "actualModelCalls": 0,
+  "dllSha256": "04e61973c3b45266702d8015058abbde1766bb7d54376c42602a9a25419fce25",
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0024/api/20261026T062122Z-7834ab/seed/test_01_same_instance_two_authors_reference_return_and_old_facts",
+  "clock": "real Stopwatch in natural operation; isolated damage cases deliberately alter invalid rows/schema, never to fund success",
+  "failureDetails": []
+}

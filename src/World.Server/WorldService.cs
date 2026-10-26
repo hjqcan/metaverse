@@ -238,7 +238,7 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
             return Protocol.Error(Scenario.RulesVersion, 409, "IDEMPOTENCY_CONFLICT", "命令 ID 已用于不同参数", identity, current.Version, current.Cursor, request.CommandId).WithInstance(instance);
         }
         if (Scenario.SupportsMaterialAccess)
-            MaterialSourceRules.Advance(connection, transaction, materialClock?.Now ?? throw new InvalidOperationException("缺少材料服务时钟"));
+            MaterialSourceRules.Advance(connection, transaction, materialClock?.Now ?? throw new InvalidOperationException("缺少材料服务时钟"), database.ProductionPolicy is not null);
         var state = ReadState(connection, transaction);
         var actor = ReadActor(connection, transaction, identity.ActorId);
         var action = request.Action;

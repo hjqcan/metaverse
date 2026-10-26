@@ -253,3 +253,18 @@ Godot入口另含 `python3 tests/actor_state_godot.py`（6组、43断言）和 `
 Python任务套件有13组，包括真实CLI、原命令提交前后进程退出、原事实、权限损坏、首次失败读取与累计预算。`ENTITY_NOTES_OLD_DLL=/旧版World.Server.dll`用于实际旧服务兼容组；没有旧二进制时只跳过该组并在结果明确列出，其余组照常运行。本轮完整验收显式提供ITER-0022二进制，13组无跳过；另行验证无私有基线路径的默认入口。
 
 报告页测试可用 `ENTITY_NOTE_REPORT_FILE=/实际CLI报告.json node tests/browser/entity-note-resident.mjs` 检查已有报告；没有参数时调用实际Python任务测试取得新报告。报告页只做文件内部一致性核对，不向世界服务认证，也不把固定文本称为模型自主写作。
+
+
+### ITER-0024 持续材料来源
+
+`npm run test:continuous-material` 依次运行持续来源 HTTP、Python、Godot 和 Chrome 检查。普通 `npm test` 纳入前两套 HTTP 与报告页；`npm run test:godot` 纳入原生客户端。因此已运行普通与原生全套后，无需重复专项全集。
+
+`tests/continuous_material_api.py` 包含13组，覆盖原库显式采用、原相位及原事实保持、持续生产/本人第5个平台、旧服务拒绝、原意图、容量与离线、提交前后崩溃、FIFO/部分领取，以及缺失或小数政策拒绝。`CONTINUOUS_MATERIAL_OLD_DLL` 指向 ITER-0023 服务用于真实旧版本冷启动对照；未指定时只跳过该组，不能宣称旧版本兼容已验证。
+
+`tests/continuous_material_mission_api.py` 的10组包含真实CLI、累计查询预算、原授权、损坏本地状态、旧任务终态和提交前后恢复。`CONTINUOUS_MATERIAL_OLD_PYTHON` 可指向 ITER-0023 的原 `scripts/`，实际旧实现会生成采用前的 reserve/harvest/build/note 未决记录；未指定时使用当前实现生成采用前记录，报告明确区分两者。首次失败查询的作者单元探针使用 request 替身，独立真实HTTP故障应单列。
+
+两套新 HTTP 和原生测试的默认入口均通过真实命令建立耗尽且有两条手记的世界，不用 SQL 注入物资；可设置 `CONTINUOUS_MATERIAL_BASELINE=/已停服的原世界目录` 复用已有 `world.db` / `access.json`。`WORLD_SERVER_DLL` 可指定只读冻结服务。每个测试世界独立，原基线不会启动；来源生产和租期使用真实服务时间。
+
+报告页测试 `node tests/browser/continuous-material-resident.mjs` 默认执行两组真实Python任务并导入完成报告及 queries=4 预算耗尽报告；也可同时设置 `CONTINUOUS_MATERIAL_REPORT_FILE`、`CONTINUOUS_MATERIAL_QUERY_REPORT_FILE` 复用已完成产物。10项Chrome检查包含持续政策、原预约/领取/建设分列、未知或损坏政策、旧报告、390px及零世界请求。
+
+新测试直接共用只读服务程序集，避免为每组复制全部平台运行库。按用户的容量要求，`scripts/check.py` 在一套结束且没有进程引用后回收该套目录中的可再生成程序和运行库，保留世界、原命令、结果及截图，清单写入总结果。独立 QA 和原生专项完成后同样清理自己的临时副本；版本对照仍在使用的少量二进制保留至验收结束。

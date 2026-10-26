@@ -1,0 +1,2018 @@
+{
+  "passed": true,
+  "scope": "independent core-v1 real HTTP/SQLite",
+  "binarySha256": "82e77563c9571185988a84a30b5511d9b7701329bfc2ec949cfa5c07f1be2da3",
+  "manifestSha256": "b4e2c8fae53294dd5c416f458e6dbe179cad1a1376899999c541e33ff16f0590",
+  "seed": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-preflight/20261026T054234754936Z/world.db",
+  "seedSha256": "b3cfc119ac4ec264154714db6fa1fa4d98a089b4abe1a5e24e4dd53841be9d8a",
+  "cases": {
+    "natural": {
+      "passed": true,
+      "adoption": {
+        "stoppedProcess": {
+          "pid": 4067055,
+          "exitCode": 0
+        },
+        "adoption": {
+          "exitCode": 0,
+          "output": "持续材料政策已在原实例采用。\n"
+        },
+        "repeat": {
+          "exitCode": 0,
+          "output": "持续材料政策已采用，原进度保持。\n"
+        },
+        "sourceBefore": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 84017,
+          "enabled_at_ms": 21047,
+          "next_production_ms": 91047,
+          "production_period": 6,
+          "generated_wood": 12,
+          "stock_wood": 0
+        },
+        "sourceAfter": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 84017,
+          "enabled_at_ms": 21047,
+          "next_production_ms": 91047,
+          "production_period": 6,
+          "generated_wood": 12,
+          "stock_wood": 0
+        },
+        "policyEvent": {
+          "seq": 625,
+          "stateVersion": 624,
+          "actorId": null,
+          "commandId": null,
+          "type": "continuousMaterialSourceAdopted",
+          "sourceId": "wood-source-east",
+          "serviceMs": 84017,
+          "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+          "productionPolicy": {
+            "id": "continuous-service-time-v1",
+            "version": 1,
+            "adoptedAtServiceMs": 84017,
+            "adoptedAtStateVersion": 624,
+            "adoptedAtEventCursor": 625,
+            "generatedWoodAtAdoption": 12,
+            "productionPeriodAtAdoption": 6
+          }
+        },
+        "newEventCount": 1
+      },
+      "oldRejectedCommandId": "92739ca43e43431291df25eac15c60a0",
+      "newPreAdoptionRejection": {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "3c8ebca4f0bc4a46b2f78c73d9e31481",
+          "expectedStateVersion": 623,
+          "action": {
+            "type": "reserve_material",
+            "sourceId": "wood-source-east"
+          },
+          "preconditionMode": "actor-state-v1"
+        },
+        "receipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 623,
+          "commandId": "3c8ebca4f0bc4a46b2f78c73d9e31481",
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s131d61be279840df94f00244eea8851d"
+          },
+          "eventCursor": 624,
+          "error": {
+            "code": "SOURCE_BUDGET_EXHAUSTED",
+            "message": "有限来源剩余材料不足以接纳新预约",
+            "retryable": false,
+            "mutated": false
+          },
+          "status": "rejected",
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 623,
+            "appliedOnStateVersion": 623
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":623,\"commandId\":\"3c8ebca4f0bc4a46b2f78c73d9e31481\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":624,\"error\":{\"code\":\"SOURCE_BUDGET_EXHAUSTED\",\"message\":\"\\u6709\\u9650\\u6765\\u6E90\\u5269\\u4F59\\u6750\\u6599\\u4E0D\\u8DB3\\u4EE5\\u63A5\\u7EB3\\u65B0\\u9884\\u7EA6\",\"retryable\":false,\"mutated\":false},\"status\":\"rejected\",\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":623,\"appliedOnStateVersion\":623}}"
+      },
+      "unknownOriginalRequest": {
+        "requestBytes": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"commandId\":\"3c13a35b3c0449b4a7817ac1bb412445\",\"expectedStateVersion\":623,\"action\":{\"type\":\"reserve_material\",\"sourceId\":\"wood-source-east\"},\"preconditionMode\":\"actor-state-v1\"}",
+        "commandId": "3c13a35b3c0449b4a7817ac1bb412445",
+        "sameBytesAfterAdoption": true
+      },
+      "firstGrant": {
+        "reservationId": "mad294a67a0424d7aa972c15b276ab2cd",
+        "actorId": "a2",
+        "operatorId": "declared-late",
+        "requestCommandId": "3c13a35b3c0449b4a7817ac1bb412445",
+        "queueSequence": 5,
+        "status": "active",
+        "requestedAtMs": 84182,
+        "grantedAtMs": 91070,
+        "expiresAtMs": 151070,
+        "remaining": 3
+      },
+      "firstHarvests": [
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "efddd7b73b5c41838bc529fd6c2c214b",
+            "expectedStateVersion": 662,
+            "action": {
+              "type": "harvest_material",
+              "reservationId": "mad294a67a0424d7aa972c15b276ab2cd"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 663,
+            "commandId": "efddd7b73b5c41838bc529fd6c2c214b",
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": 664,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "harvest_material",
+              "reservationId": "mad294a67a0424d7aa972c15b276ab2cd",
+              "sourceId": "wood-source-east",
+              "quantity": 1,
+              "remainingBefore": 3,
+              "remaining": 2,
+              "inventoryWoodBefore": 0,
+              "inventoryWood": 1,
+              "position": [
+                28,
+                10
+              ]
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 662,
+              "appliedOnStateVersion": 662
+            }
+          },
+          "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":663,\"commandId\":\"efddd7b73b5c41838bc529fd6c2c214b\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":664,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mad294a67a0424d7aa972c15b276ab2cd\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":3,\"remaining\":2,\"inventoryWoodBefore\":0,\"inventoryWood\":1,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":662,\"appliedOnStateVersion\":662}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "092e0fb655674c568ebc1f74a02d21bd",
+            "expectedStateVersion": 663,
+            "action": {
+              "type": "harvest_material",
+              "reservationId": "mad294a67a0424d7aa972c15b276ab2cd"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 664,
+            "commandId": "092e0fb655674c568ebc1f74a02d21bd",
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": 665,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "harvest_material",
+              "reservationId": "mad294a67a0424d7aa972c15b276ab2cd",
+              "sourceId": "wood-source-east",
+              "quantity": 1,
+              "remainingBefore": 2,
+              "remaining": 1,
+              "inventoryWoodBefore": 1,
+              "inventoryWood": 2,
+              "position": [
+                28,
+                10
+              ]
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 663,
+              "appliedOnStateVersion": 663
+            }
+          },
+          "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":664,\"commandId\":\"092e0fb655674c568ebc1f74a02d21bd\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":665,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mad294a67a0424d7aa972c15b276ab2cd\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":2,\"remaining\":1,\"inventoryWoodBefore\":1,\"inventoryWood\":2,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":663,\"appliedOnStateVersion\":663}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "49a022abefc44766bdf45347887189df",
+            "expectedStateVersion": 664,
+            "action": {
+              "type": "harvest_material",
+              "reservationId": "mad294a67a0424d7aa972c15b276ab2cd"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 665,
+            "commandId": "49a022abefc44766bdf45347887189df",
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": 666,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "harvest_material",
+              "reservationId": "mad294a67a0424d7aa972c15b276ab2cd",
+              "sourceId": "wood-source-east",
+              "quantity": 1,
+              "remainingBefore": 1,
+              "remaining": 0,
+              "inventoryWoodBefore": 2,
+              "inventoryWood": 3,
+              "position": [
+                28,
+                10
+              ]
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 664,
+              "appliedOnStateVersion": 664
+            }
+          },
+          "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":665,\"commandId\":\"49a022abefc44766bdf45347887189df\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":666,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mad294a67a0424d7aa972c15b276ab2cd\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":1,\"remaining\":0,\"inventoryWoodBefore\":2,\"inventoryWood\":3,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":664,\"appliedOnStateVersion\":664}}"
+        }
+      ],
+      "fifthPlatformBuild": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 680,
+        "commandId": "8868adbb65484cd2aa34613d90ff7e91",
+        "identity": {
+          "operatorId": "declared-late",
+          "actorId": "a2",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "eventCursor": 681,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "build",
+          "entityId": "e926486325c2c4e3e924610139ee26711",
+          "position": [
+            24,
+            7
+          ],
+          "inventoryWood": 0
+        },
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 679,
+          "appliedOnStateVersion": 679
+        }
+      },
+      "fifthPlatform": {
+        "entityId": "e926486325c2c4e3e924610139ee26711",
+        "definitionId": "platform",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a2",
+        "position": [
+          24,
+          7
+        ],
+        "embodiedWood": 3
+      },
+      "subsequentActualCollections": [
+        {
+          "reservationId": "mf754c5654a074955af66ef5ba105c2c7",
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "cfe995b5a9a44ff5b18fe960d30f621f",
+            "expectedStateVersion": 694,
+            "action": {
+              "type": "reserve_material",
+              "sourceId": "wood-source-east"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receiptBytes": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":695,\"commandId\":\"cfe995b5a9a44ff5b18fe960d30f621f\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":696,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"reserve_material\",\"reservationId\":\"mf754c5654a074955af66ef5ba105c2c7\",\"sourceId\":\"wood-source-east\",\"queueSequence\":6,\"status\":\"queued\",\"requestedAtMs\":93621},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":694,\"appliedOnStateVersion\":694}}",
+          "grant": {
+            "reservationId": "mf754c5654a074955af66ef5ba105c2c7",
+            "actorId": "a2",
+            "operatorId": "declared-late",
+            "requestCommandId": "cfe995b5a9a44ff5b18fe960d30f621f",
+            "queueSequence": 6,
+            "status": "active",
+            "requestedAtMs": 93621,
+            "grantedAtMs": 101070,
+            "expiresAtMs": 161070,
+            "remaining": 3
+          },
+          "claims": [
+            {
+              "request": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "commandId": "0749c528c03243f9a15f29e4a8aad476",
+                "expectedStateVersion": 697,
+                "action": {
+                  "type": "harvest_material",
+                  "reservationId": "mf754c5654a074955af66ef5ba105c2c7"
+                },
+                "preconditionMode": "actor-state-v1"
+              },
+              "receipt": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "stateVersion": 698,
+                "commandId": "0749c528c03243f9a15f29e4a8aad476",
+                "identity": {
+                  "operatorId": "declared-late",
+                  "actorId": "a2",
+                  "sessionId": "s131d61be279840df94f00244eea8851d"
+                },
+                "eventCursor": 699,
+                "error": null,
+                "status": "committed",
+                "result": {
+                  "action": "harvest_material",
+                  "reservationId": "mf754c5654a074955af66ef5ba105c2c7",
+                  "sourceId": "wood-source-east",
+                  "quantity": 1,
+                  "remainingBefore": 3,
+                  "remaining": 2,
+                  "inventoryWoodBefore": 0,
+                  "inventoryWood": 1,
+                  "position": [
+                    28,
+                    10
+                  ]
+                },
+                "execution": {
+                  "preconditionMode": "actor-state-v1",
+                  "observedStateVersion": 697,
+                  "appliedOnStateVersion": 697
+                }
+              },
+              "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":698,\"commandId\":\"0749c528c03243f9a15f29e4a8aad476\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":699,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mf754c5654a074955af66ef5ba105c2c7\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":3,\"remaining\":2,\"inventoryWoodBefore\":0,\"inventoryWood\":1,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":697,\"appliedOnStateVersion\":697}}"
+            },
+            {
+              "request": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "commandId": "11206b1e0f4d4258b3f63c74e7afff1a",
+                "expectedStateVersion": 698,
+                "action": {
+                  "type": "harvest_material",
+                  "reservationId": "mf754c5654a074955af66ef5ba105c2c7"
+                },
+                "preconditionMode": "actor-state-v1"
+              },
+              "receipt": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "stateVersion": 699,
+                "commandId": "11206b1e0f4d4258b3f63c74e7afff1a",
+                "identity": {
+                  "operatorId": "declared-late",
+                  "actorId": "a2",
+                  "sessionId": "s131d61be279840df94f00244eea8851d"
+                },
+                "eventCursor": 700,
+                "error": null,
+                "status": "committed",
+                "result": {
+                  "action": "harvest_material",
+                  "reservationId": "mf754c5654a074955af66ef5ba105c2c7",
+                  "sourceId": "wood-source-east",
+                  "quantity": 1,
+                  "remainingBefore": 2,
+                  "remaining": 1,
+                  "inventoryWoodBefore": 1,
+                  "inventoryWood": 2,
+                  "position": [
+                    28,
+                    10
+                  ]
+                },
+                "execution": {
+                  "preconditionMode": "actor-state-v1",
+                  "observedStateVersion": 698,
+                  "appliedOnStateVersion": 698
+                }
+              },
+              "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":699,\"commandId\":\"11206b1e0f4d4258b3f63c74e7afff1a\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":700,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mf754c5654a074955af66ef5ba105c2c7\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":2,\"remaining\":1,\"inventoryWoodBefore\":1,\"inventoryWood\":2,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":698,\"appliedOnStateVersion\":698}}"
+            },
+            {
+              "request": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "commandId": "adc3d9fb97fc49b082a5966a81101ff2",
+                "expectedStateVersion": 699,
+                "action": {
+                  "type": "harvest_material",
+                  "reservationId": "mf754c5654a074955af66ef5ba105c2c7"
+                },
+                "preconditionMode": "actor-state-v1"
+              },
+              "receipt": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "stateVersion": 700,
+                "commandId": "adc3d9fb97fc49b082a5966a81101ff2",
+                "identity": {
+                  "operatorId": "declared-late",
+                  "actorId": "a2",
+                  "sessionId": "s131d61be279840df94f00244eea8851d"
+                },
+                "eventCursor": 701,
+                "error": null,
+                "status": "committed",
+                "result": {
+                  "action": "harvest_material",
+                  "reservationId": "mf754c5654a074955af66ef5ba105c2c7",
+                  "sourceId": "wood-source-east",
+                  "quantity": 1,
+                  "remainingBefore": 1,
+                  "remaining": 0,
+                  "inventoryWoodBefore": 2,
+                  "inventoryWood": 3,
+                  "position": [
+                    28,
+                    10
+                  ]
+                },
+                "execution": {
+                  "preconditionMode": "actor-state-v1",
+                  "observedStateVersion": 699,
+                  "appliedOnStateVersion": 699
+                }
+              },
+              "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":700,\"commandId\":\"adc3d9fb97fc49b082a5966a81101ff2\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":701,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mf754c5654a074955af66ef5ba105c2c7\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":1,\"remaining\":0,\"inventoryWoodBefore\":2,\"inventoryWood\":3,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":699,\"appliedOnStateVersion\":699}}"
+            }
+          ]
+        },
+        {
+          "reservationId": "mb4ae53ae589e475f8a28ebffcc25b825",
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "49fc60a1ec0a41518d1b12925a5cc745",
+            "expectedStateVersion": 700,
+            "action": {
+              "type": "reserve_material",
+              "sourceId": "wood-source-east"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receiptBytes": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":701,\"commandId\":\"49fc60a1ec0a41518d1b12925a5cc745\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":702,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"reserve_material\",\"reservationId\":\"mb4ae53ae589e475f8a28ebffcc25b825\",\"sourceId\":\"wood-source-east\",\"queueSequence\":7,\"status\":\"queued\",\"requestedAtMs\":101122},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":700,\"appliedOnStateVersion\":700}}",
+          "grant": {
+            "reservationId": "mb4ae53ae589e475f8a28ebffcc25b825",
+            "actorId": "a2",
+            "operatorId": "declared-late",
+            "requestCommandId": "49fc60a1ec0a41518d1b12925a5cc745",
+            "queueSequence": 7,
+            "status": "active",
+            "requestedAtMs": 101122,
+            "grantedAtMs": 111070,
+            "expiresAtMs": 171070,
+            "remaining": 3
+          },
+          "claims": [
+            {
+              "request": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "commandId": "277610d40b35481a8ad5b6be5659a469",
+                "expectedStateVersion": 703,
+                "action": {
+                  "type": "harvest_material",
+                  "reservationId": "mb4ae53ae589e475f8a28ebffcc25b825"
+                },
+                "preconditionMode": "actor-state-v1"
+              },
+              "receipt": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "stateVersion": 704,
+                "commandId": "277610d40b35481a8ad5b6be5659a469",
+                "identity": {
+                  "operatorId": "declared-late",
+                  "actorId": "a2",
+                  "sessionId": "s131d61be279840df94f00244eea8851d"
+                },
+                "eventCursor": 705,
+                "error": null,
+                "status": "committed",
+                "result": {
+                  "action": "harvest_material",
+                  "reservationId": "mb4ae53ae589e475f8a28ebffcc25b825",
+                  "sourceId": "wood-source-east",
+                  "quantity": 1,
+                  "remainingBefore": 3,
+                  "remaining": 2,
+                  "inventoryWoodBefore": 3,
+                  "inventoryWood": 4,
+                  "position": [
+                    28,
+                    10
+                  ]
+                },
+                "execution": {
+                  "preconditionMode": "actor-state-v1",
+                  "observedStateVersion": 703,
+                  "appliedOnStateVersion": 703
+                }
+              },
+              "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":704,\"commandId\":\"277610d40b35481a8ad5b6be5659a469\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":705,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mb4ae53ae589e475f8a28ebffcc25b825\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":3,\"remaining\":2,\"inventoryWoodBefore\":3,\"inventoryWood\":4,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":703,\"appliedOnStateVersion\":703}}"
+            },
+            {
+              "request": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "commandId": "2cfc03f7dfdb410d91faf8623badb606",
+                "expectedStateVersion": 704,
+                "action": {
+                  "type": "harvest_material",
+                  "reservationId": "mb4ae53ae589e475f8a28ebffcc25b825"
+                },
+                "preconditionMode": "actor-state-v1"
+              },
+              "receipt": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "stateVersion": 705,
+                "commandId": "2cfc03f7dfdb410d91faf8623badb606",
+                "identity": {
+                  "operatorId": "declared-late",
+                  "actorId": "a2",
+                  "sessionId": "s131d61be279840df94f00244eea8851d"
+                },
+                "eventCursor": 706,
+                "error": null,
+                "status": "committed",
+                "result": {
+                  "action": "harvest_material",
+                  "reservationId": "mb4ae53ae589e475f8a28ebffcc25b825",
+                  "sourceId": "wood-source-east",
+                  "quantity": 1,
+                  "remainingBefore": 2,
+                  "remaining": 1,
+                  "inventoryWoodBefore": 4,
+                  "inventoryWood": 5,
+                  "position": [
+                    28,
+                    10
+                  ]
+                },
+                "execution": {
+                  "preconditionMode": "actor-state-v1",
+                  "observedStateVersion": 704,
+                  "appliedOnStateVersion": 704
+                }
+              },
+              "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":705,\"commandId\":\"2cfc03f7dfdb410d91faf8623badb606\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":706,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mb4ae53ae589e475f8a28ebffcc25b825\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":2,\"remaining\":1,\"inventoryWoodBefore\":4,\"inventoryWood\":5,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":704,\"appliedOnStateVersion\":704}}"
+            },
+            {
+              "request": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "commandId": "7fbe6a851d064e96ac6297a11d5e2a5c",
+                "expectedStateVersion": 705,
+                "action": {
+                  "type": "harvest_material",
+                  "reservationId": "mb4ae53ae589e475f8a28ebffcc25b825"
+                },
+                "preconditionMode": "actor-state-v1"
+              },
+              "receipt": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "stateVersion": 706,
+                "commandId": "7fbe6a851d064e96ac6297a11d5e2a5c",
+                "identity": {
+                  "operatorId": "declared-late",
+                  "actorId": "a2",
+                  "sessionId": "s131d61be279840df94f00244eea8851d"
+                },
+                "eventCursor": 707,
+                "error": null,
+                "status": "committed",
+                "result": {
+                  "action": "harvest_material",
+                  "reservationId": "mb4ae53ae589e475f8a28ebffcc25b825",
+                  "sourceId": "wood-source-east",
+                  "quantity": 1,
+                  "remainingBefore": 1,
+                  "remaining": 0,
+                  "inventoryWoodBefore": 5,
+                  "inventoryWood": 6,
+                  "position": [
+                    28,
+                    10
+                  ]
+                },
+                "execution": {
+                  "preconditionMode": "actor-state-v1",
+                  "observedStateVersion": 705,
+                  "appliedOnStateVersion": 705
+                }
+              },
+              "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":706,\"commandId\":\"7fbe6a851d064e96ac6297a11d5e2a5c\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":707,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"mb4ae53ae589e475f8a28ebffcc25b825\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":1,\"remaining\":0,\"inventoryWoodBefore\":5,\"inventoryWood\":6,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":705,\"appliedOnStateVersion\":705}}"
+            }
+          ]
+        },
+        {
+          "reservationId": "md1c5df988608442f8253a0976bc661e7",
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "8efc3902466e4eec99303e8978b43a83",
+            "expectedStateVersion": 706,
+            "action": {
+              "type": "reserve_material",
+              "sourceId": "wood-source-east"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receiptBytes": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":707,\"commandId\":\"8efc3902466e4eec99303e8978b43a83\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":708,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"reserve_material\",\"reservationId\":\"md1c5df988608442f8253a0976bc661e7\",\"sourceId\":\"wood-source-east\",\"queueSequence\":8,\"status\":\"queued\",\"requestedAtMs\":111232},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":706,\"appliedOnStateVersion\":706}}",
+          "grant": {
+            "reservationId": "md1c5df988608442f8253a0976bc661e7",
+            "actorId": "a2",
+            "operatorId": "declared-late",
+            "requestCommandId": "8efc3902466e4eec99303e8978b43a83",
+            "queueSequence": 8,
+            "status": "active",
+            "requestedAtMs": 111232,
+            "grantedAtMs": 121070,
+            "expiresAtMs": 181070,
+            "remaining": 3
+          },
+          "claims": [
+            {
+              "request": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "commandId": "2a2fc8438d1e4ad886c811a58daeca40",
+                "expectedStateVersion": 709,
+                "action": {
+                  "type": "harvest_material",
+                  "reservationId": "md1c5df988608442f8253a0976bc661e7"
+                },
+                "preconditionMode": "actor-state-v1"
+              },
+              "receipt": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "stateVersion": 710,
+                "commandId": "2a2fc8438d1e4ad886c811a58daeca40",
+                "identity": {
+                  "operatorId": "declared-late",
+                  "actorId": "a2",
+                  "sessionId": "s131d61be279840df94f00244eea8851d"
+                },
+                "eventCursor": 711,
+                "error": null,
+                "status": "committed",
+                "result": {
+                  "action": "harvest_material",
+                  "reservationId": "md1c5df988608442f8253a0976bc661e7",
+                  "sourceId": "wood-source-east",
+                  "quantity": 1,
+                  "remainingBefore": 3,
+                  "remaining": 2,
+                  "inventoryWoodBefore": 6,
+                  "inventoryWood": 7,
+                  "position": [
+                    28,
+                    10
+                  ]
+                },
+                "execution": {
+                  "preconditionMode": "actor-state-v1",
+                  "observedStateVersion": 709,
+                  "appliedOnStateVersion": 709
+                }
+              },
+              "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":710,\"commandId\":\"2a2fc8438d1e4ad886c811a58daeca40\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":711,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"md1c5df988608442f8253a0976bc661e7\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":3,\"remaining\":2,\"inventoryWoodBefore\":6,\"inventoryWood\":7,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":709,\"appliedOnStateVersion\":709}}"
+            },
+            {
+              "request": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "commandId": "975a8338a49542c2bb7a576ad382dcb6",
+                "expectedStateVersion": 710,
+                "action": {
+                  "type": "harvest_material",
+                  "reservationId": "md1c5df988608442f8253a0976bc661e7"
+                },
+                "preconditionMode": "actor-state-v1"
+              },
+              "receipt": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "stateVersion": 711,
+                "commandId": "975a8338a49542c2bb7a576ad382dcb6",
+                "identity": {
+                  "operatorId": "declared-late",
+                  "actorId": "a2",
+                  "sessionId": "s131d61be279840df94f00244eea8851d"
+                },
+                "eventCursor": 712,
+                "error": null,
+                "status": "committed",
+                "result": {
+                  "action": "harvest_material",
+                  "reservationId": "md1c5df988608442f8253a0976bc661e7",
+                  "sourceId": "wood-source-east",
+                  "quantity": 1,
+                  "remainingBefore": 2,
+                  "remaining": 1,
+                  "inventoryWoodBefore": 7,
+                  "inventoryWood": 8,
+                  "position": [
+                    28,
+                    10
+                  ]
+                },
+                "execution": {
+                  "preconditionMode": "actor-state-v1",
+                  "observedStateVersion": 710,
+                  "appliedOnStateVersion": 710
+                }
+              },
+              "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":711,\"commandId\":\"975a8338a49542c2bb7a576ad382dcb6\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":712,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"md1c5df988608442f8253a0976bc661e7\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":2,\"remaining\":1,\"inventoryWoodBefore\":7,\"inventoryWood\":8,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":710,\"appliedOnStateVersion\":710}}"
+            },
+            {
+              "request": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "commandId": "a8e8a76eb4b343549bb58e4cb8f187d9",
+                "expectedStateVersion": 711,
+                "action": {
+                  "type": "harvest_material",
+                  "reservationId": "md1c5df988608442f8253a0976bc661e7"
+                },
+                "preconditionMode": "actor-state-v1"
+              },
+              "receipt": {
+                "schemaVersion": 1,
+                "rulesVersion": "r10",
+                "stateVersion": 712,
+                "commandId": "a8e8a76eb4b343549bb58e4cb8f187d9",
+                "identity": {
+                  "operatorId": "declared-late",
+                  "actorId": "a2",
+                  "sessionId": "s131d61be279840df94f00244eea8851d"
+                },
+                "eventCursor": 713,
+                "error": null,
+                "status": "committed",
+                "result": {
+                  "action": "harvest_material",
+                  "reservationId": "md1c5df988608442f8253a0976bc661e7",
+                  "sourceId": "wood-source-east",
+                  "quantity": 1,
+                  "remainingBefore": 1,
+                  "remaining": 0,
+                  "inventoryWoodBefore": 8,
+                  "inventoryWood": 9,
+                  "position": [
+                    28,
+                    10
+                  ]
+                },
+                "execution": {
+                  "preconditionMode": "actor-state-v1",
+                  "observedStateVersion": 711,
+                  "appliedOnStateVersion": 711
+                }
+              },
+              "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":712,\"commandId\":\"a8e8a76eb4b343549bb58e4cb8f187d9\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":713,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"harvest_material\",\"reservationId\":\"md1c5df988608442f8253a0976bc661e7\",\"sourceId\":\"wood-source-east\",\"quantity\":1,\"remainingBefore\":1,\"remaining\":0,\"inventoryWoodBefore\":8,\"inventoryWood\":9,\"position\":[28,10]},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":711,\"appliedOnStateVersion\":711}}"
+            }
+          ]
+        }
+      ],
+      "continuedProductionObservation": {
+        "version": 2,
+        "sourceId": "wood-source-east",
+        "position": [
+          28,
+          10
+        ],
+        "buildExclusion": [
+          27,
+          9,
+          29,
+          11
+        ],
+        "active": true,
+        "serviceMs": 131069,
+        "enabledAtServiceMs": 21047,
+        "nextProductionAtMs": 141047,
+        "generatedWood": 27,
+        "stockWood": 3,
+        "freeWood": 3,
+        "inputBudget": null,
+        "productionPolicy": {
+          "id": "continuous-service-time-v1",
+          "version": 1,
+          "adoptedAtServiceMs": 84017,
+          "adoptedAtStateVersion": 624,
+          "adoptedAtEventCursor": 625,
+          "generatedWoodAtAdoption": 12,
+          "productionPeriodAtAdoption": 6
+        },
+        "capacity": 6,
+        "reservationQuantity": 3,
+        "leaseMs": 60000,
+        "productionIntervalMs": 10000,
+        "currentReservation": null,
+        "recentReservations": [
+          {
+            "reservationId": "md1c5df988608442f8253a0976bc661e7",
+            "actorId": "a2",
+            "operatorId": "declared-late",
+            "requestCommandId": "8efc3902466e4eec99303e8978b43a83",
+            "queueSequence": 8,
+            "status": "completed",
+            "requestedAtMs": 111232,
+            "grantedAtMs": 121070,
+            "expiresAtMs": 181070,
+            "remaining": 0
+          },
+          {
+            "reservationId": "mb4ae53ae589e475f8a28ebffcc25b825",
+            "actorId": "a2",
+            "operatorId": "declared-late",
+            "requestCommandId": "49fc60a1ec0a41518d1b12925a5cc745",
+            "queueSequence": 7,
+            "status": "completed",
+            "requestedAtMs": 101122,
+            "grantedAtMs": 111070,
+            "expiresAtMs": 171070,
+            "remaining": 0
+          },
+          {
+            "reservationId": "mf754c5654a074955af66ef5ba105c2c7",
+            "actorId": "a2",
+            "operatorId": "declared-late",
+            "requestCommandId": "cfe995b5a9a44ff5b18fe960d30f621f",
+            "queueSequence": 6,
+            "status": "completed",
+            "requestedAtMs": 93621,
+            "grantedAtMs": 101070,
+            "expiresAtMs": 161070,
+            "remaining": 0
+          },
+          {
+            "reservationId": "mad294a67a0424d7aa972c15b276ab2cd",
+            "actorId": "a2",
+            "operatorId": "declared-late",
+            "requestCommandId": "3c13a35b3c0449b4a7817ac1bb412445",
+            "queueSequence": 5,
+            "status": "completed",
+            "requestedAtMs": 84182,
+            "grantedAtMs": 91070,
+            "expiresAtMs": 151070,
+            "remaining": 0
+          }
+        ],
+        "queue": [],
+        "controlBasis": "declared-local-fixture",
+        "controlRoster": [
+          {
+            "actorId": "a1",
+            "operatorId": "local-operator"
+          },
+          {
+            "actorId": "a1_alias",
+            "operatorId": "local-operator"
+          },
+          {
+            "actorId": "a2",
+            "operatorId": "declared-late"
+          },
+          {
+            "actorId": "a3",
+            "operatorId": "declared-third"
+          }
+        ]
+      },
+      "finalObservation": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 748,
+        "commandId": null,
+        "identity": {
+          "operatorId": "declared-late",
+          "actorId": "a2",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "eventCursor": 749,
+        "error": null,
+        "world": {
+          "id": "foundation-01",
+          "scenarioId": "wilderness-material-access-v1",
+          "width": 32,
+          "height": 24,
+          "coordinateSystem": "continuous-xz",
+          "bounds": [
+            0,
+            0,
+            32,
+            24
+          ],
+          "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+        },
+        "movement": {
+          "version": 1,
+          "kind": "continuous",
+          "speed": 3,
+          "radius": 0.28,
+          "maxStepDistance": 0.6,
+          "gatherReach": 1.6,
+          "buildReach": 3.2
+        },
+        "terrain": {
+          "version": 1,
+          "river": {
+            "polygon": [
+              [
+                14.6,
+                0
+              ],
+              [
+                14.506445312499999,
+                0.5
+              ],
+              [
+                14.364062500000001,
+                1
+              ],
+              [
+                14.1927734375,
+                1.5
+              ],
+              [
+                14.0125,
+                2
+              ],
+              [
+                13.8431640625,
+                2.5
+              ],
+              [
+                13.7046875,
+                3
+              ],
+              [
+                13.6169921875,
+                3.5
+              ],
+              [
+                13.6,
+                4
+              ],
+              [
+                13.658789062499999,
+                4.5
+              ],
+              [
+                13.7765625,
+                5
+              ],
+              [
+                13.940429687499998,
+                5.5
+              ],
+              [
+                14.1375,
+                6
+              ],
+              [
+                14.3548828125,
+                6.5
+              ],
+              [
+                14.579687499999999,
+                7
+              ],
+              [
+                14.799023437499999,
+                7.5
+              ],
+              [
+                14.999999999999998,
+                8
+              ],
+              [
+                15.208203124999999,
+                8.5
+              ],
+              [
+                15.446874999999997,
+                9
+              ],
+              [
+                15.699609375,
+                9.5
+              ],
+              [
+                15.949999999999998,
+                10
+              ],
+              [
+                16.181640625,
+                10.5
+              ],
+              [
+                16.378125,
+                11
+              ],
+              [
+                16.523046875,
+                11.5
+              ],
+              [
+                16.6,
+                12
+              ],
+              [
+                16.604199218750004,
+                12.5
+              ],
+              [
+                16.54921875,
+                13
+              ],
+              [
+                16.44619140625,
+                13.5
+              ],
+              [
+                16.30625,
+                14
+              ],
+              [
+                16.14052734375,
+                14.5
+              ],
+              [
+                15.960156250000002,
+                15
+              ],
+              [
+                15.77626953125,
+                15.5
+              ],
+              [
+                15.6,
+                16
+              ],
+              [
+                15.411425781249998,
+                16.5
+              ],
+              [
+                15.191406250000002,
+                17
+              ],
+              [
+                14.95224609375,
+                17.5
+              ],
+              [
+                14.706249999999999,
+                18
+              ],
+              [
+                14.46572265625,
+                18.5
+              ],
+              [
+                14.24296875,
+                19
+              ],
+              [
+                14.050292968749998,
+                19.5
+              ],
+              [
+                13.9,
+                20
+              ],
+              [
+                13.79345703125,
+                20.5
+              ],
+              [
+                13.719531250000001,
+                21
+              ],
+              [
+                13.67177734375,
+                21.5
+              ],
+              [
+                13.64375,
+                22
+              ],
+              [
+                13.62900390625,
+                22.5
+              ],
+              [
+                13.621093750000002,
+                23
+              ],
+              [
+                13.613574218750003,
+                23.5
+              ],
+              [
+                13.600000000000003,
+                24
+              ],
+              [
+                16.400000000000002,
+                24
+              ],
+              [
+                16.413574218750004,
+                23.5
+              ],
+              [
+                16.42109375,
+                23
+              ],
+              [
+                16.42900390625,
+                22.5
+              ],
+              [
+                16.44375,
+                22
+              ],
+              [
+                16.47177734375,
+                21.5
+              ],
+              [
+                16.51953125,
+                21
+              ],
+              [
+                16.59345703125,
+                20.5
+              ],
+              [
+                16.7,
+                20
+              ],
+              [
+                16.850292968749997,
+                19.5
+              ],
+              [
+                17.04296875,
+                19
+              ],
+              [
+                17.26572265625,
+                18.5
+              ],
+              [
+                17.506249999999998,
+                18
+              ],
+              [
+                17.75224609375,
+                17.5
+              ],
+              [
+                17.99140625,
+                17
+              ],
+              [
+                18.211425781249996,
+                16.5
+              ],
+              [
+                18.4,
+                16
+              ],
+              [
+                18.57626953125,
+                15.5
+              ],
+              [
+                18.76015625,
+                15
+              ],
+              [
+                18.94052734375,
+                14.5
+              ],
+              [
+                19.106249999999996,
+                14
+              ],
+              [
+                19.24619140625,
+                13.5
+              ],
+              [
+                19.34921875,
+                13
+              ],
+              [
+                19.40419921875,
+                12.5
+              ],
+              [
+                19.4,
+                12
+              ],
+              [
+                19.323046874999996,
+                11.5
+              ],
+              [
+                19.178124999999998,
+                11
+              ],
+              [
+                18.981640624999997,
+                10.5
+              ],
+              [
+                18.749999999999996,
+                10
+              ],
+              [
+                18.499609375,
+                9.5
+              ],
+              [
+                18.246874999999996,
+                9
+              ],
+              [
+                18.008203124999998,
+                8.5
+              ],
+              [
+                17.799999999999997,
+                8
+              ],
+              [
+                17.599023437499998,
+                7.5
+              ],
+              [
+                17.3796875,
+                7
+              ],
+              [
+                17.1548828125,
+                6.5
+              ],
+              [
+                16.9375,
+                6
+              ],
+              [
+                16.740429687499997,
+                5.5
+              ],
+              [
+                16.5765625,
+                5
+              ],
+              [
+                16.4587890625,
+                4.5
+              ],
+              [
+                16.4,
+                4
+              ],
+              [
+                16.4169921875,
+                3.5
+              ],
+              [
+                16.5046875,
+                3
+              ],
+              [
+                16.6431640625,
+                2.5
+              ],
+              [
+                16.8125,
+                2
+              ],
+              [
+                16.9927734375,
+                1.5
+              ],
+              [
+                17.1640625,
+                1
+              ],
+              [
+                17.3064453125,
+                0.5
+              ],
+              [
+                17.4,
+                0
+              ]
+            ],
+            "centerline": [
+              [
+                16,
+                0
+              ],
+              [
+                15.906445312499999,
+                0.5
+              ],
+              [
+                15.764062500000001,
+                1
+              ],
+              [
+                15.5927734375,
+                1.5
+              ],
+              [
+                15.4125,
+                2
+              ],
+              [
+                15.2431640625,
+                2.5
+              ],
+              [
+                15.1046875,
+                3
+              ],
+              [
+                15.0169921875,
+                3.5
+              ],
+              [
+                15,
+                4
+              ],
+              [
+                15.058789062499999,
+                4.5
+              ],
+              [
+                15.176562500000001,
+                5
+              ],
+              [
+                15.340429687499999,
+                5.5
+              ],
+              [
+                15.5375,
+                6
+              ],
+              [
+                15.7548828125,
+                6.5
+              ],
+              [
+                15.979687499999999,
+                7
+              ],
+              [
+                16.1990234375,
+                7.5
+              ],
+              [
+                16.4,
+                8
+              ],
+              [
+                16.608203125,
+                8.5
+              ],
+              [
+                16.846874999999997,
+                9
+              ],
+              [
+                17.099609375,
+                9.5
+              ],
+              [
+                17.349999999999998,
+                10
+              ],
+              [
+                17.581640625,
+                10.5
+              ],
+              [
+                17.778125,
+                11
+              ],
+              [
+                17.923046874999997,
+                11.5
+              ],
+              [
+                18,
+                12
+              ],
+              [
+                18.004199218750003,
+                12.5
+              ],
+              [
+                17.94921875,
+                13
+              ],
+              [
+                17.84619140625,
+                13.5
+              ],
+              [
+                17.706249999999997,
+                14
+              ],
+              [
+                17.54052734375,
+                14.5
+              ],
+              [
+                17.360156250000003,
+                15
+              ],
+              [
+                17.17626953125,
+                15.5
+              ],
+              [
+                17,
+                16
+              ],
+              [
+                16.811425781249998,
+                16.5
+              ],
+              [
+                16.591406250000002,
+                17
+              ],
+              [
+                16.35224609375,
+                17.5
+              ],
+              [
+                16.10625,
+                18
+              ],
+              [
+                15.86572265625,
+                18.5
+              ],
+              [
+                15.64296875,
+                19
+              ],
+              [
+                15.450292968749999,
+                19.5
+              ],
+              [
+                15.3,
+                20
+              ],
+              [
+                15.19345703125,
+                20.5
+              ],
+              [
+                15.119531250000001,
+                21
+              ],
+              [
+                15.07177734375,
+                21.5
+              ],
+              [
+                15.043750000000001,
+                22
+              ],
+              [
+                15.02900390625,
+                22.5
+              ],
+              [
+                15.021093750000002,
+                23
+              ],
+              [
+                15.013574218750003,
+                23.5
+              ],
+              [
+                15.000000000000004,
+                24
+              ]
+            ],
+            "halfWidth": 1.4
+          },
+          "obstacles": [
+            {
+              "id": "rock-west",
+              "kind": "rock",
+              "position": [
+                10.5,
+                8.5
+              ],
+              "radius": 1.05
+            },
+            {
+              "id": "rock-south",
+              "kind": "rock",
+              "position": [
+                5.6,
+                19.7
+              ],
+              "radius": 0.8
+            },
+            {
+              "id": "rock-east",
+              "kind": "rock",
+              "position": [
+                23,
+                12.5
+              ],
+              "radius": 1.2
+            },
+            {
+              "id": "rock-north",
+              "kind": "rock",
+              "position": [
+                21.8,
+                3.2
+              ],
+              "radius": 0.75
+            }
+          ]
+        },
+        "self": {
+          "actorId": "a2",
+          "position": [
+            26,
+            17
+          ],
+          "inventory": {
+            "wood": 9
+          }
+        },
+        "residents": [
+          {
+            "actorId": "a1",
+            "position": [
+              15.7,
+              12
+            ]
+          },
+          {
+            "actorId": "a1_alias",
+            "position": [
+              5,
+              7
+            ]
+          },
+          {
+            "actorId": "a2",
+            "position": [
+              26,
+              17
+            ]
+          },
+          {
+            "actorId": "a3",
+            "position": [
+              27,
+              10
+            ]
+          }
+        ],
+        "resourceNodes": [
+          {
+            "nodeId": "tree-east-north",
+            "kind": "tree",
+            "position": [
+              25.4,
+              5.8
+            ],
+            "initialWood": 3,
+            "remainingWood": 0
+          },
+          {
+            "nodeId": "tree-east-south",
+            "kind": "tree",
+            "position": [
+              25.7,
+              18.2
+            ],
+            "initialWood": 3,
+            "remainingWood": 0
+          },
+          {
+            "nodeId": "tree-west-north",
+            "kind": "tree",
+            "position": [
+              6.2,
+              7.8
+            ],
+            "initialWood": 3,
+            "remainingWood": 0
+          },
+          {
+            "nodeId": "tree-west-south",
+            "kind": "tree",
+            "position": [
+              9.2,
+              16.3
+            ],
+            "initialWood": 3,
+            "remainingWood": 0
+          }
+        ],
+        "entities": [
+          {
+            "entityId": "e76a6cc3bf333423e874d310f1f0371a0",
+            "definitionId": "platform",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a3",
+            "position": [
+              27,
+              17
+            ],
+            "embodiedWood": 3
+          },
+          {
+            "entityId": "e926486325c2c4e3e924610139ee26711",
+            "definitionId": "platform",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a2",
+            "position": [
+              24,
+              7
+            ],
+            "embodiedWood": 3
+          },
+          {
+            "entityId": "e9df7ee47564546f098a988085e93ce3d",
+            "definitionId": "platform",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a3",
+            "position": [
+              30,
+              17
+            ],
+            "embodiedWood": 3
+          },
+          {
+            "entityId": "eb40dd030a24941f28c3fb5313fe44784",
+            "definitionId": "platform",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a3",
+            "position": [
+              27,
+              14
+            ],
+            "embodiedWood": 3
+          },
+          {
+            "entityId": "eca67171501f8438e9fe790bfdbef9789",
+            "definitionId": "platform",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a3",
+            "position": [
+              30,
+              14
+            ],
+            "embodiedWood": 3
+          },
+          {
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "definitionId": "bridge",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a1",
+            "position": [
+              18,
+              12
+            ],
+            "embodiedWood": 6
+          }
+        ],
+        "recipes": [
+          {
+            "id": "platform.v1",
+            "definitionId": "platform",
+            "woodCost": 3
+          },
+          {
+            "id": "bridge.v1",
+            "definitionId": "bridge",
+            "woodCost": 6
+          }
+        ],
+        "gathering": {
+          "version": 1,
+          "quantityPerAction": 1
+        },
+        "depot": {
+          "wood": 0,
+          "available": false
+        },
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 39,
+          "generatedWood": 27,
+          "sourceWood": 3,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 15,
+          "embodiedWood": 21,
+          "conserved": true
+        },
+        "materialAccess": {
+          "version": 2,
+          "sourceId": "wood-source-east",
+          "position": [
+            28,
+            10
+          ],
+          "buildExclusion": [
+            27,
+            9,
+            29,
+            11
+          ],
+          "active": true,
+          "serviceMs": 134197,
+          "enabledAtServiceMs": 21047,
+          "nextProductionAtMs": 141047,
+          "generatedWood": 27,
+          "stockWood": 3,
+          "freeWood": 3,
+          "inputBudget": null,
+          "productionPolicy": {
+            "id": "continuous-service-time-v1",
+            "version": 1,
+            "adoptedAtServiceMs": 84017,
+            "adoptedAtStateVersion": 624,
+            "adoptedAtEventCursor": 625,
+            "generatedWoodAtAdoption": 12,
+            "productionPeriodAtAdoption": 6
+          },
+          "capacity": 6,
+          "reservationQuantity": 3,
+          "leaseMs": 60000,
+          "productionIntervalMs": 10000,
+          "currentReservation": null,
+          "recentReservations": [
+            {
+              "reservationId": "md1c5df988608442f8253a0976bc661e7",
+              "actorId": "a2",
+              "operatorId": "declared-late",
+              "requestCommandId": "8efc3902466e4eec99303e8978b43a83",
+              "queueSequence": 8,
+              "status": "completed",
+              "requestedAtMs": 111232,
+              "grantedAtMs": 121070,
+              "expiresAtMs": 181070,
+              "remaining": 0
+            },
+            {
+              "reservationId": "mb4ae53ae589e475f8a28ebffcc25b825",
+              "actorId": "a2",
+              "operatorId": "declared-late",
+              "requestCommandId": "49fc60a1ec0a41518d1b12925a5cc745",
+              "queueSequence": 7,
+              "status": "completed",
+              "requestedAtMs": 101122,
+              "grantedAtMs": 111070,
+              "expiresAtMs": 171070,
+              "remaining": 0
+            },
+            {
+              "reservationId": "mf754c5654a074955af66ef5ba105c2c7",
+              "actorId": "a2",
+              "operatorId": "declared-late",
+              "requestCommandId": "cfe995b5a9a44ff5b18fe960d30f621f",
+              "queueSequence": 6,
+              "status": "completed",
+              "requestedAtMs": 93621,
+              "grantedAtMs": 101070,
+              "expiresAtMs": 161070,
+              "remaining": 0
+            },
+            {
+              "reservationId": "mad294a67a0424d7aa972c15b276ab2cd",
+              "actorId": "a2",
+              "operatorId": "declared-late",
+              "requestCommandId": "3c13a35b3c0449b4a7817ac1bb412445",
+              "queueSequence": 5,
+              "status": "completed",
+              "requestedAtMs": 84182,
+              "grantedAtMs": 91070,
+              "expiresAtMs": 151070,
+              "remaining": 0
+            }
+          ],
+          "queue": [],
+          "controlBasis": "declared-local-fixture",
+          "controlRoster": [
+            {
+              "actorId": "a1",
+              "operatorId": "local-operator"
+            },
+            {
+              "actorId": "a1_alias",
+              "operatorId": "local-operator"
+            },
+            {
+              "actorId": "a2",
+              "operatorId": "declared-late"
+            },
+            {
+              "actorId": "a3",
+              "operatorId": "declared-third"
+            }
+          ]
+        },
+        "entityNotes": {
+          "capability": "entity-notes-v1",
+          "version": 1,
+          "target": {
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "definitionId": "bridge",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a1",
+            "position": [
+              18,
+              12
+            ],
+            "embodiedWood": 6
+          },
+          "reach": 1.6,
+          "maxTextScalars": 160,
+          "maxPerOperator": 2,
+          "maxTotal": 6,
+          "selfCount": 1,
+          "totalCount": 2,
+          "notes": [
+            {
+              "noteId": "nd82d4590c877499d8ac290bad573c568",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "authorActorId": "a2",
+              "operatorId": "declared-late",
+              "commandId": "6c18e433ad78416887ec5d2de8df02d4",
+              "text": "树木已采尽，旧桥还在。今天我从东岸走来，在桥中央看了一会儿水。",
+              "replyToNoteId": null,
+              "stateVersion": 476,
+              "eventCursor": 477,
+              "sharedAtUtc": "2026-10-26T04:58:59.4231885+00:00",
+              "position": [
+                18,
+                12
+              ],
+              "inventoryWood": 0,
+              "capabilityVersion": 1
+            },
+            {
+              "noteId": "n1f837f35ff4e49548ceb17a3de4609fd",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "authorActorId": "a3",
+              "operatorId": "declared-third",
+              "commandId": "76e951fc8db542169f50ae37381ba10b",
+              "text": "读到你在桥中央看水，我也来停了一会儿。桥不是新的，今天的相遇是新的。",
+              "replyToNoteId": "nd82d4590c877499d8ac290bad573c568",
+              "stateVersion": 517,
+              "eventCursor": 518,
+              "sharedAtUtc": "2026-10-26T04:59:03.0137497+00:00",
+              "position": [
+                18,
+                12
+              ],
+              "inventoryWood": 0,
+              "capabilityVersion": 1
+            }
+          ]
+        },
+        "materialTransfer": {
+          "version": 1,
+          "resource": "wood",
+          "maxQuantity": 12,
+          "reach": 1.6,
+          "recipientConfirmation": false
+        },
+        "recentTransfers": {
+          "items": [],
+          "limit": 20,
+          "truncated": false
+        },
+        "commandBinding": {
+          "version": 1,
+          "required": true,
+          "header": "World-Instance-Id"
+        },
+        "commandConcurrency": {
+          "version": 1,
+          "supportedModes": [
+            "actor-state-v1"
+          ]
+        }
+      },
+      "audit": {
+        "schemaVersion": 11,
+        "source": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 134197,
+          "enabled_at_ms": 21047,
+          "next_production_ms": 141047,
+          "production_period": 11,
+          "generated_wood": 27,
+          "stock_wood": 3
+        },
+        "issuedWood": 39,
+        "inventoryWood": 15,
+        "embodiedWood": 21,
+        "sourceWood": 3,
+        "wildWood": 0,
+        "stateVersion": 748,
+        "receipts": 732,
+        "originalReceiptsPreserved": 616,
+        "originalEventsPreserved": 624,
+        "notes": 2,
+        "entities": 6,
+        "requests": 116,
+        "processStopped": {
+          "pid": 4067239,
+          "exitCode": 0
+        },
+        "allStartedProcessesExited": true
+      },
+      "finiteObservedActivityNotLongTermProof": true
+    }
+  },
+  "worlds": [
+    {
+      "name": "natural",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T055809257311Z/natural",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-preflight/20261026T054234754936Z",
+      "branch": false,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    }
+  ],
+  "actualModelCalls": 0,
+  "naturalDirectSqlEdits": false,
+  "naturalClockControlled": false,
+  "originalSourceFilesUnchanged": true,
+  "frozenPreflightFilesUnchanged": true,
+  "allStartedProcessesExited": true
+}

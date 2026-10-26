@@ -239,6 +239,8 @@ def _validate_goals(spec, observed, *, recovering=False):
         if 'materialAccess' in goal and (not material.supported(observed)
                                          or preconditions.select_mode(observed) != preconditions.ACTOR_STATE):
             raise ValueError('Material access requires the protected r10 capability and declared actor')
+        if 'materialAccess' in goal and not recovering:
+            material.accept_observation(observed)
         if 'buildRecipeId' in goal and not free_movement:
             raise ValueError('Explicit construction goals require a continuous world')
         if 'transfer' in goal and (not transfer.supported(observed) or preconditions.select_mode(observed) is None
@@ -500,14 +502,17 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
         state = json.loads(path.read_text()) if path.exists() else None
         endpoint = {"url": client.url.rstrip("/"), "prefix": client.prefix}
         note_task = any('entityNote' in g for g in spec['goals'])
+        material_task = any('materialAccess' in g for g in spec['goals'])
+        startup_kind = entity_notes.STARTUP if note_task else material.STARTUP if material_task else None
         startup = None
-        if isinstance(state, dict) and (state.get('kind') == entity_notes.STARTUP or note_task and '_state' not in state):
-            if not note_task:
-                raise ValueError('Unbound note startup cannot become a different task')
-            entity_notes.validate_startup(state, spec, endpoint)
+        if isinstance(state, dict) and (state.get('kind') in (entity_notes.STARTUP, material.STARTUP)
+                                       or startup_kind and '_state' not in state):
+            if startup_kind is None:
+                raise ValueError('Unbound startup cannot become a different task')
+            entity_notes.validate_startup(state, spec, endpoint, kind=startup_kind)
             startup, state = state, None
-        elif state is None and note_task:
-            startup = entity_notes.new_startup(spec, endpoint, time.time())
+        elif state is None and startup_kind:
+            startup = entity_notes.new_startup(spec, endpoint, time.time(), kind=startup_kind)
             _save(path, startup)
         if state is not None:
             saved = state["_state"]
@@ -596,6 +601,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 state['budget']['used']['queries'] += 1
                 if 'entityNotesBinding' in state['_state']:
                     state['_state']['entityNoteQueries'].append({'index': state['budget']['used']['queries'], 'kind': kind})
+                if state['_state'].get('materialAccessTrackingVersion') == 1:
+                    state['_state']['materialAccessQueries'].append({'index': state['budget']['used']['queries'], 'kind': kind})
                 save()  # Charge attempts before transport; a restart cannot replenish reads.
             return call()
 
@@ -604,6 +611,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             actual, original = bind(observed), state['_state']['binding']
             if any(actual[k] != original.get(k) for k in ('worldId', 'actorId', 'rulesVersion', 'instanceId')):
                 raise ValueError("State belongs to a different world, actor or rules version")
+            if material_task:
+                material.accept_observation(observed, state['_state'])
             # A user-supplied new endpoint is accepted only after the original
             # persistent instance and actor have been authenticated there.
             if original.get('instanceId') is not None:
@@ -635,7 +644,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 _save(path, startup)
                 for name in ('seconds', 'queries'):
                     if startup['used'][name] >= spec['budgets'][name]:
-                        raise entity_notes.StartupBudget('Entity note startup budget exhausted: ' + name)
+                        raise entity_notes.StartupBudget('Query-budgeted startup budget exhausted: ' + name)
                 startup['used']['queries'] += 1
                 startup['queries'].append({'index': startup['used']['queries'], 'kind': 'observation'})
                 _save(path, startup)  # The very first failed read consumes the same durable budget.
@@ -698,7 +707,10 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                                                           'preconditionMode': mode}, "startedEpoch": startup['startedEpoch'] if startup else time.time(),
                                 "pending": None, "initial": public, "decisionStarted": False,
                                 **({'entityNotesBinding': entity_notes.binding(observed), 'entityNoteQueries': deepcopy(startup['queries'])}
-                                   if any('entityNote' in g for g in spec['goals']) else {})}}
+                                   if note_task else {}),
+                                **({'materialAccessTrackingVersion': 1, 'materialAccessQueries': deepcopy(startup['queries']),
+                                    'materialProductionPolicy': deepcopy(observed['materialAccess'].get('productionPolicy'))}
+                                   if material_task else {})}}
             save()
 
         used, limits, facts = state["budget"]["used"], state["budget"]["limits"], state["facts"]
@@ -1100,7 +1112,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                         cursor = result.get('eventCursor')
                         if preconditions.integer(cursor) and cursor > 0:
                             try:
-                                event_status, envelope = query(lambda: client.request('GET', client.prefix + '/events?after=' + str(cursor - 1)))
+                                event_status, envelope = query(lambda: client.request('GET', client.prefix + '/events?after=' + str(cursor - 1)), 'material_event')
                             except material.QueryBudget:
                                 return finish('budget_exhausted', 'queries_pending_retained')
                             except (OSError, RuntimeError, ValueError):

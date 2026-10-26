@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "testsRun": 1,
+  "results": [
+    {
+      "name": "run",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 403, in __init__\n    testMethod = getattr(self, methodName)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'ContinuousMaterialMissionAcceptance' object has no attribute 'ContinuousMaterialMissionAcceptance.test_01_actual_cli_fifth_platform_and_later_production'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_material_mission_api.py\", line 412, in <module>\n    suite = (unittest.TestSuite(ContinuousMaterialMissionAcceptance(name) for name in sys.argv[1:]) if sys.argv[1:]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/unittest/suite.py\", line 24, in __init__\n    self.addTests(tests)\n  File \"/usr/lib/python3.12/unittest/suite.py\", line 57, in addTests\n    for test in tests:\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_material_mission_api.py\", line 412, in <genexpr>\n    suite = (unittest.TestSuite(ContinuousMaterialMissionAcceptance(name) for name in sys.argv[1:]) if sys.argv[1:]\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/unittest/case.py\", line 408, in __init__\n    raise ValueError(\"no such test method in %s: %s\" %\nValueError: no such test method in <class '__main__.ContinuousMaterialMissionAcceptance'>: ContinuousMaterialMissionAcceptance.test_01_actual_cli_fifth_platform_and_later_production\n\n\n1 !== 0\n\n    at file:///home/wangjunfeng/%E6%96%87%E6%A1%A3/Workspace/metaverse/tests/browser/continuous-material-resident.mjs:40:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+    }
+  ],
+  "errors": [],
+  "worldRequests": [],
+  "actualModelCalls": 0
+}
