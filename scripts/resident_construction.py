@@ -3,6 +3,7 @@ from copy import deepcopy
 import math
 
 import continuous_navigation as nav
+from command_preconditions import integer, valid_execution
 
 RECIPES = {'platform.v1': ('platform', 3, 1., 1.), 'bridge.v1': ('bridge', 6, 2.4, .8)}
 
@@ -107,7 +108,7 @@ def evidence(receipt, intent, actor, before, observed):
             or type(receipt.get('schemaVersion')) is not int or receipt['schemaVersion'] != 1
             or receipt.get('rulesVersion') != 'r8' or not isinstance(receipt.get('identity'), dict)
             or receipt['identity'].get('actorId') != actor
-            or type(receipt.get('stateVersion')) is not int or receipt['stateVersion'] != intent['expectedStateVersion'] + 1
+            or not valid_execution(receipt, intent) or not integer(before.get('inventoryWood'))
             or observed['stateVersion'] < receipt['stateVersion'] or observed['self']['actorId'] != actor
             or result.get('action') != 'build' or not nav.point(result.get('position')) or result['position'] != position
             or not isinstance(result.get('entityId'), str) or not result['entityId']

@@ -193,6 +193,10 @@ class ContinuousMissionAcceptance(unittest.TestCase):
         peer = self.world.client('a2')
         class Stale(WorldClient):
             changed = False
+            def observe(inner):
+                observed = super().observe()
+                observed.pop('commandConcurrency', None)  # Keep this original strict-mode regression.
+                return observed
             def request(inner, method, path, payload=None, headers=None):
                 if method == 'POST' and not inner.changed:
                     inner.changed = True; observed = peer.observe()

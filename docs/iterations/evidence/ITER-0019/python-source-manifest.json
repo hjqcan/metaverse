@@ -1,0 +1,20 @@
+{
+  "createdAtUtc": "2026-10-26T03:11:19.495038+00:00",
+  "status": "final-product-source-and-reviewed-tests",
+  "coreDllSha256": "de5364860d1b2b8805f3f6ec836008aa4e09ddbb1f7dfa522a8faf355b1dca08",
+  "files": {
+    "scripts/command_preconditions.py": "0bb5d62201bf2eba44a973685b9cc1f8f05a771500e523d88c9aae8206167f55",
+    "scripts/resident_mission.py": "96efd9d87c870d5c336213abba7f77edb2a866684d10f8234e0d4ffaa6df404a",
+    "scripts/continuous_navigation.py": "2e4b835af143710c94d3a3ffaefb01421b1c52da584f0bb3488a51e3dcdee4ab",
+    "scripts/wilderness_materials.py": "f5d00829b3e605a0452e16b8e8ea4575d5c5fdedd7361841f11b2a8f347969c9",
+    "scripts/resident_construction.py": "ac58b35555e50f99742e73e462d946116469ace3b678ac754e2cea528d2a0c93",
+    "scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+    "src/World.Server/wwwroot/resident.js": "671aa3375bbcffc7bd7c302ca51d57331046925d51db508cae77a23eaeab7248",
+    "tests/actor_mission_api.py": "5151c1a1d6dff76df082262fe222e4b1fc43de819fc7c4298e4b9cb15e19e796",
+    "tests/browser/actor-resident.mjs": "0b9d669715ecbb198d9adbb330db7933a868645d175f373bec7a89ea4d5ff83c",
+    "tests/construction_mission_api.py": "e9dc566e333f1eacbd534c128c494b797d5a2dfa2f88c56ee8365eb5a74be646",
+    "tests/continuous_mission_api.py": "e0dfbf6083d2773dff0dc4d978d0493d4ee5ac8db34785b0a3a6d12a33951d3e",
+    "tests/browser/construction-resident.mjs": "17cb054ff759df5c161c28c17eac42fc78c8be93b4e6df9df830d531d322fa3a"
+  },
+  "updatedAtUtc": "2026-10-26T03:15:08.394439+00:00"
+}

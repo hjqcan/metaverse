@@ -52,6 +52,10 @@
     require(Object.hasOwn(statuses, m.status), "报告包含不支持的任务状态。");
     require(integer(w.width) && integer(w.height) && w.width >= 1 && w.height >= 1 && w.width <= 128 && w.height <= 128, "地图尺寸应为 1—128 的整数。");
     const free = continuous(w), maxCommands = free ? 1000 : 100;
+    const actorState = m.preconditionMode === "actor-state-v1";
+    require(m.preconditionMode === undefined || m.preconditionMode === null || actorState, "任务的动作前置模式不受支持。");
+    require(!actorState || free && m.rulesVersion === "r8" && /^w_[0-9a-f]{32}$/.test(m.worldInstanceId)
+      && w.instanceId === m.worldInstanceId, "按居民状态执行的报告必须绑定原连续世界实例。");
     const cell = (value) => Array.isArray(value) && value.length === 2 && value.every(free ? number : integer) && value[0] < w.width && value[1] < w.height;
     require(!free || m.rulesVersion === "r8" && m.arrivalTolerance === .06, "连续坐标报告需要 r8 规则与 0.06 米到达容差。");
     require(cell(m.origin), "任务起点不是有效图内坐标。");
@@ -115,6 +119,22 @@
       require(step.position === null || cell(step.position), `${prefix}的位置应为有效图内坐标或 null。`);
       require(step.stateVersion === null || integer(step.stateVersion), `${prefix}的状态版本格式不正确。`);
       require(step.inventoryWood === null || integer(step.inventoryWood), `${prefix}的木材库存格式不正确。`);
+      if (actorState) {
+        require(step.preconditionMode === m.preconditionMode && integer(step.expectedStateVersion)
+          && ["walk", "gather", "build"].includes(step.action.type), `${prefix}缺少原命令的前置模式或观察版本。`);
+        if (["committed", "rejected"].includes(step.status)) {
+          const execution = step.execution;
+          require(object(execution) && execution.preconditionMode === m.preconditionMode
+            && integer(execution.observedStateVersion) && execution.observedStateVersion === step.expectedStateVersion
+            && integer(execution.appliedOnStateVersion), `${prefix}的原命令执行依据不完整。`);
+          require(step.status === "committed"
+            ? execution.appliedOnStateVersion >= step.expectedStateVersion && step.stateVersion === execution.appliedOnStateVersion + 1
+            : step.stateVersion === execution.appliedOnStateVersion
+              && (execution.appliedOnStateVersion >= step.expectedStateVersion || step.errorCode === "STATE_VERSION_AHEAD"),
+          `${prefix}的实际执行版本与终态不一致。`);
+        } else require(step.execution === null, `${prefix}结果未确认，不能带有已确认执行依据。`);
+      } else require(!Object.hasOwn(step, "preconditionMode") && !Object.hasOwn(step, "execution"),
+        `${prefix}的执行模式与原任务不一致。`);
       if (step.action.quantity !== undefined) require(integer(step.action.quantity), `${prefix}的材料数量须为非负整数。`);
       if (step.action.position !== undefined) require(cell(step.action.position), `${prefix}的动作位置不是图内整数坐标。`);
       if (step.action.at !== undefined) require(cell(step.action.at), `${prefix}的建造位置不是有效图内坐标。`);

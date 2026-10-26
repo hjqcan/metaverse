@@ -1,0 +1,1638 @@
+{
+  "schemaVersion": 1,
+  "kind": "resident-mission-report",
+  "mission": {
+    "id": "construction-platform",
+    "objective": "在指定地点建造公共设施，走到设施中心后返回起点。",
+    "allowBuild": true,
+    "allowGather": true,
+    "arrivalTolerance": 0.06,
+    "sharePostcard": false,
+    "paintMosaic": false,
+    "proposeMosaic": false,
+    "reviewMosaicProposal": null,
+    "actorId": "a1",
+    "worldId": "foundation-01",
+    "worldInstanceId": "w_9e156ad4286e46ba823f85327b954fdf",
+    "preconditionMode": "actor-state-v1",
+    "rulesVersion": "r8",
+    "origin": [
+      5,
+      7
+    ],
+    "goal": {
+      "id": "construction",
+      "label": "公共平台",
+      "target": [
+        9.2,
+        12.4
+      ],
+      "buildRecipeId": "platform.v1"
+    },
+    "status": "completed",
+    "reason": "round_trip_verified"
+  },
+  "decision": {
+    "goalId": "construction",
+    "reason": "测试替身选择，不能计为模型推理。",
+    "provider": {
+      "kind": "test-double",
+      "model": "none",
+      "usage": {}
+    }
+  },
+  "budget": {
+    "limits": {
+      "commands": 250,
+      "wood": 3,
+      "seconds": 600,
+      "modelCalls": 1
+    },
+    "used": {
+      "commands": 29,
+      "wood": 3,
+      "modelCalls": 1,
+      "seconds": 13.284076929092407
+    }
+  },
+  "facts": {
+    "goalReached": true,
+    "returned": true,
+    "activityCompleted": false,
+    "activityVisit": null,
+    "postcardShared": false,
+    "postcard": null,
+    "mosaicPainted": false,
+    "mosaicEdit": null,
+    "mosaicProposed": false,
+    "mosaicProposal": null,
+    "mosaicReviewed": false,
+    "mosaicReview": null,
+    "startStateVersion": 0,
+    "endStateVersion": 58,
+    "woodClaimed": 0,
+    "createdEntityIds": [
+      "e72365496f0a847a89b00d3ffb1e00eb6"
+    ],
+    "verifiedAtUtc": "2026-10-26T03:11:33.181063+00:00",
+    "woodGathered": 3,
+    "constructionBuilt": true,
+    "construction": {
+      "commandId": "b1cb4bc6163e4ce18691bac3160bceca",
+      "entityId": "e72365496f0a847a89b00d3ffb1e00eb6",
+      "recipeId": "platform.v1",
+      "definitionId": "platform",
+      "ownerActorId": "a1",
+      "position": [
+        9.2,
+        12.4
+      ],
+      "woodSpent": 3,
+      "stateVersion": 22
+    }
+  },
+  "steps": [
+    {
+      "index": 1,
+      "commandId": "1ffb4e5c89594fe2ae703d5be4445542",
+      "action": {
+        "type": "gather",
+        "nodeId": "tree-west-north"
+      },
+      "reason": "采集本次指定设施所需木材",
+      "status": "committed",
+      "stateVersion": 2,
+      "position": [
+        5,
+        7
+      ],
+      "inventoryWood": 1,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 0,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 0,
+        "appliedOnStateVersion": 1
+      },
+      "httpStatus": 200,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 2,
+      "commandId": "f61adeee51614e0597e68334946c2c76",
+      "action": {
+        "type": "gather",
+        "nodeId": "tree-west-north"
+      },
+      "reason": "采集本次指定设施所需木材",
+      "status": "committed",
+      "stateVersion": 4,
+      "position": [
+        5,
+        7
+      ],
+      "inventoryWood": 2,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 2,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 2,
+        "appliedOnStateVersion": 3
+      },
+      "httpStatus": 200,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 3,
+      "commandId": "edbf7445b5c94e8abd3d42a493378d89",
+      "action": {
+        "type": "gather",
+        "nodeId": "tree-west-north"
+      },
+      "reason": "采集本次指定设施所需木材",
+      "status": "committed",
+      "stateVersion": 6,
+      "position": [
+        5,
+        7
+      ],
+      "inventoryWood": 3,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 4,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 4,
+        "appliedOnStateVersion": 5
+      },
+      "httpStatus": 200,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 4,
+      "commandId": "51bdb30890ce47cda6334150b165cc61",
+      "action": {
+        "type": "walk",
+        "to": [
+          7.309062910374044,
+          9.968795170480917
+        ]
+      },
+      "reason": "走到指定建造地点旁",
+      "status": "committed",
+      "stateVersion": 8,
+      "position": [
+        5.368364368108952,
+        7.473611330425796
+      ],
+      "inventoryWood": 3,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 6,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 6,
+        "appliedOnStateVersion": 7
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 5,
+      "commandId": "3d271d0913de4088b74afd22febb324e",
+      "action": {
+        "type": "walk",
+        "to": [
+          7.309062910374044,
+          9.968795170480917
+        ]
+      },
+      "reason": "走到指定建造地点旁",
+      "status": "committed",
+      "stateVersion": 10,
+      "position": [
+        5.736728736217904,
+        7.947222660851592
+      ],
+      "inventoryWood": 3,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 8,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 8,
+        "appliedOnStateVersion": 9
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 6,
+      "commandId": "837dfaebe8e24ef88ffe694bb5060113",
+      "action": {
+        "type": "walk",
+        "to": [
+          7.309062910374044,
+          9.968795170480917
+        ]
+      },
+      "reason": "走到指定建造地点旁",
+      "status": "committed",
+      "stateVersion": 12,
+      "position": [
+        6.105093104326856,
+        8.420833991277387
+      ],
+      "inventoryWood": 3,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 10,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 10,
+        "appliedOnStateVersion": 11
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 7,
+      "commandId": "f9c1bb44051e492a9f473f132a20b5f2",
+      "action": {
+        "type": "walk",
+        "to": [
+          7.309062910374044,
+          9.968795170480917
+        ]
+      },
+      "reason": "走到指定建造地点旁",
+      "status": "committed",
+      "stateVersion": 14,
+      "position": [
+        6.473457472435808,
+        8.894445321703184
+      ],
+      "inventoryWood": 3,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 12,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 12,
+        "appliedOnStateVersion": 13
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 8,
+      "commandId": "bbe51e1a17514fed98c08e48ab842d39",
+      "action": {
+        "type": "walk",
+        "to": [
+          7.309062910374044,
+          9.968795170480917
+        ]
+      },
+      "reason": "走到指定建造地点旁",
+      "status": "committed",
+      "stateVersion": 16,
+      "position": [
+        6.8418218405447595,
+        9.36805665212898
+      ],
+      "inventoryWood": 3,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 14,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 14,
+        "appliedOnStateVersion": 15
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 9,
+      "commandId": "8fae0d23eab24c04a422e1a6271abd2a",
+      "action": {
+        "type": "walk",
+        "to": [
+          7.309062910374044,
+          9.968795170480917
+        ]
+      },
+      "reason": "走到指定建造地点旁",
+      "status": "committed",
+      "stateVersion": 18,
+      "position": [
+        7.210186208653711,
+        9.841667982554775
+      ],
+      "inventoryWood": 3,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 16,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 16,
+        "appliedOnStateVersion": 17
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 10,
+      "commandId": "894b62798aa0443fa75822d6fe05b1dc",
+      "action": {
+        "type": "walk",
+        "to": [
+          7.309062910374044,
+          9.968795170480917
+        ]
+      },
+      "reason": "走到指定建造地点旁",
+      "status": "committed",
+      "stateVersion": 20,
+      "position": [
+        7.309062910374044,
+        9.968795170480917
+      ],
+      "inventoryWood": 3,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 18,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 18,
+        "appliedOnStateVersion": 19
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 11,
+      "commandId": "b1cb4bc6163e4ce18691bac3160bceca",
+      "action": {
+        "type": "build",
+        "recipeId": "platform.v1",
+        "at": [
+          9.2,
+          12.4
+        ]
+      },
+      "reason": "建造本任务选定的设施",
+      "status": "committed",
+      "stateVersion": 22,
+      "position": [
+        7.309062910374044,
+        9.968795170480917
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 20,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 20,
+        "appliedOnStateVersion": 21
+      },
+      "httpStatus": 200,
+      "entityId": "e72365496f0a847a89b00d3ffb1e00eb6",
+      "evidenceSource": "command_receipt_and_entity"
+    },
+    {
+      "index": 12,
+      "commandId": "c3c01d27010f41bcb63ce28ac2bcfb35",
+      "action": {
+        "type": "walk",
+        "to": [
+          9.2,
+          12.4
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 24,
+      "position": [
+        7.677427278482996,
+        10.442406500906712
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 22,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 22,
+        "appliedOnStateVersion": 23
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 13,
+      "commandId": "22758e3d911c43cf97bdc3618ca7b0fc",
+      "action": {
+        "type": "walk",
+        "to": [
+          9.2,
+          12.4
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 26,
+      "position": [
+        8.04579164659195,
+        10.916017831332507
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 24,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 24,
+        "appliedOnStateVersion": 25
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 14,
+      "commandId": "e2e18ef50d0b4a00af006bbf0229c68f",
+      "action": {
+        "type": "walk",
+        "to": [
+          9.2,
+          12.4
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 28,
+      "position": [
+        8.414156014700902,
+        11.389629161758302
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 26,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 26,
+        "appliedOnStateVersion": 27
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 15,
+      "commandId": "2746ae804b9c4a9596e0d15d89416d34",
+      "action": {
+        "type": "walk",
+        "to": [
+          9.2,
+          12.4
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 30,
+      "position": [
+        8.782520382809853,
+        11.863240492184097
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 28,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 28,
+        "appliedOnStateVersion": 29
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 16,
+      "commandId": "bd3e18924fba4e83abdc7c0bb65bba1f",
+      "action": {
+        "type": "walk",
+        "to": [
+          9.2,
+          12.4
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 32,
+      "position": [
+        9.150884750918806,
+        12.336851822609892
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 30,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 30,
+        "appliedOnStateVersion": 31
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 17,
+      "commandId": "1535ae959ce5411c804e5e94cfda3b4e",
+      "action": {
+        "type": "walk",
+        "to": [
+          9.2,
+          12.4
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 34,
+      "position": [
+        9.2,
+        12.4
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 32,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 32,
+        "appliedOnStateVersion": 33
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 18,
+      "commandId": "6a6d2731a90349eab52d92cda710e07c",
+      "action": {
+        "type": "walk",
+        "to": [
+          5,
+          7
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 36,
+      "position": [
+        8.831635631891047,
+        11.926388669574205
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 34,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 34,
+        "appliedOnStateVersion": 35
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 19,
+      "commandId": "cf7d11881d684e9f863757d10068542e",
+      "action": {
+        "type": "walk",
+        "to": [
+          5,
+          7
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 38,
+      "position": [
+        8.463271263782094,
+        11.45277733914841
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 36,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 36,
+        "appliedOnStateVersion": 37
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 20,
+      "commandId": "cae6660e8f7142638e8bca3e27a5d4fe",
+      "action": {
+        "type": "walk",
+        "to": [
+          5,
+          7
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 40,
+      "position": [
+        8.094906895673141,
+        10.979166008722615
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 38,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 38,
+        "appliedOnStateVersion": 39
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 21,
+      "commandId": "ac743357999348678c51f43791b2c56e",
+      "action": {
+        "type": "walk",
+        "to": [
+          5,
+          7
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 42,
+      "position": [
+        7.726542527564189,
+        10.50555467829682
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 40,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 40,
+        "appliedOnStateVersion": 41
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 22,
+      "commandId": "281c989511d34ae0a82ae763a6bca71a",
+      "action": {
+        "type": "walk",
+        "to": [
+          5,
+          7
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 44,
+      "position": [
+        7.358178159455237,
+        10.031943347871024
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 42,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 42,
+        "appliedOnStateVersion": 43
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 23,
+      "commandId": "4d805c3dc361465dab8e0fb8118e2581",
+      "action": {
+        "type": "walk",
+        "to": [
+          5,
+          7
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 46,
+      "position": [
+        6.989813791346285,
+        9.558332017445228
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 44,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 44,
+        "appliedOnStateVersion": 45
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 24,
+      "commandId": "6e1ed2b8544e491ea993b1e26a0fc5fd",
+      "action": {
+        "type": "walk",
+        "to": [
+          5,
+          7
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 48,
+      "position": [
+        6.621449423237333,
+        9.084720687019432
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 46,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 46,
+        "appliedOnStateVersion": 47
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 25,
+      "commandId": "86adc0d6756f4cfb9a0520aed5f82a7d",
+      "action": {
+        "type": "walk",
+        "to": [
+          5,
+          7
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 50,
+      "position": [
+        6.253085055128381,
+        8.611109356593635
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 48,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 48,
+        "appliedOnStateVersion": 49
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 26,
+      "commandId": "da320023e8d2498f918716292f0ae7b4",
+      "action": {
+        "type": "walk",
+        "to": [
+          5,
+          7
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 52,
+      "position": [
+        5.8847206870194295,
+        8.13749802616784
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 50,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 50,
+        "appliedOnStateVersion": 51
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 27,
+      "commandId": "638c7a76b4844f98a28e5b840b477374",
+      "action": {
+        "type": "walk",
+        "to": [
+          5,
+          7
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 54,
+      "position": [
+        5.516356318910478,
+        7.663886695742044
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 52,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 52,
+        "appliedOnStateVersion": 53
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 28,
+      "commandId": "082cb0bb8c28450494f0f55596f23d34",
+      "action": {
+        "type": "walk",
+        "to": [
+          5,
+          7
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 56,
+      "position": [
+        5.147991950801526,
+        7.190275365316248
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 54,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 54,
+        "appliedOnStateVersion": 55
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 29,
+      "commandId": "dccae37da146477799ff8893d52e6bb1",
+      "action": {
+        "type": "walk",
+        "to": [
+          5,
+          7
+        ]
+      },
+      "reason": "沿连续地形前往当前目标",
+      "status": "committed",
+      "stateVersion": 58,
+      "position": [
+        5,
+        7
+      ],
+      "inventoryWood": 0,
+      "preconditionMode": "actor-state-v1",
+      "expectedStateVersion": 56,
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 56,
+        "appliedOnStateVersion": 57
+      },
+      "httpStatus": 200,
+      "blocked": false,
+      "evidenceSource": "command_receipt"
+    }
+  ],
+  "feedback": {
+    "summary": "已核验指定设施建成、到达与返回",
+    "issues": [],
+    "suggestions": []
+  },
+  "world": {
+    "id": "foundation-01",
+    "instanceId": "w_9e156ad4286e46ba823f85327b954fdf",
+    "width": 32,
+    "height": 24,
+    "coordinateSystem": "continuous-xz",
+    "bounds": [
+      0,
+      0,
+      32,
+      24
+    ],
+    "entities": [
+      {
+        "entityId": "e72365496f0a847a89b00d3ffb1e00eb6",
+        "definitionId": "platform",
+        "definitionVersion": 1,
+        "rulesVersion": "r8",
+        "ownerActorId": "a1",
+        "position": [
+          9.2,
+          12.4
+        ],
+        "embodiedWood": 3
+      }
+    ],
+    "terrain": {
+      "version": 1,
+      "river": {
+        "polygon": [
+          [
+            14.6,
+            0
+          ],
+          [
+            14.506445312499999,
+            0.5
+          ],
+          [
+            14.364062500000001,
+            1
+          ],
+          [
+            14.1927734375,
+            1.5
+          ],
+          [
+            14.0125,
+            2
+          ],
+          [
+            13.8431640625,
+            2.5
+          ],
+          [
+            13.7046875,
+            3
+          ],
+          [
+            13.6169921875,
+            3.5
+          ],
+          [
+            13.6,
+            4
+          ],
+          [
+            13.658789062499999,
+            4.5
+          ],
+          [
+            13.7765625,
+            5
+          ],
+          [
+            13.940429687499998,
+            5.5
+          ],
+          [
+            14.1375,
+            6
+          ],
+          [
+            14.3548828125,
+            6.5
+          ],
+          [
+            14.579687499999999,
+            7
+          ],
+          [
+            14.799023437499999,
+            7.5
+          ],
+          [
+            14.999999999999998,
+            8
+          ],
+          [
+            15.208203124999999,
+            8.5
+          ],
+          [
+            15.446874999999997,
+            9
+          ],
+          [
+            15.699609375,
+            9.5
+          ],
+          [
+            15.949999999999998,
+            10
+          ],
+          [
+            16.181640625,
+            10.5
+          ],
+          [
+            16.378125,
+            11
+          ],
+          [
+            16.523046875,
+            11.5
+          ],
+          [
+            16.6,
+            12
+          ],
+          [
+            16.604199218750004,
+            12.5
+          ],
+          [
+            16.54921875,
+            13
+          ],
+          [
+            16.44619140625,
+            13.5
+          ],
+          [
+            16.30625,
+            14
+          ],
+          [
+            16.14052734375,
+            14.5
+          ],
+          [
+            15.960156250000002,
+            15
+          ],
+          [
+            15.77626953125,
+            15.5
+          ],
+          [
+            15.6,
+            16
+          ],
+          [
+            15.411425781249998,
+            16.5
+          ],
+          [
+            15.191406250000002,
+            17
+          ],
+          [
+            14.95224609375,
+            17.5
+          ],
+          [
+            14.706249999999999,
+            18
+          ],
+          [
+            14.46572265625,
+            18.5
+          ],
+          [
+            14.24296875,
+            19
+          ],
+          [
+            14.050292968749998,
+            19.5
+          ],
+          [
+            13.9,
+            20
+          ],
+          [
+            13.79345703125,
+            20.5
+          ],
+          [
+            13.719531250000001,
+            21
+          ],
+          [
+            13.67177734375,
+            21.5
+          ],
+          [
+            13.64375,
+            22
+          ],
+          [
+            13.62900390625,
+            22.5
+          ],
+          [
+            13.621093750000002,
+            23
+          ],
+          [
+            13.613574218750003,
+            23.5
+          ],
+          [
+            13.600000000000003,
+            24
+          ],
+          [
+            16.400000000000002,
+            24
+          ],
+          [
+            16.413574218750004,
+            23.5
+          ],
+          [
+            16.42109375,
+            23
+          ],
+          [
+            16.42900390625,
+            22.5
+          ],
+          [
+            16.44375,
+            22
+          ],
+          [
+            16.47177734375,
+            21.5
+          ],
+          [
+            16.51953125,
+            21
+          ],
+          [
+            16.59345703125,
+            20.5
+          ],
+          [
+            16.7,
+            20
+          ],
+          [
+            16.850292968749997,
+            19.5
+          ],
+          [
+            17.04296875,
+            19
+          ],
+          [
+            17.26572265625,
+            18.5
+          ],
+          [
+            17.506249999999998,
+            18
+          ],
+          [
+            17.75224609375,
+            17.5
+          ],
+          [
+            17.99140625,
+            17
+          ],
+          [
+            18.211425781249996,
+            16.5
+          ],
+          [
+            18.4,
+            16
+          ],
+          [
+            18.57626953125,
+            15.5
+          ],
+          [
+            18.76015625,
+            15
+          ],
+          [
+            18.94052734375,
+            14.5
+          ],
+          [
+            19.106249999999996,
+            14
+          ],
+          [
+            19.24619140625,
+            13.5
+          ],
+          [
+            19.34921875,
+            13
+          ],
+          [
+            19.40419921875,
+            12.5
+          ],
+          [
+            19.4,
+            12
+          ],
+          [
+            19.323046874999996,
+            11.5
+          ],
+          [
+            19.178124999999998,
+            11
+          ],
+          [
+            18.981640624999997,
+            10.5
+          ],
+          [
+            18.749999999999996,
+            10
+          ],
+          [
+            18.499609375,
+            9.5
+          ],
+          [
+            18.246874999999996,
+            9
+          ],
+          [
+            18.008203124999998,
+            8.5
+          ],
+          [
+            17.799999999999997,
+            8
+          ],
+          [
+            17.599023437499998,
+            7.5
+          ],
+          [
+            17.3796875,
+            7
+          ],
+          [
+            17.1548828125,
+            6.5
+          ],
+          [
+            16.9375,
+            6
+          ],
+          [
+            16.740429687499997,
+            5.5
+          ],
+          [
+            16.5765625,
+            5
+          ],
+          [
+            16.4587890625,
+            4.5
+          ],
+          [
+            16.4,
+            4
+          ],
+          [
+            16.4169921875,
+            3.5
+          ],
+          [
+            16.5046875,
+            3
+          ],
+          [
+            16.6431640625,
+            2.5
+          ],
+          [
+            16.8125,
+            2
+          ],
+          [
+            16.9927734375,
+            1.5
+          ],
+          [
+            17.1640625,
+            1
+          ],
+          [
+            17.3064453125,
+            0.5
+          ],
+          [
+            17.4,
+            0
+          ]
+        ],
+        "centerline": [
+          [
+            16,
+            0
+          ],
+          [
+            15.906445312499999,
+            0.5
+          ],
+          [
+            15.764062500000001,
+            1
+          ],
+          [
+            15.5927734375,
+            1.5
+          ],
+          [
+            15.4125,
+            2
+          ],
+          [
+            15.2431640625,
+            2.5
+          ],
+          [
+            15.1046875,
+            3
+          ],
+          [
+            15.0169921875,
+            3.5
+          ],
+          [
+            15,
+            4
+          ],
+          [
+            15.058789062499999,
+            4.5
+          ],
+          [
+            15.176562500000001,
+            5
+          ],
+          [
+            15.340429687499999,
+            5.5
+          ],
+          [
+            15.5375,
+            6
+          ],
+          [
+            15.7548828125,
+            6.5
+          ],
+          [
+            15.979687499999999,
+            7
+          ],
+          [
+            16.1990234375,
+            7.5
+          ],
+          [
+            16.4,
+            8
+          ],
+          [
+            16.608203125,
+            8.5
+          ],
+          [
+            16.846874999999997,
+            9
+          ],
+          [
+            17.099609375,
+            9.5
+          ],
+          [
+            17.349999999999998,
+            10
+          ],
+          [
+            17.581640625,
+            10.5
+          ],
+          [
+            17.778125,
+            11
+          ],
+          [
+            17.923046874999997,
+            11.5
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18.004199218750003,
+            12.5
+          ],
+          [
+            17.94921875,
+            13
+          ],
+          [
+            17.84619140625,
+            13.5
+          ],
+          [
+            17.706249999999997,
+            14
+          ],
+          [
+            17.54052734375,
+            14.5
+          ],
+          [
+            17.360156250000003,
+            15
+          ],
+          [
+            17.17626953125,
+            15.5
+          ],
+          [
+            17,
+            16
+          ],
+          [
+            16.811425781249998,
+            16.5
+          ],
+          [
+            16.591406250000002,
+            17
+          ],
+          [
+            16.35224609375,
+            17.5
+          ],
+          [
+            16.10625,
+            18
+          ],
+          [
+            15.86572265625,
+            18.5
+          ],
+          [
+            15.64296875,
+            19
+          ],
+          [
+            15.450292968749999,
+            19.5
+          ],
+          [
+            15.3,
+            20
+          ],
+          [
+            15.19345703125,
+            20.5
+          ],
+          [
+            15.119531250000001,
+            21
+          ],
+          [
+            15.07177734375,
+            21.5
+          ],
+          [
+            15.043750000000001,
+            22
+          ],
+          [
+            15.02900390625,
+            22.5
+          ],
+          [
+            15.021093750000002,
+            23
+          ],
+          [
+            15.013574218750003,
+            23.5
+          ],
+          [
+            15.000000000000004,
+            24
+          ]
+        ],
+        "halfWidth": 1.4
+      },
+      "obstacles": [
+        {
+          "id": "rock-west",
+          "kind": "rock",
+          "position": [
+            10.5,
+            8.5
+          ],
+          "radius": 1.05
+        },
+        {
+          "id": "rock-south",
+          "kind": "rock",
+          "position": [
+            5.6,
+            19.7
+          ],
+          "radius": 0.8
+        },
+        {
+          "id": "rock-east",
+          "kind": "rock",
+          "position": [
+            23,
+            12.5
+          ],
+          "radius": 1.2
+        },
+        {
+          "id": "rock-north",
+          "kind": "rock",
+          "position": [
+            21.8,
+            3.2
+          ],
+          "radius": 0.75
+        }
+      ]
+    },
+    "resourceNodes": [
+      {
+        "nodeId": "tree-east-north",
+        "kind": "tree",
+        "position": [
+          25.4,
+          5.8
+        ],
+        "initialWood": 3,
+        "remainingWood": 3
+      },
+      {
+        "nodeId": "tree-east-south",
+        "kind": "tree",
+        "position": [
+          25.7,
+          18.2
+        ],
+        "initialWood": 3,
+        "remainingWood": 3
+      },
+      {
+        "nodeId": "tree-west-north",
+        "kind": "tree",
+        "position": [
+          6.2,
+          7.8
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-west-south",
+        "kind": "tree",
+        "position": [
+          9.2,
+          16.3
+        ],
+        "initialWood": 3,
+        "remainingWood": 3
+      }
+    ],
+    "mosaic": null,
+    "mosaicProposals": []
+  }
+}

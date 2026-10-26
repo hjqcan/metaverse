@@ -3,6 +3,7 @@ from copy import deepcopy
 
 from passage_agent import plan
 from math import isfinite
+from command_preconditions import ACTOR_STATE, integer, valid_execution
 
 
 def collection_plan(observed, quantity):
@@ -47,16 +48,22 @@ def valid_gather_receipt(receipt, intent, actor, before):
     """Match the original cut, including pre-submit quantities, after reconnect."""
     result = receipt.get("result")
     if (not isinstance(result, dict) or not isinstance(before, dict)
-            or not isinstance(receipt.get("identity"), dict)):
+            or not isinstance(receipt.get("identity"), dict)
+            or not integer(before.get('remainingWood')) or not integer(before.get('inventoryWood'))
+            or not isinstance(before.get('position'), list) or len(before['position']) != 2):
         return False
+    remaining = before['remainingWood']
+    if intent.get('preconditionMode') == ACTOR_STATE:
+        remaining = result.get('remainingWoodBefore')
+        if not integer(remaining) or not 1 <= remaining <= before['remainingWood']:
+            return False
     expected = {"action": "gather", "nodeId": intent["action"]["nodeId"], "quantity": 1,
-                "position": before["position"], "remainingWood": before["remainingWood"] - 1,
+                "position": before["position"], "remainingWood": remaining - 1,
                 "inventoryWood": before["inventoryWood"] + 1}
     return (type(receipt.get("schemaVersion")) is int and receipt["schemaVersion"] == 1
             and receipt.get("rulesVersion") == intent["rulesVersion"] in ("r7", "r8")
             and receipt.get("identity", {}).get("actorId") == actor
-            and type(receipt.get("stateVersion")) is int
-            and receipt["stateVersion"] == intent["expectedStateVersion"] + 1
+            and valid_execution(receipt, intent)
             and all(result.get(key) == value and type(result.get(key)) is type(value)
                     for key, value in expected.items())
             and all(type(n) is int if intent['rulesVersion'] == 'r7' else type(n) in (int, float) and isfinite(n)

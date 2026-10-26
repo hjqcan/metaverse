@@ -26,6 +26,7 @@ from entry_guide import public_entry_guide
 from wilderness_materials import collection_plan, valid_gather_receipt
 import continuous_navigation as continuous
 import resident_construction as construction
+import command_preconditions as preconditions
 
 
 def _utc():
@@ -450,6 +451,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             saved = state["_state"]
             if saved["spec"] != spec:
                 raise ValueError("State belongs to a different mission spec")
+        mode = preconditions.saved_mode(state) if state is not None else None
 
         def report():
             result = deepcopy({k: v for k, v in state.items() if k != "_state"})
@@ -518,7 +520,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
         # cannot restart the journey, reselect, or send a replacement drawing.
         if state is not None and (state["mission"]["status"] in ("completed", "decision_failed")
                                   or (state["mission"]["status"] == "blocked"
-                                      and (state["mission"]["reason"] == "command_rejected:MOSAIC_CHANGED"
+                                      and (state["mission"]["reason"] in ("command_rejected:MOSAIC_CHANGED",
+                                                                           "command_rejected:STALE_ACTOR_STATE")
                                            or ((spec.get("proposeMosaic") or spec.get("reviewMosaicProposal"))
                                                and state["mission"]["reason"].startswith("command_rejected:"))))):
             return report()
@@ -540,6 +543,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
         if not continuous.continuous(observed) and max_steps is not None and max_steps > 100:
             raise ValueError('Legacy grid missions allow at most 100 steps per invocation')
         if state is None:
+            mode = preconditions.select_mode(observed)
             proposal = None
             if spec.get("reviewMosaicProposal"):
                 observed, proposal = review_input(client, observed, spec["reviewMosaicProposal"])
@@ -559,6 +563,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                                  "reviewMosaicProposal": deepcopy(spec.get("reviewMosaicProposal")),
                                  "actorId": observed["self"]["actorId"], "worldId": observed["world"]["id"],
                                  "worldInstanceId": observed['world'].get('instanceId'),
+                                 "preconditionMode": mode,
                                  "rulesVersion": observed["rulesVersion"], "origin": deepcopy(observed["self"]["position"]),
                                  "goal": None, "status": "running", "reason": "awaiting_decision"},
                      "decision": None, "budget": {"limits": deepcopy(spec["budgets"]),
@@ -575,7 +580,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                      "steps": [], "feedback": {"summary": "awaiting_decision", "issues": [], "suggestions": []},
                      "world": {**public["world"], "mosaic": public_mosaic(observed.get("mosaic")),
                                "mosaicProposals": [public_proposal(p) for p in observed.get("mosaicProposals", [])]},
-                     "_state": {"spec": spec, "binding": bind(observed), "startedEpoch": time.time(),
+                     "_state": {"spec": spec, "binding": {**bind(observed), 'preconditionBindingVersion': 1,
+                                                          'preconditionMode': mode}, "startedEpoch": time.time(),
                                 "pending": None, "initial": public, "decisionStarted": False}}
             save()
 
@@ -738,8 +744,10 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                         reason = "返回原起点" if returning else "前往已选目标"
                 intent = {"schemaVersion": 1, "rulesVersion": observed["rulesVersion"], "commandId": uuid.uuid4().hex,
                           "expectedStateVersion": observed["stateVersion"], "action": action}
+                if mode is not None:
+                    intent['preconditionMode'] = mode
                 pending = {"request": intent, "woodCost": cost}
-                if needs_construction and action['type'] == 'build':
+                if continuous.continuous(observed) and action['type'] == 'build':
                     pending['constructionBefore'] = {'inventoryWood': observed['self']['inventory']['wood']}
                 if action['type'] == 'walk':
                     pending['walkBefore'] = {'position': deepcopy(position), 'maxStepDistance': observed['movement']['maxStepDistance']}
@@ -754,6 +762,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                                        "action": deepcopy(action), "reason": reason, "status": "pending",
                                        "stateVersion": observed["stateVersion"], "position": deepcopy(position),
                                        "inventoryWood": observed["self"]["inventory"]["wood"]})
+                if mode is not None:
+                    state['steps'][-1].update(preconditionMode=mode, expectedStateVersion=intent['expectedStateVersion'],
+                                              execution=None)
                 state["mission"].update(status="running", reason="command_pending")
                 save()  # A crash after this point must recover this exact request.
                 recovery = False
@@ -875,6 +886,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             if not committed and not rejected:
                 step["status"] = "unknown"
                 return finish("unknown", "unconfirmed_receipt")
+            if mode is not None and not preconditions.valid_execution(result, intent, committed=committed):
+                step['status'] = 'unknown'
+                return finish('unknown', 'unconfirmed_execution')
             if committed:
                 result_action = result.get("result", {})
                 if not isinstance(result_action, dict) or result_action.get("action") != intent["action"]["type"]:
@@ -907,8 +921,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                     record_observation(after_build)
                     # A visit before construction cannot replace visiting the
                     # completed facility. The actor may already be at its center.
-                    facts.update(constructionBuilt=True, construction=built,
-                                 goalReached=continuous.near(after_build['self']['position'], goal['target']))
+                    if needs_construction:
+                        facts.update(constructionBuilt=True, construction=built,
+                                     goalReached=continuous.near(after_build['self']['position'], goal['target']))
                     step['entityId'] = built['entityId']
                     step['evidenceSource'] = 'command_receipt_and_entity'
                 elif intent["action"]["type"] == "visit":
@@ -963,6 +978,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                     step["position"] = deepcopy(result_action["position"])
             else:
                 step.update(status="rejected", errorCode=error.get("code"))
+            if mode is not None:
+                step.update(expectedStateVersion=intent['expectedStateVersion'], execution=deepcopy(result['execution']),
+                            stateVersion=result['stateVersion'])
             # Settlement, accounting and clearing pending are one atomic write.
             state["_state"]["pending"] = None
             save()

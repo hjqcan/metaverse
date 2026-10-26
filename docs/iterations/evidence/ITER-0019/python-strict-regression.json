@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "testsRun": 2,
+  "actualModelCalls": 0,
+  "results": [
+    {
+      "suite": "walk",
+      "sourcePath": ".local/iter0015/api/20261026T031119Z-3ff04f/results.json",
+      "result": {
+        "suite": "continuous-mission-http",
+        "actualModelCalls": 0,
+        "decisionSource": "test-double",
+        "passed": true,
+        "testsRun": 1,
+        "tests": [
+          {
+            "test": "__main__.ContinuousMissionAcceptance.test_10_stale_walk_replans_after_authoritative_rejection",
+            "passed": true,
+            "seconds": 10.180077835044358
+          }
+        ],
+        "failures": []
+      }
+    },
+    {
+      "suite": "build",
+      "sourcePath": ".local/iter0017/api/20261026T031129Z-2196b6/results.json",
+      "result": {
+        "suite": "construction-mission-http",
+        "actualModelCalls": 0,
+        "decisionSource": "test-double",
+        "passed": true,
+        "testsRun": 1,
+        "tests": [
+          {
+            "test": "__main__.ConstructionAcceptance.test_10_stale_build_requires_original_rejection_then_new_attempt",
+            "passed": true,
+            "seconds": 4.540734589972999
+          }
+        ],
+        "failures": []
+      }
+    }
+  ]
+}

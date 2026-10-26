@@ -1,0 +1,12 @@
+{
+  "kind": "harness-failure-summary",
+  "passed": false,
+  "source": "first Chrome invocation output and retained failure screenshot; final cleanup exception prevented results.json",
+  "originalDirectory": ".local/iter0019/browser/2026-10-26T03-12-13-207Z",
+  "failures": [
+    "Test asserted fixed-reference model-budget wording on a test-double report. Actual note was 高层目标选择.",
+    "Cleanup waited only for exitCode; Python static host exited through SIGTERM with signalCode, so the harness timed out."
+  ],
+  "fixScope": "tests/browser/actor-resident.mjs only; product source unchanged",
+  "finalEvidence": "python-browser-results.json"
+}

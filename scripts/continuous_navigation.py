@@ -333,12 +333,15 @@ def route_info(observed, target, allow_build, allow_gather):
 
 
 def valid_walk_receipt(receipt, intent, actor, before):
+    from command_preconditions import valid_execution
     result = receipt.get('result')
     if (not isinstance(result, dict) or not isinstance(receipt.get('identity'), dict)
             or receipt['identity'].get('actorId') != actor or receipt.get('rulesVersion') != 'r8'
             or type(receipt.get('schemaVersion')) is not int or receipt['schemaVersion'] != 1
-            or type(receipt.get('stateVersion')) is not int or receipt['stateVersion'] != intent['expectedStateVersion'] + 1
-            or not isinstance(before, dict) or not point(result.get('position')) or type(result.get('blocked')) is not bool):
+            or not valid_execution(receipt, intent)
+            or not isinstance(before, dict) or not point(before.get('position'))
+            or not finite(before.get('maxStepDistance')) or not 0 < before['maxStepDistance'] <= .6
+            or not point(result.get('position')) or type(result.get('blocked')) is not bool):
         return False
     start, end, target = before['position'], result['position'], intent['action']['to']
     return (distance(start, end) <= before['maxStepDistance'] + 1e-6

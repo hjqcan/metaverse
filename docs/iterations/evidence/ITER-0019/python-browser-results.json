@@ -1,0 +1,52 @@
+{
+  "suite": "actor-resident-chrome",
+  "passed": true,
+  "recordedAtUtc": "2026-10-26T03:12:54.631Z",
+  "actualModelCalls": 0,
+  "browser": "152.0.7977.82",
+  "sourceBefore": "671aa3375bbcffc7bd7c302ca51d57331046925d51db508cae77a23eaeab7248",
+  "sourceAfter": "671aa3375bbcffc7bd7c302ca51d57331046925d51db508cae77a23eaeab7248",
+  "actualReportPath": "/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/.local/iter0019/python/20261026T031119Z-a35556/test_01_real_interference_all_actions_finish_one_platform/actual-report.json",
+  "javascriptErrors": [],
+  "worldRequests": [],
+  "port": 45407,
+  "serviceStopped": true,
+  "tests": [
+    {
+      "name": "real_interference_report_has_verified_build_and_return",
+      "passed": true
+    },
+    {
+      "name": "missing_wrong_or_noninteger_execution_preserves_last_valid_report",
+      "passed": true
+    },
+    {
+      "name": "missing_mission_mode_cannot_downgrade_actor_steps",
+      "passed": true
+    },
+    {
+      "name": "wrong_step_anchor_or_mode_is_not_a_confirmed_command",
+      "passed": true
+    },
+    {
+      "name": "unknown_build_has_no_confirmed_execution_or_construction",
+      "passed": true
+    },
+    {
+      "name": "unsettled_step_cannot_keep_a_success_execution",
+      "passed": true
+    },
+    {
+      "name": "rejected_execution_uses_current_version_and_future_anchor_boundary",
+      "passed": true
+    },
+    {
+      "name": "old_strict_construction_report_remains_readable",
+      "passed": true
+    },
+    {
+      "name": "390px_report_is_readonly_and_has_no_horizontal_overflow",
+      "passed": true
+    }
+  ]
+}

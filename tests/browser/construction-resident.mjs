@@ -74,6 +74,7 @@ try {
     unknown.facts.constructionBuilt=false; unknown.facts.construction=null; unknown.budget.used.wood=0;
     const index=unknown.steps.findIndex(s=>s.action.type==="build"); unknown.steps=unknown.steps.slice(0,index+1);
     unknown.steps.at(-1).status="unknown"; unknown.facts.goalReached=false; unknown.facts.returned=false;
+    if ("execution" in unknown.steps.at(-1)) unknown.steps.at(-1).execution=null;
     await imported(unknown,"unknown-build.json");
     assert.equal(await page.locator("#report-status").textContent(),"结果未知");
     assert.equal(await page.locator("#construction-fact").getAttribute("data-verified"),"false");

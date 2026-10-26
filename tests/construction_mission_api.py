@@ -212,6 +212,10 @@ run_mission(Crash(sys.argv[2],access["sessions"]["a1"]["token"]),spec,sys.argv[5
         peer = self.b
         class Stale(WorldClient):
             changed = False
+            def observe(inner):
+                observed = super().observe()
+                observed.pop('commandConcurrency', None)  # Keep this original strict-mode regression.
+                return observed
             def request(inner, method, path, payload=None, headers=None):
                 if method == 'POST' and payload['action']['type'] == 'build' and not inner.changed:
                     inner.changed = True; observed = peer.observe()
