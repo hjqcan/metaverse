@@ -1,0 +1,594 @@
+{
+  "createdAt": "2026-10-26T10:50:52.375045+00:00",
+  "scope": "Only coordinator-owned completed ITER-0028 output; original natural history, server-v2, peer data and user services untouched",
+  "processReferences": [],
+  "removedBytes": 60919943,
+  "removedFileCount": 117,
+  "files": [
+    {
+      "path": ".local/iter0028/server-v1/World.Server.runtimeconfig.json",
+      "bytes": 401,
+      "sha256": "2854c873c21edc9fa7c2056f9d4744054aeb11f009d271702daa7794b74e895f"
+    },
+    {
+      "path": ".local/iter0028/server-v1/World.Server.staticwebassets.runtime.json",
+      "bytes": 6477,
+      "sha256": "c35fcf1a409ba4f8829630d8e3b1cfb6aee86345dfb701cc2d38802980b0831c"
+    },
+    {
+      "path": ".local/iter0028/server-v1/SQLitePCLRaw.batteries_v2.dll",
+      "bytes": 5632,
+      "sha256": "1ee3c6ff4d39171690d6ff6f84b4d876ed038ca28e39bb6e74995f52d2aacf8b"
+    },
+    {
+      "path": ".local/iter0028/server-v1/World.Server.dll",
+      "bytes": 825856,
+      "sha256": "1a5e8c5223c223a3cb9159865321434303ba34957f849060e6744b30994f71a9"
+    },
+    {
+      "path": ".local/iter0028/server-v1/World.Server.deps.json",
+      "bytes": 9316,
+      "sha256": "8733d712dc0ec44638313963537b38d8ee504a39962f36c0899e02502e1c5e11"
+    },
+    {
+      "path": ".local/iter0028/server-v1/World.Server.pdb",
+      "bytes": 98888,
+      "sha256": "7614018ce746d0dbf599a493ed7f0a868d87d288245cb8b24e7936f2c3fa4c70"
+    },
+    {
+      "path": ".local/iter0028/server-v1/Microsoft.Data.Sqlite.dll",
+      "bytes": 177464,
+      "sha256": "1078d41c6c0f2cee48a8b706e3a54ce145705993f19f703d2b3bdf2abcc59088"
+    },
+    {
+      "path": ".local/iter0028/server-v1/World.Server.staticwebassets.endpoints.json",
+      "bytes": 96610,
+      "sha256": "78c7f388b4870e4da99995f41cd1f20cde7ab47560ca94e0fa67253a20c2de1f"
+    },
+    {
+      "path": ".local/iter0028/server-v1/SQLitePCLRaw.provider.e_sqlite3.dll",
+      "bytes": 36864,
+      "sha256": "1d4cb69b3aaf6a9cf40dfe179cc16dd678f12bc024b212d4297654e0a29e220d"
+    },
+    {
+      "path": ".local/iter0028/server-v1/SQLitePCLRaw.core.dll",
+      "bytes": 51712,
+      "sha256": "b72c9dfe1479a568d6b84e249eaf949e76c757888f8056fb6ddb9c0480e0dd25"
+    },
+    {
+      "path": ".local/iter0028/server-v1/World.Server",
+      "bytes": 78256,
+      "sha256": "0a3ce3ce049b27fdf0f0d6eff8144217d8bc5dc5b195d4c213193492e24f583c"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/resident.html",
+      "bytes": 15083,
+      "sha256": "e1c2a861f9b4cff153b9f7ea011f5e33dc26ab2b24e0d2443d8581e566513247"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/styles.css.gz",
+      "bytes": 6150,
+      "sha256": "c416114da4d35e842e36fb43a2b4efa660811d149744f8c9d86ac01ba999c160"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/resident.js.gz",
+      "bytes": 22509,
+      "sha256": "f8f93b6c34dcd09e16eea913bac7d19284d1faa188f3d738eaf6487950ae95c2"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/entry-guide.js.gz",
+      "bytes": 2999,
+      "sha256": "4cacb934762fd756bede8d1bbf38e2226185ebbcab4a2775c2b3908140aa523d"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/entity-note-report.js",
+      "bytes": 6639,
+      "sha256": "98cf1fd79e0303a34d2c9fb90cf850650363a317a3d4a3ce16fbb907b514a753"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/index.html.gz",
+      "bytes": 5412,
+      "sha256": "511bba4ef0fb3d9c21db3edaa25340a90ab69f977b48c9d9de4fa4d98f92e71a"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/entity-canvas-report.js.gz",
+      "bytes": 3651,
+      "sha256": "1d66b82c706c48a0c338fc441bffb559175fab66e64683f0a946ff95593c018f"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/entity-note-report.js.gz",
+      "bytes": 2410,
+      "sha256": "bd84d4ac590d34025361fa6834af2ef623e73e40e908698ded30f2881cda1b8b"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/material-report.js.gz",
+      "bytes": 2735,
+      "sha256": "d5fa4e3dc086a181a441beb2e49693fc2950241c0c15da7d370855dc1a629753"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/resident.js",
+      "bytes": 80187,
+      "sha256": "4a18005d84706c5d39d9fb4be7c5f571ef355c99ae908c8268d94a131be980f0"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/resident.html.gz",
+      "bytes": 4773,
+      "sha256": "884fbaac56ef49f2514801090272b6b8ae61104813343e830a8e0ba99640ebf1"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/mosaic.js",
+      "bytes": 4798,
+      "sha256": "8f6ef59b7d9538ee0cb93d0e04b16c55ebdbf41cd04fab8a6296b889052ee08b"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/mosaic-inbox.js",
+      "bytes": 3083,
+      "sha256": "96a7180337ee21f496ec62a38d85e4cbca5e1aa3c822912480ba36ceb498e1f6"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/app.js",
+      "bytes": 92077,
+      "sha256": "bdbd751b03854e6ae192ccd5fdf0b9165e20433ed111d069a1d9e1b305f57acd"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/mosaic.js.gz",
+      "bytes": 2098,
+      "sha256": "8a6214078b4f31bbd2ba0cb027d06031e71c47d0cfa59cf2caf3834c1a09cf35"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/styles.css",
+      "bytes": 23108,
+      "sha256": "dc2634a1f15e012aa4e638dc35ca0a697a1fea5a6bdb05885eb7a02946c27195"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/app.js.gz",
+      "bytes": 26143,
+      "sha256": "890164c1cdbbfab46c4274dbc3405d06fab165426a2c1ae81c03c4b4ec651b2f"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/consent.js.gz",
+      "bytes": 2200,
+      "sha256": "d061b5fa8627a364aacb4be9acdb0b55808253934b2ba0336f2c50b342ab403c"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/material-report.js",
+      "bytes": 8350,
+      "sha256": "fac2aa41b97c336be37ab96a4c9ec3f5078a0701870475e59e7d67c5d9d649d4"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/index.html",
+      "bytes": 16364,
+      "sha256": "b1617698950c81f092b91556f1c67b0215900c51cce3f60f888e2315df8ceff2"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/consent.js",
+      "bytes": 5688,
+      "sha256": "396ad8dca4ea121124e7a771e47c3dd5dd966f71bb67f62eab580a38f3b92d91"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/entry-guide.js",
+      "bytes": 6795,
+      "sha256": "5bc3a6eef9dc93b22dc0a14c86ee0c6f41013f8e8c2cc5b4cb9edd199236c5a8"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/mosaic-inbox.js.gz",
+      "bytes": 1157,
+      "sha256": "0307dc06e40575a61618e816ff8f62ddc6d33e9070fa9bb020830251eef5295c"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/resident.css.gz",
+      "bytes": 4422,
+      "sha256": "0a23bac402840b9e35ef05496c310b5e8cb791f1b295a456893d495011b0c3d1"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/entity-canvas-report.js",
+      "bytes": 10256,
+      "sha256": "3fd49e9b123500df4d3be3c470da17b9cfbcf91bce9d26b8b490e5bad56baa27"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/resident.css",
+      "bytes": 16187,
+      "sha256": "24e69ae4c7bff4d4b8b92c3c02a2a9162dad559a96459005c60b9f72f5af5eef"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/mosaic-second.json.gz",
+      "bytes": 2728,
+      "sha256": "947ca052351aadf5c2df887cede19930f81f070ad736ad71c982fecd8ad9013b"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/consent-proposer.json.gz",
+      "bytes": 2771,
+      "sha256": "55ee609f91469bcdc1f36b4237bb5618e3b262e1fef35ea72f781dea064a69b4"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/inbox-proposer.json",
+      "bytes": 16029,
+      "sha256": "1dec130cb290c2f4b98ffd5dde968e05d1711dae6ced08705eaedc5c2ac9ee34"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/postcard-first.json",
+      "bytes": 10042,
+      "sha256": "9122de32b6ebc2ae3850e092499dda558792624f59989c05e3abda1e93708981"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/activity-demo.json",
+      "bytes": 12845,
+      "sha256": "9d1bd9075c5c9255f46664df0cd5fa5ba692693bf6ceb3aa4f1602ac07fa9f9a"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/activity-comparison.json",
+      "bytes": 118550,
+      "sha256": "9f3bd2fad3f27c96c9eb99ce1bfc30b93c9902a42860bebca83188c9069f7134"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/resident-demo.json.gz",
+      "bytes": 2113,
+      "sha256": "10c80b1dabbc6d17dee458902d1ea04b5b5cece2aa125c36e8eb54b506498930"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/postcard-first.json.gz",
+      "bytes": 2231,
+      "sha256": "fa66ba1390b013059b7451e0d36b4e43038411df73cc03fe114cfb1a4ed32e68"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/consent-reviewer.json",
+      "bytes": 19470,
+      "sha256": "4c5acda2e9806810d030d191f2d4fd6dbc56eca1647ce3a1b7f26f3e95f4b3bb"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/resident-demo.json",
+      "bytes": 11392,
+      "sha256": "191ffa5aac83d734be48827cfb239c13c548f33e70b44d4fd90d51464b3ce71f"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/inbox-reviewer.json",
+      "bytes": 78304,
+      "sha256": "8f1e1a784c541abb07fbd2be09e5c3c5b26ad3ffab77ce6962883f879277cb97"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/postcard-second.json.gz",
+      "bytes": 2377,
+      "sha256": "5b82f36d74b070e75718cd5619d2fb1de54cd5df2f3f53afd9997d38171a614a"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/postcard-second.json",
+      "bytes": 9907,
+      "sha256": "13084fc201e434f5e26b8f66da977fd9820a2dae97cc693ed2a7b229e408bebe"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/consent-reviewer.json.gz",
+      "bytes": 3176,
+      "sha256": "8c0d78c1173bb109516eeec9fa36389a0ad356e02298e56e4ccc3bb606731335"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/mosaic-first.json.gz",
+      "bytes": 2663,
+      "sha256": "cbcd4073bfae82f55f79074fd18804ff128ebfa6de589b873d9ea9e4fe24e3c2"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/activity-comparison.json.gz",
+      "bytes": 8174,
+      "sha256": "8c2b8d908932dec7c74938021e185b1f37a566396c02031ae8e706df89b5b6bb"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/mosaic-second.json",
+      "bytes": 16399,
+      "sha256": "88f9268d4ab4d16321c38637d504ca390759c4cb50c7473407051e162b9b475f"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/inbox-reviewer.json.gz",
+      "bytes": 9391,
+      "sha256": "8ace67f79b3176e41da0d65c33c05a57f0109be4238738a9b49e29bead0b8230"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/consent-proposer.json",
+      "bytes": 16007,
+      "sha256": "7037570544ce1e34c1027bcbb43f9b7ec32120ed32efebac5a40f5c6686e8d4a"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/activity-demo.json.gz",
+      "bytes": 2504,
+      "sha256": "2522da8b8214d89d0ea0946aa6d2b0f68c96528695d13e08185951ec5bfed80b"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/inbox-proposer.json.gz",
+      "bytes": 2784,
+      "sha256": "7eb01c98e14ca5d6e98997fec4e681c2192ff05912d8b365f0338a002281f3c5"
+    },
+    {
+      "path": ".local/iter0028/server-v1/wwwroot/reports/mosaic-first.json",
+      "bytes": 16591,
+      "sha256": "1bda55c79568c74cbdbfbaeceaca94cfabad94af16099869bf1ee8f57e10ff58"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/linux-riscv64/native/libe_sqlite3.so",
+      "bytes": 1291936,
+      "sha256": "a7ac179be5d4a25cea62781fab3a0266903745f5929e0c880dd20fd0e84f2593"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/win-arm64/native/e_sqlite3.dll",
+      "bytes": 1816064,
+      "sha256": "a59c169757d12a8bfc30c1760b8dd1f04cf9519f3774bdee6a9b595469f22be6"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/android-x86/native/libe_sqlite3.so",
+      "bytes": 1820380,
+      "sha256": "43731d621cc2b1fbde62bae8ff465cfe0fd1ea9c2f25d566d3e61e495d226d9f"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/ios-arm/native/e_sqlite3.a",
+      "bytes": 2219032,
+      "sha256": "0c2cf95c369c37330ecfbc0870c1d214ed727b17bf7b86bce0bac94db4a9acd9"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/ios-arm64/native/e_sqlite3.a",
+      "bytes": 2219032,
+      "sha256": "0c2cf95c369c37330ecfbc0870c1d214ed727b17bf7b86bce0bac94db4a9acd9"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/iossimulator-x64/native/e_sqlite3.a",
+      "bytes": 4275720,
+      "sha256": "87076969e5e0ffc22877e6a5603131f34f2e33bdfc61d11b77dba7c0fcc8f8e1"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/linux-musl-s390x/native/libe_sqlite3.so",
+      "bytes": 1685800,
+      "sha256": "31d53eafaefec15651dac766665171e7d8f2dd4f1c021c7a21e754aba2091b17"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/maccatalyst-arm64/native/libe_sqlite3.dylib",
+      "bytes": 1695264,
+      "sha256": "144793f8f993837a66249c0bb8898dd3171904cc796048acd1bede20ce1dab69"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/linux-musl-arm64/native/libe_sqlite3.so",
+      "bytes": 1450744,
+      "sha256": "91e5ff240be8cdc24068c149754d3506dd3f7098cb0fd3d6606c4f0ce3b5fd42"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/osx-arm64/native/libe_sqlite3.dylib",
+      "bytes": 1696624,
+      "sha256": "2b27f45233818ae11d97016ca2a16dffcf63a53c46f60bcd52b342fc187b0c83"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/linux-musl-riscv64/native/libe_sqlite3.so",
+      "bytes": 1015928,
+      "sha256": "033f84cbe93cb46eb0b5a96d5acbf1089f1716e9e0e9ee117d9d039c3c58060f"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/browser-wasm/nativeassets/net9.0/e_sqlite3.a",
+      "bytes": 1309264,
+      "sha256": "73675fcf71a65531ea10763f2029300bb4dc1528c24fc9bebc6bb2cbccf7656f"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/linux-x86/native/libe_sqlite3.so",
+      "bytes": 1548016,
+      "sha256": "0269d385a7a8cbbc385c4688bf57c030351036aaae8c6e06f02ecf2d5ada96de"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/linux-x64/native/libe_sqlite3.so",
+      "bytes": 1470824,
+      "sha256": "eddcd4aa561d5b8f252db77e8272e7d1aed96bcab9fda3f177ca542f916290bf"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/linux-arm64/native/libe_sqlite3.so",
+      "bytes": 1534416,
+      "sha256": "66436d4bd02b1b1c25b964a744b5230122bca6a5d006aa80add129ef892c273a"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/android-arm/native/libe_sqlite3.so",
+      "bytes": 1246788,
+      "sha256": "6846178c7337b5b9a3c9d7090808a6621dd09db6879efdf16075ce2afc260212"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/android-x64/native/libe_sqlite3.so",
+      "bytes": 1801864,
+      "sha256": "8088b315ee0b7db13c053051dae063c8bdf9318c25d3f8b9024b9786bd27cab1"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/maccatalyst-x64/native/libe_sqlite3.dylib",
+      "bytes": 1724352,
+      "sha256": "ac224e3e18f8227dc964b3cf29a0f6244e475af37eed5744708e222fe9691c19"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/linux-armel/native/libe_sqlite3.so",
+      "bytes": 1375344,
+      "sha256": "f6cd622eee5d5df12419c7a11eaf4a17ed1948c28f41db8395959682978c870a"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/linux-s390x/native/libe_sqlite3.so",
+      "bytes": 1655816,
+      "sha256": "55296ed2a74253a8e998d2ca8d4d5471e03c573bdd109ee83f089499ef9aedf7"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/win-x64/native/e_sqlite3.dll",
+      "bytes": 1972224,
+      "sha256": "6ad8e149f8ce3ed3716402b4b3a2268ebbdc7b64391b5fafed747e03bb1b9418"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/osx-x64/native/libe_sqlite3.dylib",
+      "bytes": 1724472,
+      "sha256": "20143ee08a1af0a510368e14109f512d7c7870481ba16937ae5733a415d0a201"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/iossimulator-arm64/native/e_sqlite3.a",
+      "bytes": 4275720,
+      "sha256": "87076969e5e0ffc22877e6a5603131f34f2e33bdfc61d11b77dba7c0fcc8f8e1"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/android-arm64/native/libe_sqlite3.so",
+      "bytes": 1772160,
+      "sha256": "52d49cc84918c112d5713a6de83269d33f03c4c7c3ed721fbd2c8c00adf4ca80"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/linux-musl-arm/native/libe_sqlite3.so",
+      "bytes": 1322584,
+      "sha256": "98e03c2b80ae3924d1ed6da32d036f933db48b28ee2ef55c417f48ef0a382c62"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/linux-arm/native/libe_sqlite3.so",
+      "bytes": 982192,
+      "sha256": "9a697f00c70420314a3604cea281c8859cb925680f935c23f6261e9a6f769368"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/linux-ppc64le/native/libe_sqlite3.so",
+      "bytes": 1937448,
+      "sha256": "9d5e453ad17fb857b123da69adfa067e55bb716816979e4131fe76e513866f53"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/win-x86/native/e_sqlite3.dll",
+      "bytes": 1529344,
+      "sha256": "8d76b5d0faa6f3a3c6204605d1a3d31dad57a0104b92fce3df19b12bdd983ae7"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/linux-musl-x64/native/libe_sqlite3.so",
+      "bytes": 1445376,
+      "sha256": "7d275542af8aac5a19f5a873da7cdadcc20c453fb52b7df57bd747e2f02ab92b"
+    },
+    {
+      "path": ".local/iter0028/server-v1/runtimes/linux-mips64/native/libe_sqlite3.so",
+      "bytes": 1756616,
+      "sha256": "f66410709bd4b5ec6b9fb9b4f89f1e49c842e9f9fa21c95766f1ea20c66074ba"
+    },
+    {
+      "path": ".local/iter0028/backend-selfcheck-v1/world/access.json",
+      "bytes": 790,
+      "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e"
+    },
+    {
+      "path": ".local/iter0028/backend-selfcheck-v1/world/server.log",
+      "bytes": 212508,
+      "sha256": "c7cc956881a840d1b0270e425de66e3a23a1bd5b005b8374d8745e0218ffa448"
+    },
+    {
+      "path": ".local/iter0028/backend-selfcheck-v1/world/world.db-wal",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".local/iter0028/backend-selfcheck-v1/world/world.db",
+      "bytes": 1748992,
+      "sha256": "0a3a2eb65d506186df948f7510d764e7f9a97f9a1911bb71b5086bc2f0b80088"
+    },
+    {
+      "path": ".local/iter0028/backend-selfcheck-v1/world/world.db-shm",
+      "bytes": 32768,
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    {
+      "path": ".local/iter0028/backend-selfcheck-v1/world/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".local/iter0028/backend-selfcheck-v2/world/access.json",
+      "bytes": 790,
+      "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e"
+    },
+    {
+      "path": ".local/iter0028/backend-selfcheck-v2/world/server.log",
+      "bytes": 213793,
+      "sha256": "74a472fb752d37df8e6c169515bf12d921d39ba2245b33f7750752dfaef56bb6"
+    },
+    {
+      "path": ".local/iter0028/backend-selfcheck-v2/world/world.db-wal",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".local/iter0028/backend-selfcheck-v2/world/world.db",
+      "bytes": 1761280,
+      "sha256": "ecb15ad11b1f9900323d3d5d7b22650477b3e6ed10c669e1c27a37840035c312"
+    },
+    {
+      "path": ".local/iter0028/backend-selfcheck-v2/world/world.db-shm",
+      "bytes": 32768,
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    {
+      "path": ".local/iter0028/backend-selfcheck-v2/world/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_09_fractional_platform_uses_collected_wood_and_preserves_history/access.json",
+      "bytes": 412,
+      "sha256": "19716507118a8a3bbdef489dd853cdb59d537fa19f707238913efd25bef9cbde"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_09_fractional_platform_uses_collected_wood_and_preserves_history/world.db",
+      "bytes": 131072,
+      "sha256": "1b65cc00b57a0b50b3b9bef3725b319550cc685086c4f1c62ae1a2dca65f14aa"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_02_fractional_diagonal_coordinates_persist_across_restart/access.json",
+      "bytes": 412,
+      "sha256": "f3fc1b4132fb825e3a2e695f1f666412e647488afa3ba1e56d820df68c7f41f9"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_02_fractional_diagonal_coordinates_persist_across_restart/world.db",
+      "bytes": 131072,
+      "sha256": "ff298e96dbfbc5efb412d2e60145cd6c5e0ae0229d9554b0a290a21b0697253d"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_12_failed_gather_and_commit_loss_preserve_original_identity/access.json",
+      "bytes": 412,
+      "sha256": "69def6978234d0228ad9624fce7cde773709945a46b5154bc9d31559d1a25ab3"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_12_failed_gather_and_commit_loss_preserve_original_identity/world.db",
+      "bytes": 131072,
+      "sha256": "e53136b822d4c5a66e38c5973c2f8bed38a6cbc8170832adce50c273930cc8b7"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_04_tree_blocks_sweep_and_depletion_removes_collision/access.json",
+      "bytes": 412,
+      "sha256": "78886484c054882bf4e3327f6c51fe55118bd62e6d85e5ae79bde9faf74ab23b"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_04_tree_blocks_sweep_and_depletion_removes_collision/world.db",
+      "bytes": 131072,
+      "sha256": "1136b00eee0b1ba6403f242848513d92ab12dc0b188c958ddac0989cada122f4"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_05_rock_and_river_stop_motion/access.json",
+      "bytes": 412,
+      "sha256": "1110823c3f1217b44b2b6fc975d83b8c62654829741ac9a48d63c2943863bd48"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_05_rock_and_river_stop_motion/world.db",
+      "bytes": 163840,
+      "sha256": "2cf6a9485d08bce6dd8fb8a75aa5e87f81949341eb213c886e54bb7590efb016"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_01_observation_is_continuous_and_old_grid_is_absent/access.json",
+      "bytes": 412,
+      "sha256": "13086f843cbbee28829fea6f0836e5e49c7716f4a655f06cfa37d0ced124041a"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_01_observation_is_continuous_and_old_grid_is_absent/world.db",
+      "bytes": 131072,
+      "sha256": "779a561723cca2dd5105d6c2214e3d832b20c5c48473033386432a52cca89075"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_07_replay_and_concurrent_same_id_move_once/access.json",
+      "bytes": 412,
+      "sha256": "e861f4a4d7c09430de4d908c798426d5fe4c9b9e9285751b2e6acb5412215fec"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_07_replay_and_concurrent_same_id_move_once/world.db",
+      "bytes": 131072,
+      "sha256": "0c5d344f269d11231590613eb9ce85b3e6d21e340673f2632a789114649e7928"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_11_real_bridge_allows_both_residents_to_cross/access.json",
+      "bytes": 412,
+      "sha256": "1c3c4bd32e6578d0dc5abc9cbd4f96e7372004921913ddac47c77cc92395965f"
+    },
+    {
+      "path": ".local/iter0028/legacy-continuous-regression/test_11_real_bridge_allows_both_residents_to_cross/world.db",
+      "bytes": 262144,
+      "sha256": "b001548916d00830015d16d1a9699d7ba5766f716b17aab3f318854f7386e8d2"
+    }
+  ]
+}

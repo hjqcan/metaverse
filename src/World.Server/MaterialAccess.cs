@@ -150,7 +150,9 @@ internal sealed partial class WorldService
     {
         if (!Scenario.SupportsMaterialAccess || materialClock is null) return;
         using var c = database.Open(); using var t = c.BeginTransaction(deferred: false);
-        var changed = MaterialSourceRules.Advance(c, t, materialClock.Now, database.ProductionPolicy is not null);
+        var now = materialClock.Now;
+        var changed = MaterialSourceRules.Advance(c, t, now, database.ProductionPolicy is not null);
+        changed |= ForestryRules.Advance(c, t, now);
         var fault = configuration.FaultsEnabled ? Environment.GetEnvironmentVariable("WORLD_MATERIAL_TEST_FAULT") : null;
         if (changed && fault == "before-commit") Environment.Exit(83);
         t.Commit();
@@ -202,8 +204,8 @@ internal sealed partial class WorldService
         if (actor.Wood >= 12) return (422, new("INVENTORY_CAPACITY_EXCEEDED", "本人木材库存已满"));
         var trees = ReadResourceNodes(c, t); var entities = ReadStructures(c, t);
         if (ContinuousWorld.Distance(actor.X, actor.Y, 28, 10) > ContinuousWorld.GatherReach ||
-            !ContinuousWorld.Walkable(actor.X, actor.Y, trees, entities) ||
-            ContinuousWorld.Sweep(actor.X, actor.Y, 28, 10, trees, entities).Blocked)
+            !ContinuousWorld.Walkable(actor.X, actor.Y, trees, entities, ForestryRules.Obstacles(c, t)) ||
+            ContinuousWorld.Sweep(actor.X, actor.Y, 28, 10, trees, entities, ForestryRules.Obstacles(c, t)).Blocked)
             return (422, new("UNREACHABLE", "请走到采集区1.6米内且中间没有障碍"));
         return null;
     }

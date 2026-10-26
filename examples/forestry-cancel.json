@@ -1,0 +1,40 @@
+{
+  "missionId": "forestry-cancel",
+  "objective": "执行绑定原实例、原对象的单一林业动作并返回。",
+  "goals": [
+    {
+      "id": "fixed",
+      "label": "明确林业动作",
+      "target": null,
+      "forestry": {
+        "worldInstanceId": "w_00000000000000000000000000000000",
+        "actorId": "a3",
+        "action": {
+          "type": "cancel_forest_reservation",
+          "capabilityVersion": 1,
+          "reservationId": "replace-original-reservation"
+        },
+        "waitForReady": true,
+        "returnToOrigin": true
+      }
+    }
+  ],
+  "allowBuild": false,
+  "allowCraftForestryTool": false,
+  "allowReserveForest": false,
+  "allowCancelForestReservation": true,
+  "allowCollectSeed": false,
+  "allowPlantTree": false,
+  "allowHarvestTree": false,
+  "budgets": {
+    "commands": 200,
+    "queries": 1000,
+    "wood": 0,
+    "woodHarvested": 0,
+    "seedsCollected": 0,
+    "seedsPlanted": 0,
+    "seedsHarvested": 0,
+    "seconds": 600,
+    "modelCalls": 0
+  }
+}

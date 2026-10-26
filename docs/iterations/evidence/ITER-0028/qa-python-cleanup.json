@@ -1,0 +1,31 @@
+{
+  "recordedAtUtc": "2026-10-26T10:49:50.672637+00:00",
+  "review": ".local/test-agent2/iter28-python-review.json",
+  "archive": ".local/test-agent2/iter28-python-evidence.tar.gz",
+  "archiveSha256": "98a625d322b3b75754f83a63e5a58a1f926eb69164cce0678deaaf4523f4a8e2",
+  "scope": "Independent Python acceptance finished; coordinator msg_6655f04dd679 requested completed-result archival and cleanup record. Only own reusable cold copies removed after no-open-file verification.",
+  "testRuntimeBytesAlreadyDisposed": 22511699,
+  "reusableSourceCopiesRemoved": [
+    {
+      "path": ".local/test-agent2/iter28-source13-20261026T095453Z",
+      "files": 4,
+      "bytes": 1655574,
+      "databaseSha256BeforeRemoval": "7f715e45a2410e741d9b8cb6aa12911e3259733ddc7003343920379130677e69",
+      "removed": true
+    },
+    {
+      "path": ".local/test-agent2/iter28-python-v1/ready-source",
+      "files": 5,
+      "bytes": 1780125,
+      "databaseSha256BeforeRemoval": "c6680be7002527302e8313418be3d680a3c84e027625bfdbe7248125d9195aef",
+      "removed": true
+    }
+  ],
+  "sourceCopiesBytesRemoved": 3435699,
+  "openFileReferencesBeforeRemoval": [],
+  "ownedServers": 0,
+  "originalQA1DatabaseTouched": false,
+  "peerFilesRemoved": false,
+  "archiveChanged": false,
+  "credentialsInArchive": false
+}

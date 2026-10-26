@@ -1,0 +1,758 @@
+{
+  "schemaVersion": 1,
+  "iteration": "ITER-0028",
+  "createdAtUtc": "2026-10-26T10:33:11.625496+00:00",
+  "status": "partial_verified_facts_not_final_acceptance",
+  "scope": {
+    "role": "external research review",
+    "worldCommands": 0,
+    "httpRequests": 0,
+    "databaseConnections": 0,
+    "worldServiceStarts": 0,
+    "offlinePlanningCalls": 2,
+    "writes": [
+      "this archival JSON only"
+    ],
+    "method": "Read existing source, snapshots, native settled state and raw evidence; compare original facts. Offline planning only used a saved observation in one python3 -B process. No new experiment was run for this archive."
+  },
+  "sources": {
+    "adoptionBaseline": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/baseline-state1352.json",
+      "sha256": "3bfc44a6ce0924c4cb7cada60f097495954d6a9c85a42a4316fe4b68990a95f7"
+    },
+    "adoptionBefore": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/before-adoption.json",
+      "sha256": "3bfc44a6ce0924c4cb7cada60f097495954d6a9c85a42a4316fe4b68990a95f7"
+    },
+    "adoptionAfter": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/after-adoption.json",
+      "sha256": "87876d0e52e6107df834a64f1422a89502f53017a700d0ad557d461499c0ef43"
+    },
+    "growingCold": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/cold-first-growing.json",
+      "sha256": "9dad47074a0b6264753a47449b982da0b31caf7535dbac3ab95c6469068fdfd4"
+    },
+    "growingRestart": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/restart-first-growing.json",
+      "sha256": "7d16d4378f01802ab9683e4f1a4a4b33089de90a1e3822a30edc39bd40ad8603"
+    },
+    "axeProof": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_b5675a3e143b387f2dded8ba37cdad28.json",
+      "sha256": "7ac06e9a54d8d77873f25111931966dc9c401bb3c171d288b2e8d6106b4273da"
+    },
+    "axeNativeSettled": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_b5675a3e143b387f2dded8ba37cdad28.json",
+      "sha256": "017c67f7146ccac3cc87c628d16cadbe160aa6c81b8852af659db82aa6dfd930"
+    },
+    "reserveProof": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_4f86d62b04cda7d936f30e18b0039d99.json",
+      "sha256": "6a73575637e986a644a30b341692de015341a38004566d2632f215b95b4f6650"
+    },
+    "reserveNativeSettled": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_4f86d62b04cda7d936f30e18b0039d99.json",
+      "sha256": "8d4e0dec08657b6415c714af1e0bc76d2395abbea49d4a0e56d8bdd4dce2a32f"
+    },
+    "collectProof": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_93d353342adc621e0b57e2cae65c01c2.json",
+      "sha256": "0c1d0727180c437d63da73a67c5912c4558ecf848741b6daa9ba0ac3a9ce98d2"
+    },
+    "collectNativeSettled": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_93d353342adc621e0b57e2cae65c01c2.json",
+      "sha256": "f7c4c3456ac413543391395aaccd87e068bfdb0cde719dd5b0841a8ef5b9e077"
+    },
+    "plantProof": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_2dc6fbb03ab687a3e357f51811965d1e.json",
+      "sha256": "7786bcb0a9c6459600cf160715b2964e0a19050dd9db8a6b1a2d013df6242fac"
+    },
+    "plantNativeSettled": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_2dc6fbb03ab687a3e357f51811965d1e.json",
+      "sha256": "c47b772d8e17236a78a6dc49dbe1da5444a54db747239c1650d048a1076be547"
+    },
+    "pythonCollectState": {
+      "path": ".local/iter0028/python/20261026T102011Z-2f5606/test_01_actual_cli_two_generations_restart_and_wood_use/collect-first-seed-state.json",
+      "sha256": "27bd09c62e0cdc8a11c0cf450eb30b8fd56edf06f165de6e23d1b8ea552e7376"
+    },
+    "pythonPlantState": {
+      "path": ".local/iter0028/python/20261026T102011Z-2f5606/test_01_actual_cli_two_generations_restart_and_wood_use/plant-first-state.json",
+      "sha256": "6ec0e32f73f32730a48e2dcb437f25829195bc87428e0dbe9a1ac6ce2c72ade0"
+    },
+    "pythonPlantReport": {
+      "path": ".local/iter0028/python/20261026T102011Z-2f5606/test_01_actual_cli_two_generations_restart_and_wood_use/plant-first-report.json",
+      "sha256": "38418ca0958e745934e970c4eb296c59c788315f1421a961c244dab139f13c7d"
+    },
+    "pythonCandidate": {
+      "path": ".local/iter0028/python/20261026T102011Z-2f5606/candidate.json",
+      "sha256": "88a8b1cab7eacde54ebf84abb02ac229fb2e38e89cad5a02ce62543ff67969cd"
+    },
+    "pythonFailedSummary": {
+      "path": ".local/iter0028/python/20261026T102011Z-2f5606/summary.json",
+      "sha256": "de59069e440f6e572f513a6a9eb95b7ac029d27cdb7fbe56a321ec2d806356fe"
+    },
+    "nativeManifest": {
+      "path": ".local/iter0028/native-v1-manifest.json",
+      "sha256": "35afff764d4a9aa0f109a2c84d76c6fd696fdce39d0d7192c540dd003945e167"
+    },
+    "backendCandidate": {
+      "path": ".local/iter0028/backend-selfcheck-v2/candidate.json",
+      "sha256": "f3ebeeb55fa24125cf1761d6d32faec37f2316504ff3ae6573e36d029523e80c"
+    },
+    "forestryCode": {
+      "path": "scripts/resident_forestry.py",
+      "sha256": "e05f65e508168b7f4f986b4c1d2ebb7a84e5f1e477ec39d81a98066891ede580"
+    },
+    "navigationCode": {
+      "path": "scripts/continuous_navigation.py",
+      "sha256": "61e734e47b51c643c88895027a4b97adcb433f28436e8930a4fafece230bfab1"
+    },
+    "qaRuntimeCode": {
+      "path": ".local/qa/20261026-test-agent/forestry-runtime.py",
+      "sha256": "98423096f48f5463fa9fc405753407634cf1bbe139af771e737df6d6254c35fe"
+    },
+    "runtimeStateAtArchive": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/runtime-state.json",
+      "sha256": "4ccf6346fa5938780eb12a29c9efaef6833af77b18a0f94785627d5a994b9c52",
+      "mutableSourceCapturedAtArchive": true
+    }
+  },
+  "adoption": {
+    "baselineEqualsBefore": true,
+    "stateVersionBefore": 1352,
+    "stateVersionAfter": 1353,
+    "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+    "preservedTables": {
+      "receipts": {
+        "oldRows": 1307,
+        "afterRows": 1307,
+        "oldRowsUnchanged": true
+      },
+      "events": {
+        "oldRows": 1353,
+        "afterRows": 1354,
+        "oldRowsUnchanged": true
+      },
+      "entities": {
+        "oldRows": 13,
+        "afterRows": 13,
+        "oldRowsUnchanged": true
+      },
+      "world_instance": {
+        "oldRows": 1,
+        "afterRows": 1,
+        "oldRowsUnchanged": true
+      },
+      "resource_nodes": {
+        "oldRows": 4,
+        "afterRows": 4,
+        "oldRowsUnchanged": true
+      },
+      "entity_notes": {
+        "oldRows": 2,
+        "afterRows": 2,
+        "oldRowsUnchanged": true
+      },
+      "entity_canvas": {
+        "oldRows": 1,
+        "afterRows": 1,
+        "oldRowsUnchanged": true
+      },
+      "entity_canvas_cells": {
+        "oldRows": 25,
+        "afterRows": 25,
+        "oldRowsUnchanged": true
+      },
+      "entity_canvas_edits": {
+        "oldRows": 2,
+        "afterRows": 2,
+        "oldRowsUnchanged": true
+      },
+      "workshop_tools": {
+        "oldRows": 3,
+        "afterRows": 3,
+        "oldRowsUnchanged": true
+      },
+      "workshop_chests": {
+        "oldRows": 3,
+        "afterRows": 3,
+        "oldRowsUnchanged": true
+      },
+      "workshop_actions": {
+        "oldRows": 17,
+        "afterRows": 17,
+        "oldRowsUnchanged": true
+      },
+      "resource_ledger": {
+        "oldRows": 120,
+        "afterRows": 120,
+        "oldRowsUnchanged": true
+      },
+      "residents": {
+        "oldRows": 4,
+        "afterRows": 4,
+        "oldRowsUnchanged": true
+      },
+      "material_source": {
+        "oldRows": 1,
+        "afterRows": 1,
+        "oldRowsUnchanged": true
+      }
+    },
+    "newEvent": "forestryAdopted"
+  },
+  "firstNativeProduction": {
+    "actorId": "a1_alias",
+    "axeWoodBefore": 2,
+    "axeWoodAfter": 0,
+    "axeEmbodiedWood": 2,
+    "grantAtServiceMs": 1643018,
+    "collectAtServiceMs": 1675394,
+    "plantAtServiceMs": 1684316,
+    "preparationExpiresAtMs": 1733018,
+    "grantToCollectSeconds": 32.376,
+    "grantToPlantSeconds": 41.298,
+    "remainingPreparationSeconds": 48.702,
+    "plantId": "p104ef1b2c98e408b94c6d4daaeaa1e92",
+    "seedBeforePlant": 1,
+    "seedAfterPlant": 0,
+    "threeRecordsAndNativeSettledReceiptAgree": true,
+    "limit": "These archived checks cover the first axe, reservation, collection and planting; later native activity is not accepted by this record."
+  },
+  "growingOfflinePause": {
+    "recordedOfflineSeconds": 67.67697722499724,
+    "serviceMsBefore": 1697268,
+    "serviceMsAfter": 1697268,
+    "copiedRuntimeEntry": {
+      "id": "ad9da30fccaa4cbd90ade7d9e43e35ed",
+      "ok": false,
+      "sameDatabase": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/natural/world.db",
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+      "offlineSeconds": 67.67697722499724,
+      "serviceMsBefore": 1697268,
+      "serviceMsAfter": 1697268,
+      "start": {
+        "monotonic": 441720.092970944,
+        "atUtc": "2026-10-26T10:25:13.601663+00:00",
+        "readyMonotonic": 441720.343164407,
+        "pid": 469021
+      }
+    },
+    "recordingIssue": "The runtime entry has ok:false because forestry-runtime.py copied result at line 203 before setting ok:true at line 235. This archive preserves that field and uses the cold snapshot and restart observation for the zero service-time delta; it does not treat this field as a failed world restart."
+  },
+  "pythonInitialFailure": {
+    "sourceTestSha256AtRunStart": "d3cfa2374b702cbee8bc8e7527c50fe9bf74ce90542725559774fc235f50715f",
+    "origin": [
+      25,
+      22
+    ],
+    "collectTarget": [
+      7,
+      6
+    ],
+    "collectReturnToOrigin": true,
+    "collectTaskSeconds": 122.60945129394531,
+    "collectCommands": 88,
+    "grantAtServiceMs": 1532012,
+    "collectAtServiceMs": 1574732,
+    "returnedAtServiceMs": 1595613,
+    "expiresAtServiceMs": 1622012,
+    "plantTaskLastServiceMs": 1622159,
+    "plantTaskCommands": 7,
+    "plantTaskSeconds": 26.300398111343384,
+    "status": "blocked",
+    "reason": "forestry_original_reservation_no_longer_active",
+    "terminal": true,
+    "personalSeedRetained": 1,
+    "plantCompleted": false,
+    "interpretation": "The explicitly requested return to the east bank and the next cold-planned trip exceeded the original 90 service-second preparation lease. Stopping preserves the original reservation semantics.",
+    "recommendationNotAdoptedByThisReview": "For the continuous chain, use a new explicitly configured collection task with returnToOrigin:false; retain this failed task unchanged. Keep the lease parameter unchanged."
+  },
+  "offlinePlanningMeasurement": {
+    "inputEvidence": "pythonPlantState",
+    "inputFields": [
+      "_state.initial",
+      "_state.spec.goals[0]",
+      "_state.forestryBinding"
+    ],
+    "function": "resident_forestry.plan",
+    "process": "one python3 -B process; two calls on the same saved snapshot",
+    "samples": [
+      {
+        "cache": "cold",
+        "wallSeconds": 23.459,
+        "cpuSeconds": 23.217
+      },
+      {
+        "cache": "warm",
+        "wallSeconds": 0.281,
+        "cpuSeconds": 0.276
+      }
+    ],
+    "bothResults": {
+      "action": {
+        "type": "walk",
+        "to": [
+          22.83694400158541,
+          20.782421273732936
+        ]
+      },
+      "issue": null
+    },
+    "sourceHashesMatchRunCandidateAtArchive": true,
+    "interpretation": "Navigation._graph builds the visibility graph lazily; the existing lru cache is per process. This sample supports cold planning as the principal cost of this failed trip.",
+    "provenance": "Values copied from the two observed terminal stdout lines. No separate timing output file existed before this requested archive. No additional timing calls were made.",
+    "limit": "Two calls on one recorded case; not a general performance benchmark."
+  },
+  "frozenResearch21": {
+    "path": "docs/research/2026-10-26-continuous/21-forestry-bootstrap.md",
+    "sha256": "521e28fab8c0bdb44ab0aad0496b1b0c4213e280b8794210e0b5434499a8d7d5",
+    "modifiedByThisArchive": false
+  },
+  "openAcceptance": [
+    "Revised explicit Python chain and complete Python acceptance remain unverified by this record.",
+    "Final iteration acceptance remains the coordinator responsibility; native verified facts do not establish long-term economy or C16/C17 completion."
+  ],
+  "updatedAtUtc": "2026-10-26T10:42:37.657000+00:00",
+  "previousArchiveSha256": "937a4d0f42d2507d8a97cee2aae3bc7c578fa1a915765b2deb4537ac6c3b44c7",
+  "finalNativeReadOnlyReview": {
+    "verifiedAtUtc": "2026-10-26T10:42:37.657000+00:00",
+    "status": "completed_native_facts_verified_from_exported_evidence",
+    "coversEntireIteration": false,
+    "method": "Reparsed all 153 raw native requests and responses, checked response hashes and cold persisted receipts/events; compared 15 raw proof triplets with persisted details and native pending-empty receipts; compared original table rows; recalculated wood and seed balances. No world command, HTTP call or SQLite connection.",
+    "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+    "stateVersion": 1520,
+    "eventCursor": 1521,
+    "nativeCommands": 153,
+    "actions": {
+      "walk": 136,
+      "craft_forestry_tool": 2,
+      "reserve_forest": 5,
+      "collect_seed": 1,
+      "plant_tree": 4,
+      "harvest_tree": 3,
+      "build": 2
+    },
+    "proofs": [
+      {
+        "actor": "a1_alias",
+        "commandId": "godot_b5675a3e143b387f2dded8ba37cdad28",
+        "action": "craft_forestry_tool",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_b5675a3e143b387f2dded8ba37cdad28.json",
+          "sha256": "7ac06e9a54d8d77873f25111931966dc9c401bb3c171d288b2e8d6106b4273da"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_b5675a3e143b387f2dded8ba37cdad28.json",
+          "sha256": "017c67f7146ccac3cc87c628d16cadbe160aa6c81b8852af659db82aa6dfd930"
+        }
+      },
+      {
+        "actor": "a1_alias",
+        "commandId": "godot_4f86d62b04cda7d936f30e18b0039d99",
+        "action": "reserve_forest",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_4f86d62b04cda7d936f30e18b0039d99.json",
+          "sha256": "6a73575637e986a644a30b341692de015341a38004566d2632f215b95b4f6650"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_4f86d62b04cda7d936f30e18b0039d99.json",
+          "sha256": "8d4e0dec08657b6415c714af1e0bc76d2395abbea49d4a0e56d8bdd4dce2a32f"
+        }
+      },
+      {
+        "actor": "a1_alias",
+        "commandId": "godot_93d353342adc621e0b57e2cae65c01c2",
+        "action": "collect_seed",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_93d353342adc621e0b57e2cae65c01c2.json",
+          "sha256": "0c1d0727180c437d63da73a67c5912c4558ecf848741b6daa9ba0ac3a9ce98d2"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_93d353342adc621e0b57e2cae65c01c2.json",
+          "sha256": "f7c4c3456ac413543391395aaccd87e068bfdb0cde719dd5b0841a8ef5b9e077"
+        }
+      },
+      {
+        "actor": "a1_alias",
+        "commandId": "godot_2dc6fbb03ab687a3e357f51811965d1e",
+        "action": "plant_tree",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_2dc6fbb03ab687a3e357f51811965d1e.json",
+          "sha256": "7786bcb0a9c6459600cf160715b2964e0a19050dd9db8a6b1a2d013df6242fac"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_2dc6fbb03ab687a3e357f51811965d1e.json",
+          "sha256": "c47b772d8e17236a78a6dc49dbe1da5444a54db747239c1650d048a1076be547"
+        }
+      },
+      {
+        "actor": "a1_alias",
+        "commandId": "godot_5b4d378ee23e5ac201c77890ad7a8fb9",
+        "action": "harvest_tree",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_5b4d378ee23e5ac201c77890ad7a8fb9.json",
+          "sha256": "6bdedcdd53e16b1ad97857fca479a9c0bb20e627132b322854fddc3982da5eaa"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_5b4d378ee23e5ac201c77890ad7a8fb9.json",
+          "sha256": "cee7add56577d1c70e6b471c9b91c425261187d954c722fb577da55388da8657"
+        }
+      },
+      {
+        "actor": "a1_alias",
+        "commandId": "godot_869c3fdf2208e65eab09b861d12eddbb",
+        "action": "reserve_forest",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_869c3fdf2208e65eab09b861d12eddbb.json",
+          "sha256": "49cf41473f8450f62c300af70fe9205ce04cae8bf030786a2323b1e920a9708b"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_869c3fdf2208e65eab09b861d12eddbb.json",
+          "sha256": "f9f49b2968afc138d89b892d0bd629669165d33bca2a42694bbbce84c74811eb"
+        }
+      },
+      {
+        "actor": "a1_alias",
+        "commandId": "godot_f2bdfa3d9b2bdcceccccfd0c09e71d5d",
+        "action": "plant_tree",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_f2bdfa3d9b2bdcceccccfd0c09e71d5d.json",
+          "sha256": "6891d8f1b59064e42134ba8072e77e28f018e138e1bbab8d1b3271eb8bd8f02a"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_f2bdfa3d9b2bdcceccccfd0c09e71d5d.json",
+          "sha256": "2be2d6eb9885e3e5fb717c8d0ff73001ef30f0bd2774bbc320d33115b104e245"
+        }
+      },
+      {
+        "actor": "a3",
+        "commandId": "godot_175502eaf8df8aff0f1755c204bd124c",
+        "action": "craft_forestry_tool",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a3-godot_175502eaf8df8aff0f1755c204bd124c.json",
+          "sha256": "591110f88019d03b36404be9c7cb53d949d3432f4bfb1b6facfcfbee5a84c589"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_175502eaf8df8aff0f1755c204bd124c.json",
+          "sha256": "e0db7870ee481f7d850d78655db5ba2c2bf81d96d6615342a9b79291623f93d7"
+        }
+      },
+      {
+        "actor": "a1_alias",
+        "commandId": "godot_d6f371db8c6872e7bf0de4079195fdc8",
+        "action": "harvest_tree",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_d6f371db8c6872e7bf0de4079195fdc8.json",
+          "sha256": "ca99318da68bf59045d2523bdb9ded708962ac28dc092330a5a817048b7461c9"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_d6f371db8c6872e7bf0de4079195fdc8.json",
+          "sha256": "e8bae886a14f58d69153e3aefdcae5ef646c1cb6a414ad7ba20b02040578c614"
+        }
+      },
+      {
+        "actor": "a1_alias",
+        "commandId": "godot_c6988a67876b2c67890aae73e6fa2e92",
+        "action": "reserve_forest",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_c6988a67876b2c67890aae73e6fa2e92.json",
+          "sha256": "3e0878b68069078435ffd91a2d4dc5df479bae20ac953daf6d4575d2fe1e837e"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_c6988a67876b2c67890aae73e6fa2e92.json",
+          "sha256": "65bc9674a382a0c15255f4718abafed1916847739d03031c7730908f58a8c283"
+        }
+      },
+      {
+        "actor": "a1_alias",
+        "commandId": "godot_72211b6f429ed91337d8aa180e1ff6a0",
+        "action": "plant_tree",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_72211b6f429ed91337d8aa180e1ff6a0.json",
+          "sha256": "43d31faf8f2f7450c570a5b892cd731a0f96c1e3390c6efd882aa01aa763f44c"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_72211b6f429ed91337d8aa180e1ff6a0.json",
+          "sha256": "5ac63d6a66e2b7b8aa588e7efafd594282b281b7ef5cf1a52e29193cdc4963fa"
+        }
+      },
+      {
+        "actor": "a3",
+        "commandId": "godot_8551010c95fc14e757da61cc8a4706da",
+        "action": "reserve_forest",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a3-godot_8551010c95fc14e757da61cc8a4706da.json",
+          "sha256": "da395c71eb803bd52e3cc4cc0dd67e0dcd804aa6b3f56273262c47729504ef59"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_8551010c95fc14e757da61cc8a4706da.json",
+          "sha256": "a0c529315607ca7f8451f1a4c30fccc7cd61c64089b3b77f29d0e200bb94469e"
+        }
+      },
+      {
+        "actor": "a3",
+        "commandId": "godot_29bbd37dbf901dfe484d39c043c05d8e",
+        "action": "harvest_tree",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a3-godot_29bbd37dbf901dfe484d39c043c05d8e.json",
+          "sha256": "d4ebfcfec54d15dce03db9dbd997a82befb2d7d37f036843479fcbc09cf27dae"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_29bbd37dbf901dfe484d39c043c05d8e.json",
+          "sha256": "138937e93666a84110dd496618c05c3ba7aa92223f87f29d8d3b57e8e3c887b2"
+        }
+      },
+      {
+        "actor": "a3",
+        "commandId": "godot_bc632c98080e16c5a47387d032360321",
+        "action": "reserve_forest",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a3-godot_bc632c98080e16c5a47387d032360321.json",
+          "sha256": "bab7a730fa3136aff89ed665157ad51bae59b86dc031ff4ef6793813b5b4fd8c"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_bc632c98080e16c5a47387d032360321.json",
+          "sha256": "0bf9994a34f69c380dd159afec82471b781931e37233c80101e5c039b2cfedc6"
+        }
+      },
+      {
+        "actor": "a3",
+        "commandId": "godot_a2eebba421abb39da3262d331d82f957",
+        "action": "plant_tree",
+        "proof": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a3-godot_a2eebba421abb39da3262d331d82f957.json",
+          "sha256": "a0c2d240bef5bbffa7cccce8880d5023d683c24220c9e3797bac232065b15d6d"
+        },
+        "nativeConfirmed": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-confirmed-godot_a2eebba421abb39da3262d331d82f957.json",
+          "sha256": "99942cac7f725b81294c3b79dcd84d41309373c126f9e8e801a3b05da2c6d017"
+        }
+      }
+    ],
+    "coldFinal": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/cold-final.json",
+      "sha256": "1000eeb9e547053fd5fd494453290ae6b5d68f5252c16032544c4b5a84811537"
+    },
+    "nativeCommandsSource": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/native-commands.jsonl",
+      "sha256": "67c27b367126b823ba058f4d8e7ed76315ee54391995f1fe3f383fd65c304370"
+    },
+    "runtimeAtCompletion": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/runtime-state.json",
+      "sha256": "ee994f83eaa78cfc87d89af4d9f42b004a0b4b81fc36daca4a49284735bea062"
+    },
+    "qaIndependentAudit": {
+      "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/independent-audit.json",
+      "sha256": "584c3e606c92d70ce62c29becb528cb98f094d4201c557d28b8e99ad64dc3b4c"
+    },
+    "originalHistoryRowsPreserved": {
+      "receipts": 1307,
+      "events": 1353,
+      "entities": 13,
+      "world_instance": 1,
+      "resource_nodes": 4,
+      "entity_notes": 2,
+      "entity_canvas": 1,
+      "entity_canvas_cells": 25,
+      "entity_canvas_edits": 2,
+      "workshop_tools": 3,
+      "workshop_chests": 3,
+      "workshop_actions": 17,
+      "resource_ledger": 120
+    },
+    "originalA1FullRowUnchanged": true,
+    "plantStates": [
+      {
+        "plantId": "p104ef1b2c98e408b94c6d4daaeaa1e92",
+        "planter": "a1_alias",
+        "state": "harvested",
+        "harvester": "a1_alias"
+      },
+      {
+        "plantId": "p9dfea62779194cfb903c33ff1ae561c2",
+        "planter": "a1_alias",
+        "state": "harvested",
+        "harvester": "a1_alias"
+      },
+      {
+        "plantId": "p4607be7fcb7f494aaaea314ba4d1ef07",
+        "planter": "a1_alias",
+        "state": "harvested",
+        "harvester": "a3"
+      },
+      {
+        "plantId": "pa5be16de18f6414199ad58c39094195e",
+        "planter": "a3",
+        "state": "growing",
+        "harvester": null
+      }
+    ],
+    "expiredTreeHandoff": {
+      "plantId": "p4607be7fcb7f494aaaea314ba4d1ef07",
+      "originalReservationId": "fr7e6dc16df8ab42959aea62cfcb0939a7",
+      "expiredAtMs": 2361698,
+      "newReservationId": "frc4333ee2aaae43d69fee1cfc6b2d5e5d",
+      "requestedAtMs": 2376406,
+      "grantedAtMs": 2376612,
+      "harvestAtMs": 2394702,
+      "harvester": "a3",
+      "woodBefore": 0,
+      "woodAfter": 3,
+      "seedBefore": 0,
+      "seedAfter": 1
+    },
+    "woodUsedInPlatforms": [
+      {
+        "actor": "a1_alias",
+        "commandId": "godot_20fbb6e13750d5d97435eaa707052ea1",
+        "entityId": "ee6382223c1984846bc8af96fc360eecf",
+        "position": [
+          10,
+          12
+        ],
+        "embodiedWood": 3,
+        "remainingInventoryWood": 3,
+        "nativeState": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/state-alias-used-three-harvested-wood-platform.json",
+          "sha256": "37774f276cfc24821fffac931bfe08d6079b668d8094bdfc48462fb288da7926"
+        }
+      },
+      {
+        "actor": "a3",
+        "commandId": "godot_baa27b862bfbe6cfa38834da4002ae38",
+        "entityId": "ec6f404e873fb4e12aff7efbc8e645993",
+        "position": [
+          10,
+          15
+        ],
+        "embodiedWood": 3,
+        "remainingInventoryWood": 0,
+        "nativeState": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/state-a3-used-inherited-three-wood-platform.json",
+          "sha256": "d9b67325f2bdb2647d5357f2249a3ba5f6c8bd30f1f8ea663c90900cab7c0c51"
+        }
+      }
+    ],
+    "emptyCenterApproach": {
+      "positions": [
+        {
+          "position": [
+            7,
+            12
+          ],
+          "source": {
+            "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/state-a3-empty-plot-exact-center-before-fourth.json",
+            "sha256": "14fe31decd8dbff63376a494e2234b3c534211df08a560c62675b2b3ef58ea74"
+          }
+        },
+        {
+          "position": [
+            7.88401079177856,
+            12.8835391998291
+          ],
+          "source": {
+            "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/state-a3-walked-away-from-empty-center.json",
+            "sha256": "90f56a1eb58738d41fa4d11e2c55329c041179c54cc446144a5e81fd1a023b6b"
+          }
+        },
+        {
+          "position": [
+            7.88401079177856,
+            12.8835391998291
+          ],
+          "source": {
+            "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/state-a3-fourth-tree-growing-next-generation.json",
+            "sha256": "6082a3483cbf52cffbf51b14ee2cc0c7681242c7b782634e47e80744b1d90fc7"
+          }
+        }
+      ],
+      "finalDistance": 1.2498466296372537
+    },
+    "growingFourthPlantId": "pa5be16de18f6414199ad58c39094195e",
+    "wood": {
+      "issued": 85,
+      "initial": 12,
+      "sourceGenerated": 64,
+      "forestGenerated": 9,
+      "inventory": 21,
+      "structures": 48,
+      "mallets": 3,
+      "axes": 4,
+      "stored": 3,
+      "sourceStock": 6,
+      "standing": 0
+    },
+    "seeds": {
+      "nurseryGenerated": 5,
+      "harvestGenerated": 3,
+      "nurseryStock": 4,
+      "residentStock": 0,
+      "planted": 4,
+      "reserved": 0
+    },
+    "sameDatabaseRestarts": [
+      {
+        "label": "first-growing",
+        "offlineSeconds": 67.67697722499724,
+        "serviceMsBefore": 1697268,
+        "serviceMsAfter": 1697268,
+        "allPlantRowsEqual": true,
+        "rawReportedOk": false,
+        "cold": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/cold-first-growing.json",
+          "sha256": "9dad47074a0b6264753a47449b982da0b31caf7535dbac3ab95c6469068fdfd4"
+        },
+        "firstRead": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/restart-first-growing.json",
+          "sha256": "7d16d4378f01802ab9683e4f1a4a4b33089de90a1e3822a30edc39bd40ad8603"
+        }
+      },
+      {
+        "label": "first-mature",
+        "offlineSeconds": 70.55497980403015,
+        "serviceMsBefore": 1810563,
+        "serviceMsAfter": 1810563,
+        "allPlantRowsEqual": true,
+        "rawReportedOk": false,
+        "cold": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/cold-first-mature.json",
+          "sha256": "c6c6053196afb471628fb110e1f67a4941fe857b234f5118b52568c1a88141a1"
+        },
+        "firstRead": {
+          "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/restart-first-mature.json",
+          "sha256": "32887bfed3e2dbbc325d694935addad2e2f9d42aef6b78c99a4a2e907f15de6f"
+        }
+      }
+    ],
+    "databaseSha256": "5347483f3cc0cf260fabf3845e8e2f69d77e8dbe8891edb5c2fede6d0ee6f007",
+    "allRecordedProcessIdsAbsent": [
+      461412,
+      474155,
+      461665,
+      469073,
+      474213,
+      476484,
+      477416,
+      493515
+    ],
+    "priorSourceChanges": [
+      {
+        "name": "qaRuntimeCode",
+        "path": ".local/qa/20261026-test-agent/forestry-runtime.py",
+        "previouslyRecordedSha256": "98423096f48f5463fa9fc405753407634cf1bbe139af771e737df6d6254c35fe",
+        "currentSha256": "8ee489c24b1c9b2d70fae73ed25c2dac9c7a8529010628750d8f247fadd8587c"
+      },
+      {
+        "name": "runtimeStateAtArchive",
+        "path": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/runtime-state.json",
+        "previouslyRecordedSha256": "4ccf6346fa5938780eb12a29c9efaef6833af77b18a0f94785627d5a994b9c52",
+        "currentSha256": "ee994f83eaa78cfc87d89af4d9f42b004a0b4b81fc36daca4a49284735bea062"
+      }
+    ],
+    "limitations": [
+      "Python whole-suite acceptance remains separate and unverified by this archive.",
+      "Fourth tree is growing, not harvested; original reservation and history remain.",
+      "Declared operators do not establish independent real people; actual model calls were zero.",
+      "Raw runtime passed remains false; explicit QA independent audit is a separate artifact. Restart ok=false is preserved as reporting metadata; cold and first-read service time and plant equality were checked directly.",
+      "This review does not connect to SQLite or claim a fresh PRAGMA integrity_check."
+    ]
+  }
+}

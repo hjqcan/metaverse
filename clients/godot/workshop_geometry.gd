@@ -15,6 +15,8 @@ static func walkable(observed: Dictionary, point: Vector2, excluded: String = ""
 	if point.x < RADIUS or point.x > 32 - RADIUS or point.y < RADIUS or point.y > 24 - RADIUS:
 		return false
 	for rock in observed.terrain.obstacles:
+		if rock.get("id") == excluded:
+			continue
 		if point.distance_to(_point(rock.position)) < rock.radius + RADIUS - 0.000000001:
 			return false
 	for tree in observed.resourceNodes:
@@ -68,6 +70,8 @@ static func clear(observed: Dictionary, start: Vector2, finish: Vector2, exclude
 		return true
 	var cuts: Array[float] = [0.0, 1.0]
 	for rock in observed.terrain.obstacles:
+		if rock.get("id") == excluded:
+			continue
 		_circle(cuts, start, delta, _point(rock.position), rock.radius + RADIUS)
 	for tree in observed.resourceNodes:
 		if tree.remainingWood > 0:

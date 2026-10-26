@@ -4,6 +4,7 @@ extends Node
 const CELL_SIZE := 0.05
 const CLEARANCE := 0.07
 const Workshop = preload("res://workshop_evidence.gd")
+const Forestry = preload("res://forestry_evidence.gd")
 const WorkshopGeometry = preload("res://workshop_geometry.gd")
 var map: RID
 var region: RID
@@ -163,9 +164,11 @@ func approach(start: Vector2, center: Vector2) -> PackedVector2Array:
 	return best
 
 func workshop_approach(start: Vector2, entity: Dictionary, observed: Dictionary) -> PackedVector2Array:
-	if WorkshopGeometry.can_interact(observed, start, entity):
-		return PackedVector2Array([start])
 	var center := Vector2(entity.position[0], entity.position[1])
+	# An empty plot is walkable now, but the future trunk needs its full clearance.
+	var planting: bool = entity.get("entityId") in Forestry.PLOTS
+	if WorkshopGeometry.can_interact(observed, start, entity) and (not planting or start.distance_to(center) >= 0.8):
+		return PackedVector2Array([start])
 	var best := PackedVector2Array()
 	var best_length := INF
 	var angle := (start - center).angle()

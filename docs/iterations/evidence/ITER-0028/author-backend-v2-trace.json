@@ -1,0 +1,5884 @@
+[
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "3d926462e7d9dd9c2424285ea26713bd5b74d5342f852df1c33f3deb279ae15d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "3d926462e7d9dd9c2424285ea26713bd5b74d5342f852df1c33f3deb279ae15d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "3d926462e7d9dd9c2424285ea26713bd5b74d5342f852df1c33f3deb279ae15d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "b5362ab2395440f56bdb0d55e4cb168b824f69db6771bed6f5ca74f89f26943d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "2b10929229da3ade598d1a9c764274d434e5719d1f093b9d3fbd785af8c567ca"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "228d368300e9f328261eaaa0ce36937ba6eed7c01c739e23d33823312a64ffcb"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "1fb81101a7ab267634246f78ed56458451906abdfe0c11194ffd91d62537894d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "564a9482f5341361d5efd80c477809f6d2a3ed06e39d30bdace550921af031b9"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "6375b283278c3944cecc5d104c0e380dcf2a07a92cd561c1387416509ef857b2"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "a701a2918cbf05bbdc94047dce7d47b7ab4ae8efb578d424e55275c50533a0b6"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "2c6191b6408def7996a65a8763b3447044f5705e7403954d80f8617cc9c8575e"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "6b8faf51aa004510abe164f18ef14412fae227b607c847fef5bfcc063523e49e"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "cd99895ff272bc0b1eb271004ff78fcb61fd217e6dadb8d0497f0364944cfb7d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "bff9c8d55d7f4c69b6add9ba6dc8b75aec519ee75ce503e9233a9ffe048c157c"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "58242f550c45d1b24ac07127016eb6cac7700105eb54ec820353e318b9bfc96c"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "ee974f2c2fe8ce8e2cf9144a3dfa50b0af8e51d1decca08f779793b31a2b4d51"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "92cca5a1d085125124554c25ddf65d1df7fc144672c8a461da191a1c60641aa6"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "a51e84490bcfdf601a8215f8ef6a4c856b59e7124e56ff3334e925566783e7fa"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "5bd03e6b318e22d05904d7a4bc29ee3bbbe2591457fb6b90eb15710638205c49"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c24dfce7004d80981d071b016e5995d30baa321aa2d109c478e806dccda85788"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "da0255923545fc405a99edaaa51d07d4e47b149a8bd6d15f30b465dca823a9cd"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "b010874e4ed943b9f722616edb7d20713b27affe33e4e8f2413bf6a3b156507d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "62d540664025f9cd8760c31e5392958c33967fe8fa1752c68621ecea60ca388a"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "45f0853c21ee28923c5044beb3e559f43e772b7dac049aba899f8815c8606a16"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c104c3195c9a09f2be8c51c6ee0d780c4cc2ab133d42116a3bb504eb392e050a"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "873675faaf765a338299738174cfed79877d611507b0ba329eb70ef2bc99581b"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "492e6696b8f9e2fe4e9c1f52d3c397aaaf20ce3af5759d260a6d5e3456cb35be"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "e9f0cfef173a46990b9e0b25be28661d822ab2a8b2c7e75da70d0bc164b38bca"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c6327175e52422537545d1f3d628e845cd876438846628123d26776113f60ff5"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "54774d4c29298a35323bd3195f41f63e6253e33153ae778ce028c48cfacfca36"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "1f34d7bb758a366e43219b913c68981711c76b9b26fdd97f0622b25d6937844f"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "a5a55759278337671636df2dff6c43cb40fdd9e5368c93715d33905305554e5b"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "5fe9908e4187d94f7ecb77b3fd890d8938c47f102d941a2c652561c6c39c079a"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "b5600be8283a4caf55bf724cbeb3d9518d84c5259b2df7304e2846c5cdf3c1a5"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "536d94dccda8e931da9d9fd0e0e390822baa0ef6b0ad84246367dc7c6a4098db"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "eaaf4d5b22c6c9489f4a1e3dd8413e2b8680fac271f310b506cf5301832ea07c"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "b624b4c463c5b63f3b381b4d2f84da5ff2b424f938702beb7288eb5ef63bd1de"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "069a90f409fe935cdac269f005f45069044400830d030a15679c6ba8af642781"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "0aa0f1c34e1bcf8cfe69d0979f8ffa2b07a099724dcbbd87c840c64fda87c7a7"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "119253262a0240276f02f7a6f59b8292277e4f84d501c7a743f09e1e18fb0418"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "5318e4ccc12fe2a838cd567cedfa5f36cd66ac51826f06a2a758a87f5132058f"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "b236d59f73f922a9fc1d13db2920a5242b33fb8d96a85f9a512fae790d60aa6e"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "fede26b05ccdf171f0a1ee3a202295fb15a5101e9778641f0b6f30e983476aee"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "3784efb8ffd9348de457a695ad739ba7ec717601c2f28c90683d5fae3597a397"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "2a787b4642e9b5fbc6f265e476d26dbd42b4145f931ebf7f87c30a40b3aa9064"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "ecaa63acdeb15b670dc61c6d59313dc61dec95844e5d192cca05ae2c25f46853"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "2e312a332da42397521d379452821e1a34fed185aad16a823a1efc6eba0bbc52"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "4a01d5f93319a421174b6595eee10cdc66844ccc4f33eab34c88b49f1d2b9d92"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "f50466636a21ce4542cbff230705824d34e0d281e4e5b926cfa0330004f59618"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c77e0fc21bfbc0c588ea228a562825ef9fb6cbd4b5fcddcf484d72b613eba145"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "30ebc9b716b4ce57d9b35ffd2fd9e077b447fed1701f807a52fc67efe0310c96"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "99af812475b221f1cbf6994ff842d2387caf1f6b641774560ae9e97785b156e9"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "f519ef9f997a3782d3eabba30e63a56a24b77f7222a419930d0ee7218278e32c"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "66a3506673ba1423514acb0ce3875a35133c8c9c041973a56d5e56bd71c5f02d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "499d22d85c41d72e05ad0fd223f559425cbbd81044a6eeaaabd2c13be477ed4d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "9e2718de319f3f4eed47b293b8d58e64d02bea2c41a97a9059ccf7c37999e096"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "d0960c1a32f7929f0a7f443c04d80b7d7049f21bd42f46f807c40364f81ba5c8"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "f628326878bfafe60ff21587c7c337411792b721a2174beda7277cca830bbc0e"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "690b9e96f6ffa89cf3660363aaec466845f19ece66f52ce2b58d11f11d62bbf1"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "b8842aaf7fff316b3af01aacc5c1adc1a5b2588c7cad0d8ae7bdf301e382f955"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "cb7acfcb513c637fb3ec55555b81fab61df6a9ba426a361400482336dabd8c1a"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "baa8311639d6c754b60ec928ee1ecff66c1785c508a194774ccf714ed0638d72"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "640f9b6e53032c794cea7a0aab5476d7a874738f4ac629eab50a77ec3a99ba06"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "75e70839653305e016b660583776d706108a49fa0badcc65ed352eda088a801d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "708bc53e8674a76be857dc6de8b9b6c4d568b16df4221ee954ca7da10e067840"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "35ac1fb0a2035ce85911c3acef69442d899e9bb4008b0b13d37c11868fcdf2ce"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "67b921a43cd59e36ba181e7d15555b8533ad6cffb7e54a3e4d3c6c311a817d1d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "94727cbca5a9c4e336e8b4ff7d16e311e1b716b5f7da34dc013934b32e497aac"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c02ad25c91460134dc872ddc128852bf97043ec119544d11867435fdbc0baed7"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "1d725d4c08b31c7f79304b98ba22b1621c4708c8018cae20cbf924bf7b3b1ff6"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "880403b89287a11cb124a8f2a68a0f540e0408b39bc8bf44df4918e847dbd3cb"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "125c3442b803b1b19947e746058f45224a2815e7806d960956a220fcefe5d399"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "5398d3080e8e93572e78100c39865e350afce3520ecdae0b618a3082f1a4c268"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c89e755fd6eedd6bfe6c071b78c0a13a14465d3c76d64c02a4306f24fb381cd3"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "f39222674b69476fca44311fa1fb5b32af3cdd1143566d4da2315cc80af1148e"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "543ccab2e70f7279059d2ba04bd4f283fc337eb150ee1fa8d7e597b6fd42e08f"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "29189223b8fa1e3d35a205b846feb0245e047446167da7748813e26312c57f96"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c316e0c1e31cf58f4fa50d759cd21267e8a495c6cfb619f80c8f9fa27609b48b"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "f8bbb823eb96039d234b24155bbf99703bb0994707842522e46c588c712adb38"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "9e9d9cc52ed3f3d5685d037af2dc449030acd8adf97e8675f25d201354c8805d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "cd8ef3e6bac7e1dd0c596598ae1a0708af8b6e8dc6fcb0afeed5f9c6f0acaed2"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "168c21dd38915a703b89686484ade5b56f3c74f2d5e9669fb7077db20f5fc44b"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "ae7ac256d937eb960a2d9537d5dc5c9e879df28fc3fa888093e24de4bfbf4f53"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "dc1eeab0419e96149642dba6d991de725fe7240db987b228b88b0a5582cb4781"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "a3e07ffae18b522e50d75ddbfd2ea9eee40c9ac713949b4be057c4a8f6d5147f"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "074f68121449e654e340ebce4b2716469c195fcf232769d057e39a273f8243e3"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "9bd91579dfdd5c8f5c10d71642305def834332a484fe0c0a6264c4097f6b42f6"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "ae4dbd21c05c05673c4d9196cf9e0a1c49ebf99f9abd47e3381bdffb15f4d660"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "014d782667e6fb9cd96bccdcbe4516509758810ac375376795c3da1e22cdb311"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "3f104d71ebe5543ee4ba05fb0388b8d258ff2dfc480a40c25d2f99d4a425e6ce"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "3104345400bf5ced1980fa9c54550cbeef5bcc8df26916419f5a6bdd30c0d769"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "e8972524cf92df32c0d49854b5f7aa0604d03a34290c88017d70e22606b54d7c"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c456e297cfaeb7b802ca65037350d6e50580e062bb5c85d1221266e3bab5a651"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "56a1fb3c8a1853b2a53a167be44974a78031caec102a90cbfc8a21731cc5d707"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "6e99e2b754460c5bcf2c47b20f813df3529864a989e119bb5c5d009cbaa09986"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "89290f92a8b687242a1e26ba0dd5f9b4150971359c549feaf23cfb8b5fe58607"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "da00a824572206576d6ea99d969f901f062fd01bb8347cfcf6f605a2a27129ba"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "296ac9b2af5a027875f682108e12eb4c11226e1ad563d90acc97d50f4aad2030"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "71f89063e43f007707fe129e63ed1dbb8dc1eace9c92ae1d5f61734d25a953ab"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "6906f49645f7cc758c0dcab7fb10f3dd025674d5649b7aa6e0e450ad0064ed26"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "0d6b522c6c2a6c9818c1ddc450871dcaf8fd62041f9ef3014f9e722cfb1f69ff"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "a73fb2951c9f7896323530d85fd593ffe5e047cf2232163d624d9e75e2fd115d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "6dc89cf871f9633c165cb18618dedc5383f29b4848f38344c99f7c1a85d35845"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "638c42859b18e1f4781d72a13c35cd111b23d414b25d5cdd51876c2d32d051ad"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "68dcbe1b7e1e105585681201300d44f883fcd6af8cc67db82071174bdaf2b1d9"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "b7ca309ecf2c274016dd029a38a22141efa152a14b20cbe1752795c7ccc2339e"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "40c3332ee140a22ee3bc3bf3490635dbcda2b4f6b6403c30ab6c50a4d7ef7a67"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "d579ebac56e2822eaac210c5a99704f7b8c9ccf39604e05add8fc9dd99240945"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "17b49950558475ebc668ea436e588142c7358f2bfcc0c592ddbe28d8c329cbbf"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c9d57c7bc5dc1613902ead6497663770c3fc5c8af5d8fe14f0e88b11d4f69b00"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "7974cac40a927e7c7630baa5710192b26c11d3de3f52fd3b10332b466eb17dd5"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "ffaf888cc1721f5c542292e7ebec2129dc80fa131e3ba1e9d8660822f72fa90c"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "0a4accdd0c562be37ba206e5bd9ad97157140803086fad756cf647e1d1229534"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "d79c979401a466ef705fc9e402079f4e9885aeec96e2be086e3709552f071878"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1412,
+      "eventCursor": 1413,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "ae5157f216c680231e27e2ed4574651ada81263ed08d2d127b9b66db3e7d703e"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "e8514347a373a4ee8772ad66546104a998a31a9b7bedd7efbd20eec1ec2551a2"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "7b3b5901acdf4ab910ac139eaf5858f1955114299d705be0f4191fccae813f79"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "ea0986c36e51cb7e024478260387bc16ca701051dcddf9f8d215feb37706822c"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "e88d7d33889e6361800da34ccd7a1b65519a824eca4b52c14261af4b17fa2be5"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "2dcf4dc9ab1b50770a988104d0da1f2bf3b5e5499eaec1cb5d4a9d11977aa461"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "287f4461a67e51c317fa76206ce3d3ed0cb5425a60396dad4353aec56ea1bdec"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "bd037bb5115b1944a8a75233b2d6894431fb49cfa692ee70661a37291e67fc7b"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "f06bce98ef1ecbda8e5a4e7739ab4f7d703b6fe8070f890a75d59b6d06214d08"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "d3e04e94b75565bb4b16b9ef80ccd4c29ec38224a40a6e4f1da24dbdb856f0be"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "0c098d7807555030ef17db7c0c76c1c5e6b95808f3c8b60c90d6c9e68609af7b"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "75c8f42f64e90fa5c2911d22b82901f8abbaa40d56a897a326574d8d21000774"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "bd9f590ff8a18f07378dc672c9586c9480a1bd6c720fc5811257602583584620"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c637c76702edcb3ab19cdd4f292bd0a7d7a76fd65fd81c872591b8403d506628"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "cda5bc26b0649e81492bbc5d96286abd1b8c91a54775e10e67e3754745b037dc"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "eb51a2525e50f7b00a9acba6d162da67d765bd99125e85eb8891e3d76c419584"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "ba8b3479032c3b1b0ee11147659adf0bb23b2922cefb74ed5f76accb97970b3f"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "5eb924cd72be55ec31e445149f94e90ea808c1551832e16bc5bd7992e78d7312"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "a0379a82dde8443151257a80a89445ab1a8c9c9542f2b709ce37ace00d4d9ad8"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c05d0967df14cf31478b3265451e61b269f1ee38b827933e69b9d1facd8dbf01"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "68c2b9d51aa13bc6b7e49706f9019c93b54c7ad0fad95e4657ae729f0393d691"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "b142f9eff7aa6d32ab4537996195bbff4e6bcc5e6f7872ae07d268657d3b658a"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "99a3241f0c9fb16b18231e9079e35fcae2ef5a38ddc938617545cc21f0a68d15"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "6b27802909ea77a7305d3183a7e08a2fe2a1ef061f93009319da55a15644a481"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "836cb55cf513390e3ea5fab766c91b0c3b2ca1f34daf473b9976c9e248fef010"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "2dce2d151edc7febe2d19654ff74eb314a417aef81c72461148ec3d932eb8ecb"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "a6c380dfd1775a03ddb2171308007078bae40a9573de6ac51c193ed389889c03"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "26d1d81cb1b4488c3b844a8dbb527e329c4981e7507a58a4632fd7152d7275c5"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "b2e496813ac7b2d3e2a1aa1928bb463e1393054d4a9fe1b6b16de0b68f3f1c44"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c092a0f6a1a63caa50121010defb85a41f1c7bf9af9c174ac67dee0529c5195f"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "503f9b1b98a38a42ea1c97a3ad3ffd42a24631d4c1495848151867c46fbaf76b"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "6779cc8fd75e200a6947b566ed457f8d1f6b8a73b2077f120122ec6e0e8f2398"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "7d3bd0649960c924bf35500bc50801f946455718d0383940fb925fcd6739131a"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c44f46790e34b8e24e5f22d2c119385429b22b6ccb6c5fa4e417d525557bd536"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "9ec53f85af5ed1423ad563c2a304a414699c1a717a1d96d191daf12835bb0a85"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "526c3c1e96f6874e3b8e80cae12d295b94904b37934876b9321028ad000c90d4"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "6be4476f1b369a874b4af73ea9976c3050a8cb24dbf44fd2a47c22b57db8ba80"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "8070baae3299fe85fbe3f3d97d75d2afaa729ab69f3cab4b902adff07e6e1951"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "69762b9ed5ef2505a4a7c516241ac15dc621204687996dffe4cdf14672f98a33"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "75f325672e1ef9f1a0281871b6e026a663d1837283b003e96ccff78b8c107403"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c7f6ae342360c32d034798b20849da2156dfe52e7ac9b11be9fc829b24c53e50"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "07d380b8d34279e96389fee7c0eba4dc9eb29a0803da36e2cd06e0173c092c7a"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "eb74b2fc22a60ba97cec76e483e0636ea95fd2ee3dc04b52ede9ac20b4744ae3"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "d8aa22fd412044a55777a2464a4a96714654a5557e465c0a38bb3c11948c5850"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "49081ac23d55626901a90bf82161accc92760126c5df7790924882c9a6c3ba3e"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "83fa88dd43fc1c0baa93f6df7d26f152a3e0d24bc51d5daf9c5db7792751a864"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "2360813b59c3d9301fd093ba6cc7b608dc92227c81508b7fac31b81f0697a5d1"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "f8ba27e851c93bd6c4d9d6f734acdd06caf99a4b05c11c7f56c7b931c2802434"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "3e8e7b8d672c196b8c2c332b4f551a5b7838a38ed79ace830dd10df2431c8256"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "958374bd88327019bba91acae9c0d4d7ed1f35ab3613d07f1c1d81a665f4a792"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c90ea3c95b2ac6fe6fb7c471b4c40cf217c848588b84605b8a5a2d160086727e"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "1bed50694fe06e9ef42377d0f19eea18be17efd81f6a9bafdc60016152ca4617"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "4b3001bc9999085fc57803f3b63c478f65a20ca5b35548e99f39c1bb565e1318"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "8f97e434d6fd827c69779ebe4b37701f5e705a018c82fec9a64c91a973fc31c6"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "5c80884fcd97dbabb77bdc9567f4c9f9c2aa4d6ddc77888067d4f95b5c0be631"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "36a5090192bbce0e88e3f11f0371cd8341bc19a9ef0712de4f360041495a9336"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "ccd4f525db4176ca2f39db6553b52c5b7d63eb600856e81d52d93255407a6ab6"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "6823f46c39e28d870f850bc77638c6685be3ea44a9acb4a4b258744fee027f38"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "ce0c6ee26e95ac08b1bb7cb2d96fa868b9c115f10f4df156a7c35797454cb9a6"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "0ef46d14098bec0410537367bc6ed1020b88cda159de1ce3f981718a7b19a907"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "3fd9141df7359e6e817b1817f5d28c6bb39e3e19905bd4ffbd7893545c8955f9"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "e6d2c0373593ced4ca37f936cd27389e99423a28e56580851475265669a01476"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "6a7d9a9fc591df1e6a7af614aaf8387fe56321f6ee92cdbc6122bb754e45419e"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "15b2289d0605218d42b6d31c564590273d0a2fbf2941d6905c92cee4ebbc39e6"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "1696e294410ad9d234994801a7ed9e7e487e20db187679348e9cd36f31f83531"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "e4983730dba87055e4acba986fe350c3d35080baf50c1381cfc250147d3319f6"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "50bd6dbd180e492f6154227b651b48de737b444292284ef2e21368f5c0805c57"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "cfef5ef17a380f80da6597977cdf2f3c2f3ad280c8f79ebf821da1b2ded59d31"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "a1d3bebed4a4d3e3e0b3445e6426432f33232afcb266b434e3e960bbd85959c2"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "75cdeef2509d01d902843d948d3074ea6c519ac5017ac9ffd0d73571d33208b1"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "431c6aed0e91d9159b8a33af6e08e20548a49ff575141307048353a6c3d6541c"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "8350b02d069dcf2a76e4bd8c171cd96eb8503be4ac9ac37010d52669357fc044"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "8eee827c2bf1559bd6673ed5e7a2ec1d74cbe4ee84c5c13c563387b9415ebaf4"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "ed0b75400a041eebf2dcc7f23ab0b82c28446fc1ef472740bcac0c6907e10ec6"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "ee036e60b2f4c27edfec2f60e637c98dcd9be828da550cda43acbb0cf3625fbf"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "82d71ed200f596ec7976e8ca9368e897e85fbe50a0fcccbc69e86c767c23c5db"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "1585a2c072d93468aac94397137bc73a5c8119be717e0bd47795638b25f72d7c"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "f482475a515bde40ee60a17eb39b9c3b4c66dda5d69baf33b02df3f9ff9288e6"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "787c08263cd06c0c433ef714d18f64ca741fe001ffb47a87a94dbecc18757d4a"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "9ccdb14efc0fab17d8ae7b8dc97c32a8c9b338d16f980fe5125e3839ccbaf94e"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "908d995ed79b00cb32391cd94be10219138d62999251ec55a70c3be026e16d11"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "ede54df9834dafd26339316e94ed387d84b2ae967e1a495745db85b0d5fdec22"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "101d98a1fcf75cc86767c4a0ca11e77ccca3570b6871f6fda12b3700f772cd18"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "72030bc66ade603d972482cff8be8aa4dd28ec2e2ff457988dc897e8dd248850"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "1d23d30833307ef4e33b8cf485708c477dafa79937b957f2fa71f5591c470928"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "e08ac2809f2356656c944af2aeda2e631fe75d342d21731e896d16ab29e4a7b1"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "a869812d24fb06c312d2b20f10422b82b22075f603f811514948ef530930dabd"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "12ff95ce8e68a92f09cfd55b79366bc4b425378ed37133a9f1e55055bfa33941"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "49d13a1d1b9cd9316fae166e8c61ae124589908e60571c633b6c1b886b2a3bd6"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "0a2d93bb0e8d052f76e82b794655c266da4ba85d79f5c20d28e8c64de095ba11"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "379431d3ed98ced045e2160cf2b2c75cfee6a32f2077b00e586534c27065890d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "172a2029be001b21b3383b2893835c9bbdc49ad1ab6e7e75a2be1090877a06c3"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "a969b7b32a69058f47069fd330fa7be401fa2cd1ae719797b93ea5dc83ee00bb"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "b8f5fe9f13f1facb429fac047da36b329319bf2a44d21bfd139d9e0db2b1a51e"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "39b354d6c751d433b9eeb07be0750b9c7d46c87ea235726682a6e1c9dd5ac7a6"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "447b03232e81079c5607596ece4b4e72f78d959d26d5a4066cb5035b244f8ee2"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "833bd25e34f3c05d56b12bd9b998383562b3c69ca4f65a6f427f9ea9143bbed9"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "ed7531f117349e28cdb83140185c269c7bd544edc4f5a32891f330b4af3d8e84"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "70f4ed953a1f369aa126fa3912ae3a60c733442e646660629f6e0bad3a6cd940"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "0f05455f770a96fe7e2f4ad2120ea98fc20f11e11b9c784b787f5271070fa339"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "420d8b3c278007e1518f7cc249390888516b3c8f1b0f910e243dd8a8deaf6c7f"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "5d2de17754e0a3a1e1f717ab4909d3751b263092fc111430975c8d43d41fa65c"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "04ce3f8b2413f6623d1fc6d9a692055f999a2eb03a0803df1a8a4744ddce75dc"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "e650e6581288ba9120bf2fd29623156b7860b7e145a444e36b9dd37152c4a658"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "18451ebabab23284b12da402893f8fb036b8f9e20031f84d1bec63b764cf8ff2"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "97b75537165e540c8e7f316d519395d344e6b0a13ce7ce05111ae793a15adfb1"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "19e8e50bce0684621d9ca6e42ce4aa423555c4bb44290a353b40aa1e6b035de8"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "afc5ba06339dacf6190e0dfc4307e5160ffa662fc4a4dd4f853d614a72f83f59"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "02b6a3801198a0dbdf776a469050224ca277d17c8b329400718876cb1337a5c4"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "4e3eeed969900aca33024bb46f9aa3d84452f3c3ef62db7e3f6ae1e2fe960032"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "3ecd41d6269226e52711a0a74f97756fe4f7f01df2236c78416ec4165917fecf"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "3d883652731d7e3b7bdbb68721085ce5066234b142790c7a6a10a21826be970e"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "c763d9501c01dd1fe0acf613bca63548a441c407dd650060b1e5242c3488e435"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "300fc55301021b790fbcbf4d7b05d6bdf30c4dacd5c1c919126632602e9393ce"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "16cbe4c9c5ccbd41d8394cf45dca49c742835b59f4a219afc4c400f7a9857e99"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "e629d04bdb85e3aca388f0510a4c61af5a5551a74b2cc0c4e29b27146322adc4"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "faae2cc98f0656e575267a89ca7c0033dda7c3a9192d09cddc571be9649fc975"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "7bd0be20ba1093ac7bbda3f8dbba9d55c85fb73ad1e48659c17b64b18c982253"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "b29d0a2f56d9c34b9144770e3dd3762e1af392fbcf143f3b864ed2d97a7f90d1"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "6d08d59fac2b987584e56f31eca192e652f32388fd5fbd459c1f5f3bfa0c4e48"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1414,
+      "eventCursor": 1415,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "37720e14360588154265a0f330acc4e79363152a52746094c06faf1c7601a68c"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1414,
+      "eventCursor": 1415,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "5ef49a43a78b10fb63c1b6c0f50e1bacb051456da5b3434b42ceb80458ef9a1d"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1414,
+      "eventCursor": 1415,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "b4cd8c319ccc7f5d214ab15fe2759bd7c0c9ca06841a23ad4b8361f822c6f48a"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1414,
+      "eventCursor": 1415,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "40d20d34efa869a8cde991f5798919562401e57f1a0daf101fbc736946a11707"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1414,
+      "eventCursor": 1415,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "2c6ada36574599bbc4f53eb3ac96fc7d89c00e7ab243584043a4dec02e65b79f"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1414,
+      "eventCursor": 1415,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "1f01659015a32125b5b33a45136dfd8173098f31efa3188f357c61012d59dd70"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1415,
+      "eventCursor": 1416,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "a926eb579a9f3ac90b6b77ae9b346c93295569351c63a7a1807ec98c68ea7ec7"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1415,
+      "eventCursor": 1416,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "a926eb579a9f3ac90b6b77ae9b346c93295569351c63a7a1807ec98c68ea7ec7"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1415,
+      "eventCursor": 1416,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      }
+    },
+    "responseSha256": "a926eb579a9f3ac90b6b77ae9b346c93295569351c63a7a1807ec98c68ea7ec7"
+  },
+  {
+    "method": "POST",
+    "path": "/v1/worlds/foundation-01/commands",
+    "actor": "a1_alias",
+    "request": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "commandId": "qa2_c5a5af41d0c8441d8096d973826b9c0a",
+      "expectedStateVersion": 1415,
+      "preconditionMode": "actor-state-v1",
+      "action": {
+        "type": "harvest_tree",
+        "capabilityVersion": 1,
+        "plantId": "p39c681aba4ef450cba036fe39647dea2",
+        "reservationId": "frdf68628fe3884d8c864e381131204bb2",
+        "toolId": "tb8fefc76619e46ee8a1e6428bc2d449c"
+      }
+    },
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1416,
+      "commandId": "qa2_c5a5af41d0c8441d8096d973826b9c0a",
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1_alias",
+        "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+      },
+      "eventCursor": 1417,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "harvest_tree",
+        "forestryAction": {
+          "authorActorId": "a1_alias",
+          "operatorId": "local-operator",
+          "commandId": "qa2_c5a5af41d0c8441d8096d973826b9c0a",
+          "action": {
+            "type": "harvest_tree",
+            "capabilityVersion": 1,
+            "plantId": "p39c681aba4ef450cba036fe39647dea2",
+            "reservationId": "frdf68628fe3884d8c864e381131204bb2",
+            "toolId": "tb8fefc76619e46ee8a1e6428bc2d449c"
+          },
+          "position": [
+            8.2,
+            12
+          ],
+          "serviceMs": 1655256,
+          "stateVersion": 1416,
+          "eventCursor": 1417,
+          "completedAtUtc": "2026-10-26T10:05:35.0886763+00:00",
+          "inventoryWoodBefore": 0,
+          "inventoryWood": 3,
+          "seedsBefore": 0,
+          "seeds": 1,
+          "nurseryStockBefore": 2,
+          "nurseryStock": 2,
+          "reservationBefore": {
+            "reservationId": "frdf68628fe3884d8c864e381131204bb2",
+            "actorId": "a1_alias",
+            "operatorId": "local-operator",
+            "commandId": "qa2_19af57cd782b41f88f423ef2563e3db2",
+            "requestedAtMs": 1499293,
+            "queueOrder": 1396,
+            "status": "harvesting",
+            "plotId": "forest-west-north",
+            "plantId": "p39c681aba4ef450cba036fe39647dea2",
+            "reservedSeed": 0,
+            "grantedAtMs": 1532010,
+            "expiresAtMs": 1715045
+          },
+          "reservation": {
+            "reservationId": "frdf68628fe3884d8c864e381131204bb2",
+            "actorId": "a1_alias",
+            "operatorId": "local-operator",
+            "commandId": "qa2_19af57cd782b41f88f423ef2563e3db2",
+            "requestedAtMs": 1499293,
+            "queueOrder": 1396,
+            "status": "completed",
+            "plotId": "forest-west-north",
+            "plantId": "p39c681aba4ef450cba036fe39647dea2",
+            "reservedSeed": 0,
+            "grantedAtMs": 1532010,
+            "expiresAtMs": 1715045
+          },
+          "plantBefore": {
+            "plantId": "p39c681aba4ef450cba036fe39647dea2",
+            "plotId": "forest-west-north",
+            "planterActorId": "a1_alias",
+            "operatorId": "local-operator",
+            "reservationId": "frdf68628fe3884d8c864e381131204bb2",
+            "commandId": "qa2_2e785a518e914c1bb7f5356ef1ffbea9",
+            "plantedAtMs": 1535045,
+            "maturesAtMs": 1655045,
+            "state": "mature",
+            "standingWood": 3,
+            "stateVersion": 1412,
+            "eventCursor": 1413,
+            "matureEventCursor": 1416,
+            "harvestActorId": null,
+            "harvestCommandId": null,
+            "harvestEventCursor": null
+          },
+          "plant": {
+            "plantId": "p39c681aba4ef450cba036fe39647dea2",
+            "plotId": "forest-west-north",
+            "planterActorId": "a1_alias",
+            "operatorId": "local-operator",
+            "reservationId": "frdf68628fe3884d8c864e381131204bb2",
+            "commandId": "qa2_2e785a518e914c1bb7f5356ef1ffbea9",
+            "plantedAtMs": 1535045,
+            "maturesAtMs": 1655045,
+            "state": "harvested",
+            "standingWood": 0,
+            "stateVersion": 1412,
+            "eventCursor": 1413,
+            "matureEventCursor": 1416,
+            "harvestActorId": "a1_alias",
+            "harvestCommandId": "qa2_c5a5af41d0c8441d8096d973826b9c0a",
+            "harvestEventCursor": 1417
+          },
+          "tool": {
+            "toolId": "tb8fefc76619e46ee8a1e6428bc2d449c",
+            "ownerActorId": "a1_alias",
+            "workbenchId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+            "commandId": "qa2_0cd2e7238e4d47fd8280344dfb03ab1f",
+            "stateVersion": 1358,
+            "eventCursor": 1359,
+            "definitionId": "wooden_axe",
+            "definitionVersion": 1,
+            "embodiedWood": 2
+          },
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1415,
+        "appliedOnStateVersion": 1415
+      }
+    },
+    "responseSha256": "60d77064c977aff05a2b2845a623b4702663c2a1eaabd455223976e106d59598"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/forestry/actions/a1_alias/qa2_c5a5af41d0c8441d8096d973826b9c0a",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1416,
+      "commandId": null,
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1_alias",
+        "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+      },
+      "eventCursor": 1417,
+      "error": null,
+      "forestryAction": {
+        "authorActorId": "a1_alias",
+        "operatorId": "local-operator",
+        "commandId": "qa2_c5a5af41d0c8441d8096d973826b9c0a",
+        "action": {
+          "type": "harvest_tree",
+          "capabilityVersion": 1,
+          "plantId": "p39c681aba4ef450cba036fe39647dea2",
+          "reservationId": "frdf68628fe3884d8c864e381131204bb2",
+          "toolId": "tb8fefc76619e46ee8a1e6428bc2d449c"
+        },
+        "position": [
+          8.2,
+          12
+        ],
+        "serviceMs": 1655256,
+        "stateVersion": 1416,
+        "eventCursor": 1417,
+        "completedAtUtc": "2026-10-26T10:05:35.0886763+00:00",
+        "inventoryWoodBefore": 0,
+        "inventoryWood": 3,
+        "seedsBefore": 0,
+        "seeds": 1,
+        "nurseryStockBefore": 2,
+        "nurseryStock": 2,
+        "reservationBefore": {
+          "reservationId": "frdf68628fe3884d8c864e381131204bb2",
+          "actorId": "a1_alias",
+          "operatorId": "local-operator",
+          "commandId": "qa2_19af57cd782b41f88f423ef2563e3db2",
+          "requestedAtMs": 1499293,
+          "queueOrder": 1396,
+          "status": "harvesting",
+          "plotId": "forest-west-north",
+          "plantId": "p39c681aba4ef450cba036fe39647dea2",
+          "reservedSeed": 0,
+          "grantedAtMs": 1532010,
+          "expiresAtMs": 1715045
+        },
+        "reservation": {
+          "reservationId": "frdf68628fe3884d8c864e381131204bb2",
+          "actorId": "a1_alias",
+          "operatorId": "local-operator",
+          "commandId": "qa2_19af57cd782b41f88f423ef2563e3db2",
+          "requestedAtMs": 1499293,
+          "queueOrder": 1396,
+          "status": "completed",
+          "plotId": "forest-west-north",
+          "plantId": "p39c681aba4ef450cba036fe39647dea2",
+          "reservedSeed": 0,
+          "grantedAtMs": 1532010,
+          "expiresAtMs": 1715045
+        },
+        "plantBefore": {
+          "plantId": "p39c681aba4ef450cba036fe39647dea2",
+          "plotId": "forest-west-north",
+          "planterActorId": "a1_alias",
+          "operatorId": "local-operator",
+          "reservationId": "frdf68628fe3884d8c864e381131204bb2",
+          "commandId": "qa2_2e785a518e914c1bb7f5356ef1ffbea9",
+          "plantedAtMs": 1535045,
+          "maturesAtMs": 1655045,
+          "state": "mature",
+          "standingWood": 3,
+          "stateVersion": 1412,
+          "eventCursor": 1413,
+          "matureEventCursor": 1416,
+          "harvestActorId": null,
+          "harvestCommandId": null,
+          "harvestEventCursor": null
+        },
+        "plant": {
+          "plantId": "p39c681aba4ef450cba036fe39647dea2",
+          "plotId": "forest-west-north",
+          "planterActorId": "a1_alias",
+          "operatorId": "local-operator",
+          "reservationId": "frdf68628fe3884d8c864e381131204bb2",
+          "commandId": "qa2_2e785a518e914c1bb7f5356ef1ffbea9",
+          "plantedAtMs": 1535045,
+          "maturesAtMs": 1655045,
+          "state": "harvested",
+          "standingWood": 0,
+          "stateVersion": 1412,
+          "eventCursor": 1413,
+          "matureEventCursor": 1416,
+          "harvestActorId": "a1_alias",
+          "harvestCommandId": "qa2_c5a5af41d0c8441d8096d973826b9c0a",
+          "harvestEventCursor": 1417
+        },
+        "tool": {
+          "toolId": "tb8fefc76619e46ee8a1e6428bc2d449c",
+          "ownerActorId": "a1_alias",
+          "workbenchId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+          "commandId": "qa2_0cd2e7238e4d47fd8280344dfb03ab1f",
+          "stateVersion": 1358,
+          "eventCursor": 1359,
+          "definitionId": "wooden_axe",
+          "definitionVersion": 1,
+          "embodiedWood": 2
+        },
+        "capabilityVersion": 1
+      }
+    },
+    "responseSha256": "6bec77544b4fab368dabb080a832ec8d5b1063b60e6c4e183615a441135fdbf3"
+  },
+  {
+    "method": "GET",
+    "path": "/v1/worlds/foundation-01/observation",
+    "actor": "a1_alias",
+    "request": null,
+    "capability": "workshop-v1,forestry-v1",
+    "status": 200,
+    "response": {
+      "stateVersion": 1416,
+      "eventCursor": 1417,
+      "self": {
+        "actorId": "a1_alias",
+        "position": [
+          8.2,
+          12
+        ],
+        "inventory": {
+          "wood": 3
+        }
+      }
+    },
+    "responseSha256": "3460f82ad69ece0e1a9603dcb85010812ac015f25825ba34aa38b65b7fc6586a"
+  }
+]

@@ -1,0 +1,346 @@
+{
+  "passed": true,
+  "status": "independently-audited-native-activity",
+  "recordedAtUtc": "2026-10-26T10:41:06.773888+00:00",
+  "run": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z",
+  "freezeMessage": "msg_c586e895c9b0",
+  "serverDllSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+  "serverManifestSha256": "f3ebeeb55fa24125cf1761d6d32faec37f2316504ff3ae6573e36d029523e80c",
+  "nativeManifestSha256": "35afff764d4a9aa0f109a2c84d76c6fd696fdce39d0d7192c540dd003945e167",
+  "audit": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/independent-audit.json",
+    "sha256": "584c3e606c92d70ce62c29becb528cb98f094d4201c557d28b8e99ad64dc3b4c",
+    "auditor": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/forestry-audit-used.py",
+    "auditorSha256": "18eba90186ac8be49b717039528e11d86c64058905b919caa0b8be91154b9891"
+  },
+  "nativePosts": 153,
+  "uniqueCommands": 153,
+  "httpStatusCounts": {
+    "200": 153
+  },
+  "forestryThreeWayProofs": 15,
+  "actualBuilds": [
+    {
+      "receipt": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 1477,
+        "commandId": "godot_20fbb6e13750d5d97435eaa707052ea1",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1_alias",
+          "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+        },
+        "eventCursor": 1478,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "build",
+          "entityId": "ee6382223c1984846bc8af96fc360eecf",
+          "position": [
+            10,
+            12
+          ],
+          "inventoryWood": 3
+        },
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 1476,
+          "appliedOnStateVersion": 1476
+        }
+      },
+      "event": {
+        "seq": 1478,
+        "stateVersion": 1477,
+        "commandId": "godot_20fbb6e13750d5d97435eaa707052ea1",
+        "actorId": "a1_alias",
+        "type": "built",
+        "entityId": "ee6382223c1984846bc8af96fc360eecf",
+        "position": [
+          10,
+          12
+        ]
+      },
+      "entity": {
+        "entity_id": "ee6382223c1984846bc8af96fc360eecf",
+        "world_id": "foundation-01",
+        "owner_actor_id": "a1_alias",
+        "recipe_id": "platform.v1",
+        "definition_id": "platform",
+        "definition_version": 1,
+        "rules_version": "r10",
+        "x": 10.0,
+        "y": 12.0,
+        "embodied_wood": 3
+      }
+    },
+    {
+      "receipt": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 1508,
+        "commandId": "godot_baa27b862bfbe6cfa38834da4002ae38",
+        "identity": {
+          "operatorId": "declared-third",
+          "actorId": "a3",
+          "sessionId": "sa423548f7dce496895be25120daedb09"
+        },
+        "eventCursor": 1509,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "build",
+          "entityId": "ec6f404e873fb4e12aff7efbc8e645993",
+          "position": [
+            10,
+            15
+          ],
+          "inventoryWood": 0
+        },
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 1507,
+          "appliedOnStateVersion": 1507
+        }
+      },
+      "event": {
+        "seq": 1509,
+        "stateVersion": 1508,
+        "commandId": "godot_baa27b862bfbe6cfa38834da4002ae38",
+        "actorId": "a3",
+        "type": "built",
+        "entityId": "ec6f404e873fb4e12aff7efbc8e645993",
+        "position": [
+          10,
+          15
+        ]
+      },
+      "entity": {
+        "entity_id": "ec6f404e873fb4e12aff7efbc8e645993",
+        "world_id": "foundation-01",
+        "owner_actor_id": "a3",
+        "recipe_id": "platform.v1",
+        "definition_id": "platform",
+        "definition_version": 1,
+        "rules_version": "r10",
+        "x": 10.0,
+        "y": 15.0,
+        "embodied_wood": 3
+      }
+    }
+  ],
+  "wood": {
+    "issued": 85,
+    "sourceGenerated": 64,
+    "forestGenerated": 9,
+    "inventory": 21,
+    "structures": 48,
+    "mallets": 3,
+    "axes": 4,
+    "stored": 3,
+    "sourceStock": 6,
+    "standing": 0,
+    "wild": 0
+  },
+  "seeds": {
+    "nurseryGeneratedSeeds": 5,
+    "harvestGeneratedSeeds": 3,
+    "nurseryStockSeeds": 4,
+    "residentSeeds": 0,
+    "consumedPlantSeeds": 4,
+    "reservedSeeds": 0,
+    "conserved": true
+  },
+  "sameDatabaseRestarts": [
+    {
+      "id": "ad9da30fccaa4cbd90ade7d9e43e35ed",
+      "ok": true,
+      "sameDatabase": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/natural/world.db",
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+      "offlineSeconds": 67.67697722499724,
+      "serviceMsBefore": 1697268,
+      "serviceMsAfter": 1697268,
+      "start": {
+        "monotonic": 441720.092970944,
+        "atUtc": "2026-10-26T10:25:13.601663+00:00",
+        "readyMonotonic": 441720.343164407,
+        "pid": 469021
+      },
+      "rawRuntimeOk": false,
+      "correction": "QA copied the result before setting ok=True; raw runtime report retained.",
+      "coldSnapshotSha256": "9dad47074a0b6264753a47449b982da0b31caf7535dbac3ab95c6469068fdfd4",
+      "firstGetSha256": "7d16d4378f01802ab9683e4f1a4a4b33089de90a1e3822a30edc39bd40ad8603"
+    },
+    {
+      "id": "d66613b350d94e14a288dc3ec68b34a4",
+      "ok": true,
+      "sameDatabase": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/natural/world.db",
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+      "offlineSeconds": 70.55497980403015,
+      "serviceMsBefore": 1810563,
+      "serviceMsAfter": 1810563,
+      "start": {
+        "monotonic": 441904.333362744,
+        "atUtc": "2026-10-26T10:28:17.842055+00:00",
+        "readyMonotonic": 441904.584170545,
+        "pid": 474155
+      },
+      "rawRuntimeOk": false,
+      "correction": "QA copied the result before setting ok=True; raw runtime report retained.",
+      "coldSnapshotSha256": "c6c6053196afb471628fb110e1f67a4941fe857b234f5118b52568c1a88141a1",
+      "firstGetSha256": "32887bfed3e2dbbc325d694935addad2e2f9d42aef6b78c99a4a2e907f15de6f"
+    }
+  ],
+  "fourthTreeCenterStart": {
+    "center": [
+      7,
+      12
+    ],
+    "approach": [
+      7.88401079177856,
+      12.8835391998291
+    ],
+    "distance": 1.2498466296372537
+  },
+  "intentionallyRetainedGrowingTree": {
+    "plantId": "pa5be16de18f6414199ad58c39094195e",
+    "plotId": "forest-west-north",
+    "planterActorId": "a3",
+    "operatorId": "declared-third",
+    "reservationId": "fr7f14272a0b1a46bbbc6bcaf977274b50",
+    "commandId": "godot_a2eebba421abb39da3262d331d82f957",
+    "plantedAtMs": 2434975,
+    "maturesAtMs": 2554975,
+    "state": "growing",
+    "standingWood": 0,
+    "stateVersion": 1520,
+    "eventCursor": 1521,
+    "matureEventCursor": null,
+    "harvestActorId": null,
+    "harvestCommandId": null,
+    "harvestEventCursor": null
+  },
+  "intentionallyRetainedGrowingReservation": {
+    "reservationId": "fr7f14272a0b1a46bbbc6bcaf977274b50",
+    "actorId": "a3",
+    "operatorId": "declared-third",
+    "commandId": "godot_bc632c98080e16c5a47387d032360321",
+    "requestedAtMs": 2416358,
+    "queueOrder": 1510,
+    "status": "growing",
+    "plotId": "forest-west-north",
+    "plantId": "pa5be16de18f6414199ad58c39094195e",
+    "reservedSeed": 0,
+    "grantedAtMs": 2416363,
+    "expiresAtMs": null
+  },
+  "originalHistory": {
+    "receipts": {
+      "preservedRows": 1307,
+      "originalSha256": "6489ee35f60d35a394dc9c5cd442e82b8fe7438b5ee055d28e2829f3874d758e"
+    },
+    "events": {
+      "preservedRows": 1353,
+      "originalSha256": "e9ab72abdf18df3c905196adaade38a23e531117f48f2f206c851a96c962e810"
+    },
+    "entities": {
+      "preservedRows": 13,
+      "originalSha256": "9a667b315996bb8c90b6199d3087317f57c990da2a923cc43da95e67f2918377"
+    },
+    "world_instance": {
+      "preservedRows": 1,
+      "originalSha256": "6b423bd6b5a91bde28e2b8466da4190921b509bc43c70d350700c449a07aedd5"
+    },
+    "resource_nodes": {
+      "preservedRows": 4,
+      "originalSha256": "07c6538e08cd31b9c8afd15f762f45ae28ba767292b58ea212c429e20a365829"
+    },
+    "entity_notes": {
+      "preservedRows": 2,
+      "originalSha256": "f87a5dea75677fb7f6fdcf725a8d3d9fc21d56a44fa8c216c70e67be96a17f75"
+    },
+    "entity_canvas": {
+      "preservedRows": 1,
+      "originalSha256": "350a11d904dc77181acc1181dd6e499647a984a49a103083490013c9d96b2df6"
+    },
+    "entity_canvas_cells": {
+      "preservedRows": 25,
+      "originalSha256": "42e6ee1cc07422cfd30656023a01eaff3a9a3fd8d5a93dcd82ee16cd6d3f50f8"
+    },
+    "entity_canvas_edits": {
+      "preservedRows": 2,
+      "originalSha256": "6184ed0da6bc257141e0b6cc5c327af6e579c0e7ad9474c6e6caf8956392c3c6"
+    },
+    "workshop_tools": {
+      "preservedRows": 3,
+      "originalSha256": "cefde9034391e55acf35cd75f0956b6f6a737f29661739ed9a39f4b5706cd9f4"
+    },
+    "workshop_chests": {
+      "preservedRows": 3,
+      "originalSha256": "6ea870784859fd4fb8dce682aea4a8f32e6d9217c0120377a3e05af24bd3bf46"
+    },
+    "workshop_actions": {
+      "preservedRows": 17,
+      "originalSha256": "3c91a3d523f9ce54c42ea8f43fd083b534174c7dae6cd1ff20b86b95803e4cb0"
+    },
+    "a1": {
+      "fullRowUnchanged": true,
+      "originalSha256": "d1314ddff91730adf154514daa847d6aca6e124bc7cca09ec4f59bdc90f77985"
+    },
+    "resource_ledger": {
+      "preservedRows": 120,
+      "originalSha256": "34391e266422514a2ae94e7ed9d175c824b4c9c9c74050773c13f5513f83aef8"
+    }
+  },
+  "qaReview": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/qa-runtime-review.json",
+  "preinputBusyRefusals": 10,
+  "qaHelperReadOnlyError": {
+    "error": "StopIteration locating ScrollContainer after walk button closed the forestry panel",
+    "nativeRun": "native-a3-inherit-and-next-generation",
+    "businessPostAtFailure": false,
+    "resolution": "Reopened panel by actual click, then submitted harvest once with original lease and tool",
+    "subsequentHarvest": "godot_29bbd37dbf901dfe484d39c043c05d8e"
+  },
+  "reportCorrection": {
+    "rawRuntimeReportSha256": "ee994f83eaa78cfc87d89af4d9f42b004a0b4b81fc36daca4a49284735bea062",
+    "preCorrectionArchiveSha256": "4d4404ec79bfb4961f5ed2bb8bc007c7933e4bec6d59297742a4a2299dd3ee5a",
+    "originalGeneratorSha256": "98423096f48f5463fa9fc405753407634cf1bbe139af771e737df6d6254c35fe",
+    "correctedGeneratorSha256": "8ee489c24b1c9b2d70fae73ed25c2dac9c7a8529010628750d8f247fadd8587c",
+    "worldRestartRepeatedForReporting": false
+  },
+  "allOwnedProcessesExited": true,
+  "pendingEmpty": true,
+  "removedTemporaryCopiesAndCaches": [
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/frozen",
+      "bytes": 567477
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/__pycache__",
+      "bytes": 76055
+    }
+  ],
+  "preservedOriginalDatabase": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/natural/world.db",
+  "preservedOriginalAccessFile": true,
+  "tokensCopiedToEvidence": false,
+  "actualModelCalls": 0,
+  "physicalDatabaseCopiedForThisIteration": false,
+  "productSourceWrites": false,
+  "visualVerification": {
+    "actualViewport": [
+      1280,
+      800
+    ],
+    "visibleRule90_120_60": true,
+    "emptyPlotCenter": true,
+    "growingNextGeneration": true,
+    "harvestAndActualPlatforms": true,
+    "otherViewportSizesTestedByThisRun": false
+  },
+  "limits": [
+    "Four resident accounts represent three declared operator groups; not evidence of four independent people.",
+    "Theoretical maximum of four standing trees or twelve forest wood was not exercised.",
+    "Fourth tree intentionally remains growing; its future maturity and harvest are not claimed."
+  ],
+  "nextHead": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/forestry-history-head.json"
+}

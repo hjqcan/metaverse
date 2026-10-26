@@ -1,0 +1,9 @@
+{
+  "kind": "controlled-test-harness-reproduction",
+  "source": "tests/forestry_mission_api.py",
+  "sourceSha256": "cecb5371176bf546e72d5afa998ab4ff5b5a25206ec8ef1a2f0d6e7a0fb5b068",
+  "probe": ".local/iter0028/python-legacy-connection-probe.py",
+  "probeSha256": "583b366ebe827eb5d5cedf803e6c059065d16378554bd8fca03fc0d54cfd7f1a",
+  "difference": "Restore original implicit sqlite connection lifetimes and old api.snapshot; disable new checkpoints; retain failed runtime for diagnosis. Product scripts and DLL unchanged.",
+  "knownGap": "Original failed runtime was deleted, so this is a reproduction probe and cannot establish its original bytes."
+}

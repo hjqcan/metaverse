@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "sourceUnchanged": true,
+  "sourceSha256": {
+    "clients/godot/command_evidence.gd": "07748747c82941064644de5fe82972bc3ad0a2901aacfda67ebf3e8c1cc24f63",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_canvas_panel.gd": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/entity_notes_panel.gd": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803",
+    "clients/godot/forestry_evidence.gd": "0ed6e939e87b43fed0b4cfb945ecc43868f11fb6bc254e446c0c6bd44fa176ad",
+    "clients/godot/forestry_panel.gd": "80e16089554acb72dccfc5bbadf4c77e3fa0af46d4982588d60f8853f98a615c",
+    "clients/godot/main.gd": "32e40411aa0cc2492c4d6e1191c27b2585d74b7a9848f2785893dd306e3f11be",
+    "clients/godot/material_panel.gd": "0ca9ce3e6eef38690d9bbc7e77b7e8d75f4bb654e1ab2495e7598aaa632a9798",
+    "clients/godot/pending_store.gd": "367dd3c39633c0e4a27be019c64942f138f63a6f49f85e0200bf04df31a3583e",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/workshop_evidence.gd": "2ee74cc3336881d465e95618662357b1b6530bc22b7d6e92a43cd52729f37e31",
+    "clients/godot/workshop_geometry.gd": "6dc487e8c688c76aa26fb114d951988a670036e3213bbd319238c8973f91b57b",
+    "clients/godot/workshop_panel.gd": "1545fa187422875c92f1e7f2e7d0ffed7b64a39a0b2bbf19b6a98662cfad1b20",
+    "clients/godot/world_client.gd": "a39de12346f843d0339885a92cf362c5f51dd4c33fae3c8456090db7a527ca35",
+    "clients/godot/world_navigation.gd": "5e9b99e470b8c889f9425c0fcc4ca604cb1c58926e84b0245d2cde1e4d9ea3fa",
+    "clients/godot/world_view.gd": "8871952832c8ec78aa8008ad12af7d53b709856e08b1b075475b526950796e6c",
+    "tests/godot/forestry_ui.gd": "a09bf75470c95cd405b058c2e9029570e9f13f0c86c8e09b60ef33c9e714f61c",
+    "tests/forestry_ui.py": "c19ac46ab1a91c0dc4dde95e0b85138073de1d4cd5e0dabf0e73449b75c56453"
+  },
+  "fixtureSha256": "a8207c9e98478c4440c3178c324bd7f0a6d2993162dc0bce9dc2a581eaeeeec6",
+  "checks": {
+    "actualModelCalls": 0,
+    "checks": [
+      {
+        "name": "recorded original craft_forestry_tool has a valid state transition",
+        "passed": true
+      },
+      {
+        "name": "invented seed rejected: craft_forestry_tool",
+        "passed": true
+      },
+      {
+        "name": "recorded original reserve_forest has a valid state transition",
+        "passed": true
+      },
+      {
+        "name": "invented seed rejected: reserve_forest",
+        "passed": true
+      },
+      {
+        "name": "recorded original collect_seed has a valid state transition",
+        "passed": true
+      },
+      {
+        "name": "invented seed rejected: collect_seed",
+        "passed": true
+      },
+      {
+        "name": "recorded original plant_tree has a valid state transition",
+        "passed": true
+      },
+      {
+        "name": "invented seed rejected: plant_tree",
+        "passed": true
+      },
+      {
+        "name": "recorded original harvest_tree has a valid state transition",
+        "passed": true
+      },
+      {
+        "name": "invented seed rejected: harvest_tree",
+        "passed": true
+      },
+      {
+        "name": "actual growing observation and public circles accepted",
+        "passed": true
+      },
+      {
+        "name": "unknown forestry version rejected",
+        "passed": true
+      },
+      {
+        "name": "growth duration cannot drift",
+        "passed": true
+      },
+      {
+        "name": "missing live trunk collision rejected",
+        "passed": true
+      },
+      {
+        "name": "queued cancellation accepts same original actual grant",
+        "passed": true
+      },
+      {
+        "name": "queued cancellation cannot switch reservation",
+        "passed": true
+      },
+      {
+        "name": "forestry menu shown in actual main scene",
+        "passed": true
+      },
+      {
+        "name": "actual mouse opens forestry panel",
+        "passed": true
+      },
+      {
+        "name": "original growing grant displayed",
+        "passed": true
+      },
+      {
+        "name": "growing tree cannot be planted or harvested again",
+        "passed": true
+      },
+      {
+        "name": "fixed timing and priority explanation survives polling",
+        "passed": true
+      },
+      {
+        "name": "whole-tree harvest button fits without horizontal clipping",
+        "passed": true
+      },
+      {
+        "name": "actual OpenGL screenshot: forestry-growing-1280",
+        "passed": true
+      },
+      {
+        "name": "panel remains within shorter window",
+        "passed": true
+      },
+      {
+        "name": "actual OpenGL screenshot: forestry-growing-1000",
+        "passed": true
+      },
+      {
+        "name": "pending blocks new forestry effects",
+        "passed": true
+      },
+      {
+        "name": "actual harvested observation preserves empty plot and seed",
+        "passed": true
+      },
+      {
+        "name": "planted trunk blocks ordinary walk",
+        "passed": true
+      },
+      {
+        "name": "interaction excludes only original target trunk",
+        "passed": true
+      },
+      {
+        "name": "wrong target ID cannot ignore trunk",
+        "passed": true
+      },
+      {
+        "name": "empty plot center moves outside the future trunk before planting",
+        "passed": true
+      }
+    ],
+    "evidenceScope": "recorded live facts, actual main scene mouse open and rendering; boundary mutations are UI fixtures",
+    "passed": true,
+    "worldRequests": 0
+  },
+  "worldServiceStarted": false,
+  "actualModelCalls": 0,
+  "scope": "Recorded HTTP facts and explicit UI-only variants; not a new natural-world activity"
+}

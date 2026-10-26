@@ -1,0 +1,230 @@
+{
+  "scope": "Changed product, tests and documentation at BUILD1 handoff; evidence directory has its own files.json",
+  "baselineCommit": "0d1622fccd282c95788035c7f20cc25c2c22c2e5",
+  "files": {
+    "README.md": {
+      "sha256": "e89edcf1be2dfb99329734cd8b01027e880503fb788d0d4906964d9089f8282d",
+      "bytes": 18410
+    },
+    "clients/godot/README.md": {
+      "sha256": "348457496d1f25781058ac4e7d0b465ca45813a97c78d0dee6112df3e360ca5a",
+      "bytes": 15298
+    },
+    "clients/godot/command_evidence.gd": {
+      "sha256": "07748747c82941064644de5fe82972bc3ad0a2901aacfda67ebf3e8c1cc24f63",
+      "bytes": 17100
+    },
+    "clients/godot/forestry_evidence.gd": {
+      "sha256": "0ed6e939e87b43fed0b4cfb945ecc43868f11fb6bc254e446c0c6bd44fa176ad",
+      "bytes": 21566
+    },
+    "clients/godot/forestry_evidence.gd.uid": {
+      "sha256": "3e9e6261ff541d8dddfd40ba47eee11f98f2a654936e65a48aba76395ee29f46",
+      "bytes": 20
+    },
+    "clients/godot/forestry_panel.gd": {
+      "sha256": "80e16089554acb72dccfc5bbadf4c77e3fa0af46d4982588d60f8853f98a615c",
+      "bytes": 12143
+    },
+    "clients/godot/forestry_panel.gd.uid": {
+      "sha256": "5c2983718b913b7c70c55347fea25b03a4a353663cae37172d86159f7d29e146",
+      "bytes": 20
+    },
+    "clients/godot/main.gd": {
+      "sha256": "32e40411aa0cc2492c4d6e1191c27b2585d74b7a9848f2785893dd306e3f11be",
+      "bytes": 30425
+    },
+    "clients/godot/pending_store.gd": {
+      "sha256": "367dd3c39633c0e4a27be019c64942f138f63a6f49f85e0200bf04df31a3583e",
+      "bytes": 6254
+    },
+    "clients/godot/workshop_geometry.gd": {
+      "sha256": "6dc487e8c688c76aa26fb114d951988a670036e3213bbd319238c8973f91b57b",
+      "bytes": 5214
+    },
+    "clients/godot/world_client.gd": {
+      "sha256": "a39de12346f843d0339885a92cf362c5f51dd4c33fae3c8456090db7a527ca35",
+      "bytes": 22999
+    },
+    "clients/godot/world_navigation.gd": {
+      "sha256": "5e9b99e470b8c889f9425c0fcc4ca604cb1c58926e84b0245d2cde1e4d9ea3fa",
+      "bytes": 7924
+    },
+    "clients/godot/world_view.gd": {
+      "sha256": "8871952832c8ec78aa8008ad12af7d53b709856e08b1b075475b526950796e6c",
+      "bytes": 26069
+    },
+    "docs/00-project-charter.md": {
+      "sha256": "45bdf1db9e81f60bcef380ffc757c3b637414521d931151d554ad07645ff3b05",
+      "bytes": 15973
+    },
+    "docs/09-decisions-and-open-questions.md": {
+      "sha256": "f1c4ac0599d383d89a592ab8772a9c39c4057c48d26b174bd49bd5ed9fc78b4f",
+      "bytes": 38489
+    },
+    "docs/contracts/forestry-mission-v1.md": {
+      "sha256": "5326c8d98301168249be332b38fa1f35db89df62cc421da7c083c3990cf1072c",
+      "bytes": 9072
+    },
+    "docs/contracts/forestry-v1.md": {
+      "sha256": "8c1c1b113599f6150cb09929f6e8944cd6a868f4ce9a0667cb4698406e215f32",
+      "bytes": 12362
+    },
+    "docs/iterations/ITER-0028-proposal.md": {
+      "sha256": "f1efb209a3710b33467caf9f71d2d333cd91e35cf321573d71e7648b2c9a4410",
+      "bytes": 2723
+    },
+    "docs/iterations/ITER-0028-results.md": {
+      "sha256": "8c5440630610ed2a25b2f93e8337e0b790ecaed1fccdebc50a6ce022e3b32c95",
+      "bytes": 12296
+    },
+    "docs/research/2026-10-26-continuous/21-forestry-bootstrap.md": {
+      "sha256": "521e28fab8c0bdb44ab0aad0496b1b0c4213e280b8794210e0b5434499a8d7d5",
+      "bytes": 20878
+    },
+    "examples/forestry-cancel.json": {
+      "sha256": "37889c0b7e7ae74a28a641fcd6a903733b7df2a0a4ba4c239d58b22de030382a",
+      "bytes": 1009
+    },
+    "examples/forestry-collect-seed.json": {
+      "sha256": "ad619837353d1a830126461ffb9b435e9f217d8cd381455d444b66cf48c8f463",
+      "bytes": 1066
+    },
+    "examples/forestry-craft-axe.json": {
+      "sha256": "eef9bc00f56feb61559e4ef38e6a740ac016e1541b5e42ce82b38e4c2ef7ea61",
+      "bytes": 1064
+    },
+    "examples/forestry-harvest.json": {
+      "sha256": "f4ea40bba45424f5f17a0ddefb863401fc0698598bdaee7e4dec70eea9df712a",
+      "bytes": 1112
+    },
+    "examples/forestry-plant.json": {
+      "sha256": "17cd074a9d586bda9d7e261c1b585f7db8e1a75a50a80ca0d2f85148bce4b4a9",
+      "bytes": 1061
+    },
+    "examples/forestry-reserve.json": {
+      "sha256": "7c76cdee9ac00affb8dd71b4a1edf3cdddc4753f8d8a58f12c1f2ef1f56bfd63",
+      "bytes": 940
+    },
+    "package.json": {
+      "sha256": "cc0a2e9e7fa65f4090e733980295e75db1cce5849934bc79d38019e7abe47973",
+      "bytes": 3149
+    },
+    "scripts/command_preconditions.py": {
+      "sha256": "24ae626f771bb96276554c73ee46f640604de467974a72a34f7a6e1c13731032",
+      "bytes": 8192
+    },
+    "scripts/continuous_navigation.py": {
+      "sha256": "61e734e47b51c643c88895027a4b97adcb433f28436e8930a4fafece230bfab1",
+      "bytes": 22274
+    },
+    "scripts/foundation_agent.py": {
+      "sha256": "a6b4db1561c6e60fcb9bd25c3589ae83327de00ef8845448888bd89df44ec743",
+      "bytes": 9499
+    },
+    "scripts/resident_forestry.py": {
+      "sha256": "e05f65e508168b7f4f986b4c1d2ebb7a84e5f1e477ec39d81a98066891ede580",
+      "bytes": 74024
+    },
+    "scripts/resident_mission.py": {
+      "sha256": "41b3e856e9dcafb98b35da0494956581adce62222a6a88095702bfd3ac00453e",
+      "bytes": 91828
+    },
+    "scripts/run_resident.py": {
+      "sha256": "663d1559d813222cbf33b4ae59d1642298c5bbc8ba37a25871873b320db70e6a",
+      "bytes": 3602
+    },
+    "src/World.Server/ContinuousMaterials.cs": {
+      "sha256": "fcf2e93fc33b5d23987c87d718fe255ae57616c469579063eeb9560904cd9ee9",
+      "bytes": 16066
+    },
+    "src/World.Server/ContinuousWorld.cs": {
+      "sha256": "82b2a925f47ab4bccfb7345951437ce5e607e18e4e82447c014e9b9d6e320c3b",
+      "bytes": 18745
+    },
+    "src/World.Server/EntityCanvas.cs": {
+      "sha256": "6934c4f68c7acfe780e4f44ce657a040c251226456593c2eaa4e3b9bee90ad94",
+      "bytes": 24095
+    },
+    "src/World.Server/EntityNotes.cs": {
+      "sha256": "5503baf43ea21f749113dd9b53c9f5f845268c8b55733fafbcd2039baa35ddaa",
+      "bytes": 11952
+    },
+    "src/World.Server/Forestry.cs": {
+      "sha256": "ac3a51cc29b10cfe34aaddec2009a261ab3c676f8408d1f15539d084c5b2252f",
+      "bytes": 34261
+    },
+    "src/World.Server/ForestryValidation.cs": {
+      "sha256": "2db53c5f9bbb18e4a8521375e52a5eacfe5331228033cba95be240b57c2aeb6c",
+      "bytes": 18828
+    },
+    "src/World.Server/MaterialAccess.cs": {
+      "sha256": "fdd0614261c92a9f2bd560cae3bd07c096b831489ff7485c72321ebf08c4c8a3",
+      "bytes": 19917
+    },
+    "src/World.Server/MaterialTransfer.cs": {
+      "sha256": "7957c7ee39691ebd607602ab53149b778d892da7e765073d5110119280570130",
+      "bytes": 3100
+    },
+    "src/World.Server/Program.cs": {
+      "sha256": "73f62e79f7488b38553005f737d330f6b85bc8e7ace701ec5ac99eeb420ce162",
+      "bytes": 16032
+    },
+    "src/World.Server/Protocol.cs": {
+      "sha256": "1b2ece68080c2084d58ff4d33a843aca890eb16230a07222ea0ca3cdf4e388df",
+      "bytes": 26702
+    },
+    "src/World.Server/Workshop.cs": {
+      "sha256": "03b0108de1805c8d9aae857dd319ad29011f011bb3ff664cc89b370b3ff0669f",
+      "bytes": 34646
+    },
+    "src/World.Server/WorldDatabase.cs": {
+      "sha256": "9144554c7bcd199e9179117d9323e2b36112f3db9795455ab4250b39ca7de23f",
+      "bytes": 38667
+    },
+    "src/World.Server/WorldService.cs": {
+      "sha256": "f4f171c4aeaa36736b484382129a3a09ddb669ebfee56eeef2d4664df069632c",
+      "bytes": 68412
+    },
+    "src/World.Server/wwwroot/resident.js": {
+      "sha256": "4860c18ddce16271ea10d3fb2e8897d42c1e978d728162689b1db8a838858366",
+      "bytes": 108927
+    },
+    "tests/README.md": {
+      "sha256": "89a0a4b4c0fa572dd9e090b88901cdeac5de3885084bd372b383ae6a667cf29e",
+      "bytes": 36538
+    },
+    "tests/browser/forestry-resident.mjs": {
+      "sha256": "17e307c5cf164b7c6a7635f55c5e1b486c4fbfc7660cc852bbcfafe37899e726",
+      "bytes": 14685
+    },
+    "tests/fixtures/forestry-ui.json": {
+      "sha256": "a8207c9e98478c4440c3178c324bd7f0a6d2993162dc0bce9dc2a581eaeeeec6",
+      "bytes": 90228
+    },
+    "tests/forestry_api.py": {
+      "sha256": "b0d544ca8fd0e7fd5e3bd14ea1ddd596f42b4e3289c14fbf0627391e51e2d89d",
+      "bytes": 48775
+    },
+    "tests/forestry_godot.py": {
+      "sha256": "bf8f720fbd8325d58ba9bcdc75fd70e775069f113a3b409550d7016e2f88915d",
+      "bytes": 8055
+    },
+    "tests/forestry_mission_api.py": {
+      "sha256": "cecb5371176bf546e72d5afa998ab4ff5b5a25206ec8ef1a2f0d6e7a0fb5b068",
+      "bytes": 52062
+    },
+    "tests/forestry_ui.py": {
+      "sha256": "c19ac46ab1a91c0dc4dde95e0b85138073de1d4cd5e0dabf0e73449b75c56453",
+      "bytes": 4161
+    },
+    "tests/godot/forestry_recovery.gd": {
+      "sha256": "998f982d90ccec31ea723ba644f8b935aa12fa869a8b439096e1373677137a1d",
+      "bytes": 3488
+    },
+    "tests/godot/forestry_ui.gd": {
+      "sha256": "a09bf75470c95cd405b058c2e9029570e9f13f0c86c8e09b60ef33c9e714f61c",
+      "bytes": 6637
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "status": "frozen-for-independent-QA",
+  "codeHashes": {
+    "scripts/resident_forestry.py": "e05f65e508168b7f4f986b4c1d2ebb7a84e5f1e477ec39d81a98066891ede580",
+    "scripts/resident_mission.py": "41b3e856e9dcafb98b35da0494956581adce62222a6a88095702bfd3ac00453e",
+    "scripts/run_resident.py": "663d1559d813222cbf33b4ae59d1642298c5bbc8ba37a25871873b320db70e6a",
+    "scripts/foundation_agent.py": "a6b4db1561c6e60fcb9bd25c3589ae83327de00ef8845448888bd89df44ec743",
+    "scripts/continuous_navigation.py": "61e734e47b51c643c88895027a4b97adcb433f28436e8930a4fafece230bfab1",
+    "scripts/command_preconditions.py": "24ae626f771bb96276554c73ee46f640604de467974a72a34f7a6e1c13731032"
+  },
+  "backend": ".local/iter0028/server-v2/World.Server.dll",
+  "backendSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+  "actualChain": ".local/iter0028/python/20261026T102559Z-10d662/test_01_actual_cli_two_generations_restart_and_wood_use/chain-summary.json",
+  "actualHttpCliChainCompleted": true,
+  "fullTestPassed": false,
+  "remainingIssue": "Post-stop SQL snapshot cleanup raised database disk image is malformed; source baseline unchanged, final HTTP resource and seed audits conserved. Harness investigation pending. Runtime removed by cleanup finally; failed run evidence retained.",
+  "browser": ".local/iter0028/browser/2026-10-26T10-32-24-237Z/results.json"
+}

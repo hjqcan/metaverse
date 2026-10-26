@@ -1,0 +1,1221 @@
+{
+  "testsRun": 25,
+  "failures": [
+    "(<__main__.ForestryMissionAcceptance testMethod=test_26_expired_mature_handoff_preserves_tree_and_capacity_stops>, 'Traceback (most recent call last):\\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/forestry_mission_api.py\", line 771, in test_26_expired_mature_handoff_preserves_tree_and_capacity_stops\\n    self.assertEqual((\\'harvesting\\', original[\\'plantId\\'], 0), (granted[\\'status\\'], granted[\\'plantId\\'], granted[\\'reservedSeed\\']))\\nAssertionError: Tuples differ: (\\'harvesting\\', \\'p7ea51159ab564fc580fa69d11f6e45e7\\', 0) != (\\'preparing\\', None, 1)\\n\\nFirst differing element 0:\\n\\'harvesting\\'\\n\\'preparing\\'\\n\\n- (\\'harvesting\\', \\'p7ea51159ab564fc580fa69d11f6e45e7\\', 0)\\n+ (\\'preparing\\', None, 1)\\n')"
+  ],
+  "errors": [],
+  "success": false,
+  "elapsedSeconds": 44.78499479900347,
+  "outcomes": [
+    {
+      "test": "test_02_reserve_original_queue_fact_and_cancel",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_03_dropped_success_restores_original_without_post",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_04_missing_proof_query_budget_preserves_pending",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_05_unsubmitted_pending_404_resends_exact_original",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_06_partial_three_records_keep_pending",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_07_query_failure_cost_survives_restart",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_08_permissions_and_forged_journal_rejected_before_io",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_09_changed_actor_aba_original_state_rejects",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_10_unauthorized_and_server_errors_preserve_exact_pending",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_11_issued_success_then_altered_detail_stays_unknown",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_12_expired_time_does_not_resend_missing_pending",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_13_expired_time_can_verify_already_committed_original",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_14_newer_actual_position_does_not_claim_original_return",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_15_delayed_observation_crosses_deadline_no_fresh_post",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_16_delayed_capability_observation_does_not_resend_pending",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_17_crash_after_rejection_settlement_restores_terminal",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_18_last_fresh_save_crosses_deadline_preserves_pending",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_19_last_resend_save_crosses_deadline_preserves_original",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_20_unknown_capability_geometry_and_wrong_instance_stop",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_21_original_tree_and_nursery_collision",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 79,
+          "generatedWood": 64,
+          "forestGeneratedWood": 3,
+          "standingForestWood": 3,
+          "forestryToolWood": 2,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 20,
+          "embodiedWood": 42,
+          "toolWood": 5,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 3,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 2,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 1,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_22_old_harvest_pending_recovers_after_next_generation_planted",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 79,
+          "generatedWood": 64,
+          "forestGeneratedWood": 3,
+          "standingForestWood": 0,
+          "forestryToolWood": 2,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 23,
+          "embodiedWood": 42,
+          "toolWood": 5,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 3,
+          "harvestGeneratedSeeds": 1,
+          "nurseryStockSeeds": 2,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 2,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_23_wood_and_seed_budgets_are_independent",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 79,
+          "generatedWood": 64,
+          "forestGeneratedWood": 3,
+          "standingForestWood": 0,
+          "forestryToolWood": 2,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 23,
+          "embodiedWood": 42,
+          "toolWood": 5,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 3,
+          "harvestGeneratedSeeds": 1,
+          "nurseryStockSeeds": 2,
+          "residentSeeds": 1,
+          "consumedPlantSeeds": 1,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_24_growing_without_waiting_and_cancel_after_plant_stop",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 79,
+          "generatedWood": 64,
+          "forestGeneratedWood": 3,
+          "standingForestWood": 0,
+          "forestryToolWood": 2,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 23,
+          "embodiedWood": 42,
+          "toolWood": 5,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 3,
+          "harvestGeneratedSeeds": 1,
+          "nurseryStockSeeds": 2,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 2,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_25_issued_original_with_wrong_instance_header_stays_pending",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 0,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 22,
+          "embodiedWood": 42,
+          "toolWood": 3,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 0,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 0,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_26_expired_mature_handoff_preserves_tree_and_capacity_stops",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 79,
+          "generatedWood": 64,
+          "forestGeneratedWood": 3,
+          "standingForestWood": 3,
+          "forestryToolWood": 4,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 18,
+          "embodiedWood": 42,
+          "toolWood": 7,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 3,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 2,
+          "residentSeeds": 0,
+          "consumedPlantSeeds": 1,
+          "reservedSeeds": 1,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    }
+  ],
+  "sourceCodeHashes": {
+    "scripts/resident_forestry.py": "e05f65e508168b7f4f986b4c1d2ebb7a84e5f1e477ec39d81a98066891ede580",
+    "scripts/resident_mission.py": "41b3e856e9dcafb98b35da0494956581adce62222a6a88095702bfd3ac00453e",
+    "scripts/run_resident.py": "663d1559d813222cbf33b4ae59d1642298c5bbc8ba37a25871873b320db70e6a",
+    "scripts/foundation_agent.py": "a6b4db1561c6e60fcb9bd25c3589ae83327de00ef8845448888bd89df44ec743",
+    "scripts/continuous_navigation.py": "61e734e47b51c643c88895027a4b97adcb433f28436e8930a4fafece230bfab1",
+    "scripts/command_preconditions.py": "24ae626f771bb96276554c73ee46f640604de467974a72a34f7a6e1c13731032",
+    "tests/forestry_mission_api.py": "af33ec5d15b4a5bf2c9462e0a00fa77356f2598a884b5766376f04487d8cc30e"
+  },
+  "actualModelCalls": 0
+}

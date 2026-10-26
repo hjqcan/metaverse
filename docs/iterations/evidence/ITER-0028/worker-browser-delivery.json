@@ -1,0 +1,34 @@
+{
+  "status": "frozen-for-independent-QA",
+  "files": {
+    "src/World.Server/wwwroot/resident.js": "4860c18ddce16271ea10d3fb2e8897d42c1e978d728162689b1db8a838858366",
+    "tests/browser/forestry-resident.mjs": "17e307c5cf164b7c6a7635f55c5e1b486c4fbfc7660cc852bbcfafe37899e726"
+  },
+  "runs": [
+    {
+      "summary": ".local/iter0028/browser/2026-10-26T10-37-33-805Z/results.json",
+      "groups": 29,
+      "passed": true,
+      "sourceSha256": "4860c18ddce16271ea10d3fb2e8897d42c1e978d728162689b1db8a838858366",
+      "finalSourceSha256": "4860c18ddce16271ea10d3fb2e8897d42c1e978d728162689b1db8a838858366",
+      "browserVersion": "152.0.7977.82",
+      "javascriptErrors": [],
+      "worldRequests": [],
+      "staticServerExited": true
+    },
+    {
+      "summary": ".local/iter0028/browser-legacy/2026-10-26T10-39-09-559Z/results.json",
+      "groups": 23,
+      "passed": true,
+      "sourceSha256": "4860c18ddce16271ea10d3fb2e8897d42c1e978d728162689b1db8a838858366",
+      "finalSourceSha256": "4860c18ddce16271ea10d3fb2e8897d42c1e978d728162689b1db8a838858366",
+      "browserVersion": "152.0.7977.82",
+      "javascriptErrors": [],
+      "worldRequests": [],
+      "staticServerExited": true
+    }
+  ],
+  "actualWorldOrNativeAcceptance": false,
+  "scope": "Actual CLI JSON imported in real Chrome; no world requests. Forestry 29 groups plus unchanged legacy workshop 23 groups. Existing failed full-chain cleanup remains separate.",
+  "visualReview": "Desktop and mobile screenshots inspected; Chinese states, wrapped original IDs, separate seed and wood facts, snapshot version and optional return visible."
+}

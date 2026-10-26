@@ -25,7 +25,12 @@
     "test:workshop:godot": "WORLD_SERVER_DLL=\"${WORLD_SERVER_DLL:-$PWD/src/World.Server/bin/Debug/net10.0/World.Server.dll}\" python3 tests/workshop_godot.py",
     "test:workshop:mission": "python3 tests/workshop_mission_api.py",
     "test:workshop:report": "node tests/browser/workshop-resident.mjs",
-    "test:workshop:geometry": "\"${GODOT_BIN:-.local/tools/godot/Godot_v4.7.2-stable_linux.x86_64}\" --headless --path clients/godot --script ../../tests/godot/workshop_geometry.gd"
+    "test:workshop:geometry": "\"${GODOT_BIN:-.local/tools/godot/Godot_v4.7.2-stable_linux.x86_64}\" --headless --path clients/godot --script ../../tests/godot/workshop_geometry.gd",
+    "test:forestry:api": "python3 tests/forestry_api.py",
+    "test:forestry:godot": "python3 tests/forestry_godot.py",
+    "test:forestry:ui": "python3 tests/forestry_ui.py",
+    "test:forestry:mission": "python3 tests/forestry_mission_api.py",
+    "test:forestry:report": "node tests/browser/forestry-resident.mjs"
   },
   "license": "MIT"
 }

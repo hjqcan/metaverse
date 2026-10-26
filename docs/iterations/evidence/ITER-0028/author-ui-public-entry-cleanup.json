@@ -1,0 +1,25 @@
+{
+  "removed": [
+    {
+      "path": ".local/iter0028/native-ui/20261026T102514Z-e54382/project",
+      "logicalBytes": 245344
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T102514Z-e54382/data",
+      "logicalBytes": 6501638
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T102514Z-e54382/config",
+      "logicalBytes": 17753
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T102514Z-e54382/cache",
+      "logicalBytes": 5549261
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T102514Z-e54382/tmp",
+      "logicalBytes": 0
+    }
+  ],
+  "originalClientProjectUntouched": true
+}

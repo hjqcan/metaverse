@@ -1,0 +1,174 @@
+{
+  "reviewer": "test-agent2",
+  "iteration": "ITER-0028",
+  "completedAtUtc": "2026-10-26T10:30:11.253427+00:00",
+  "status": "independent API/SQLite scope passed; native and Python scopes remain separate",
+  "candidate": {
+    "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0028/server-v2/World.Server.dll",
+    "dllSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+    "testSha256": "b0d544ca8fd0e7fd5e3bd14ea1ddd596f42b4e3289c14fbf0627391e51e2d89d",
+    "helperSha256": "422a9d9c944d8c378640d4e595c02c36f7197e0a81322b8bbbdf1306910c38de",
+    "navigationSha256": "61e734e47b51c643c88895027a4b97adcb433f28436e8930a4fafece230bfab1",
+    "contractSha256": "3a2ab70e7a7f6160981998219344b78e761b504706c975973c6f248c26364dfa",
+    "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/test-agent2/iter28-source13-20261026T095453Z",
+    "actualModelCalls": 0
+  },
+  "candidateSourceManifest": ".local/iter0028/backend-selfcheck-v2/candidate.json",
+  "distinctGroups": 18,
+  "successfulGroupExecutions": 18,
+  "failures": [],
+  "skips": [],
+  "actualModelCalls": 0,
+  "executions": [
+    {
+      "results": ".local/test-agent2/iter28-20261026T100842Z-8df472/results.json",
+      "sha256": "917d00661659a50ce7166556f4be660112d8fb17848657fbb1f326ff7d32c68a",
+      "groups": 7,
+      "seconds": 49.218275865889154
+    },
+    {
+      "results": ".local/test-agent2/iter28-20261026T100946Z-28d214/results.json",
+      "sha256": "b3207c13e90769f847f0a0b0e185ad8c713d4e894bc665e8d52c3606272a3dd2",
+      "groups": 11,
+      "seconds": 1120.3642643541098
+    }
+  ],
+  "groups": [
+    {
+      "test": "__main__.ForestryAcceptance.test_01_explicit_adoption_preserves_original_history_and_is_idempotent",
+      "passed": true,
+      "seconds": 1.0615718119661324
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_02_legacy_receipt_precedes_capability_new_effects_require_both",
+      "passed": true,
+      "seconds": 0.8893854189664125
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_03_strict_action_fields_integer_versions_and_same_id",
+      "passed": true,
+      "seconds": 1.3216808649594896
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_04_action_detail_auth_instance_privacy_and_readonly",
+      "passed": true,
+      "seconds": 0.38221365201752633
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_14_adoption_crash_transaction_and_retry_are_idempotent",
+      "passed": true,
+      "seconds": 1.5034823809983209
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_15_adoption_rechecks_current_residents_and_existing_buildings",
+      "passed": true,
+      "seconds": 35.164160953019746
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_17_adoption_respects_actual_resident_radius_at_clear_boundary",
+      "passed": true,
+      "seconds": 8.895780783961527
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_16_reserved_building_footprints_and_body_occupied_planting",
+      "passed": true,
+      "seconds": 73.08410730399191
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_08_growing_collision_offline_pause_original_planting_replay",
+      "passed": true,
+      "seconds": 6.4676584580447525
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_09_maturity_once_capacity_atomic_two_generations_original_pending",
+      "passed": true,
+      "seconds": 243.05619924503844
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_11_six_actions_before_commit_crash_rolls_back_original_id_resumes",
+      "passed": true,
+      "seconds": 17.162889052007813
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_12_six_actions_after_commit_crash_recovers_same_fact_once",
+      "passed": true,
+      "seconds": 17.303461303003132
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_13_four_resource_debit_exceptions_leave_no_partial_effect",
+      "passed": true,
+      "seconds": 14.326818462985102
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_18_original_workshop_recipes_and_mallet_remain_distinct_from_axe",
+      "passed": true,
+      "seconds": 12.37861385603901
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_05_seed_zero_fifo_alias_reserved_is_not_collected_and_no_jump",
+      "passed": true,
+      "seconds": 121.05248318001395
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_06_preparation_expiry_releases_reserved_seed_and_new_lease_starts_now",
+      "passed": true,
+      "seconds": 91.10719533404335
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_07_nursery_capacity_skips_full_periods_without_backlog",
+      "passed": true,
+      "seconds": 361.543838795973
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_10_mature_public_handoff_lease_is_not_backdated",
+      "passed": true,
+      "seconds": 162.8809993629693
+    }
+  ],
+  "evidenceArchive": {
+    "path": ".local/test-agent2/iter28-api-evidence.tar.gz",
+    "sha256": "c3e03a68551a5a6d38caa013d00df0f1548f3804b4afe4c8c4db1ba1cb239eca",
+    "bytes": 361836
+  },
+  "evidenceManifest": ".local/test-agent2/iter28-api-evidence-manifest.json",
+  "sourceBaselineManifest": ".local/test-agent2/iter28-source13-manifest.json",
+  "verified": [
+    "Explicit same-instance storage13 to14 adoption preserves all prior fact tables and event prefix; repeat and failed adoption are atomic",
+    "Stored receipts precede new capability gates; missing declarations cannot create effects or receipts; strict six-action JSON and twelve same-ID concurrent requests",
+    "Original receipt, author event and author detail agree; foreign identity, bad bearer and wrong instance rejected; GETs preserve business state",
+    "Real seed intervals start at zero, reserved stock is not collection, FIFO blocks seed-owning followers, aliases share one live reservation",
+    "Preparation expires after90 service seconds; original maturity priority and subsequent grants expire after60; a later grant begins at actual grant time",
+    "Real120-second growth, fixed0.45 trunk collision, two-second offline pause, actual resident/building conflicts and actual0.28 resident boundary",
+    "Whole-tree3wood/1seed transfer is atomic; foreign/missing axe and wood10 capacity reject; old mallet, recipes and chest actions retain semantics",
+    "Two actual generations have different plant IDs; exact committed replay, unresolved original ID and fresh old-tree requests cannot affect the second generation",
+    "Two maturity events issue exactly6wood; harvest transfers standing stock; SQLite resource ledger accounts and seed event ledger agree across cold restarts",
+    "Six actions survive before-commit and after-commit process exit using original IDs; four debit exceptions roll back; adoption exits91/92 are atomic",
+    "After both original and successor harvest leases expire the same mature tree and3wood remain; a fresh explicit later grant successfully harvests it"
+  ],
+  "findings": [
+    {
+      "kind": "static candidate geometry review",
+      "issue": "Adoption initially treated resident radius as0.45 instead of actual0.28",
+      "reportedMessage": "msg_121ec66d7d00",
+      "resolution": "Coordinator fixed before backend-v2 freeze; independent test17 passed with actual resident at8.85,12 outside reserve boundary8.5",
+      "negativeRuntimeOnOldCandidate": false
+    }
+  ],
+  "limits": [
+    "Isolated HTTP/SQLite copies only; not native user input or Python executor acceptance",
+    "Setup uses the existing route helper; this suite independently checks server collisions but does not independently validate the full navigator",
+    "Four fixed plot definitions and standing-stock bounds checked; four simultaneous standing trees were not exercised with the retained three declared operator groups",
+    "Faults use supported process-exit/debit hooks; not an operating-system power-loss test",
+    "Offline pause directly sampled for two seconds; growth and leases use real service time with no clock edits",
+    "The source-backup probe initially failed a broad fingerprint assertion including transient sidecars; the exact initial changed filename was not retained. Repeat durable-file and baseline checks passed"
+  ],
+  "cleanup": {
+    "ownedServicesRemaining": 0,
+    "executionDatabaseDirectoriesRemaining": 0,
+    "disposedExecutionBytes": 79919969,
+    "retainedSmallColdSource": ".local/test-agent2/iter28-source13-20261026T095453Z",
+    "retentionReason": "ROOT msg_40fa4ec170b9 explicitly retained this baseline for upcoming frozen Python verification"
+  },
+  "publicWrite": "tests/forestry_api.py",
+  "nextScope": "Read-only Python pre-review; no Python execution until ROOT/BUILD2 frozen handoff"
+}

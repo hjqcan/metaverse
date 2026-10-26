@@ -1,0 +1,72 @@
+[
+  {
+    "phase": "growing-before-stop",
+    "integrity": [
+      [
+        "ok"
+      ]
+    ],
+    "foreignKeys": [],
+    "stateVersion": 1413
+  },
+  {
+    "phase": "growing-after-stop",
+    "integrity": [
+      [
+        "ok"
+      ]
+    ],
+    "foreignKeys": [],
+    "stateVersion": 1413
+  },
+  {
+    "phase": "mature-before-stop",
+    "integrity": [
+      [
+        "ok"
+      ]
+    ],
+    "foreignKeys": [],
+    "stateVersion": 1416
+  },
+  {
+    "phase": "mature-after-stop-before-copy",
+    "integrity": [
+      [
+        "ok"
+      ]
+    ],
+    "foreignKeys": [],
+    "stateVersion": 1416
+  },
+  {
+    "phase": "mature-after-copy-before-restart",
+    "integrity": [
+      [
+        "ok"
+      ]
+    ],
+    "foreignKeys": [],
+    "stateVersion": 1416
+  },
+  {
+    "phase": "final-before-stop",
+    "integrity": [
+      [
+        "ok"
+      ]
+    ],
+    "foreignKeys": [],
+    "stateVersion": 1460
+  },
+  {
+    "phase": "final-after-stop",
+    "integrity": [
+      [
+        "ok"
+      ]
+    ],
+    "foreignKeys": [],
+    "stateVersion": 1460
+  }
+]

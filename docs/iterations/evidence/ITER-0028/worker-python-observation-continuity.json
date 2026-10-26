@@ -1,0 +1,240 @@
+{
+  "source": ".local/iter0028/python/20261026T103732Z-801099",
+  "scope": "Offline equality of actual initial/final observation snapshots, including canvas adoption and content; complements SQL retained rows. No new world activity.",
+  "tests": [
+    {
+      "test": "test_01_actual_cli_two_generations_restart_and_wood_use",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_02_reserve_original_queue_fact_and_cancel",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_03_dropped_success_restores_original_without_post",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_04_missing_proof_query_budget_preserves_pending",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_05_unsubmitted_pending_404_resends_exact_original",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_06_partial_three_records_keep_pending",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_07_query_failure_cost_survives_restart",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_08_permissions_and_forged_journal_rejected_before_io",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_09_changed_actor_aba_original_state_rejects",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_10_unauthorized_and_server_errors_preserve_exact_pending",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_11_issued_success_then_altered_detail_stays_unknown",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_12_expired_time_does_not_resend_missing_pending",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_13_expired_time_can_verify_already_committed_original",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_14_newer_actual_position_does_not_claim_original_return",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_15_delayed_observation_crosses_deadline_no_fresh_post",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_16_delayed_capability_observation_does_not_resend_pending",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_17_crash_after_rejection_settlement_restores_terminal",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_18_last_fresh_save_crosses_deadline_preserves_pending",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_19_last_resend_save_crosses_deadline_preserves_original",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_20_unknown_capability_geometry_and_wrong_instance_stop",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_21_original_tree_and_nursery_collision",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_22_old_harvest_pending_recovers_after_next_generation_planted",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_23_wood_and_seed_budgets_are_independent",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_24_growing_without_waiting_and_cancel_after_plant_stop",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_25_issued_original_with_wrong_instance_header_stays_pending",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    },
+    {
+      "test": "test_26_expired_mature_handoff_preserves_tree_and_capacity_stops",
+      "entityCanvasUnchanged": true,
+      "entityNotesUnchanged": true,
+      "worldInstanceUnchanged": true,
+      "runtimeRemoved": true,
+      "integrity": "ok",
+      "foreignKeys": []
+    }
+  ]
+}

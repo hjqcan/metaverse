@@ -299,3 +299,19 @@ Godot检查真实鼠标网格和色板、图面刷新、关闭草图、断线前
 原历史Python链另用 `WORKSHOP_BASELINE=/绝对路径/已停服原历史 WORLD_SERVER_DLL=/绝对路径/World.Server.dll npm run test:workshop:mission`。必须显式提供原历史，脚本只在副本执行；不将新建测试世界冒充原自然史。报告页用 `WORKSHOP_REPORT_DIR=/绝对路径/该次任务证据 npm run test:workshop:report`，通过真实Chrome导入实际CLI报告与损坏变体，静态服务不发送世界请求。这两个专项入口不并入依赖零私人数据的默认 `npm test`。
 
 测试自动删除其一次性世界、会话文件并停止自启服务；保留结果、请求证据与必要截图。失败夹具与修复后复验分列，作者自测、独立API和原生自然活动分别计数，真实模型调用0。
+
+### ITER-0028 公共育林
+
+林业套件需要明确的原历史输入，因此单独执行，不加入不依赖私人数据的默认 `npm test`。先构建或提供冻结的 `WORLD_SERVER_DLL`；任何输入都必须是已停服的副本，不能指向仍在接续的原世界。
+
+| 入口 | 必填输入与范围 |
+|---|---|
+| `npm run test:forestry:api` | `WORLD_SERVER_DLL`、`FORESTRY_SOURCE`：已采用工坊和持续材料的存储13原历史副本；在各自副本采用林业，验证真实HTTP、SQLite、服务时钟和故障 |
+| `npm run test:forestry:godot` | `WORLD_SERVER_DLL`、`FORESTRY_SOURCE`：已采用林业的存储14、实际活动后停服副本；当前8组仅覆盖申请／取消的真实HTTP、磁盘与进程恢复，不是六动作原生全覆盖 |
+| `npm run test:forestry:ui` | 默认 `fixtures/forestry-ui.json`，可用 `FORESTRY_UI_FIXTURE` 覆盖；实际Godot渲染、鼠标和原事实校验，不启动世界服务 |
+| `npm run test:forestry:mission` | `WORLD_SERVER_DLL`、`FORESTRY_BASELINE`：存储13原自然史副本；真实固定CLI及明确故障探针，等待实际服务时间 |
+| `npm run test:forestry:report` | `FORESTRY_REPORT_DIR` 指向含 `test_01_.../` 的完整两代运行目录，`FORESTRY_CANCEL_REPORT_DIR` 指向含 `test_02_.../` 的申请／取消运行目录；可选 `FORESTRY_RECOVERY_REPORT_DIR` 提供恢复报告；报告导入与权威世界验收分列 |
+
+API与任务中的种源、生长和授权期限使用真实服务时间，不用SQL补种子、木材、工具或成熟事实。两轮任务每次明确新目标；旧采收命令仍只对应旧plantId。原生自然史由独立验收沿原头接续，不能用以上副本替代。
+
+UI默认夹具为作者实际HTTP支线的生长期观察、完成观察与5份原动作回执，无会话凭据。状态1412／1416来自该支线，不能冒充原自然史接续版本。测试中的未知能力、库存篡改和窗口变化是明确界面变体。运行使用私有Godot项目与缓存，退出后删除；原项目缓存与已有用户窗口保持。

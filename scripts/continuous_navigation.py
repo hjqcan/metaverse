@@ -58,6 +58,7 @@ def validate_observation(observed):
     if any(not point(o.get('position')) or not finite(o.get('radius')) or o['radius'] <= 0 for o in terrain.get('obstacles', [])):
         raise ValueError('Invalid continuous obstacle geometry')
     furniture_geometry(observed)
+    forestry_circles(observed)
 
 
 def entity_half_size(entity):
@@ -85,6 +86,45 @@ def furniture_geometry(observed, exclude_entity_id=None):
         if entity['entityId'] != exclude_entity_id:
             rectangles.append([*entity['position'], hx, hz])
     return rectangles
+
+
+def forestry_circles(observed, interaction_obstacle=None):
+    """Validate forestry obstacles and omit only a named target for its ray."""
+    cap = observed.get('forestry')
+    obstacles = observed['terrain']['obstacles']
+    kinds = ('forestry_nursery', 'forestry_tree')
+    tagged = [o for o in obstacles if o.get('kind') in kinds]
+    expected = {}
+    if cap is not None:
+        if (not isinstance(cap, dict) or cap.get('capability') != 'forestry-v1'
+                or type(cap.get('version')) is not int or cap['version'] != 1):
+            raise ValueError('Unknown forestry geometry capability')
+        nursery, plots, plants = cap.get('nursery'), cap.get('plots'), cap.get('plants')
+        if (not isinstance(nursery, dict) or nursery.get('sourceId') != 'nursery-west'
+                or not point(nursery.get('position')) or nursery['position'] != [7, 6]
+                or not finite(nursery.get('radius')) or nursery['radius'] != .3
+                or not isinstance(plots, list) or len(plots) != 4 or not isinstance(plants, list)):
+            raise ValueError('Incomplete forestry geometry')
+        centers = {}
+        for p in plots:
+            if (not isinstance(p, dict) or not isinstance(p.get('plotId'), str) or p['plotId'] in centers
+                    or not point(p.get('position')) or not finite(p.get('radius')) or p['radius'] != .45):
+                raise ValueError('Invalid forestry plot geometry')
+            centers[p['plotId']] = p['position']
+        expected['nursery-west'] = ('forestry_nursery', nursery['position'], .3)
+        for p in plants:
+            if (not isinstance(p, dict) or not isinstance(p.get('plantId'), str) or not p['plantId']
+                    or p['plantId'] in expected or p.get('plotId') not in centers or p.get('state') not in ('growing', 'mature')):
+                raise ValueError('Invalid original forestry plant geometry')
+            expected[p['plantId']] = ('forestry_tree', centers[p['plotId']], .45)
+        if (len(tagged) != len(expected) or len({o.get('id') for o in tagged}) != len(tagged)
+                or any(o.get('id') not in expected or [o.get('kind'), o.get('position'), o.get('radius')] != list(expected[o['id']]) for o in tagged)):
+            raise ValueError('Public forestry obstacles do not match the original plants')
+    elif tagged:
+        raise ValueError('Forestry obstacles require an explicit supported capability')
+    if interaction_obstacle is not None and interaction_obstacle not in expected:
+        raise ValueError('Only the original forestry interaction target may be omitted')
+    return [[*o['position'], o['radius']] for o in obstacles if o.get('id') != interaction_obstacle]
 
 
 def _point_segment(p, a, b):
@@ -249,10 +289,10 @@ def _navigation(encoded):
     return Navigation(json.loads(encoded))
 
 
-def navigation(observed, *, interaction_target=None):
+def navigation(observed, *, interaction_target=None, interaction_obstacle=None):
     geometry = {'bounds': observed['world']['bounds'], 'radius': observed['movement']['radius'],
                 'river': observed['terrain']['river']['polygon'],
-                'circles': [[*r['position'], r['radius']] for r in observed['terrain']['obstacles']],
+                'circles': forestry_circles(observed, interaction_obstacle),
                 'bridges': [e['position'] for e in observed['entities'] if e['definitionId'] == 'bridge'],
                 'rectangles': furniture_geometry(observed, interaction_target)}
     geometry['circles'] += [[*n['position'], .45] for n in observed['resourceNodes'] if n['remainingWood'] > 0]

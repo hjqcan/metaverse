@@ -100,7 +100,8 @@ internal static class ContinuousMaterialRules
         var issued = Scalar(c, t, "SELECT issued_wood FROM worlds");
         var total = Scalar(c, t, "SELECT (SELECT coalesce(sum(wood),0) FROM residents)+(SELECT coalesce(sum(remaining_wood),0) FROM resource_nodes)+(SELECT coalesce(sum(embodied_wood),0) FROM entities)+(SELECT stock_wood FROM material_source)");
         var workshop = WorkshopRules.Wood(c, t); total = checked(total + workshop.Tools + workshop.Stored);
-        if (generated != s.GeneratedWood || issued != checked(12 + generated) || total != issued
+        var forest = ForestryRules.Wood(c, t); total = checked(total + forest.Tools + forest.Standing);
+        if (generated != s.GeneratedWood || issued != checked(12 + generated + forest.Generated) || total != issued
             || Scalar(c, t, "SELECT coalesce(max(production_period),0) FROM material_production") > s.ProductionPeriod
             || Scalar(c, t, "SELECT coalesce(sum(remaining),0) FROM material_reservations WHERE status='active'") > s.StockWood
             || Scalar(c, t, "SELECT count(*) FROM pragma_foreign_key_check") != 0)
@@ -143,10 +144,11 @@ internal sealed partial class WorldDatabase
             if (!Scenario.SupportsMaterialAccess || WorldInstance.Read(c, t) != expectedInstance)
                 throw new InvalidOperationException("持续政策只能在指定原材料实例采用");
             var previous = ContinuousMaterialRules.ReadPolicy(c, t, expectedInstance);
-            if ((storage is 11 or 12 or 13) != (previous is not null)) throw new InvalidOperationException("持续政策与存储不一致");
+            if ((storage is 11 or 12 or 13 or 14) != (previous is not null)) throw new InvalidOperationException("持续政策与存储不一致");
             ContinuousMaterialRules.ValidateState(c, t, previous);
             EntityCanvasRules.ValidateStorage(c, t, expectedInstance, storage, previous);
             WorkshopRules.ValidateStorage(c, t, expectedInstance, storage, previous);
+            ForestryRules.ValidateStorage(c, t, expectedInstance, storage);
             if (EntityNoteRules.ReadAdoption(c, t) is { } notes && (notes.InstanceId != expectedInstance || EntityNoteRules.ReadBridge(c, t, notes.EntityId) is null))
                 throw new InvalidOperationException("原手记目标不匹配");
             if (previous is not null) return false;

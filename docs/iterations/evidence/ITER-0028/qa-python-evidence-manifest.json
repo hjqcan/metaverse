@@ -1,0 +1,467 @@
+{
+  "createdAtUtc": "2026-10-26T10:48:43.240976+00:00",
+  "count": 115,
+  "sourceCredentialsExcluded": true,
+  "files": {
+    ".local/test-agent2/iter28-python-prereview.json": {
+      "sha256": "3b2564fa4186b227c7f841c74421e27198f035d674996a3bac405c1005da9464",
+      "bytes": 4527
+    },
+    ".local/test-agent2/iter28-python-review.json": {
+      "sha256": "3ea2d2cebab9df81565cc44bc9c1a47e50bf856bb9af77d0a4c856ef29f086ac",
+      "bytes": 10952
+    },
+    ".local/test-agent2/iter28-python-v1/candidate.json": {
+      "sha256": "111673ccc599b0acc5824dadbdbbd0aed1233ba1c9ccfdd7ff02c002e6e120c1",
+      "bytes": 3895
+    },
+    ".local/test-agent2/iter28-python-v1/independent.py": {
+      "sha256": "00df4f8418285c958416e7dc543fab4f9f9ead57955b111f05e6b7a6ea7ea108",
+      "bytes": 24373
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/activity_choice.py": {
+      "sha256": "84bd020783870725947663eb41500977096c86e366099b4fb8607c9d1c049b5a",
+      "bytes": 770
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/agent_accounts.py": {
+      "sha256": "f1844d9db668e864ab215d0d811b884b6301500bfe260bb9bf9d9cfdbc481f10",
+      "bytes": 9309
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/check.py": {
+      "sha256": "2ea589ec80e35b86264926947c3f2f856f3dd9fdb073feda4b5cbbe89fd17565",
+      "bytes": 6041
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/codex_goal_selector.py": {
+      "sha256": "3a455c2906aaa3764c85794cb581300979f57cb3f24b46fe437fbd287a8b6936",
+      "bytes": 13838
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/command_preconditions.py": {
+      "sha256": "24ae626f771bb96276554c73ee46f640604de467974a72a34f7a6e1c13731032",
+      "bytes": 8192
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/continuous_navigation.py": {
+      "sha256": "61e734e47b51c643c88895027a4b97adcb433f28436e8930a4fafece230bfab1",
+      "bytes": 22274
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/entry_guide.py": {
+      "sha256": "9b768237d39f2e4b4820e0178508c132408215aa6653c996eaf9b6e913d79dbb",
+      "bytes": 1485
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/foundation_agent.py": {
+      "sha256": "a6b4db1561c6e60fcb9bd25c3589ae83327de00ef8845448888bd89df44ec743",
+      "bytes": 9499
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/mosaic_consent.py": {
+      "sha256": "cb3acc34abe43c6988359bc307755ad6d2743ac5e850bccaf165f14ae561eae9",
+      "bytes": 8076
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/mosaic_inbox.py": {
+      "sha256": "a9c0772e5946af581c3b423c8e5986b05413348a3e528c8d5a0b18401367aa59",
+      "bytes": 3218
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/mosaic_patch.py": {
+      "sha256": "4abdb035967733e4aacbe175a37f8b32686de6182ded2fee888203726b0461a6",
+      "bytes": 4447
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/passage_agent.py": {
+      "sha256": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e",
+      "bytes": 9169
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/postcard_text.py": {
+      "sha256": "db3429983b8ee2062ab70f4c7e46b763c5839934f65a2a6776638f8c0a280a4c",
+      "bytes": 317
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/resident_construction.py": {
+      "sha256": "6d5b9ee9a7d3591bac2b57a80e42b474fb6f5a0b964b800a71f95c16dfa9939b",
+      "bytes": 7504
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/resident_entity_canvas.py": {
+      "sha256": "9902931488e74a71448cfddfab72efae77ed56f4b45f8a028d727638398fde2d",
+      "bytes": 19094
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/resident_entity_notes.py": {
+      "sha256": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+      "bytes": 21179
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/resident_forestry.py": {
+      "sha256": "e05f65e508168b7f4f986b4c1d2ebb7a84e5f1e477ec39d81a98066891ede580",
+      "bytes": 74024
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/resident_material_access.py": {
+      "sha256": "a144eafc8ba4e12d1cf88ef147a2179b7808a1cd0b2f5a8a0e0dc01046b717e4",
+      "bytes": 23601
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/resident_mission.py": {
+      "sha256": "41b3e856e9dcafb98b35da0494956581adce62222a6a88095702bfd3ac00453e",
+      "bytes": 91828
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/resident_transfer.py": {
+      "sha256": "957067bc33585e1fb5f7f9b21b703aa1c8decf8f4148fcb2fe24e4ce50329a83",
+      "bytes": 6953
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/resident_workshop.py": {
+      "sha256": "0d1ef7c9d904031890dc29f8465fb72e14584733576561f4d182b7fd727ef2e0",
+      "bytes": 61315
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/run_resident.py": {
+      "sha256": "663d1559d813222cbf33b4ae59d1642298c5bbc8ba37a25871873b320db70e6a",
+      "bytes": 3602
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/test_agent_accounts.py": {
+      "sha256": "07c9e2e66bcfec99a9d57ed7b9ba3497769d06bee5b838ca6c24a0264647df5c",
+      "bytes": 2429
+    },
+    ".local/test-agent2/iter28-python-v1/product/scripts/wilderness_materials.py": {
+      "sha256": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6",
+      "bytes": 3825
+    },
+    ".local/test-agent2/iter28-python-v1/ready-source/provenance.json": {
+      "sha256": "ad331ba711a256c838ab0d431bc43a7b05d397563a6f84ea53ee59cba26dc34c",
+      "bytes": 1538
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/candidate.json": {
+      "sha256": "c1a5491827725bc360bae4c2ad0cc265148ae4314becfbb6962aa2a5305d7006",
+      "bytes": 4108
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/results.json": {
+      "sha256": "a571f10cbe0dced3d8f7efdfd78253f87ccaa019fad57c23ba9781ad0f91c056",
+      "bytes": 3063
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test.log": {
+      "sha256": "dc96cc706541888ef8e3815ed7544c225c84c25a31d7f8789366219071a4fe5e",
+      "bytes": 1873
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_01_request_not_forwarded_original_404_resends_once/proxy-traffic.json": {
+      "sha256": "24d5e42fb25bbc4239fcf8beabd55ded299f8b1067523a2a431dedcfff8e2228",
+      "bytes": 3129
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_01_request_not_forwarded_original_404_resends_once/reports.json": {
+      "sha256": "d1d2b911d34c6b00bc06acc61ba3728aabdc8394cb70f79789fdcdc3f4c9352c",
+      "bytes": 97731
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_01_request_not_forwarded_original_404_resends_once/setup-traffic.json": {
+      "sha256": "f0438761eb04d7bf649916d6c4c4dbe8242974462f95aa9e8ede492d0f614478",
+      "bytes": 520
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_01_request_not_forwarded_original_404_resends_once/sql-audit.json": {
+      "sha256": "a4c3aafe6f69a9d160807c7fef2632c7ca0f8311b2c9bdd03ccd9d320b51b720",
+      "bytes": 1141
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_01_request_not_forwarded_original_404_resends_once/state.json": {
+      "sha256": "cd4446323f34ac0fc71bc840f46df3aa9d83a47a376e0568648ec90f63cd39de",
+      "bytes": 134112
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_01_request_not_forwarded_original_404_resends_once/state.json.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_02_committed_harvest_response_lost_recovers_no_post/proxy-traffic.json": {
+      "sha256": "8c0040e11d66952dc3df7241c886ae738cc04a0e505f74e2e5285f9b23bc4191",
+      "bytes": 2488
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_02_committed_harvest_response_lost_recovers_no_post/reports.json": {
+      "sha256": "fe9b4c15df5cc34262eecc58be22a4d1641b319ee8607feec95b58c2c5fcb7c5",
+      "bytes": 122418
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_02_committed_harvest_response_lost_recovers_no_post/setup-traffic.json": {
+      "sha256": "d16d7bc4150830f3d4d0e1b7d1b54915a06dbd215af058c657f8ab6a64606737",
+      "bytes": 550
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_02_committed_harvest_response_lost_recovers_no_post/sql-audit.json": {
+      "sha256": "7cff118d6c373b986f9108a6005be56ea0f5efe6bb2efd5def2f523d95e47b8b",
+      "bytes": 1141
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_02_committed_harvest_response_lost_recovers_no_post/state.json": {
+      "sha256": "9c864633c01e035b9361323504a90df51294073402ed0aaa2fc0e5c9cb43b697",
+      "bytes": 200779
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_02_committed_harvest_response_lost_recovers_no_post/state.json.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_03_altered_detail_cannot_settle_original/proxy-traffic.json": {
+      "sha256": "f36b974eb9805d214fab34bb47eb6df84262f61e3e99b323115d0bdd1e81a5df",
+      "bytes": 3033
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_03_altered_detail_cannot_settle_original/reports.json": {
+      "sha256": "cd0a3543bcd5ce599a765964c7ee6ca12e587a1147b94452a088eafca3ba3428",
+      "bytes": 97693
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_03_altered_detail_cannot_settle_original/setup-traffic.json": {
+      "sha256": "f083a9b023cd67c44c26bdf45f2e1f603950229ae76c72088ffc3016093bc959",
+      "bytes": 520
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_03_altered_detail_cannot_settle_original/sql-audit.json": {
+      "sha256": "a4c3aafe6f69a9d160807c7fef2632c7ca0f8311b2c9bdd03ccd9d320b51b720",
+      "bytes": 1141
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_03_altered_detail_cannot_settle_original/state.json": {
+      "sha256": "c68ed8318de5a006cf86e2e1e4e481aa9c08f06f2a749b39e622754f7ace00c1",
+      "bytes": 134186
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_03_altered_detail_cannot_settle_original/state.json.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_04_missing_event_cannot_settle_original/proxy-traffic.json": {
+      "sha256": "a0d729acc4051c6f64b650ff7085a0ed43fd9e741e4abc8b8941330e974c9266",
+      "bytes": 3037
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_04_missing_event_cannot_settle_original/reports.json": {
+      "sha256": "d28835e3bddd883668a6e8608cfee96b8669e476f0e15befc5fa0fb9d19899ae",
+      "bytes": 97678
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_04_missing_event_cannot_settle_original/setup-traffic.json": {
+      "sha256": "54652acd40beca72df5a98173d4d19f99c67364b627a0fe6ca39adb189675d8f",
+      "bytes": 520
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_04_missing_event_cannot_settle_original/sql-audit.json": {
+      "sha256": "a4c3aafe6f69a9d160807c7fef2632c7ca0f8311b2c9bdd03ccd9d320b51b720",
+      "bytes": 1141
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_04_missing_event_cannot_settle_original/state.json": {
+      "sha256": "bc6d2b04576c838da646e1c6ee78b42e1bdd7f1b19095bf47021108884a4f453",
+      "bytes": 134187
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_04_missing_event_cannot_settle_original/state.json.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_05_wrong_instance_recovery_retains_exact_pending/proxy-traffic.json": {
+      "sha256": "a3176642b21d5faac437ee730a632f02a74105c1f4e2e74693eef19dc8c9a41a",
+      "bytes": 3491
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_05_wrong_instance_recovery_retains_exact_pending/reports.json": {
+      "sha256": "57c524600d58d65a9587a2998437430969f54ebde46f307deb535487b46d3c74",
+      "bytes": 141828
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_05_wrong_instance_recovery_retains_exact_pending/setup-traffic.json": {
+      "sha256": "8e6e48b09c06b3b4f257a047f770d21387365d4231a5e3d343a689f6ee812fb6",
+      "bytes": 520
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_05_wrong_instance_recovery_retains_exact_pending/sql-audit.json": {
+      "sha256": "a4c3aafe6f69a9d160807c7fef2632c7ca0f8311b2c9bdd03ccd9d320b51b720",
+      "bytes": 1141
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_05_wrong_instance_recovery_retains_exact_pending/state.json": {
+      "sha256": "5a0e4d5fd724c444b4a4168f8aa22c519b3af03aee0630e2f028a2a723bad144",
+      "bytes": 134176
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_05_wrong_instance_recovery_retains_exact_pending/state.json.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_06_unknown_capability_after_404_does_not_resend/proxy-traffic.json": {
+      "sha256": "ecdbd7d9da98a5bb56f7d93eed76836141be43b87ea78d4f28e45c115e867022",
+      "bytes": 3833
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_06_unknown_capability_after_404_does_not_resend/reports.json": {
+      "sha256": "677342a1871859ebca32ac7d51d7deced5a2cafcf3dce8c1da656362c611eb6b",
+      "bytes": 141827
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_06_unknown_capability_after_404_does_not_resend/setup-traffic.json": {
+      "sha256": "36dc5ba457f13bfef141562080f5bc203ff1b7267daa39ae62ea3c4ac548546d",
+      "bytes": 520
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_06_unknown_capability_after_404_does_not_resend/sql-audit.json": {
+      "sha256": "a4c3aafe6f69a9d160807c7fef2632c7ca0f8311b2c9bdd03ccd9d320b51b720",
+      "bytes": 1141
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_06_unknown_capability_after_404_does_not_resend/state.json": {
+      "sha256": "953aa6454b33d98633731b1a60906543e3835bf6e7853926b1174568b41bc832",
+      "bytes": 134241
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_06_unknown_capability_after_404_does_not_resend/state.json.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_07_corrupted_pending_rejected_before_network_without_overwrite/proxy-traffic.json": {
+      "sha256": "69495f6b924fad74b3f3ea26f3a8907f9042fa8b7159534816f59b80adeb7797",
+      "bytes": 3131
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_07_corrupted_pending_rejected_before_network_without_overwrite/reports.json": {
+      "sha256": "4f8628328518e8c222fe93860aea5bce28b371457bb20a0b02a17a56a4c82b7c",
+      "bytes": 97732
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_07_corrupted_pending_rejected_before_network_without_overwrite/setup-traffic.json": {
+      "sha256": "e8b92509c57c1d56fa48fce013d1b83e1c04c8ac5dce835fe279a202d941bc81",
+      "bytes": 520
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_07_corrupted_pending_rejected_before_network_without_overwrite/sql-audit.json": {
+      "sha256": "a4c3aafe6f69a9d160807c7fef2632c7ca0f8311b2c9bdd03ccd9d320b51b720",
+      "bytes": 1141
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_07_corrupted_pending_rejected_before_network_without_overwrite/state.json": {
+      "sha256": "9f5b5bc89c8a8c381163b70f600e41a3b45b809c4685e1ccaac9406f2047ae02",
+      "bytes": 134113
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_07_corrupted_pending_rejected_before_network_without_overwrite/state.json.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_08_observation_crosses_deadline_zero_post/proxy-traffic.json": {
+      "sha256": "f2ba4ca3517affe346c31a08e650edf9d5a8cb163cfe541401bb90cc37f1eddd",
+      "bytes": 681
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_08_observation_crosses_deadline_zero_post/reports.json": {
+      "sha256": "e154ec6b101ce34207268d7f0fb6f857a1c2e751d847253789d2ca5d65b51685",
+      "bytes": 41941
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_08_observation_crosses_deadline_zero_post/setup-traffic.json": {
+      "sha256": "dfee8631c7ca7aba2e62367e12623b17f718d058effda8d219d3e8f279c1577d",
+      "bytes": 520
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_08_observation_crosses_deadline_zero_post/sql-audit.json": {
+      "sha256": "2679cc5e71a0205870d8afc6c1702a72a25a5117a1710ebe081559fe8259647c",
+      "bytes": 1141
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_08_observation_crosses_deadline_zero_post/state.json": {
+      "sha256": "5963a83f3ea881136c68382e2870df8f9c3fff991dc9f4bf270be4131a255a13",
+      "bytes": 122845
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_08_observation_crosses_deadline_zero_post/state.json.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_09_final_fresh_save_crosses_deadline_zero_post_exact_pending/last-save-probe.json": {
+      "sha256": "58ea235eeaedb99d314ca9675e92738b1f20a608de6441b35038f8880859a4f9",
+      "bytes": 1420
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_09_final_fresh_save_crosses_deadline_zero_post_exact_pending/proxy-traffic.json": {
+      "sha256": "0ef8eab34bcc9026521d187a5c2c97dcbb2488f373e7eeb9ac51756f09eb5095",
+      "bytes": 647
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_09_final_fresh_save_crosses_deadline_zero_post_exact_pending/reports.json": {
+      "sha256": "4ce0f14e1c4edb31a7ec1f3e6641a2c2b89d65e28d86d32522d23cf4ed4c4f9c",
+      "bytes": 44022
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_09_final_fresh_save_crosses_deadline_zero_post_exact_pending/setup-traffic.json": {
+      "sha256": "07b60fb61dac9e48f94b66ac411eea59dca426796f2dfd347cadc2877309acd9",
+      "bytes": 520
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_09_final_fresh_save_crosses_deadline_zero_post_exact_pending/sql-audit.json": {
+      "sha256": "2679cc5e71a0205870d8afc6c1702a72a25a5117a1710ebe081559fe8259647c",
+      "bytes": 1141
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_09_final_fresh_save_crosses_deadline_zero_post_exact_pending/state.json": {
+      "sha256": "e789c207d408203f4a77539673d4dbe33ef707dc23bd6142fb6430b820dec57c",
+      "bytes": 126233
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_09_final_fresh_save_crosses_deadline_zero_post_exact_pending/state.json.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_10_final_recovery_save_crosses_deadline_zero_resend/last-save-probe.json": {
+      "sha256": "72702f87632af590db8939b8c42a9bb0d3db7e5fe2b8814ceec440816487fd9a",
+      "bytes": 1423
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_10_final_recovery_save_crosses_deadline_zero_resend/proxy-traffic.json": {
+      "sha256": "2afc36e7caefd8ff574175db0fb8fbc74987374de58391870134f7749d43bf76",
+      "bytes": 1834
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_10_final_recovery_save_crosses_deadline_zero_resend/reports.json": {
+      "sha256": "c1de1b625653e9e695de6bc7965007a056b2dd5bf1462f617905c74fba481e97",
+      "bytes": 88120
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_10_final_recovery_save_crosses_deadline_zero_resend/setup-traffic.json": {
+      "sha256": "3dfe02a40dab17120caca5e5dff60550d19db37e94875b0e2162984812b71fd2",
+      "bytes": 520
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_10_final_recovery_save_crosses_deadline_zero_resend/sql-audit.json": {
+      "sha256": "2679cc5e71a0205870d8afc6c1702a72a25a5117a1710ebe081559fe8259647c",
+      "bytes": 1141
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_10_final_recovery_save_crosses_deadline_zero_resend/state.json": {
+      "sha256": "69d7cb40b55aada42e84103ee5f1e6d6eca3202507c3c467c481322f0530f4ad",
+      "bytes": 126363
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_10_final_recovery_save_crosses_deadline_zero_resend/state.json.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_11_cli_no_return_is_false_and_terminal_replay_no_network/cli-report.json": {
+      "sha256": "72073ea9a8324354dcb01c003698744328fde474e04057a6da690f7a47ffda3a",
+      "bytes": 55366
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_11_cli_no_return_is_false_and_terminal_replay_no_network/cli-result.json": {
+      "sha256": "76574cc03c24d5dc5f2420c7c33bf7506d188db6aa89609a1a20b74d1010bc03",
+      "bytes": 524
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_11_cli_no_return_is_false_and_terminal_replay_no_network/job.json": {
+      "sha256": "598b4bc85a5cdd6154b1a8b8b9def17ccf3ea15cb59778071e2fe8003d9c1633",
+      "bytes": 1057
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_11_cli_no_return_is_false_and_terminal_replay_no_network/proxy-traffic.json": {
+      "sha256": "19cd5962e427016e77e0458ebac6c5b70dd592491a5260fcf8925b50777e3472",
+      "bytes": 3976
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_11_cli_no_return_is_false_and_terminal_replay_no_network/reports.json": {
+      "sha256": "cee3b0fa3dbec1d3571a0396d094797d81065a61207cbb8c638b0226ca5e4d44",
+      "bytes": 59948
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_11_cli_no_return_is_false_and_terminal_replay_no_network/setup-traffic.json": {
+      "sha256": "9504b121b9783c0d957c901284ef4d93c925edc695cdba5edc6224c86d9028d1",
+      "bytes": 1616
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_11_cli_no_return_is_false_and_terminal_replay_no_network/sql-audit.json": {
+      "sha256": "96541bf280091accf77587b6d3ba974584bfab39afc5a566c0bcc0b298692a36",
+      "bytes": 1141
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_11_cli_no_return_is_false_and_terminal_replay_no_network/state.json": {
+      "sha256": "79382af2ec2b7f8db2c8edb524bca56acf26b5b8dd5f05ba2d46039ec0bc5b6e",
+      "bytes": 140611
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_11_cli_no_return_is_false_and_terminal_replay_no_network/state.json.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_12_requested_return_requires_actual_walk_back/proxy-traffic.json": {
+      "sha256": "1dcca2ad85ea66358083ab7342e5db90db7a5c06c63442194b05b857a9f7d8ec",
+      "bytes": 5887
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_12_requested_return_requires_actual_walk_back/reports.json": {
+      "sha256": "22c78403c3208fb9bbe8b9bda078f2ae710f275698f2076007ef24daa1be63b0",
+      "bytes": 65335
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_12_requested_return_requires_actual_walk_back/setup-traffic.json": {
+      "sha256": "d9f4a8b6a3dcf584a4f7e7bfb1f106ca283c69e84ada919f443f097302608877",
+      "bytes": 1554
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_12_requested_return_requires_actual_walk_back/sql-audit.json": {
+      "sha256": "6f995e22ecf6d957c114c79663467f17ea0f3c51c4beb91c22f16af2e56db1d6",
+      "bytes": 1141
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_12_requested_return_requires_actual_walk_back/state.json": {
+      "sha256": "6f1c3632881c7f734e399659ece45d4a42923a4c8aa2ee36ce12b358312ef10a",
+      "bytes": 146155
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_12_requested_return_requires_actual_walk_back/state.json.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_13_original_harvest_recovers_after_new_generation_exists/proxy-traffic.json": {
+      "sha256": "11b68c3b792987c6d9c3f062694f313154a5ed16980bb4cece612f33617bcf55",
+      "bytes": 2487
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_13_original_harvest_recovers_after_new_generation_exists/reports.json": {
+      "sha256": "3e02451ddfe56820aada34fdb77b0a26f6c303d8a9e2e16e648b98780645eec8",
+      "bytes": 128832
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_13_original_harvest_recovers_after_new_generation_exists/setup-traffic.json": {
+      "sha256": "0e2f6c401fe56adbb62b136402a655723a127e1b6116b49f61f4de19e56a92a5",
+      "bytes": 9790
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_13_original_harvest_recovers_after_new_generation_exists/sql-audit.json": {
+      "sha256": "778050c278f1f15dc141411d72bb079f16b91de92682737e0526e2d7fa26dc71",
+      "bytes": 1141
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_13_original_harvest_recovers_after_new_generation_exists/state.json": {
+      "sha256": "59d8833dbf1d503f9fb2c7048e2bddb0dc69a7f3959df8763acf7b30a9ab444d",
+      "bytes": 206887
+    },
+    ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/test_13_original_harvest_recovers_after_new_generation_exists/state.json.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}

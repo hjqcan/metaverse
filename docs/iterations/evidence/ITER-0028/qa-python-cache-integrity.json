@@ -1,0 +1,39 @@
+{
+  "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0028/python-ready-20261026T102559Z-10d662",
+  "copy": "/home/wangjunfeng/文档/Workspace/metaverse/.local/test-agent2/iter28-python-v1/ready-source",
+  "copiedBeforeSql": true,
+  "sourceFileHashesUnchanged": true,
+  "sourceHashes": {
+    "provenance.json": "ad331ba711a256c838ab0d431bc43a7b05d397563a6f84ea53ee59cba26dc34c",
+    "access.json": "a66d10aea8a7cd5db51f7834e08db25c9878207c3151f1484468f6f9ca6d4d1b",
+    "world.db": "c6680be7002527302e8313418be3d680a3c84e027625bfdbe7248125d9195aef"
+  },
+  "integrity": [
+    [
+      "ok"
+    ]
+  ],
+  "foreignKeys": [],
+  "stateVersion": 1416,
+  "storageVersion": 14,
+  "plants": [
+    {
+      "plantId": "p7ea51159ab564fc580fa69d11f6e45e7",
+      "plotId": "forest-west-north",
+      "planterActorId": "a3",
+      "operatorId": "declared-third",
+      "reservationId": "fre925efb762c04adda0443eeaf80f131e",
+      "commandId": "f23e5a85fd404afe84cd8f4025748361",
+      "plantedAtMs": 1569786,
+      "maturesAtMs": 1689786,
+      "state": "mature",
+      "standingWood": 3,
+      "stateVersion": 1413,
+      "eventCursor": 1414,
+      "matureEventCursor": 1417,
+      "harvestActorId": null,
+      "harvestCommandId": null,
+      "harvestEventCursor": null
+    }
+  ]
+}

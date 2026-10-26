@@ -1,0 +1,44 @@
+{
+  "missionId": "forestry-craft-axe",
+  "objective": "执行绑定原实例、原对象的单一林业动作并返回。",
+  "goals": [
+    {
+      "id": "fixed",
+      "label": "明确林业动作",
+      "target": [
+        26,
+        20
+      ],
+      "forestry": {
+        "worldInstanceId": "w_00000000000000000000000000000000",
+        "actorId": "a3",
+        "action": {
+          "type": "craft_forestry_tool",
+          "capabilityVersion": 1,
+          "entityId": "replace-public-workbench",
+          "recipeId": "wooden_axe.v1"
+        },
+        "waitForReady": true,
+        "returnToOrigin": true
+      }
+    }
+  ],
+  "allowBuild": false,
+  "allowCraftForestryTool": true,
+  "allowReserveForest": false,
+  "allowCancelForestReservation": false,
+  "allowCollectSeed": false,
+  "allowPlantTree": false,
+  "allowHarvestTree": false,
+  "budgets": {
+    "commands": 200,
+    "queries": 1000,
+    "wood": 2,
+    "woodHarvested": 0,
+    "seedsCollected": 0,
+    "seedsPlanted": 0,
+    "seedsHarvested": 0,
+    "seconds": 600,
+    "modelCalls": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "testsRun": 8,
+  "tests": [
+    "test_01_observation_is_continuous_and_old_grid_is_absent",
+    "test_02_fractional_diagonal_coordinates_persist_across_restart",
+    "test_04_tree_blocks_sweep_and_depletion_removes_collision",
+    "test_05_rock_and_river_stop_motion",
+    "test_07_replay_and_concurrent_same_id_move_once",
+    "test_09_fractional_platform_uses_collected_wood_and_preserves_history",
+    "test_11_real_bridge_allows_both_residents_to_cross",
+    "test_12_failed_gather_and_commit_loss_preserve_original_identity"
+  ],
+  "failures": [],
+  "dllSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+  "elapsedSeconds": 22.29285044199787,
+  "executionScope": "Builder regression reuse of existing acceptance definitions; not a new independent acceptance",
+  "actualModelCalls": 0
+}

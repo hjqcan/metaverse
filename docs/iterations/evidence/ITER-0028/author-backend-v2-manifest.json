@@ -1,0 +1,24 @@
+{
+  "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0028/server-v2/World.Server.dll",
+  "dllSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+  "sources": {
+    "src/World.Server/EntryGuide.cs": "097a08ad3f90f72e25743708e4f9a32e1cf2baec401c275bf7001a92655f3e8d",
+    "src/World.Server/Workshop.cs": "03b0108de1805c8d9aae857dd319ad29011f011bb3ff664cc89b370b3ff0669f",
+    "src/World.Server/WorldInstance.cs": "f865654d13b63ac9659fa119353b5e32b303484eab49215bb7796a49a5b3fd1b",
+    "src/World.Server/ContinuousMaterials.cs": "fcf2e93fc33b5d23987c87d718fe255ae57616c469579063eeb9560904cd9ee9",
+    "src/World.Server/ContinuousWorld.cs": "82b2a925f47ab4bccfb7345951437ce5e607e18e4e82447c014e9b9d6e320c3b",
+    "src/World.Server/MaterialTransfer.cs": "7957c7ee39691ebd607602ab53149b778d892da7e765073d5110119280570130",
+    "src/World.Server/EntityNotes.cs": "5503baf43ea21f749113dd9b53c9f5f845268c8b55733fafbcd2039baa35ddaa",
+    "src/World.Server/EntityCanvas.cs": "6934c4f68c7acfe780e4f44ce657a040c251226456593c2eaa4e3b9bee90ad94",
+    "src/World.Server/MaterialAccess.cs": "fdd0614261c92a9f2bd560cae3bd07c096b831489ff7485c72321ebf08c4c8a3",
+    "src/World.Server/ForestryValidation.cs": "2db53c5f9bbb18e4a8521375e52a5eacfe5331228033cba95be240b57c2aeb6c",
+    "src/World.Server/WorldScenario.cs": "ea63aa8b79740cc1a603447dcbc8ae808f3632460db87bc9df6145f2003ff816",
+    "src/World.Server/ServerConfiguration.cs": "8b33f7b3aae70229397362d0571769198303507712accd624ecedb1320eea8d1",
+    "src/World.Server/WorldService.cs": "f4f171c4aeaa36736b484382129a3a09ddb669ebfee56eeef2d4664df069632c",
+    "src/World.Server/Forestry.cs": "ac3a51cc29b10cfe34aaddec2009a261ab3c676f8408d1f15539d084c5b2252f",
+    "src/World.Server/MaterialServiceClock.cs": "edec7589b0ff66179aa8a321212388928033b45ae350331c4dbd61b1db9336e2",
+    "src/World.Server/Protocol.cs": "1b2ece68080c2084d58ff4d33a843aca890eb16230a07222ea0ca3cdf4e388df",
+    "src/World.Server/WorldDatabase.cs": "9144554c7bcd199e9179117d9323e2b36112f3db9795455ab4250b39ca7de23f",
+    "src/World.Server/Program.cs": "73f62e79f7488b38553005f737d330f6b85bc8e7ace701ec5ac99eeb420ce162"
+  }
+}

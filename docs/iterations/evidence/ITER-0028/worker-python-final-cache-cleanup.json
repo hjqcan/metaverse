@@ -1,0 +1,7 @@
+{
+  "source": ".local/iter0028/python-ready-20261026T103732Z-801099",
+  "databaseSha256": "50f028b8913e38437b4d1c2174e44e7d6df8e638d7e195a7831732edb2d713b0",
+  "ourReuseCompleted": true,
+  "provenanceRetained": ".local/iter0028/python/20261026T103732Z-801099/test_01_actual_cli_two_generations_restart_and_wood_use/ready-baseline-provenance.json",
+  "removed": true
+}

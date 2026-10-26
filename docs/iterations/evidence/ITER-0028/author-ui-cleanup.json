@@ -1,0 +1,129 @@
+{
+  "removed": [
+    {
+      "path": ".local/iter0028/native-ui/20261026T101305Z/project",
+      "logicalBytes": 242203
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101305Z/data",
+      "logicalBytes": 6502573
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101305Z/cache",
+      "logicalBytes": 5549260
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101305Z/config",
+      "logicalBytes": 17746
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101305Z/tmp",
+      "logicalBytes": 0
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101305Z/growing-world",
+      "logicalBytes": 1751704
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101414Z/project",
+      "logicalBytes": 242267
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101414Z/data",
+      "logicalBytes": 6501638
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101414Z/cache",
+      "logicalBytes": 5549261
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101414Z/config",
+      "logicalBytes": 17746
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101414Z/tmp",
+      "logicalBytes": 0
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101414Z/growing-world",
+      "logicalBytes": 1751704
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101458Z/project",
+      "logicalBytes": 242717
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101458Z/data",
+      "logicalBytes": 6501901
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101458Z/cache",
+      "logicalBytes": 5549260
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101458Z/config",
+      "logicalBytes": 17746
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101458Z/tmp",
+      "logicalBytes": 0
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101458Z/growing-world",
+      "logicalBytes": 1751704
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101539Z/project",
+      "logicalBytes": 243324
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101539Z/data",
+      "logicalBytes": 6501638
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101539Z/cache",
+      "logicalBytes": 5549260
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101539Z/config",
+      "logicalBytes": 17746
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101539Z/tmp",
+      "logicalBytes": 0
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101539Z/growing-world",
+      "logicalBytes": 1751704
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101631Z/project",
+      "logicalBytes": 243509
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101631Z/data",
+      "logicalBytes": 6501638
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101631Z/cache",
+      "logicalBytes": 5549259
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101631Z/config",
+      "logicalBytes": 17746
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101631Z/tmp",
+      "logicalBytes": 0
+    },
+    {
+      "path": ".local/iter0028/native-ui/20261026T101631Z/growing-world",
+      "logicalBytes": 1751704
+    }
+  ],
+  "retainedActive": [],
+  "logicalBytes": 70316958,
+  "keptOriginalUserClientProject": true,
+  "keptFrozenServerV2": true,
+  "scope": "Only completed author UI private projects, caches and test copies; source observations, traces and screenshots retained"
+}

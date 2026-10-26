@@ -1,0 +1,176 @@
+{
+  "recordedAtUtc": "2026-10-26T10:44:18.117876+00:00",
+  "requestMessage": "msg_d9b04750445a",
+  "scope": "SQLite file integrity on disposable byte copy only; separate from accepted native business facts.",
+  "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/natural",
+  "sourceOpenedBySqlite": false,
+  "worldServiceStarted": false,
+  "worldCommands": 0,
+  "sourceBefore": {
+    "audit-reads.jsonl": {
+      "bytes": 15701,
+      "sha256": "4febc00b734333f14a58c1cbf8153b12fcf040e9e0056b4dba9599f7a8507792",
+      "mtimeNs": 1793005594993639828
+    },
+    "adoption-process.json": {
+      "bytes": 93,
+      "sha256": "1f239966636531ea39fced6beac0cbe4c6a1a745e3f74a736306e418562a5ca7",
+      "mtimeNs": 1793004252956517705
+    },
+    "lineage.json": {
+      "bytes": 2388,
+      "sha256": "be6424ace3b7cad0aed0e37e0e56d7d8b2f3684b4d855b4faac3a276cce42a77",
+      "mtimeNs": 1793004252815108843
+    },
+    "access.json": {
+      "bytes": 790,
+      "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+      "mtimeNs": 1792988757982573799
+    },
+    "server.log": {
+      "bytes": 3775259,
+      "sha256": "33dcafdc60ef3395d918502dcc47f2dfe4b284d4acfabb67a5d648ede522010d",
+      "mtimeNs": 1793011124012728516
+    },
+    "final-snapshot.json": {
+      "bytes": 1646674,
+      "sha256": "3bfc44a6ce0924c4cb7cada60f097495954d6a9c85a42a4316fe4b68990a95f7",
+      "mtimeNs": 1793005595381625877
+    },
+    "after-adoption.json": {
+      "bytes": 1235606,
+      "sha256": "cf9951d188ae175c965ea54ed6fb459189ac224c5919f37836c4bf35fa530f3d",
+      "mtimeNs": 1793004252967547789
+    },
+    "world.db-wal": {
+      "bytes": 4120032,
+      "sha256": "e739b07630e12b5fbcc4f0c18e9437f52a91199836d017f4c74acbf3ea361b9b",
+      "mtimeNs": 1793011123776948150
+    },
+    "world.db": {
+      "bytes": 1875968,
+      "sha256": "5347483f3cc0cf260fabf3845e8e2f69d77e8dbe8891edb5c2fede6d0ee6f007",
+      "mtimeNs": 1793010978029867550
+    },
+    "before-adoption.json": {
+      "bytes": 1229537,
+      "sha256": "bae59f239262fa3591bbcc030c87afb94cef0714f4807d39e1c339c27d96adb1",
+      "mtimeNs": 1793004252831378337
+    },
+    "initial-snapshot.json": {
+      "bytes": 1229537,
+      "sha256": "bae59f239262fa3591bbcc030c87afb94cef0714f4807d39e1c339c27d96adb1",
+      "mtimeNs": 1793004252814377805
+    },
+    "world.db-shm": {
+      "bytes": 32768,
+      "sha256": "26ebc3ede11ad8679ae53a4448901964c6aa99d066bb273ea1ed2f3d0a4cf9f2",
+      "mtimeNs": 1793011131831411896
+    },
+    "world.db.material-clock.lock": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtimeNs": 1793004252887380089
+    }
+  },
+  "copiedFiles": [
+    {
+      "name": "world.db",
+      "sha256": "5347483f3cc0cf260fabf3845e8e2f69d77e8dbe8891edb5c2fede6d0ee6f007",
+      "bytes": 1875968
+    },
+    {
+      "name": "world.db-wal",
+      "sha256": "e739b07630e12b5fbcc4f0c18e9437f52a91199836d017f4c74acbf3ea361b9b",
+      "bytes": 4120032
+    },
+    {
+      "name": "world.db-shm",
+      "sha256": "26ebc3ede11ad8679ae53a4448901964c6aa99d066bb273ea1ed2f3d0a4cf9f2",
+      "bytes": 32768
+    }
+  ],
+  "copy": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/forestry-integrity-copy-sem21iim",
+  "sqliteVersion": "3.45.1",
+  "priorColdReportUnchanged": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/cold-final.json",
+    "sha256": "1000eeb9e547053fd5fd494453290ae6b5d68f5252c16032544c4b5a84811537",
+    "verified": true
+  },
+  "integrityCheck": [
+    [
+      "ok"
+    ]
+  ],
+  "foreignKeyCheck": [],
+  "passed": true,
+  "sourceAfter": {
+    "audit-reads.jsonl": {
+      "bytes": 15701,
+      "sha256": "4febc00b734333f14a58c1cbf8153b12fcf040e9e0056b4dba9599f7a8507792",
+      "mtimeNs": 1793005594993639828
+    },
+    "adoption-process.json": {
+      "bytes": 93,
+      "sha256": "1f239966636531ea39fced6beac0cbe4c6a1a745e3f74a736306e418562a5ca7",
+      "mtimeNs": 1793004252956517705
+    },
+    "lineage.json": {
+      "bytes": 2388,
+      "sha256": "be6424ace3b7cad0aed0e37e0e56d7d8b2f3684b4d855b4faac3a276cce42a77",
+      "mtimeNs": 1793004252815108843
+    },
+    "access.json": {
+      "bytes": 790,
+      "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+      "mtimeNs": 1792988757982573799
+    },
+    "server.log": {
+      "bytes": 3775259,
+      "sha256": "33dcafdc60ef3395d918502dcc47f2dfe4b284d4acfabb67a5d648ede522010d",
+      "mtimeNs": 1793011124012728516
+    },
+    "final-snapshot.json": {
+      "bytes": 1646674,
+      "sha256": "3bfc44a6ce0924c4cb7cada60f097495954d6a9c85a42a4316fe4b68990a95f7",
+      "mtimeNs": 1793005595381625877
+    },
+    "after-adoption.json": {
+      "bytes": 1235606,
+      "sha256": "cf9951d188ae175c965ea54ed6fb459189ac224c5919f37836c4bf35fa530f3d",
+      "mtimeNs": 1793004252967547789
+    },
+    "world.db-wal": {
+      "bytes": 4120032,
+      "sha256": "e739b07630e12b5fbcc4f0c18e9437f52a91199836d017f4c74acbf3ea361b9b",
+      "mtimeNs": 1793011123776948150
+    },
+    "world.db": {
+      "bytes": 1875968,
+      "sha256": "5347483f3cc0cf260fabf3845e8e2f69d77e8dbe8891edb5c2fede6d0ee6f007",
+      "mtimeNs": 1793010978029867550
+    },
+    "before-adoption.json": {
+      "bytes": 1229537,
+      "sha256": "bae59f239262fa3591bbcc030c87afb94cef0714f4807d39e1c339c27d96adb1",
+      "mtimeNs": 1793004252831378337
+    },
+    "initial-snapshot.json": {
+      "bytes": 1229537,
+      "sha256": "bae59f239262fa3591bbcc030c87afb94cef0714f4807d39e1c339c27d96adb1",
+      "mtimeNs": 1793004252814377805
+    },
+    "world.db-shm": {
+      "bytes": 32768,
+      "sha256": "26ebc3ede11ad8679ae53a4448901964c6aa99d066bb273ea1ed2f3d0a4cf9f2",
+      "mtimeNs": 1793011131831411896
+    },
+    "world.db.material-clock.lock": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtimeNs": 1793004252887380089
+    }
+  },
+  "sourceFilesUnchanged": true,
+  "disposableCopyRemoved": true
+}

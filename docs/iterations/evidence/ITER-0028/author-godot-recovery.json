@@ -1,0 +1,1088 @@
+{
+  "passed": true,
+  "groups": 8,
+  "assertions": 113,
+  "results": [
+    {
+      "name": "reserve_forest-before",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "forestry original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        },
+        {
+          "name": "original forestry state transition and both balances verified",
+          "passed": true
+        }
+      ],
+      "postCount": 2,
+      "originalBodySha256": "a69700505233093d34c674c01d82ff001f90f7aed9dc5d6efd76fca9cf48d0dd",
+      "receipt": {
+        "commandId": "godot_fba594858560b3d0094fb6455bb48daf",
+        "error": null,
+        "eventCursor": 1418,
+        "execution": {
+          "appliedOnStateVersion": 1416,
+          "observedStateVersion": 1416,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "result": {
+          "action": "reserve_forest",
+          "forestryAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "type": "reserve_forest"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_fba594858560b3d0094fb6455bb48daf",
+            "completedAtUtc": "2026-10-26T10:11:04.5068643+00:00",
+            "eventCursor": 1418,
+            "inventoryWood": 12,
+            "inventoryWoodBefore": 12,
+            "nurseryStock": 2,
+            "nurseryStockBefore": 2,
+            "operatorId": "declared-late",
+            "plant": null,
+            "plantBefore": null,
+            "position": [
+              30,
+              10.0000009536743
+            ],
+            "reservation": {
+              "actorId": "a2",
+              "commandId": "godot_fba594858560b3d0094fb6455bb48daf",
+              "expiresAtMs": null,
+              "grantedAtMs": null,
+              "operatorId": "declared-late",
+              "plantId": null,
+              "plotId": null,
+              "queueOrder": 1418,
+              "requestedAtMs": 1656014,
+              "reservationId": "fr188007c2a88c4f22849de2dfe2f88882",
+              "reservedSeed": 0,
+              "status": "queued"
+            },
+            "reservationBefore": null,
+            "seeds": 0,
+            "seedsBefore": 0,
+            "serviceMs": 1656014,
+            "stateVersion": 1417,
+            "tool": null
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 1417,
+        "status": "committed"
+      }
+    },
+    {
+      "name": "reserve_forest-after",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "forestry original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        },
+        {
+          "name": "original forestry state transition and both balances verified",
+          "passed": true
+        }
+      ],
+      "postCount": 1,
+      "originalBodySha256": "4d66a3fc0e1011bf3fdba0e5e1eacf2b287f46f951eeba1ea778d8d4ef065147",
+      "receipt": {
+        "commandId": "godot_47e87ab515180ee7cb9c0094fe4bd2a8",
+        "error": null,
+        "eventCursor": 1418,
+        "execution": {
+          "appliedOnStateVersion": 1416,
+          "observedStateVersion": 1416,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "result": {
+          "action": "reserve_forest",
+          "forestryAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "type": "reserve_forest"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_47e87ab515180ee7cb9c0094fe4bd2a8",
+            "completedAtUtc": "2026-10-26T10:11:05.5919109+00:00",
+            "eventCursor": 1418,
+            "inventoryWood": 12,
+            "inventoryWoodBefore": 12,
+            "nurseryStock": 2,
+            "nurseryStockBefore": 2,
+            "operatorId": "declared-late",
+            "plant": null,
+            "plantBefore": null,
+            "position": [
+              30,
+              10.0000009536743
+            ],
+            "reservation": {
+              "actorId": "a2",
+              "commandId": "godot_47e87ab515180ee7cb9c0094fe4bd2a8",
+              "expiresAtMs": null,
+              "grantedAtMs": null,
+              "operatorId": "declared-late",
+              "plantId": null,
+              "plotId": null,
+              "queueOrder": 1418,
+              "requestedAtMs": 1655586,
+              "reservationId": "fr17612be2c3f340b7bbc4ff5172f33902",
+              "reservedSeed": 0,
+              "status": "queued"
+            },
+            "reservationBefore": null,
+            "seeds": 0,
+            "seedsBefore": 0,
+            "serviceMs": 1655586,
+            "stateVersion": 1417,
+            "tool": null
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 1417,
+        "status": "committed"
+      }
+    },
+    {
+      "name": "reserve_forest-receipt",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "forestry original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        },
+        {
+          "name": "original forestry state transition and both balances verified",
+          "passed": true
+        }
+      ],
+      "postCount": 1,
+      "originalBodySha256": "1b240a675d053fe5a7984c399978939f17615747a71d085998cc218868ad3eb0",
+      "receipt": {
+        "commandId": "godot_a01a3521bc929ba536261eaa8c43a7ac",
+        "error": null,
+        "eventCursor": 1418,
+        "execution": {
+          "appliedOnStateVersion": 1416,
+          "observedStateVersion": 1416,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "result": {
+          "action": "reserve_forest",
+          "forestryAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "type": "reserve_forest"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_a01a3521bc929ba536261eaa8c43a7ac",
+            "completedAtUtc": "2026-10-26T10:11:07.3153025+00:00",
+            "eventCursor": 1418,
+            "inventoryWood": 12,
+            "inventoryWoodBefore": 12,
+            "nurseryStock": 2,
+            "nurseryStockBefore": 2,
+            "operatorId": "declared-late",
+            "plant": null,
+            "plantBefore": null,
+            "position": [
+              30,
+              10.0000009536743
+            ],
+            "reservation": {
+              "actorId": "a2",
+              "commandId": "godot_a01a3521bc929ba536261eaa8c43a7ac",
+              "expiresAtMs": null,
+              "grantedAtMs": null,
+              "operatorId": "declared-late",
+              "plantId": null,
+              "plotId": null,
+              "queueOrder": 1418,
+              "requestedAtMs": 1655588,
+              "reservationId": "fr2d4faaa90d254830acadbce7e5278e15",
+              "reservedSeed": 0,
+              "status": "queued"
+            },
+            "reservationBefore": null,
+            "seeds": 0,
+            "seedsBefore": 0,
+            "serviceMs": 1655588,
+            "stateVersion": 1417,
+            "tool": null
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 1417,
+        "status": "committed"
+      }
+    },
+    {
+      "name": "reserve_forest-event",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "forestry original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        },
+        {
+          "name": "original forestry state transition and both balances verified",
+          "passed": true
+        }
+      ],
+      "postCount": 1,
+      "originalBodySha256": "00ea0cb791540a6177490a6f11df1ab2c56ab07d43a7e86bc1d3c2195e766a47",
+      "receipt": {
+        "commandId": "godot_990a4cdffe9ca9198f4b899ea41c4cad",
+        "error": null,
+        "eventCursor": 1418,
+        "execution": {
+          "appliedOnStateVersion": 1416,
+          "observedStateVersion": 1416,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "result": {
+          "action": "reserve_forest",
+          "forestryAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "type": "reserve_forest"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_990a4cdffe9ca9198f4b899ea41c4cad",
+            "completedAtUtc": "2026-10-26T10:11:09.0468543+00:00",
+            "eventCursor": 1418,
+            "inventoryWood": 12,
+            "inventoryWoodBefore": 12,
+            "nurseryStock": 2,
+            "nurseryStockBefore": 2,
+            "operatorId": "declared-late",
+            "plant": null,
+            "plantBefore": null,
+            "position": [
+              30,
+              10.0000009536743
+            ],
+            "reservation": {
+              "actorId": "a2",
+              "commandId": "godot_990a4cdffe9ca9198f4b899ea41c4cad",
+              "expiresAtMs": null,
+              "grantedAtMs": null,
+              "operatorId": "declared-late",
+              "plantId": null,
+              "plotId": null,
+              "queueOrder": 1418,
+              "requestedAtMs": 1655584,
+              "reservationId": "fr0deb9c316ff144bb81872fec9dc1b577",
+              "reservedSeed": 0,
+              "status": "queued"
+            },
+            "reservationBefore": null,
+            "seeds": 0,
+            "seedsBefore": 0,
+            "serviceMs": 1655584,
+            "stateVersion": 1417,
+            "tool": null
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 1417,
+        "status": "committed"
+      }
+    },
+    {
+      "name": "reserve_forest-detail",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "forestry original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        },
+        {
+          "name": "original forestry state transition and both balances verified",
+          "passed": true
+        }
+      ],
+      "postCount": 1,
+      "originalBodySha256": "537a5b95c04765182116616636d5a8d3a4c487f40fc5e91340cbfad455ff79a1",
+      "receipt": {
+        "commandId": "godot_eac5f65dc8aea092b8c71646616dd6ab",
+        "error": null,
+        "eventCursor": 1418,
+        "execution": {
+          "appliedOnStateVersion": 1416,
+          "observedStateVersion": 1416,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "result": {
+          "action": "reserve_forest",
+          "forestryAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "type": "reserve_forest"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_eac5f65dc8aea092b8c71646616dd6ab",
+            "completedAtUtc": "2026-10-26T10:11:10.8638356+00:00",
+            "eventCursor": 1418,
+            "inventoryWood": 12,
+            "inventoryWoodBefore": 12,
+            "nurseryStock": 2,
+            "nurseryStockBefore": 2,
+            "operatorId": "declared-late",
+            "plant": null,
+            "plantBefore": null,
+            "position": [
+              30,
+              10.0000009536743
+            ],
+            "reservation": {
+              "actorId": "a2",
+              "commandId": "godot_eac5f65dc8aea092b8c71646616dd6ab",
+              "expiresAtMs": null,
+              "grantedAtMs": null,
+              "operatorId": "declared-late",
+              "plantId": null,
+              "plotId": null,
+              "queueOrder": 1418,
+              "requestedAtMs": 1655589,
+              "reservationId": "frc1ff56e145ed4cf5b2ac7285c40b7f40",
+              "reservedSeed": 0,
+              "status": "queued"
+            },
+            "reservationBefore": null,
+            "seeds": 0,
+            "seedsBefore": 0,
+            "serviceMs": 1655589,
+            "stateVersion": 1417,
+            "tool": null
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 1417,
+        "status": "committed"
+      }
+    },
+    {
+      "name": "reserve_forest-capability",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "forestry original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "unknown forestry capability pauses native adapter",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        },
+        {
+          "name": "original forestry state transition and both balances verified",
+          "passed": true
+        }
+      ],
+      "postCount": 2,
+      "originalBodySha256": "4ba47c334ae54c191bcb2e15f67e9ade0599d53cdf7f5df9275dcc0b5b91a677",
+      "receipt": {
+        "commandId": "godot_9420d297599b111d7241db05bfc55c66",
+        "error": null,
+        "eventCursor": 1418,
+        "execution": {
+          "appliedOnStateVersion": 1416,
+          "observedStateVersion": 1416,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "result": {
+          "action": "reserve_forest",
+          "forestryAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "type": "reserve_forest"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_9420d297599b111d7241db05bfc55c66",
+            "completedAtUtc": "2026-10-26T10:11:13.5311524+00:00",
+            "eventCursor": 1418,
+            "inventoryWood": 12,
+            "inventoryWoodBefore": 12,
+            "nurseryStock": 2,
+            "nurseryStockBefore": 2,
+            "operatorId": "declared-late",
+            "plant": null,
+            "plantBefore": null,
+            "position": [
+              30,
+              10.0000009536743
+            ],
+            "reservation": {
+              "actorId": "a2",
+              "commandId": "godot_9420d297599b111d7241db05bfc55c66",
+              "expiresAtMs": null,
+              "grantedAtMs": null,
+              "operatorId": "declared-late",
+              "plantId": null,
+              "plotId": null,
+              "queueOrder": 1418,
+              "requestedAtMs": 1656234,
+              "reservationId": "frab869a942afc49849639edb7dfd879c9",
+              "reservedSeed": 0,
+              "status": "queued"
+            },
+            "reservationBefore": null,
+            "seeds": 0,
+            "seedsBefore": 0,
+            "serviceMs": 1656234,
+            "stateVersion": 1417,
+            "tool": null
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 1417,
+        "status": "committed"
+      }
+    },
+    {
+      "name": "cancel_forest_reservation-before",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "forestry original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        },
+        {
+          "name": "original forestry state transition and both balances verified",
+          "passed": true
+        }
+      ],
+      "postCount": 2,
+      "originalBodySha256": "825bf1d4844a3d8d0c33fb70dbfa1766f7bb91528da3ef4350f8f90cf55c96b9",
+      "receipt": {
+        "commandId": "godot_71a49c9f6ca4caf218c9cd98518ce09a",
+        "error": null,
+        "eventCursor": 1420,
+        "execution": {
+          "appliedOnStateVersion": 1418,
+          "observedStateVersion": 1418,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "result": {
+          "action": "cancel_forest_reservation",
+          "forestryAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "reservationId": "fr314b14f4afe44338948468e7a283bb94",
+              "type": "cancel_forest_reservation"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_71a49c9f6ca4caf218c9cd98518ce09a",
+            "completedAtUtc": "2026-10-26T10:11:15.4662393+00:00",
+            "eventCursor": 1420,
+            "inventoryWood": 12,
+            "inventoryWoodBefore": 12,
+            "nurseryStock": 2,
+            "nurseryStockBefore": 2,
+            "operatorId": "declared-late",
+            "plant": null,
+            "plantBefore": null,
+            "position": [
+              30,
+              10.0000009536743
+            ],
+            "reservation": {
+              "actorId": "a2",
+              "commandId": "qa2_5caac7d3a6fa4b28a9f8786f4423d4e1",
+              "expiresAtMs": 1745561,
+              "grantedAtMs": 1655561,
+              "operatorId": "declared-late",
+              "plantId": null,
+              "plotId": "forest-west-north",
+              "queueOrder": 1418,
+              "requestedAtMs": 1655477,
+              "reservationId": "fr314b14f4afe44338948468e7a283bb94",
+              "reservedSeed": 0,
+              "status": "cancelled"
+            },
+            "reservationBefore": {
+              "actorId": "a2",
+              "commandId": "qa2_5caac7d3a6fa4b28a9f8786f4423d4e1",
+              "expiresAtMs": 1745561,
+              "grantedAtMs": 1655561,
+              "operatorId": "declared-late",
+              "plantId": null,
+              "plotId": "forest-west-north",
+              "queueOrder": 1418,
+              "requestedAtMs": 1655477,
+              "reservationId": "fr314b14f4afe44338948468e7a283bb94",
+              "reservedSeed": 1,
+              "status": "preparing"
+            },
+            "seeds": 0,
+            "seedsBefore": 0,
+            "serviceMs": 1656074,
+            "stateVersion": 1419,
+            "tool": null
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 1419,
+        "status": "committed"
+      }
+    },
+    {
+      "name": "cancel_forest_reservation-after",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "forestry original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        },
+        {
+          "name": "original forestry state transition and both balances verified",
+          "passed": true
+        }
+      ],
+      "postCount": 1,
+      "originalBodySha256": "18e658abe0e1323ee782b3ea1ebc3fa401b8d14ac64641b78fe10f57af5e323e",
+      "receipt": {
+        "commandId": "godot_64ba50ca1a60411c99d7bd2ff5a0fc88",
+        "error": null,
+        "eventCursor": 1420,
+        "execution": {
+          "appliedOnStateVersion": 1418,
+          "observedStateVersion": 1418,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "result": {
+          "action": "cancel_forest_reservation",
+          "forestryAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "reservationId": "frd24f56762af44d42a9b2f84385913302",
+              "type": "cancel_forest_reservation"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_64ba50ca1a60411c99d7bd2ff5a0fc88",
+            "completedAtUtc": "2026-10-26T10:11:16.5707395+00:00",
+            "eventCursor": 1420,
+            "inventoryWood": 12,
+            "inventoryWoodBefore": 12,
+            "nurseryStock": 2,
+            "nurseryStockBefore": 2,
+            "operatorId": "declared-late",
+            "plant": null,
+            "plantBefore": null,
+            "position": [
+              30,
+              10.0000009536743
+            ],
+            "reservation": {
+              "actorId": "a2",
+              "commandId": "qa2_31a4ac93d3a04c18bfffcbca81eeaad0",
+              "expiresAtMs": 1745549,
+              "grantedAtMs": 1655549,
+              "operatorId": "declared-late",
+              "plantId": null,
+              "plotId": "forest-west-north",
+              "queueOrder": 1418,
+              "requestedAtMs": 1655420,
+              "reservationId": "frd24f56762af44d42a9b2f84385913302",
+              "reservedSeed": 0,
+              "status": "cancelled"
+            },
+            "reservationBefore": {
+              "actorId": "a2",
+              "commandId": "qa2_31a4ac93d3a04c18bfffcbca81eeaad0",
+              "expiresAtMs": 1745549,
+              "grantedAtMs": 1655549,
+              "operatorId": "declared-late",
+              "plantId": null,
+              "plotId": "forest-west-north",
+              "queueOrder": 1418,
+              "requestedAtMs": 1655420,
+              "reservationId": "frd24f56762af44d42a9b2f84385913302",
+              "reservedSeed": 1,
+              "status": "preparing"
+            },
+            "seeds": 0,
+            "seedsBefore": 0,
+            "serviceMs": 1655598,
+            "stateVersion": 1419,
+            "tool": null
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 1419,
+        "status": "committed"
+      }
+    }
+  ],
+  "sourceSha256": {
+    "clients/godot/command_evidence.gd": "07748747c82941064644de5fe82972bc3ad0a2901aacfda67ebf3e8c1cc24f63",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_canvas_panel.gd": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/entity_notes_panel.gd": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803",
+    "clients/godot/forestry_evidence.gd": "0ed6e939e87b43fed0b4cfb945ecc43868f11fb6bc254e446c0c6bd44fa176ad",
+    "clients/godot/forestry_panel.gd": "7e328832647a467f2fda8b6106058d5028becd4e55fc886494acf183b648eace",
+    "clients/godot/main.gd": "32e40411aa0cc2492c4d6e1191c27b2585d74b7a9848f2785893dd306e3f11be",
+    "clients/godot/material_panel.gd": "0ca9ce3e6eef38690d9bbc7e77b7e8d75f4bb654e1ab2495e7598aaa632a9798",
+    "clients/godot/pending_store.gd": "367dd3c39633c0e4a27be019c64942f138f63a6f49f85e0200bf04df31a3583e",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/workshop_evidence.gd": "2ee74cc3336881d465e95618662357b1b6530bc22b7d6e92a43cd52729f37e31",
+    "clients/godot/workshop_geometry.gd": "6dc487e8c688c76aa26fb114d951988a670036e3213bbd319238c8973f91b57b",
+    "clients/godot/workshop_panel.gd": "1545fa187422875c92f1e7f2e7d0ffed7b64a39a0b2bbf19b6a98662cfad1b20",
+    "clients/godot/world_client.gd": "a39de12346f843d0339885a92cf362c5f51dd4c33fae3c8456090db7a527ca35",
+    "clients/godot/world_navigation.gd": "a6682c79f7b9c263b6ffa2d944fcb357736d2abda8a7fde2e4fce363c76974ba",
+    "clients/godot/world_view.gd": "8871952832c8ec78aa8008ad12af7d53b709856e08b1b075475b526950796e6c",
+    "tests/forestry_godot.py": "bf8f720fbd8325d58ba9bcdc75fd70e775069f113a3b409550d7016e2f88915d",
+    "tests/godot/forestry_recovery.gd": "998f982d90ccec31ea723ba644f8b935aa12fa869a8b439096e1373677137a1d"
+  },
+  "sourceUnchanged": true,
+  "dllSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+  "temporaryWorldsRemoved": true,
+  "actualModelCalls": 0
+}

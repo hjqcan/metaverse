@@ -1,0 +1,69 @@
+{
+  "testsRun": 1,
+  "failures": [
+    "(<__main__.ForestryMissionAcceptance testMethod=test_01_actual_cli_two_generations_restart_and_wood_use>, 'Traceback (most recent call last):\\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/forestry_mission_api.py\", line 287, in test_01_actual_cli_two_generations_restart_and_wood_use\\n    first_plant = self.cli(action(\\'plant_tree\\', plotId=first_plot, reservationId=first_reservation),\\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/forestry_mission_api.py\", line 242, in cli\\n    return self.complete(report)\\n           ^^^^^^^^^^^^^^^^^^^^^\\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/forestry_mission_api.py\", line 220, in complete\\n    self.assertEqual(\\'completed\\', report[\\'mission\\'][\\'status\\'], report[\\'mission\\'])\\nAssertionError: \\'completed\\' != \\'blocked\\'\\n- completed\\n+ blocked\\n : {\\'id\\': \\'forestry-298b68b542ee\\', \\'objective\\': \\'执行明确的原林业动作，核对原三方证据。\\', \\'actorId\\': \\'a3\\', \\'operatorId\\': \\'declared-third\\', \\'worldId\\': \\'foundation-01\\', \\'rulesVersion\\': \\'r10\\', \\'worldInstanceId\\': \\'w_15ced6889f624d8da8a3d2129ba26874\\', \\'preconditionMode\\': \\'actor-state-v1\\', \\'arrivalTolerance\\': 0.06, \\'forestryVersion\\': 1, \\'origin\\': [25, 22], \\'goal\\': {\\'id\\': \\'fixed\\', \\'label\\': \\'明确林业目标\\', \\'target\\': [7, 12], \\'forestry\\': {\\'worldInstanceId\\': \\'w_15ced6889f624d8da8a3d2129ba26874\\', \\'actorId\\': \\'a3\\', \\'action\\': {\\'type\\': \\'plant_tree\\', \\'capabilityVersion\\': 1, \\'plotId\\': \\'forest-west-north\\', \\'reservationId\\': \\'fr72e17ed1cb0342728a3ed0690cb4adeb\\'}, \\'waitForReady\\': True, \\'returnToOrigin\\': True}}, \\'allowBuild\\': False, \\'allowCraftForestryTool\\': False, \\'allowReserveForest\\': False, \\'allowCancelForestReservation\\': False, \\'allowCollectSeed\\': False, \\'allowPlantTree\\': True, \\'allowHarvestTree\\': False, \\'status\\': \\'blocked\\', \\'reason\\': \\'forestry_original_reservation_no_longer_active\\', \\'startedAtUtc\\': \\'2026-10-26T10:22:15.534477+00:00\\', \\'updatedAtUtc\\': \\'2026-10-26T10:22:41.834861+00:00\\'}\\n')"
+  ],
+  "errors": [],
+  "success": false,
+  "elapsedSeconds": 150.91420274798293,
+  "outcomes": [
+    {
+      "test": "test_01_actual_cli_two_generations_restart_and_wood_use",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "workshop_tools": true,
+          "workshop_chests": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "resourceAudit": {
+          "initialWood": 12,
+          "issuedWood": 76,
+          "generatedWood": 64,
+          "forestGeneratedWood": 0,
+          "standingForestWood": 0,
+          "forestryToolWood": 2,
+          "sourceWood": 6,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 20,
+          "embodiedWood": 42,
+          "toolWood": 5,
+          "storedWood": 3,
+          "conserved": true
+        },
+        "seedAudit": {
+          "nurseryGeneratedSeeds": 2,
+          "harvestGeneratedSeeds": 0,
+          "nurseryStockSeeds": 1,
+          "residentSeeds": 1,
+          "consumedPlantSeeds": 0,
+          "reservedSeeds": 0,
+          "conserved": true
+        },
+        "runtimeRemoved": true
+      }
+    }
+  ],
+  "sourceCodeHashes": {
+    "scripts/resident_forestry.py": "e05f65e508168b7f4f986b4c1d2ebb7a84e5f1e477ec39d81a98066891ede580",
+    "scripts/resident_mission.py": "41b3e856e9dcafb98b35da0494956581adce62222a6a88095702bfd3ac00453e",
+    "scripts/run_resident.py": "663d1559d813222cbf33b4ae59d1642298c5bbc8ba37a25871873b320db70e6a",
+    "scripts/foundation_agent.py": "a6b4db1561c6e60fcb9bd25c3589ae83327de00ef8845448888bd89df44ec743",
+    "scripts/continuous_navigation.py": "61e734e47b51c643c88895027a4b97adcb433f28436e8930a4fafece230bfab1",
+    "scripts/command_preconditions.py": "24ae626f771bb96276554c73ee46f640604de467974a72a34f7a6e1c13731032",
+    "tests/forestry_mission_api.py": "d3cfa2374b702cbee8bc8e7527c50fe9bf74ce90542725559774fc235f50715f"
+  },
+  "actualModelCalls": 0
+}

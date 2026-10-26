@@ -1,0 +1,133 @@
+{
+  "iteration": "ITER-0028",
+  "status": "local-prototype-acceptance-complete",
+  "baselineCommit": "0d1622fccd282c95788035c7f20cc25c2c22c2e5",
+  "actualModelCalls": 0,
+  "sets": [
+    {
+      "owner": "QA2",
+      "kind": "independent-http-sqlite",
+      "groups": 18,
+      "passed": true,
+      "evidence": [
+        "qa-api-review.json",
+        "qa-api-initial-seven.json",
+        "qa-api-long-eleven.json",
+        "qa-api-evidence.tar.gz"
+      ]
+    },
+    {
+      "owner": "QA1",
+      "kind": "original-natural-history-real-godot-input",
+      "commands": 153,
+      "forestryThreeWayFacts": 15,
+      "passed": true,
+      "evidence": [
+        "qa-native-summary.json",
+        "qa-native-audit.json",
+        "qa-native-commands.jsonl",
+        "qa-native-compact-evidence.json",
+        "qa-native-sqlite-integrity.json",
+        "coordinator-natural-review.json"
+      ]
+    },
+    {
+      "owner": "BUILD2",
+      "kind": "python-http-cli-self-check",
+      "groups": 26,
+      "passed": true,
+      "evidence": [
+        "worker-python-full-26.json",
+        "worker-python-final-two-cycle-facts.json",
+        "worker-python-final-database-checkpoints.json"
+      ]
+    },
+    {
+      "owner": "QA2",
+      "kind": "independent-python-http-recovery",
+      "groups": 13,
+      "sqlCheckpoints": 39,
+      "passed": true,
+      "evidence": [
+        "qa-python-review.json",
+        "qa-python-results.json",
+        "qa-python-evidence.tar.gz"
+      ]
+    },
+    {
+      "owner": "BUILD1",
+      "kind": "native-request-cancel-recovery",
+      "groups": 8,
+      "assertions": 113,
+      "passed": true,
+      "evidence": [
+        "author-godot-recovery.json"
+      ],
+      "limits": "Request/cancel recovery only; later panel/approach changes preserved core hashes."
+    },
+    {
+      "owner": "BUILD1",
+      "kind": "actual-native-mouse-render-fixture",
+      "checks": 31,
+      "passed": true,
+      "worldRequests": 0,
+      "evidence": [
+        "author-ui-final.json",
+        "author-ui-public-entry.json"
+      ]
+    },
+    {
+      "owner": "BUILD1",
+      "kind": "directed-legacy-http-regression",
+      "continuous": 8,
+      "workshop": 4,
+      "passed": true,
+      "evidence": [
+        "author-legacy-continuous.json",
+        "author-legacy-workshop.json"
+      ]
+    },
+    {
+      "owner": "BUILD1",
+      "kind": "native-workshop-geometry",
+      "checks": 9,
+      "passed": true,
+      "evidence": [
+        "author-legacy-workshop-geometry.json"
+      ]
+    },
+    {
+      "owner": "BUILD2",
+      "kind": "real-chrome-report",
+      "forestry": 29,
+      "legacyWorkshop": 23,
+      "passed": true,
+      "worldRequests": 0,
+      "evidence": [
+        "worker-browser-forestry.json",
+        "worker-browser-legacy-workshop.json",
+        "worker-browser-delivery.json"
+      ]
+    }
+  ],
+  "retainedFailures": [
+    "author-backend-first-failure.json",
+    "author-godot-v7-first-failure.json",
+    "author-ui-click-fixture-failure.json",
+    "author-ui-center-approach-failure.json",
+    "worker-python-return-lease-failure.json",
+    "worker-python-sql-audit-failure.json",
+    "worker-python-initial-fault-suite.json",
+    "worker-python-legacy-connection-failure.json"
+  ],
+  "limitations": [
+    "Old first malformed database was deleted by its test cleanup; original bytes unverified. Legacy process reproduced error but its retained cold file passed fresh-process integrity/restart/replay.",
+    "Worker Python SQL whitelist misses entity_canvas header; full observation continuity was checked separately.",
+    "Native fourth plant remains growing and is not counted as harvested.",
+    "No full historical npm suite, real model decisions, public deployment or long-term economy claim."
+  ],
+  "currentHistoryHead": ".local/qa/20261026-test-agent/forestry-history-head.json",
+  "currentStorageVersion": 14,
+  "currentStateVersion": 1520,
+  "currentEventCount": 1521
+}

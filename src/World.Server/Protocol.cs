@@ -57,14 +57,19 @@ internal sealed record WorldAction(string Type, long Dx = 0, long Dy = 0, long Q
     string? Decision = null, string? NodeId = null, double TargetX = 0, double TargetY = 0, bool Continuous = false,
     string? RecipientActorId = null, string? Resource = null, string? SourceId = null, string? ReservationId = null,
     string? EntityId = null, string? ReplyToNoteId = null, long CapabilityVersion = 0, long ExpectedCanvasRevision = 0,
-    string? ToolId = null)
+    string? ToolId = null, string? PlotId = null, string? PlantId = null)
 {
     public object Canonical => Type switch
     {
         "build_workshop" => new { type = Type, capabilityVersion = CapabilityVersion, recipeId = RecipeId,
             at = new[] { TargetX, TargetY }, toolId = ToolId },
-        "craft_tool" => new { type = Type, capabilityVersion = CapabilityVersion, entityId = EntityId, recipeId = RecipeId },
+        "craft_forestry_tool" or "craft_tool" => new { type = Type, capabilityVersion = CapabilityVersion, entityId = EntityId, recipeId = RecipeId },
         "deposit_wood" or "withdraw_wood" => new { type = Type, capabilityVersion = CapabilityVersion, entityId = EntityId, quantity = Quantity },
+        "reserve_forest" => new { type = Type, capabilityVersion = CapabilityVersion },
+        "cancel_forest_reservation" => new { type = Type, capabilityVersion = CapabilityVersion, reservationId = ReservationId },
+        "collect_seed" => new { type = Type, capabilityVersion = CapabilityVersion, sourceId = SourceId, reservationId = ReservationId },
+        "plant_tree" => new { type = Type, capabilityVersion = CapabilityVersion, plotId = PlotId, reservationId = ReservationId },
+        "harvest_tree" => new { type = Type, capabilityVersion = CapabilityVersion, plantId = PlantId, reservationId = ReservationId, toolId = ToolId },
         "move" => new { type = Type, dx = Dx, dy = Dy },
         "walk" => new { type = Type, to = new[] { TargetX, TargetY } },
         "build" when Continuous => new { type = Type, recipeId = RecipeId, at = new[] { TargetX, TargetY } },
@@ -141,6 +146,26 @@ internal sealed record WorldCommand(int SchemaVersion, string RulesVersion, stri
             WorldAction parsed;
             switch (type)
             {
+                case "reserve_forest":
+                    Fields(action, "type", "capabilityVersion");
+                    if (Integer(action.GetProperty("capabilityVersion")) != 1) Invalid("林业能力版本无效");
+                    parsed = new(type, CapabilityVersion: 1); break;
+                case "cancel_forest_reservation":
+                case "collect_seed":
+                case "plant_tree":
+                case "harvest_tree":
+                    var forestFields = type switch {
+                        "cancel_forest_reservation" => new[] { "type", "capabilityVersion", "reservationId" },
+                        "collect_seed" => new[] { "type", "capabilityVersion", "sourceId", "reservationId" },
+                        "plant_tree" => new[] { "type", "capabilityVersion", "plotId", "reservationId" },
+                        _ => new[] { "type", "capabilityVersion", "plantId", "reservationId", "toolId" } };
+                    Fields(action, forestFields);
+                    if (Integer(action.GetProperty("capabilityVersion")) != 1) Invalid("林业能力版本无效");
+                    foreach (var field in forestFields.Where(f => f.EndsWith("Id")))
+                        if (!Protocol.ValidCommandId(String(action.GetProperty(field)))) Invalid("林业原目标ID无效");
+                    string? ForestId(string field) => action.TryGetProperty(field, out var value) ? String(value) : null;
+                    parsed = new(type, CapabilityVersion: 1, ReservationId: ForestId("reservationId"), SourceId: ForestId("sourceId"),
+                        PlotId: ForestId("plotId"), PlantId: ForestId("plantId"), ToolId: ForestId("toolId")); break;
                 case "build_workshop":
                     Fields(action, "type", "capabilityVersion", "recipeId", "at", "toolId");
                     var workshopRecipe = String(action.GetProperty("recipeId"));
@@ -154,12 +179,13 @@ internal sealed record WorldCommand(int SchemaVersion, string RulesVersion, stri
                     parsed = new(type, CapabilityVersion: 1, RecipeId: workshopRecipe, TargetX: Coordinate(workshopAt[0]),
                         TargetY: Coordinate(workshopAt[1]), ToolId: toolId);
                     break;
+                case "craft_forestry_tool":
                 case "craft_tool":
                     Fields(action, "type", "capabilityVersion", "entityId", "recipeId");
                     var benchId = String(action.GetProperty("entityId"));
                     if (Integer(action.GetProperty("capabilityVersion")) != 1 || !Protocol.ValidCommandId(benchId)
-                        || String(action.GetProperty("recipeId")) != "wooden_mallet.v1") Invalid("工具制作参数无效");
-                    parsed = new(type, CapabilityVersion: 1, EntityId: benchId, RecipeId: "wooden_mallet.v1");
+                        || String(action.GetProperty("recipeId")) != (type == "craft_tool" ? "wooden_mallet.v1" : "wooden_axe.v1")) Invalid("工具制作参数无效");
+                    parsed = new(type, CapabilityVersion: 1, EntityId: benchId, RecipeId: type == "craft_tool" ? "wooden_mallet.v1" : "wooden_axe.v1");
                     break;
                 case "deposit_wood":
                 case "withdraw_wood":

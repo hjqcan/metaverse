@@ -1,0 +1,134 @@
+[
+  {
+    "file": "author-backend-first-failure.json",
+    "source": ".local/iter0028/backend-selfcheck-v1/result.json",
+    "sha256": "33976d45e21620e05636c9a4a87ccbd3e1e20c0bc1dd8d757056a74700d626f6",
+    "bytes": 11133
+  },
+  {
+    "file": "author-backend-v1-trace.json",
+    "source": ".local/iter0028/backend-selfcheck-v1/trace.json",
+    "sha256": "33739c84ff1f28d88bdc91476f93e51b15c848c45367b39ec77aee075814133e",
+    "bytes": 185349
+  },
+  {
+    "file": "author-backend-v1-manifest.json",
+    "source": ".local/iter0028/backend-selfcheck-v1/candidate.json",
+    "sha256": "49af666aeb16be604255ced70c6f61e8fb1090e132283133906ce05340767fda",
+    "bytes": 2169
+  },
+  {
+    "file": "author-backend-restart-fixed.json",
+    "source": ".local/iter0028/backend-selfcheck-v2/result.json",
+    "sha256": "5e52cf2a599b5f905b22420327339f375c1037e55e7a2fab630bfa18e15eafcc",
+    "bytes": 244
+  },
+  {
+    "file": "author-backend-v2-trace.json",
+    "source": ".local/iter0028/backend-selfcheck-v2/trace.json",
+    "sha256": "0433953fd064e69ad0a2bdd8f62c26bc4b3bee4b4a31141b1a1056afec093000",
+    "bytes": 139033
+  },
+  {
+    "file": "author-backend-v2-manifest.json",
+    "source": ".local/iter0028/backend-selfcheck-v2/candidate.json",
+    "sha256": "f3ebeeb55fa24125cf1761d6d32faec37f2316504ff3ae6573e36d029523e80c",
+    "bytes": 2169
+  },
+  {
+    "file": "author-backend-final-observation.json",
+    "source": ".local/iter0028/backend-selfcheck-v2/final-observation.json",
+    "sha256": "b0a1a7cc761f764fccca55eab5a6da936395a24cfb7ce1b614ac735d4d40c0b2",
+    "bytes": 33751
+  },
+  {
+    "file": "author-godot-v7-first-failure.json",
+    "source": ".local/iter0028/godot/20261026T101050Z-042eb4/results.json",
+    "sha256": "ca199d20d8968dc3a43eaead61ecfe678ce2075fa3596ac7b32dd66a684157aa",
+    "bytes": 7913
+  },
+  {
+    "file": "author-godot-recovery.json",
+    "source": ".local/iter0028/godot/20261026T101103Z-9c88e6/results.json",
+    "sha256": "7e8f4142140c952fa3f2f2647e5224eb09a09a6b7632d75a59b4fe1099c5c31b",
+    "bytes": 35021
+  },
+  {
+    "file": "author-ui-click-fixture-failure.json",
+    "source": ".local/iter0028/native-ui/20261026T101305Z/ui.json",
+    "sha256": "dcdb90989c62124696c98c2511c5d63b146bf625993e35d1d5eb19d352393d27",
+    "bytes": 3005
+  },
+  {
+    "file": "author-ui-center-approach-failure.json",
+    "source": ".local/iter0028/native-ui/20261026T101458Z/ui.json",
+    "sha256": "7187f6892ae53237cbc6f4e5208f50f6945bc6824175e5d81d09272a85bc3268",
+    "bytes": 3119
+  },
+  {
+    "file": "author-ui-center-approach-fixed.json",
+    "source": ".local/iter0028/native-ui/20261026T101539Z/ui.json",
+    "sha256": "42de4197bf1ada7fa09589e215977d0b53f70dce7ab47fdf9461b734b2d83c44",
+    "bytes": 3117
+  },
+  {
+    "file": "author-ui-final.json",
+    "source": ".local/iter0028/native-ui/20261026T101631Z/ui.json",
+    "sha256": "58fa2bbc2d6dae868227fd7e87382bddbb7eb1551973d925c762a2a116a043c0",
+    "bytes": 3227
+  },
+  {
+    "file": "author-ui-final-manifest.json",
+    "source": ".local/iter0028/native-ui/20261026T101631Z/source-manifest.json",
+    "sha256": "bc3fe77f163bd7c55c91a6d6716a2e6c5b794ec7bc275124e98fc6e197feea45",
+    "bytes": 1907
+  },
+  {
+    "file": "author-ui-public-entry.json",
+    "source": ".local/iter0028/native-ui/20261026T102514Z-e54382/results.json",
+    "sha256": "11c2b05ef47be2acfc63ea3ad15ca72e7a06c7ed53036e5ce48a9e006d9aa55b",
+    "bytes": 5853
+  },
+  {
+    "file": "author-ui-public-entry-cleanup.json",
+    "source": ".local/iter0028/native-ui/20261026T102514Z-e54382/cleanup.json",
+    "sha256": "48258277a97f258088b073e2fe109be4ebbe446d74ca6d745ce49a8cddb9abda",
+    "bytes": 635
+  },
+  {
+    "file": "author-ui-1280.png",
+    "source": ".local/iter0028/native-ui/20261026T102514Z-e54382/forestry-growing-1280.png",
+    "sha256": "121d4c0fa593587432b54634af30bf66e43b913d84c1466b8902b4da31b81e6a",
+    "bytes": 465395
+  },
+  {
+    "file": "author-ui-1000.png",
+    "source": ".local/iter0028/native-ui/20261026T102514Z-e54382/forestry-growing-1000.png",
+    "sha256": "94b07b89032afed3de7793a3e74fb302cb4cf5fe02565fa8f4728c526ea5ac8d",
+    "bytes": 372284
+  },
+  {
+    "file": "native-v1-manifest.json",
+    "source": ".local/iter0028/native-v1-manifest.json",
+    "sha256": "35afff764d4a9aa0f109a2c84d76c6fd696fdce39d0d7192c540dd003945e167",
+    "bytes": 4894
+  },
+  {
+    "file": "author-legacy-workshop.json",
+    "source": ".local/iter0028/legacy-workshop-regression/results.json",
+    "sha256": "13d2bcb60e0bf5d842b9cd896d6771074361b5013f4376478fd9561e447d3ee6",
+    "bytes": 1719
+  },
+  {
+    "file": "author-legacy-workshop-geometry.json",
+    "source": ".local/iter0028/legacy-workshop-geometry.json",
+    "sha256": "1b50ad0b5e7abe02aee71828c07374c3c53a4a50ad8e08de0d2b1464d2688d03",
+    "bytes": 1079
+  },
+  {
+    "file": "author-legacy-continuous.json",
+    "source": ".local/iter0028/legacy-continuous-regression/results.json",
+    "sha256": "132f59ffb8cf8928f3f8301f0f91028dc661e480ab5b3baff0713f2c82b16b43",
+    "bytes": 840
+  }
+]

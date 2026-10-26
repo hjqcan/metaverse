@@ -1,0 +1,861 @@
+{
+  "atUtc": "2026-10-26T10:49:05.084030+00:00",
+  "scope": "Two completed QA build outputs only; original natural head and all evidence retained.",
+  "ownedProcessesUsingOutputs": [],
+  "removed": [
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-core-v1-20261026T045827334321Z/bin",
+      "logicalBytes": 55361090,
+      "files": [
+        {
+          "relative": "World.Server.runtimeconfig.json",
+          "sha256": "2854c873c21edc9fa7c2056f9d4744054aeb11f009d271702daa7794b74e895f",
+          "bytes": 401
+        },
+        {
+          "relative": "World.Server.staticwebassets.runtime.json",
+          "sha256": "c4678539579a872f74f2e164489f686fb6f3014dd83b54e6e0b11e306b8578f8",
+          "bytes": 5937
+        },
+        {
+          "relative": "SQLitePCLRaw.batteries_v2.dll",
+          "sha256": "1ee3c6ff4d39171690d6ff6f84b4d876ed038ca28e39bb6e74995f52d2aacf8b",
+          "bytes": 5632
+        },
+        {
+          "relative": "World.Server.dll",
+          "sha256": "c9d9ccaa5b1e194e17abc41a79c2ce255d436c77ff4116ddaa6b72b6ee7b2c8e",
+          "bytes": 578048
+        },
+        {
+          "relative": "World.Server.deps.json",
+          "sha256": "8733d712dc0ec44638313963537b38d8ee504a39962f36c0899e02502e1c5e11",
+          "bytes": 9316
+        },
+        {
+          "relative": "World.Server.pdb",
+          "sha256": "80321f2c72e594de2de9bf4b88073d12dec097584aa4af8951cb288b05b8bba0",
+          "bytes": 66824
+        },
+        {
+          "relative": "Microsoft.Data.Sqlite.dll",
+          "sha256": "1078d41c6c0f2cee48a8b706e3a54ce145705993f19f703d2b3bdf2abcc59088",
+          "bytes": 177464
+        },
+        {
+          "relative": "World.Server.staticwebassets.endpoints.json",
+          "sha256": "aa668f80b189e18e53954f5ef12ed8aac35bf8bb9305725e59f7ea6776acad17",
+          "bytes": 88490
+        },
+        {
+          "relative": "SQLitePCLRaw.provider.e_sqlite3.dll",
+          "sha256": "1d4cb69b3aaf6a9cf40dfe179cc16dd678f12bc024b212d4297654e0a29e220d",
+          "bytes": 36864
+        },
+        {
+          "relative": "SQLitePCLRaw.core.dll",
+          "sha256": "b72c9dfe1479a568d6b84e249eaf949e76c757888f8056fb6ddb9c0480e0dd25",
+          "bytes": 51712
+        },
+        {
+          "relative": "World.Server",
+          "sha256": "0a3ce3ce049b27fdf0f0d6eff8144217d8bc5dc5b195d4c213193492e24f583c",
+          "bytes": 78256
+        },
+        {
+          "relative": "wwwroot/resident.html",
+          "sha256": "ddb32d79320cda42707ac1fa6c15e281e161b823e9d0b4a295b36fa0d0aed3d0",
+          "bytes": 13733
+        },
+        {
+          "relative": "wwwroot/styles.css.gz",
+          "sha256": "c416114da4d35e842e36fb43a2b4efa660811d149744f8c9d86ac01ba999c160",
+          "bytes": 6150
+        },
+        {
+          "relative": "wwwroot/resident.js.gz",
+          "sha256": "fe97e548c3e7c135de77d9afaaf929bc520991ece744d962f048de252cc2eff4",
+          "bytes": 18078
+        },
+        {
+          "relative": "wwwroot/entry-guide.js.gz",
+          "sha256": "4cacb934762fd756bede8d1bbf38e2226185ebbcab4a2775c2b3908140aa523d",
+          "bytes": 2999
+        },
+        {
+          "relative": "wwwroot/index.html.gz",
+          "sha256": "511bba4ef0fb3d9c21db3edaa25340a90ab69f977b48c9d9de4fa4d98f92e71a",
+          "bytes": 5412
+        },
+        {
+          "relative": "wwwroot/material-report.js.gz",
+          "sha256": "a15b8546782b392569bb4ff0bda9012e0704563f25f1843238b264713891d46a",
+          "bytes": 1968
+        },
+        {
+          "relative": "wwwroot/resident.js",
+          "sha256": "a949e38be64ae243b105a040da94f767635f0c3993ff3a22aecdcb5e97b86042",
+          "bytes": 62320
+        },
+        {
+          "relative": "wwwroot/resident.html.gz",
+          "sha256": "909521cb386159c8d9c91966f09cd5bbb937eda04f82a9238ec7b237a240dbc5",
+          "bytes": 4422
+        },
+        {
+          "relative": "wwwroot/mosaic.js",
+          "sha256": "8f6ef59b7d9538ee0cb93d0e04b16c55ebdbf41cd04fab8a6296b889052ee08b",
+          "bytes": 4798
+        },
+        {
+          "relative": "wwwroot/mosaic-inbox.js",
+          "sha256": "96a7180337ee21f496ec62a38d85e4cbca5e1aa3c822912480ba36ceb498e1f6",
+          "bytes": 3083
+        },
+        {
+          "relative": "wwwroot/app.js",
+          "sha256": "bdbd751b03854e6ae192ccd5fdf0b9165e20433ed111d069a1d9e1b305f57acd",
+          "bytes": 92077
+        },
+        {
+          "relative": "wwwroot/mosaic.js.gz",
+          "sha256": "8a6214078b4f31bbd2ba0cb027d06031e71c47d0cfa59cf2caf3834c1a09cf35",
+          "bytes": 2098
+        },
+        {
+          "relative": "wwwroot/styles.css",
+          "sha256": "dc2634a1f15e012aa4e638dc35ca0a697a1fea5a6bdb05885eb7a02946c27195",
+          "bytes": 23108
+        },
+        {
+          "relative": "wwwroot/app.js.gz",
+          "sha256": "890164c1cdbbfab46c4274dbc3405d06fab165426a2c1ae81c03c4b4ec651b2f",
+          "bytes": 26143
+        },
+        {
+          "relative": "wwwroot/consent.js.gz",
+          "sha256": "d061b5fa8627a364aacb4be9acdb0b55808253934b2ba0336f2c50b342ab403c",
+          "bytes": 2200
+        },
+        {
+          "relative": "wwwroot/material-report.js",
+          "sha256": "087db4b4b5e6e8193b0b7c4ade00797d4f1b6e31d55ec22cac891bd1bdf47efa",
+          "bytes": 5749
+        },
+        {
+          "relative": "wwwroot/index.html",
+          "sha256": "b1617698950c81f092b91556f1c67b0215900c51cce3f60f888e2315df8ceff2",
+          "bytes": 16364
+        },
+        {
+          "relative": "wwwroot/consent.js",
+          "sha256": "396ad8dca4ea121124e7a771e47c3dd5dd966f71bb67f62eab580a38f3b92d91",
+          "bytes": 5688
+        },
+        {
+          "relative": "wwwroot/entry-guide.js",
+          "sha256": "5bc3a6eef9dc93b22dc0a14c86ee0c6f41013f8e8c2cc5b4cb9edd199236c5a8",
+          "bytes": 6795
+        },
+        {
+          "relative": "wwwroot/mosaic-inbox.js.gz",
+          "sha256": "0307dc06e40575a61618e816ff8f62ddc6d33e9070fa9bb020830251eef5295c",
+          "bytes": 1157
+        },
+        {
+          "relative": "wwwroot/resident.css.gz",
+          "sha256": "cf65d75387d99ebf6c0b2aee02e78cb877e94767da742eeed0aab968e1b4446d",
+          "bytes": 4268
+        },
+        {
+          "relative": "wwwroot/resident.css",
+          "sha256": "cd3986c35631c56a0e9e751edd958c0b5df3b3b4de1c9d40bba906c539d1c83c",
+          "bytes": 15744
+        },
+        {
+          "relative": "wwwroot/reports/mosaic-second.json.gz",
+          "sha256": "947ca052351aadf5c2df887cede19930f81f070ad736ad71c982fecd8ad9013b",
+          "bytes": 2728
+        },
+        {
+          "relative": "wwwroot/reports/consent-proposer.json.gz",
+          "sha256": "55ee609f91469bcdc1f36b4237bb5618e3b262e1fef35ea72f781dea064a69b4",
+          "bytes": 2771
+        },
+        {
+          "relative": "wwwroot/reports/inbox-proposer.json",
+          "sha256": "1dec130cb290c2f4b98ffd5dde968e05d1711dae6ced08705eaedc5c2ac9ee34",
+          "bytes": 16029
+        },
+        {
+          "relative": "wwwroot/reports/postcard-first.json",
+          "sha256": "9122de32b6ebc2ae3850e092499dda558792624f59989c05e3abda1e93708981",
+          "bytes": 10042
+        },
+        {
+          "relative": "wwwroot/reports/activity-demo.json",
+          "sha256": "9d1bd9075c5c9255f46664df0cd5fa5ba692693bf6ceb3aa4f1602ac07fa9f9a",
+          "bytes": 12845
+        },
+        {
+          "relative": "wwwroot/reports/activity-comparison.json",
+          "sha256": "9f3bd2fad3f27c96c9eb99ce1bfc30b93c9902a42860bebca83188c9069f7134",
+          "bytes": 118550
+        },
+        {
+          "relative": "wwwroot/reports/resident-demo.json.gz",
+          "sha256": "10c80b1dabbc6d17dee458902d1ea04b5b5cece2aa125c36e8eb54b506498930",
+          "bytes": 2113
+        },
+        {
+          "relative": "wwwroot/reports/postcard-first.json.gz",
+          "sha256": "fa66ba1390b013059b7451e0d36b4e43038411df73cc03fe114cfb1a4ed32e68",
+          "bytes": 2231
+        },
+        {
+          "relative": "wwwroot/reports/consent-reviewer.json",
+          "sha256": "4c5acda2e9806810d030d191f2d4fd6dbc56eca1647ce3a1b7f26f3e95f4b3bb",
+          "bytes": 19470
+        },
+        {
+          "relative": "wwwroot/reports/resident-demo.json",
+          "sha256": "191ffa5aac83d734be48827cfb239c13c548f33e70b44d4fd90d51464b3ce71f",
+          "bytes": 11392
+        },
+        {
+          "relative": "wwwroot/reports/inbox-reviewer.json",
+          "sha256": "8f1e1a784c541abb07fbd2be09e5c3c5b26ad3ffab77ce6962883f879277cb97",
+          "bytes": 78304
+        },
+        {
+          "relative": "wwwroot/reports/postcard-second.json.gz",
+          "sha256": "5b82f36d74b070e75718cd5619d2fb1de54cd5df2f3f53afd9997d38171a614a",
+          "bytes": 2377
+        },
+        {
+          "relative": "wwwroot/reports/postcard-second.json",
+          "sha256": "13084fc201e434f5e26b8f66da977fd9820a2dae97cc693ed2a7b229e408bebe",
+          "bytes": 9907
+        },
+        {
+          "relative": "wwwroot/reports/consent-reviewer.json.gz",
+          "sha256": "8c0d78c1173bb109516eeec9fa36389a0ad356e02298e56e4ccc3bb606731335",
+          "bytes": 3176
+        },
+        {
+          "relative": "wwwroot/reports/mosaic-first.json.gz",
+          "sha256": "cbcd4073bfae82f55f79074fd18804ff128ebfa6de589b873d9ea9e4fe24e3c2",
+          "bytes": 2663
+        },
+        {
+          "relative": "wwwroot/reports/activity-comparison.json.gz",
+          "sha256": "8c2b8d908932dec7c74938021e185b1f37a566396c02031ae8e706df89b5b6bb",
+          "bytes": 8174
+        },
+        {
+          "relative": "wwwroot/reports/mosaic-second.json",
+          "sha256": "88f9268d4ab4d16321c38637d504ca390759c4cb50c7473407051e162b9b475f",
+          "bytes": 16399
+        },
+        {
+          "relative": "wwwroot/reports/inbox-reviewer.json.gz",
+          "sha256": "8ace67f79b3176e41da0d65c33c05a57f0109be4238738a9b49e29bead0b8230",
+          "bytes": 9391
+        },
+        {
+          "relative": "wwwroot/reports/consent-proposer.json",
+          "sha256": "7037570544ce1e34c1027bcbb43f9b7ec32120ed32efebac5a40f5c6686e8d4a",
+          "bytes": 16007
+        },
+        {
+          "relative": "wwwroot/reports/activity-demo.json.gz",
+          "sha256": "2522da8b8214d89d0ea0946aa6d2b0f68c96528695d13e08185951ec5bfed80b",
+          "bytes": 2504
+        },
+        {
+          "relative": "wwwroot/reports/inbox-proposer.json.gz",
+          "sha256": "7eb01c98e14ca5d6e98997fec4e681c2192ff05912d8b365f0338a002281f3c5",
+          "bytes": 2784
+        },
+        {
+          "relative": "wwwroot/reports/mosaic-first.json",
+          "sha256": "1bda55c79568c74cbdbfbaeceaca94cfabad94af16099869bf1ee8f57e10ff58",
+          "bytes": 16591
+        },
+        {
+          "relative": "runtimes/linux-riscv64/native/libe_sqlite3.so",
+          "sha256": "a7ac179be5d4a25cea62781fab3a0266903745f5929e0c880dd20fd0e84f2593",
+          "bytes": 1291936
+        },
+        {
+          "relative": "runtimes/win-arm64/native/e_sqlite3.dll",
+          "sha256": "a59c169757d12a8bfc30c1760b8dd1f04cf9519f3774bdee6a9b595469f22be6",
+          "bytes": 1816064
+        },
+        {
+          "relative": "runtimes/android-x86/native/libe_sqlite3.so",
+          "sha256": "43731d621cc2b1fbde62bae8ff465cfe0fd1ea9c2f25d566d3e61e495d226d9f",
+          "bytes": 1820380
+        },
+        {
+          "relative": "runtimes/ios-arm/native/e_sqlite3.a",
+          "sha256": "0c2cf95c369c37330ecfbc0870c1d214ed727b17bf7b86bce0bac94db4a9acd9",
+          "bytes": 2219032
+        },
+        {
+          "relative": "runtimes/ios-arm64/native/e_sqlite3.a",
+          "sha256": "0c2cf95c369c37330ecfbc0870c1d214ed727b17bf7b86bce0bac94db4a9acd9",
+          "bytes": 2219032
+        },
+        {
+          "relative": "runtimes/iossimulator-x64/native/e_sqlite3.a",
+          "sha256": "87076969e5e0ffc22877e6a5603131f34f2e33bdfc61d11b77dba7c0fcc8f8e1",
+          "bytes": 4275720
+        },
+        {
+          "relative": "runtimes/linux-musl-s390x/native/libe_sqlite3.so",
+          "sha256": "31d53eafaefec15651dac766665171e7d8f2dd4f1c021c7a21e754aba2091b17",
+          "bytes": 1685800
+        },
+        {
+          "relative": "runtimes/maccatalyst-arm64/native/libe_sqlite3.dylib",
+          "sha256": "144793f8f993837a66249c0bb8898dd3171904cc796048acd1bede20ce1dab69",
+          "bytes": 1695264
+        },
+        {
+          "relative": "runtimes/linux-musl-arm64/native/libe_sqlite3.so",
+          "sha256": "91e5ff240be8cdc24068c149754d3506dd3f7098cb0fd3d6606c4f0ce3b5fd42",
+          "bytes": 1450744
+        },
+        {
+          "relative": "runtimes/osx-arm64/native/libe_sqlite3.dylib",
+          "sha256": "2b27f45233818ae11d97016ca2a16dffcf63a53c46f60bcd52b342fc187b0c83",
+          "bytes": 1696624
+        },
+        {
+          "relative": "runtimes/linux-musl-riscv64/native/libe_sqlite3.so",
+          "sha256": "033f84cbe93cb46eb0b5a96d5acbf1089f1716e9e0e9ee117d9d039c3c58060f",
+          "bytes": 1015928
+        },
+        {
+          "relative": "runtimes/browser-wasm/nativeassets/net9.0/e_sqlite3.a",
+          "sha256": "73675fcf71a65531ea10763f2029300bb4dc1528c24fc9bebc6bb2cbccf7656f",
+          "bytes": 1309264
+        },
+        {
+          "relative": "runtimes/linux-x86/native/libe_sqlite3.so",
+          "sha256": "0269d385a7a8cbbc385c4688bf57c030351036aaae8c6e06f02ecf2d5ada96de",
+          "bytes": 1548016
+        },
+        {
+          "relative": "runtimes/linux-x64/native/libe_sqlite3.so",
+          "sha256": "eddcd4aa561d5b8f252db77e8272e7d1aed96bcab9fda3f177ca542f916290bf",
+          "bytes": 1470824
+        },
+        {
+          "relative": "runtimes/linux-arm64/native/libe_sqlite3.so",
+          "sha256": "66436d4bd02b1b1c25b964a744b5230122bca6a5d006aa80add129ef892c273a",
+          "bytes": 1534416
+        },
+        {
+          "relative": "runtimes/android-arm/native/libe_sqlite3.so",
+          "sha256": "6846178c7337b5b9a3c9d7090808a6621dd09db6879efdf16075ce2afc260212",
+          "bytes": 1246788
+        },
+        {
+          "relative": "runtimes/android-x64/native/libe_sqlite3.so",
+          "sha256": "8088b315ee0b7db13c053051dae063c8bdf9318c25d3f8b9024b9786bd27cab1",
+          "bytes": 1801864
+        },
+        {
+          "relative": "runtimes/maccatalyst-x64/native/libe_sqlite3.dylib",
+          "sha256": "ac224e3e18f8227dc964b3cf29a0f6244e475af37eed5744708e222fe9691c19",
+          "bytes": 1724352
+        },
+        {
+          "relative": "runtimes/linux-armel/native/libe_sqlite3.so",
+          "sha256": "f6cd622eee5d5df12419c7a11eaf4a17ed1948c28f41db8395959682978c870a",
+          "bytes": 1375344
+        },
+        {
+          "relative": "runtimes/linux-s390x/native/libe_sqlite3.so",
+          "sha256": "55296ed2a74253a8e998d2ca8d4d5471e03c573bdd109ee83f089499ef9aedf7",
+          "bytes": 1655816
+        },
+        {
+          "relative": "runtimes/win-x64/native/e_sqlite3.dll",
+          "sha256": "6ad8e149f8ce3ed3716402b4b3a2268ebbdc7b64391b5fafed747e03bb1b9418",
+          "bytes": 1972224
+        },
+        {
+          "relative": "runtimes/osx-x64/native/libe_sqlite3.dylib",
+          "sha256": "20143ee08a1af0a510368e14109f512d7c7870481ba16937ae5733a415d0a201",
+          "bytes": 1724472
+        },
+        {
+          "relative": "runtimes/iossimulator-arm64/native/e_sqlite3.a",
+          "sha256": "87076969e5e0ffc22877e6a5603131f34f2e33bdfc61d11b77dba7c0fcc8f8e1",
+          "bytes": 4275720
+        },
+        {
+          "relative": "runtimes/android-arm64/native/libe_sqlite3.so",
+          "sha256": "52d49cc84918c112d5713a6de83269d33f03c4c7c3ed721fbd2c8c00adf4ca80",
+          "bytes": 1772160
+        },
+        {
+          "relative": "runtimes/linux-musl-arm/native/libe_sqlite3.so",
+          "sha256": "98e03c2b80ae3924d1ed6da32d036f933db48b28ee2ef55c417f48ef0a382c62",
+          "bytes": 1322584
+        },
+        {
+          "relative": "runtimes/linux-arm/native/libe_sqlite3.so",
+          "sha256": "9a697f00c70420314a3604cea281c8859cb925680f935c23f6261e9a6f769368",
+          "bytes": 982192
+        },
+        {
+          "relative": "runtimes/linux-ppc64le/native/libe_sqlite3.so",
+          "sha256": "9d5e453ad17fb857b123da69adfa067e55bb716816979e4131fe76e513866f53",
+          "bytes": 1937448
+        },
+        {
+          "relative": "runtimes/win-x86/native/e_sqlite3.dll",
+          "sha256": "8d76b5d0faa6f3a3c6204605d1a3d31dad57a0104b92fce3df19b12bdd983ae7",
+          "bytes": 1529344
+        },
+        {
+          "relative": "runtimes/linux-musl-x64/native/libe_sqlite3.so",
+          "sha256": "7d275542af8aac5a19f5a873da7cdadcc20c453fb52b7df57bd747e2f02ab92b",
+          "bytes": 1445376
+        },
+        {
+          "relative": "runtimes/linux-mips64/native/libe_sqlite3.so",
+          "sha256": "f66410709bd4b5ec6b9fb9b4f89f1e49c842e9f9fa21c95766f1ea20c66074ba",
+          "bytes": 1756616
+        }
+      ]
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/entry-core-v2-20261026T043518525851Z/bin",
+      "logicalBytes": 55313440,
+      "files": [
+        {
+          "relative": "World.Server.runtimeconfig.json",
+          "sha256": "2854c873c21edc9fa7c2056f9d4744054aeb11f009d271702daa7794b74e895f",
+          "bytes": 401
+        },
+        {
+          "relative": "World.Server.staticwebassets.runtime.json",
+          "sha256": "fba2ccdea02226e56dd6d99c2d51060b09532502f84af5924e65ec5b70f3701c",
+          "bytes": 5679
+        },
+        {
+          "relative": "SQLitePCLRaw.batteries_v2.dll",
+          "sha256": "1ee3c6ff4d39171690d6ff6f84b4d876ed038ca28e39bb6e74995f52d2aacf8b",
+          "bytes": 5632
+        },
+        {
+          "relative": "World.Server.dll",
+          "sha256": "4a66fd0a2382bb71597d3ae25f2b169bc70af8a469b33d6cb149b748a6b96b37",
+          "bytes": 547328
+        },
+        {
+          "relative": "World.Server.deps.json",
+          "sha256": "8733d712dc0ec44638313963537b38d8ee504a39962f36c0899e02502e1c5e11",
+          "bytes": 9316
+        },
+        {
+          "relative": "World.Server.pdb",
+          "sha256": "0523ef8e0f136595dc0f092bf8c46149bff011db2888ecef0ab0f41f799f7c58",
+          "bytes": 64100
+        },
+        {
+          "relative": "Microsoft.Data.Sqlite.dll",
+          "sha256": "1078d41c6c0f2cee48a8b706e3a54ce145705993f19f703d2b3bdf2abcc59088",
+          "bytes": 177464
+        },
+        {
+          "relative": "World.Server.staticwebassets.endpoints.json",
+          "sha256": "bf2feb9941aec4747f382b489d02bee160491e29f9f2ef30aa9684e28482deca",
+          "bytes": 84491
+        },
+        {
+          "relative": "SQLitePCLRaw.provider.e_sqlite3.dll",
+          "sha256": "1d4cb69b3aaf6a9cf40dfe179cc16dd678f12bc024b212d4297654e0a29e220d",
+          "bytes": 36864
+        },
+        {
+          "relative": "SQLitePCLRaw.core.dll",
+          "sha256": "b72c9dfe1479a568d6b84e249eaf949e76c757888f8056fb6ddb9c0480e0dd25",
+          "bytes": 51712
+        },
+        {
+          "relative": "World.Server",
+          "sha256": "0a3ce3ce049b27fdf0f0d6eff8144217d8bc5dc5b195d4c213193492e24f583c",
+          "bytes": 78256
+        },
+        {
+          "relative": "wwwroot/resident.html",
+          "sha256": "1c742a92492f816a67a4338bb69e680e110a902807b793c1cc637ebf924b80aa",
+          "bytes": 13328
+        },
+        {
+          "relative": "wwwroot/styles.css.gz",
+          "sha256": "c416114da4d35e842e36fb43a2b4efa660811d149744f8c9d86ac01ba999c160",
+          "bytes": 6150
+        },
+        {
+          "relative": "wwwroot/resident.js.gz",
+          "sha256": "8b4036179cdd3fa1a05b7ab9526228001ead9e9b23eba2d45fe474f4cab38b7a",
+          "bytes": 17649
+        },
+        {
+          "relative": "wwwroot/entry-guide.js.gz",
+          "sha256": "4cacb934762fd756bede8d1bbf38e2226185ebbcab4a2775c2b3908140aa523d",
+          "bytes": 2999
+        },
+        {
+          "relative": "wwwroot/index.html.gz",
+          "sha256": "511bba4ef0fb3d9c21db3edaa25340a90ab69f977b48c9d9de4fa4d98f92e71a",
+          "bytes": 5412
+        },
+        {
+          "relative": "wwwroot/resident.js",
+          "sha256": "8f05d895187786f08036edef9536912e0c8798b93048135f792f30998f98413d",
+          "bytes": 61011
+        },
+        {
+          "relative": "wwwroot/resident.html.gz",
+          "sha256": "35c97469bcb4c152c23c6ac966bae2ef2bbc476cb29b53484dc673f0895a8faa",
+          "bytes": 4333
+        },
+        {
+          "relative": "wwwroot/mosaic.js",
+          "sha256": "8f6ef59b7d9538ee0cb93d0e04b16c55ebdbf41cd04fab8a6296b889052ee08b",
+          "bytes": 4798
+        },
+        {
+          "relative": "wwwroot/mosaic-inbox.js",
+          "sha256": "96a7180337ee21f496ec62a38d85e4cbca5e1aa3c822912480ba36ceb498e1f6",
+          "bytes": 3083
+        },
+        {
+          "relative": "wwwroot/app.js",
+          "sha256": "bdbd751b03854e6ae192ccd5fdf0b9165e20433ed111d069a1d9e1b305f57acd",
+          "bytes": 92077
+        },
+        {
+          "relative": "wwwroot/mosaic.js.gz",
+          "sha256": "8a6214078b4f31bbd2ba0cb027d06031e71c47d0cfa59cf2caf3834c1a09cf35",
+          "bytes": 2098
+        },
+        {
+          "relative": "wwwroot/styles.css",
+          "sha256": "dc2634a1f15e012aa4e638dc35ca0a697a1fea5a6bdb05885eb7a02946c27195",
+          "bytes": 23108
+        },
+        {
+          "relative": "wwwroot/app.js.gz",
+          "sha256": "890164c1cdbbfab46c4274dbc3405d06fab165426a2c1ae81c03c4b4ec651b2f",
+          "bytes": 26143
+        },
+        {
+          "relative": "wwwroot/consent.js.gz",
+          "sha256": "d061b5fa8627a364aacb4be9acdb0b55808253934b2ba0336f2c50b342ab403c",
+          "bytes": 2200
+        },
+        {
+          "relative": "wwwroot/index.html",
+          "sha256": "b1617698950c81f092b91556f1c67b0215900c51cce3f60f888e2315df8ceff2",
+          "bytes": 16364
+        },
+        {
+          "relative": "wwwroot/consent.js",
+          "sha256": "396ad8dca4ea121124e7a771e47c3dd5dd966f71bb67f62eab580a38f3b92d91",
+          "bytes": 5688
+        },
+        {
+          "relative": "wwwroot/entry-guide.js",
+          "sha256": "5bc3a6eef9dc93b22dc0a14c86ee0c6f41013f8e8c2cc5b4cb9edd199236c5a8",
+          "bytes": 6795
+        },
+        {
+          "relative": "wwwroot/mosaic-inbox.js.gz",
+          "sha256": "0307dc06e40575a61618e816ff8f62ddc6d33e9070fa9bb020830251eef5295c",
+          "bytes": 1157
+        },
+        {
+          "relative": "wwwroot/resident.css.gz",
+          "sha256": "cf65d75387d99ebf6c0b2aee02e78cb877e94767da742eeed0aab968e1b4446d",
+          "bytes": 4268
+        },
+        {
+          "relative": "wwwroot/resident.css",
+          "sha256": "cd3986c35631c56a0e9e751edd958c0b5df3b3b4de1c9d40bba906c539d1c83c",
+          "bytes": 15744
+        },
+        {
+          "relative": "wwwroot/reports/mosaic-second.json.gz",
+          "sha256": "947ca052351aadf5c2df887cede19930f81f070ad736ad71c982fecd8ad9013b",
+          "bytes": 2728
+        },
+        {
+          "relative": "wwwroot/reports/consent-proposer.json.gz",
+          "sha256": "55ee609f91469bcdc1f36b4237bb5618e3b262e1fef35ea72f781dea064a69b4",
+          "bytes": 2771
+        },
+        {
+          "relative": "wwwroot/reports/inbox-proposer.json",
+          "sha256": "1dec130cb290c2f4b98ffd5dde968e05d1711dae6ced08705eaedc5c2ac9ee34",
+          "bytes": 16029
+        },
+        {
+          "relative": "wwwroot/reports/postcard-first.json",
+          "sha256": "9122de32b6ebc2ae3850e092499dda558792624f59989c05e3abda1e93708981",
+          "bytes": 10042
+        },
+        {
+          "relative": "wwwroot/reports/activity-demo.json",
+          "sha256": "9d1bd9075c5c9255f46664df0cd5fa5ba692693bf6ceb3aa4f1602ac07fa9f9a",
+          "bytes": 12845
+        },
+        {
+          "relative": "wwwroot/reports/activity-comparison.json",
+          "sha256": "9f3bd2fad3f27c96c9eb99ce1bfc30b93c9902a42860bebca83188c9069f7134",
+          "bytes": 118550
+        },
+        {
+          "relative": "wwwroot/reports/resident-demo.json.gz",
+          "sha256": "10c80b1dabbc6d17dee458902d1ea04b5b5cece2aa125c36e8eb54b506498930",
+          "bytes": 2113
+        },
+        {
+          "relative": "wwwroot/reports/postcard-first.json.gz",
+          "sha256": "fa66ba1390b013059b7451e0d36b4e43038411df73cc03fe114cfb1a4ed32e68",
+          "bytes": 2231
+        },
+        {
+          "relative": "wwwroot/reports/consent-reviewer.json",
+          "sha256": "4c5acda2e9806810d030d191f2d4fd6dbc56eca1647ce3a1b7f26f3e95f4b3bb",
+          "bytes": 19470
+        },
+        {
+          "relative": "wwwroot/reports/resident-demo.json",
+          "sha256": "191ffa5aac83d734be48827cfb239c13c548f33e70b44d4fd90d51464b3ce71f",
+          "bytes": 11392
+        },
+        {
+          "relative": "wwwroot/reports/inbox-reviewer.json",
+          "sha256": "8f1e1a784c541abb07fbd2be09e5c3c5b26ad3ffab77ce6962883f879277cb97",
+          "bytes": 78304
+        },
+        {
+          "relative": "wwwroot/reports/postcard-second.json.gz",
+          "sha256": "5b82f36d74b070e75718cd5619d2fb1de54cd5df2f3f53afd9997d38171a614a",
+          "bytes": 2377
+        },
+        {
+          "relative": "wwwroot/reports/postcard-second.json",
+          "sha256": "13084fc201e434f5e26b8f66da977fd9820a2dae97cc693ed2a7b229e408bebe",
+          "bytes": 9907
+        },
+        {
+          "relative": "wwwroot/reports/consent-reviewer.json.gz",
+          "sha256": "8c0d78c1173bb109516eeec9fa36389a0ad356e02298e56e4ccc3bb606731335",
+          "bytes": 3176
+        },
+        {
+          "relative": "wwwroot/reports/mosaic-first.json.gz",
+          "sha256": "cbcd4073bfae82f55f79074fd18804ff128ebfa6de589b873d9ea9e4fe24e3c2",
+          "bytes": 2663
+        },
+        {
+          "relative": "wwwroot/reports/activity-comparison.json.gz",
+          "sha256": "8c2b8d908932dec7c74938021e185b1f37a566396c02031ae8e706df89b5b6bb",
+          "bytes": 8174
+        },
+        {
+          "relative": "wwwroot/reports/mosaic-second.json",
+          "sha256": "88f9268d4ab4d16321c38637d504ca390759c4cb50c7473407051e162b9b475f",
+          "bytes": 16399
+        },
+        {
+          "relative": "wwwroot/reports/inbox-reviewer.json.gz",
+          "sha256": "8ace67f79b3176e41da0d65c33c05a57f0109be4238738a9b49e29bead0b8230",
+          "bytes": 9391
+        },
+        {
+          "relative": "wwwroot/reports/consent-proposer.json",
+          "sha256": "7037570544ce1e34c1027bcbb43f9b7ec32120ed32efebac5a40f5c6686e8d4a",
+          "bytes": 16007
+        },
+        {
+          "relative": "wwwroot/reports/activity-demo.json.gz",
+          "sha256": "2522da8b8214d89d0ea0946aa6d2b0f68c96528695d13e08185951ec5bfed80b",
+          "bytes": 2504
+        },
+        {
+          "relative": "wwwroot/reports/inbox-proposer.json.gz",
+          "sha256": "7eb01c98e14ca5d6e98997fec4e681c2192ff05912d8b365f0338a002281f3c5",
+          "bytes": 2784
+        },
+        {
+          "relative": "wwwroot/reports/mosaic-first.json",
+          "sha256": "1bda55c79568c74cbdbfbaeceaca94cfabad94af16099869bf1ee8f57e10ff58",
+          "bytes": 16591
+        },
+        {
+          "relative": "runtimes/linux-riscv64/native/libe_sqlite3.so",
+          "sha256": "a7ac179be5d4a25cea62781fab3a0266903745f5929e0c880dd20fd0e84f2593",
+          "bytes": 1291936
+        },
+        {
+          "relative": "runtimes/win-arm64/native/e_sqlite3.dll",
+          "sha256": "a59c169757d12a8bfc30c1760b8dd1f04cf9519f3774bdee6a9b595469f22be6",
+          "bytes": 1816064
+        },
+        {
+          "relative": "runtimes/android-x86/native/libe_sqlite3.so",
+          "sha256": "43731d621cc2b1fbde62bae8ff465cfe0fd1ea9c2f25d566d3e61e495d226d9f",
+          "bytes": 1820380
+        },
+        {
+          "relative": "runtimes/ios-arm/native/e_sqlite3.a",
+          "sha256": "0c2cf95c369c37330ecfbc0870c1d214ed727b17bf7b86bce0bac94db4a9acd9",
+          "bytes": 2219032
+        },
+        {
+          "relative": "runtimes/ios-arm64/native/e_sqlite3.a",
+          "sha256": "0c2cf95c369c37330ecfbc0870c1d214ed727b17bf7b86bce0bac94db4a9acd9",
+          "bytes": 2219032
+        },
+        {
+          "relative": "runtimes/iossimulator-x64/native/e_sqlite3.a",
+          "sha256": "87076969e5e0ffc22877e6a5603131f34f2e33bdfc61d11b77dba7c0fcc8f8e1",
+          "bytes": 4275720
+        },
+        {
+          "relative": "runtimes/linux-musl-s390x/native/libe_sqlite3.so",
+          "sha256": "31d53eafaefec15651dac766665171e7d8f2dd4f1c021c7a21e754aba2091b17",
+          "bytes": 1685800
+        },
+        {
+          "relative": "runtimes/maccatalyst-arm64/native/libe_sqlite3.dylib",
+          "sha256": "144793f8f993837a66249c0bb8898dd3171904cc796048acd1bede20ce1dab69",
+          "bytes": 1695264
+        },
+        {
+          "relative": "runtimes/linux-musl-arm64/native/libe_sqlite3.so",
+          "sha256": "91e5ff240be8cdc24068c149754d3506dd3f7098cb0fd3d6606c4f0ce3b5fd42",
+          "bytes": 1450744
+        },
+        {
+          "relative": "runtimes/osx-arm64/native/libe_sqlite3.dylib",
+          "sha256": "2b27f45233818ae11d97016ca2a16dffcf63a53c46f60bcd52b342fc187b0c83",
+          "bytes": 1696624
+        },
+        {
+          "relative": "runtimes/linux-musl-riscv64/native/libe_sqlite3.so",
+          "sha256": "033f84cbe93cb46eb0b5a96d5acbf1089f1716e9e0e9ee117d9d039c3c58060f",
+          "bytes": 1015928
+        },
+        {
+          "relative": "runtimes/browser-wasm/nativeassets/net9.0/e_sqlite3.a",
+          "sha256": "73675fcf71a65531ea10763f2029300bb4dc1528c24fc9bebc6bb2cbccf7656f",
+          "bytes": 1309264
+        },
+        {
+          "relative": "runtimes/linux-x86/native/libe_sqlite3.so",
+          "sha256": "0269d385a7a8cbbc385c4688bf57c030351036aaae8c6e06f02ecf2d5ada96de",
+          "bytes": 1548016
+        },
+        {
+          "relative": "runtimes/linux-x64/native/libe_sqlite3.so",
+          "sha256": "eddcd4aa561d5b8f252db77e8272e7d1aed96bcab9fda3f177ca542f916290bf",
+          "bytes": 1470824
+        },
+        {
+          "relative": "runtimes/linux-arm64/native/libe_sqlite3.so",
+          "sha256": "66436d4bd02b1b1c25b964a744b5230122bca6a5d006aa80add129ef892c273a",
+          "bytes": 1534416
+        },
+        {
+          "relative": "runtimes/android-arm/native/libe_sqlite3.so",
+          "sha256": "6846178c7337b5b9a3c9d7090808a6621dd09db6879efdf16075ce2afc260212",
+          "bytes": 1246788
+        },
+        {
+          "relative": "runtimes/android-x64/native/libe_sqlite3.so",
+          "sha256": "8088b315ee0b7db13c053051dae063c8bdf9318c25d3f8b9024b9786bd27cab1",
+          "bytes": 1801864
+        },
+        {
+          "relative": "runtimes/maccatalyst-x64/native/libe_sqlite3.dylib",
+          "sha256": "ac224e3e18f8227dc964b3cf29a0f6244e475af37eed5744708e222fe9691c19",
+          "bytes": 1724352
+        },
+        {
+          "relative": "runtimes/linux-armel/native/libe_sqlite3.so",
+          "sha256": "f6cd622eee5d5df12419c7a11eaf4a17ed1948c28f41db8395959682978c870a",
+          "bytes": 1375344
+        },
+        {
+          "relative": "runtimes/linux-s390x/native/libe_sqlite3.so",
+          "sha256": "55296ed2a74253a8e998d2ca8d4d5471e03c573bdd109ee83f089499ef9aedf7",
+          "bytes": 1655816
+        },
+        {
+          "relative": "runtimes/win-x64/native/e_sqlite3.dll",
+          "sha256": "6ad8e149f8ce3ed3716402b4b3a2268ebbdc7b64391b5fafed747e03bb1b9418",
+          "bytes": 1972224
+        },
+        {
+          "relative": "runtimes/osx-x64/native/libe_sqlite3.dylib",
+          "sha256": "20143ee08a1af0a510368e14109f512d7c7870481ba16937ae5733a415d0a201",
+          "bytes": 1724472
+        },
+        {
+          "relative": "runtimes/iossimulator-arm64/native/e_sqlite3.a",
+          "sha256": "87076969e5e0ffc22877e6a5603131f34f2e33bdfc61d11b77dba7c0fcc8f8e1",
+          "bytes": 4275720
+        },
+        {
+          "relative": "runtimes/android-arm64/native/libe_sqlite3.so",
+          "sha256": "52d49cc84918c112d5713a6de83269d33f03c4c7c3ed721fbd2c8c00adf4ca80",
+          "bytes": 1772160
+        },
+        {
+          "relative": "runtimes/linux-musl-arm/native/libe_sqlite3.so",
+          "sha256": "98e03c2b80ae3924d1ed6da32d036f933db48b28ee2ef55c417f48ef0a382c62",
+          "bytes": 1322584
+        },
+        {
+          "relative": "runtimes/linux-arm/native/libe_sqlite3.so",
+          "sha256": "9a697f00c70420314a3604cea281c8859cb925680f935c23f6261e9a6f769368",
+          "bytes": 982192
+        },
+        {
+          "relative": "runtimes/linux-ppc64le/native/libe_sqlite3.so",
+          "sha256": "9d5e453ad17fb857b123da69adfa067e55bb716816979e4131fe76e513866f53",
+          "bytes": 1937448
+        },
+        {
+          "relative": "runtimes/win-x86/native/e_sqlite3.dll",
+          "sha256": "8d76b5d0faa6f3a3c6204605d1a3d31dad57a0104b92fce3df19b12bdd983ae7",
+          "bytes": 1529344
+        },
+        {
+          "relative": "runtimes/linux-musl-x64/native/libe_sqlite3.so",
+          "sha256": "7d275542af8aac5a19f5a873da7cdadcc20c453fb52b7df57bd747e2f02ab92b",
+          "bytes": 1445376
+        },
+        {
+          "relative": "runtimes/linux-mips64/native/libe_sqlite3.so",
+          "sha256": "f66410709bd4b5ec6b9fb9b4f89f1e49c842e9f9fa21c95766f1ea20c66074ba",
+          "bytes": 1756616
+        }
+      ]
+    }
+  ],
+  "naturalHeadFilesUnchanged": true,
+  "logicalBytesRemoved": 110674530
+}

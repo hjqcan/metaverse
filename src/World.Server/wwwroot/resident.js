@@ -17,6 +17,15 @@
   const structures = { "platform.v1": { label: "平台", definition: "platform", wood: 3 }, "bridge.v1": { label: "木桥", definition: "bridge", wood: 6 } };
   const workshopPermissions = { build_workshop: "allowWorkshopBuild", craft_tool: "allowCraftTool", deposit_wood: "allowDepositWood", withdraw_wood: "allowWithdrawWood" };
   const workshopNames = { build_workshop: "建造工坊家具", craft_tool: "制作本人木工锤", deposit_wood: "存入本人箱", withdraw_wood: "从本人箱取出" };
+  const forestryPermissions = { craft_forestry_tool: "allowCraftForestryTool", reserve_forest: "allowReserveForest", cancel_forest_reservation: "allowCancelForestReservation", collect_seed: "allowCollectSeed", plant_tree: "allowPlantTree", harvest_tree: "allowHarvestTree" };
+  const forestryNames = { craft_forestry_tool: "制作本人木斧", reserve_forest: "申请原林业预约", cancel_forest_reservation: "取消原林业预约", collect_seed: "领取原预约树种", plant_tree: "在原林地种植", harvest_tree: "收获原树木" };
+  const forestStateNames = { queued: "排队中", preparing: "准备中", growing: "生长中", harvesting: "待收获", completed: "已完成", cancelled: "已取消", expired: "已到期", mature: "成熟", harvested: "已收获" };
+  const forestPlots = { "forest-west-north": [7, 12], "forest-west-south": [7, 16], "forest-east-north": [21, 7], "forest-east-far": [29, 5] };
+  const forestPolicy = { seedIntervalMs: 60000, nurseryCapacity: 4, preparationLeaseMs: 90000, growthMs: 120000, harvestLeaseMs: 60000, woodPerTree: 3, seedsPerHarvest: 1, groupLimit: 1, interactReach: 1.6 };
+  const forestMaterials = ["wood", "woodHarvested", "seedsCollected", "seedsPlanted", "seedsHarvested"];
+  const reservationKeys = "reservationId actorId operatorId commandId requestedAtMs queueOrder status plotId plantId reservedSeed grantedAtMs expiresAtMs";
+  const reservationIdentityKeys = "reservationId actorId operatorId commandId requestedAtMs queueOrder";
+  const plantIdentityKeys = "plantId plotId planterActorId operatorId reservationId commandId plantedAtMs maturesAtMs stateVersion eventCursor";
   const actionNames = { paint_entity_canvas: "绘制平台地画", append_entity_note: "发表旧桥手记", reserve_material: "预约材料", harvest_material: "按原预约领取", walk: "行走", move: "移动", claim: "领取木材", gather: "采集木材", transfer: "赠送木材", build: "建造", visit: "到访", postcard: "分享手记", mosaic: "绘制画布", mosaic_propose: "提出修改建议", mosaic_review: "审阅修改建议", observe: "观察", wait: "等待" };
   const stepStatuses = { committed: "已提交", rejected: "已拒绝", unknown: "结果未知", pending: "待确认", failed: "失败" };
   const reasonNames = { round_trip_verified: "已核验到达目标并返回原起点", max_steps: "本次分段步数已到，等待恢复" };
@@ -53,6 +62,201 @@
   const point = v => Array.isArray(v) && v.length === 2 && v.every(number);
   const wood = v => integer(v) && v <= 12;
   const distance = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
+  const subset = (v, keys) => v === null ? null : Object.fromEntries(keys.split(" ").map(k => [k, v[k]]));
+  const forestRectangle = p => [p[0] - 1.5, p[1] - 1.5, p[0] + 1.5, p[1] + 1.5];
+  function forestryAction(a) {
+    if (!object(a) || a.capabilityVersion !== 1 || !Object.hasOwn(forestryPermissions, a.type)) return false;
+    const keys = { craft_forestry_tool: "entityId recipeId", reserve_forest: "", cancel_forest_reservation: "reservationId", collect_seed: "sourceId reservationId", plant_tree: "plotId reservationId", harvest_tree: "plantId reservationId toolId" }[a.type];
+    return fields(a, `type capabilityVersion${keys ? ` ${keys}` : ""}`)
+      && keys.split(" ").filter(k => k && k !== "recipeId").every(k => identifier(a[k]))
+      && (a.type !== "craft_forestry_tool" || a.recipeId === "wooden_axe.v1")
+      && (a.type !== "collect_seed" || a.sourceId === "nursery-west")
+      && (a.type !== "plant_tree" || Object.hasOwn(forestPlots, a.plotId));
+  }
+  function forestTool(t) {
+    return fields(t, "toolId definitionId definitionVersion ownerActorId embodiedWood workbenchId commandId stateVersion eventCursor")
+      && [t.toolId, t.ownerActorId, t.workbenchId, t.commandId].every(identifier) && t.definitionId === "wooden_axe"
+      && t.definitionVersion === 1 && t.embodiedWood === 2 && integer(t.stateVersion) && integer(t.eventCursor) && t.eventCursor > 0;
+  }
+  function forestReservation(r) {
+    if (!fields(r, reservationKeys) || ![r.reservationId, r.actorId, r.operatorId, r.commandId].every(identifier)
+      || ![r.requestedAtMs, r.queueOrder, r.reservedSeed].every(integer) || r.queueOrder < 1 || r.reservedSeed > 1
+      || !["queued", "preparing", "growing", "harvesting", "completed", "cancelled", "expired"].includes(r.status)
+      || !(r.plotId === null || Object.hasOwn(forestPlots, r.plotId)) || !(r.plantId === null || identifier(r.plantId))
+      || ![r.grantedAtMs, r.expiresAtMs].every(v => v === null || integer(v))
+      || r.grantedAtMs !== null && (r.plotId === null || r.grantedAtMs < r.requestedAtMs)
+      || r.expiresAtMs !== null && (r.grantedAtMs === null || r.expiresAtMs < r.grantedAtMs)) return false;
+    if (r.status === "queued") return [r.plotId, r.plantId, r.grantedAtMs, r.expiresAtMs].every(v => v === null) && r.reservedSeed === 0;
+    if (r.status === "preparing") return Object.hasOwn(forestPlots, r.plotId) && r.plantId === null && integer(r.grantedAtMs) && r.expiresAtMs === r.grantedAtMs + 90000;
+    if (["growing", "harvesting"].includes(r.status)) return Object.hasOwn(forestPlots, r.plotId) && identifier(r.plantId)
+      && integer(r.grantedAtMs) && r.reservedSeed === 0 && (r.status === "growing" ? r.expiresAtMs === null : integer(r.expiresAtMs));
+    return r.reservedSeed === 0;
+  }
+  function forestPlant(p) {
+    if (!fields(p, `${plantIdentityKeys} state standingWood matureEventCursor harvestActorId harvestCommandId harvestEventCursor`)
+      || !Object.hasOwn(forestPlots, p.plotId) || ![p.plantId, p.planterActorId, p.operatorId, p.reservationId, p.commandId].every(identifier)
+      || ![p.plantedAtMs, p.maturesAtMs, p.standingWood, p.stateVersion, p.eventCursor].every(integer)
+      || p.eventCursor < 1 || p.maturesAtMs !== p.plantedAtMs + 120000 || !["growing", "mature", "harvested"].includes(p.state)) return false;
+    if (p.state === "growing") return p.standingWood === 0 && [p.matureEventCursor, p.harvestActorId, p.harvestCommandId, p.harvestEventCursor].every(v => v === null);
+    if (!integer(p.matureEventCursor) || p.matureEventCursor <= p.eventCursor) return false;
+    return p.state === "mature" ? p.standingWood === 3 && [p.harvestActorId, p.harvestCommandId, p.harvestEventCursor].every(v => v === null)
+      : p.standingWood === 0 && identifier(p.harvestActorId) && identifier(p.harvestCommandId) && integer(p.harvestEventCursor) && p.harvestEventCursor > p.matureEventCursor;
+  }
+  const forestCost = a => ({ wood: a.type === "craft_forestry_tool" ? 2 : 0, woodHarvested: a.type === "harvest_tree" ? 3 : 0,
+    seedsCollected: a.type === "collect_seed" ? 1 : 0, seedsPlanted: a.type === "plant_tree" ? 1 : 0, seedsHarvested: a.type === "harvest_tree" ? 1 : 0 });
+  function forestObservation(w, m) {
+    const c = w.forestry, n = c?.nursery;
+    if (!fields(c, "capability version adoption policy nursery plots plants reservations seeds tools recipes") || c.capability !== "forestry-v1" || c.version !== 1
+      || !exact(c.policy, forestPolicy) || !fields(c.adoption, "worldInstanceId adoptedServiceMs stateVersion eventCursor baseStorageVersion")
+      || c.adoption.worldInstanceId !== m.worldInstanceId || c.adoption.baseStorageVersion !== 13
+      || ![c.adoption.adoptedServiceMs, c.adoption.stateVersion, c.adoption.eventCursor, c.seeds].every(integer) || c.adoption.eventCursor < 1
+      || c.adoption.stateVersion > w.observedStateVersion || w.observedSelf.seeds !== c.seeds
+      || !exact(c.recipes, [{ id: "wooden_axe.v1", definitionId: "wooden_axe", woodCost: 2, requiresWorkbench: true }])
+      || !fields(n, "sourceId position radius buildExclusion serviceMs nextProductionAtMs productionPeriod generatedSeeds stockSeeds reservedSeeds freeSeeds")
+      || n.sourceId !== "nursery-west" || !exact(n.position, [7, 6]) || n.radius !== .3 || !exact(n.buildExclusion, forestRectangle([7, 6]))
+      || ![n.serviceMs, n.nextProductionAtMs, n.productionPeriod, n.generatedSeeds, n.stockSeeds, n.reservedSeeds, n.freeSeeds].every(integer)
+      || n.serviceMs < c.adoption.adoptedServiceMs || n.nextProductionAtMs <= n.serviceMs || n.stockSeeds > 4 || n.reservedSeeds > n.stockSeeds || n.freeSeeds !== n.stockSeeds - n.reservedSeeds
+      || !Array.isArray(c.plots) || c.plots.length !== 4 || new Set(c.plots.map(p => p.plotId)).size !== 4
+      || !c.plots.every(p => fields(p, "plotId position radius buildExclusion") && Object.hasOwn(forestPlots, p.plotId)
+        && exact(p.position, forestPlots[p.plotId]) && p.radius === .45 && exact(p.buildExclusion, forestRectangle(p.position)))
+      || !Array.isArray(c.plants) || c.plants.length > 4 || !c.plants.every(p => forestPlant(p) && p.state !== "harvested" && p.stateVersion <= w.observedStateVersion && p.plantedAtMs <= n.serviceMs)
+      || new Set(c.plants.map(p => p.plantId)).size !== c.plants.length || new Set(c.plants.map(p => p.plotId)).size !== c.plants.length
+      || !Array.isArray(c.reservations) || !c.reservations.every(r => forestReservation(r) && ["queued", "preparing", "growing", "harvesting"].includes(r.status))
+      || new Set(c.reservations.map(r => r.reservationId)).size !== c.reservations.length || new Set(c.reservations.map(r => r.operatorId)).size !== c.reservations.length
+      || new Set(c.reservations.filter(r => r.plotId !== null).map(r => r.plotId)).size !== c.reservations.filter(r => r.plotId !== null).length
+      || c.reservations.reduce((sum, r) => sum + r.reservedSeed, 0) !== n.reservedSeeds
+      || !Array.isArray(c.tools) || !c.tools.every(t => forestTool(t) && t.ownerActorId === m.actorId && t.stateVersion <= w.observedStateVersion)
+      || new Set(c.tools.map(t => t.toolId)).size !== c.tools.length) return false;
+    const expected = [{ id: "nursery-west", kind: "forestry_nursery", position: [7, 6], radius: .3 },
+      ...c.plants.map(p => ({ id: p.plantId, kind: "forestry_tree", position: forestPlots[p.plotId], radius: .45 }))];
+    const obstacles = w.terrain.obstacles.filter(o => ["forestry_nursery", "forestry_tree"].includes(o.kind));
+    return obstacles.length === expected.length && expected.every(e => obstacles.filter(o => exact(o, e)).length === 1)
+      && c.reservations.every(r => !["growing", "harvesting"].includes(r.status)
+        || c.plants.some(p => p.plantId === r.plantId && p.plotId === r.plotId && (p.state === "growing") === (r.status === "growing")));
+  }
+  function forestryAssess(data) {
+    const { mission: m, facts: f, budget: b, steps, world: w } = data;
+    const uses = m.forestryVersion !== undefined || m.goal?.forestry !== undefined;
+    if (!uses) return { uses: false, consistent: true, verified: false, complete: true };
+    try {
+      const task = m.goal.forestry, action = task.action, cost = forestCost(action), records = [], ids = new Set();
+      let consistent = m.forestryVersion === 1 && m.rulesVersion === "r10" && m.preconditionMode === "actor-state-v1"
+        && task.worldInstanceId === m.worldInstanceId && task.actorId === m.actorId && m.allowBuild === false
+        && Object.entries(forestryPermissions).every(([kind, p]) => m[p] === (kind === action.type))
+        && b.used.commands === steps.length && b.used.modelCalls === 0 && b.limits.modelCalls === 0
+        && b.used.queries >= 1 + steps.length && ["commands", "queries", ...forestMaterials].every(k => b.used[k] <= b.limits[k])
+        && integer(w.observedStateVersion) && w.observedStateVersion <= f.endStateVersion && forestObservation(w, m)
+        && fields(w.observedSelf, "actorId position inventoryWood seeds") && w.observedSelf.actorId === m.actorId
+        && point(w.observedSelf.position) && wood(w.observedSelf.inventoryWood) && integer(w.observedSelf.seeds);
+      const envelope = r => object(r) && r.schemaVersion === 1 && r.rulesVersion === "r10" && r.identity?.actorId === m.actorId
+        && r.identity?.operatorId === m.operatorId && integer(r.stateVersion) && integer(r.eventCursor) && r.error === null;
+      let position = m.origin, inventory = steps[0]?.before?.inventoryWood, seeds = steps[0]?.before?.seeds, version = f.startStateVersion;
+      for (const [index, s] of steps.entries()) {
+        const q = s.request, before = s.before, r = s.receipt;
+        consistent &&= s.index === index + 1 && !ids.has(s.commandId) && identifier(s.commandId) && object(before)
+          && before.worldInstanceId === m.worldInstanceId && before.actorId === m.actorId && before.operatorId === m.operatorId
+          && exact(before.position, position) && wood(before.inventoryWood) && before.inventoryWood === inventory
+          && integer(before.seeds) && before.seeds === seeds && integer(before.stateVersion) && before.stateVersion >= version
+          && fields(q, "schemaVersion rulesVersion commandId expectedStateVersion preconditionMode action")
+          && q.schemaVersion === 1 && q.rulesVersion === "r10" && q.commandId === s.commandId && exact(q.action, s.action)
+          && q.preconditionMode === m.preconditionMode && q.expectedStateVersion === version && s.expectedStateVersion === version;
+        ids.add(s.commandId);
+        if (s.status !== "committed") {
+          consistent &&= index === steps.length - 1 && s.forestryEvidence === null && s.forestryProof === null
+            && exact(s.position, position) && s.inventoryWood === inventory && s.seeds === seeds;
+          continue;
+        }
+        consistent &&= envelope(r) && r.status === "committed" && r.commandId === s.commandId && r.stateVersion === s.stateVersion
+          && s.receiptInstanceId === m.worldInstanceId && exact(r.execution, s.execution) && r.result?.action === s.action.type
+          && r.execution?.observedStateVersion === version && r.execution?.appliedOnStateVersion >= before.stateVersion;
+        if (s.action.type === "walk") {
+          const end = r.result?.position;
+          consistent &&= fields(s.action, "type to") && point(s.action.to) && point(end) && r.result.blocked === false && s.blocked === false
+            && number(before.maxStepDistance) && before.maxStepDistance > 0 && before.maxStepDistance <= .6
+            && distance(position, end) <= before.maxStepDistance + 1e-6
+            && distance(position, end) + distance(end, s.action.to) <= distance(position, s.action.to) + 1e-6
+            && s.forestryProof === null && s.forestryEvidence === null;
+          position = end;
+        } else {
+          const p = s.forestryProof, d = r.result?.forestryAction;
+          consistent &&= forestryAction(s.action) && exact(s.action, action) && fields(r.result, "action forestryAction")
+            && fields(d, "capabilityVersion authorActorId operatorId commandId action position serviceMs stateVersion eventCursor completedAtUtc inventoryWoodBefore inventoryWood seedsBefore seeds nurseryStockBefore nurseryStock reservationBefore reservation plantBefore plant tool")
+            && d.capabilityVersion === 1 && d.authorActorId === m.actorId && d.operatorId === m.operatorId && d.commandId === s.commandId
+            && exact(d.action, action) && exact(before.action, action) && exact(d.position, position) && d.inventoryWoodBefore === inventory && d.seedsBefore === seeds
+            && wood(d.inventoryWood) && integer(d.seeds) && integer(d.serviceMs) && d.serviceMs >= before.serviceMs
+            && integer(d.nurseryStockBefore) && d.nurseryStockBefore <= 4 && integer(d.nurseryStock) && d.nurseryStock <= 4
+            && d.inventoryWood === inventory - cost.wood + cost.woodHarvested && d.seeds === seeds + cost.seedsCollected - cost.seedsPlanted + cost.seedsHarvested
+            && d.nurseryStock === d.nurseryStockBefore - cost.seedsCollected
+            && d.stateVersion === s.stateVersion && d.eventCursor === r.eventCursor && Number.isFinite(Date.parse(d.completedAtUtc))
+            && fields(p, "receiptInstanceId detailInstanceId eventInstanceId detail events")
+            && [p.receiptInstanceId, p.detailInstanceId, p.eventInstanceId].every(v => v === m.worldInstanceId)
+            && envelope(p.detail) && envelope(p.events) && exact(p.detail.forestryAction, d)
+            && exact(s.forestryEvidence, { worldInstanceId: m.worldInstanceId, ...d })
+            && [p.detail, p.events].every(v => v.stateVersion >= d.stateVersion && v.eventCursor >= d.eventCursor)
+            && Array.isArray(p.events.events) && exact(p.events.events.filter(e => e.seq === d.eventCursor), [{ seq: d.eventCursor,
+              stateVersion: d.stateVersion, actorId: m.actorId, commandId: s.commandId, type: "forestryActionCompleted", forestryAction: d }])
+            && [d.reservationBefore, d.reservation].every(v => v === null || forestReservation(v))
+            && [d.plantBefore, d.plant].every(v => v === null || forestPlant(v)) && (d.tool === null || forestTool(d.tool))
+            && exact(before.adoption, w.forestry.adoption)
+            && ["toolIds", "plantIds", "reservationIds"].every(k => Array.isArray(before[k]) && before[k].every(identifier) && new Set(before[k]).size === before[k].length);
+          const rb = d.reservationBefore, ra = d.reservation, pb = d.plantBefore, pa = d.plant, tool = d.tool;
+          const remote = ["reserve_forest", "cancel_forest_reservation"].includes(action.type);
+          consistent &&= remote ? before.target === null && exact(m.goal.target, m.origin) : exact(before.target.position, m.goal.target) && distance(position, m.goal.target) <= 1.6 + 1e-8;
+          if (action.type === "craft_forestry_tool") consistent &&= [rb, ra, pb, pa].every(v => v === null)
+            && workshopEntity(before.target) && before.target.definitionId === "workbench" && before.target.entityId === action.entityId
+            && forestTool(tool) && !before.toolIds.includes(tool.toolId) && tool.ownerActorId === m.actorId && tool.workbenchId === action.entityId
+            && tool.commandId === s.commandId && tool.stateVersion === d.stateVersion && tool.eventCursor === d.eventCursor;
+          else if (action.type === "reserve_forest") consistent &&= [rb, pb, pa, tool].every(v => v === null) && forestReservation(ra)
+            && ra.status === "queued" && !before.reservationIds.includes(ra.reservationId) && ra.actorId === m.actorId && ra.operatorId === m.operatorId
+            && ra.commandId === s.commandId && ra.requestedAtMs === d.serviceMs && ra.queueOrder === d.eventCursor;
+          else {
+            consistent &&= forestReservation(rb) && forestReservation(ra) && rb.reservationId === action.reservationId
+              && rb.actorId === m.actorId && rb.operatorId === m.operatorId && before.reservationIds.includes(rb.reservationId)
+              && exact(subset(rb, reservationIdentityKeys), before.reservationIdentity) && exact(subset(ra, reservationIdentityKeys), before.reservationIdentity)
+              && (rb.expiresAtMs === null || d.serviceMs < rb.expiresAtMs);
+            if (action.type === "cancel_forest_reservation") consistent &&= ["queued", "preparing"].includes(rb.status) && ra.status === "cancelled"
+              && (before.reservation.status !== "preparing" || exact(rb, before.reservation)) && [pb, pa, tool].every(v => v === null)
+              && exact(ra, { ...rb, status: "cancelled", reservedSeed: 0, expiresAtMs: ra.expiresAtMs }) && [null, rb.expiresAtMs].includes(ra.expiresAtMs);
+            else {
+              consistent &&= exact(rb, before.reservation);
+              if (action.type === "collect_seed") consistent &&= rb.status === "preparing" && rb.reservedSeed === 1
+                && exact(ra, { ...rb, reservedSeed: 0 }) && [pb, pa, tool].every(v => v === null)
+                && exact(before.target, { sourceId: "nursery-west", position: [7, 6], radius: .3, buildExclusion: forestRectangle([7, 6]) });
+              else {
+                const plotId = action.type === "plant_tree" ? action.plotId : pb.plotId;
+                consistent &&= exact(before.target, { plotId, position: forestPlots[plotId], radius: .45, buildExclusion: forestRectangle(forestPlots[plotId]) }) && rb.plotId === plotId;
+                if (action.type === "plant_tree") consistent &&= rb.status === "preparing" && seeds >= 1 && pb === null && tool === null
+                  && forestPlant(pa) && !before.plantIds.includes(pa.plantId) && pa.plotId === action.plotId && pa.planterActorId === m.actorId
+                  && pa.operatorId === m.operatorId && pa.reservationId === action.reservationId && pa.commandId === s.commandId
+                  && pa.plantedAtMs === d.serviceMs && pa.stateVersion === d.stateVersion && pa.eventCursor === d.eventCursor && pa.state === "growing"
+                  && exact(ra, { ...rb, status: "growing", plantId: pa.plantId, reservedSeed: 0, expiresAtMs: null });
+                else consistent &&= rb.status === "harvesting" && rb.plantId === action.plantId && pb.state === "mature" && pb.plantId === action.plantId
+                  && exact(pb, before.plant) && exact(subset(pb, plantIdentityKeys), before.plantIdentity) && d.serviceMs >= pb.maturesAtMs
+                  && before.plantIds.includes(pb.plantId) && forestTool(tool) && exact(tool, before.tool) && tool.toolId === action.toolId && tool.ownerActorId === m.actorId
+                  && before.toolIds.includes(tool.toolId) && exact(pa, { ...pb, state: "harvested", standingWood: 0, harvestActorId: m.actorId,
+                    harvestCommandId: s.commandId, harvestEventCursor: d.eventCursor })
+                  && exact(ra, { ...rb, status: "completed", reservedSeed: 0, expiresAtMs: ra.expiresAtMs }) && [null, rb.expiresAtMs].includes(ra.expiresAtMs);
+              }
+            }
+          }
+          inventory = d.inventoryWood; seeds = d.seeds; records.push(s.forestryEvidence);
+        }
+        version = s.stateVersion;
+        consistent &&= exact(s.position, position) && s.inventoryWood === inventory && s.seeds === seeds;
+      }
+      const actualPosition = w.observedStateVersion >= version ? w.observedSelf.position : position;
+      const record = records[0], done = records.length === 1, returned = distance(actualPosition, m.origin) <= .06;
+      consistent &&= records.length <= 1 && f.forestryCompleted === done && f.goalReached === done && f.returned === returned
+        && exact(f.forestryAction, record ?? null) && forestMaterials.every(k => b.used[k] === (done ? cost[k] : 0))
+        && forestMaterials.filter(k => k !== "wood").every(k => f[k] === (done ? cost[k] : 0))
+        && exact(f.createdEntityIds, []) && exact(f.createdToolIds, done && action.type === "craft_forestry_tool" ? [record.tool.toolId] : [])
+        && exact(f.createdPlantIds, done && action.type === "plant_tree" ? [record.plant.plantId] : [])
+        && exact(f.createdReservationIds, done && action.type === "reserve_forest" ? [record.reservation.reservationId] : [])
+        && (!done || b.used.queries >= steps.length + 3);
+      return { uses, consistent: Boolean(consistent), verified: Boolean(consistent && done),
+        complete: Boolean(consistent && done && (!task.returnToOrigin || returned) && steps.every(s => s.status === "committed")) };
+    } catch { return { uses, consistent: false, verified: false, complete: false }; }
+  }
   function workshopAction(a) {
     if (!object(a) || a.capabilityVersion !== 1 || !Object.hasOwn(workshopPermissions, a.type)) return false;
     if (a.type === "build_workshop") return fields(a, "type capabilityVersion recipeId at toolId") && point(a.at)
@@ -182,6 +386,19 @@
     require(integer(w.width) && integer(w.height) && w.width >= 1 && w.height >= 1 && w.width <= 128 && w.height <= 128, "地图尺寸应为 1—128 的整数。");
     const free = continuous(w), maxCommands = free ? 1000 : 100;
     const workshop = m.workshopVersion !== undefined || m.goal?.workshop !== undefined;
+    const forestry = m.forestryVersion !== undefined || m.goal?.forestry !== undefined;
+    if (forestry) {
+      const task = m.goal?.forestry;
+      require(!workshop && m.forestryVersion === 1 && fields(task, "worldInstanceId actorId action waitForReady returnToOrigin") && forestryAction(task.action)
+        && task.worldInstanceId === m.worldInstanceId && task.actorId === m.actorId && [task.returnToOrigin, task.waitForReady].every(v => typeof v === "boolean")
+        && m.allowBuild === false && Object.entries(forestryPermissions).every(([kind, p]) => m[p] === (kind === task.action.type))
+        && identifier(m.operatorId), "林业任务须绑定原实例、居民、单一动作、等待与返回选项和独立权限。");
+      require(object(b.limits) && object(b.used) && b.limits.modelCalls === 0 && b.used.modelCalls === 0
+        && forestMaterials.every(k => integer(b.limits[k]) && b.limits[k] <= (k.startsWith("seeds") ? 4 : 12) && integer(b.used[k]))
+        && integer(b.limits.queries) && b.limits.queries >= 1 && b.limits.queries <= 5000 && integer(b.used.queries), "林业固定任务需要零模型、独立木材树种与累计查询预算。");
+      require(typeof f.forestryCompleted === "boolean" && forestMaterials.filter(k => k !== "wood").every(k => integer(f[k]))
+        && ["createdToolIds", "createdPlantIds", "createdReservationIds"].every(k => Array.isArray(f[k]) && f[k].every(identifier)), "林业动作事实或材料计数格式不正确。");
+    }
     if (workshop) {
       const task = m.goal?.workshop;
       require(m.workshopVersion === 1 && fields(task, "worldInstanceId actorId action returnToOrigin") && workshopAction(task.action)
@@ -230,7 +447,7 @@
     require(f.mosaicReview === undefined || f.mosaicReview === null || consent.validReview(f.mosaicReview), "审阅记录不完整。");
     require(object(b.limits) && object(b.used), "预算必须包含 limits 与 used。");
     require(["commands", "wood", "modelCalls"].every((key) => integer(b.limits[key]) && integer(b.used[key])) && number(b.limits.seconds) && number(b.used.seconds), "预算上限与累计值必须是非负数字，次数和木材必须是整数。");
-    require(b.limits.commands >= 1 && b.limits.commands <= maxCommands && b.limits.wood <= 12 && b.limits.modelCalls === (workshop ? 0 : 1) && integer(b.limits.seconds) && b.limits.seconds >= 1 && b.limits.seconds <= 600, `任务预算上限不符合契约（命令 1—${maxCommands}、木材 0—12、时间 1—600 秒）。`);
+    require(b.limits.commands >= 1 && b.limits.commands <= maxCommands && b.limits.wood <= 12 && b.limits.modelCalls === (workshop || forestry ? 0 : 1) && integer(b.limits.seconds) && b.limits.seconds >= 1 && b.limits.seconds <= 600, `任务预算上限不符合契约（命令 1—${maxCommands}、木材 0—12、时间 1—600 秒）。`);
     require(typeof f.goalReached === "boolean" && typeof f.returned === "boolean" && integer(f.woodClaimed), "到达、返回或领取木材事实的类型不正确。");
     require(f.woodGathered === undefined || integer(f.woodGathered), "采集木材事实须为非负整数。");
     require(f.woodTransferred === undefined || integer(f.woodTransferred), "赠送木材事实须为非负整数。");
@@ -286,7 +503,7 @@
       require(step.inventoryWood === null || integer(step.inventoryWood), `${prefix}的木材库存格式不正确。`);
       if (actorState) {
         require(step.preconditionMode === m.preconditionMode && integer(step.expectedStateVersion)
-          && (["walk", "gather", "build"].includes(step.action.type) || ["r9", "r10"].includes(m.rulesVersion) && step.action.type === "transfer" || m.rulesVersion === "r10" && (workshop && workshopAction(step.action) || window.MaterialReport.action(step.action) || window.EntityNoteReport.action(step.action) || window.EntityCanvasReport.action(step.action))), `${prefix}缺少原命令的前置模式或观察版本。`);
+          && (["walk", "gather", "build"].includes(step.action.type) || ["r9", "r10"].includes(m.rulesVersion) && step.action.type === "transfer" || m.rulesVersion === "r10" && (forestry && forestryAction(step.action) || workshop && workshopAction(step.action) || window.MaterialReport.action(step.action) || window.EntityNoteReport.action(step.action) || window.EntityCanvasReport.action(step.action))), `${prefix}缺少原命令的前置模式或观察版本。`);
         if (["committed", "rejected"].includes(step.status)) {
           const execution = step.execution;
           require(object(execution) && execution.preconditionMode === m.preconditionMode
@@ -390,13 +607,14 @@
     report = data;
     const { mission: m, decision: d, facts: f, budget: b } = data;
     const workshop = workshopAssess(data);
+    const forestry = forestryAssess(data);
     $("empty-state").hidden = true;
     $("report-content").hidden = false;
     put("mission-id", m.id);
     put("mission-objective", m.objective);
     put("actor-id", m.actorId);
     put("world-identity", `${m.worldId} / ${m.rulesVersion}`);
-    put("goal-route", m.goal ? `${coord(m.origin)} → ${m.goal.buildRecipeId ? `建造${structures[m.goal.buildRecipeId].label} · ` : ""}${m.goal.label} ${coord(m.goal.target)}${workshop.uses && !m.goal.workshop.returnToOrigin ? " · 本任务未要求返程" : " → 起点"}` : `${coord(m.origin)} · 尚未选择目标`);
+    put("goal-route", m.goal ? `${coord(m.origin)} → ${m.goal.buildRecipeId ? `建造${structures[m.goal.buildRecipeId].label} · ` : ""}${m.goal.label} ${coord(m.goal.target)}${workshop.uses && !m.goal.workshop.returnToOrigin || forestry.uses && !m.goal.forestry.returnToOrigin ? " · 本任务未要求返程" : " → 起点"}` : `${coord(m.origin)} · 尚未选择目标`);
     put("report-status", statuses[m.status][0]);
     $("report-status").dataset.tone = statuses[m.status][1];
     put("mission-reason", `执行器状态原因：${reasonNames[m.reason] || m.reason || "未提供"}`);
@@ -543,7 +761,41 @@
       put("model-budget-label", "模型调用");
       put("model-budget-note", "固定动作 · 未调用选择器");
     }
+    let forestryPanel = $("forestry-report-fact");
+    if (!forestryPanel) {
+      forestryPanel = node("div", ""); forestryPanel.id = "forestry-report-fact";
+      $("construction-fact").after(forestryPanel);
+    }
+    forestryPanel.hidden = !forestry.uses;
+    forestryPanel.dataset.verified = String(forestry.verified);
+    forestryPanel.replaceChildren();
+    if (forestry.uses) {
+      const action = m.goal.forestry.action, result = f.forestryAction, c = data.world.forestry;
+      forestryPanel.append(node("p", "", forestry.verified
+        ? `原动作已核对回执、事件和详情：${forestryNames[action.type]} · 命令 ${result.commandId} · v${result.stateVersion}`
+        : "林业原动作尚未核实；排队、成熟树木或当前余额不能代替原回执、事件和详情。"));
+      forestryPanel.append(node("p", "", `${forestry.verified ? "" : "报告计数（待核实）："}木斧用材 ${b.used.wood} / ${b.limits.wood} · ${forestry.verified ? "实际收获木材" : "收获木材记录"} ${f.woodHarvested} / ${b.limits.woodHarvested} · 领取树种 ${f.seedsCollected} / ${b.limits.seedsCollected} · 种植消耗 ${f.seedsPlanted} / ${b.limits.seedsPlanted} · 收获树种 ${f.seedsHarvested} / ${b.limits.seedsHarvested}`));
+      if (forestry.verified) {
+        forestryPanel.append(node("p", "", `本人木材 ${result.inventoryWoodBefore} → ${result.inventoryWood} · 本人树种 ${result.seedsBefore} → ${result.seeds}${result.tool ? ` · 本人木斧 ${result.tool.toolId}` : ""}${result.reservation ? ` · 原预约 ${result.reservation.reservationId}（${forestStateNames[result.reservation.status]}）` : ""}${result.plant ? ` · 原树木 ${result.plant.plantId}（${forestStateNames[result.plant.state]}）` : ""}`));
+        if (action.type === "reserve_forest") forestryPanel.append(node("p", "", "本次只确认已排队；未据此宣称获配林地、已种植或已收获。"));
+        if (action.type === "plant_tree") forestryPanel.append(node("p", "", "本次只确认种植；成熟须经真实服务时间，木材须另行收获。"));
+      }
+      if (forestry.consistent) {
+        forestryPanel.append(node("p", "", `最近观察 v${data.world.observedStateVersion} · 苗圃 ${c.nursery.stockSeeds} 颗（已预留 ${c.nursery.reservedSeeds}）· 本人树种 ${c.seeds}。成熟木材仍在树上，未计为居民收获。`));
+        for (const plot of c.plots) {
+          const tree = c.plants.find(p => p.plotId === plot.plotId);
+          forestryPanel.append(node("p", "", `林地 ${plot.plotId} ${coord(plot.position)} · ${tree ? `${tree.state === "mature" ? "成熟" : "生长中"} · 原树木 ${tree.plantId} · 树上木材 ${tree.standingWood}` : "空地"}`));
+        }
+      }
+      forestryPanel.append(node("p", "", !forestry.consistent ? "返回位置记录待复核。" : f.returned ? "已确认位于原起点。" : m.goal.forestry.returnToOrigin ? "返程尚未完成。" : "任务明确未要求返程；尚未返回原起点。"));
+      if (!forestry.consistent) { put("returned", "返回记录待复核"); $("returned").dataset.verified = "false"; }
+      put("goal-reached", forestry.verified ? "原林业动作已核实" : "原林业动作未核实");
+      $("goal-reached").dataset.verified = String(forestry.verified);
+      put("decision-boundary", "任务明确指定原林业动作、对象与独立权限；等待原预约或树木不授权更换租约、补种或自动续租。");
+      put("model-budget-label", "模型调用"); put("model-budget-note", "固定动作 · 未调用选择器");
+    }
     const warnings = [];
+    if (!forestry.consistent) warnings.push("林业原动作三方证据、对象、材料或预算不一致；完成标记待复核。");
     if (!workshop.consistent) warnings.push("工坊原动作三方证据、权限、前后库存或预算不一致；完成标记待复核。");
     if (!canvas.consistent) warnings.push("地画汇总与原目标、版本、草图或作者记录不一致。");
     if (!canvas.budgetConsistent) warnings.push("地画任务预算与原步骤数、必要查询或累计上限不一致；整体完成待复核。");
@@ -558,14 +810,14 @@
     const constructionVisited = !requiresConstruction || constructionVerified
       && data.steps.slice(data.steps.findIndex(s => s.commandId === built.commandId))
         .some(s => s.status === "committed" && s.position && near(s.position, m.goal.target));
-    const walkConsistent = workshop.uses ? workshop.complete : !continuous(data.world) || m.goal && [m.origin, ...committedPositions].some(p => near(p, m.goal.target)) && near(committedPositions.at(-1) || m.origin, m.origin) && !data.steps.some(s => s.status === "committed" && s.blocked === true);
-    const incomplete = workshop.uses && !workshop.complete || canvas.uses && (!canvas.verified || !canvas.budgetConsistent) || notes.uses && !notes.verified || material.uses && !material.verified || !walkConsistent || !constructionVisited || !gatheringConsistent || !transferConsistent || !f.goalReached || !f.returned && !(workshop.uses && m.goal.workshop.returnToOrigin === false) || !m.goal || requiresTransfer && !transferVerified || requiresConstruction && !constructionVerified || requiresActivity && !activityVerified || requiresPostcard && !postcardVerified || requiresMosaic && !mosaicVerified || (m.proposeMosaic || m.reviewMosaicProposal) && !consentVerified;
+    const walkConsistent = forestry.uses ? forestry.complete : workshop.uses ? workshop.complete : !continuous(data.world) || m.goal && [m.origin, ...committedPositions].some(p => near(p, m.goal.target)) && near(committedPositions.at(-1) || m.origin, m.origin) && !data.steps.some(s => s.status === "committed" && s.blocked === true);
+    const incomplete = forestry.uses && !forestry.complete || workshop.uses && !workshop.complete || canvas.uses && (!canvas.verified || !canvas.budgetConsistent) || notes.uses && !notes.verified || material.uses && !material.verified || !walkConsistent || !constructionVisited || !gatheringConsistent || !transferConsistent || !f.goalReached || !f.returned && !(workshop.uses && m.goal.workshop.returnToOrigin === false || forestry.uses && m.goal.forestry.returnToOrigin === false) || !m.goal || requiresTransfer && !transferVerified || requiresConstruction && !constructionVerified || requiresActivity && !activityVerified || requiresPostcard && !postcardVerified || requiresMosaic && !mosaicVerified || (m.proposeMosaic || m.reviewMosaicProposal) && !consentVerified;
     if (m.status === "completed" && incomplete) warnings.push("报告标记为已完成，但到达、返回、目标、到访或本次创作事实不完整，不能据此认定任务成功。");
     if (d && m.goal && d.goalId !== m.goal.id) warnings.push("模型选择与执行目标编号不一致，请复核原始报告。");
     if (d?.provider.kind === "test-double") warnings.push("这份报告使用测试替身，不是一次真实模型运行；仅供客户端或执行器测试。");
     if (!gatheringConsistent) warnings.push("采集汇总与原采集步骤或任务权限不一致，请复核原始记录。");
     if (!transferConsistent) warnings.push("赠送汇总与原交付步骤、身份或任务权限不一致，请复核原始记录。");
-    if (m.status === "completed" && !walkConsistent) warnings.push(workshop.uses ? "工坊动作或任务要求的返程尚未得到一致证据支持。" : "连续行走记录未支持在 0.06 米内到达并返回，或包含碰撞截停。");
+    if (m.status === "completed" && !walkConsistent) warnings.push(forestry.uses ? "林业原动作或任务要求的返程尚未得到一致证据支持。" : workshop.uses ? "工坊动作或任务要求的返程尚未得到一致证据支持。" : "连续行走记录未支持在 0.06 米内到达并返回，或包含碰撞截停。");
     if (m.status === "completed" && constructionVerified && !constructionVisited) warnings.push("建设完成后的记录未支持到达设施中心。");
     for (const [key, prefix] of [["commands", "command"], ["wood", "wood"], ["modelCalls", "model"], ["seconds", "seconds"], ...(b.limits.queries === undefined ? [] : [["queries", "queries"]])]) {
       put(`${prefix}-budget`, `${formatNumber(b.used[key])} / ${formatNumber(b.limits[key])}`);
@@ -596,7 +848,7 @@
     }
     const w = data.world;
     put("map-summary", continuous(w)
-      ? `${w.width} × ${w.height} 米 · 连续自然地形。起点 ${coord(m.origin)}；目标 ${m.goal ? coord(m.goal.target) : "未选择"}；到达容差 0.06 米。${workshop.uses ? `地形、设施与资源为最近实际观察 v${w.observedStateVersion}，可能早于最后动作；` : "地形与资源显示结束快照，"}轨迹按步骤回看。设施：${w.entities.map(e => `${e.definitionId} ${coord(e.position)}`).join("、") || "无"}。`
+      ? `${w.width} × ${w.height} 米 · 连续自然地形。起点 ${coord(m.origin)}；目标 ${m.goal ? coord(m.goal.target) : "未选择"}；到达容差 0.06 米。${workshop.uses || forestry.uses ? `地形、设施与资源为最近实际观察 v${w.observedStateVersion}，可能早于最后动作；` : "地形与资源显示结束快照，"}轨迹按步骤回看。设施：${w.entities.map(e => `${e.definitionId} ${coord(e.position)}`).join("、") || "无"}。`
       : `${w.width} × ${w.height}。起点 ${coord(m.origin)}；目标 ${m.goal ? coord(m.goal.target) : "未选择"}。水面：${w.water.map(coord).join("、") || "无"}。阻挡：${w.blocked.map(coord).join("、") || "无"}。设施：${w.entities.map((e) => `${e.definitionId} ${coord(e.position)}`).join("、") || "无"}。`);
     $("replay-slider").max = String(data.steps.length);
     $("replay-slider").disabled = data.steps.length === 0;
@@ -651,7 +903,8 @@
   }
 
   function actionLabel(action) {
-    const label = workshopNames[action.type] || actionNames[action.type] || action.type;
+    const label = forestryNames[action.type] || workshopNames[action.type] || actionNames[action.type] || action.type;
+    if (forestryAction(action)) return `${label}${action.reservationId ? ` · 原预约 ${action.reservationId}` : ""}${action.plantId ? ` · 原树木 ${action.plantId}` : ""}${action.plotId ? ` · 林地 ${action.plotId}` : ""}${action.toolId ? ` · 本人木斧 ${action.toolId}` : ""}`;
     if (action.type === "build_workshop") return `${label} · ${action.recipeId === "workbench.v1" ? "工作台" : "私人储物箱"} ${coord(action.at)}`;
     if (action.type === "craft_tool") return `${label} · 工作台 ${action.entityId}`;
     if (["deposit_wood", "withdraw_wood"].includes(action.type)) return `${label} · ${action.quantity} 木材 · ${action.entityId}`;
@@ -738,7 +991,14 @@
       ctx.strokeStyle = "#8ebbc0"; ctx.lineWidth = 2; ctx.stroke();
       for (const rock of w.terrain.obstacles) {
         const [x, y] = center(rock.position);
-        ctx.fillStyle = "#8e987f"; ctx.beginPath(); ctx.arc(x, y, rock.radius * cellSize, 0, Math.PI * 2); ctx.fill();
+        const tree = w.forestry?.plants?.find(p => p.plantId === rock.id);
+        ctx.fillStyle = rock.kind === "forestry_nursery" ? "#a8893c" : rock.kind === "forestry_tree" ? tree?.state === "mature" ? "#225e37" : "#78a356" : "#8e987f";
+        ctx.beginPath(); ctx.arc(x, y, rock.radius * cellSize, 0, Math.PI * 2); ctx.fill();
+      }
+      if (forestryAssess(report).consistent && w.forestry?.plots) for (const plot of w.forestry.plots) {
+        const [x, y] = center(plot.position);
+        ctx.strokeStyle = "#668754"; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
+        ctx.strokeRect(x - 1.5 * cellSize, y - 1.5 * cellSize, 3 * cellSize, 3 * cellSize); ctx.setLineDash([]);
       }
       for (const tree of w.resourceNodes) {
         const [x, y] = center(tree.position), alive = tree.remainingWood > 0;

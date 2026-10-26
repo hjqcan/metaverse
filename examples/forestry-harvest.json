@@ -1,0 +1,45 @@
+{
+  "missionId": "forestry-harvest",
+  "objective": "执行绑定原实例、原对象的单一林业动作并返回。",
+  "goals": [
+    {
+      "id": "fixed",
+      "label": "明确林业动作",
+      "target": [
+        7,
+        12
+      ],
+      "forestry": {
+        "worldInstanceId": "w_00000000000000000000000000000000",
+        "actorId": "a3",
+        "action": {
+          "type": "harvest_tree",
+          "capabilityVersion": 1,
+          "plantId": "replace-original-plant",
+          "reservationId": "replace-original-reservation",
+          "toolId": "replace-owned-axe"
+        },
+        "waitForReady": true,
+        "returnToOrigin": true
+      }
+    }
+  ],
+  "allowBuild": false,
+  "allowCraftForestryTool": false,
+  "allowReserveForest": false,
+  "allowCancelForestReservation": false,
+  "allowCollectSeed": false,
+  "allowPlantTree": false,
+  "allowHarvestTree": true,
+  "budgets": {
+    "commands": 200,
+    "queries": 1000,
+    "wood": 0,
+    "woodHarvested": 3,
+    "seedsCollected": 0,
+    "seedsPlanted": 0,
+    "seedsHarvested": 1,
+    "seconds": 600,
+    "modelCalls": 0
+  }
+}

@@ -64,6 +64,8 @@ def saved_mode(state):
                         'paint_entity_canvas': ('entityCanvasBefore', ('position', 'inventoryWood', 'target', 'adoption'))}
             for workshop_action in ('build_workshop', 'craft_tool', 'deposit_wood', 'withdraw_wood'):
                 required[workshop_action] = ('workshopBefore', ('position', 'inventoryWood', 'action', 'target', 'tool', 'adoption'))
+            for forestry_action in ('craft_forestry_tool', 'reserve_forest', 'cancel_forest_reservation', 'collect_seed', 'plant_tree', 'harvest_tree'):
+                required[forestry_action] = ('forestryBefore', ('position', 'inventoryWood', 'seeds', 'action', 'target', 'tool', 'adoption', 'reservation', 'plant'))
             if (intent.get('preconditionMode') != mode or action not in required
                     or not integer(intent.get('expectedStateVersion'))
                     or step.get('commandId') != intent.get('commandId')
@@ -92,6 +94,9 @@ def saved_mode(state):
                 valid = binding['rulesVersion'] == 'r10' and valid_before(before)
             elif action in ('build_workshop', 'craft_tool', 'deposit_wood', 'withdraw_wood'):
                 from resident_workshop import valid_before
+                valid = binding['rulesVersion'] == 'r10' and valid_before(before)
+            elif action in ('craft_forestry_tool', 'reserve_forest', 'cancel_forest_reservation', 'collect_seed', 'plant_tree', 'harvest_tree'):
+                from resident_forestry import valid_before
                 valid = binding['rulesVersion'] == 'r10' and valid_before(before)
             elif action == 'append_entity_note':
                 from resident_entity_notes import valid_before

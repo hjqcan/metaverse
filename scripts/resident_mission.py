@@ -42,6 +42,9 @@ def _integer(value, low, high):
 
 
 def _spec(value):
+    from resident_forestry import uses as forestry_task, normalize_spec as forestry_spec
+    if forestry_task(value):
+        return forestry_spec(value)
     from resident_workshop import uses, normalize_spec
     if uses(value):
         return normalize_spec(value)
@@ -519,6 +522,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
     max_steps counts logical commands handled in this call, including recovery;
     receipt queries do not consume the mission's command budget.
     """
+    from resident_forestry import uses as forestry_task, run_mission as run_forestry
+    if forestry_task(spec):
+        return run_forestry(client, spec, state_path, choose, max_steps=max_steps)
     from resident_workshop import uses, run_mission as run_workshop
     if uses(spec):
         return run_workshop(client, spec, state_path, choose, max_steps=max_steps)

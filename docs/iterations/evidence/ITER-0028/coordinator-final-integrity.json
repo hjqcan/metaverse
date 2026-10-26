@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "jsonFilesInspected": 257,
+  "archiveMembersInspected": 237,
+  "credentialFindings": [],
+  "frozenSourceFilesVerified": {
+    "backend": 18,
+    "native": 38,
+    "python": 6,
+    "report": 2
+  },
+  "backendDllMatches": true,
+  "scope": "Archive syntax, embedded JSON credential fields, safe member paths and frozen product hashes; no world process or command."
+}

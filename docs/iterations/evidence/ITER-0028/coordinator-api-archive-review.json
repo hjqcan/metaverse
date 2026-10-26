@@ -1,0 +1,9 @@
+{
+  "archiveSha256": "c3e03a68551a5a6d38caa013d00df0f1548f3804b4afe4c8c4db1ba1cb239eca",
+  "allMemberHashesMatch": true,
+  "members": 121,
+  "unsafePaths": 0,
+  "credentialFields": 0,
+  "databaseOrAccessFiles": 0,
+  "scope": "Archive integrity and secret-field check; independent test results remain QA2 evidence"
+}

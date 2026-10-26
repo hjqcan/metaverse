@@ -1,0 +1,333 @@
+{
+  "scope": "Coordinator independent read-only review of saved raw native HTTP, original proof files and stopped database snapshots; no DB connection, world request or new activity",
+  "passed": true,
+  "inputHashes": {
+    "before-adoption.json": "3bfc44a6ce0924c4cb7cada60f097495954d6a9c85a42a4316fe4b68990a95f7",
+    "cold-final.json": "1000eeb9e547053fd5fd494453290ae6b5d68f5252c16032544c4b5a84811537",
+    "native-commands.jsonl": "67c27b367126b823ba058f4d8e7ed76315ee54391995f1fe3f383fd65c304370",
+    "checkpoint-fourth-empty-center.json": "85aa740566eba865fec3c129eee770421642728e442a3fe94c554e4682d8789a",
+    "checkpoint-fourth-center-approach.json": "273b1db715cc5968f6c3cbb254e64358e91501e1a1aec7c9b7433a761161d8b0"
+  },
+  "nativeCommands": 153,
+  "commandKinds": {
+    "walk": 136,
+    "craft_forestry_tool": 2,
+    "reserve_forest": 5,
+    "collect_seed": 1,
+    "plant_tree": 4,
+    "harvest_tree": 3,
+    "build": 2
+  },
+  "forestryProofs": [
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_2dc6fbb03ab687a3e357f51811965d1e",
+      "action": {
+        "capabilityVersion": 1,
+        "plotId": "forest-west-north",
+        "reservationId": "fr78dc30e5cc6c43d086a594fae4607049",
+        "type": "plant_tree"
+      },
+      "stateVersion": 1420,
+      "eventCursor": 1421,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_2dc6fbb03ab687a3e357f51811965d1e.json",
+      "sha256": "7786bcb0a9c6459600cf160715b2964e0a19050dd9db8a6b1a2d013df6242fac"
+    },
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_4f86d62b04cda7d936f30e18b0039d99",
+      "action": {
+        "capabilityVersion": 1,
+        "type": "reserve_forest"
+      },
+      "stateVersion": 1365,
+      "eventCursor": 1366,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_4f86d62b04cda7d936f30e18b0039d99.json",
+      "sha256": "6a73575637e986a644a30b341692de015341a38004566d2632f215b95b4f6650"
+    },
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_5b4d378ee23e5ac201c77890ad7a8fb9",
+      "action": {
+        "capabilityVersion": 1,
+        "plantId": "p104ef1b2c98e408b94c6d4daaeaa1e92",
+        "reservationId": "fr78dc30e5cc6c43d086a594fae4607049",
+        "toolId": "t521f7e2a1c0f4efd8dccf444b1997c74",
+        "type": "harvest_tree"
+      },
+      "stateVersion": 1424,
+      "eventCursor": 1425,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_5b4d378ee23e5ac201c77890ad7a8fb9.json",
+      "sha256": "6bdedcdd53e16b1ad97857fca479a9c0bb20e627132b322854fddc3982da5eaa"
+    },
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_72211b6f429ed91337d8aa180e1ff6a0",
+      "action": {
+        "capabilityVersion": 1,
+        "plotId": "forest-west-north",
+        "reservationId": "fr7e6dc16df8ab42959aea62cfcb0939a7",
+        "type": "plant_tree"
+      },
+      "stateVersion": 1480,
+      "eventCursor": 1481,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_72211b6f429ed91337d8aa180e1ff6a0.json",
+      "sha256": "43d31faf8f2f7450c570a5b892cd731a0f96c1e3390c6efd882aa01aa763f44c"
+    },
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_869c3fdf2208e65eab09b861d12eddbb",
+      "action": {
+        "capabilityVersion": 1,
+        "type": "reserve_forest"
+      },
+      "stateVersion": 1425,
+      "eventCursor": 1426,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_869c3fdf2208e65eab09b861d12eddbb.json",
+      "sha256": "49cf41473f8450f62c300af70fe9205ce04cae8bf030786a2323b1e920a9708b"
+    },
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_93d353342adc621e0b57e2cae65c01c2",
+      "action": {
+        "capabilityVersion": 1,
+        "reservationId": "fr78dc30e5cc6c43d086a594fae4607049",
+        "sourceId": "nursery-west",
+        "type": "collect_seed"
+      },
+      "stateVersion": 1411,
+      "eventCursor": 1412,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_93d353342adc621e0b57e2cae65c01c2.json",
+      "sha256": "0c1d0727180c437d63da73a67c5912c4558ecf848741b6daa9ba0ac3a9ce98d2"
+    },
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_b5675a3e143b387f2dded8ba37cdad28",
+      "action": {
+        "capabilityVersion": 1,
+        "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+        "recipeId": "wooden_axe.v1",
+        "type": "craft_forestry_tool"
+      },
+      "stateVersion": 1363,
+      "eventCursor": 1364,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_b5675a3e143b387f2dded8ba37cdad28.json",
+      "sha256": "7ac06e9a54d8d77873f25111931966dc9c401bb3c171d288b2e8d6106b4273da"
+    },
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_c6988a67876b2c67890aae73e6fa2e92",
+      "action": {
+        "capabilityVersion": 1,
+        "type": "reserve_forest"
+      },
+      "stateVersion": 1478,
+      "eventCursor": 1479,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_c6988a67876b2c67890aae73e6fa2e92.json",
+      "sha256": "3e0878b68069078435ffd91a2d4dc5df479bae20ac953daf6d4575d2fe1e837e"
+    },
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_d6f371db8c6872e7bf0de4079195fdc8",
+      "action": {
+        "capabilityVersion": 1,
+        "plantId": "p9dfea62779194cfb903c33ff1ae561c2",
+        "reservationId": "fr3274ab002e094e53ad6ef19ecd6407f2",
+        "toolId": "t521f7e2a1c0f4efd8dccf444b1997c74",
+        "type": "harvest_tree"
+      },
+      "stateVersion": 1473,
+      "eventCursor": 1474,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_d6f371db8c6872e7bf0de4079195fdc8.json",
+      "sha256": "ca99318da68bf59045d2523bdb9ded708962ac28dc092330a5a817048b7461c9"
+    },
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_f2bdfa3d9b2bdcceccccfd0c09e71d5d",
+      "action": {
+        "capabilityVersion": 1,
+        "plotId": "forest-west-north",
+        "reservationId": "fr3274ab002e094e53ad6ef19ecd6407f2",
+        "type": "plant_tree"
+      },
+      "stateVersion": 1427,
+      "eventCursor": 1428,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a1_alias-godot_f2bdfa3d9b2bdcceccccfd0c09e71d5d.json",
+      "sha256": "6891d8f1b59064e42134ba8072e77e28f018e138e1bbab8d1b3271eb8bd8f02a"
+    },
+    {
+      "actor": "a3",
+      "commandId": "godot_175502eaf8df8aff0f1755c204bd124c",
+      "action": {
+        "capabilityVersion": 1,
+        "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+        "recipeId": "wooden_axe.v1",
+        "type": "craft_forestry_tool"
+      },
+      "stateVersion": 1430,
+      "eventCursor": 1431,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a3-godot_175502eaf8df8aff0f1755c204bd124c.json",
+      "sha256": "591110f88019d03b36404be9c7cb53d949d3432f4bfb1b6facfcfbee5a84c589"
+    },
+    {
+      "actor": "a3",
+      "commandId": "godot_29bbd37dbf901dfe484d39c043c05d8e",
+      "action": {
+        "capabilityVersion": 1,
+        "plantId": "p4607be7fcb7f494aaaea314ba4d1ef07",
+        "reservationId": "frc4333ee2aaae43d69fee1cfc6b2d5e5d",
+        "toolId": "t8f66ca365cca45f7a3a8d487012e3866",
+        "type": "harvest_tree"
+      },
+      "stateVersion": 1501,
+      "eventCursor": 1502,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a3-godot_29bbd37dbf901dfe484d39c043c05d8e.json",
+      "sha256": "d4ebfcfec54d15dce03db9dbd997a82befb2d7d37f036843479fcbc09cf27dae"
+    },
+    {
+      "actor": "a3",
+      "commandId": "godot_8551010c95fc14e757da61cc8a4706da",
+      "action": {
+        "capabilityVersion": 1,
+        "type": "reserve_forest"
+      },
+      "stateVersion": 1487,
+      "eventCursor": 1488,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a3-godot_8551010c95fc14e757da61cc8a4706da.json",
+      "sha256": "da395c71eb803bd52e3cc4cc0dd67e0dcd804aa6b3f56273262c47729504ef59"
+    },
+    {
+      "actor": "a3",
+      "commandId": "godot_a2eebba421abb39da3262d331d82f957",
+      "action": {
+        "capabilityVersion": 1,
+        "plotId": "forest-west-north",
+        "reservationId": "fr7f14272a0b1a46bbbc6bcaf977274b50",
+        "type": "plant_tree"
+      },
+      "stateVersion": 1520,
+      "eventCursor": 1521,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a3-godot_a2eebba421abb39da3262d331d82f957.json",
+      "sha256": "a0c2d240bef5bbffa7cccce8880d5023d683c24220c9e3797bac232065b15d6d"
+    },
+    {
+      "actor": "a3",
+      "commandId": "godot_bc632c98080e16c5a47387d032360321",
+      "action": {
+        "capabilityVersion": 1,
+        "type": "reserve_forest"
+      },
+      "stateVersion": 1509,
+      "eventCursor": 1510,
+      "file": ".local/qa/20261026-test-agent/forestry-native-run-20261026T102017680498Z/proof-a3-godot_bc632c98080e16c5a47387d032360321.json",
+      "sha256": "bab7a730fa3136aff89ed665157ad51bae59b86dc031ff4ef6793813b5b4fd8c"
+    }
+  ],
+  "oldTablesPreserved": {
+    "entities": true,
+    "entity_canvas": true,
+    "entity_canvas_cells": true,
+    "entity_canvas_edits": true,
+    "entity_note_adoption": true,
+    "entity_notes": true,
+    "events": true,
+    "material_production": true,
+    "material_source_policy": true,
+    "receipts": true,
+    "recipes": true,
+    "resource_ledger": true,
+    "resource_nodes": true,
+    "visits": true,
+    "workshop": true,
+    "workshop_actions": true,
+    "workshop_chests": true,
+    "workshop_tools": true,
+    "world_instance": true
+  },
+  "untouchedResidents": [
+    "a1",
+    "a2"
+  ],
+  "wood": {
+    "issued": 85,
+    "inventory": 21,
+    "entities": 48,
+    "tools": 7,
+    "stored": 3,
+    "source": 6,
+    "standingForest": 0,
+    "forestGenerated": 9,
+    "ledgerAllAccountsEqual": true
+  },
+  "seeds": {
+    "nurseryGenerated": 5,
+    "harvestGenerated": 3,
+    "nurseryStock": 4,
+    "resident": 0,
+    "planted": 4,
+    "conserved": true
+  },
+  "matureEvents": 3,
+  "handoff": {
+    "plantId": "p4607be7fcb7f494aaaea314ba4d1ef07",
+    "oldReservationId": "fr7e6dc16df8ab42959aea62cfcb0939a7",
+    "oldExpiresAtMs": 2361698,
+    "newReservationId": "frc4333ee2aaae43d69fee1cfc6b2d5e5d",
+    "newGrantedAtMs": 2376612,
+    "newExpiresAtMs": 2436612
+  },
+  "centerToSide": {
+    "beforeVersion": 1516,
+    "beforePosition": [
+      7,
+      12
+    ],
+    "afterVersion": 1519,
+    "afterPosition": [
+      7.88401079177856,
+      12.8835391998291
+    ],
+    "distance": 1.2498466296372537,
+    "plantedVersion": 1520
+  },
+  "remainingGrowingPlant": {
+    "plantId": "pa5be16de18f6414199ad58c39094195e",
+    "plotId": "forest-west-north",
+    "planterActorId": "a3",
+    "operatorId": "declared-third",
+    "reservationId": "fr7f14272a0b1a46bbbc6bcaf977274b50",
+    "commandId": "godot_a2eebba421abb39da3262d331d82f957",
+    "plantedAtMs": 2434975,
+    "maturesAtMs": 2554975,
+    "state": "growing",
+    "standingWood": 0,
+    "stateVersion": 1520,
+    "eventCursor": 1521,
+    "matureEventCursor": null,
+    "harvestActorId": null,
+    "harvestCommandId": null,
+    "harvestEventCursor": null
+  },
+  "remainingReservation": {
+    "reservationId": "fr7f14272a0b1a46bbbc6bcaf977274b50",
+    "actorId": "a3",
+    "operatorId": "declared-third",
+    "commandId": "godot_bc632c98080e16c5a47387d032360321",
+    "requestedAtMs": 2416358,
+    "queueOrder": 1510,
+    "status": "growing",
+    "plotId": "forest-west-north",
+    "plantId": "pa5be16de18f6414199ad58c39094195e",
+    "reservedSeed": 0,
+    "grantedAtMs": 2416363,
+    "expiresAtMs": null
+  },
+  "finalStateVersion": 1520,
+  "finalEventCursor": 1521,
+  "ownedProcessesExitedAsReported": true,
+  "limits": [
+    "Saved evidence review does not replace the native tester final integrity audit.",
+    "No independent new input run was executed.",
+    "Original authentication sessions table was not included in this review output."
+  ]
+}

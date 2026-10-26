@@ -119,10 +119,10 @@ internal static class EntityCanvasRules
     public static void ValidateStorage(SqliteConnection c, SqliteTransaction t, string? instance, long storage, MaterialProductionPolicy? policy)
     {
         var state = Read(c, t);
-        if (storage != 13 && (storage == 12) != (state is not null)) throw new InvalidOperationException("地画能力与存储版本不一致");
+        if (storage is not (13 or 14) && (storage == 12) != (state is not null)) throw new InvalidOperationException("地画能力与存储版本不一致");
         if (state is null)
         {
-            if (storage == 13 && Scalar(c, t, "SELECT count(*) FROM events WHERE json_extract(event_json,'$.type')='entityCanvasAdopted'") != 0)
+            if (storage is 13 or 14 && Scalar(c, t, "SELECT count(*) FROM events WHERE json_extract(event_json,'$.type')='entityCanvasAdopted'") != 0)
                 throw new InvalidOperationException("原地画采用历史存在，但当前地画存储缺失");
             return;
         }
@@ -193,7 +193,7 @@ internal sealed partial class WorldDatabase
         using var ownership = new FileStream(Path + ".material-clock.lock", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
         using var c = Open(); using var t = c.BeginTransaction(deferred: false);
         var storage = Scalar(c, t, "PRAGMA user_version"); Scenario = ReadScenario(c, t, storage);
-        if (!Scenario.SupportsMaterialAccess || WorldInstance.Read(c, t) != expectedInstance || storage is not (11 or 12 or 13))
+        if (!Scenario.SupportsMaterialAccess || WorldInstance.Read(c, t) != expectedInstance || storage is not (11 or 12 or 13 or 14))
             throw new InvalidOperationException("只能在指定原持续材料世界采用地画");
         var policy = ContinuousMaterialRules.ReadPolicy(c, t, expectedInstance) ?? throw new InvalidOperationException("缺少原持续材料政策");
         ContinuousMaterialRules.ValidateState(c, t, policy);
@@ -202,6 +202,7 @@ internal sealed partial class WorldDatabase
             throw new InvalidOperationException("原手记能力或目标不匹配");
         EntityCanvasRules.ValidateStorage(c, t, expectedInstance, storage, policy);
         WorkshopRules.ValidateStorage(c, t, expectedInstance, storage, policy);
+        ForestryRules.ValidateStorage(c, t, expectedInstance, storage);
         if (EntityCanvasRules.Read(c, t) is { } previous)
         {
             if (previous.EntityId != entityId) throw new InvalidOperationException("地画不能更换原平台");
@@ -221,7 +222,7 @@ internal sealed partial class WorldDatabase
             ("$cap", EntityCanvasRules.Capability), ("$entity", entityId), ("$instance", expectedInstance), ("$state", state), ("$seq", cursor));
         for (var y = 0; y < 5; y++) for (var x = 0; x < 5; x++)
             Run(c, t, "INSERT INTO entity_canvas_cells(entity_id,x,y,color) VALUES($id,$x,$y,'blank')", ("$id", entityId), ("$x", x), ("$y", y));
-        var nextStorage = storage == 13 ? 13 : 12;
+        var nextStorage = storage is 13 or 14 ? storage : 12;
         if (nextStorage == 12) Run(c, t, "PRAGMA user_version=12;");
         EntityCanvasRules.ValidateStorage(c, t, expectedInstance, nextStorage, policy);
         var fault = configuration.FaultsEnabled ? Environment.GetEnvironmentVariable("WORLD_CANVAS_ADOPTION_TEST_FAULT") : null;
@@ -267,8 +268,8 @@ internal sealed partial class WorldService
         if (action.EntityId != canvas.EntityId || target is null) return (404, new("CANVAS_TARGET_UNAVAILABLE", "目标未开放地画"));
         var trees = ReadResourceNodes(c, t); var entities = ReadStructures(c, t);
         if (ContinuousWorld.Distance(actor.X, actor.Y, target.Position[0], target.Position[1]) > EntityCanvasRules.Reach
-            || !ContinuousWorld.Walkable(actor.X, actor.Y, trees, entities)
-            || ContinuousWorld.Sweep(actor.X, actor.Y, target.Position[0], target.Position[1], trees, entities).Blocked)
+            || !ContinuousWorld.Walkable(actor.X, actor.Y, trees, entities, ForestryRules.Obstacles(c, t))
+            || ContinuousWorld.Sweep(actor.X, actor.Y, target.Position[0], target.Position[1], trees, entities, ForestryRules.Obstacles(c, t)).Blocked)
             return (422, new("UNREACHABLE", "请走到原平台中心1.6米内且中间没有障碍"));
         if (action.ExpectedCanvasRevision != canvas.Revision) return (409, new("CANVAS_REVISION_MISMATCH", "地画已更新，原草图保留；请明确确认新基准"));
         var cells = EntityCanvasRules.Cells(c, t).ToDictionary(p => (p.X, p.Y));

@@ -1,0 +1,63 @@
+{
+  "kind": "read-only pre-review, not execution acceptance",
+  "reviewer": "test-agent2",
+  "atUtc": "2026-10-26T10:36:09.791918+00:00",
+  "files": {
+    "scripts/resident_forestry.py": "e05f65e508168b7f4f986b4c1d2ebb7a84e5f1e477ec39d81a98066891ede580",
+    "scripts/resident_mission.py": "41b3e856e9dcafb98b35da0494956581adce62222a6a88095702bfd3ac00453e",
+    "scripts/run_resident.py": "663d1559d813222cbf33b4ae59d1642298c5bbc8ba37a25871873b320db70e6a",
+    "scripts/command_preconditions.py": "24ae626f771bb96276554c73ee46f640604de467974a72a34f7a6e1c13731032",
+    "scripts/continuous_navigation.py": "61e734e47b51c643c88895027a4b97adcb433f28436e8930a4fafece230bfab1",
+    "scripts/foundation_agent.py": "a6b4db1561c6e60fcb9bd25c3589ae83327de00ef8845448888bd89df44ec743",
+    "scripts/resident_workshop.py": "0d1ef7c9d904031890dc29f8465fb72e14584733576561f4d182b7fd727ef2e0",
+    "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+    "docs/contracts/forestry-mission-v1.md": "80d6a4565a37d0931f75c16792157eb5db1cb59160380a831aa7537394d97c95"
+  },
+  "executedPythonCandidate": false,
+  "actualModelCalls": 0,
+  "confirmedBlockers": [],
+  "reviewed": [
+    {
+      "area": "fixed authority and identity",
+      "source": "resident_forestry.py normalize_spec/binding/ready/assignment",
+      "result": "One action and only its permission; instance/actor/operator/adoption/target/tool plus immutable reservation/plant identities persist. Missing active rows do not erase an original pending result."
+    },
+    {
+      "area": "deadline after final persistence",
+      "source": "resident_forestry.py expired and both client.command branches; resident_mission.py _save",
+      "result": "Both fresh send and replay call save then expired, and expired reads max(cached elapsed,time.time-startedEpoch). The prior ITER27 cached-time-only pattern is absent at these call sites; needs frozen runtime delay probe."
+    },
+    {
+      "area": "same original pending and unknown results",
+      "source": "resident_forestry.py pending recovery/query/_receipt_valid",
+      "result": "Only original-instance COMMAND_NOT_FOUND permits resending the unchanged original intent. Queries are counted before attempt. Capability/identity/errors keep pending; response and terminal clearing share atomic save."
+    },
+    {
+      "area": "three-way completion evidence",
+      "source": "resident_forestry.py _evidence/validate_saved",
+      "result": "Original receipt/detail/event instance bindings, original command/action/author/cursor and per-action inventory/tree transitions are cross-checked. Environment nursery stock may advance after observation, while action delta remains exact."
+    },
+    {
+      "area": "return facts and terminal replay",
+      "source": "resident_forestry.py finish/_validate_saved/run_mission",
+      "result": "Returned uses the most recent trusted observed or confirmed position; no-return permission does not force true. Saved completion requires one verified original action, no pending and requested return. Terminal replay returns locally after validation."
+    },
+    {
+      "area": "fixed CLI and geometry",
+      "source": "run_resident.py and continuous_navigation.py",
+      "result": "CLI rejects --account and actor mismatch for forestry; dispatcher bypasses selector. Movement retains all forestry circles, named interaction ray excludes only its target."
+    }
+  ],
+  "plannedFrozenChecks": [
+    "Final-persist delay across deadline for first POST and original-404 resend: zero POST and exact pending preservation",
+    "Commit/drop-response recovery with exact original ID and receipt/detail/event confirmation; no material or seed double count",
+    "Missing or inconsistent detail/event/instance proof and401/5xx remain unknown with original pending; restoring truthful proof recovers",
+    "Expired/changed original target cannot select a replacement plant or reservation",
+    "No-return spatial action reports actual returned=false when away; requested return requires trusted physical return; terminal rerun makes zero network calls",
+    "Saved authority/target/counters or pending corruption fails before network without overwriting original state"
+  ],
+  "limits": [
+    "Source was still under BUILD2 development; these are static observations only, not frozen-version pass results",
+    "No product module imports, service starts, CLI executions, worker test edits or model calls were performed during this pre-review"
+  ]
+}

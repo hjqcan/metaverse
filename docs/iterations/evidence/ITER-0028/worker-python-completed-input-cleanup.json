@@ -1,0 +1,20 @@
+[
+  {
+    "directory": ".local/iter0028/python-ready-20261026T104048Z-e1a5b3",
+    "databaseSha256": "2b649a6d5bf17aeefd9cd814a807a04a14a82105d3935f8a3127db76feff165e",
+    "reason": "Completed diagnostic copy or intermediate cache; final cold forensic source retained separately",
+    "removed": true
+  },
+  {
+    "directory": ".local/iter0028/python-db-diagnostic-copy",
+    "databaseSha256": "c3059f3e0dea2c8b6fb61d7d9d9e075f9f3546b110b44b73347dbe2abe858de9",
+    "reason": "Completed diagnostic copy or intermediate cache; final cold forensic source retained separately",
+    "removed": true
+  },
+  {
+    "directory": ".local/iter0028/python-baseline-1352",
+    "databaseSha256": "cba06fddfdc8ccaab3ac6de9dfb626ffe05f959e4aa0ff3803fb9d1d10bcc45b",
+    "reason": "All owned runs finished; original QA history remains untouched",
+    "removed": true
+  }
+]

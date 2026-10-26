@@ -106,7 +106,7 @@ internal static class WorkshopRules
     public static void ValidateStorage(SqliteConnection c, SqliteTransaction t, string? instance, long storage, MaterialProductionPolicy? policy)
     {
         var adoption = Read(c, t);
-        if ((storage == 13) != (adoption is not null)) throw new InvalidOperationException("工作坊能力与存储版本不一致");
+        if ((storage is 13 or 14) != (adoption is not null)) throw new InvalidOperationException("工作坊能力与存储版本不一致");
         if (adoption is null) return;
         if (policy is null || adoption.WorldInstanceId != instance || adoption.BaseStorageVersion is not (11 or 12)
             || adoption.BaseStorageVersion == 12 && EntityCanvasRules.Read(c, t) is null)
@@ -249,12 +249,13 @@ internal sealed partial class WorldDatabase
         using var ownership = new FileStream(Path + ".material-clock.lock", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
         using var c = Open(); using var t = c.BeginTransaction(deferred: false);
         var storage = Scalar(c, t, "PRAGMA user_version"); Scenario = ReadScenario(c, t, storage);
-        if (!Scenario.SupportsMaterialAccess || WorldInstance.Read(c, t) != expectedInstance || storage is not (11 or 12 or 13))
+        if (!Scenario.SupportsMaterialAccess || WorldInstance.Read(c, t) != expectedInstance || storage is not (11 or 12 or 13 or 14))
             throw new InvalidOperationException("工作坊只能在原持续材料世界显式采用");
         var policy = ContinuousMaterialRules.ReadPolicy(c, t, expectedInstance) ?? throw new InvalidOperationException("缺少持续材料政策");
         ContinuousMaterialRules.ValidateState(c, t, policy);
         EntityCanvasRules.ValidateStorage(c, t, expectedInstance, storage, policy);
         WorkshopRules.ValidateStorage(c, t, expectedInstance, storage, policy);
+        ForestryRules.ValidateStorage(c, t, expectedInstance, storage);
         if (WorkshopRules.Read(c, t) is not null) return false;
         foreach (var (_, sql) in WorkshopRules.Schema) Run(c, t, sql);
         foreach (var recipe in WorkshopRules.Recipes)
@@ -325,6 +326,7 @@ internal sealed partial class WorldService
             var heights = ContinuousWorld.Centerline.Select(p => p[1]).Where(v => v > z - hz && v < z + hz).Append(z - hz).Append(z + hz);
             if (heights.Any(v => x + hx > ContinuousWorld.RiverX(v) - 1.4 && x - hx < ContinuousWorld.RiverX(v) + 1.4))
                 return (422, new("UNREACHABLE", "家具占地须完整处于陆地"));
+            if (ForestryRules.BuildExcluded(c, t, x, z, hx, hz)) return (409, new("AREA_OCCUPIED", "公共育林保留区不能建造"));
             if (x + hx > 27 && x - hx < 29 && z + hz > 9 && z - hz < 11)
                 return (409, new("AREA_OCCUPIED", "来源区域须保持空闲"));
             bool Overlap(double cx, double cz, double r) => ContinuousWorld.Distance(cx, cz, Math.Clamp(cx, x - hx, x + hx), Math.Clamp(cz, z - hz, z + hz)) < r;
@@ -341,8 +343,8 @@ internal sealed partial class WorldService
         if (target is null) return (404, new("WORKSHOP_TARGET_UNAVAILABLE", "指定工作台或箱子不存在"));
         if (a.Type != "craft_tool" && target.OwnerActorId != identity.ActorId) return (403, new("WORKSHOP_ACCESS_DENIED", "只有箱主能存取"));
         if (ContinuousWorld.Distance(actor.X, actor.Y, target.Position[0], target.Position[1]) > WorkshopRules.Reach
-            || !ContinuousWorld.Walkable(actor.X, actor.Y, trees, entities)
-            || ContinuousWorld.Sweep(actor.X, actor.Y, target.Position[0], target.Position[1], trees, entities.Where(e => e.EntityId != target.EntityId).ToArray()).Blocked)
+            || !ContinuousWorld.Walkable(actor.X, actor.Y, trees, entities, ForestryRules.Obstacles(c, t))
+            || ContinuousWorld.Sweep(actor.X, actor.Y, target.Position[0], target.Position[1], trees, entities.Where(e => e.EntityId != target.EntityId).ToArray(), ForestryRules.Obstacles(c, t)).Blocked)
             return (422, new("UNREACHABLE", "须走到目标1.6米内且途中无障碍"));
         if (a.Type == "craft_tool") return actor.Wood < 1 ? (422, new("INSUFFICIENT_RESOURCE", "制锤需要1木材")) : null;
         var stored = WorkshopRules.ChestWood(c, t, target.EntityId);

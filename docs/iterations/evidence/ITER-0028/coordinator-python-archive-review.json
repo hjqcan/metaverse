@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "filesVerified": 115,
+  "extraArchiveMembers": [
+    ".local/test-agent2/iter28-python-evidence-manifest.json"
+  ],
+  "archiveSha256": "98a625d322b3b75754f83a63e5a58a1f926eb69164cce0678deaaf4523f4a8e2",
+  "scope": "Archive bytes and manifest verification only; independent execution belongs to QA2."
+}

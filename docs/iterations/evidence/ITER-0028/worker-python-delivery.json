@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "kind": "iter0028-build2-forestry-delivery",
+  "atUtc": "2026-10-26T10:52:43.899014+00:00",
+  "status": "frozen_ready_for_coordinator_integration",
+  "files": {
+    "scripts/resident_forestry.py": "e05f65e508168b7f4f986b4c1d2ebb7a84e5f1e477ec39d81a98066891ede580",
+    "scripts/resident_mission.py": "41b3e856e9dcafb98b35da0494956581adce62222a6a88095702bfd3ac00453e",
+    "scripts/run_resident.py": "663d1559d813222cbf33b4ae59d1642298c5bbc8ba37a25871873b320db70e6a",
+    "scripts/foundation_agent.py": "a6b4db1561c6e60fcb9bd25c3589ae83327de00ef8845448888bd89df44ec743",
+    "scripts/continuous_navigation.py": "61e734e47b51c643c88895027a4b97adcb433f28436e8930a4fafece230bfab1",
+    "scripts/command_preconditions.py": "24ae626f771bb96276554c73ee46f640604de467974a72a34f7a6e1c13731032",
+    "src/World.Server/wwwroot/resident.js": "4860c18ddce16271ea10d3fb2e8897d42c1e978d728162689b1db8a838858366",
+    "tests/forestry_mission_api.py": "cecb5371176bf546e72d5afa998ab4ff5b5a25206ec8ef1a2f0d6e7a0fb5b068",
+    "tests/browser/forestry-resident.mjs": "17e307c5cf164b7c6a7635f55c5e1b486c4fbfc7660cc852bbcfafe37899e726",
+    "docs/contracts/forestry-mission-v1.md": "5326c8d98301168249be332b38fa1f35db89df62cc421da7c083c3990cf1072c",
+    "examples/forestry-cancel.json": "37889c0b7e7ae74a28a641fcd6a903733b7df2a0a4ba4c239d58b22de030382a",
+    "examples/forestry-collect-seed.json": "ad619837353d1a830126461ffb9b435e9f217d8cd381455d444b66cf48c8f463",
+    "examples/forestry-craft-axe.json": "eef9bc00f56feb61559e4ef38e6a740ac016e1541b5e42ce82b38e4c2ef7ea61",
+    "examples/forestry-harvest.json": "f4ea40bba45424f5f17a0ddefb863401fc0698598bdaee7e4dec70eea9df712a",
+    "examples/forestry-plant.json": "17cd074a9d586bda9d7e261c1b585f7db8e1a75a50a80ca0d2f85148bce4b4a9",
+    "examples/forestry-reserve.json": "7c76cdee9ac00affb8dd71b4a1edf3cdddc4753f8d8a58f12c1f2ef1f56bfd63"
+  },
+  "server": {
+    "dll": ".local/iter0028/server-v2/World.Server.dll",
+    "sha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a"
+  },
+  "authorTests": {
+    "groups": 26,
+    "passed": true,
+    "elapsedSeconds": 467.41263811301906,
+    "summary": ".local/iter0028/python/20261026T103732Z-801099/summary.json",
+    "summarySha256": "c86a3d60834c92d04b1d05ade62e153c7ed9d7f9a2ec9769e91a2540801fa638",
+    "candidate": ".local/iter0028/python/20261026T103732Z-801099/candidate.json",
+    "allCurrentProductAndTestHashesMatch": true,
+    "actualModelCalls": 0,
+    "scope": "Actual frozen-backend HTTP/CLI on original-history isolated branches, including explicit injected transport, persistence and deadline faults."
+  },
+  "actualChain": {
+    "summary": ".local/iter0028/python/20261026T103732Z-801099/test_01_actual_cli_two_generations_restart_and_wood_use/chain-summary.json",
+    "checks": ".local/iter0028/python/20261026T103732Z-801099/test_01_actual_cli_two_generations_restart_and_wood_use/database-checkpoints.json",
+    "sqlCheckpoints": 7,
+    "sameOriginalWorld": true,
+    "generations": 2,
+    "forestWoodIssued": 6,
+    "worldWoodIssued": 82,
+    "finalActorWood": 3,
+    "finalActorSeeds": 1,
+    "actualWoodUsedForPlatform": 3,
+    "woodAndSeedConserved": true,
+    "originalCanvasAndNotesContinuity": ".local/iter0028/python-observation-continuity.json"
+  },
+  "browser": {
+    "status": "frozen-for-independent-QA",
+    "files": {
+      "src/World.Server/wwwroot/resident.js": "4860c18ddce16271ea10d3fb2e8897d42c1e978d728162689b1db8a838858366",
+      "tests/browser/forestry-resident.mjs": "17e307c5cf164b7c6a7635f55c5e1b486c4fbfc7660cc852bbcfafe37899e726"
+    },
+    "runs": [
+      {
+        "summary": ".local/iter0028/browser/2026-10-26T10-37-33-805Z/results.json",
+        "groups": 29,
+        "passed": true,
+        "sourceSha256": "4860c18ddce16271ea10d3fb2e8897d42c1e978d728162689b1db8a838858366",
+        "finalSourceSha256": "4860c18ddce16271ea10d3fb2e8897d42c1e978d728162689b1db8a838858366",
+        "browserVersion": "152.0.7977.82",
+        "javascriptErrors": [],
+        "worldRequests": [],
+        "staticServerExited": true
+      },
+      {
+        "summary": ".local/iter0028/browser-legacy/2026-10-26T10-39-09-559Z/results.json",
+        "groups": 23,
+        "passed": true,
+        "sourceSha256": "4860c18ddce16271ea10d3fb2e8897d42c1e978d728162689b1db8a838858366",
+        "finalSourceSha256": "4860c18ddce16271ea10d3fb2e8897d42c1e978d728162689b1db8a838858366",
+        "browserVersion": "152.0.7977.82",
+        "javascriptErrors": [],
+        "worldRequests": [],
+        "staticServerExited": true
+      }
+    ],
+    "actualWorldOrNativeAcceptance": false,
+    "scope": "Actual CLI JSON imported in real Chrome; no world requests. Forestry 29 groups plus unchanged legacy workshop 23 groups. Existing failed full-chain cleanup remains separate.",
+    "visualReview": "Desktop and mobile screenshots inspected; Chinese states, wrapped original IDs, separate seed and wood facts, snapshot version and optional return visible."
+  },
+  "independentPython": {
+    "reviewer": "test-agent2",
+    "groups": 13,
+    "passed": true,
+    "report": ".local/test-agent2/iter28-python-review.json",
+    "reportSha256": "3ea2d2cebab9df81565cc44bc9c1a47e50bf856bb9af77d0a4c856ef29f086ac",
+    "countedSeparatelyFromAuthor26": true,
+    "scope": "Read independent reviewer report; this coordinator did not re-run its 13 cases."
+  },
+  "failuresRetained": [
+    {
+      "run": ".local/iter0028/python/20261026T101834Z-535040",
+      "kind": "setup",
+      "detail": "Read-only WAL source opening changed sidecars; subsequent harness copies cold files before opening owned staging."
+    },
+    {
+      "run": ".local/iter0028/python/20261026T102011Z-2f5606",
+      "kind": "explicit_task_expiry",
+      "detail": "Collect returned to distant origin, then original 90s preparation lease expired. Product stopped and retained seed; later new tasks explicitly omit return."
+    },
+    {
+      "run": ".local/iter0028/python/20261026T102559Z-10d662",
+      "kind": "post_stop_sql_read_error",
+      "detail": "All CLI actions and live audits completed, but old same-process api.snapshot reported malformed. Original failed database was deleted by old finally cleanup, leaving an evidence gap. Failed summary remains unchanged."
+    },
+    {
+      "run": ".local/iter0028/python/20261026T103517Z-4181d3",
+      "kind": "test_setup_premise",
+      "detail": "24 of 25 passed; test26 applied while the existing mature tree remained reserved and correctly received an empty plot. Revised test waits for actual priority expiry before applying."
+    }
+  ],
+  "sqlReadDiagnostic": {
+    "probeSource": ".local/iter0028/python-legacy-connection-probe.py",
+    "probeMetadata": ".local/iter0028/python-legacy-connection-probe.json",
+    "probeDiff": ".local/iter0028/python-legacy-connection-probe.diff",
+    "failedRun": ".local/iter0028/python/20261026T104048Z-e1a5b3",
+    "sameProcessErrorReproduced": true,
+    "coldFileChecks": ".local/iter0028/python/20261026T104048Z-e1a5b3/test_01_actual_cli_two_generations_restart_and_wood_use/forensic-first-read.json",
+    "coldRestart": ".local/iter0028/python/20261026T104048Z-e1a5b3/test_01_actual_cli_two_generations_restart_and_wood_use/cold-restart-summary.json",
+    "originalForestryReceiptsReplayed": 8,
+    "exactUnchangedTables": 15,
+    "coldFileIntegrity": "ok",
+    "foreignKeys": [],
+    "sourceBytesUnchanged": true,
+    "conclusion": "Old test reading flow reproducibly raises an error in its process; preserved cold files show no corruption in a new-process copied read, cold start, restart and original receipt replay. The unique internal SQLite cause is not established; the first failed database is unavailable."
+  },
+  "cleanup": {
+    "authorRuntimeDirectoriesRemaining": [
+      ".local/iter0028/python/20261026T104048Z-e1a5b3/test_01_actual_cli_two_generations_restart_and_wood_use/runtime"
+    ],
+    "retainedForensicDirectory": ".local/iter0028/python/20261026T104048Z-e1a5b3/test_01_actual_cli_two_generations_restart_and_wood_use/runtime",
+    "retainedDatabaseSha256": "c3059f3e0dea2c8b6fb61d7d9d9e075f9f3546b110b44b73347dbe2abe858de9",
+    "retentionInstruction": "ROOT msg_d781daa90579 explicitly requested retaining the reproduced-error cold database and diagnostics.",
+    "accessFileRemoved": true,
+    "ownedServerProcesses": 0,
+    "ownedStaticServers": 0,
+    "activeExecSessions": [],
+    "activeOrchestrationDispatch": null,
+    "completedCachesAndInputRemoved": [
+      ".local/iter0028/python-baseline-1352",
+      ".local/iter0028/python-ready-20261026T102559Z-10d662",
+      ".local/iter0028/python-ready-20261026T103732Z-801099",
+      ".local/iter0028/python-ready-20261026T104048Z-e1a5b3",
+      ".local/iter0028/python-db-diagnostic-copy",
+      ".local/iter0028/python-cold-restart-runtime"
+    ],
+    "cleanupEvidence": [
+      ".local/iter0028/python-cache-cleanup.json",
+      ".local/iter0028/python-final-cache-cleanup.json",
+      ".local/iter0028/python-completed-input-cleanup.json"
+    ]
+  },
+  "limits": [
+    "Fixed explicit tasks and isolated copies do not establish human enjoyment, long-term forestry economics, ecology or anti-monopoly guarantees.",
+    "Browser checks import actual report JSON without world requests; they are not native Godot or continuing natural-history acceptance.",
+    "Overall research and integration goal is not marked complete; user requested end-of-day pause and central commit/push."
+  ],
+  "commitAndPushOwner": "term_2343a903-8902-4b12-855d-9c3b8ff50b42",
+  "replacesAcceptanceStatusOfPreliminaryManifest": ".local/iter0028/python-product-v1.json (product hashes unchanged; preliminary failed-run note retained)"
+}

@@ -1,0 +1,72 @@
+{
+  "passed": false,
+  "groups": 8,
+  "assertions": 0,
+  "results": [
+    {
+      "name": "reserve_forest-before",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: original remains discoverable after switching world\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:48)\n       [2] send_action (res://world_client.gd:327)\n       [3] _submit (res://world_client.gd:414)\n       [4] _request (res://world_client.gd:171)\n"
+    },
+    {
+      "name": "reserve_forest-after",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: original remains discoverable after switching world\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:48)\n       [2] send_action (res://world_client.gd:327)\n       [3] _submit (res://world_client.gd:414)\n       [4] _request (res://world_client.gd:171)\n"
+    },
+    {
+      "name": "reserve_forest-receipt",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: original remains discoverable after switching world\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:48)\n       [2] send_action (res://world_client.gd:327)\n       [3] _submit (res://world_client.gd:414)\n       [4] _request (res://world_client.gd:171)\n"
+    },
+    {
+      "name": "reserve_forest-event",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: original remains discoverable after switching world\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:48)\n       [2] send_action (res://world_client.gd:327)\n       [3] _submit (res://world_client.gd:414)\n       [4] _settle (res://world_client.gd:365)\n       [5] _request (res://world_client.gd:171)\n"
+    },
+    {
+      "name": "reserve_forest-detail",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: original remains discoverable after switching world\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:48)\n       [2] send_action (res://world_client.gd:327)\n       [3] _submit (res://world_client.gd:414)\n       [4] _settle (res://world_client.gd:377)\n       [5] _request (res://world_client.gd:171)\n"
+    },
+    {
+      "name": "reserve_forest-capability",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: original remains discoverable after switching world\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:48)\n       [2] send_action (res://world_client.gd:327)\n       [3] _submit (res://world_client.gd:414)\n       [4] _request (res://world_client.gd:171)\n"
+    },
+    {
+      "name": "cancel_forest_reservation-before",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: original remains discoverable after switching world\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:48)\n       [2] send_action (res://world_client.gd:327)\n       [3] _submit (res://world_client.gd:414)\n       [4] _request (res://world_client.gd:171)\n"
+    },
+    {
+      "name": "cancel_forest_reservation-after",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: original remains discoverable after switching world\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/forestry_recovery.gd:48)\n       [2] send_action (res://world_client.gd:327)\n       [3] _submit (res://world_client.gd:414)\n       [4] _request (res://world_client.gd:171)\n"
+    }
+  ],
+  "sourceSha256": {
+    "clients/godot/command_evidence.gd": "07748747c82941064644de5fe82972bc3ad0a2901aacfda67ebf3e8c1cc24f63",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_canvas_panel.gd": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/entity_notes_panel.gd": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803",
+    "clients/godot/forestry_evidence.gd": "0ed6e939e87b43fed0b4cfb945ecc43868f11fb6bc254e446c0c6bd44fa176ad",
+    "clients/godot/forestry_panel.gd": "7e328832647a467f2fda8b6106058d5028becd4e55fc886494acf183b648eace",
+    "clients/godot/main.gd": "32e40411aa0cc2492c4d6e1191c27b2585d74b7a9848f2785893dd306e3f11be",
+    "clients/godot/material_panel.gd": "0ca9ce3e6eef38690d9bbc7e77b7e8d75f4bb654e1ab2495e7598aaa632a9798",
+    "clients/godot/pending_store.gd": "98b0d5836e8d6d1850212756f2a131ca4010584e74dbd534638563fe56f09336",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/workshop_evidence.gd": "2ee74cc3336881d465e95618662357b1b6530bc22b7d6e92a43cd52729f37e31",
+    "clients/godot/workshop_geometry.gd": "6dc487e8c688c76aa26fb114d951988a670036e3213bbd319238c8973f91b57b",
+    "clients/godot/workshop_panel.gd": "1545fa187422875c92f1e7f2e7d0ffed7b64a39a0b2bbf19b6a98662cfad1b20",
+    "clients/godot/world_client.gd": "a39de12346f843d0339885a92cf362c5f51dd4c33fae3c8456090db7a527ca35",
+    "clients/godot/world_navigation.gd": "a6682c79f7b9c263b6ffa2d944fcb357736d2abda8a7fde2e4fce363c76974ba",
+    "clients/godot/world_view.gd": "8871952832c8ec78aa8008ad12af7d53b709856e08b1b075475b526950796e6c",
+    "tests/forestry_godot.py": "bf8f720fbd8325d58ba9bcdc75fd70e775069f113a3b409550d7016e2f88915d",
+    "tests/godot/forestry_recovery.gd": "998f982d90ccec31ea723ba644f8b935aa12fa869a8b439096e1373677137a1d"
+  },
+  "sourceUnchanged": true,
+  "dllSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+  "temporaryWorldsRemoved": true,
+  "actualModelCalls": 0
+}

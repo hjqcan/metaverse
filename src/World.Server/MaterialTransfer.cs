@@ -19,9 +19,9 @@ internal sealed partial class WorldService
         var recipient = ReadActor(c, t, action.RecipientActorId!);
         var trees = ReadResourceNodes(c, t); var entities = ReadStructures(c, t);
         if (ContinuousWorld.Distance(sender.X, sender.Y, recipient.X, recipient.Y) > TransferReach ||
-            !ContinuousWorld.Walkable(sender.X, sender.Y, trees, entities) ||
-            !ContinuousWorld.Walkable(recipient.X, recipient.Y, trees, entities) ||
-            ContinuousWorld.Sweep(sender.X, sender.Y, recipient.X, recipient.Y, trees, entities).Blocked)
+            !ContinuousWorld.Walkable(sender.X, sender.Y, trees, entities, ForestryRules.Obstacles(c, t)) ||
+            !ContinuousWorld.Walkable(recipient.X, recipient.Y, trees, entities, ForestryRules.Obstacles(c, t)) ||
+            ContinuousWorld.Sweep(sender.X, sender.Y, recipient.X, recipient.Y, trees, entities, ForestryRules.Obstacles(c, t)).Blocked)
             return (422, new("TRANSFER_UNREACHABLE", "请到收件人 1.6 米内，且双方之间没有障碍"));
         if (sender.Wood < action.Quantity) return (422, new("INSUFFICIENT_RESOURCE", "本人木材不足，不能完成转让"));
         if (recipient.Wood + action.Quantity > 12) return (422, new("RECIPIENT_CAPACITY_EXCEEDED", "收件人库存容量不足"));

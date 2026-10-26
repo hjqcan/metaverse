@@ -3,6 +3,7 @@ extends SubViewportContainer
 signal ground_clicked(point: Vector2, node_id: String)
 signal ground_hovered(point: Vector2)
 const Canvas = preload("res://entity_canvas_evidence.gd")
+const Forestry = preload("res://forestry_evidence.gd")
 
 var viewport: SubViewport
 var scene: Node3D
@@ -255,6 +256,8 @@ func _landscape(observation: Dictionary) -> void:
 			continue
 		_tree(terrain,Vector2(x,z),"",1,rng.randf_range(0.8,1.3))
 	for rock in observation.terrain.obstacles:
+		if rock.get("kind") != "rock":
+			continue
 		var at = Vector2(rock.position[0],rock.position[1])
 		var shape = SphereMesh.new()
 		shape.radial_segments = 7
@@ -381,6 +384,47 @@ func _material_source(source: Dictionary) -> void:
 		Vector3(center.x, y + 0.15, center.y + 1.8), Color("e7e9b5"))
 	caption.font_size = 28
 
+func _forestry(forest: Dictionary) -> void:
+	var nursery: Dictionary = forest.nursery
+	var center := Vector3(nursery.position[0], height_at(nursery.position[0], nursery.position[1]), nursery.position[1])
+	var bush := SphereMesh.new()
+	bush.radius = 0.3
+	bush.height = 0.6
+	bush.radial_segments = 12
+	bush.rings = 6
+	mesh(objects, bush, center + Vector3(0, 0.3, 0), material(Color("80934b")))
+	_caption(objects, "公共采种点 · %d/4种\n先申请，再亲自领取" % nursery.stockSeeds, center + Vector3(0, 1.1, 0), Color("eee7b7"))
+	for plot in forest.plots:
+		var at := Vector3(plot.position[0], height_at(plot.position[0], plot.position[1]), plot.position[1])
+		var ring := TorusMesh.new()
+		ring.inner_radius = 0.46
+		ring.outer_radius = 0.5
+		ring.rings = 24
+		ring.ring_segments = 8
+		mesh(objects, ring, at + Vector3(0, 0.035, 0), material(Color("b7b078")))
+		var found: Dictionary = {}
+		for p in forest.plants:
+			if p.plotId == plot.plotId:
+				found = p
+		if found.is_empty():
+			_caption(objects, "公共林位 · 空", at + Vector3(0, 0.6, 0), Color("d6dfb1"))
+			continue
+		var mature: bool = found.state == "mature"
+		var trunk := CylinderMesh.new()
+		trunk.top_radius = 0.4
+		trunk.bottom_radius = 0.45
+		trunk.height = 1.8 if mature else 0.65
+		trunk.radial_segments = 9
+		mesh(objects, trunk, at + Vector3(0, trunk.height / 2, 0), trunk_material)
+		var crown := SphereMesh.new()
+		crown.radius = 0.95 if mature else 0.48
+		crown.height = 1.5 if mature else 0.65
+		crown.radial_segments = 10
+		crown.rings = 5
+		mesh(objects, crown, at + Vector3(0, 2.0 if mature else 0.8, 0), material(Color("638746") if mature else Color("90ad62")))
+		_caption(objects, "%s · %s种下\n%s" % ["成熟 · 3木" if mature else "幼苗 · 生长中", found.planterActorId, found.plantId.left(9)],
+			at + Vector3(0, 3.1 if mature else 1.5, 0), Color("e4ecc7"))
+
 func update_world(observation: Dictionary, connection_changed := false) -> void:
 	var instance: String = observation.world.get("instanceId", "")
 	if connection_changed or instance != world_instance:
@@ -393,7 +437,8 @@ func update_world(observation: Dictionary, connection_changed := false) -> void:
 		focus = Vector3(observation.self.position[0],0,observation.self.position[1])
 	var source: Dictionary = observation.get("materialAccess", {})
 	var canvas: Dictionary = observation.entityCanvas if Canvas.supported(observation) else {}
-	var stamp = JSON.stringify([observation.resourceNodes,observation.entities,source.get("active"),source.get("stockWood"),canvas])
+	var forest: Dictionary = observation.forestry if Forestry.supported(observation) else {}
+	var stamp = JSON.stringify([observation.resourceNodes,observation.entities,source.get("active"),source.get("stockWood"),canvas,forest.get("plants"),forest.get("nursery", {}).get("stockSeeds")])
 	if stamp != object_stamp:
 		object_stamp = stamp
 		_clear_children(objects)
@@ -401,6 +446,8 @@ func update_world(observation: Dictionary, connection_changed := false) -> void:
 		structure_labels.clear()
 		if not source.is_empty():
 			_material_source(source)
+		if not forest.is_empty():
+			_forestry(forest)
 		for tree in observation.resourceNodes:
 			tree_nodes[tree.nodeId] = _tree(objects,Vector2(tree.position[0],tree.position[1]),tree.nodeId,tree.remainingWood)
 		for entity in observation.entities:

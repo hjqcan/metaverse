@@ -10,6 +10,7 @@ from foundation_agent import WorldClient
 from resident_mission import run_mission
 from activity_choice import choose_lowest_cost
 from resident_workshop import uses as workshop_task
+from resident_forestry import uses as forestry_task
 
 
 def main():
@@ -28,11 +29,15 @@ def main():
     if args.state.resolve() == args.output.resolve():
         parser.error("State and report paths must differ")
     spec = json.loads(args.spec.read_text())
+    if forestry_task(spec) and args.account:
+        parser.error('Forestry tasks execute one explicitly authorized action; --account is not supported')
+    if forestry_task(spec) and spec['goals'][0].get('forestry', {}).get('actorId') != args.actor:
+        parser.error('The CLI actor differs from the explicitly bound forestry actor')
     if workshop_task(spec) and args.account:
         parser.error('Workshop tasks execute the explicitly authorized fixed action; --account is not supported')
     if workshop_task(spec) and spec['goals'][0].get('workshop', {}).get('actorId') != args.actor:
         parser.error('The CLI actor differs from the explicitly bound workshop actor')
-    if not args.account and not args.fixed_reference and not workshop_task(spec) and not any('entityNote' in g or 'entityCanvas' in g for g in spec.get('goals', [])):
+    if not args.account and not args.fixed_reference and not workshop_task(spec) and not forestry_task(spec) and not any('entityNote' in g or 'entityCanvas' in g for g in spec.get('goals', [])):
         parser.error('Select --account or --fixed-reference; explicit entity-note and entity-canvas tasks default to the fixed reference')
     sessions = json.loads(args.access_file.read_text()).get('sessions', {})
     session = sessions.get(args.actor)

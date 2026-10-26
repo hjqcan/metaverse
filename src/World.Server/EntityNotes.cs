@@ -143,8 +143,8 @@ internal sealed partial class WorldService
             return (422, new("NOTE_LIMIT_REACHED", "本次共同手记的内容额度已用完"));
         var trees = ReadResourceNodes(c, t); var entities = ReadStructures(c, t);
         if (ContinuousWorld.Distance(actor.X, actor.Y, target.Position[0], target.Position[1]) > EntityNoteRules.Reach ||
-            !ContinuousWorld.Walkable(actor.X, actor.Y, trees, entities) ||
-            ContinuousWorld.Sweep(actor.X, actor.Y, target.Position[0], target.Position[1], trees, entities).Blocked)
+            !ContinuousWorld.Walkable(actor.X, actor.Y, trees, entities, ForestryRules.Obstacles(c, t)) ||
+            ContinuousWorld.Sweep(actor.X, actor.Y, target.Position[0], target.Position[1], trees, entities, ForestryRules.Obstacles(c, t)).Blocked)
             return (422, new("UNREACHABLE", "请走到原桥中心1.6米内且中间没有障碍"));
         return null;
     }

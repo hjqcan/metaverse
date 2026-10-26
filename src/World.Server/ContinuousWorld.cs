@@ -59,10 +59,10 @@ internal static class ContinuousWorld
         "bridge" => (2.4, 0.8), "platform" => (1, 1), "workbench" => (1, 0.5), "wooden_chest" => (0.5, 0.5),
         _ => throw new InvalidOperationException("不支持的实体几何")
     };
-    public static bool Walkable(double x, double z, IReadOnlyList<WorldResourceNode> trees, IReadOnlyList<NaturalStructure> entities)
+    public static bool Walkable(double x, double z, IReadOnlyList<WorldResourceNode> trees, IReadOnlyList<NaturalStructure> entities, IReadOnlyList<NaturalObstacle>? obstacles = null)
     {
         if (x < Radius || x > 32 - Radius || z < Radius || z > 24 - Radius) return false;
-        if (Rocks.Any(r => Distance(x, z, r.Position[0], r.Position[1]) < r.Radius + Radius - 1e-9)) return false;
+        if ((obstacles ?? Rocks).Any(r => Distance(x, z, r.Position[0], r.Position[1]) < r.Radius + Radius - 1e-9)) return false;
         if (trees.Any(t => t.RemainingWood > 0 && Distance(x, z, t.Position[0], t.Position[1]) < TreeRadius + Radius - 1e-9)) return false;
         foreach (var e in entities.Where(WorkshopRules.IsFurniture))
         {
@@ -75,7 +75,7 @@ internal static class ContinuousWorld
     // Partition a sweep at every circle, expanded river-edge and bridge-boundary crossing.
     // Check each open interval: even a thin obstacle between two valid endpoints is detected.
     public static (double[] Position, bool Blocked) Sweep(double x, double z, double tx, double tz,
-        IReadOnlyList<WorldResourceNode> trees, IReadOnlyList<NaturalStructure> entities)
+        IReadOnlyList<WorldResourceNode> trees, IReadOnlyList<NaturalStructure> entities, IReadOnlyList<NaturalObstacle>? obstacles = null)
     {
         var dx = tx - x; var dz = tz - z; var length = Distance(x, z, tx, tz);
         if (length < 1e-10) return ([x, z], false);
@@ -89,7 +89,7 @@ internal static class ContinuousWorld
         void Vertical(double v) { if (Math.Abs(dx) > 1e-14) Cut((v - x) / dx); }
         void Horizontal(double v) { if (Math.Abs(dz) > 1e-14) Cut((v - z) / dz); }
         Vertical(Radius); Vertical(32 - Radius); Horizontal(Radius); Horizontal(24 - Radius);
-        foreach (var r in Rocks) Circle(r.Position[0], r.Position[1], r.Radius + Radius);
+        foreach (var r in obstacles ?? Rocks) Circle(r.Position[0], r.Position[1], r.Radius + Radius);
         foreach (var t in trees.Where(t => t.RemainingWood > 0)) Circle(t.Position[0], t.Position[1], TreeRadius + Radius);
         for (var i = 0; i < River.Length; i++)
         {
@@ -115,7 +115,7 @@ internal static class ContinuousWorld
         for (var i = 0; i < cuts.Count - 1; i++)
         {
             var middle = (cuts[i] + cuts[i + 1]) / 2;
-            if (!Walkable(x + dx * middle, z + dz * middle, trees, entities))
+            if (!Walkable(x + dx * middle, z + dz * middle, trees, entities, obstacles))
             { var t = Math.Max(0, cuts[i] - 0.00001 / length); return ([x + dx * t, z + dz * t], true); }
         }
         return ([tx, tz], false);
@@ -132,7 +132,7 @@ internal sealed partial class WorldService
         while (r.Read()) list.Add(new(r.GetString(0), r.GetString(1), r.GetInt64(2), r.GetString(3), r.GetString(4), [r.GetDouble(5), r.GetDouble(6)], r.GetInt64(7)));
         return list;
     }
-    private ApiReply ObserveContinuous(string tokenHash, string? expectedInstance, bool supportsWorkshop)
+    private ApiReply ObserveContinuous(string tokenHash, string? expectedInstance, bool supportsWorkshop, bool supportsForestry)
     {
         using var c = database.Open(); using var t = c.BeginTransaction(deferred: true);
         var identity = database.Authenticate(tokenHash, c, t); var state = ReadState(c, t); var actor = ReadActor(c, t, identity.ActorId);
@@ -144,6 +144,13 @@ internal sealed partial class WorldService
             required["requiredCapabilities"] = new[] { WorkshopRules.Capability };
             return Protocol.Reply(409, required).WithInstance(instance);
         }
+        if (Scenario.SupportsMaterialAccess && ForestryRules.Read(c, t) is not null && !supportsForestry)
+        {
+            var required = Protocol.Envelope(Scenario.RulesVersion, identity, state.Version, state.Cursor,
+                error: new("CLIENT_CAPABILITY_REQUIRED", "请升级支持forestry-v1的客户端"));
+            required["requiredCapabilities"] = new[] { WorkshopRules.Capability, ForestryRules.Capability };
+            return Protocol.Reply(409, required).WithInstance(instance);
+        }
         var trees = ReadResourceNodes(c, t); var entities = ReadStructures(c, t); var residents = new List<object>();
         using (var command = Command(c, t, "SELECT actor_id,x,y FROM residents WHERE world_id=$world ORDER BY actor_id", ("$world", Protocol.WorldId)))
         using (var r = command.ExecuteReader()) while (r.Read()) residents.Add(new { actorId = r.GetString(0), position = new[] { r.GetDouble(1), r.GetDouble(2) } });
@@ -151,7 +158,7 @@ internal sealed partial class WorldService
         var body = Protocol.Envelope(Scenario.RulesVersion, identity, state.Version, state.Cursor);
         body["world"] = new { id = Protocol.WorldId, scenarioId = Scenario.Id, width = 32, height = 24, coordinateSystem = "continuous-xz", bounds = new[] { 0, 0, 32, 24 } };
         body["movement"] = new { version = 1, kind = "continuous", speed = ContinuousWorld.Speed, radius = ContinuousWorld.Radius, maxStepDistance = ContinuousWorld.MaxStep, gatherReach = ContinuousWorld.GatherReach, buildReach = ContinuousWorld.BuildReach };
-        body["terrain"] = new { version = 1, river = new { polygon = ContinuousWorld.River, centerline = ContinuousWorld.Centerline, halfWidth = 1.4 }, obstacles = ContinuousWorld.Rocks };
+        body["terrain"] = new { version = 1, river = new { polygon = ContinuousWorld.River, centerline = ContinuousWorld.Centerline, halfWidth = 1.4 }, obstacles = ForestryRules.Obstacles(c, t) };
         body["self"] = new { actorId = identity.ActorId, position = new[] { actor.X, actor.Y }, inventory = new { wood = actor.Wood } };
         body["residents"] = residents; body["resourceNodes"] = trees; body["entities"] = entities;
         body["recipes"] = new[] { new { id = "platform.v1", definitionId = "platform", woodCost = 3 }, new { id = "bridge.v1", definitionId = "bridge", woodCost = 6 } };
@@ -161,13 +168,16 @@ internal sealed partial class WorldService
         {
             var source = MaterialSourceRules.Read(c, t);
             var (toolWood, storedWood) = WorkshopRules.Wood(c, t);
+            var forest = ForestryRules.Wood(c, t); toolWood += forest.Tools;
             body["resourceAudit"] = new { initialWood = 12, issuedWood = state.IssuedWood, generatedWood = source.GeneratedWood,
+                forestGeneratedWood = forest.Generated, standingForestWood = forest.Standing, forestryToolWood = forest.Tools,
                 sourceWood = source.StockWood, wildWood, depotWood = 0, inventoryWood, embodiedWood, toolWood, storedWood,
-                conserved = wildWood + source.StockWood + inventoryWood + embodiedWood + toolWood + storedWood == state.IssuedWood && state.IssuedWood == 12 + source.GeneratedWood };
+                conserved = wildWood + source.StockWood + inventoryWood + embodiedWood + toolWood + storedWood + forest.Standing == state.IssuedWood && state.IssuedWood == 12 + source.GeneratedWood + forest.Generated };
             BindMaterialAccess(body, c, t, identity);
             BindEntityNotes(body, c, t, identity);
             BindEntityCanvas(body, c, t);
             BindWorkshop(body, c, t, identity, entities);
+            BindForestry(body, c, t, identity);
         }
         if (Scenario.SupportsTransfer) BindTransfers(body, c, t, identity.ActorId);
         BindObservation(body, instance);
@@ -187,10 +197,14 @@ internal sealed partial class WorldService
             if (node.RemainingWood == 0) return (422, new("RESOURCE_DEPLETED", "木材已采空"));
             if (ContinuousWorld.Distance(actor.X, actor.Y, node.Position[0], node.Position[1]) > ContinuousWorld.GatherReach)
                 return (422, new("UNREACHABLE", "请走到树旁 1.6 米内"));
+            if (ForestryRules.Read(c, t) is not null && (!ContinuousWorld.Walkable(actor.X, actor.Y, trees, entities, ForestryRules.Obstacles(c, t))
+                || ContinuousWorld.Sweep(actor.X, actor.Y, node.Position[0], node.Position[1], trees.Where(n => n.NodeId != node.NodeId).ToArray(), entities, ForestryRules.Obstacles(c, t)).Blocked))
+                return (422, new("UNREACHABLE", "原树交互途中有障碍"));
             return null;
         }
         if (action.Type != "build") return (422, new("ACTION_UNAVAILABLE", "连续荒野暂不支持此动作"));
         var x = action.TargetX; var z = action.TargetY; var bridge = action.RecipeId == "bridge.v1"; var hx = bridge ? 2.4 : 1; var hz = bridge ? 0.8 : 1;
+        if (ForestryRules.BuildExcluded(c, t, x, z, hx, hz)) return (409, new("AREA_OCCUPIED", "公共育林保留区不能建造"));
         if (Scenario.SupportsMaterialAccess && x + hx > 27 && x - hx < 29 && z + hz > 9 && z - hz < 11)
             return (409, new("AREA_OCCUPIED", "采集区始终保留，不能在其中建造"));
         if (x - hx < 0 || x + hx > 32 || z - hz < 0 || z + hz > 24 || ContinuousWorld.Distance(actor.X, actor.Y, x, z) > ContinuousWorld.BuildReach)
@@ -220,7 +234,7 @@ internal sealed partial class WorldService
         credit = Math.Min(ContinuousWorld.MaxStep, credit + Math.Max(0, now - last) / 1000.0 * ContinuousWorld.Speed);
         var distance = ContinuousWorld.Distance(actor.X, actor.Y, tx, tz); var step = Math.Min(distance, credit);
         var ratio = distance > 1e-10 ? step / distance : 0;
-        var walked = ContinuousWorld.Sweep(actor.X, actor.Y, actor.X + (tx - actor.X) * ratio, actor.Y + (tz - actor.Y) * ratio, ReadResourceNodes(c, t), ReadStructures(c, t));
+        var walked = ContinuousWorld.Sweep(actor.X, actor.Y, actor.X + (tx - actor.X) * ratio, actor.Y + (tz - actor.Y) * ratio, ReadResourceNodes(c, t), ReadStructures(c, t), ForestryRules.Obstacles(c, t));
         credit = Math.Max(0, credit - ContinuousWorld.Distance(actor.X, actor.Y, walked.Position[0], walked.Position[1]));
         Run(c, t, "UPDATE residents SET x=$x,y=$y,last_walk_ms=$now,walk_credit=$credit WHERE world_id=$world AND actor_id=$actor",
             ("$x", walked.Position[0]), ("$y", walked.Position[1]), ("$now", now), ("$credit", credit), ("$world", Protocol.WorldId), ("$actor", actorId));

@@ -1,0 +1,128 @@
+{
+  "actualModelCalls": 0,
+  "checks": [
+    {
+      "name": "recorded original craft_forestry_tool has a valid state transition",
+      "passed": true
+    },
+    {
+      "name": "invented seed rejected: craft_forestry_tool",
+      "passed": true
+    },
+    {
+      "name": "recorded original reserve_forest has a valid state transition",
+      "passed": true
+    },
+    {
+      "name": "invented seed rejected: reserve_forest",
+      "passed": true
+    },
+    {
+      "name": "recorded original collect_seed has a valid state transition",
+      "passed": true
+    },
+    {
+      "name": "invented seed rejected: collect_seed",
+      "passed": true
+    },
+    {
+      "name": "recorded original plant_tree has a valid state transition",
+      "passed": true
+    },
+    {
+      "name": "invented seed rejected: plant_tree",
+      "passed": true
+    },
+    {
+      "name": "recorded original harvest_tree has a valid state transition",
+      "passed": true
+    },
+    {
+      "name": "invented seed rejected: harvest_tree",
+      "passed": true
+    },
+    {
+      "name": "actual growing observation and public circles accepted",
+      "passed": true
+    },
+    {
+      "name": "unknown forestry version rejected",
+      "passed": true
+    },
+    {
+      "name": "growth duration cannot drift",
+      "passed": true
+    },
+    {
+      "name": "missing live trunk collision rejected",
+      "passed": true
+    },
+    {
+      "name": "queued cancellation accepts same original actual grant",
+      "passed": true
+    },
+    {
+      "name": "queued cancellation cannot switch reservation",
+      "passed": true
+    },
+    {
+      "name": "forestry menu shown in actual main scene",
+      "passed": true
+    },
+    {
+      "name": "actual mouse opens forestry panel",
+      "passed": true
+    },
+    {
+      "name": "original growing grant displayed",
+      "passed": true
+    },
+    {
+      "name": "growing tree cannot be planted or harvested again",
+      "passed": true
+    },
+    {
+      "name": "fixed timing and priority explanation survives polling",
+      "passed": true
+    },
+    {
+      "name": "actual OpenGL screenshot: forestry-growing-1280",
+      "passed": true
+    },
+    {
+      "name": "panel remains within shorter window",
+      "passed": true
+    },
+    {
+      "name": "actual OpenGL screenshot: forestry-growing-1000",
+      "passed": true
+    },
+    {
+      "name": "pending blocks new forestry effects",
+      "passed": true
+    },
+    {
+      "name": "actual harvested observation preserves empty plot and seed",
+      "passed": true
+    },
+    {
+      "name": "planted trunk blocks ordinary walk",
+      "passed": true
+    },
+    {
+      "name": "interaction excludes only original target trunk",
+      "passed": true
+    },
+    {
+      "name": "wrong target ID cannot ignore trunk",
+      "passed": true
+    },
+    {
+      "name": "empty plot center moves outside the future trunk before planting",
+      "passed": false
+    }
+  ],
+  "evidenceScope": "recorded live facts, actual main scene mouse open and rendering; boundary mutations are UI fixtures",
+  "passed": false,
+  "worldRequests": 0
+}

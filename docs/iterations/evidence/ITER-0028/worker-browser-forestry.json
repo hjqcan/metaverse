@@ -1,0 +1,130 @@
+{
+  "results": [
+    {
+      "name": "legacy_report_remains_readable",
+      "passed": true
+    },
+    {
+      "name": "actual_cli_axe_three_original_records",
+      "passed": true
+    },
+    {
+      "name": "actual_cli_reserve_three_original_records",
+      "passed": true
+    },
+    {
+      "name": "actual_cli_collect_three_original_records",
+      "passed": true
+    },
+    {
+      "name": "actual_cli_plant_three_original_records",
+      "passed": true
+    },
+    {
+      "name": "actual_cli_harvest_three_original_records",
+      "passed": true
+    },
+    {
+      "name": "actual_cli_secondHarvest_three_original_records",
+      "passed": true
+    },
+    {
+      "name": "actual_cli_cancel_three_original_records",
+      "passed": true
+    },
+    {
+      "name": "reserve_is_only_queue_and_plant_is_not_harvest",
+      "passed": true
+    },
+    {
+      "name": "harvest_counts_wood_and_seed_separately",
+      "passed": true
+    },
+    {
+      "name": "explicit_optional_return_is_not_claimed",
+      "passed": true
+    },
+    {
+      "name": "wrong_receiptInstanceId_cannot_confirm",
+      "passed": true
+    },
+    {
+      "name": "wrong_detailInstanceId_cannot_confirm",
+      "passed": true
+    },
+    {
+      "name": "wrong_eventInstanceId_cannot_confirm",
+      "passed": true
+    },
+    {
+      "name": "current_inventory_cannot_replace_original_detail",
+      "passed": true
+    },
+    {
+      "name": "original_event_missing_cannot_confirm",
+      "passed": true
+    },
+    {
+      "name": "seed_and_wood_facts_cannot_be_forged",
+      "passed": true
+    },
+    {
+      "name": "plant_generation_and_axe_identity_remain_bound",
+      "passed": true
+    },
+    {
+      "name": "cross_proof_forged_material_delta_is_not_accepted",
+      "passed": true
+    },
+    {
+      "name": "lowered_command_query_and_material_budgets_downgrade",
+      "passed": true
+    },
+    {
+      "name": "permission_actor_version_and_unsafe_integer_rejected",
+      "passed": true
+    },
+    {
+      "name": "unknown_observation_capability_or_geometry_downgrades",
+      "passed": true
+    },
+    {
+      "name": "required_return_missing_downgrades_whole_task",
+      "passed": true
+    },
+    {
+      "name": "earlier_world_snapshot_does_not_erase_original_action",
+      "passed": true
+    },
+    {
+      "name": "newer_actual_observation_cannot_keep_old_return_flag",
+      "passed": true
+    },
+    {
+      "name": "actual_lost_response_stays_unknown",
+      "passed": true
+    },
+    {
+      "name": "actual_missing_proof_budget_preserves_pending",
+      "passed": true
+    },
+    {
+      "name": "mobile_forestry_facts_and_replay_fit",
+      "passed": true
+    },
+    {
+      "name": "no_world_requests_no_javascript_errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "worldRequests": [],
+  "browserVersion": "152.0.7977.82",
+  "input": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0028/python/20261026T102559Z-10d662",
+  "cancelInput": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0028/python/20261026T103517Z-4181d3",
+  "faultInput": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0028/python/20261026T103517Z-4181d3",
+  "sourceSha256": "4860c18ddce16271ea10d3fb2e8897d42c1e978d728162689b1db8a838858366",
+  "finalSourceSha256": "4860c18ddce16271ea10d3fb2e8897d42c1e978d728162689b1db8a838858366",
+  "actualModelCalls": 0,
+  "staticServerExited": true
+}

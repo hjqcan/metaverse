@@ -1,0 +1,42 @@
+{
+  "suite": "independent-workshop-http-v1",
+  "passed": true,
+  "testsRun": 4,
+  "tests": [
+    {
+      "test": "workshop_api.WorkshopAcceptance.test_01_explicit_adoption_old_receipts_pending_and_observation_gate",
+      "passed": true,
+      "seconds": 1.014747836976312
+    },
+    {
+      "test": "workshop_api.WorkshopAcceptance.test_02_complete_chain_original_facts_restart_and_use_withdrawn_wood",
+      "passed": true,
+      "seconds": 4.302108343981672
+    },
+    {
+      "test": "workshop_api.WorkshopAcceptance.test_13_r12_canvas_adoption_preserves_original_tables_and_pending",
+      "passed": true,
+      "seconds": 1.715431532007642
+    },
+    {
+      "test": "workshop_api.WorkshopAcceptance.test_18_canvas_adopted_after_workshop_cannot_disappear_on_restart",
+      "passed": true,
+      "seconds": 2.3228665749775246
+    }
+  ],
+  "actualModelCalls": 0,
+  "skipped": [],
+  "failures": [],
+  "dllSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+  "testSha256": "422a9d9c944d8c378640d4e595c02c36f7197e0a81322b8bbbdf1306910c38de",
+  "contractSha256": "682632fe4c5073103429cf8542902eb027b8e05471cb3c2c777ba6e9f6826fe0",
+  "candidateAtStart": {
+    "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0028/server-v2/World.Server.dll",
+    "dllSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+    "testSha256": "422a9d9c944d8c378640d4e595c02c36f7197e0a81322b8bbbdf1306910c38de",
+    "contractSha256": "682632fe4c5073103429cf8542902eb027b8e05471cb3c2c777ba6e9f6826fe0",
+    "actualModelCalls": 0
+  },
+  "disposedBytes": 3424614,
+  "executionScope": "BUILD author regression reusing independent test definitions; not a new independent QA run"
+}

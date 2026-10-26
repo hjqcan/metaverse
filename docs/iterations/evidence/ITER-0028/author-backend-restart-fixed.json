@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "cold growing restart",
+    "real service maturity",
+    "cold mature restart",
+    "whole tree harvest",
+    "original detail",
+    "cold completed restart and both ledgers"
+  ],
+  "actualModelCalls": 0
+}

@@ -1,0 +1,276 @@
+{
+  "passed": true,
+  "status": "independent-frozen-python-v1-acceptance",
+  "reviewer": "test-agent2",
+  "recordedAtUtc": "2026-10-26T10:48:43.236839+00:00",
+  "testsRun": 13,
+  "results": ".local/test-agent2/iter28-python-v1/run-20261026T104519Z/results.json",
+  "resultsSha256": "a571f10cbe0dced3d8f7efdfd78253f87ccaa019fad57c23ba9781ad0f91c056",
+  "probe": ".local/test-agent2/iter28-python-v1/independent.py",
+  "probeSha256": "00df4f8418285c958416e7dc543fab4f9f9ead57955b111f05e6b7a6ea7ea108",
+  "productHashes": {
+    "scripts/resident_forestry.py": "e05f65e508168b7f4f986b4c1d2ebb7a84e5f1e477ec39d81a98066891ede580",
+    "scripts/resident_mission.py": "41b3e856e9dcafb98b35da0494956581adce62222a6a88095702bfd3ac00453e",
+    "scripts/run_resident.py": "663d1559d813222cbf33b4ae59d1642298c5bbc8ba37a25871873b320db70e6a",
+    "scripts/foundation_agent.py": "a6b4db1561c6e60fcb9bd25c3589ae83327de00ef8845448888bd89df44ec743",
+    "scripts/continuous_navigation.py": "61e734e47b51c643c88895027a4b97adcb433f28436e8930a4fafece230bfab1",
+    "scripts/command_preconditions.py": "24ae626f771bb96276554c73ee46f640604de467974a72a34f7a6e1c13731032"
+  },
+  "backendSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+  "publicSourceMatchesFrozen": true,
+  "fullPrivateSnapshotHashesMatch": true,
+  "tests": [
+    {
+      "test": "__main__.Checks.test_01_request_not_forwarded_original_404_resends_once",
+      "passed": true,
+      "seconds": 1.0955289010307752
+    },
+    {
+      "test": "__main__.Checks.test_02_committed_harvest_response_lost_recovers_no_post",
+      "passed": true,
+      "seconds": 0.9999560819705948
+    },
+    {
+      "test": "__main__.Checks.test_03_altered_detail_cannot_settle_original",
+      "passed": true,
+      "seconds": 1.085604436986614
+    },
+    {
+      "test": "__main__.Checks.test_04_missing_event_cannot_settle_original",
+      "passed": true,
+      "seconds": 1.0833083569887094
+    },
+    {
+      "test": "__main__.Checks.test_05_wrong_instance_recovery_retains_exact_pending",
+      "passed": true,
+      "seconds": 1.1093551180092618
+    },
+    {
+      "test": "__main__.Checks.test_06_unknown_capability_after_404_does_not_resend",
+      "passed": true,
+      "seconds": 1.1065239330055192
+    },
+    {
+      "test": "__main__.Checks.test_07_corrupted_pending_rejected_before_network_without_overwrite",
+      "passed": true,
+      "seconds": 1.0904836499830708
+    },
+    {
+      "test": "__main__.Checks.test_08_observation_crosses_deadline_zero_post",
+      "passed": true,
+      "seconds": 3.0370610620011576
+    },
+    {
+      "test": "__main__.Checks.test_09_final_fresh_save_crosses_deadline_zero_post_exact_pending",
+      "passed": true,
+      "seconds": 2.9896634480101056
+    },
+    {
+      "test": "__main__.Checks.test_10_final_recovery_save_crosses_deadline_zero_resend",
+      "passed": true,
+      "seconds": 3.1094352900399826
+    },
+    {
+      "test": "__main__.Checks.test_11_cli_no_return_is_false_and_terminal_replay_no_network",
+      "passed": true,
+      "seconds": 1.4731911750277504
+    },
+    {
+      "test": "__main__.Checks.test_12_requested_return_requires_actual_walk_back",
+      "passed": true,
+      "seconds": 1.7323792179813609
+    },
+    {
+      "test": "__main__.Checks.test_13_original_harvest_recovers_after_new_generation_exists",
+      "passed": true,
+      "seconds": 1.1289468850009143
+    }
+  ],
+  "audits": [
+    {
+      "test": "test_01_request_not_forwarded_original_404_resends_once",
+      "sqlCheckpoints": 3,
+      "coldEqualsLastLive": true,
+      "woodConserved": true,
+      "seedsConserved": true,
+      "attemptedPosts": 2,
+      "forwardedPosts": 1,
+      "auditSha256": "a4c3aafe6f69a9d160807c7fef2632c7ca0f8311b2c9bdd03ccd9d320b51b720"
+    },
+    {
+      "test": "test_02_committed_harvest_response_lost_recovers_no_post",
+      "sqlCheckpoints": 3,
+      "coldEqualsLastLive": true,
+      "woodConserved": true,
+      "seedsConserved": true,
+      "attemptedPosts": 1,
+      "forwardedPosts": 1,
+      "auditSha256": "7cff118d6c373b986f9108a6005be56ea0f5efe6bb2efd5def2f523d95e47b8b"
+    },
+    {
+      "test": "test_03_altered_detail_cannot_settle_original",
+      "sqlCheckpoints": 3,
+      "coldEqualsLastLive": true,
+      "woodConserved": true,
+      "seedsConserved": true,
+      "attemptedPosts": 1,
+      "forwardedPosts": 1,
+      "auditSha256": "a4c3aafe6f69a9d160807c7fef2632c7ca0f8311b2c9bdd03ccd9d320b51b720"
+    },
+    {
+      "test": "test_04_missing_event_cannot_settle_original",
+      "sqlCheckpoints": 3,
+      "coldEqualsLastLive": true,
+      "woodConserved": true,
+      "seedsConserved": true,
+      "attemptedPosts": 1,
+      "forwardedPosts": 1,
+      "auditSha256": "a4c3aafe6f69a9d160807c7fef2632c7ca0f8311b2c9bdd03ccd9d320b51b720"
+    },
+    {
+      "test": "test_05_wrong_instance_recovery_retains_exact_pending",
+      "sqlCheckpoints": 3,
+      "coldEqualsLastLive": true,
+      "woodConserved": true,
+      "seedsConserved": true,
+      "attemptedPosts": 2,
+      "forwardedPosts": 1,
+      "auditSha256": "a4c3aafe6f69a9d160807c7fef2632c7ca0f8311b2c9bdd03ccd9d320b51b720"
+    },
+    {
+      "test": "test_06_unknown_capability_after_404_does_not_resend",
+      "sqlCheckpoints": 3,
+      "coldEqualsLastLive": true,
+      "woodConserved": true,
+      "seedsConserved": true,
+      "attemptedPosts": 2,
+      "forwardedPosts": 1,
+      "auditSha256": "a4c3aafe6f69a9d160807c7fef2632c7ca0f8311b2c9bdd03ccd9d320b51b720"
+    },
+    {
+      "test": "test_07_corrupted_pending_rejected_before_network_without_overwrite",
+      "sqlCheckpoints": 3,
+      "coldEqualsLastLive": true,
+      "woodConserved": true,
+      "seedsConserved": true,
+      "attemptedPosts": 2,
+      "forwardedPosts": 1,
+      "auditSha256": "a4c3aafe6f69a9d160807c7fef2632c7ca0f8311b2c9bdd03ccd9d320b51b720"
+    },
+    {
+      "test": "test_08_observation_crosses_deadline_zero_post",
+      "sqlCheckpoints": 3,
+      "coldEqualsLastLive": true,
+      "woodConserved": true,
+      "seedsConserved": true,
+      "attemptedPosts": 0,
+      "forwardedPosts": 0,
+      "auditSha256": "2679cc5e71a0205870d8afc6c1702a72a25a5117a1710ebe081559fe8259647c"
+    },
+    {
+      "test": "test_09_final_fresh_save_crosses_deadline_zero_post_exact_pending",
+      "sqlCheckpoints": 3,
+      "coldEqualsLastLive": true,
+      "woodConserved": true,
+      "seedsConserved": true,
+      "attemptedPosts": 0,
+      "forwardedPosts": 0,
+      "auditSha256": "2679cc5e71a0205870d8afc6c1702a72a25a5117a1710ebe081559fe8259647c"
+    },
+    {
+      "test": "test_10_final_recovery_save_crosses_deadline_zero_resend",
+      "sqlCheckpoints": 3,
+      "coldEqualsLastLive": true,
+      "woodConserved": true,
+      "seedsConserved": true,
+      "attemptedPosts": 1,
+      "forwardedPosts": 0,
+      "auditSha256": "2679cc5e71a0205870d8afc6c1702a72a25a5117a1710ebe081559fe8259647c"
+    },
+    {
+      "test": "test_11_cli_no_return_is_false_and_terminal_replay_no_network",
+      "sqlCheckpoints": 3,
+      "coldEqualsLastLive": true,
+      "woodConserved": true,
+      "seedsConserved": true,
+      "attemptedPosts": 3,
+      "forwardedPosts": 3,
+      "auditSha256": "96541bf280091accf77587b6d3ba974584bfab39afc5a566c0bcc0b298692a36"
+    },
+    {
+      "test": "test_12_requested_return_requires_actual_walk_back",
+      "sqlCheckpoints": 3,
+      "coldEqualsLastLive": true,
+      "woodConserved": true,
+      "seedsConserved": true,
+      "attemptedPosts": 5,
+      "forwardedPosts": 5,
+      "auditSha256": "6f995e22ecf6d957c114c79663467f17ea0f3c51c4beb91c22f16af2e56db1d6"
+    },
+    {
+      "test": "test_13_original_harvest_recovers_after_new_generation_exists",
+      "sqlCheckpoints": 3,
+      "coldEqualsLastLive": true,
+      "woodConserved": true,
+      "seedsConserved": true,
+      "attemptedPosts": 1,
+      "forwardedPosts": 1,
+      "auditSha256": "778050c278f1f15dc141411d72bb079f16b91de92682737e0526e2d7fa26dc71"
+    }
+  ],
+  "sqlCheckpoints": 39,
+  "woodAndSeedAudits": 13,
+  "actualModelCalls": 0,
+  "productionFileWrites": false,
+  "workerTestFileWrites": false,
+  "independentProbe": true,
+  "network": "Actual HTTP to frozen .NET backend through a loopback fault proxy; unchanged original requests and recorded response hashes; no bearer headers retained.",
+  "execution": "12 tests invoke the real mission dispatcher directly; test 11 invokes run_resident.py as a separate CLI process twice, including terminal replay with no network.",
+  "databaseSetup": "Owned cold copies only; forestry adoption and all gameplay via real admin/HTTP commands; no SQL resource, clock or lifecycle grants. Ready mature source was created by BUILD2 using actual gameplay and is independently integrity-checked here.",
+  "deadlineEvidence": "Observation delay and delays after the actual final persistence in both fresh and original-404 replay branches crossed the 2-second budget; all produced zero forwarded POSTs and saved the original pending unchanged where present.",
+  "generationEvidence": "Old committed harvest whose response was lost recovered from original receipt/detail/event after a new plantId already existed; only the first original harvest POST occurred and the second plant remained growing with no additional wood issuance.",
+  "disposedRuntimeBytes": 22511699,
+  "remainingRuntimeDirectories": [],
+  "ownedServerProcesses": 0,
+  "retainedSources": [
+    {
+      "path": ".local/test-agent2/iter28-source13-20261026T095453Z",
+      "databaseSha256": "7f715e45a2410e741d9b8cb6aa12911e3259733ddc7003343920379130677e69",
+      "storageVersion": 13,
+      "integrity": [
+        [
+          "ok"
+        ]
+      ],
+      "foreignKeys": [],
+      "durableFilesUnchanged": true,
+      "retainedForCoordinatorRelease": true
+    },
+    {
+      "path": ".local/test-agent2/iter28-python-v1/ready-source",
+      "databaseSha256": "c6680be7002527302e8313418be3d680a3c84e027625bfdbe7248125d9195aef",
+      "storageVersion": 14,
+      "integrity": [
+        [
+          "ok"
+        ]
+      ],
+      "foreignKeys": [],
+      "durableFilesUnchanged": true,
+      "retainedForCoordinatorRelease": true
+    }
+  ],
+  "externalUnresolvedIncident": {
+    "run": ".local/iter0028/python/20261026T102559Z-10d662",
+    "error": "database disk image is malformed",
+    "originalFailedDatabaseAvailable": false,
+    "cause": "unknown",
+    "conclusion": "The current successful cold audits do not establish a cause or repair of the earlier deleted database. Do not attribute to connection handling without evidence."
+  },
+  "limits": [
+    "This is 13 independent directed recovery/deadline/CLI groups, not another run of the worker 26-group suite or API 18-group suite.",
+    "401/5xx variants beyond the injected event-query 503 are covered by the separate worker suite, not independently re-executed here.",
+    "No original QA1 natural database was opened, started or changed.",
+    "No model or human-scale concurrency test was run."
+  ]
+}

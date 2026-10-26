@@ -1,0 +1,145 @@
+{
+  "source": ".local/iter0028/python/20261026T104048Z-e1a5b3/test_01_actual_cli_two_generations_restart_and_wood_use/runtime",
+  "sourceSha256": "c3059f3e0dea2c8b6fb61d7d9d9e075f9f3546b110b44b73347dbe2abe858de9",
+  "dllSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+  "entries": [
+    {
+      "commandId": "fc4cb4e465f1411cb64c15a0bcce9122",
+      "action": {
+        "type": "craft_forestry_tool",
+        "capabilityVersion": 1,
+        "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+        "recipeId": "wooden_axe.v1"
+      },
+      "originalReceiptSame": true,
+      "replayedBytesSame": true
+    },
+    {
+      "commandId": "952440dc25474ac8a48462b8688a7667",
+      "action": {
+        "type": "reserve_forest",
+        "capabilityVersion": 1
+      },
+      "originalReceiptSame": true,
+      "replayedBytesSame": true
+    },
+    {
+      "commandId": "3b9cb57c9c974f4197ab337b37f4c6af",
+      "action": {
+        "type": "collect_seed",
+        "capabilityVersion": 1,
+        "sourceId": "nursery-west",
+        "reservationId": "frf9d4c6d5018a434c8f5a3df7983b9e60"
+      },
+      "originalReceiptSame": true,
+      "replayedBytesSame": true
+    },
+    {
+      "commandId": "af6b7d1c34124f9cb551f026dea26596",
+      "action": {
+        "type": "plant_tree",
+        "capabilityVersion": 1,
+        "plotId": "forest-west-north",
+        "reservationId": "frf9d4c6d5018a434c8f5a3df7983b9e60"
+      },
+      "originalReceiptSame": true,
+      "replayedBytesSame": true
+    },
+    {
+      "commandId": "e448a3e3221c4c10b8768f23d4dbba82",
+      "action": {
+        "type": "harvest_tree",
+        "capabilityVersion": 1,
+        "plantId": "pc91397a111cc41c48628b76eecf6a4ef",
+        "reservationId": "frf9d4c6d5018a434c8f5a3df7983b9e60",
+        "toolId": "tc566767c678d453ca55a113dc366c85f"
+      },
+      "originalReceiptSame": true,
+      "replayedBytesSame": true
+    },
+    {
+      "commandId": "18d40caedba849aa8014e8545981f48d",
+      "action": {
+        "type": "reserve_forest",
+        "capabilityVersion": 1
+      },
+      "originalReceiptSame": true,
+      "replayedBytesSame": true
+    },
+    {
+      "commandId": "a83ae36778ee4e128c6ff77e01f32e1c",
+      "action": {
+        "type": "plant_tree",
+        "capabilityVersion": 1,
+        "plotId": "forest-west-north",
+        "reservationId": "fr823b6e43c435465b9d309d5907a57303"
+      },
+      "originalReceiptSame": true,
+      "replayedBytesSame": true
+    },
+    {
+      "commandId": "a95eee8b9fb14a1eaab6240b91c3b9ad",
+      "action": {
+        "type": "harvest_tree",
+        "capabilityVersion": 1,
+        "plantId": "pce0a9806063b4158bd18efafd4adce0e",
+        "reservationId": "fr823b6e43c435465b9d309d5907a57303",
+        "toolId": "tc566767c678d453ca55a113dc366c85f"
+      },
+      "originalReceiptSame": true,
+      "replayedBytesSame": true
+    }
+  ],
+  "passed": true,
+  "resourceAudit": {
+    "initialWood": 12,
+    "issuedWood": 82,
+    "generatedWood": 64,
+    "forestGeneratedWood": 6,
+    "standingForestWood": 0,
+    "forestryToolWood": 2,
+    "sourceWood": 6,
+    "wildWood": 0,
+    "depotWood": 0,
+    "inventoryWood": 23,
+    "embodiedWood": 45,
+    "toolWood": 5,
+    "storedWood": 3,
+    "conserved": true
+  },
+  "seedAudit": {
+    "nurseryGeneratedSeeds": 5,
+    "harvestGeneratedSeeds": 2,
+    "nurseryStockSeeds": 4,
+    "residentSeeds": 1,
+    "consumedPlantSeeds": 2,
+    "reservedSeeds": 0,
+    "conserved": true
+  },
+  "originalTablesUnchanged": {
+    "entities": true,
+    "entity_canvas": true,
+    "entity_canvas_cells": true,
+    "entity_canvas_edits": true,
+    "entity_note_adoption": true,
+    "entity_notes": true,
+    "world_instance": true,
+    "receipts": true,
+    "events": true,
+    "resource_ledger": true,
+    "forestry_actions": true,
+    "forestry_plants": true,
+    "forestry_reservations": true,
+    "forestry_seeds": true,
+    "forestry_tools": true
+  },
+  "integrity": [
+    [
+      "ok"
+    ]
+  ],
+  "foreignKeys": [],
+  "processExited": true,
+  "diagnosticCopyRemoved": true,
+  "originalSourceBytesUnchanged": true
+}

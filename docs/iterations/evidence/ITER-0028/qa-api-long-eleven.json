@@ -1,0 +1,78 @@
+{
+  "suite": "independent-forestry-http-v1",
+  "passed": true,
+  "testsRun": 11,
+  "tests": [
+    {
+      "test": "__main__.ForestryAcceptance.test_16_reserved_building_footprints_and_body_occupied_planting",
+      "passed": true,
+      "seconds": 73.08410730399191
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_08_growing_collision_offline_pause_original_planting_replay",
+      "passed": true,
+      "seconds": 6.4676584580447525
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_09_maturity_once_capacity_atomic_two_generations_original_pending",
+      "passed": true,
+      "seconds": 243.05619924503844
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_11_six_actions_before_commit_crash_rolls_back_original_id_resumes",
+      "passed": true,
+      "seconds": 17.162889052007813
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_12_six_actions_after_commit_crash_recovers_same_fact_once",
+      "passed": true,
+      "seconds": 17.303461303003132
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_13_four_resource_debit_exceptions_leave_no_partial_effect",
+      "passed": true,
+      "seconds": 14.326818462985102
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_18_original_workshop_recipes_and_mallet_remain_distinct_from_axe",
+      "passed": true,
+      "seconds": 12.37861385603901
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_05_seed_zero_fifo_alias_reserved_is_not_collected_and_no_jump",
+      "passed": true,
+      "seconds": 121.05248318001395
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_06_preparation_expiry_releases_reserved_seed_and_new_lease_starts_now",
+      "passed": true,
+      "seconds": 91.10719533404335
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_07_nursery_capacity_skips_full_periods_without_backlog",
+      "passed": true,
+      "seconds": 361.543838795973
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_10_mature_public_handoff_lease_is_not_backdated",
+      "passed": true,
+      "seconds": 162.8809993629693
+    }
+  ],
+  "actualModelCalls": 0,
+  "skipped": [],
+  "failures": [],
+  "testSha256": "b0d544ca8fd0e7fd5e3bd14ea1ddd596f42b4e3289c14fbf0627391e51e2d89d",
+  "dllSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+  "candidateAtStart": {
+    "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0028/server-v2/World.Server.dll",
+    "dllSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+    "testSha256": "b0d544ca8fd0e7fd5e3bd14ea1ddd596f42b4e3289c14fbf0627391e51e2d89d",
+    "helperSha256": "422a9d9c944d8c378640d4e595c02c36f7197e0a81322b8bbbdf1306910c38de",
+    "navigationSha256": "61e734e47b51c643c88895027a4b97adcb433f28436e8930a4fafece230bfab1",
+    "contractSha256": "3a2ab70e7a7f6160981998219344b78e761b504706c975973c6f248c26364dfa",
+    "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/test-agent2/iter28-source13-20261026T095453Z",
+    "actualModelCalls": 0
+  },
+  "disposedBytes": 60520977
+}

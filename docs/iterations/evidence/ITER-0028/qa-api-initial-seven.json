@@ -1,0 +1,58 @@
+{
+  "suite": "independent-forestry-http-v1",
+  "passed": true,
+  "testsRun": 7,
+  "tests": [
+    {
+      "test": "__main__.ForestryAcceptance.test_01_explicit_adoption_preserves_original_history_and_is_idempotent",
+      "passed": true,
+      "seconds": 1.0615718119661324
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_02_legacy_receipt_precedes_capability_new_effects_require_both",
+      "passed": true,
+      "seconds": 0.8893854189664125
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_03_strict_action_fields_integer_versions_and_same_id",
+      "passed": true,
+      "seconds": 1.3216808649594896
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_04_action_detail_auth_instance_privacy_and_readonly",
+      "passed": true,
+      "seconds": 0.38221365201752633
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_14_adoption_crash_transaction_and_retry_are_idempotent",
+      "passed": true,
+      "seconds": 1.5034823809983209
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_15_adoption_rechecks_current_residents_and_existing_buildings",
+      "passed": true,
+      "seconds": 35.164160953019746
+    },
+    {
+      "test": "__main__.ForestryAcceptance.test_17_adoption_respects_actual_resident_radius_at_clear_boundary",
+      "passed": true,
+      "seconds": 8.895780783961527
+    }
+  ],
+  "actualModelCalls": 0,
+  "skipped": [],
+  "failures": [],
+  "testSha256": "b0d544ca8fd0e7fd5e3bd14ea1ddd596f42b4e3289c14fbf0627391e51e2d89d",
+  "dllSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+  "candidateAtStart": {
+    "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0028/server-v2/World.Server.dll",
+    "dllSha256": "6227c59cbfadbd7044de774dba3cdbfc40750ca2634130cd350e98873c228b1a",
+    "testSha256": "b0d544ca8fd0e7fd5e3bd14ea1ddd596f42b4e3289c14fbf0627391e51e2d89d",
+    "helperSha256": "422a9d9c944d8c378640d4e595c02c36f7197e0a81322b8bbbdf1306910c38de",
+    "navigationSha256": "61e734e47b51c643c88895027a4b97adcb433f28436e8930a4fafece230bfab1",
+    "contractSha256": "3a2ab70e7a7f6160981998219344b78e761b504706c975973c6f248c26364dfa",
+    "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/test-agent2/iter28-source13-20261026T095453Z",
+    "actualModelCalls": 0
+  },
+  "disposedBytes": 19398992
+}
