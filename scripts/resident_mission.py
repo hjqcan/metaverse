@@ -29,6 +29,7 @@ import resident_construction as construction
 import command_preconditions as preconditions
 import resident_transfer as transfer
 import resident_material_access as material
+import resident_entity_notes as entity_notes
 
 
 def _utc():
@@ -42,7 +43,7 @@ def _integer(value, low, high):
 def _spec(value):
     required = {"missionId", "objective", "goals", "allowBuild", "budgets"}
     if (not isinstance(value, dict) or not required <= set(value)
-            or set(value) - required - {"allowGather", "allowTransfer", "allowMaterialAccess", "sharePostcard", "paintMosaic", "proposeMosaic", "reviewMosaicProposal"}):
+            or set(value) - required - {"allowGather", "allowTransfer", "allowMaterialAccess", "allowEntityNotes", "sharePostcard", "paintMosaic", "proposeMosaic", "reviewMosaicProposal"}):
         raise ValueError("Invalid mission spec fields")
     if not isinstance(value["missionId"], str) or not re.fullmatch(r"[A-Za-z0-9_-]{1,64}", value["missionId"]):
         raise ValueError("Invalid missionId")
@@ -56,6 +57,8 @@ def _spec(value):
         raise ValueError('allowTransfer must be boolean')
     if 'allowMaterialAccess' in value and type(value['allowMaterialAccess']) is not bool:
         raise ValueError('allowMaterialAccess must be boolean')
+    if 'allowEntityNotes' in value and type(value['allowEntityNotes']) is not bool:
+        raise ValueError('allowEntityNotes must be boolean')
     if "sharePostcard" in value and type(value["sharePostcard"]) is not bool:
         raise ValueError("sharePostcard must be boolean")
     if "paintMosaic" in value and type(value["paintMosaic"]) is not bool:
@@ -75,8 +78,12 @@ def _spec(value):
     ids = set()
     for goal in goals:
         if (not isinstance(goal, dict) or not {'id', 'label', 'target'} <= set(goal)
-                or set(goal) - {'id', 'label', 'target', 'activityId', 'buildRecipeId', 'transfer', 'materialAccess'}):
+                or set(goal) - {'id', 'label', 'target', 'activityId', 'buildRecipeId', 'transfer', 'materialAccess', 'entityNote'}):
             raise ValueError("Invalid goal fields")
+        if 'entityNote' in goal and (not entity_notes.valid_goal(goal['entityNote']) or value.get('allowEntityNotes') is not True
+                or any(k in goal for k in ('activityId', 'buildRecipeId', 'transfer', 'materialAccess'))
+                or any(value.get(k) for k in ('sharePostcard', 'paintMosaic', 'proposeMosaic', 'reviewMosaicProposal'))):
+            raise ValueError('Entity notes require explicit frozen text, reference and separate note permission')
         if 'materialAccess' in goal and (not material.valid_goal(goal['materialAccess'])
                 or value.get('allowMaterialAccess') is not True or not value['allowBuild']
                 or goal.get('buildRecipeId') != 'platform.v1' or any(k in goal for k in ('activityId', 'transfer'))):
@@ -107,6 +114,10 @@ def _spec(value):
     if any('materialAccess' in goal for goal in goals):
         if not all('materialAccess' in goal for goal in goals):
             raise ValueError('Material access tasks require explicit material goals throughout')
+        bounds['queries'] = (1, 5000)
+    if any('entityNote' in goal for goal in goals):
+        if not all('entityNote' in goal for goal in goals):
+            raise ValueError('Entity note goals cannot be mixed with other activities')
         bounds['queries'] = (1, 5000)
     if not isinstance(budget, dict) or set(budget) != set(bounds):
         raise ValueError("Invalid budgets")
@@ -184,6 +195,10 @@ def _public(observed, share_postcard=False, paint_mosaic=False, consent=False):
     if material.supported(observed):
         public['materialAccess'] = deepcopy(observed['materialAccess'])
         world['materialAccess'] = deepcopy(observed['materialAccess'])
+    if entity_notes.supported(observed):
+        public['entityNotes'] = deepcopy(observed['entityNotes'])
+        world['entityNotes'] = deepcopy(observed['entityNotes'])
+        public['self']['operatorId'] = observed['identity']['operatorId']
     entry = public_entry_guide(observed)
     if entry is not None:
         public["entryGuide"] = entry
@@ -197,7 +212,7 @@ def _public(observed, share_postcard=False, paint_mosaic=False, consent=False):
     return public
 
 
-def _validate_goals(spec, observed):
+def _validate_goals(spec, observed, *, recovering=False):
     free_movement = continuous.continuous(observed)
     if free_movement:
         continuous.validate_observation(observed)
@@ -217,6 +232,10 @@ def _validate_goals(spec, observed):
                 or any(not isinstance(observed["self"].get(k), list) for k in ("mosaicProposals", "mosaicReviews"))):
             raise ValueError("invalid_mosaic_consent_capability")
     for goal in spec["goals"]:
+        if 'entityNote' in goal and not recovering:
+            if preconditions.select_mode(observed) != preconditions.ACTOR_STATE:
+                raise ValueError('Entity note tasks require the original actor-state capability')
+            entity_notes.validate_goal(observed, goal)
         if 'materialAccess' in goal and (not material.supported(observed)
                                          or preconditions.select_mode(observed) != preconditions.ACTOR_STATE):
             raise ValueError('Material access requires the protected r10 capability and declared actor')
@@ -367,7 +386,8 @@ def _route_info(observed, target, allow_build, allow_gather=False):
 def _context(spec, observed):
     candidates = []
     for goal in spec["goals"]:
-        info = (material.plan(observed, goal) if 'materialAccess' in goal else
+        info = (entity_notes.plan(observed, goal) if 'entityNote' in goal else
+                material.plan(observed, goal) if 'materialAccess' in goal else
                 transfer.plan(observed, goal, spec['allowBuild'], spec.get('allowGather', False)) if 'transfer' in goal else
                 construction.plan(observed, goal, spec.get('allowGather', False)) if 'buildRecipeId' in goal
                 else _route_info(observed, goal["target"], spec["allowBuild"], spec.get("allowGather", False)))
@@ -479,10 +499,22 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
     with _lock(path):
         state = json.loads(path.read_text()) if path.exists() else None
         endpoint = {"url": client.url.rstrip("/"), "prefix": client.prefix}
+        note_task = any('entityNote' in g for g in spec['goals'])
+        startup = None
+        if isinstance(state, dict) and (state.get('kind') == entity_notes.STARTUP or note_task and '_state' not in state):
+            if not note_task:
+                raise ValueError('Unbound note startup cannot become a different task')
+            entity_notes.validate_startup(state, spec, endpoint)
+            startup, state = state, None
+        elif state is None and note_task:
+            startup = entity_notes.new_startup(spec, endpoint, time.time())
+            _save(path, startup)
         if state is not None:
             saved = state["_state"]
             if saved["spec"] != spec:
                 raise ValueError("State belongs to a different mission spec")
+        if state is not None:
+            entity_notes.validate_saved(state)
         mode = preconditions.saved_mode(state) if state is not None else None
         if state is not None:
             transfer.validate_saved(state)
@@ -496,6 +528,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             result['mission'].setdefault('allowBuild', spec['allowBuild'])
             result['mission'].setdefault('allowTransfer', spec.get('allowTransfer', False))
             result['mission'].setdefault('allowMaterialAccess', spec.get('allowMaterialAccess', False))
+            result['mission'].setdefault('allowEntityNotes', spec.get('allowEntityNotes', False))
+            result['facts'].setdefault('entityNoteShared', False)
+            result['facts'].setdefault('entityNote', None)
             result['facts'].setdefault('transferCompleted', False)
             result['facts'].setdefault('transfer', None)
             result['facts'].setdefault('woodTransferred', 0)
@@ -526,6 +561,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             if (status == 'blocked' and any('materialAccess' in g for g in spec['goals'])
                     and (reason.startswith('material_reservation_') or reason.startswith('command_rejected:'))):
                 state['_state']['materialAccessTerminal'] = True
+            if status == 'blocked' and any('entityNote' in g for g in spec['goals']) and reason.startswith('command_rejected:'):
+                state['_state']['entityNoteTerminal'] = True
             summary = "已核验活动到访与返回" if state["facts"].get("activityCompleted") else "已核验到达与返回"
             if state["facts"].get("postcardShared"):
                 summary = "已核验活动到访、共同手记分享与返回"
@@ -540,6 +577,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 summary = '已核验指定设施建成、到达与返回'
             if state['facts'].get('transferCompleted'):
                 summary = '已核验会面交付木材与返回'
+            if state['facts'].get('entityNoteShared'):
+                summary = '已核验原桥手记发表、原文与引用、到达和返回'
             state["feedback"] = {"summary": summary if status == "completed" else reason,
                                  "issues": [] if status in ("completed", "paused") else [reason], "suggestions": []}
             save()
@@ -550,11 +589,13 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                     "rulesVersion": observed["rulesVersion"], "instanceId": observed['world'].get('instanceId'),
                     "bindingVersion": 1 if observed['world'].get('instanceId') is not None else 0}
 
-        def query(call):
+        def query(call, kind='observation'):
             if state is not None and 'queries' in state['budget']['limits']:
                 if state['budget']['used']['queries'] >= state['budget']['limits']['queries']:
                     raise material.QueryBudget()
                 state['budget']['used']['queries'] += 1
+                if 'entityNotesBinding' in state['_state']:
+                    state['_state']['entityNoteQueries'].append({'index': state['budget']['used']['queries'], 'kind': kind})
                 save()  # Charge attempts before transport; a restart cannot replenish reads.
             return call()
 
@@ -572,6 +613,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
         # Terminal reports are historical reads. In particular a canvas conflict
         # cannot restart the journey, reselect, or send a replacement drawing.
         if state is not None and (state.get('_state', {}).get('materialAccessTerminal') is True
+                                  or state.get('_state', {}).get('entityNoteTerminal') is True
                                   or state["mission"]["status"] in ("completed", "decision_failed")
                                   or (state["mission"]["status"] == "blocked"
                                       and (state["mission"]["reason"] in ("command_rejected:MOSAIC_CHANGED",
@@ -588,6 +630,15 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
         try:
             if state is not None:
                 client.bind_instance(instance)
+            if startup is not None:
+                startup['used']['seconds'] = max(startup['used']['seconds'], time.time() - startup['startedEpoch'])
+                _save(path, startup)
+                for name in ('seconds', 'queries'):
+                    if startup['used'][name] >= spec['budgets'][name]:
+                        raise entity_notes.StartupBudget('Entity note startup budget exhausted: ' + name)
+                startup['used']['queries'] += 1
+                startup['queries'].append({'index': startup['used']['queries'], 'kind': 'observation'})
+                _save(path, startup)  # The very first failed read consumes the same durable budget.
             observed = observe() if state else client.observe()
         except material.QueryBudget:
             return finish('budget_exhausted', 'queries')
@@ -595,7 +646,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             if state is None:
                 raise
             return finish("unknown", "observation_unavailable:" + type(error).__name__)
-        _validate_goals(spec, observed)
+        _validate_goals(spec, observed, recovering=state is not None)
         if not continuous.continuous(observed) and max_steps is not None and max_steps > 100:
             raise ValueError('Legacy grid missions allow at most 100 steps per invocation')
         if state is None:
@@ -614,6 +665,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                                  "allowGather": spec.get("allowGather", False),
                                  "allowTransfer": spec.get("allowTransfer", False),
                                  "allowMaterialAccess": spec.get("allowMaterialAccess", False),
+                                 "allowEntityNotes": spec.get('allowEntityNotes', False),
                                  "arrivalTolerance": continuous.ARRIVAL_TOLERANCE if continuous.continuous(observed) else 0,
                                  "sharePostcard": spec.get("sharePostcard", False),
                                  "paintMosaic": spec.get("paintMosaic", False),
@@ -625,9 +677,12 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                                  "rulesVersion": observed["rulesVersion"], "origin": deepcopy(observed["self"]["position"]),
                                  "goal": None, "status": "running", "reason": "awaiting_decision"},
                      "decision": None, "budget": {"limits": deepcopy(spec["budgets"]),
-                                                  "used": {"commands": 0, "wood": 0, "modelCalls": 0, "seconds": 0,
-                                                           **({'queries': 1} if 'queries' in spec['budgets'] else {})}},
+                                                  "used": {"commands": 0, "wood": 0, "modelCalls": 0,
+                                                           "seconds": startup['used']['seconds'] if startup else 0,
+                                                           **({'queries': startup['used']['queries'] if startup else 1}
+                                                              if 'queries' in spec['budgets'] else {})}},
                      "facts": {"goalReached": False, "returned": True,
+                               "entityNoteShared": False, "entityNote": None,
                                "activityCompleted": False, "activityVisit": None,
                                "postcardShared": False, "postcard": None,
                                "mosaicPainted": False, "mosaicEdit": None,
@@ -640,8 +695,10 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                      "world": {**public["world"], "mosaic": public_mosaic(observed.get("mosaic")),
                                "mosaicProposals": [public_proposal(p) for p in observed.get("mosaicProposals", [])]},
                      "_state": {"spec": spec, "binding": {**bind(observed), 'preconditionBindingVersion': 1,
-                                                          'preconditionMode': mode}, "startedEpoch": time.time(),
-                                "pending": None, "initial": public, "decisionStarted": False}}
+                                                          'preconditionMode': mode}, "startedEpoch": startup['startedEpoch'] if startup else time.time(),
+                                "pending": None, "initial": public, "decisionStarted": False,
+                                **({'entityNotesBinding': entity_notes.binding(observed), 'entityNoteQueries': deepcopy(startup['queries'])}
+                                   if any('entityNote' in g for g in spec['goals']) else {})}}
             save()
 
         used, limits, facts = state["budget"]["used"], state["budget"]["limits"], state["facts"]
@@ -651,6 +708,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
         facts.setdefault('transferCompleted', False)
         facts.setdefault('transfer', None)
         facts.setdefault('woodTransferred', 0)
+        facts.setdefault('entityNoteShared', False)
+        facts.setdefault('entityNote', None)
         if any('materialAccess' in g for g in spec['goals']):
             facts.setdefault('materialReservation', None)
             facts.setdefault('materialWoodHarvested', 0)
@@ -665,7 +724,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                              ("mosaicReviewed", False), ("mosaicReview", None)):
             facts.setdefault(key, default)
 
-        def record_observation(observed):
+        def record_observation(observed, *, persist=True):
             position = observed["self"]["position"]
             goal = state["mission"]["goal"]
             reached = continuous.near if continuous.continuous(observed) else lambda a, b: a == b
@@ -680,7 +739,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             state["world"]["mosaicProposals"] = [public_proposal(p) for p in observed.get("mosaicProposals", [])]
             if spec.get("sharePostcard"):
                 state["world"]["postcards"] = public["postcards"]
-            save()
+            if persist:
+                save()
 
         if state["decision"] is None:
             if state["_state"]["decisionStarted"] or used["modelCalls"]:
@@ -724,9 +784,12 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             needs_review = bool(spec.get("reviewMosaicProposal")) and not facts["mosaicReviewed"]
             needs_construction = 'buildRecipeId' in goal and not facts['constructionBuilt']
             needs_transfer = 'transfer' in goal and not facts['transferCompleted']
+            needs_entity_note = 'entityNote' in goal and not facts['entityNoteShared']
             ready_to_return = (facts["goalReached"] and not any((needs_visit, needs_postcard, needs_mosaic,
-                                                               needs_proposal, needs_review, needs_construction, needs_transfer)))
+                                                               needs_proposal, needs_review, needs_construction, needs_transfer, needs_entity_note)))
             if pending is None:
+                if needs_entity_note and not entity_notes.ready(observed, goal, state['_state']['entityNotesBinding'], state['_state']['initial']):
+                    return finish('unknown', 'entity_notes_capability_or_reference_unavailable')
                 if ready_to_return and facts["returned"]:
                     return finish("completed", "round_trip_verified")
                 frozen_base_required = (needs_mosaic or needs_proposal
@@ -741,11 +804,12 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                     return finish("budget_exhausted", "commands")
                 returning = ready_to_return
                 target = state["mission"]["origin"] if returning else goal["target"]
-                info = (material.plan(observed, goal, facts) if needs_construction and 'materialAccess' in goal else
+                info = (entity_notes.plan(observed, goal) if needs_entity_note else
+                        material.plan(observed, goal, facts) if needs_construction and 'materialAccess' in goal else
                         transfer.plan(observed, goal, spec['allowBuild'], spec.get('allowGather', False)) if needs_transfer else
                         construction.plan(observed, goal, spec.get('allowGather', False)) if needs_construction
-                        else _route_info(observed, target, spec['allowBuild'] and 'buildRecipeId' not in goal,
-                                         spec.get('allowGather', False)))
+                        else _route_info(observed, target, spec['allowBuild'] and 'buildRecipeId' not in goal and 'entityNote' not in goal,
+                                         spec.get('allowGather', False) and 'entityNote' not in goal))
                 if continuous.continuous(observed):
                     save()  # Geometric planning is part of the wall-time budget.
                     if used['seconds'] >= limits['seconds']:
@@ -825,6 +889,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 if mode is not None:
                     intent['preconditionMode'] = mode
                 pending = {"request": intent, "woodCost": cost}
+                if action['type'] == entity_notes.ACTION:
+                    pending['entityNoteBefore'] = entity_notes.before(observed, goal, state['_state']['entityNotesBinding'], state['_state']['initial'])
                 if action['type'] in material.ACTIONS:
                     pending['materialBefore'] = material.before(observed, facts.get('materialReservation'))
                 if action['type'] == 'transfer':
@@ -922,8 +988,12 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             receipt_query = recovery
             try:
                 if recovery:
-                    status, result = query(lambda: client.request("GET", client.prefix + "/commands/" + intent["commandId"]))
+                    status, result = query(lambda: client.request("GET", client.prefix + "/commands/" + intent["commandId"]), 'receipt')
                     if status == 404 and isinstance(result, dict) and (result.get("error") or {}).get("code") == "COMMAND_NOT_FOUND":
+                        if (intent['action']['type'] == entity_notes.ACTION
+                                and not entity_notes.ready(observed, goal, state['_state']['entityNotesBinding'], state['_state']['initial'])):
+                            step['status'] = 'unknown'
+                            return finish('unknown', 'entity_notes_capability_unavailable_pending_retained')
                         # A confirmed absent original submission may not accept a stale base.
                         # Query errors never reach this branch or justify a replacement ID.
                         if (intent["action"]["type"] in ("mosaic_propose", "mosaic_review")
@@ -973,6 +1043,17 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             if intent['action']['type'] in material.ACTIONS and rejected:
                 rejected = (type(result.get('schemaVersion')) is int
                             and result['identity'].get('operatorId') == pending['materialBefore']['operatorId'])
+            if intent['action']['type'] == entity_notes.ACTION:
+                # Parse-level 400/404 from an old service is not this command's durable rejection.
+                rejected = (400 <= status < 500 and status not in (401, 412, 428) and isinstance(result, dict)
+                            and isinstance(error, dict) and error.get('mutated') is False
+                            and error.get('code') not in ('IDEMPOTENCY_CONFLICT', 'INVALID_WORLD_INSTANCE', 'WORLD_INSTANCE_REQUIRED',
+                                                         'WORLD_INSTANCE_MISMATCH', 'WORLD_INSTANCE_UNAVAILABLE', 'INVALID_REQUEST')
+                            and result.get('status') == 'rejected' and result.get('commandId') == intent['commandId']
+                            and type(result.get('schemaVersion')) is int and result['schemaVersion'] == 1
+                            and result.get('rulesVersion') == 'r10' and isinstance(result.get('identity'), dict)
+                            and result['identity'].get('actorId') == pending['entityNoteBefore']['actorId']
+                            and result['identity'].get('operatorId') == pending['entityNoteBefore']['operatorId'])
             if not committed and not rejected:
                 step["status"] = "unknown"
                 return finish("unknown", "unconfirmed_receipt")
@@ -984,7 +1065,36 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 if not isinstance(result_action, dict) or result_action.get("action") != intent["action"]["type"]:
                     step["status"] = "unknown"
                     return finish("unknown", "unexpected_receipt_action")
-                if intent['action']['type'] in material.ACTIONS:
+                if intent['action']['type'] == entity_notes.ACTION:
+                    cursor = result.get('eventCursor')
+                    event, read = None, None
+                    if preconditions.integer(cursor) and cursor > 0:
+                        try:
+                            after_note = observe()
+                            read = entity_notes.readback(after_note, pending['entityNoteBefore'], result_action)
+                            if read is not None:
+                                event_status, envelope = query(lambda: client.request('GET', client.prefix + '/events?after=' + str(cursor - 1)), 'entity_note_event')
+                                if (event_status == 200 and isinstance(envelope, dict) and envelope.get('rulesVersion') == 'r10'
+                                        and isinstance(envelope.get('identity'), dict)
+                                        and envelope['identity'].get('actorId') == state['mission']['actorId']
+                                        and envelope['identity'].get('operatorId') == pending['entityNoteBefore']['operatorId']
+                                        and isinstance(envelope.get('events'), list) and envelope['events']):
+                                    event = envelope['events'][0]
+                        except material.QueryBudget:
+                            return finish('budget_exhausted', 'queries_pending_retained')
+                        except (OSError, RuntimeError, ValueError):
+                            step['status'] = 'unknown'
+                            return finish('unknown', 'entity_note_evidence_unavailable')
+                    note = entity_notes.evidence(result, intent, pending['entityNoteBefore'], read, event)
+                    if note is None:
+                        step['status'] = 'unknown'
+                        return finish('unknown', 'unconfirmed_entity_note_evidence')
+                    facts.update(entityNoteShared=True, entityNote=note)
+                    state['_state']['entityNoteProof'] = deepcopy({'request': intent, 'before': pending['entityNoteBefore'],
+                                                                   'receipt': result, 'readback': read, 'event': event})
+                    step.update(entityNoteEvidence=deepcopy(note), evidenceSource='original_receipt_note_and_event')
+                    record_observation(after_note, persist=False)
+                elif intent['action']['type'] in material.ACTIONS:
                     event = None
                     if intent['action']['type'] == 'reserve_material':
                         cursor = result.get('eventCursor')
@@ -1119,5 +1229,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             if committed and intent['action']['type'] == 'walk' and result_action['blocked']:
                 return finish('blocked', 'movement_collision')
             retryable = ("STALE_STATE",) if consent_validator else ("STALE_STATE", "CELL_OCCUPIED")
+            if intent['action']['type'] == entity_notes.ACTION:
+                retryable = ()
             if rejected and error.get("code") not in retryable:
                 return finish("blocked", "command_rejected:" + str(error.get("code")))

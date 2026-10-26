@@ -242,7 +242,7 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         var state = ReadState(connection, transaction);
         var actor = ReadActor(connection, transaction, identity.ActorId);
         var action = request.Action;
-        var fault = configuration.FaultsEnabled && action.Type is "claim" or "gather" or "build" or "transfer" or "reserve_material" or "cancel_reservation" or "harvest_material" or "visit" or "postcard" or "mosaic" or "mosaic_propose" or "mosaic_review" ? requestedFault : null;
+        var fault = configuration.FaultsEnabled && action.Type is "claim" or "gather" or "build" or "transfer" or "reserve_material" or "cancel_reservation" or "harvest_material" or "append_entity_note" or "visit" or "postcard" or "mosaic" or "mosaic_propose" or "mosaic_review" ? requestedFault : null;
         var rejection = Validate(connection, transaction, request, state, actor, identity, instance);
         if (rejection is not null)
         {
@@ -264,6 +264,9 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         long quantity = 0;
         switch (action.Type)
         {
+            case "append_entity_note":
+                (result, worldEvent) = ApplyEntityNote(connection, transaction, request, identity, actor, version, cursor);
+                break;
             case "reserve_material":
             case "cancel_reservation":
             case "harvest_material":
@@ -461,7 +464,7 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         {
             if (instance is null || !Scenario.SupportsContinuous ||
                 !(request.Action.Type is "walk" or "gather" or "build" || Scenario.SupportsTransfer && request.Action.Type == "transfer" ||
-                    Scenario.SupportsMaterialAccess && request.Action.Type is "reserve_material" or "cancel_reservation" or "harvest_material"))
+                    Scenario.SupportsMaterialAccess && request.Action.Type is "reserve_material" or "cancel_reservation" or "harvest_material" or "append_entity_note"))
                 return (422, new("PRECONDITION_MODE_UNAVAILABLE", "当前世界或动作不支持这个前置条件模式"));
             if (request.ExpectedStateVersion > state.Version)
                 return (409, new("STATE_VERSION_AHEAD", "观察版本超过当前世界，请重新观察"));
@@ -475,6 +478,7 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
                 return (409, new("STALE_ACTOR_STATE", "这位居民的状态已变化，请重新观察"));
         }
         var action = request.Action;
+        if (action.Type == "append_entity_note") return ValidateEntityNote(connection, transaction, action, actor, identity);
         if (action.Type is "reserve_material" or "cancel_reservation" or "harvest_material")
             return ValidateMaterialAccess(connection, transaction, action, actor, identity);
         if (action.Type == "transfer") return ValidateTransfer(connection, transaction, action, actor, actorId);

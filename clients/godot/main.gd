@@ -5,6 +5,7 @@ const View = preload("res://world_view.gd")
 const Navigation = preload("res://world_navigation.gd")
 const TransferPanel = preload("res://transfer_panel.gd")
 const MaterialPanel = preload("res://material_panel.gd")
+const NotesPanel = preload("res://entity_notes_panel.gd")
 var client: Node
 var navigation: Node
 var world_view: SubViewportContainer
@@ -20,6 +21,8 @@ var transfer_button: Button
 var transfer_panel: PanelContainer
 var transfer_history: Label
 var material_panel: PanelContainer
+var notes_panel: PanelContainer
+var notes_button: Button
 var url_input: LineEdit
 var token_input: LineEdit
 var connection_panel: PanelContainer
@@ -138,19 +141,31 @@ func _build_ui() -> void:
 	_button(controls,"连接 / 切换居民",func():
 		_stop_walk()
 		transfer_panel.hide()
+		notes_panel.close_panel()
 		connection_panel.visible = not connection_panel.visible)
 	transfer_button = _button(controls,"赠送木材",func():
 		_stop_walk()
 		connection_panel.hide()
+		notes_panel.close_panel()
 		transfer_panel.visible = not transfer_panel.visible)
+	notes_button = _button(controls, "旧桥手记", _open_notes)
 	transfer_panel = TransferPanel.new()
 	transfer_panel.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
 	transfer_panel.offset_left = -420
 	transfer_panel.offset_right = -24
-	transfer_panel.offset_top = 125
+	transfer_panel.offset_top = 170
 	transfer_panel.add_theme_stylebox_override("panel", _style(Color(0.09,0.15,0.12,0.96)))
 	root.add_child(transfer_panel)
 	transfer_panel.requested.connect(_transfer)
+	notes_panel = NotesPanel.new()
+	notes_panel.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+	notes_panel.offset_left = -440
+	notes_panel.offset_right = -24
+	notes_panel.offset_top = 170
+	notes_panel.add_theme_stylebox_override("panel", _style(Color(0.09,0.15,0.12,0.97)))
+	root.add_child(notes_panel)
+	notes_panel.requested.connect(_material_action)
+	notes_panel.destination_requested.connect(func(point: Vector2): _plan_walk(point, ""))
 	connection_panel = _panel(root,Control.PRESET_TOP_RIGHT,Vector2(-420,80))
 	connection_panel.custom_minimum_size.x = 396
 	var connection = VBoxContainer.new()
@@ -187,6 +202,8 @@ func _build_ui() -> void:
 	query_button = _button(row,"查询原动作",func(): client.recover())
 	retry_button = _button(row,"原样重试",func(): client.recover(true))
 	status_label = _text(actions,"WASD 行走 · 点击地面前往 · 滚轮缩放 · Esc 取消",13,Color("b7c2a4"))
+	# Control input follows sibling order as well as draw order.
+	root.move_child(notes_panel, root.get_child_count() - 1)
 
 func position_2d() -> Vector2:
 	var p = client.observation.get("self",{}).get("position",[0,0])
@@ -232,6 +249,8 @@ func _render() -> void:
 	transfer_button.disabled = not ready
 	transfer_panel.update_world(observation, ready)
 	material_panel.update_world(observation, ready)
+	notes_button.visible = Client.Evidence.Notes.supported(observation)
+	notes_panel.update_world(observation, ready, client.pending, client.last_receipt, client.connection_generation)
 	if not transfer_button.visible:
 		transfer_panel.hide()
 	transfer_history.visible = transfer_button.visible
@@ -285,6 +304,8 @@ func _render() -> void:
 			if client.last_receipt.result.action == "transfer":
 				status_label.text = "已向 %s 赠送 %d 木材" % [client.last_receipt.result.recipientActorId, client.last_receipt.result.quantity]
 				transfer_panel.hide()
+			elif client.last_receipt.result.action == "append_entity_note":
+				status_label.text = "手记已发表，后来者可以阅读或接写。"
 			elif client.last_receipt.result.action == "reserve_material":
 				status_label.text = "已加入采集队列。授予后到采集区领取。"
 			elif client.last_receipt.result.action == "cancel_reservation":
@@ -307,9 +328,25 @@ func _render() -> void:
 	else:
 		target_label.text = "探索河谷，寻找树木与合适的营地。"
 
+func _open_notes() -> void:
+	_stop_walk()
+	build_recipe = ""
+	world_view.ghost.visible = false
+	transfer_panel.hide()
+	connection_panel.hide()
+	if notes_panel.visible:
+		notes_panel.close_panel()
+	else:
+		notes_panel.show()
+
 func _clicked(point: Vector2, node_id: String) -> void:
-	if transfer_panel.visible:
+	if transfer_panel.visible or notes_panel.visible:
 		return
+	if build_recipe.is_empty() and Client.Evidence.Notes.supported(client.observation):
+		var target: Array = client.observation.entityNotes.target.position
+		if absf(point.x - target[0]) <= 2.4 and absf(point.y - target[1]) <= 0.8:
+			_open_notes()
+			return
 	_stop_walk()
 	var request := route_request
 	while client.busy:
@@ -415,6 +452,7 @@ func _begin_build(recipe: String) -> void:
 
 func _cancel() -> void:
 	transfer_panel.hide()
+	notes_panel.close_panel()
 	_stop_walk()
 	selected_node = ""
 	build_recipe = ""
@@ -447,6 +485,10 @@ func _material_action(action: Dictionary) -> void:
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo or get_viewport().gui_get_focus_owner() is LineEdit:
 		return
+	if notes_panel.visible:
+		if event.physical_keycode == KEY_ESCAPE:
+			notes_panel.close_panel()
+		return
 	if transfer_panel.visible:
 		if event.physical_keycode == KEY_ESCAPE:
 			transfer_panel.hide()
@@ -470,7 +512,7 @@ func _physics_process(delta: float) -> void:
 			await client.refresh()
 		return
 	var direction = Vector2.ZERO
-	if not get_viewport().gui_get_focus_owner() is LineEdit and build_recipe.is_empty() and not transfer_panel.visible:
+	if not get_viewport().gui_get_focus_owner() is LineEdit and build_recipe.is_empty() and not transfer_panel.visible and not notes_panel.visible:
 		direction = Vector2(int(Input.is_physical_key_pressed(KEY_D) or Input.is_physical_key_pressed(KEY_RIGHT))-int(Input.is_physical_key_pressed(KEY_A) or Input.is_physical_key_pressed(KEY_LEFT)),int(Input.is_physical_key_pressed(KEY_S) or Input.is_physical_key_pressed(KEY_DOWN))-int(Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_UP))).normalized()
 	if direction == Vector2.ZERO:
 		input_suspended = false

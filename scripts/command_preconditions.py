@@ -59,7 +59,8 @@ def saved_mode(state):
                         'build': ('constructionBefore', ('inventoryWood',)),
                         'transfer': ('transferBefore', ('position', 'inventoryWood')),
                         'reserve_material': ('materialBefore', ('position', 'inventoryWood', 'reservation')),
-                        'harvest_material': ('materialBefore', ('position', 'inventoryWood', 'reservation'))}
+                        'harvest_material': ('materialBefore', ('position', 'inventoryWood', 'reservation')),
+                        'append_entity_note': ('entityNoteBefore', ('position', 'inventoryWood', 'target', 'reference'))}
             if (intent.get('preconditionMode') != mode or action not in required
                     or not integer(intent.get('expectedStateVersion'))
                     or step.get('commandId') != intent.get('commandId')
@@ -83,6 +84,9 @@ def saved_mode(state):
             elif action in ('reserve_material', 'harvest_material'):
                 from resident_material_access import valid_before
                 valid = binding['rulesVersion'] == 'r10' and valid_before(before, action)
+            elif action == 'append_entity_note':
+                from resident_entity_notes import valid_before
+                valid = binding['rulesVersion'] == 'r10' and valid_before(before)
             else:
                 valid = integer(before['inventoryWood']) and before['inventoryWood'] <= 12
             if not valid:

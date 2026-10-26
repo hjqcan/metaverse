@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "recordedAtUtc": "2026-10-26T05:33:28.094678+00:00",
+  "sourceFileCount": 37,
+  "remainingOwnedWorldGodotStaticServices": [],
+  "brokenChangedDocumentationFileLinks": [],
+  "credentialKeysInPublicJson": [],
+  "gitDiffCheckPassed": true,
+  "actualModelCalls": 0
+}

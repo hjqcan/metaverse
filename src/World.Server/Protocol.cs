@@ -55,7 +55,8 @@ internal sealed record WorldAction(string Type, long Dx = 0, long Dy = 0, long Q
     string? VisitCommandId = null, string? Text = null, long ExpectedMosaicRevision = 0,
     MosaicPatchCell[]? Patch = null, string? ProposalActorId = null, string? ProposalCommandId = null,
     string? Decision = null, string? NodeId = null, double TargetX = 0, double TargetY = 0, bool Continuous = false,
-    string? RecipientActorId = null, string? Resource = null, string? SourceId = null, string? ReservationId = null)
+    string? RecipientActorId = null, string? Resource = null, string? SourceId = null, string? ReservationId = null,
+    string? EntityId = null, string? ReplyToNoteId = null)
 {
     public object Canonical => Type switch
     {
@@ -67,6 +68,7 @@ internal sealed record WorldAction(string Type, long Dx = 0, long Dy = 0, long Q
         "transfer" => new { type = Type, recipientActorId = RecipientActorId, resource = Resource, quantity = Quantity },
         "reserve_material" => new { type = Type, sourceId = SourceId },
         "cancel_reservation" or "harvest_material" => new { type = Type, reservationId = ReservationId },
+        "append_entity_note" => new { type = Type, entityId = EntityId, text = Text, replyToNoteId = ReplyToNoteId },
         "visit" => new { type = Type, activityId = ActivityId },
         "postcard" => new { type = Type, activityId = ActivityId, visitCommandId = VisitCommandId, text = Text },
         "mosaic" => new { type = Type, activityId = ActivityId, visitCommandId = VisitCommandId,
@@ -132,6 +134,15 @@ internal sealed record WorldCommand(int SchemaVersion, string RulesVersion, stri
             WorldAction parsed;
             switch (type)
             {
+                case "append_entity_note":
+                    Fields(action, "type", "entityId", "text", "replyToNoteId");
+                    var noteEntity = String(action.GetProperty("entityId"));
+                    var noteReference = action.GetProperty("replyToNoteId");
+                    var replyToNote = noteReference.ValueKind == JsonValueKind.Null ? null : String(noteReference);
+                    if (!Protocol.ValidCommandId(noteEntity) || replyToNote is not null && !Protocol.ValidCommandId(replyToNote))
+                        Invalid("手记目标或引用ID格式无效");
+                    parsed = new(type, EntityId: noteEntity, Text: PostcardText(action.GetProperty("text")), ReplyToNoteId: replyToNote);
+                    break;
                 case "reserve_material":
                     Fields(action, "type", "sourceId");
                     var sourceId = String(action.GetProperty("sourceId"));

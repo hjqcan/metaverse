@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "binarySha256": "c9d9ccaa5b1e194e17abc41a79c2ce255d436c77ff4116ddaa6b72b6ee7b2c8e",
+  "cases": {
+    "adoption": {
+      "passed": true,
+      "runningRejected": {
+        "exitCode": 1,
+        "output": "\u79bb\u7ebf\u7ba1\u7406\u5931\u8d25\uff1aIOException\n"
+      },
+      "invalidAdoptions": [
+        {
+          "exitCode": 1,
+          "output": "\u79bb\u7ebf\u7ba1\u7406\u5931\u8d25\uff1aInvalidOperationException\n"
+        },
+        {
+          "exitCode": 1,
+          "output": "\u79bb\u7ebf\u7ba1\u7406\u5931\u8d25\uff1aArgumentException\n"
+        },
+        {
+          "exitCode": 1,
+          "output": "\u79bb\u7ebf\u7ba1\u7406\u5931\u8d25\uff1aArgumentException\n"
+        }
+      ],
+      "missingRejected": {
+        "exitCode": 1,
+        "output": "\u79bb\u7ebf\u7ba1\u7406\u5931\u8d25\uff1aSqliteException\n"
+      },
+      "adoption": {
+        "adopted": {
+          "exitCode": 0,
+          "output": "\u5171\u540c\u624b\u8bb0\u5df2\u5728\u539f\u6865\u5f00\u542f\u3002\n"
+        },
+        "repeatNoMutation": {
+          "exitCode": 0,
+          "output": "\u5171\u540c\u624b\u8bb0\u5df2\u91c7\u7528\uff0c\u539f\u5185\u5bb9\u548c\u989d\u5ea6\u4fdd\u6301\u3002\n"
+        }
+      },
+      "differentTargetRejected": {
+        "exitCode": 1,
+        "output": "\u79bb\u7ebf\u7ba1\u7406\u5931\u8d25\uff1aInvalidOperationException\n"
+      },
+      "oldRejectedReceiptUnchanged": true,
+      "readOnlyQueries": 20,
+      "originalReceiptsPreserved": 404,
+      "allOriginalEntitiesInventoriesLedgerAndProductionUnchanged": true,
+      "audit": {
+        "issued": 24,
+        "generated": 12,
+        "wild": 0,
+        "source": 0,
+        "inventory": 6,
+        "embodied": 18,
+        "activeReserved": 0,
+        "serviceMs": 65403,
+        "processedPeriod": 4,
+        "production": [
+          [
+            1,
+            31047,
+            3,
+            258
+          ],
+          [
+            2,
+            41047,
+            3,
+            287
+          ],
+          [
+            3,
+            51047,
+            3,
+            337
+          ],
+          [
+            4,
+            61047,
+            3,
+            364
+          ]
+        ],
+        "stateVersion": 412,
+        "realCommandsThisBranch": 1,
+        "processStopped": true
+      }
+    },
+    "legacy": {
+      "passed": true,
+      "schemaRemains9": true,
+      "startupAndFailedAdoptionLogicalDumpUnchanged": true,
+      "originalObservationUnchanged": true,
+      "allOriginalReceiptBytesPreserved": 330,
+      "offlineAdoptionRejected": 1,
+      "audit": {
+        "materialTotal": 12,
+        "stateVersion": 330,
+        "requests": 0,
+        "processStopped": true
+      }
+    }
+  },
+  "worlds": [
+    {
+      "name": "adoption",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "legacy-r9",
+      "instance": "w_a2d7cd9ccbde4295b2fe38adfc3de6b8"
+    }
+  ],
+  "scope": "independent entity-notes-v1 on exhausted earned r10",
+  "contractSha256": "0049ac5c2f1c3a369d0450efd497a1e383433115949bf6db093cadf9b3c550e0",
+  "externalModelCalls": 0,
+  "directSqlStateEdits": false,
+  "controlledClock": false,
+  "earnedExhaustedSeed": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/notes-exhausted-baseline-20261026T045741197461Z",
+  "clonedStoppedBranches": true
+}

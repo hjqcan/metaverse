@@ -10,6 +10,11 @@ if (args.Length > 0)
 {
     try
     {
+        if (args.Length == 5 && args[0] == "adopt-entity-notes" && args[1] == "--instance" && args[3] == "--entity")
+        {
+            Console.WriteLine(database.AdoptEntityNotes(args[2], args[4]) ? "共同手记已在原桥开启。" : "共同手记已采用，原内容和额度保持。");
+            return 0;
+        }
         if (args.Length == 3 && args[0] == "enable-material-source" && args[1] == "--instance")
         {
             Console.WriteLine(database.EnableMaterialSource(args[2]) ? "材料来源已在原实例开启。" : "材料来源已经开启，原进度保持。");

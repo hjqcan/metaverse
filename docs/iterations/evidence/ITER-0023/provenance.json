@@ -1,0 +1,247 @@
+{
+  "iteration": "ITER-0023",
+  "createdAtUtc": "2026-10-26T05:33:28.100763+00:00",
+  "copyPolicy": "Exact original bytes; source/test/QA provenance and historical failures retained.",
+  "files": [
+    {
+      "file": "author-api-default.json",
+      "original": ".local/iter0023/api/20261026T050616Z-acadae/results.json",
+      "sha256": "13bc01ef2b6487fb6d283b7671a22f056c6211a1434eb5c85b8a22b2d6b3cba0",
+      "bytes": 581
+    },
+    {
+      "file": "author-godot-initial-failure.json",
+      "original": ".local/iter0023/godot/20261026T050443Z-0a3ea3/results.json",
+      "sha256": "1f1dec860ed2042aa909d8f103d2e1110c7cf0da7652463e21dfa84fe58e4028",
+      "bytes": 3019
+    },
+    {
+      "file": "author-godot-core.json",
+      "original": ".local/iter0023/godot/20261026T050528Z-4b252c/results.json",
+      "sha256": "c51473f412379efa8bc5e540432c57fb136e1afd936a887d905cb9496d24431e",
+      "bytes": 7859
+    },
+    {
+      "file": "author-godot-final-ui.json",
+      "original": ".local/iter0023/godot/20261026T051304Z-d8d32e/results.json",
+      "sha256": "c3ff94c2531ceabe86b42344a8f24966131027ddbb3667898e00e67e08fcac9d",
+      "bytes": 3285
+    },
+    {
+      "file": "author-browser-initial.json",
+      "original": ".local/iter0023/browser/2026-10-26T05-11-44-269Z/results.json",
+      "sha256": "30c99fdbcd8e980d093ca33401f7a09f89aa9e124966bed49288302ca16b99ee",
+      "bytes": 891
+    },
+    {
+      "file": "worker-python-full.json",
+      "original": ".local/iter0023/python/20261026T051629Z-0f5a12/results.json",
+      "sha256": "4b9fd7f6fc4bcc1ad5ac1ff082e0d672ec40638d686021b2eb5e3e5857d5aac0",
+      "bytes": 4498
+    },
+    {
+      "file": "qa-core-summary.json",
+      "original": ".local/qa/20261026-test-agent/notes-core-independent-acceptance.json",
+      "sha256": "8459b9a0071309bca095b16b76ad117e972a9cfe0c24c4614354e3e79feaa400",
+      "bytes": 3353
+    },
+    {
+      "file": "qa-core-natural.json",
+      "original": ".local/qa/20261026-test-agent/notes-http-20261026T045853080038Z/results.json",
+      "sha256": "aba94245bd8f2e76b7c57d109781195db4b14fbb627adde7b044eff87337270a",
+      "bytes": 65052
+    },
+    {
+      "file": "qa-core-boundaries.json",
+      "original": ".local/qa/20261026-test-agent/notes-http-20261026T045930803584Z/results.json",
+      "sha256": "e7d0c8c1ab38cd3f4d02c728656a83edd575427b3a48a15a7cad3a1e57173248",
+      "bytes": 58971
+    },
+    {
+      "file": "qa-core-adoption-legacy.json",
+      "original": ".local/qa/20261026-test-agent/notes-http-20261026T050034618032Z/results.json",
+      "sha256": "dbffbdc069110717eb3db2748e9093a1ec06bfb1a3722c3428798528480c0e1a",
+      "bytes": 3365
+    },
+    {
+      "file": "qa-godot-recovery.json",
+      "original": ".local/qa/20261026-test-agent/notes-godot-20261026T050630653726Z/results.json",
+      "sha256": "7246cfcd05fe1dbe63ed97b089a49ab71d93c62484af47bacad0ed7345984701",
+      "bytes": 2016745
+    },
+    {
+      "file": "qa-godot-old-actions.json",
+      "original": ".local/qa/20261026-test-agent/notes-godot-20261026T050741531936Z/results.json",
+      "sha256": "28178ff3f3e8a3985257bb2be782007563e0d90db6a3f1afb7fc025a64e7d26c",
+      "bytes": 132093
+    },
+    {
+      "file": "qa-godot-bridge-evidence.json",
+      "original": ".local/qa/20261026-test-agent/notes-godot-20261026T051141977150Z/results.json",
+      "sha256": "375cb2ed442a8cd193dadedf928c94ec1ce3c54597545917abfb7f4ae59144fd",
+      "bytes": 304871
+    },
+    {
+      "file": "godot-reply.png",
+      "original": ".local/iter0023/godot/20261026T051304Z-d8d32e/ui/ui-reply.png",
+      "sha256": "3894183a87f466b8afe16df94a023c5b3bfbf956bb73ea08e77ef765c7ade441",
+      "bytes": 438506
+    },
+    {
+      "file": "worker-handoff.json",
+      "original": ".local/iter0023/python/handoff-20261026T0518Z.json",
+      "sha256": "08acef1e3514c27946bd282af55613de20077252ef0d22e60ed666bf738d9e04",
+      "bytes": 3692
+    },
+    {
+      "file": "worker-default-entry.json",
+      "original": ".local/iter0023/python/20261026T051638Z-5d94bb/results.json",
+      "sha256": "4bc5d53dcdc0d0dcb12583aa22ab28c290dc58a9db8e1003779388ba36f02fa5",
+      "bytes": 2803
+    },
+    {
+      "file": "resident-a2.json",
+      "original": ".local/iter0023/python/20261026T051629Z-0f5a12/test_01_actual_cli_first_note_and_original_reference_reply-world/a2-report.json",
+      "sha256": "c8d9d007112ea9cee4213d568c532ca41fa82e2b534a413c39d7535636b87ce6",
+      "bytes": 44016
+    },
+    {
+      "file": "resident-a3.json",
+      "original": ".local/iter0023/python/20261026T051629Z-0f5a12/test_01_actual_cli_first_note_and_original_reference_reply-world/a3-report.json",
+      "sha256": "42e207e7698dda63e994cf11852b4f26150934cc5937c59f4b16d0cc58eb33c0",
+      "bytes": 46093
+    },
+    {
+      "file": "resident-query4.json",
+      "original": ".local/iter0023/python/20261026T051629Z-0f5a12/query4-confirmed-report.json",
+      "sha256": "8b53481cf7d27cb31839e0563d448beefde9e28719c951ff0d0a15feb5d7e0b9",
+      "bytes": 20642
+    },
+    {
+      "file": "qa-godot-summary.json",
+      "original": ".local/qa/20261026-test-agent/notes-godot-independent-acceptance.json",
+      "sha256": "2996887dbc851e8ce292e796bcaed0c92055a39d61451adeca06b206a0bbf71c",
+      "bytes": 4851
+    },
+    {
+      "file": "qa-godot-long-ui.json",
+      "original": ".local/qa/20261026-test-agent/notes-godot-20261026T051946842787Z/results.json",
+      "sha256": "860d8156112c2551be931f78e45a334db7fdd6fc821f395b0b3c318e5bc3b8a5",
+      "bytes": 29503
+    },
+    {
+      "file": "qa-godot-pointer-input.json",
+      "original": ".local/qa/20261026-test-agent/notes-godot-20261026T051946842787Z/ui.json",
+      "sha256": "2625f8b1c79f5a224e448cf0e62adaf2a79c6ea76df8fa41812075c6fb39877a",
+      "bytes": 18317
+    },
+    {
+      "file": "qa-web.json",
+      "original": ".local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/results.json",
+      "sha256": "ab50a76de5fdcf148dd4970fed73cf3178201131014faaea72637b11aa0ec2e0",
+      "bytes": 6258
+    },
+    {
+      "file": "godot-long-reply.png",
+      "original": ".local/qa/20261026-test-agent/notes-godot-20261026T051946842787Z/ui-reply.png",
+      "sha256": "d28796ab4b53c25cdfab42cf07ad7b6bd0c3762f6b831af748ce4c4280c0f5cc",
+      "bytes": 461190
+    },
+    {
+      "file": "report-desktop.png",
+      "original": ".local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/actual-desktop.png",
+      "sha256": "356ed8c0968e536dcfd66cecd25802ba346dafd22741d02ad0fa2d578d832837",
+      "bytes": 389803
+    },
+    {
+      "file": "report-mobile.png",
+      "original": ".local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/actual-mobile.png",
+      "sha256": "cd7222dc480576a02cee82b35dc2e9ab4e2730402b9e2b0bba187b9ecf5c05c5",
+      "bytes": 342446
+    },
+    {
+      "file": "author-godot-all.json",
+      "original": ".local/iter0023/final-godot-expanded.json",
+      "sha256": "002cd98684bf95f5ffa471daa52e32dae3d645e4b2681ce94fbe0215c8fdcdd6",
+      "bytes": 113085
+    },
+    {
+      "file": "author-godot-notes-final.json",
+      "original": ".local/iter0023/godot/20261026T052315Z-01ad9a/results.json",
+      "sha256": "63cae02babee4dd99d8797d7af75e48db82160d2d216491534c314deca0e147d",
+      "bytes": 8469
+    },
+    {
+      "file": "qa-python-summary.json",
+      "original": ".local/qa/20261026-test-agent/notes-python-independent-acceptance.json",
+      "sha256": "de998f62acc7aeb9a37c0658dbaf0d995d8f86fb984661e086cfcbc15eadacb4",
+      "bytes": 3403
+    },
+    {
+      "file": "qa-python-cli-recovery.json",
+      "original": ".local/qa/20261026-test-agent/notes-python-20261026T052240744512Z/results.json",
+      "sha256": "6247bb729520c1be4b9bf133c2c5563a5880c8ef3e708145e7d1eba0fa069f28",
+      "bytes": 304540
+    },
+    {
+      "file": "qa-python-budget-legacy.json",
+      "original": ".local/qa/20261026-test-agent/notes-python-20261026T052336715544Z/results.json",
+      "sha256": "2aeb5b018a19253295dcae6435ee6094cf1acbb9103ebb7d7f55ae70d75ecd6c",
+      "bytes": 292250
+    },
+    {
+      "file": "qa-web-final.json",
+      "original": ".local/qa/20261026-test-agent/notes-web-final-20261026T052358946787Z/results.json",
+      "sha256": "a94e029754eab36fd5a00cfc452ada80ddf35a6d6adcb5344c5d1842425dd1ed",
+      "bytes": 6145
+    },
+    {
+      "file": "qa-independent-summary.json",
+      "original": ".local/qa/20261026-test-agent/notes-independent-acceptance.json",
+      "sha256": "466daf3ffbc1246e653581e980585685537d01991caba8deb2ae7f13c7b47190",
+      "bytes": 20957
+    },
+    {
+      "file": "qa-services.json",
+      "original": ".local/qa/20261026-test-agent/notes-services-audit.json",
+      "sha256": "00d2906d6a590751347917cbd89c03f32ec564935211236c379b792774ed43d9",
+      "bytes": 218
+    },
+    {
+      "file": "author-full.json",
+      "original": ".local/checks/20261026T052014Z-07c35a/results.json",
+      "sha256": "79eb798df7723c1d56291aef0dc3a1546c4f7d9478940e7d3f0cce7656a83c66",
+      "bytes": 10281
+    },
+    {
+      "file": "author-full-expanded.json",
+      "original": ".local/iter0023/final-full-expanded.json",
+      "sha256": "52f2caeaec69f9ca6e4512495aeffb854fc16ccc1fd1aae0078e81f55177ebc0",
+      "bytes": 139192
+    },
+    {
+      "file": "author-browser-default.json",
+      "original": ".local/iter0023/browser/2026-10-26T05-30-31-418Z/results.json",
+      "sha256": "30c99fdbcd8e980d093ca33401f7a09f89aa9e124966bed49288302ca16b99ee",
+      "bytes": 891
+    },
+    {
+      "file": "candidate-source.json",
+      "original": ".local/iter0023/final-source-manifest.json",
+      "sha256": "8cd6fb2267cf0d6641f24607a9c5f9329e96cb69668053bd88f4b5ee3df022b5",
+      "bytes": 4320
+    },
+    {
+      "file": "author-final-audit.json",
+      "original": ".local/iter0023/final-audit.json",
+      "sha256": "4df7a3480094b7ade8a313a8c5a0a3ba0756a962368dcdc26efda247bcaf22c8",
+      "bytes": 285
+    },
+    {
+      "file": "qa-final-source.json",
+      "original": ".local/qa/20261026-test-agent/notes-final-source-audit.json",
+      "sha256": "1577941883e6bbd67b5a17b6441310e779233fee8975d4776f9bec043efdb464",
+      "bytes": 31889
+    }
+  ]
+}

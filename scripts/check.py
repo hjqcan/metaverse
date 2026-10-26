@@ -10,8 +10,8 @@ import sys
 import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
-HTTP = ('foundation', 'passage', 'resident_mission', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'entry_guide', 'wilderness', 'wilderness_mission', 'continuous', 'continuous_mission', 'world_instance', 'construction_mission', 'instance_mission', 'actor_state', 'actor_mission', 'material_transfer', 'transfer_mission', 'material_access', 'material_access_time', 'material_access_mission')
-BROWSER = ('foundation', 'passage', 'resident', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'consent-experience', 'entry', 'wilderness', 'wilderness-resident', 'continuous-resident', 'construction-resident', 'actor-resident', 'transfer-resident', 'material-resident')
+HTTP = ('foundation', 'passage', 'resident_mission', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'entry_guide', 'wilderness', 'wilderness_mission', 'continuous', 'continuous_mission', 'world_instance', 'construction_mission', 'instance_mission', 'actor_state', 'actor_mission', 'material_transfer', 'transfer_mission', 'material_access', 'material_access_time', 'material_access_mission', 'entity_notes', 'entity_notes_mission')
+BROWSER = ('foundation', 'passage', 'resident', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'consent-experience', 'entry', 'wilderness', 'wilderness-resident', 'continuous-resident', 'construction-resident', 'actor-resident', 'transfer-resident', 'material-resident', 'entity-note-resident')
 
 
 def evidence_path(lines):

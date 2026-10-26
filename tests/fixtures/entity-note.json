@@ -1,0 +1,20 @@
+{
+  "missionId": "old-bridge-note",
+  "objective": "走到原桥，发表这段固定手记，再返回原起点。",
+  "goals": [{
+    "id": "note",
+    "label": "原桥共同手记",
+    "target": [18, 12],
+    "entityNote": {
+      "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+      "text": "这座桥连接两岸。我读到了过去居民留下的共同历史。",
+      "replyToNoteId": null
+    }
+  }],
+  "allowEntityNotes": true,
+  "allowBuild": false,
+  "allowGather": false,
+  "allowTransfer": false,
+  "allowMaterialAccess": false,
+  "budgets": {"commands": 120, "wood": 0, "seconds": 180, "modelCalls": 1, "queries": 300}
+}

@@ -1,0 +1,20 @@
+{
+  "suite": "entity-notes-http-v1",
+  "passed": true,
+  "testsRun": 2,
+  "tests": [
+    {
+      "test": "__main__.EntityNotesAcceptance.test_01_same_instance_two_authors_reference_return_and_old_facts",
+      "passed": true,
+      "seconds": 26.252331977011636
+    },
+    {
+      "test": "__main__.EntityNotesAcceptance.test_02_frozen_text_reference_quota_and_original_receipt",
+      "passed": true,
+      "seconds": 6.369466819043737
+    }
+  ],
+  "actualModelCalls": 0,
+  "dllSha256": "c9d9ccaa5b1e194e17abc41a79c2ce255d436c77ff4116ddaa6b72b6ee7b2c8e",
+  "failureDetails": []
+}

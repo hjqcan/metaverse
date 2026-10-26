@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "scope": "independent ITER-0023 raw HTTP and persisted SQLite, frozen core-v1",
+  "binarySha256": "c9d9ccaa5b1e194e17abc41a79c2ce255d436c77ff4116ddaa6b72b6ee7b2c8e",
+  "contractSha256": "0049ac5c2f1c3a369d0450efd497a1e383433115949bf6db093cadf9b3c550e0",
+  "caseCount": 7,
+  "accepted": [
+    {
+      "case": "adoption",
+      "path": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T050034618032Z/results.json",
+      "sha256": "dbffbdc069110717eb3db2748e9093a1ec06bfb1a3722c3428798528480c0e1a",
+      "wholeRunPassed": true
+    },
+    {
+      "case": "legacy",
+      "path": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T050034618032Z/results.json",
+      "sha256": "dbffbdc069110717eb3db2748e9093a1ec06bfb1a3722c3428798528480c0e1a",
+      "wholeRunPassed": true
+    },
+    {
+      "case": "natural",
+      "path": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T045853080038Z/results.json",
+      "sha256": "aba94245bd8f2e76b7c57d109781195db4b14fbb627adde7b044eff87337270a",
+      "wholeRunPassed": false
+    },
+    {
+      "case": "protocol",
+      "path": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T045930803584Z/results.json",
+      "sha256": "e7d0c8c1ab38cd3f4d02c728656a83edd575427b3a48a15a7cad3a1e57173248",
+      "wholeRunPassed": true
+    },
+    {
+      "case": "concurrency",
+      "path": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T045930803584Z/results.json",
+      "sha256": "e7d0c8c1ab38cd3f4d02c728656a83edd575427b3a48a15a7cad3a1e57173248",
+      "wholeRunPassed": true
+    },
+    {
+      "case": "recovery",
+      "path": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T045930803584Z/results.json",
+      "sha256": "e7d0c8c1ab38cd3f4d02c728656a83edd575427b3a48a15a7cad3a1e57173248",
+      "wholeRunPassed": true
+    },
+    {
+      "case": "old_intents",
+      "path": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T045930803584Z/results.json",
+      "sha256": "e7d0c8c1ab38cd3f4d02c728656a83edd575427b3a48a15a7cad3a1e57173248",
+      "wholeRunPassed": true
+    }
+  ],
+  "naturalCommands": 212,
+  "originalReceiptsPreserved": 404,
+  "actualNotes": 2,
+  "oldEntitiesPreserved": 5,
+  "totalWood": 24,
+  "generatedWood": 12,
+  "sourceWood": 0,
+  "earlyInventoryWood": 6,
+  "embodiedWood": 18,
+  "qaCorrections": [
+    {
+      "path": "notes-http-20261026T045837428466Z/results.json",
+      "reason": "QA path crossed rock-east; server correctly blocked. Corrected route preserves old failed run."
+    },
+    {
+      "path": "notes-http-20261026T045853080038Z/results.json",
+      "reason": "Protocol QA wrongly required HTTP400 for existing IDENTITY_OVERRIDE, which correctly returns403. Natural case independently passed before this later assertion; corrected protocol rerun passed."
+    }
+  ],
+  "testerOwnedServices": [],
+  "externalModelCalls": 0,
+  "directSqlStateEdits": false,
+  "productSourceChanges": false,
+  "funValidated": false,
+  "clientTestsNotYetRun": true,
+  "updatedAtUtc": "2026-10-26T05:00:57.187988+00:00"
+}

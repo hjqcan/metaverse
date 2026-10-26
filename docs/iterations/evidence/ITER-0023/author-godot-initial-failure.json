@@ -1,0 +1,29 @@
+{
+  "passed": false,
+  "actualModelCalls": 0,
+  "groups": 1,
+  "assertions": 0,
+  "results": [
+    {
+      "name": "ui",
+      "passed": false,
+      "error": "ui: exit 1\nGodot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nWARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.\n     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)\nWARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.\n     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:372)\nOpenGL API 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.2 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 20.1.2, 256 bits)\n\nERROR: native Unicode draft input\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/entity_notes.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/entity_notes.gd:75)\n       [2] type_text (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/entity_notes.gd:57)\nERROR: empty inventory can publish nearby\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/entity_notes.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/entity_notes.gd:82)\n       [2] type_text (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/entity_notes.gd:57)\n"
+    }
+  ],
+  "sourceSha256": {
+    "clients/godot/command_evidence.gd": "f7d3c1e1af823d264259a56bfa13902cda5ff65b7e0811a18d5d4857176a7d68",
+    "clients/godot/entity_note_evidence.gd": "f80e6f82a54e58bbfb2e9dcf8ee9512447c546427c1d1dcc00787f4f3682d1a5",
+    "clients/godot/entity_notes_panel.gd": "b3230c66987af0acf6c1450b427a61b197d4577c072b660eddee50467a1de2e7",
+    "clients/godot/main.gd": "dfe4f751d62e677fb789b27b334f451160ab766e4984d120d67ec18216aa7c32",
+    "clients/godot/material_panel.gd": "39624af0442670059f6408b73b46cf21eaefb2aa0b75b19828194bba9a48cc3c",
+    "clients/godot/pending_store.gd": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/world_client.gd": "9d30e2c8bcfc0287b68605ecdab6f046f575410a069b2ddf3a6bc729e0aca193",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "ebf2271dd1541216ec7f0785600032e18607e1b027a95a5100f41f37395535d2",
+    "tests/entity_notes_godot.py": "cf1f779ef615ad6304f7003e1e01891ec64cce3a7b2acb80d9bee7b264d1149b",
+    "tests/godot/entity_notes.gd": "ad4da7b8fde8b4021499625067512ad3674e80a82540c00ff3a497d3d122cbec"
+  },
+  "sourceUnchanged": true,
+  "dllSha256": "c9d9ccaa5b1e194e17abc41a79c2ce255d436c77ff4116ddaa6b72b6ee7b2c8e"
+}

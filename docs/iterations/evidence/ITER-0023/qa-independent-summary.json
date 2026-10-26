@@ -1,0 +1,458 @@
+{
+  "passed": true,
+  "iteration": "ITER-0023",
+  "scope": "independent frozen artifact acceptance, original exhausted world; source claims separated from scripted usability",
+  "acceptedEvidenceRows": [
+    {
+      "component": "core",
+      "case": "adoption",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T050034618032Z/results.json",
+      "sha256": "dbffbdc069110717eb3db2748e9093a1ec06bfb1a3722c3428798528480c0e1a",
+      "wholeRunPassed": true
+    },
+    {
+      "component": "core",
+      "case": "legacy",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T050034618032Z/results.json",
+      "sha256": "dbffbdc069110717eb3db2748e9093a1ec06bfb1a3722c3428798528480c0e1a",
+      "wholeRunPassed": true
+    },
+    {
+      "component": "core",
+      "case": "natural",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T045853080038Z/results.json",
+      "sha256": "aba94245bd8f2e76b7c57d109781195db4b14fbb627adde7b044eff87337270a",
+      "wholeRunPassed": false
+    },
+    {
+      "component": "core",
+      "case": "protocol",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T045930803584Z/results.json",
+      "sha256": "e7d0c8c1ab38cd3f4d02c728656a83edd575427b3a48a15a7cad3a1e57173248",
+      "wholeRunPassed": true
+    },
+    {
+      "component": "core",
+      "case": "concurrency",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T045930803584Z/results.json",
+      "sha256": "e7d0c8c1ab38cd3f4d02c728656a83edd575427b3a48a15a7cad3a1e57173248",
+      "wholeRunPassed": true
+    },
+    {
+      "component": "core",
+      "case": "recovery",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T045930803584Z/results.json",
+      "sha256": "e7d0c8c1ab38cd3f4d02c728656a83edd575427b3a48a15a7cad3a1e57173248",
+      "wholeRunPassed": true
+    },
+    {
+      "component": "core",
+      "case": "old_intents",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-http-20261026T045930803584Z/results.json",
+      "sha256": "e7d0c8c1ab38cd3f4d02c728656a83edd575427b3a48a15a7cad3a1e57173248",
+      "wholeRunPassed": true
+    },
+    {
+      "component": "godot",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T050630653726Z/results.json",
+      "sha256": "7246cfcd05fe1dbe63ed97b089a49ab71d93c62484af47bacad0ed7345984701",
+      "case": "recovery",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "godot",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T050630653726Z/results.json",
+      "sha256": "7246cfcd05fe1dbe63ed97b089a49ab71d93c62484af47bacad0ed7345984701",
+      "case": "preflight",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "godot",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T050630653726Z/results.json",
+      "sha256": "7246cfcd05fe1dbe63ed97b089a49ab71d93c62484af47bacad0ed7345984701",
+      "case": "evidence",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "godot",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T050630653726Z/results.json",
+      "sha256": "7246cfcd05fe1dbe63ed97b089a49ab71d93c62484af47bacad0ed7345984701",
+      "case": "replacement",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "godot",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T050630653726Z/results.json",
+      "sha256": "7246cfcd05fe1dbe63ed97b089a49ab71d93c62484af47bacad0ed7345984701",
+      "case": "downgrade",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "godot",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T050630653726Z/results.json",
+      "sha256": "7246cfcd05fe1dbe63ed97b089a49ab71d93c62484af47bacad0ed7345984701",
+      "case": "old_client",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "godot",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T050741531936Z/results.json",
+      "sha256": "28178ff3f3e8a3985257bb2be782007563e0d90db6a3f1afb7fc025a64e7d26c",
+      "case": "old_records",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "godot",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T051141977150Z/results.json",
+      "sha256": "375cb2ed442a8cd193dadedf928c94ec1ce3c54597545917abfb7f4ae59144fd",
+      "case": "bridge_evidence",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "godot",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T051141977150Z/results.json",
+      "sha256": "375cb2ed442a8cd193dadedf928c94ec1ce3c54597545917abfb7f4ae59144fd",
+      "case": "recovery",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "godot",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T051946842787Z/results.json",
+      "sha256": "860d8156112c2551be931f78e45a334db7fdd6fc821f395b0b3c318e5bc3b8a5",
+      "case": "ui",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "python",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-20261026T052240744512Z/results.json",
+      "sha256": "6247bb729520c1be4b9bf133c2c5563a5880c8ef3e708145e7d1eba0fa069f28",
+      "case": "cli",
+      "wholeRunPassed": false,
+      "passed": true
+    },
+    {
+      "component": "python",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-20261026T052240744512Z/results.json",
+      "sha256": "6247bb729520c1be4b9bf133c2c5563a5880c8ef3e708145e7d1eba0fa069f28",
+      "case": "recovery",
+      "wholeRunPassed": false,
+      "passed": true
+    },
+    {
+      "component": "python",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-20261026T052240744512Z/results.json",
+      "sha256": "6247bb729520c1be4b9bf133c2c5563a5880c8ef3e708145e7d1eba0fa069f28",
+      "case": "preflight",
+      "wholeRunPassed": false,
+      "passed": true
+    },
+    {
+      "component": "python",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-20261026T052336715544Z/results.json",
+      "sha256": "2aeb5b018a19253295dcae6435ee6094cf1acbb9103ebb7d7f55ae70d75ecd6c",
+      "case": "downgrade",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "python",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-20261026T052336715544Z/results.json",
+      "sha256": "2aeb5b018a19253295dcae6435ee6094cf1acbb9103ebb7d7f55ae70d75ecd6c",
+      "case": "budgets",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "python",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-20261026T052336715544Z/results.json",
+      "sha256": "2aeb5b018a19253295dcae6435ee6094cf1acbb9103ebb7d7f55ae70d75ecd6c",
+      "case": "startup",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "legacy_report_hides_notes_and_queries",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/results.json",
+      "sha256": "ab50a76de5fdcf148dd4970fed73cf3178201131014faaea72637b11aa0ec2e0",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "actual_cli_original_note_reference_and_query_count",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/results.json",
+      "sha256": "ab50a76de5fdcf148dd4970fed73cf3178201131014faaea72637b11aa0ec2e0",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "rereading_same_report_does_not_create_a_new_fact",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/results.json",
+      "sha256": "ab50a76de5fdcf148dd4970fed73cf3178201131014faaea72637b11aa0ec2e0",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "missing_actual_original_bridge_refuses_share_claim",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/results.json",
+      "sha256": "ab50a76de5fdcf148dd4970fed73cf3178201131014faaea72637b11aa0ec2e0",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "changed_text_refuses_share_claim",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/results.json",
+      "sha256": "ab50a76de5fdcf148dd4970fed73cf3178201131014faaea72637b11aa0ec2e0",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "foreign_instance_refuses_share_claim",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/results.json",
+      "sha256": "ab50a76de5fdcf148dd4970fed73cf3178201131014faaea72637b11aa0ec2e0",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "missing_original_reference_and_false_author_rejected",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/results.json",
+      "sha256": "ab50a76de5fdcf148dd4970fed73cf3178201131014faaea72637b11aa0ec2e0",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "duplicate_committed_claim_refused",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/results.json",
+      "sha256": "ab50a76de5fdcf148dd4970fed73cf3178201131014faaea72637b11aa0ec2e0",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "synthetic_literal_markup_is_text_without_dom_injection",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/results.json",
+      "sha256": "ab50a76de5fdcf148dd4970fed73cf3178201131014faaea72637b11aa0ec2e0",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "mobile_390px_original_report_readable_without_overflow",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/results.json",
+      "sha256": "ab50a76de5fdcf148dd4970fed73cf3178201131014faaea72637b11aa0ec2e0",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "read_only_no_world_requests_or_page_errors",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/results.json",
+      "sha256": "ab50a76de5fdcf148dd4970fed73cf3178201131014faaea72637b11aa0ec2e0",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "own_cli_completed",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-final-20261026T052358946787Z/results.json",
+      "sha256": "a94e029754eab36fd5a00cfc452ada80ddf35a6d6adcb5344c5d1842425dd1ed",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "own_query3_unconfirmed",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-final-20261026T052358946787Z/results.json",
+      "sha256": "a94e029754eab36fd5a00cfc452ada80ddf35a6d6adcb5344c5d1842425dd1ed",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "own_query4_confirmed",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-final-20261026T052358946787Z/results.json",
+      "sha256": "a94e029754eab36fd5a00cfc452ada80ddf35a6d6adcb5344c5d1842425dd1ed",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "author_query4_confirmed",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-final-20261026T052358946787Z/results.json",
+      "sha256": "a94e029754eab36fd5a00cfc452ada80ddf35a6d6adcb5344c5d1842425dd1ed",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "component": "web",
+      "case": "read_only_no_world_requests_or_errors",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-final-20261026T052358946787Z/results.json",
+      "sha256": "a94e029754eab36fd5a00cfc452ada80ddf35a6d6adcb5344c5d1842425dd1ed",
+      "wholeRunPassed": true,
+      "passed": true
+    }
+  ],
+  "evidenceRowCounts": {
+    "core": 7,
+    "godot": 10,
+    "python": 6,
+    "web": 16
+  },
+  "aggregates": {
+    "core": {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-core-independent-acceptance.json",
+      "sha256": "8459b9a0071309bca095b16b76ad117e972a9cfe0c24c4614354e3e79feaa400"
+    },
+    "godot": {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-independent-acceptance.json",
+      "sha256": "2996887dbc851e8ce292e796bcaed0c92055a39d61451adeca06b206a0bbf71c"
+    },
+    "python": {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-independent-acceptance.json",
+      "sha256": "de998f62acc7aeb9a37c0658dbaf0d995d8f86fb984661e086cfcbc15eadacb4"
+    }
+  },
+  "sourceAttribution": [
+    {
+      "component": "core",
+      "manifest": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-core-v1-frozen.json",
+      "sha256": "e1eff628191bdea08e4a7e38cc5db714b4f046d4e59d12900e31bb1bfe5e5571",
+      "currentSourceMatches": false,
+      "fileCount": 14,
+      "mismatches": [
+        {
+          "path": "docs/contracts/entity-notes-v1.md",
+          "frozen": "0049ac5c2f1c3a369d0450efd497a1e383433115949bf6db093cadf9b3c550e0",
+          "current": "7221b8d71a1f2e91a33876716f5cd697f3f3080f24bc3d722289196b344bf792"
+        }
+      ]
+    },
+    {
+      "component": "godot",
+      "manifest": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-v4-frozen.json",
+      "sha256": "5c322035263ff6e1f5464718f600fadf485a977dfb7d7f4ba7caa14ad52ec27d",
+      "currentSourceMatches": false,
+      "fileCount": 14,
+      "mismatches": [
+        {
+          "path": "tests/godot/entity_notes.gd",
+          "frozen": "2de8b011e0481df9bd60cdf705f673055b895da5dda89f68583797bcc4cff22e",
+          "current": "f771da1ac8cb3933a2e0407080b5f96e57bdff4a08401449e8bd76b746d93ede"
+        }
+      ]
+    },
+    {
+      "component": "python",
+      "manifest": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-v1-frozen.json",
+      "sha256": "9d672fe6e2572a7cef7d019dbf5b595272c29f24c1d15174e2eab2f476aec3d6",
+      "currentSourceMatches": true,
+      "fileCount": 21,
+      "mismatches": []
+    },
+    {
+      "component": "web",
+      "manifest": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-web-v1-frozen.json",
+      "sha256": "9149b2070898c433e7e60da70c09a0ab2ad4f316d49fe63fb0e7b2ca3fb4ddda",
+      "currentSourceMatches": true,
+      "fileCount": 23,
+      "mismatches": []
+    }
+  ],
+  "currentSourceMatchesAllAcceptedArtifacts": false,
+  "closedProductFindings": [
+    {
+      "finding": "v1 full text status expands action row beyond viewport",
+      "fixedIn": "v3 fixed-height status scroll",
+      "verified": "v4 long text UI"
+    },
+    {
+      "finding": "v3 z_index draws on top but footer still captures pointer",
+      "fixedIn": "v4 notes panel moved after footer in GUI tree",
+      "verified": "v4 12 actual native pointer targets at centers and bottom edges"
+    }
+  ],
+  "qaCorrections": [
+    {
+      "path": "notes-http-20261026T045837428466Z/results.json",
+      "reason": "QA path crossed rock-east; server correctly blocked. Corrected route preserves old failed run."
+    },
+    {
+      "path": "notes-http-20261026T045853080038Z/results.json",
+      "reason": "Protocol QA wrongly required HTTP400 for existing IDENTITY_OVERRIDE, which correctly returns403. Natural case independently passed before this later assertion; corrected protocol rerun passed."
+    },
+    {
+      "finding": "Long reply click failure in UI driver v2-v5",
+      "cause": "Synthetic wheel press omitted matching release, leaving GUI mouse focus captured",
+      "correction": "v6 sends actual wheel press/release before mouse press/release; gui_input and button down/up/pressed observed",
+      "evidence": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T051946842787Z/ui.json",
+      "productDefect": false
+    },
+    {
+      "beforeSha256": "df5cc3f404daa34e5205bd380257d48b3c710cb2b5888f5c642744e8e1e41892",
+      "afterSha256": "7361fbf7f0ff141dfeddc77cc1f47d6a5ea0ef003cd52827b0c56f132aa0d554",
+      "correction": "Old entry-core-v2 manifest exposes snapshot/bin and dllSha256, not binary/binarySha256. Failure before any downgrade world was created; CLI/recovery/preflight passed; do not rerun them.",
+      "previousResult": ".local/qa/20261026-test-agent/notes-python-20261026T052240744512Z/results.json"
+    }
+  ],
+  "stopAudit": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-services-audit.json",
+    "sha256": "00d2906d6a590751347917cbd89c03f32ec564935211236c379b792774ed43d9",
+    "remainingOwnedServices": 0
+  },
+  "participation": {
+    "sameOriginalInstance": "w_15ced6889f624d8da8a3d2129ba26874",
+    "originalBridgeEntity": "efbde20b258d74a0eaca3a86e8d455755",
+    "originalEntities": 5,
+    "originalReceipts": 404,
+    "totalWood": 24,
+    "sourceStock": 0,
+    "allOriginalPhysicalFactsUnchanged": true,
+    "actualNewNotes": 2,
+    "perBranchNotSummed": true,
+    "sourceInputBudgetStillExhausted": true
+  },
+  "boundaries": [
+    "Each recovery and client case uses a SQLite backup of the stopped earned exhausted world; these isolated branches are not one continuous timeline.",
+    "Scripted first publication and original-reference reply prove the mechanism, not whether the world is fun.",
+    "Note capacity is finite: 2 per operator, 6 in this adopted bridge. Long term activity and continuous material supply remain unproven.",
+    "core aggregate records its earlier stage clientTestsNotYetRun field; this final aggregate includes completed independent client evidence.",
+    "Godot recovery evidence is explicitly attributed to v1 and v3; final v4 only changes GUI child ordering and passes actual full text UI."
+  ],
+  "externalModelCalls": 0,
+  "directSqlStateEdits": false,
+  "productFilesModifiedByTester": false,
+  "commitOrPushByTester": false,
+  "funValidated": false,
+  "createdAtUtc": "2026-10-26T05:25:04.782998+00:00",
+  "currentRuntimeSourceMatchesAllAcceptedArtifacts": true,
+  "reviewedNonProductChanges": [
+    {
+      "path": "docs/contracts/entity-notes-v1.md",
+      "currentSha256": "7221b8d71a1f2e91a33876716f5cd697f3f3080f24bc3d722289196b344bf792",
+      "change": "Adds persistent startup budget and confirmed note snapshot semantics; directly covered by independent Python startup and budgets cases plus final report imports."
+    },
+    {
+      "path": "tests/godot/entity_notes.gd",
+      "currentSha256": "f771da1ac8cb3933a2e0407080b5f96e57bdff4a08401449e8bd76b746d93ede",
+      "change": "Adds missing actual bridge entity assertion; independently covered with real HTTP-corrupted observations by bridge_evidence v3. No product behavior delta."
+    }
+  ],
+  "attributionReviewedAtUtc": "2026-10-26T05:25:24.300092+00:00"
+}

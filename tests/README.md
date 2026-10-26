@@ -242,3 +242,14 @@ Godot入口另含 `python3 tests/actor_state_godot.py`（6组、43断言）和 `
 `tests/material_access_godot.py` 已加入 `npm run test:godot`。9组75断言覆盖实际鼠标预约、行走领取和建造、损坏回执、reserve／harvest／cancel提交前后丢响应、新进程恢复、磁盘JSON版本往返和恢复后继续操作。专项全集可用 `npm run test:material-access`，与普通回归重叠，无需同时重复运行。
 
 新证据在 `.local/iter0022/`；worker自检与独立QA分别列于[ITER-0022结果](../docs/iterations/ITER-0022-results.md)。所有模型调用0，来源不证明无限供给或独立现实身份。正常时钟、SQLite写锁／SIGSTOP探针、故障退出和早期失败修正均分别保留。
+
+
+### ITER-0023 旧桥共同手记
+
+`npm run test:entity-notes` 覆盖同实例采用、原生输入/接写、明确Python任务及只读报告。普通 `npm test` 纳入两套新HTTP测试和真实Chrome报告测试；`npm run test:godot` 纳入手记原生客户端测试。使用本机真实HTTP、SQLite、Godot与Chrome，不调用模型。
+
+`tests/entity_notes_api.py` 默认通过既有真实采集、预约、领取和建造接口建立耗尽基线，再备份到各隔离分支；不会用SQL生成物资或完成事实。也可显式设置 `ENTITY_NOTES_BASELINE=/已停服的耗尽快照目录`。该目录必须包含原 `world.db` 和 `access.json`，只读备份使用，原快照不会启动。`WORLD_SERVER_DLL` 可指定已冻结的服务程序集。Godot套件使用同一基线机制；回执、事件、观察的篡改是明确故障探针，不能计为自然参与体验。
+
+Python任务套件有13组，包括真实CLI、原命令提交前后进程退出、原事实、权限损坏、首次失败读取与累计预算。`ENTITY_NOTES_OLD_DLL=/旧版World.Server.dll`用于实际旧服务兼容组；没有旧二进制时只跳过该组并在结果明确列出，其余组照常运行。本轮完整验收显式提供ITER-0022二进制，13组无跳过；另行验证无私有基线路径的默认入口。
+
+报告页测试可用 `ENTITY_NOTE_REPORT_FILE=/实际CLI报告.json node tests/browser/entity-note-resident.mjs` 检查已有报告；没有参数时调用实际Python任务测试取得新报告。报告页只做文件内部一致性核对，不向世界服务认证，也不把固定文本称为模型自主写作。

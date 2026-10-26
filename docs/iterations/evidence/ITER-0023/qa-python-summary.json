@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-20261026T052240744512Z/results.json",
+      "sha256": "6247bb729520c1be4b9bf133c2c5563a5880c8ef3e708145e7d1eba0fa069f28",
+      "case": "cli",
+      "wholeRunPassed": false,
+      "passed": true
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-20261026T052240744512Z/results.json",
+      "sha256": "6247bb729520c1be4b9bf133c2c5563a5880c8ef3e708145e7d1eba0fa069f28",
+      "case": "recovery",
+      "wholeRunPassed": false,
+      "passed": true
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-20261026T052240744512Z/results.json",
+      "sha256": "6247bb729520c1be4b9bf133c2c5563a5880c8ef3e708145e7d1eba0fa069f28",
+      "case": "preflight",
+      "wholeRunPassed": false,
+      "passed": true
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-20261026T052336715544Z/results.json",
+      "sha256": "2aeb5b018a19253295dcae6435ee6094cf1acbb9103ebb7d7f55ae70d75ecd6c",
+      "case": "downgrade",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-20261026T052336715544Z/results.json",
+      "sha256": "2aeb5b018a19253295dcae6435ee6094cf1acbb9103ebb7d7f55ae70d75ecd6c",
+      "case": "budgets",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-20261026T052336715544Z/results.json",
+      "sha256": "2aeb5b018a19253295dcae6435ee6094cf1acbb9103ebb7d7f55ae70d75ecd6c",
+      "case": "startup",
+      "wholeRunPassed": true,
+      "passed": true
+    }
+  ],
+  "sourceManifest": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-python-v1-frozen.json",
+  "qaCorrections": [
+    {
+      "beforeSha256": "df5cc3f404daa34e5205bd380257d48b3c710cb2b5888f5c642744e8e1e41892",
+      "afterSha256": "7361fbf7f0ff141dfeddc77cc1f47d6a5ea0ef003cd52827b0c56f132aa0d554",
+      "correction": "Old entry-core-v2 manifest exposes snapshot/bin and dllSha256, not binary/binarySha256. Failure before any downgrade world was created; CLI/recovery/preflight passed; do not rerun them.",
+      "previousResult": ".local/qa/20261026-test-agent/notes-python-20261026T052240744512Z/results.json"
+    }
+  ],
+  "scope": [
+    "Actual CLI a2 and a3: 33 logical commands and 37 observed GET attempts each; original reply and both return origins.",
+    "Before/after actual service exit 81/82, renewed sessions, original request and one publication.",
+    "Thirteen damaged local states refused before any network I/O, bytes unchanged.",
+    "Actual old binary with original receipt 404 and 200 never reposts without capability; original new service recovers.",
+    "Queries=3 keeps unknown pending; queries=4 keeps confirmed note while mission remains budget_exhausted.",
+    "First actual HTTP503 is charged persistently and cannot replenish query budget; original startup resumes with unchanged epoch."
+  ],
+  "externalModelCalls": 0,
+  "productFilesModifiedByTester": false,
+  "createdAtUtc": "2026-10-26T05:24:32.857148+00:00"
+}

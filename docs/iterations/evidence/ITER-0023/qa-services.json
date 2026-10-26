@@ -1,0 +1,6 @@
+{
+  "timeUtc": "2026-10-26T05:24:32.877405+00:00",
+  "remainingOwnedProcesses": [],
+  "zeroOwnedServices": true,
+  "method": "live /proc argv and WORLD_DATA_DIR; exact QA ownership, no stopping of unrelated services"
+}

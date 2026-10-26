@@ -1,0 +1,1450 @@
+{
+  "passed": true,
+  "binarySha256": "c9d9ccaa5b1e194e17abc41a79c2ce255d436c77ff4116ddaa6b72b6ee7b2c8e",
+  "cases": {
+    "protocol": {
+      "passed": true,
+      "farRejected": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 412,
+        "commandId": "cb67dcab2a0143e2a2c29161bc3f41ce",
+        "identity": {
+          "operatorId": "declared-late",
+          "actorId": "a2",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "eventCursor": 413,
+        "error": {
+          "code": "UNREACHABLE",
+          "message": "\u8bf7\u8d70\u5230\u539f\u6865\u4e2d\u5fc31.6\u7c73\u5185\u4e14\u4e2d\u95f4\u6ca1\u6709\u969c\u788d",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected",
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 412,
+          "appliedOnStateVersion": 412
+        }
+      },
+      "malformedBodies": [
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "95cedd13db8742e18acb7b27b9a0236d",
+            "expectedStateVersion": 476,
+            "action": {
+              "type": "append_entity_note",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "text": "",
+              "replyToNoteId": null
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u5b57\u6bb5\u5fc5\u987b\u4e3a\u975e\u7a7a\u5b57\u7b26\u4e32",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "ffadb4ae7bf2403eafb2ed61703f747d",
+            "expectedStateVersion": 476,
+            "action": {
+              "type": "append_entity_note",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "text": "  ",
+              "replyToNoteId": null
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u624b\u8bb0\u4e0d\u80fd\u5168\u4e3a\u7a7a\u767d",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "f78ca0dbfb3f4ed895bb972247c2943b",
+            "expectedStateVersion": 476,
+            "action": {
+              "type": "append_entity_note",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "text": "\n",
+              "replyToNoteId": null
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u624b\u8bb0\u4e0d\u80fd\u5305\u542b\u63a7\u5236\u5b57\u7b26",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "25947b103ffc4537a21744b7e1a848cf",
+            "expectedStateVersion": 476,
+            "action": {
+              "type": "append_entity_note",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "text": "\t",
+              "replyToNoteId": null
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u624b\u8bb0\u4e0d\u80fd\u5305\u542b\u63a7\u5236\u5b57\u7b26",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "6590b7805d36450bb2835e346ef93fb7",
+            "expectedStateVersion": 476,
+            "action": {
+              "type": "append_entity_note",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "text": "\u6b63\u6587\u0000",
+              "replyToNoteId": null
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u624b\u8bb0\u4e0d\u80fd\u5305\u542b\u63a7\u5236\u5b57\u7b26",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "a6dee0d73cec4f8a991f1de712973a0e",
+            "expectedStateVersion": 476,
+            "action": {
+              "type": "append_entity_note",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "text": "\ud800",
+              "replyToNoteId": null
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u5b57\u7b26\u4e32\u5305\u542b\u65e0\u6548 Unicode",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "f93d87d433b3426883ad3d38e8dee019",
+            "expectedStateVersion": 476,
+            "action": {
+              "type": "append_entity_note",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "text": "\udfff",
+              "replyToNoteId": null
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u5b57\u7b26\u4e32\u5305\u542b\u65e0\u6548 Unicode",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "f32d5e26f51d4fd59e5c89f7172bb0d5",
+            "expectedStateVersion": 476,
+            "action": {
+              "type": "append_entity_note",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "text": "\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57",
+              "replyToNoteId": null
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u624b\u8bb0\u6700\u591a 160 \u4e2a Unicode \u6807\u91cf\u503c",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "6a795c3eb0f24296a2eb0e3f964cf282",
+            "expectedStateVersion": 476,
+            "action": {
+              "type": "append_entity_note",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "text": "\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00",
+              "replyToNoteId": null
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u624b\u8bb0\u6700\u591a 160 \u4e2a Unicode \u6807\u91cf\u503c",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "missing": "text",
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u8bf7\u6c42\u7f3a\u5c11\u5fc5\u586b\u5b57\u6bb5",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "missing": "entityId",
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u8bf7\u6c42\u7f3a\u5c11\u5fc5\u586b\u5b57\u6bb5",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "missing": "replyToNoteId",
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u8bf7\u6c42\u7f3a\u5c11\u5fc5\u586b\u5b57\u6bb5",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "malformed": "entityId",
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u5b57\u6bb5\u5fc5\u987b\u4e3a\u975e\u7a7a\u5b57\u7b26\u4e32",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "malformed": "replyToNoteId",
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u5b57\u6bb5\u5fc5\u987b\u4e3a\u975e\u7a7a\u5b57\u7b26\u4e32",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "malformed": "replyToNoteId",
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u5b57\u6bb5\u5fc5\u987b\u4e3a\u975e\u7a7a\u5b57\u7b26\u4e32",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "malformed": "text",
+          "error": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "\u5b57\u6bb5\u5fc5\u987b\u4e3a\u975e\u7a7a\u5b57\u7b26\u4e32",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        }
+      ],
+      "authorFieldsRejected": [
+        {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s131d61be279840df94f00244eea8851d"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "IDENTITY_OVERRIDE",
+            "message": "\u8eab\u4efd\u53ea\u80fd\u7531\u8ba4\u8bc1\u4f1a\u8bdd\u786e\u5b9a",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s131d61be279840df94f00244eea8851d"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "IDENTITY_OVERRIDE",
+            "message": "\u8eab\u4efd\u53ea\u80fd\u7531\u8ba4\u8bc1\u4f1a\u8bdd\u786e\u5b9a",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s131d61be279840df94f00244eea8851d"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "INVALID_REQUEST",
+            "message": "\u8bf7\u6c42\u5305\u542b\u672a\u77e5\u6216\u91cd\u590d\u5b57\u6bb5",
+            "retryable": false,
+            "mutated": false
+          }
+        }
+      ],
+      "unknownTarget": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 476,
+        "commandId": "6289c4c431c545989e6c84ee6ba11b4e",
+        "identity": {
+          "operatorId": "declared-late",
+          "actorId": "a2",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "eventCursor": 477,
+        "error": {
+          "code": "NOTE_TARGET_UNAVAILABLE",
+          "message": "\u76ee\u6807\u672a\u5f00\u653e\u5171\u540c\u624b\u8bb0",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected",
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 476,
+          "appliedOnStateVersion": 476
+        }
+      },
+      "missingReference": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 476,
+        "commandId": "60ea6a94b04c498384045609030a0d6f",
+        "identity": {
+          "operatorId": "declared-late",
+          "actorId": "a2",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "eventCursor": 477,
+        "error": {
+          "code": "NOTE_REFERENCE_NOT_FOUND",
+          "message": "\u672a\u627e\u5230\u8fd9\u5ea7\u6865\u4e0a\u7684\u539f\u624b\u8bb0",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected",
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 476,
+          "appliedOnStateVersion": 476
+        }
+      },
+      "unicode160": {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "7e6800eba375435a86199d28e39e4c64",
+          "expectedStateVersion": 476,
+          "action": {
+            "type": "append_entity_note",
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "text": "\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57",
+            "replyToNoteId": null
+          },
+          "preconditionMode": "actor-state-v1"
+        },
+        "receipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 477,
+          "commandId": "7e6800eba375435a86199d28e39e4c64",
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s131d61be279840df94f00244eea8851d"
+          },
+          "eventCursor": 478,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "noteId": "nf9c464db2c25467ba26ec78e1bfdb0b3",
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "authorActorId": "a2",
+            "operatorId": "declared-late",
+            "commandId": "7e6800eba375435a86199d28e39e4c64",
+            "text": "\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57",
+            "replyToNoteId": null,
+            "stateVersion": 477,
+            "eventCursor": 478,
+            "sharedAtUtc": "2026-10-26T04:59:37.2472602+00:00",
+            "position": [
+              18,
+              12
+            ],
+            "inventoryWood": 0,
+            "capabilityVersion": 1,
+            "action": "append_entity_note"
+          },
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 476,
+            "appliedOnStateVersion": 476
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":477,\"commandId\":\"7e6800eba375435a86199d28e39e4c64\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":478,\"error\":null,\"status\":\"committed\",\"result\":{\"noteId\":\"nf9c464db2c25467ba26ec78e1bfdb0b3\",\"entityId\":\"efbde20b258d74a0eaca3a86e8d455755\",\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"7e6800eba375435a86199d28e39e4c64\",\"text\":\"\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\uD83D\\uDE00\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\\u5B57\",\"replyToNoteId\":null,\"stateVersion\":477,\"eventCursor\":478,\"sharedAtUtc\":\"2026-10-26T04:59:37.2472602\\u002B00:00\",\"position\":[18,12],\"inventoryWood\":0,\"capabilityVersion\":1,\"action\":\"append_entity_note\"},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":476,\"appliedOnStateVersion\":476}}",
+        "note": {
+          "noteId": "nf9c464db2c25467ba26ec78e1bfdb0b3",
+          "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "7e6800eba375435a86199d28e39e4c64",
+          "text": "\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\ud83d\ude00\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57\u5b57",
+          "replyToNoteId": null,
+          "stateVersion": 477,
+          "eventCursor": 478,
+          "sharedAtUtc": "2026-10-26T04:59:37.2472602+00:00",
+          "position": [
+            18,
+            12
+          ],
+          "inventoryWood": 0,
+          "capabilityVersion": 1
+        }
+      },
+      "literalUnnormalizedText": {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "547f68eed84a4e7e9cbb1847aefbfd4c",
+          "expectedStateVersion": 477,
+          "action": {
+            "type": "append_entity_note",
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "text": "  e\u0301 <b>\u539f\u6587</b> & \ud83d\ude00  ",
+            "replyToNoteId": "nf9c464db2c25467ba26ec78e1bfdb0b3"
+          },
+          "preconditionMode": "actor-state-v1"
+        },
+        "receipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 478,
+          "commandId": "547f68eed84a4e7e9cbb1847aefbfd4c",
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s131d61be279840df94f00244eea8851d"
+          },
+          "eventCursor": 479,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "noteId": "nb46739ff47884442856c3b28cf5cf44d",
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "authorActorId": "a2",
+            "operatorId": "declared-late",
+            "commandId": "547f68eed84a4e7e9cbb1847aefbfd4c",
+            "text": "  e\u0301 <b>\u539f\u6587</b> & \ud83d\ude00  ",
+            "replyToNoteId": "nf9c464db2c25467ba26ec78e1bfdb0b3",
+            "stateVersion": 478,
+            "eventCursor": 479,
+            "sharedAtUtc": "2026-10-26T04:59:37.2576717+00:00",
+            "position": [
+              18,
+              12
+            ],
+            "inventoryWood": 0,
+            "capabilityVersion": 1,
+            "action": "append_entity_note"
+          },
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 477,
+            "appliedOnStateVersion": 477
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":478,\"commandId\":\"547f68eed84a4e7e9cbb1847aefbfd4c\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":479,\"error\":null,\"status\":\"committed\",\"result\":{\"noteId\":\"nb46739ff47884442856c3b28cf5cf44d\",\"entityId\":\"efbde20b258d74a0eaca3a86e8d455755\",\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"547f68eed84a4e7e9cbb1847aefbfd4c\",\"text\":\"  e\\u0301 \\u003Cb\\u003E\\u539F\\u6587\\u003C/b\\u003E \\u0026 \\uD83D\\uDE00  \",\"replyToNoteId\":\"nf9c464db2c25467ba26ec78e1bfdb0b3\",\"stateVersion\":478,\"eventCursor\":479,\"sharedAtUtc\":\"2026-10-26T04:59:37.2576717\\u002B00:00\",\"position\":[18,12],\"inventoryWood\":0,\"capabilityVersion\":1,\"action\":\"append_entity_note\"},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":477,\"appliedOnStateVersion\":477}}",
+        "note": {
+          "noteId": "nb46739ff47884442856c3b28cf5cf44d",
+          "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "547f68eed84a4e7e9cbb1847aefbfd4c",
+          "text": "  e\u0301 <b>\u539f\u6587</b> & \ud83d\ude00  ",
+          "replyToNoteId": "nf9c464db2c25467ba26ec78e1bfdb0b3",
+          "stateVersion": 478,
+          "eventCursor": 479,
+          "sharedAtUtc": "2026-10-26T04:59:37.2576717+00:00",
+          "position": [
+            18,
+            12
+          ],
+          "inventoryWood": 0,
+          "capabilityVersion": 1
+        }
+      },
+      "changedOriginalIdRejected": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 478,
+        "commandId": "7e6800eba375435a86199d28e39e4c64",
+        "identity": {
+          "operatorId": "declared-late",
+          "actorId": "a2",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "eventCursor": 479,
+        "error": {
+          "code": "IDEMPOTENCY_CONFLICT",
+          "message": "\u547d\u4ee4 ID \u5df2\u7528\u4e8e\u4e0d\u540c\u53c2\u6570",
+          "retryable": false,
+          "mutated": false
+        }
+      },
+      "originalReceiptsPreserved": 404,
+      "allOriginalEntitiesInventoriesLedgerAndProductionUnchanged": true,
+      "audit": {
+        "issued": 24,
+        "generated": 12,
+        "wild": 0,
+        "source": 0,
+        "inventory": 6,
+        "embodied": 18,
+        "activeReserved": 0,
+        "serviceMs": 71135,
+        "processedPeriod": 5,
+        "production": [
+          [
+            1,
+            31047,
+            3,
+            258
+          ],
+          [
+            2,
+            41047,
+            3,
+            287
+          ],
+          [
+            3,
+            51047,
+            3,
+            337
+          ],
+          [
+            4,
+            61047,
+            3,
+            364
+          ]
+        ],
+        "stateVersion": 478,
+        "realCommandsThisBranch": 85,
+        "processStopped": true
+      }
+    },
+    "concurrency": {
+      "passed": true,
+      "sameVersionDifferentAuthors": {
+        "a2": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 601,
+          "commandId": "b26ff5f4a64f4e54b7b5a1ff797820d4",
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s131d61be279840df94f00244eea8851d"
+          },
+          "eventCursor": 602,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "noteId": "n62cf7e87412844a8938df3ecc7e38a15",
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "authorActorId": "a2",
+            "operatorId": "declared-late",
+            "commandId": "b26ff5f4a64f4e54b7b5a1ff797820d4",
+            "text": "\u540c\u4e00\u65f6\u523b\u7559\u4e0b\uff1aa2",
+            "replyToNoteId": null,
+            "stateVersion": 601,
+            "eventCursor": 602,
+            "sharedAtUtc": "2026-10-26T04:59:54.8049914+00:00",
+            "position": [
+              18,
+              12
+            ],
+            "inventoryWood": 0,
+            "capabilityVersion": 1,
+            "action": "append_entity_note"
+          },
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 600,
+            "appliedOnStateVersion": 600
+          }
+        },
+        "a3": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 602,
+          "commandId": "bbd4ac43e1a4409fbcf0ee734fb569b0",
+          "identity": {
+            "operatorId": "declared-third",
+            "actorId": "a3",
+            "sessionId": "sa423548f7dce496895be25120daedb09"
+          },
+          "eventCursor": 603,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "noteId": "n890067582d734db0a7ba1999a19cb0ca",
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "authorActorId": "a3",
+            "operatorId": "declared-third",
+            "commandId": "bbd4ac43e1a4409fbcf0ee734fb569b0",
+            "text": "\u540c\u4e00\u65f6\u523b\u7559\u4e0b\uff1aa3",
+            "replyToNoteId": null,
+            "stateVersion": 602,
+            "eventCursor": 603,
+            "sharedAtUtc": "2026-10-26T04:59:54.9546725+00:00",
+            "position": [
+              18,
+              12
+            ],
+            "inventoryWood": 0,
+            "capabilityVersion": 1,
+            "action": "append_entity_note"
+          },
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 600,
+            "appliedOnStateVersion": 601
+          }
+        }
+      },
+      "sameGroupConcurrentFinalSlot": {
+        "a1": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 604,
+          "commandId": "20391895c7df40f3a4fedb9a889b75e0",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s48ab04efc6f7451aa43d6a8caf8e0108"
+          },
+          "eventCursor": 605,
+          "error": {
+            "code": "NOTE_LIMIT_REACHED",
+            "message": "\u672c\u6b21\u5171\u540c\u624b\u8bb0\u7684\u5185\u5bb9\u989d\u5ea6\u5df2\u7528\u5b8c",
+            "retryable": false,
+            "mutated": false
+          },
+          "status": "rejected",
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 603,
+            "appliedOnStateVersion": 604
+          }
+        },
+        "a1_alias": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 604,
+          "commandId": "01c1f0840e7f4b5289965cc4ab18fdc7",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1_alias",
+            "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+          },
+          "eventCursor": 605,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "noteId": "n7a8a5204873d4d0a967e2899a9d66b56",
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "authorActorId": "a1_alias",
+            "operatorId": "local-operator",
+            "commandId": "01c1f0840e7f4b5289965cc4ab18fdc7",
+            "text": "\u4e89\u53d6\u540c\u7ec4\u7b2c\u4e8c\u6761\uff1aa1_alias",
+            "replyToNoteId": null,
+            "stateVersion": 604,
+            "eventCursor": 605,
+            "sharedAtUtc": "2026-10-26T04:59:54.9781077+00:00",
+            "position": [
+              18,
+              12
+            ],
+            "inventoryWood": 0,
+            "capabilityVersion": 1,
+            "action": "append_entity_note"
+          },
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 603,
+            "appliedOnStateVersion": 603
+          }
+        }
+      },
+      "maxTotal": 6,
+      "aliasesShareQuota": true,
+      "restartPreservesAllSix": true,
+      "originalReceiptsPreserved": 404,
+      "allOriginalEntitiesInventoriesLedgerAndProductionUnchanged": true,
+      "audit": {
+        "issued": 24,
+        "generated": 12,
+        "wild": 0,
+        "source": 0,
+        "inventory": 6,
+        "embodied": 18,
+        "activeReserved": 0,
+        "serviceMs": 82195,
+        "processedPeriod": 6,
+        "production": [
+          [
+            1,
+            31047,
+            3,
+            258
+          ],
+          [
+            2,
+            41047,
+            3,
+            287
+          ],
+          [
+            3,
+            51047,
+            3,
+            337
+          ],
+          [
+            4,
+            61047,
+            3,
+            364
+          ]
+        ],
+        "stateVersion": 606,
+        "realCommandsThisBranch": 199,
+        "processStopped": true
+      }
+    },
+    "recovery": {
+      "passed": true,
+      "realProcessFaultRecoveries": [
+        {
+          "fault": "before-commit",
+          "exitCode": 81,
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "e0cae354c26349b187d6a18ab747c199",
+            "expectedStateVersion": 476,
+            "action": {
+              "type": "append_entity_note",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "text": "\u4e2d\u65ad\u6062\u590d\uff1abefore-commit",
+              "replyToNoteId": null
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "note": {
+            "noteId": "n50d658c975304db0bcf0c832a923f850",
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "authorActorId": "a2",
+            "operatorId": "declared-late",
+            "commandId": "e0cae354c26349b187d6a18ab747c199",
+            "text": "\u4e2d\u65ad\u6062\u590d\uff1abefore-commit",
+            "replyToNoteId": null,
+            "stateVersion": 477,
+            "eventCursor": 478,
+            "sharedAtUtc": "2026-10-26T05:00:02.2126262+00:00",
+            "position": [
+              18,
+              12
+            ],
+            "inventoryWood": 0,
+            "capabilityVersion": 1
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 477,
+            "commandId": "e0cae354c26349b187d6a18ab747c199",
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": 478,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "noteId": "n50d658c975304db0bcf0c832a923f850",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "authorActorId": "a2",
+              "operatorId": "declared-late",
+              "commandId": "e0cae354c26349b187d6a18ab747c199",
+              "text": "\u4e2d\u65ad\u6062\u590d\uff1abefore-commit",
+              "replyToNoteId": null,
+              "stateVersion": 477,
+              "eventCursor": 478,
+              "sharedAtUtc": "2026-10-26T05:00:02.2126262+00:00",
+              "position": [
+                18,
+                12
+              ],
+              "inventoryWood": 0,
+              "capabilityVersion": 1,
+              "action": "append_entity_note"
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 476,
+              "appliedOnStateVersion": 476
+            }
+          }
+        },
+        {
+          "fault": "after-commit",
+          "exitCode": 82,
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "30534d897605455f822da513bd7d932c",
+            "expectedStateVersion": 477,
+            "action": {
+              "type": "append_entity_note",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "text": "\u4e2d\u65ad\u6062\u590d\uff1aafter-commit",
+              "replyToNoteId": null
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "note": {
+            "noteId": "n4f67f3fb5e6b418eb8ce38e2f9260e2f",
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "authorActorId": "a2",
+            "operatorId": "declared-late",
+            "commandId": "30534d897605455f822da513bd7d932c",
+            "text": "\u4e2d\u65ad\u6062\u590d\uff1aafter-commit",
+            "replyToNoteId": null,
+            "stateVersion": 478,
+            "eventCursor": 479,
+            "sharedAtUtc": "2026-10-26T05:00:02.2603451+00:00",
+            "position": [
+              18,
+              12
+            ],
+            "inventoryWood": 0,
+            "capabilityVersion": 1
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 478,
+            "commandId": "30534d897605455f822da513bd7d932c",
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": 479,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "noteId": "n4f67f3fb5e6b418eb8ce38e2f9260e2f",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "authorActorId": "a2",
+              "operatorId": "declared-late",
+              "commandId": "30534d897605455f822da513bd7d932c",
+              "text": "\u4e2d\u65ad\u6062\u590d\uff1aafter-commit",
+              "replyToNoteId": null,
+              "stateVersion": 478,
+              "eventCursor": 479,
+              "sharedAtUtc": "2026-10-26T05:00:02.2603451+00:00",
+              "position": [
+                18,
+                12
+              ],
+              "inventoryWood": 0,
+              "capabilityVersion": 1,
+              "action": "append_entity_note"
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 477,
+              "appliedOnStateVersion": 477
+            }
+          }
+        }
+      ],
+      "renewedSessionOriginalBytes": true,
+      "originalReceiptsPreserved": 404,
+      "allOriginalEntitiesInventoriesLedgerAndProductionUnchanged": true,
+      "audit": {
+        "issued": 24,
+        "generated": 12,
+        "wild": 0,
+        "source": 0,
+        "inventory": 6,
+        "embodied": 18,
+        "activeReserved": 0,
+        "serviceMs": 71100,
+        "processedPeriod": 5,
+        "production": [
+          [
+            1,
+            31047,
+            3,
+            258
+          ],
+          [
+            2,
+            41047,
+            3,
+            287
+          ],
+          [
+            3,
+            51047,
+            3,
+            337
+          ],
+          [
+            4,
+            61047,
+            3,
+            364
+          ]
+        ],
+        "stateVersion": 478,
+        "realCommandsThisBranch": 66,
+        "processStopped": true
+      }
+    },
+    "old_intents": {
+      "passed": true,
+      "originalBuild": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 421,
+        "commandId": "0c79846a1f4c45a5b28b5b51b2584a3c",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "s48ab04efc6f7451aa43d6a8caf8e0108"
+        },
+        "eventCursor": 422,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "build",
+          "entityId": "e48b780f56335438fb4a0a06a5e1ea073",
+          "position": [
+            13,
+            13
+          ],
+          "inventoryWood": 3
+        },
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 420,
+          "appliedOnStateVersion": 420
+        }
+      },
+      "originalEntity": {
+        "entityId": "e48b780f56335438fb4a0a06a5e1ea073",
+        "definitionId": "platform",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a1",
+        "position": [
+          13,
+          13
+        ],
+        "embodiedWood": 3
+      },
+      "otherAuthorNote": {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "446332ffda8d4acca8e3a66e1fcc88b2",
+          "expectedStateVersion": 482,
+          "action": {
+            "type": "append_entity_note",
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "text": "\u540e\u6765\u5230\u8bbf\uff0c\u4e0d\u6539\u539f\u6765\u7684\u6865\u548c\u5e73\u53f0\u3002",
+            "replyToNoteId": null
+          },
+          "preconditionMode": "actor-state-v1"
+        },
+        "receipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 483,
+          "commandId": "446332ffda8d4acca8e3a66e1fcc88b2",
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s131d61be279840df94f00244eea8851d"
+          },
+          "eventCursor": 484,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "noteId": "nefcfa8667be7419286a6e78feeb3af9b",
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "authorActorId": "a2",
+            "operatorId": "declared-late",
+            "commandId": "446332ffda8d4acca8e3a66e1fcc88b2",
+            "text": "\u540e\u6765\u5230\u8bbf\uff0c\u4e0d\u6539\u539f\u6765\u7684\u6865\u548c\u5e73\u53f0\u3002",
+            "replyToNoteId": null,
+            "stateVersion": 483,
+            "eventCursor": 484,
+            "sharedAtUtc": "2026-10-26T05:00:10.4081348+00:00",
+            "position": [
+              18,
+              12
+            ],
+            "inventoryWood": 0,
+            "capabilityVersion": 1,
+            "action": "append_entity_note"
+          },
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 482,
+            "appliedOnStateVersion": 482
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":483,\"commandId\":\"446332ffda8d4acca8e3a66e1fcc88b2\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":484,\"error\":null,\"status\":\"committed\",\"result\":{\"noteId\":\"nefcfa8667be7419286a6e78feeb3af9b\",\"entityId\":\"efbde20b258d74a0eaca3a86e8d455755\",\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"446332ffda8d4acca8e3a66e1fcc88b2\",\"text\":\"\\u540E\\u6765\\u5230\\u8BBF\\uFF0C\\u4E0D\\u6539\\u539F\\u6765\\u7684\\u6865\\u548C\\u5E73\\u53F0\\u3002\",\"replyToNoteId\":null,\"stateVersion\":483,\"eventCursor\":484,\"sharedAtUtc\":\"2026-10-26T05:00:10.4081348\\u002B00:00\",\"position\":[18,12],\"inventoryWood\":0,\"capabilityVersion\":1,\"action\":\"append_entity_note\"},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":482,\"appliedOnStateVersion\":482}}",
+        "note": {
+          "noteId": "nefcfa8667be7419286a6e78feeb3af9b",
+          "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "446332ffda8d4acca8e3a66e1fcc88b2",
+          "text": "\u540e\u6765\u5230\u8bbf\uff0c\u4e0d\u6539\u539f\u6765\u7684\u6865\u548c\u5e73\u53f0\u3002",
+          "replyToNoteId": null,
+          "stateVersion": 483,
+          "eventCursor": 484,
+          "sharedAtUtc": "2026-10-26T05:00:10.4081348+00:00",
+          "position": [
+            18,
+            12
+          ],
+          "inventoryWood": 0,
+          "capabilityVersion": 1
+        }
+      },
+      "buildOriginalBytesAfterOtherNote": true,
+      "ownLaterNote": {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "c7d55da706204d7388cbdc31abd1a69d",
+          "expectedStateVersion": 483,
+          "action": {
+            "type": "append_entity_note",
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "text": "\u6211\u672c\u4eba\u7684\u540e\u6765\u64cd\u4f5c\u5df2\u53d1\u751f\u3002",
+            "replyToNoteId": null
+          },
+          "preconditionMode": "actor-state-v1"
+        },
+        "receipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 484,
+          "commandId": "c7d55da706204d7388cbdc31abd1a69d",
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s131d61be279840df94f00244eea8851d"
+          },
+          "eventCursor": 485,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "noteId": "nd4b41c710f154fa49a041c577e0ffc06",
+            "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+            "authorActorId": "a2",
+            "operatorId": "declared-late",
+            "commandId": "c7d55da706204d7388cbdc31abd1a69d",
+            "text": "\u6211\u672c\u4eba\u7684\u540e\u6765\u64cd\u4f5c\u5df2\u53d1\u751f\u3002",
+            "replyToNoteId": null,
+            "stateVersion": 484,
+            "eventCursor": 485,
+            "sharedAtUtc": "2026-10-26T05:00:10.4239084+00:00",
+            "position": [
+              18,
+              12
+            ],
+            "inventoryWood": 0,
+            "capabilityVersion": 1,
+            "action": "append_entity_note"
+          },
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 483,
+            "appliedOnStateVersion": 483
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":484,\"commandId\":\"c7d55da706204d7388cbdc31abd1a69d\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":485,\"error\":null,\"status\":\"committed\",\"result\":{\"noteId\":\"nd4b41c710f154fa49a041c577e0ffc06\",\"entityId\":\"efbde20b258d74a0eaca3a86e8d455755\",\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"c7d55da706204d7388cbdc31abd1a69d\",\"text\":\"\\u6211\\u672C\\u4EBA\\u7684\\u540E\\u6765\\u64CD\\u4F5C\\u5DF2\\u53D1\\u751F\\u3002\",\"replyToNoteId\":null,\"stateVersion\":484,\"eventCursor\":485,\"sharedAtUtc\":\"2026-10-26T05:00:10.4239084\\u002B00:00\",\"position\":[18,12],\"inventoryWood\":0,\"capabilityVersion\":1,\"action\":\"append_entity_note\"},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":483,\"appliedOnStateVersion\":483}}",
+        "note": {
+          "noteId": "nd4b41c710f154fa49a041c577e0ffc06",
+          "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "c7d55da706204d7388cbdc31abd1a69d",
+          "text": "\u6211\u672c\u4eba\u7684\u540e\u6765\u64cd\u4f5c\u5df2\u53d1\u751f\u3002",
+          "replyToNoteId": null,
+          "stateVersion": 484,
+          "eventCursor": 485,
+          "sharedAtUtc": "2026-10-26T05:00:10.4239084+00:00",
+          "position": [
+            18,
+            12
+          ],
+          "inventoryWood": 0,
+          "capabilityVersion": 1
+        }
+      },
+      "unsubmittedOldIntentStopped": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 484,
+        "commandId": "6ab3708977f14279ae3da4b91090da28",
+        "identity": {
+          "operatorId": "declared-late",
+          "actorId": "a2",
+          "sessionId": "s131d61be279840df94f00244eea8851d"
+        },
+        "eventCursor": 485,
+        "error": {
+          "code": "STALE_ACTOR_STATE",
+          "message": "\u8fd9\u4f4d\u5c45\u6c11\u7684\u72b6\u6001\u5df2\u53d8\u5316\uff0c\u8bf7\u91cd\u65b0\u89c2\u5bdf",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected",
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 483,
+          "appliedOnStateVersion": 484
+        }
+      },
+      "originalReceiptsPreserved": 414,
+      "allOriginalEntitiesInventoriesLedgerAndProductionUnchanged": true,
+      "audit": {
+        "issued": 24,
+        "generated": 12,
+        "wild": 0,
+        "source": 0,
+        "inventory": 3,
+        "embodied": 21,
+        "activeReserved": 0,
+        "serviceMs": 71921,
+        "processedPeriod": 5,
+        "production": [
+          [
+            1,
+            31047,
+            3,
+            258
+          ],
+          [
+            2,
+            41047,
+            3,
+            287
+          ],
+          [
+            3,
+            51047,
+            3,
+            337
+          ],
+          [
+            4,
+            61047,
+            3,
+            364
+          ]
+        ],
+        "stateVersion": 484,
+        "realCommandsThisBranch": 73,
+        "processStopped": true
+      }
+    }
+  },
+  "worlds": [
+    {
+      "name": "protocol",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "concurrency",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "recovery",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "old_intents",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    }
+  ],
+  "scope": "independent entity-notes-v1 on exhausted earned r10",
+  "contractSha256": "0049ac5c2f1c3a369d0450efd497a1e383433115949bf6db093cadf9b3c550e0",
+  "externalModelCalls": 0,
+  "directSqlStateEdits": false,
+  "controlledClock": false,
+  "earnedExhaustedSeed": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/notes-exhausted-baseline-20261026T045741197461Z",
+  "clonedStoppedBranches": true
+}

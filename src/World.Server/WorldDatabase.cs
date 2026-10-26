@@ -6,7 +6,7 @@ namespace World.Server;
 
 internal sealed record SessionAccess(string Token, string SessionId, string ExpiresAtUtc);
 
-internal sealed class WorldDatabase(ServerConfiguration configuration)
+internal sealed partial class WorldDatabase(ServerConfiguration configuration)
 {
     public string Path { get; } = System.IO.Path.Combine(configuration.DataDirectory, "world.db");
     public WorldScenario Scenario { get; private set; } = null!;
@@ -48,6 +48,9 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
             InstanceId = WorldInstance.Read(connection, transaction);
             if (Scenario.SupportsTransfer && InstanceId is null)
                 throw new InvalidOperationException("合作世界缺少实例身份，拒绝作为旧世界运行");
+            if (EntityNoteRules.ReadAdoption(connection, transaction) is { } notes &&
+                (!Scenario.SupportsMaterialAccess || notes.InstanceId != InstanceId))
+                throw new InvalidOperationException("手记能力不属于这个世界实例");
             transaction.Commit();
             return;
         }

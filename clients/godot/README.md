@@ -73,3 +73,12 @@ HTTP 验证和真实 Godot / OpenGL 输入测试使用隔离数据库和随机�
 本轮按用户提供的 [游戏开发技能库](https://github.com/gamedev-skills/awesome-gamedev-agent-skills) 使用 `godot-3d-essentials`、`godot-physics`、`camera-systems`。参考 [Sac 的 3D 游戏工作流](https://x.com/Saccc_c/status/2110694725640474759) 的统一风格、场景与角色分工、多角度实机检查；没有使用该游戏的模型、付费服务或改换引擎。
 
 恢复实现按同一技能库的 `godot-gdscript`、`godot-gdscript-headless-testing` 和 `save-systems` 检查原请求保存、格式版本、并发写入与进程恢复。
+
+
+## 原桥共同手记
+
+r10 原世界显式采用 [entity-notes-v1](../../docs/contracts/entity-notes-v1.md) 后，点击登记的旧桥或右侧“旧桥手记”可以阅读、输入和接写。设施建造者与手记作者分别显示；正文为纯文本，最多160字，必须走到桥中心1.6米内才能发表。零木材可以读写，每个已声明控制组最多2条、整份手记最多6条。
+
+草稿关闭即清空，不发命令；发送后若结果未知，原请求仍留在原恢复目录，用“查询原动作／原样重试”继续。恢复会核对原回执、原手记和原事件，三者一致才显示已确认。切换居民会清空草稿；已发原动作保留给原居民。仍使用 `start:godot:material-access` 及其原 `WORLD_CLIENT_STATE`，不要通过换前缀绕开旧未决记录。
+
+未采用的旧世界不显示这项能力。旧版客户端遇新版手记未决记录会保留文件并暂停；需要新版恢复。新版接到不支持手记的旧服务时，也保留原请求并等待支持服务恢复。

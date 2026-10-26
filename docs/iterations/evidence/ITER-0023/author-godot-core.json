@@ -1,0 +1,288 @@
+{
+  "passed": true,
+  "actualModelCalls": 0,
+  "groups": 6,
+  "assertions": 57,
+  "results": [
+    {
+      "name": "ui",
+      "checks": [
+        {
+          "name": "native client sees opted-in old bridge",
+          "passed": true
+        },
+        {
+          "name": "mouse opens bridge notes",
+          "passed": true
+        },
+        {
+          "name": "native Unicode draft input",
+          "passed": true
+        },
+        {
+          "name": "closing a draft sends no command",
+          "passed": true
+        },
+        {
+          "name": "closed draft cleared",
+          "passed": true
+        },
+        {
+          "name": "empty inventory can publish nearby",
+          "passed": true
+        },
+        {
+          "name": "rendered draft",
+          "passed": true
+        },
+        {
+          "name": "actual note settled with receipt event and observation",
+          "passed": true
+        },
+        {
+          "name": "confirmed state distinct from draft",
+          "passed": true
+        },
+        {
+          "name": "rendered published",
+          "passed": true
+        },
+        {
+          "name": "identity switch clears previous draft and reference",
+          "passed": true
+        },
+        {
+          "name": "next resident reads original published text",
+          "passed": true
+        },
+        {
+          "name": "original note has reply action",
+          "passed": true
+        },
+        {
+          "name": "reply pins original note identity",
+          "passed": true
+        },
+        {
+          "name": "second resident publishes exactly one reply",
+          "passed": true
+        },
+        {
+          "name": "server retains original reference",
+          "passed": true
+        },
+        {
+          "name": "rendered reply",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "before",
+      "checks": [
+        {
+          "name": "actual capability fully validated",
+          "passed": true
+        },
+        {
+          "name": "missing or damaged evidence preserves pending",
+          "passed": true
+        },
+        {
+          "name": "original v4 note survives JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "changed frozen text rejected",
+          "passed": true
+        },
+        {
+          "name": "validation never replaces original body",
+          "passed": true
+        },
+        {
+          "name": "restarted adapter settles original note",
+          "passed": true
+        },
+        {
+          "name": "exactly one immutable note",
+          "passed": true
+        },
+        {
+          "name": "original disk record settled",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "after",
+      "checks": [
+        {
+          "name": "actual capability fully validated",
+          "passed": true
+        },
+        {
+          "name": "missing or damaged evidence preserves pending",
+          "passed": true
+        },
+        {
+          "name": "original v4 note survives JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "changed frozen text rejected",
+          "passed": true
+        },
+        {
+          "name": "validation never replaces original body",
+          "passed": true
+        },
+        {
+          "name": "restarted adapter settles original note",
+          "passed": true
+        },
+        {
+          "name": "exactly one immutable note",
+          "passed": true
+        },
+        {
+          "name": "original disk record settled",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "corrupt",
+      "checks": [
+        {
+          "name": "actual capability fully validated",
+          "passed": true
+        },
+        {
+          "name": "missing or damaged evidence preserves pending",
+          "passed": true
+        },
+        {
+          "name": "original v4 note survives JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "changed frozen text rejected",
+          "passed": true
+        },
+        {
+          "name": "validation never replaces original body",
+          "passed": true
+        },
+        {
+          "name": "restarted adapter settles original note",
+          "passed": true
+        },
+        {
+          "name": "exactly one immutable note",
+          "passed": true
+        },
+        {
+          "name": "original disk record settled",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "event",
+      "checks": [
+        {
+          "name": "actual capability fully validated",
+          "passed": true
+        },
+        {
+          "name": "missing or damaged evidence preserves pending",
+          "passed": true
+        },
+        {
+          "name": "original v4 note survives JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "changed frozen text rejected",
+          "passed": true
+        },
+        {
+          "name": "validation never replaces original body",
+          "passed": true
+        },
+        {
+          "name": "restarted adapter settles original note",
+          "passed": true
+        },
+        {
+          "name": "exactly one immutable note",
+          "passed": true
+        },
+        {
+          "name": "original disk record settled",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "observation",
+      "checks": [
+        {
+          "name": "actual capability fully validated",
+          "passed": true
+        },
+        {
+          "name": "missing or damaged evidence preserves pending",
+          "passed": true
+        },
+        {
+          "name": "original v4 note survives JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "changed frozen text rejected",
+          "passed": true
+        },
+        {
+          "name": "validation never replaces original body",
+          "passed": true
+        },
+        {
+          "name": "restarted adapter settles original note",
+          "passed": true
+        },
+        {
+          "name": "exactly one immutable note",
+          "passed": true
+        },
+        {
+          "name": "original disk record settled",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "sourceSha256": {
+    "clients/godot/command_evidence.gd": "f7d3c1e1af823d264259a56bfa13902cda5ff65b7e0811a18d5d4857176a7d68",
+    "clients/godot/entity_note_evidence.gd": "f80e6f82a54e58bbfb2e9dcf8ee9512447c546427c1d1dcc00787f4f3682d1a5",
+    "clients/godot/entity_notes_panel.gd": "3901132c790dd452c699b94e268aa1022faa8337e2dd840ab809bfda0e29968b",
+    "clients/godot/main.gd": "dfe4f751d62e677fb789b27b334f451160ab766e4984d120d67ec18216aa7c32",
+    "clients/godot/material_panel.gd": "39624af0442670059f6408b73b46cf21eaefb2aa0b75b19828194bba9a48cc3c",
+    "clients/godot/pending_store.gd": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/world_client.gd": "9d30e2c8bcfc0287b68605ecdab6f046f575410a069b2ddf3a6bc729e0aca193",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "ebf2271dd1541216ec7f0785600032e18607e1b027a95a5100f41f37395535d2",
+    "tests/entity_notes_godot.py": "cf1f779ef615ad6304f7003e1e01891ec64cce3a7b2acb80d9bee7b264d1149b",
+    "tests/godot/entity_notes.gd": "2de8b011e0481df9bd60cdf705f673055b895da5dda89f68583797bcc4cff22e"
+  },
+  "sourceUnchanged": true,
+  "dllSha256": "c9d9ccaa5b1e194e17abc41a79c2ce255d436c77ff4116ddaa6b72b6ee7b2c8e"
+}

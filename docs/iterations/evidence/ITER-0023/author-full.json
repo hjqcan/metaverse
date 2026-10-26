@@ -1,0 +1,278 @@
+{
+  "recordedAtUtc": "2026-10-26T05:20:14.073474+00:00",
+  "suite": "all",
+  "passed": true,
+  "actualModelCalls": 0,
+  "results": [
+    {
+      "name": "restore",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/restore.log",
+      "evidence": null
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/build.log",
+      "evidence": null
+    },
+    {
+      "name": "http-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-foundation.log",
+      "evidence": ".local/iter0001/api/20261026T132015-d355a8/results.json"
+    },
+    {
+      "name": "http-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-passage.log",
+      "evidence": ".local/iter0002/api/20261026T132015-7ee9c0/results.json"
+    },
+    {
+      "name": "http-resident_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-resident_mission.log",
+      "evidence": ".local/iter0003/api/20261026T132015-b4f2de/results.json"
+    },
+    {
+      "name": "http-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-activities.log",
+      "evidence": ".local/iter0004/api/20261026T132029-7971a6/results.json"
+    },
+    {
+      "name": "http-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-postcards.log",
+      "evidence": ".local/iter0005/api/20261026T132029-571808/results.json"
+    },
+    {
+      "name": "http-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-mosaic.log",
+      "evidence": ".local/iter0006/api/20261026T132029-aab81b/results.json"
+    },
+    {
+      "name": "http-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-consent.log",
+      "evidence": ".local/iter0007/api/20261026T132038-701a0f/results.json"
+    },
+    {
+      "name": "http-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-inbox.log",
+      "evidence": ".local/iter0008/api/20261026T132041-54c9a7/results.json"
+    },
+    {
+      "name": "http-entry_guide",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-entry_guide.log",
+      "evidence": ".local/iter0009/api/20261026T132043-84ba96/results.json"
+    },
+    {
+      "name": "http-wilderness",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-wilderness.log",
+      "evidence": ".local/iter0010/api/20261026T132050-ac3d53/results.json"
+    },
+    {
+      "name": "http-wilderness_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-wilderness_mission.log",
+      "evidence": ".local/iter0013/api/20261026T052102Z-148289/results.json"
+    },
+    {
+      "name": "http-continuous",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-continuous.log",
+      "evidence": ".local/iter0014/api/20261026T052102Z-3e4dc0/results.json"
+    },
+    {
+      "name": "http-continuous_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-continuous_mission.log",
+      "evidence": ".local/iter0015/api/20261026T052108Z-ba9584/results.json"
+    },
+    {
+      "name": "http-world_instance",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-world_instance.log",
+      "evidence": ".local/world-instance/api/20261026T052112Z-a03a97/results.json"
+    },
+    {
+      "name": "http-construction_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-construction_mission.log",
+      "evidence": ".local/iter0017/api/20261026T052119Z-3f5e37/results.json"
+    },
+    {
+      "name": "http-instance_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-instance_mission.log",
+      "evidence": ".local/instance-mission/api/20261026T052129Z-e92b4e/results.json"
+    },
+    {
+      "name": "http-actor_state",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-actor_state.log",
+      "evidence": ".local/iter0019/api/20261026T052149Z-f84bc3/results.json"
+    },
+    {
+      "name": "http-actor_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-actor_mission.log",
+      "evidence": ".local/iter0019/python/20261026T052321Z-6cc376/results.json"
+    },
+    {
+      "name": "http-material_transfer",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-material_transfer.log",
+      "evidence": ".local/iter0020/api/20261026T052324Z-7800a4/results.json"
+    },
+    {
+      "name": "http-transfer_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-transfer_mission.log",
+      "evidence": ".local/iter0020/python/20261026T052403Z-e80da1/results.json"
+    },
+    {
+      "name": "http-material_access",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-material_access.log",
+      "evidence": ".local/iter0022/api/20261026T052431Z-339c4b/results.json"
+    },
+    {
+      "name": "http-material_access_time",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-material_access_time.log",
+      "evidence": ".local/iter0022/time/20261026T052459Z-1a51ca/results.json"
+    },
+    {
+      "name": "http-material_access_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-material_access_mission.log",
+      "evidence": ".local/iter0022/python/20261026T052523Z-7471fc/results.json"
+    },
+    {
+      "name": "http-entity_notes",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-entity_notes.log",
+      "evidence": ".local/iter0023/api/20261026T052556Z-9601b2/results.json"
+    },
+    {
+      "name": "http-entity_notes_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/http-entity_notes_mission.log",
+      "evidence": ".local/iter0023/python/20261026T052750Z-17d214/results.json"
+    },
+    {
+      "name": "browser-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-foundation.log",
+      "evidence": ".local/iter0001/browser/2026-10-26T05-28-35-176Z/results.json"
+    },
+    {
+      "name": "browser-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-passage.log",
+      "evidence": ".local/iter0002/browser/2026-10-26T05-28-44-382Z/results.json"
+    },
+    {
+      "name": "browser-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-resident.log",
+      "evidence": ".local/iter0003/browser/2026-10-26T05-28-49-819Z/results.json"
+    },
+    {
+      "name": "browser-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-activities.log",
+      "evidence": ".local/iter0004/browser/2026-10-26T05-28-51-493Z/results.json"
+    },
+    {
+      "name": "browser-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-postcards.log",
+      "evidence": ".local/iter0005/browser/2026-10-26T05-28-52-834Z/results.json"
+    },
+    {
+      "name": "browser-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-mosaic.log",
+      "evidence": ".local/iter0006/browser/2026-10-26T05-28-57-047Z/results.json"
+    },
+    {
+      "name": "browser-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-consent.log",
+      "evidence": ".local/iter0007/browser/2026-10-26T05-29-01-901Z/results.json"
+    },
+    {
+      "name": "browser-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-inbox.log",
+      "evidence": ".local/iter0008/browser/2026-10-26T05-29-08-194Z/results.json"
+    },
+    {
+      "name": "browser-consent-experience",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-consent-experience.log",
+      "evidence": ".local/consent-experience/browser/2026-10-26T05-29-18-527Z/results.json"
+    },
+    {
+      "name": "browser-entry",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-entry.log",
+      "evidence": ".local/iter0009/browser/2026-10-26T05-29-20-717Z/results.json"
+    },
+    {
+      "name": "browser-wilderness",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-wilderness.log",
+      "evidence": ".local/iter0010/browser/2026-10-26T05-29-28-170Z/results.json"
+    },
+    {
+      "name": "browser-wilderness-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-wilderness-resident.log",
+      "evidence": ".local/iter0013/browser/2026-10-26T05-29-34-155Z/results.json"
+    },
+    {
+      "name": "browser-continuous-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-continuous-resident.log",
+      "evidence": ".local/iter0015/browser/2026-10-26T05-29-35-187Z/results.json"
+    },
+    {
+      "name": "browser-construction-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-construction-resident.log",
+      "evidence": ".local/iter0017/browser/2026-10-26T05-29-36-083Z/results.json"
+    },
+    {
+      "name": "browser-actor-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-actor-resident.log",
+      "evidence": ".local/iter0019/browser/2026-10-26T05-29-46-457Z/results.json"
+    },
+    {
+      "name": "browser-transfer-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-transfer-resident.log",
+      "evidence": ".local/iter0020/browser/2026-10-26T05-29-48-168Z/results.json"
+    },
+    {
+      "name": "browser-material-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-material-resident.log",
+      "evidence": ".local/iter0022/browser/2026-10-26T05-30-01-790Z/results.json"
+    },
+    {
+      "name": "browser-entity-note-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T052014Z-07c35a/browser-entity-note-resident.log",
+      "evidence": ".local/iter0023/browser/2026-10-26T05-30-31-418Z/results.json"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import json
 import os
 from pathlib import Path
 import shutil
+import signal
 import sqlite3
 import subprocess
 import sys
@@ -100,7 +101,18 @@ def launch(world, mode, url=None, script=None):
     command = [GODOT, '--path', str(ROOT / 'clients/godot'), '--script', str(script or ROOT / 'tests/godot/acceptance.gd'), '--resolution', '1280x800', '--audio-driver', 'Dummy']
     command = ['xvfb-run', '-a', '-s', '-screen 0 1280x800x24', *command]
     with output.with_suffix('.log').open('w') as log:
-        result = subprocess.run(command, cwd=ROOT, env=env, stdout=log, stderr=subprocess.STDOUT, timeout=80)
+        with subprocess.Popen(command, cwd=ROOT, env=env, stdout=log, stderr=subprocess.STDOUT, start_new_session=True) as result:
+            try:
+                result.wait(timeout=80)
+            except subprocess.TimeoutExpired:
+                # The dedicated Xvfb wrapper can outlive its Godot child (or vice
+                # versa). End only this test's process group on the deadline.
+                os.killpg(result.pid, signal.SIGTERM)
+                try: result.wait(timeout=5)
+                except subprocess.TimeoutExpired:
+                    os.killpg(result.pid, signal.SIGKILL)
+                    result.wait(timeout=5)
+                raise
     text = output.with_suffix('.log').read_text()
     if result.returncode or 'SCRIPT ERROR:' in text or 'ERROR:' in text:
         raise AssertionError(f'{mode}: exit {result.returncode}\n{text[-5000:]}')

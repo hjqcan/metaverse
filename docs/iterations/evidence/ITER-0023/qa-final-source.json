@@ -1,0 +1,772 @@
+{
+  "passed": true,
+  "iteration": "ITER-0023",
+  "checkedAtUtc": "2026-10-26T05:35:00.505596+00:00",
+  "scope": "read-only final source and archive attribution; no business tests run",
+  "sourceManifest": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0023/final-source-manifest.json",
+    "sha256": "8cd6fb2267cf0d6641f24607a9c5f9329e96cb69668053bd88f4b5ee3df022b5",
+    "files": [
+      {
+        "path": "README.md",
+        "sha256": "0c410eca0561c328638a2837749045b6d4d36d34181c3162a8980527a04a2ece"
+      },
+      {
+        "path": "clients/godot/README.md",
+        "sha256": "a7091288ec482d658caa3c4edc938c3d1bd0106ada974ef2de748aba8685f928"
+      },
+      {
+        "path": "clients/godot/command_evidence.gd",
+        "sha256": "f7d3c1e1af823d264259a56bfa13902cda5ff65b7e0811a18d5d4857176a7d68"
+      },
+      {
+        "path": "clients/godot/entity_note_evidence.gd",
+        "sha256": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393"
+      },
+      {
+        "path": "clients/godot/entity_note_evidence.gd.uid",
+        "sha256": "de36bc88bd408d91cdcbea23c9c4c4ee5e6342dde783901c26e50cca60115f7b"
+      },
+      {
+        "path": "clients/godot/entity_notes_panel.gd",
+        "sha256": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803"
+      },
+      {
+        "path": "clients/godot/entity_notes_panel.gd.uid",
+        "sha256": "c244c8c0a35133ca30b58094a00d1ab8b808b8d3e8977efd59bd38cc392a7114"
+      },
+      {
+        "path": "clients/godot/main.gd",
+        "sha256": "4086812666a4b56f395c5e571d8fa607ee5fce33c1216ca4df7dfeebf23b93b9"
+      },
+      {
+        "path": "clients/godot/world_client.gd",
+        "sha256": "9d30e2c8bcfc0287b68605ecdab6f046f575410a069b2ddf3a6bc729e0aca193"
+      },
+      {
+        "path": "docs/00-project-charter.md",
+        "sha256": "66296fb4a737d6695ec67b71142b8814603ecd891d654f7ccbe371ae1c3dd95a"
+      },
+      {
+        "path": "docs/09-decisions-and-open-questions.md",
+        "sha256": "fc40b955004ec7e7d9cd37051515886a2599c3bb5dc000c45a5a39608b47b637"
+      },
+      {
+        "path": "docs/contracts/entity-notes-v1.md",
+        "sha256": "ff60bb71c327ac98c041a65839decf16bf12094f7d63a61cd2882cc467cd6c32"
+      },
+      {
+        "path": "docs/iterations/ITER-0023-results.md",
+        "sha256": "ea487802afe310f9c8a2d49e6896684762f52a47c95ee66a04d8be8453b12d96"
+      },
+      {
+        "path": "docs/proposals/ITER-0023-entity-notes.md",
+        "sha256": "1269dce6c5c82df42434d08fd41dca293f82c1d90dd221e1e4da2e9f514568f9"
+      },
+      {
+        "path": "package.json",
+        "sha256": "c05c0a1345e06984f95f03f34b7716f8dc10f5fad2f523c1c161a5d04551895c"
+      },
+      {
+        "path": "scripts/check.py",
+        "sha256": "9184311b55b650a0f71acfe6a1cb836d38a190a65eb41745e2c13708e6e7c695"
+      },
+      {
+        "path": "scripts/command_preconditions.py",
+        "sha256": "fe4bb88eb0222b68ea071e34c1316a13c69969d02e94af9a6aacb7aab969d1c8"
+      },
+      {
+        "path": "scripts/resident_entity_notes.py",
+        "sha256": "b15f9efaf3ad1dc6980e5d084689005efad36d2b37017f7b53dff048ccad36dc"
+      },
+      {
+        "path": "scripts/resident_mission.py",
+        "sha256": "0b4e4fc3aa81649fe4bfa48f144446b2f8673e5da9e258fd5f4f4440b82789c8"
+      },
+      {
+        "path": "scripts/run_resident.py",
+        "sha256": "5b8f536d9e354b043fa7af35fec96dd2a781d1896092bce03277bbce90c5b521"
+      },
+      {
+        "path": "src/World.Server/ContinuousWorld.cs",
+        "sha256": "13821d283a0863f488c50202ea11d826a5df6c037324dd97b0865bd092575f71"
+      },
+      {
+        "path": "src/World.Server/EntityNotes.cs",
+        "sha256": "fc61a3eb54a1730fdf374bcafcdab251d89cfea00dac3cdea00fa08e17a8379d"
+      },
+      {
+        "path": "src/World.Server/Program.cs",
+        "sha256": "94775dc817dc72e2900a92f70c775235ccae824ae42a9de24064284ac0b8ede9"
+      },
+      {
+        "path": "src/World.Server/Protocol.cs",
+        "sha256": "e2df643975e1750a462c969180f5988ad51415717ed88eb27ac4efd397867831"
+      },
+      {
+        "path": "src/World.Server/WorldDatabase.cs",
+        "sha256": "b676febd29cb4c3d41180515fb4f765e933a573eae8cfaea97fabb67b19c7d84"
+      },
+      {
+        "path": "src/World.Server/WorldService.cs",
+        "sha256": "d09cc5ea41f75526634bcef4d5b8ce9837a6fb010787287eb1bd8a551e18140f"
+      },
+      {
+        "path": "src/World.Server/wwwroot/entity-note-report.js",
+        "sha256": "98cf1fd79e0303a34d2c9fb90cf850650363a317a3d4a3ce16fbb907b514a753"
+      },
+      {
+        "path": "src/World.Server/wwwroot/resident.html",
+        "sha256": "ad7b22a084be3e5e147c6239f3729d00a10fb7e71238fc7206f1b6a1c90816ee"
+      },
+      {
+        "path": "src/World.Server/wwwroot/resident.js",
+        "sha256": "32fafd96e3f3cba702d45cf25078e55bdf9e09ed9547b6fbea68d5ea00205149"
+      },
+      {
+        "path": "tests/README.md",
+        "sha256": "4617eb04f9128d0f10a35973dbbc80772a2ad8f78db6e69813a7a4ec2c3de3be"
+      },
+      {
+        "path": "tests/browser/entity-note-resident.mjs",
+        "sha256": "80da8ffd9ad1468e76a14d840c28943fe4218113a1c452453f81ba25ec8f9140"
+      },
+      {
+        "path": "tests/entity_notes_api.py",
+        "sha256": "e9cfa2c0a7478442ce6c3d3a856549fa81bf3e7463fa01f8c437661880c84faf"
+      },
+      {
+        "path": "tests/entity_notes_godot.py",
+        "sha256": "cf1f779ef615ad6304f7003e1e01891ec64cce3a7b2acb80d9bee7b264d1149b"
+      },
+      {
+        "path": "tests/entity_notes_mission_api.py",
+        "sha256": "b7bfe1ce4fd5df3e77aca9d8c83e82647f8de94d06b596533d5e1014e5c6b4ad"
+      },
+      {
+        "path": "tests/fixtures/entity-note.json",
+        "sha256": "89631943906fc1b7ef445399410a94ae6e94a9e13ee89402d6989a2a92f7cf84"
+      },
+      {
+        "path": "tests/godot/entity_notes.gd",
+        "sha256": "f771da1ac8cb3933a2e0407080b5f96e57bdff4a08401449e8bd76b746d93ede"
+      },
+      {
+        "path": "tests/godot_client.py",
+        "sha256": "b71a1208809d263a9d62d2277b5b2cbb3217906b1b0f0551fc9dfec351a7f439"
+      }
+    ]
+  },
+  "publicProvenance": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/docs/iterations/evidence/ITER-0023/provenance.json",
+    "sha256": "cec2993bc9e54a4fd43efab31f7db1bd6be32aac6a16e340a65a0b7a2c397029",
+    "exactCopies": [
+      {
+        "file": "author-api-default.json",
+        "original": ".local/iter0023/api/20261026T050616Z-acadae/results.json",
+        "sha256": "13bc01ef2b6487fb6d283b7671a22f056c6211a1434eb5c85b8a22b2d6b3cba0",
+        "bytes": 581
+      },
+      {
+        "file": "author-godot-initial-failure.json",
+        "original": ".local/iter0023/godot/20261026T050443Z-0a3ea3/results.json",
+        "sha256": "1f1dec860ed2042aa909d8f103d2e1110c7cf0da7652463e21dfa84fe58e4028",
+        "bytes": 3019
+      },
+      {
+        "file": "author-godot-core.json",
+        "original": ".local/iter0023/godot/20261026T050528Z-4b252c/results.json",
+        "sha256": "c51473f412379efa8bc5e540432c57fb136e1afd936a887d905cb9496d24431e",
+        "bytes": 7859
+      },
+      {
+        "file": "author-godot-final-ui.json",
+        "original": ".local/iter0023/godot/20261026T051304Z-d8d32e/results.json",
+        "sha256": "c3ff94c2531ceabe86b42344a8f24966131027ddbb3667898e00e67e08fcac9d",
+        "bytes": 3285
+      },
+      {
+        "file": "author-browser-initial.json",
+        "original": ".local/iter0023/browser/2026-10-26T05-11-44-269Z/results.json",
+        "sha256": "30c99fdbcd8e980d093ca33401f7a09f89aa9e124966bed49288302ca16b99ee",
+        "bytes": 891
+      },
+      {
+        "file": "worker-python-full.json",
+        "original": ".local/iter0023/python/20261026T051629Z-0f5a12/results.json",
+        "sha256": "4b9fd7f6fc4bcc1ad5ac1ff082e0d672ec40638d686021b2eb5e3e5857d5aac0",
+        "bytes": 4498
+      },
+      {
+        "file": "qa-core-summary.json",
+        "original": ".local/qa/20261026-test-agent/notes-core-independent-acceptance.json",
+        "sha256": "8459b9a0071309bca095b16b76ad117e972a9cfe0c24c4614354e3e79feaa400",
+        "bytes": 3353
+      },
+      {
+        "file": "qa-core-natural.json",
+        "original": ".local/qa/20261026-test-agent/notes-http-20261026T045853080038Z/results.json",
+        "sha256": "aba94245bd8f2e76b7c57d109781195db4b14fbb627adde7b044eff87337270a",
+        "bytes": 65052
+      },
+      {
+        "file": "qa-core-boundaries.json",
+        "original": ".local/qa/20261026-test-agent/notes-http-20261026T045930803584Z/results.json",
+        "sha256": "e7d0c8c1ab38cd3f4d02c728656a83edd575427b3a48a15a7cad3a1e57173248",
+        "bytes": 58971
+      },
+      {
+        "file": "qa-core-adoption-legacy.json",
+        "original": ".local/qa/20261026-test-agent/notes-http-20261026T050034618032Z/results.json",
+        "sha256": "dbffbdc069110717eb3db2748e9093a1ec06bfb1a3722c3428798528480c0e1a",
+        "bytes": 3365
+      },
+      {
+        "file": "qa-godot-recovery.json",
+        "original": ".local/qa/20261026-test-agent/notes-godot-20261026T050630653726Z/results.json",
+        "sha256": "7246cfcd05fe1dbe63ed97b089a49ab71d93c62484af47bacad0ed7345984701",
+        "bytes": 2016745
+      },
+      {
+        "file": "qa-godot-old-actions.json",
+        "original": ".local/qa/20261026-test-agent/notes-godot-20261026T050741531936Z/results.json",
+        "sha256": "28178ff3f3e8a3985257bb2be782007563e0d90db6a3f1afb7fc025a64e7d26c",
+        "bytes": 132093
+      },
+      {
+        "file": "qa-godot-bridge-evidence.json",
+        "original": ".local/qa/20261026-test-agent/notes-godot-20261026T051141977150Z/results.json",
+        "sha256": "375cb2ed442a8cd193dadedf928c94ec1ce3c54597545917abfb7f4ae59144fd",
+        "bytes": 304871
+      },
+      {
+        "file": "godot-reply.png",
+        "original": ".local/iter0023/godot/20261026T051304Z-d8d32e/ui/ui-reply.png",
+        "sha256": "3894183a87f466b8afe16df94a023c5b3bfbf956bb73ea08e77ef765c7ade441",
+        "bytes": 438506
+      },
+      {
+        "file": "worker-handoff.json",
+        "original": ".local/iter0023/python/handoff-20261026T0518Z.json",
+        "sha256": "08acef1e3514c27946bd282af55613de20077252ef0d22e60ed666bf738d9e04",
+        "bytes": 3692
+      },
+      {
+        "file": "worker-default-entry.json",
+        "original": ".local/iter0023/python/20261026T051638Z-5d94bb/results.json",
+        "sha256": "4bc5d53dcdc0d0dcb12583aa22ab28c290dc58a9db8e1003779388ba36f02fa5",
+        "bytes": 2803
+      },
+      {
+        "file": "resident-a2.json",
+        "original": ".local/iter0023/python/20261026T051629Z-0f5a12/test_01_actual_cli_first_note_and_original_reference_reply-world/a2-report.json",
+        "sha256": "c8d9d007112ea9cee4213d568c532ca41fa82e2b534a413c39d7535636b87ce6",
+        "bytes": 44016
+      },
+      {
+        "file": "resident-a3.json",
+        "original": ".local/iter0023/python/20261026T051629Z-0f5a12/test_01_actual_cli_first_note_and_original_reference_reply-world/a3-report.json",
+        "sha256": "42e207e7698dda63e994cf11852b4f26150934cc5937c59f4b16d0cc58eb33c0",
+        "bytes": 46093
+      },
+      {
+        "file": "resident-query4.json",
+        "original": ".local/iter0023/python/20261026T051629Z-0f5a12/query4-confirmed-report.json",
+        "sha256": "8b53481cf7d27cb31839e0563d448beefde9e28719c951ff0d0a15feb5d7e0b9",
+        "bytes": 20642
+      },
+      {
+        "file": "qa-godot-summary.json",
+        "original": ".local/qa/20261026-test-agent/notes-godot-independent-acceptance.json",
+        "sha256": "2996887dbc851e8ce292e796bcaed0c92055a39d61451adeca06b206a0bbf71c",
+        "bytes": 4851
+      },
+      {
+        "file": "qa-godot-long-ui.json",
+        "original": ".local/qa/20261026-test-agent/notes-godot-20261026T051946842787Z/results.json",
+        "sha256": "860d8156112c2551be931f78e45a334db7fdd6fc821f395b0b3c318e5bc3b8a5",
+        "bytes": 29503
+      },
+      {
+        "file": "qa-godot-pointer-input.json",
+        "original": ".local/qa/20261026-test-agent/notes-godot-20261026T051946842787Z/ui.json",
+        "sha256": "2625f8b1c79f5a224e448cf0e62adaf2a79c6ea76df8fa41812075c6fb39877a",
+        "bytes": 18317
+      },
+      {
+        "file": "qa-web.json",
+        "original": ".local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/results.json",
+        "sha256": "ab50a76de5fdcf148dd4970fed73cf3178201131014faaea72637b11aa0ec2e0",
+        "bytes": 6258
+      },
+      {
+        "file": "godot-long-reply.png",
+        "original": ".local/qa/20261026-test-agent/notes-godot-20261026T051946842787Z/ui-reply.png",
+        "sha256": "d28796ab4b53c25cdfab42cf07ad7b6bd0c3762f6b831af748ce4c4280c0f5cc",
+        "bytes": 461190
+      },
+      {
+        "file": "report-desktop.png",
+        "original": ".local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/actual-desktop.png",
+        "sha256": "356ed8c0968e536dcfd66cecd25802ba346dafd22741d02ad0fa2d578d832837",
+        "bytes": 389803
+      },
+      {
+        "file": "report-mobile.png",
+        "original": ".local/qa/20261026-test-agent/notes-web-v1-20261026T051933205163Z/actual-mobile.png",
+        "sha256": "cd7222dc480576a02cee82b35dc2e9ab4e2730402b9e2b0bba187b9ecf5c05c5",
+        "bytes": 342446
+      },
+      {
+        "file": "author-godot-all.json",
+        "original": ".local/iter0023/final-godot-expanded.json",
+        "sha256": "002cd98684bf95f5ffa471daa52e32dae3d645e4b2681ce94fbe0215c8fdcdd6",
+        "bytes": 113085
+      },
+      {
+        "file": "author-godot-notes-final.json",
+        "original": ".local/iter0023/godot/20261026T052315Z-01ad9a/results.json",
+        "sha256": "63cae02babee4dd99d8797d7af75e48db82160d2d216491534c314deca0e147d",
+        "bytes": 8469
+      },
+      {
+        "file": "qa-python-summary.json",
+        "original": ".local/qa/20261026-test-agent/notes-python-independent-acceptance.json",
+        "sha256": "de998f62acc7aeb9a37c0658dbaf0d995d8f86fb984661e086cfcbc15eadacb4",
+        "bytes": 3403
+      },
+      {
+        "file": "qa-python-cli-recovery.json",
+        "original": ".local/qa/20261026-test-agent/notes-python-20261026T052240744512Z/results.json",
+        "sha256": "6247bb729520c1be4b9bf133c2c5563a5880c8ef3e708145e7d1eba0fa069f28",
+        "bytes": 304540
+      },
+      {
+        "file": "qa-python-budget-legacy.json",
+        "original": ".local/qa/20261026-test-agent/notes-python-20261026T052336715544Z/results.json",
+        "sha256": "2aeb5b018a19253295dcae6435ee6094cf1acbb9103ebb7d7f55ae70d75ecd6c",
+        "bytes": 292250
+      },
+      {
+        "file": "qa-web-final.json",
+        "original": ".local/qa/20261026-test-agent/notes-web-final-20261026T052358946787Z/results.json",
+        "sha256": "a94e029754eab36fd5a00cfc452ada80ddf35a6d6adcb5344c5d1842425dd1ed",
+        "bytes": 6145
+      },
+      {
+        "file": "qa-independent-summary.json",
+        "original": ".local/qa/20261026-test-agent/notes-independent-acceptance.json",
+        "sha256": "466daf3ffbc1246e653581e980585685537d01991caba8deb2ae7f13c7b47190",
+        "bytes": 20957
+      },
+      {
+        "file": "qa-services.json",
+        "original": ".local/qa/20261026-test-agent/notes-services-audit.json",
+        "sha256": "00d2906d6a590751347917cbd89c03f32ec564935211236c379b792774ed43d9",
+        "bytes": 218
+      },
+      {
+        "file": "author-full.json",
+        "original": ".local/checks/20261026T052014Z-07c35a/results.json",
+        "sha256": "79eb798df7723c1d56291aef0dc3a1546c4f7d9478940e7d3f0cce7656a83c66",
+        "bytes": 10281
+      },
+      {
+        "file": "author-full-expanded.json",
+        "original": ".local/iter0023/final-full-expanded.json",
+        "sha256": "52f2caeaec69f9ca6e4512495aeffb854fc16ccc1fd1aae0078e81f55177ebc0",
+        "bytes": 139192
+      },
+      {
+        "file": "author-browser-default.json",
+        "original": ".local/iter0023/browser/2026-10-26T05-30-31-418Z/results.json",
+        "sha256": "30c99fdbcd8e980d093ca33401f7a09f89aa9e124966bed49288302ca16b99ee",
+        "bytes": 891
+      },
+      {
+        "file": "candidate-source.json",
+        "original": ".local/iter0023/final-source-manifest.json",
+        "sha256": "8cd6fb2267cf0d6641f24607a9c5f9329e96cb69668053bd88f4b5ee3df022b5",
+        "bytes": 4320
+      },
+      {
+        "file": "author-final-audit.json",
+        "original": ".local/iter0023/final-audit.json",
+        "sha256": "4df7a3480094b7ade8a313a8c5a0a3ba0756a962368dcdc26efda247bcaf22c8",
+        "bytes": 285
+      }
+    ]
+  },
+  "runtimeMatchesAcceptedFrozenFiles": [
+    {
+      "file": "src/World.Server/ContinuousWorld.cs",
+      "frozenManifest": "notes-core-v1-frozen.json",
+      "sha256": "13821d283a0863f488c50202ea11d826a5df6c037324dd97b0865bd092575f71"
+    },
+    {
+      "file": "src/World.Server/EntityNotes.cs",
+      "frozenManifest": "notes-core-v1-frozen.json",
+      "sha256": "fc61a3eb54a1730fdf374bcafcdab251d89cfea00dac3cdea00fa08e17a8379d"
+    },
+    {
+      "file": "src/World.Server/EntryGuide.cs",
+      "frozenManifest": "notes-core-v1-frozen.json",
+      "sha256": "097a08ad3f90f72e25743708e4f9a32e1cf2baec401c275bf7001a92655f3e8d"
+    },
+    {
+      "file": "src/World.Server/MaterialAccess.cs",
+      "frozenManifest": "notes-core-v1-frozen.json",
+      "sha256": "2d3579095e5586adbf1a7954bf3b5b0b40b1e76125684e077fc9171fa111600d"
+    },
+    {
+      "file": "src/World.Server/MaterialServiceClock.cs",
+      "frozenManifest": "notes-core-v1-frozen.json",
+      "sha256": "cc6b2b7e6a9040bd37fcb2edfc216266ed44171094ad4442917077d7e22f128f"
+    },
+    {
+      "file": "src/World.Server/MaterialTransfer.cs",
+      "frozenManifest": "notes-core-v1-frozen.json",
+      "sha256": "413db75abfec5f98f7fc35344c7820ffd45b5f10c05f889918e0155e194befe1"
+    },
+    {
+      "file": "src/World.Server/Program.cs",
+      "frozenManifest": "notes-core-v1-frozen.json",
+      "sha256": "94775dc817dc72e2900a92f70c775235ccae824ae42a9de24064284ac0b8ede9"
+    },
+    {
+      "file": "src/World.Server/Protocol.cs",
+      "frozenManifest": "notes-core-v1-frozen.json",
+      "sha256": "e2df643975e1750a462c969180f5988ad51415717ed88eb27ac4efd397867831"
+    },
+    {
+      "file": "src/World.Server/ServerConfiguration.cs",
+      "frozenManifest": "notes-core-v1-frozen.json",
+      "sha256": "8b33f7b3aae70229397362d0571769198303507712accd624ecedb1320eea8d1"
+    },
+    {
+      "file": "src/World.Server/WorldDatabase.cs",
+      "frozenManifest": "notes-core-v1-frozen.json",
+      "sha256": "b676febd29cb4c3d41180515fb4f765e933a573eae8cfaea97fabb67b19c7d84"
+    },
+    {
+      "file": "src/World.Server/WorldInstance.cs",
+      "frozenManifest": "notes-core-v1-frozen.json",
+      "sha256": "f865654d13b63ac9659fa119353b5e32b303484eab49215bb7796a49a5b3fd1b"
+    },
+    {
+      "file": "src/World.Server/WorldScenario.cs",
+      "frozenManifest": "notes-core-v1-frozen.json",
+      "sha256": "ea63aa8b79740cc1a603447dcbc8ae808f3632460db87bc9df6145f2003ff816"
+    },
+    {
+      "file": "src/World.Server/WorldService.cs",
+      "frozenManifest": "notes-core-v1-frozen.json",
+      "sha256": "d09cc5ea41f75526634bcef4d5b8ce9837a6fb010787287eb1bd8a551e18140f"
+    },
+    {
+      "file": "clients/godot/command_evidence.gd",
+      "frozenManifest": "notes-godot-v4-frozen.json",
+      "sha256": "f7d3c1e1af823d264259a56bfa13902cda5ff65b7e0811a18d5d4857176a7d68"
+    },
+    {
+      "file": "clients/godot/entity_note_evidence.gd",
+      "frozenManifest": "notes-godot-v4-frozen.json",
+      "sha256": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393"
+    },
+    {
+      "file": "clients/godot/entity_notes_panel.gd",
+      "frozenManifest": "notes-godot-v4-frozen.json",
+      "sha256": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803"
+    },
+    {
+      "file": "clients/godot/main.gd",
+      "frozenManifest": "notes-godot-v4-frozen.json",
+      "sha256": "4086812666a4b56f395c5e571d8fa607ee5fce33c1216ca4df7dfeebf23b93b9"
+    },
+    {
+      "file": "clients/godot/material_panel.gd",
+      "frozenManifest": "notes-godot-v4-frozen.json",
+      "sha256": "39624af0442670059f6408b73b46cf21eaefb2aa0b75b19828194bba9a48cc3c"
+    },
+    {
+      "file": "clients/godot/pending_store.gd",
+      "frozenManifest": "notes-godot-v4-frozen.json",
+      "sha256": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1"
+    },
+    {
+      "file": "clients/godot/transfer_panel.gd",
+      "frozenManifest": "notes-godot-v4-frozen.json",
+      "sha256": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66"
+    },
+    {
+      "file": "clients/godot/world_client.gd",
+      "frozenManifest": "notes-godot-v4-frozen.json",
+      "sha256": "9d30e2c8bcfc0287b68605ecdab6f046f575410a069b2ddf3a6bc729e0aca193"
+    },
+    {
+      "file": "clients/godot/world_navigation.gd",
+      "frozenManifest": "notes-godot-v4-frozen.json",
+      "sha256": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec"
+    },
+    {
+      "file": "clients/godot/world_view.gd",
+      "frozenManifest": "notes-godot-v4-frozen.json",
+      "sha256": "ebf2271dd1541216ec7f0785600032e18607e1b027a95a5100f41f37395535d2"
+    },
+    {
+      "file": "clients/godot/project.godot",
+      "frozenManifest": "notes-godot-v4-frozen.json",
+      "sha256": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424"
+    },
+    {
+      "file": "clients/godot/main.tscn",
+      "frozenManifest": "notes-godot-v4-frozen.json",
+      "sha256": "58496e2c5357a2774f2a70f19d0dcb9a015167d8bf9849dc68f4f20a7841e6b1"
+    },
+    {
+      "file": "clients/godot/river.gdshader",
+      "frozenManifest": "notes-godot-v4-frozen.json",
+      "sha256": "b5de02167c429ce338fff61bb0ad180aa4d2d1b7c5c1e96f3cbce3f4ba88631b"
+    },
+    {
+      "file": "scripts/activity_choice.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "84bd020783870725947663eb41500977096c86e366099b4fb8607c9d1c049b5a"
+    },
+    {
+      "file": "scripts/agent_accounts.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "f1844d9db668e864ab215d0d811b884b6301500bfe260bb9bf9d9cfdbc481f10"
+    },
+    {
+      "file": "scripts/codex_goal_selector.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "3a455c2906aaa3764c85794cb581300979f57cb3f24b46fe437fbd287a8b6936"
+    },
+    {
+      "file": "scripts/command_preconditions.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "fe4bb88eb0222b68ea071e34c1316a13c69969d02e94af9a6aacb7aab969d1c8"
+    },
+    {
+      "file": "scripts/continuous_navigation.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "0303f9ade6ce90e48a85fbf8e5a5aaff145ca0a305562cee4c0d0bb1cb21e578"
+    },
+    {
+      "file": "scripts/entry_guide.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "9b768237d39f2e4b4820e0178508c132408215aa6653c996eaf9b6e913d79dbb"
+    },
+    {
+      "file": "scripts/foundation_agent.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf"
+    },
+    {
+      "file": "scripts/mosaic_consent.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "cb3acc34abe43c6988359bc307755ad6d2743ac5e850bccaf165f14ae561eae9"
+    },
+    {
+      "file": "scripts/mosaic_inbox.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "a9c0772e5946af581c3b423c8e5986b05413348a3e528c8d5a0b18401367aa59"
+    },
+    {
+      "file": "scripts/mosaic_patch.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "4abdb035967733e4aacbe175a37f8b32686de6182ded2fee888203726b0461a6"
+    },
+    {
+      "file": "scripts/passage_agent.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e"
+    },
+    {
+      "file": "scripts/postcard_text.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "db3429983b8ee2062ab70f4c7e46b763c5839934f65a2a6776638f8c0a280a4c"
+    },
+    {
+      "file": "scripts/resident_construction.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "eef4aa235fb0fdf2428b17005381074bb1f773f3ac21d600b2c095e96c1b6411"
+    },
+    {
+      "file": "scripts/resident_entity_notes.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "b15f9efaf3ad1dc6980e5d084689005efad36d2b37017f7b53dff048ccad36dc"
+    },
+    {
+      "file": "scripts/resident_material_access.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "0e9aa7bc9bfd89bc65270a0cc49fd8a2c128cdaff2fc95b6dcde3d56ad081d68"
+    },
+    {
+      "file": "scripts/resident_mission.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "0b4e4fc3aa81649fe4bfa48f144446b2f8673e5da9e258fd5f4f4440b82789c8"
+    },
+    {
+      "file": "scripts/resident_transfer.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "957067bc33585e1fb5f7f9b21b703aa1c8decf8f4148fcb2fe24e4ce50329a83"
+    },
+    {
+      "file": "scripts/run_resident.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "5b8f536d9e354b043fa7af35fec96dd2a781d1896092bce03277bbce90c5b521"
+    },
+    {
+      "file": "scripts/wilderness_materials.py",
+      "frozenManifest": "notes-python-v1-frozen.json",
+      "sha256": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6"
+    },
+    {
+      "file": "src/World.Server/wwwroot/app.js",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "bdbd751b03854e6ae192ccd5fdf0b9165e20433ed111d069a1d9e1b305f57acd"
+    },
+    {
+      "file": "src/World.Server/wwwroot/consent.js",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "396ad8dca4ea121124e7a771e47c3dd5dd966f71bb67f62eab580a38f3b92d91"
+    },
+    {
+      "file": "src/World.Server/wwwroot/entity-note-report.js",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "98cf1fd79e0303a34d2c9fb90cf850650363a317a3d4a3ce16fbb907b514a753"
+    },
+    {
+      "file": "src/World.Server/wwwroot/entry-guide.js",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "5bc3a6eef9dc93b22dc0a14c86ee0c6f41013f8e8c2cc5b4cb9edd199236c5a8"
+    },
+    {
+      "file": "src/World.Server/wwwroot/index.html",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "b1617698950c81f092b91556f1c67b0215900c51cce3f60f888e2315df8ceff2"
+    },
+    {
+      "file": "src/World.Server/wwwroot/material-report.js",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "087db4b4b5e6e8193b0b7c4ade00797d4f1b6e31d55ec22cac891bd1bdf47efa"
+    },
+    {
+      "file": "src/World.Server/wwwroot/mosaic-inbox.js",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "96a7180337ee21f496ec62a38d85e4cbca5e1aa3c822912480ba36ceb498e1f6"
+    },
+    {
+      "file": "src/World.Server/wwwroot/mosaic.js",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "8f6ef59b7d9538ee0cb93d0e04b16c55ebdbf41cd04fab8a6296b889052ee08b"
+    },
+    {
+      "file": "src/World.Server/wwwroot/reports/activity-comparison.json",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "9f3bd2fad3f27c96c9eb99ce1bfc30b93c9902a42860bebca83188c9069f7134"
+    },
+    {
+      "file": "src/World.Server/wwwroot/reports/activity-demo.json",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "9d1bd9075c5c9255f46664df0cd5fa5ba692693bf6ceb3aa4f1602ac07fa9f9a"
+    },
+    {
+      "file": "src/World.Server/wwwroot/reports/consent-proposer.json",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "7037570544ce1e34c1027bcbb43f9b7ec32120ed32efebac5a40f5c6686e8d4a"
+    },
+    {
+      "file": "src/World.Server/wwwroot/reports/consent-reviewer.json",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "4c5acda2e9806810d030d191f2d4fd6dbc56eca1647ce3a1b7f26f3e95f4b3bb"
+    },
+    {
+      "file": "src/World.Server/wwwroot/reports/inbox-proposer.json",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "1dec130cb290c2f4b98ffd5dde968e05d1711dae6ced08705eaedc5c2ac9ee34"
+    },
+    {
+      "file": "src/World.Server/wwwroot/reports/inbox-reviewer.json",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "8f1e1a784c541abb07fbd2be09e5c3c5b26ad3ffab77ce6962883f879277cb97"
+    },
+    {
+      "file": "src/World.Server/wwwroot/reports/mosaic-first.json",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "1bda55c79568c74cbdbfbaeceaca94cfabad94af16099869bf1ee8f57e10ff58"
+    },
+    {
+      "file": "src/World.Server/wwwroot/reports/mosaic-second.json",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "88f9268d4ab4d16321c38637d504ca390759c4cb50c7473407051e162b9b475f"
+    },
+    {
+      "file": "src/World.Server/wwwroot/reports/postcard-first.json",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "9122de32b6ebc2ae3850e092499dda558792624f59989c05e3abda1e93708981"
+    },
+    {
+      "file": "src/World.Server/wwwroot/reports/postcard-second.json",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "13084fc201e434f5e26b8f66da977fd9820a2dae97cc693ed2a7b229e408bebe"
+    },
+    {
+      "file": "src/World.Server/wwwroot/reports/resident-demo.json",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "191ffa5aac83d734be48827cfb239c13c548f33e70b44d4fd90d51464b3ce71f"
+    },
+    {
+      "file": "src/World.Server/wwwroot/resident.css",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "cd3986c35631c56a0e9e751edd958c0b5df3b3b4de1c9d40bba906c539d1c83c"
+    },
+    {
+      "file": "src/World.Server/wwwroot/resident.html",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "ad7b22a084be3e5e147c6239f3729d00a10fb7e71238fc7206f1b6a1c90816ee"
+    },
+    {
+      "file": "src/World.Server/wwwroot/resident.js",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "32fafd96e3f3cba702d45cf25078e55bdf9e09ed9547b6fbea68d5ea00205149"
+    },
+    {
+      "file": "src/World.Server/wwwroot/styles.css",
+      "frozenManifest": "notes-web-v1-frozen.json",
+      "sha256": "dc2634a1f15e012aa4e638dc35ca0a697a1fea5a6bdb05885eb7a02946c27195"
+    }
+  ],
+  "coreDllSha256": "c9d9ccaa5b1e194e17abc41a79c2ce255d436c77ff4116ddaa6b72b6ee7b2c8e",
+  "authorRegression": {
+    "http": 293,
+    "httpSuites": 25,
+    "chrome": 170,
+    "chromeSuites": 18,
+    "explicitSkipped": 0,
+    "fullExpandedSha256": "52f2caeaec69f9ca6e4512495aeffb854fc16ccc1fd1aae0078e81f55177ebc0",
+    "godotGroups": 56,
+    "godotAssertions": 767,
+    "godotSuites": 9,
+    "godotExpandedSha256": "002cd98684bf95f5ffa471daa52e32dae3d645e4b2681ce94fbe0215c8fdcdd6"
+  },
+  "frozenIndependentEvidence": {
+    "lock": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-final-evidence-lock-20261026T052622620833Z.json",
+    "fileCount": 41,
+    "allUnchanged": true
+  },
+  "brokenDocumentLinks": [],
+  "documentReview": {
+    "completionState": "ITER-0023 local mechanism and technical checks complete; ongoing world goal remains active",
+    "authorVsIndependent": "Author 293 HTTP/170 Chrome and 56 Godot groups are separate from independent core7/Python6/Chrome16 and versioned Godot evidence.",
+    "historicalFailures": "Early whole-run false and skipped default compatibility probe remain present and explained; no false records rewritten.",
+    "nonProductChanges": "Contract startup/query4 paragraph and completion status plus author Godot missing-bridge assertion reviewed against accepted independent cases. Runtime files match.",
+    "unproven": "No human voluntary experience or fun validation; finite two-per-operator/six-total notes and still-exhausted material source do not close C16-C17."
+  },
+  "productEdits": false,
+  "existingEvidenceEdits": false,
+  "commitOrPush": false,
+  "externalModelCalls": 0
+}

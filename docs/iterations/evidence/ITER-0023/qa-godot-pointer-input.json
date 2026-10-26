@@ -1,0 +1,885 @@
+{
+  "checks": [
+    {
+      "name": "native client sees opted-in old bridge",
+      "passed": true
+    },
+    {
+      "name": "mouse opens bridge notes",
+      "passed": true
+    },
+    {
+      "name": "native Unicode draft input",
+      "passed": true
+    },
+    {
+      "name": "closing a draft sends no command",
+      "passed": true
+    },
+    {
+      "name": "closed draft cleared",
+      "passed": true
+    },
+    {
+      "name": "empty inventory can publish nearby",
+      "passed": true
+    },
+    {
+      "name": "note actions stay inside viewport draft",
+      "passed": true
+    },
+    {
+      "name": "note actions clear of footer draft",
+      "passed": true
+    },
+    {
+      "name": "rendered draft",
+      "passed": true
+    },
+    {
+      "name": "actual note settled with receipt event and observation",
+      "passed": true
+    },
+    {
+      "name": "confirmed state distinct from draft",
+      "passed": true
+    },
+    {
+      "name": "note actions stay inside viewport published",
+      "passed": true
+    },
+    {
+      "name": "note actions clear of footer published",
+      "passed": true
+    },
+    {
+      "name": "rendered published",
+      "passed": true
+    },
+    {
+      "name": "identity switch clears previous draft and reference",
+      "passed": true
+    },
+    {
+      "name": "next resident reads original published text",
+      "passed": true
+    },
+    {
+      "name": "original note has reply action",
+      "passed": true
+    },
+    {
+      "name": "reply control scrolled into view with wheel",
+      "passed": true
+    },
+    {
+      "name": "reply pins original note identity",
+      "passed": true
+    },
+    {
+      "name": "second resident publishes exactly one reply",
+      "passed": true
+    },
+    {
+      "name": "server retains original reference",
+      "passed": true
+    },
+    {
+      "name": "note actions stay inside viewport reply",
+      "passed": true
+    },
+    {
+      "name": "note actions clear of footer reply",
+      "passed": true
+    },
+    {
+      "name": "rendered reply",
+      "passed": true
+    }
+  ],
+  "clicks": [
+    {
+      "actualHover": "@Button@37:<Button#33621542459>",
+      "afterDown": {
+        "held": true,
+        "hover": "@Button@37:<Button#33621542459>",
+        "rect": "[P: (1090.0, 118.0), S: (166.0, 43.0)]",
+        "valid": true
+      },
+      "afterUp": {
+        "held": false,
+        "hover": "@Button@37:<Button#33621542459>",
+        "rect": "[P: (1090.0, 118.0), S: (166.0, 43.0)]",
+        "valid": true
+      },
+      "buttonEvents": [
+        "down",
+        "up"
+      ],
+      "disabledBefore": false,
+      "expected": "@Button@37:<Button#33621542459>",
+      "guiEvents": [
+        {
+          "global": [
+            1173.0,
+            139.5
+          ],
+          "index": 1,
+          "local": [
+            83.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": true
+        },
+        {
+          "global": [
+            1173.0,
+            139.5
+          ],
+          "index": 1,
+          "local": [
+            83.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": false
+        },
+        {
+          "global": [
+            1173.0,
+            139.5
+          ],
+          "index": 1,
+          "local": [
+            83.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": true
+        },
+        {
+          "global": [
+            1173.0,
+            139.5
+          ],
+          "index": 1,
+          "local": [
+            83.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": false
+        },
+        {
+          "global": [
+            1173.0,
+            139.5
+          ],
+          "index": 1,
+          "local": [
+            83.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": true
+        },
+        {
+          "global": [
+            1173.0,
+            139.5
+          ],
+          "index": 1,
+          "local": [
+            83.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": false
+        }
+      ],
+      "point": [
+        1173.0,
+        139.5
+      ],
+      "pressedSignal": true,
+      "text": "旧桥手记"
+    },
+    {
+      "actualHover": "@LineEdit@68:<LineEdit#35114714764>",
+      "afterDown": {
+        "held": true,
+        "hover": "@LineEdit@68:<LineEdit#35114714764>",
+        "rect": "[P: (856.0, 470.0), S: (384.0, 42.0)]",
+        "valid": true
+      },
+      "afterUp": {
+        "held": false,
+        "hover": "@LineEdit@68:<LineEdit#35114714764>",
+        "rect": "[P: (856.0, 470.0), S: (384.0, 42.0)]",
+        "valid": true
+      },
+      "buttonEvents": [],
+      "disabledBefore": false,
+      "expected": "@LineEdit@68:<LineEdit#35114714764>",
+      "guiEvents": [
+        {
+          "global": [
+            1048.0,
+            491.0
+          ],
+          "index": 1,
+          "local": [
+            192.0,
+            21.0
+          ],
+          "mask": 0,
+          "pressed": true
+        },
+        {
+          "global": [
+            1048.0,
+            491.0
+          ],
+          "index": 1,
+          "local": [
+            192.0,
+            21.0
+          ],
+          "mask": 0,
+          "pressed": false
+        },
+        {
+          "global": [
+            1048.0,
+            491.0
+          ],
+          "index": 1,
+          "local": [
+            192.0,
+            21.0
+          ],
+          "mask": 0,
+          "pressed": true
+        },
+        {
+          "global": [
+            1048.0,
+            491.0
+          ],
+          "index": 1,
+          "local": [
+            192.0,
+            21.0
+          ],
+          "mask": 0,
+          "pressed": false
+        }
+      ],
+      "point": [
+        1048.0,
+        491.0
+      ],
+      "pressedSignal": false,
+      "text": "input"
+    },
+    {
+      "actualHover": "@Button@37:<Button#33621542459>",
+      "afterDown": {
+        "held": true,
+        "hover": "@Button@37:<Button#33621542459>",
+        "rect": "[P: (1090.0, 118.0), S: (166.0, 43.0)]",
+        "valid": true
+      },
+      "afterUp": {
+        "held": false,
+        "hover": "@Button@37:<Button#33621542459>",
+        "rect": "[P: (1090.0, 118.0), S: (166.0, 43.0)]",
+        "valid": true
+      },
+      "buttonEvents": [
+        "down",
+        "up"
+      ],
+      "disabledBefore": false,
+      "expected": "@Button@37:<Button#33621542459>",
+      "guiEvents": [
+        {
+          "global": [
+            1173.0,
+            139.5
+          ],
+          "index": 1,
+          "local": [
+            83.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": true
+        },
+        {
+          "global": [
+            1173.0,
+            139.5
+          ],
+          "index": 1,
+          "local": [
+            83.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": false
+        },
+        {
+          "global": [
+            1173.0,
+            139.5
+          ],
+          "index": 1,
+          "local": [
+            83.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": true
+        },
+        {
+          "global": [
+            1173.0,
+            139.5
+          ],
+          "index": 1,
+          "local": [
+            83.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": false
+        }
+      ],
+      "point": [
+        1173.0,
+        139.5
+      ],
+      "pressedSignal": true,
+      "text": "旧桥手记"
+    },
+    {
+      "actualHover": "@LineEdit@68:<LineEdit#35114714764>",
+      "afterDown": {
+        "held": true,
+        "hover": "@LineEdit@68:<LineEdit#35114714764>",
+        "rect": "[P: (856.0, 470.0), S: (384.0, 42.0)]",
+        "valid": true
+      },
+      "afterUp": {
+        "held": false,
+        "hover": "@LineEdit@68:<LineEdit#35114714764>",
+        "rect": "[P: (856.0, 470.0), S: (384.0, 42.0)]",
+        "valid": true
+      },
+      "buttonEvents": [],
+      "disabledBefore": false,
+      "expected": "@LineEdit@68:<LineEdit#35114714764>",
+      "guiEvents": [
+        {
+          "global": [
+            1048.0,
+            491.0
+          ],
+          "index": 1,
+          "local": [
+            192.0,
+            21.0
+          ],
+          "mask": 0,
+          "pressed": true
+        },
+        {
+          "global": [
+            1048.0,
+            491.0
+          ],
+          "index": 1,
+          "local": [
+            192.0,
+            21.0
+          ],
+          "mask": 0,
+          "pressed": false
+        }
+      ],
+      "point": [
+        1048.0,
+        491.0
+      ],
+      "pressedSignal": false,
+      "text": "input"
+    },
+    {
+      "actualHover": "@Button@75:<Button#35450259104>",
+      "afterDown": {
+        "held": true,
+        "hover": "@Button@75:<Button#35450259104>",
+        "rect": "[P: (856.0, 649.0), S: (92.0, 43.0)]",
+        "valid": true
+      },
+      "afterUp": {
+        "held": false,
+        "hover": "@Button@75:<Button#35450259104>",
+        "rect": "[P: (856.0, 649.0), S: (92.0, 43.0)]",
+        "valid": true
+      },
+      "buttonEvents": [
+        "down",
+        "up"
+      ],
+      "disabledBefore": false,
+      "expected": "@Button@75:<Button#35450259104>",
+      "guiEvents": [
+        {
+          "global": [
+            902.0,
+            670.5
+          ],
+          "index": 1,
+          "local": [
+            46.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": true
+        },
+        {
+          "global": [
+            902.0,
+            670.5
+          ],
+          "index": 1,
+          "local": [
+            46.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": false
+        },
+        {
+          "global": [
+            902.0,
+            670.5
+          ],
+          "index": 1,
+          "local": [
+            46.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": true
+        },
+        {
+          "global": [
+            902.0,
+            670.5
+          ],
+          "index": 1,
+          "local": [
+            46.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": false
+        }
+      ],
+      "point": [
+        902.0,
+        670.5
+      ],
+      "pressedSignal": true,
+      "text": "发表手记"
+    },
+    {
+      "actualHover": "@Button@37:<Button#33621542459>",
+      "afterDown": {
+        "held": true,
+        "hover": "@Button@37:<Button#33621542459>",
+        "rect": "[P: (1090.0, 118.0), S: (166.0, 43.0)]",
+        "valid": true
+      },
+      "afterUp": {
+        "held": false,
+        "hover": "@Button@37:<Button#33621542459>",
+        "rect": "[P: (1090.0, 118.0), S: (166.0, 43.0)]",
+        "valid": true
+      },
+      "buttonEvents": [
+        "down",
+        "up"
+      ],
+      "disabledBefore": false,
+      "expected": "@Button@37:<Button#33621542459>",
+      "guiEvents": [
+        {
+          "global": [
+            1173.0,
+            139.5
+          ],
+          "index": 1,
+          "local": [
+            83.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": true
+        },
+        {
+          "global": [
+            1173.0,
+            139.5
+          ],
+          "index": 1,
+          "local": [
+            83.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": false
+        }
+      ],
+      "point": [
+        1173.0,
+        139.5
+      ],
+      "pressedSignal": true,
+      "text": "旧桥手记"
+    },
+    {
+      "actualHover": "@Button@746:<Button#80195094914>",
+      "afterDown": {
+        "held": true,
+        "hover": "@Button@746:<Button#80195094914>",
+        "rect": "[P: (856.0, 388.0), S: (376.0, 43.0)]",
+        "valid": true
+      },
+      "afterUp": {
+        "held": false,
+        "hover": "@Button@746:<Button#80195094914>",
+        "rect": "[P: (856.0, 388.0), S: (376.0, 43.0)]",
+        "valid": true
+      },
+      "buttonEvents": [
+        "down",
+        "up"
+      ],
+      "disabledBefore": false,
+      "expected": "@Button@746:<Button#80195094914>",
+      "guiEvents": [
+        {
+          "global": [
+            1044.0,
+            409.5
+          ],
+          "index": 1,
+          "local": [
+            188.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": true
+        },
+        {
+          "global": [
+            1044.0,
+            409.5
+          ],
+          "index": 1,
+          "local": [
+            188.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": false
+        }
+      ],
+      "point": [
+        1044.0,
+        409.5
+      ],
+      "pressedSignal": true,
+      "text": "接写 #1"
+    },
+    {
+      "actualHover": "@Button@75:<Button#35450259104>",
+      "afterDown": {
+        "held": true,
+        "hover": "@Button@75:<Button#35450259104>",
+        "rect": "[P: (856.0, 649.0), S: (92.0, 43.0)]",
+        "valid": true
+      },
+      "afterUp": {
+        "held": false,
+        "hover": "@Button@75:<Button#35450259104>",
+        "rect": "[P: (856.0, 649.0), S: (92.0, 43.0)]",
+        "valid": true
+      },
+      "buttonEvents": [
+        "down",
+        "up"
+      ],
+      "disabledBefore": false,
+      "expected": "@Button@75:<Button#35450259104>",
+      "guiEvents": [
+        {
+          "global": [
+            902.0,
+            670.5
+          ],
+          "index": 1,
+          "local": [
+            46.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": true
+        },
+        {
+          "global": [
+            902.0,
+            670.5
+          ],
+          "index": 1,
+          "local": [
+            46.0,
+            21.5
+          ],
+          "mask": 0,
+          "pressed": false
+        }
+      ],
+      "point": [
+        902.0,
+        670.5
+      ],
+      "pressedSignal": true,
+      "text": "发表手记"
+    }
+  ],
+  "layouts": [
+    {
+      "actionsClearOfFooter": true,
+      "actionsInsideViewport": true,
+      "footer": [
+        314.0,
+        642.0,
+        652.0,
+        134.0
+      ],
+      "footerVisible": true,
+      "footerZ": 0,
+      "geometricActionOverlap": true,
+      "panel": [
+        840.0,
+        170.0,
+        416.0,
+        532.0
+      ],
+      "panelFooterIntersect": true,
+      "panelZ": 0,
+      "phase": "draft",
+      "pointerTargets": [
+        {
+          "actual": "@Button@75:<Button#35450259104>",
+          "correct": true,
+          "expected": "发表手记",
+          "point": [
+            902.0,
+            670.5
+          ]
+        },
+        {
+          "actual": "@Button@75:<Button#35450259104>",
+          "correct": true,
+          "expected": "发表手记",
+          "point": [
+            902.0,
+            690.0
+          ]
+        },
+        {
+          "actual": "@Button@76:<Button#35500590755>",
+          "correct": true,
+          "expected": "走到旧桥",
+          "point": [
+            998.0,
+            670.5
+          ]
+        },
+        {
+          "actual": "@Button@76:<Button#35500590755>",
+          "correct": true,
+          "expected": "走到旧桥",
+          "point": [
+            998.0,
+            690.0
+          ]
+        }
+      ],
+      "send": [
+        856.0,
+        649.0,
+        92.0,
+        43.0
+      ],
+      "travel": [
+        952.0,
+        649.0,
+        92.0,
+        43.0
+      ]
+    },
+    {
+      "actionsClearOfFooter": true,
+      "actionsInsideViewport": true,
+      "footer": [
+        314.0,
+        642.0,
+        652.0,
+        134.0
+      ],
+      "footerVisible": true,
+      "footerZ": 0,
+      "geometricActionOverlap": true,
+      "panel": [
+        840.0,
+        170.0,
+        416.0,
+        532.0
+      ],
+      "panelFooterIntersect": true,
+      "panelZ": 0,
+      "phase": "published",
+      "pointerTargets": [
+        {
+          "actual": "@Button@75:<Button#35450259104>",
+          "correct": true,
+          "expected": "发表手记",
+          "point": [
+            902.0,
+            670.5
+          ]
+        },
+        {
+          "actual": "@Button@75:<Button#35450259104>",
+          "correct": true,
+          "expected": "发表手记",
+          "point": [
+            902.0,
+            690.0
+          ]
+        },
+        {
+          "actual": "@Button@76:<Button#35500590755>",
+          "correct": true,
+          "expected": "走到旧桥",
+          "point": [
+            998.0,
+            670.5
+          ]
+        },
+        {
+          "actual": "@Button@76:<Button#35500590755>",
+          "correct": true,
+          "expected": "走到旧桥",
+          "point": [
+            998.0,
+            690.0
+          ]
+        }
+      ],
+      "send": [
+        856.0,
+        649.0,
+        92.0,
+        43.0
+      ],
+      "travel": [
+        952.0,
+        649.0,
+        92.0,
+        43.0
+      ]
+    },
+    {
+      "actionsClearOfFooter": true,
+      "actionsInsideViewport": true,
+      "footer": [
+        314.0,
+        642.0,
+        652.0,
+        134.0
+      ],
+      "footerVisible": true,
+      "footerZ": 0,
+      "geometricActionOverlap": true,
+      "panel": [
+        840.0,
+        170.0,
+        416.0,
+        532.0
+      ],
+      "panelFooterIntersect": true,
+      "panelZ": 0,
+      "phase": "reply",
+      "pointerTargets": [
+        {
+          "actual": "@Button@75:<Button#35450259104>",
+          "correct": true,
+          "expected": "发表手记",
+          "point": [
+            902.0,
+            670.5
+          ]
+        },
+        {
+          "actual": "@Button@75:<Button#35450259104>",
+          "correct": true,
+          "expected": "发表手记",
+          "point": [
+            902.0,
+            690.0
+          ]
+        },
+        {
+          "actual": "@Button@76:<Button#35500590755>",
+          "correct": true,
+          "expected": "走到旧桥",
+          "point": [
+            998.0,
+            670.5
+          ]
+        },
+        {
+          "actual": "@Button@76:<Button#35500590755>",
+          "correct": true,
+          "expected": "走到旧桥",
+          "point": [
+            998.0,
+            690.0
+          ]
+        }
+      ],
+      "send": [
+        856.0,
+        649.0,
+        92.0,
+        43.0
+      ],
+      "travel": [
+        952.0,
+        649.0,
+        92.0,
+        43.0
+      ]
+    }
+  ],
+  "passed": true
+}

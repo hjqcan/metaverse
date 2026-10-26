@@ -1,0 +1,1008 @@
+{
+  "passed": true,
+  "binarySha256": "c9d9ccaa5b1e194e17abc41a79c2ce255d436c77ff4116ddaa6b72b6ee7b2c8e",
+  "cases": {
+    "ui": {
+      "passed": true,
+      "driver": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/notes_ui_long_v6.gd",
+      "driverSha256": "3e916b69ae04ce145da972532311b4dc0d3d803b16c33a6d555b7f538b5a3fa9",
+      "driverOrigin": "independent long-text/layout extension",
+      "result": {
+        "checks": [
+          {
+            "name": "native client sees opted-in old bridge",
+            "passed": true
+          },
+          {
+            "name": "mouse opens bridge notes",
+            "passed": true
+          },
+          {
+            "name": "native Unicode draft input",
+            "passed": true
+          },
+          {
+            "name": "closing a draft sends no command",
+            "passed": true
+          },
+          {
+            "name": "closed draft cleared",
+            "passed": true
+          },
+          {
+            "name": "empty inventory can publish nearby",
+            "passed": true
+          },
+          {
+            "name": "note actions stay inside viewport draft",
+            "passed": true
+          },
+          {
+            "name": "note actions clear of footer draft",
+            "passed": true
+          },
+          {
+            "name": "rendered draft",
+            "passed": true
+          },
+          {
+            "name": "actual note settled with receipt event and observation",
+            "passed": true
+          },
+          {
+            "name": "confirmed state distinct from draft",
+            "passed": true
+          },
+          {
+            "name": "note actions stay inside viewport published",
+            "passed": true
+          },
+          {
+            "name": "note actions clear of footer published",
+            "passed": true
+          },
+          {
+            "name": "rendered published",
+            "passed": true
+          },
+          {
+            "name": "identity switch clears previous draft and reference",
+            "passed": true
+          },
+          {
+            "name": "next resident reads original published text",
+            "passed": true
+          },
+          {
+            "name": "original note has reply action",
+            "passed": true
+          },
+          {
+            "name": "reply control scrolled into view with wheel",
+            "passed": true
+          },
+          {
+            "name": "reply pins original note identity",
+            "passed": true
+          },
+          {
+            "name": "second resident publishes exactly one reply",
+            "passed": true
+          },
+          {
+            "name": "server retains original reference",
+            "passed": true
+          },
+          {
+            "name": "note actions stay inside viewport reply",
+            "passed": true
+          },
+          {
+            "name": "note actions clear of footer reply",
+            "passed": true
+          },
+          {
+            "name": "rendered reply",
+            "passed": true
+          }
+        ],
+        "clicks": [
+          {
+            "actualHover": "@Button@37:<Button#33621542459>",
+            "afterDown": {
+              "held": true,
+              "hover": "@Button@37:<Button#33621542459>",
+              "rect": "[P: (1090.0, 118.0), S: (166.0, 43.0)]",
+              "valid": true
+            },
+            "afterUp": {
+              "held": false,
+              "hover": "@Button@37:<Button#33621542459>",
+              "rect": "[P: (1090.0, 118.0), S: (166.0, 43.0)]",
+              "valid": true
+            },
+            "buttonEvents": [
+              "down",
+              "up"
+            ],
+            "disabledBefore": false,
+            "expected": "@Button@37:<Button#33621542459>",
+            "guiEvents": [
+              {
+                "global": [
+                  1173.0,
+                  139.5
+                ],
+                "index": 1,
+                "local": [
+                  83.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": true
+              },
+              {
+                "global": [
+                  1173.0,
+                  139.5
+                ],
+                "index": 1,
+                "local": [
+                  83.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": false
+              },
+              {
+                "global": [
+                  1173.0,
+                  139.5
+                ],
+                "index": 1,
+                "local": [
+                  83.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": true
+              },
+              {
+                "global": [
+                  1173.0,
+                  139.5
+                ],
+                "index": 1,
+                "local": [
+                  83.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": false
+              },
+              {
+                "global": [
+                  1173.0,
+                  139.5
+                ],
+                "index": 1,
+                "local": [
+                  83.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": true
+              },
+              {
+                "global": [
+                  1173.0,
+                  139.5
+                ],
+                "index": 1,
+                "local": [
+                  83.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": false
+              }
+            ],
+            "point": [
+              1173.0,
+              139.5
+            ],
+            "pressedSignal": true,
+            "text": "\u65e7\u6865\u624b\u8bb0"
+          },
+          {
+            "actualHover": "@LineEdit@68:<LineEdit#35114714764>",
+            "afterDown": {
+              "held": true,
+              "hover": "@LineEdit@68:<LineEdit#35114714764>",
+              "rect": "[P: (856.0, 470.0), S: (384.0, 42.0)]",
+              "valid": true
+            },
+            "afterUp": {
+              "held": false,
+              "hover": "@LineEdit@68:<LineEdit#35114714764>",
+              "rect": "[P: (856.0, 470.0), S: (384.0, 42.0)]",
+              "valid": true
+            },
+            "buttonEvents": [],
+            "disabledBefore": false,
+            "expected": "@LineEdit@68:<LineEdit#35114714764>",
+            "guiEvents": [
+              {
+                "global": [
+                  1048.0,
+                  491.0
+                ],
+                "index": 1,
+                "local": [
+                  192.0,
+                  21.0
+                ],
+                "mask": 0,
+                "pressed": true
+              },
+              {
+                "global": [
+                  1048.0,
+                  491.0
+                ],
+                "index": 1,
+                "local": [
+                  192.0,
+                  21.0
+                ],
+                "mask": 0,
+                "pressed": false
+              },
+              {
+                "global": [
+                  1048.0,
+                  491.0
+                ],
+                "index": 1,
+                "local": [
+                  192.0,
+                  21.0
+                ],
+                "mask": 0,
+                "pressed": true
+              },
+              {
+                "global": [
+                  1048.0,
+                  491.0
+                ],
+                "index": 1,
+                "local": [
+                  192.0,
+                  21.0
+                ],
+                "mask": 0,
+                "pressed": false
+              }
+            ],
+            "point": [
+              1048.0,
+              491.0
+            ],
+            "pressedSignal": false,
+            "text": "input"
+          },
+          {
+            "actualHover": "@Button@37:<Button#33621542459>",
+            "afterDown": {
+              "held": true,
+              "hover": "@Button@37:<Button#33621542459>",
+              "rect": "[P: (1090.0, 118.0), S: (166.0, 43.0)]",
+              "valid": true
+            },
+            "afterUp": {
+              "held": false,
+              "hover": "@Button@37:<Button#33621542459>",
+              "rect": "[P: (1090.0, 118.0), S: (166.0, 43.0)]",
+              "valid": true
+            },
+            "buttonEvents": [
+              "down",
+              "up"
+            ],
+            "disabledBefore": false,
+            "expected": "@Button@37:<Button#33621542459>",
+            "guiEvents": [
+              {
+                "global": [
+                  1173.0,
+                  139.5
+                ],
+                "index": 1,
+                "local": [
+                  83.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": true
+              },
+              {
+                "global": [
+                  1173.0,
+                  139.5
+                ],
+                "index": 1,
+                "local": [
+                  83.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": false
+              },
+              {
+                "global": [
+                  1173.0,
+                  139.5
+                ],
+                "index": 1,
+                "local": [
+                  83.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": true
+              },
+              {
+                "global": [
+                  1173.0,
+                  139.5
+                ],
+                "index": 1,
+                "local": [
+                  83.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": false
+              }
+            ],
+            "point": [
+              1173.0,
+              139.5
+            ],
+            "pressedSignal": true,
+            "text": "\u65e7\u6865\u624b\u8bb0"
+          },
+          {
+            "actualHover": "@LineEdit@68:<LineEdit#35114714764>",
+            "afterDown": {
+              "held": true,
+              "hover": "@LineEdit@68:<LineEdit#35114714764>",
+              "rect": "[P: (856.0, 470.0), S: (384.0, 42.0)]",
+              "valid": true
+            },
+            "afterUp": {
+              "held": false,
+              "hover": "@LineEdit@68:<LineEdit#35114714764>",
+              "rect": "[P: (856.0, 470.0), S: (384.0, 42.0)]",
+              "valid": true
+            },
+            "buttonEvents": [],
+            "disabledBefore": false,
+            "expected": "@LineEdit@68:<LineEdit#35114714764>",
+            "guiEvents": [
+              {
+                "global": [
+                  1048.0,
+                  491.0
+                ],
+                "index": 1,
+                "local": [
+                  192.0,
+                  21.0
+                ],
+                "mask": 0,
+                "pressed": true
+              },
+              {
+                "global": [
+                  1048.0,
+                  491.0
+                ],
+                "index": 1,
+                "local": [
+                  192.0,
+                  21.0
+                ],
+                "mask": 0,
+                "pressed": false
+              }
+            ],
+            "point": [
+              1048.0,
+              491.0
+            ],
+            "pressedSignal": false,
+            "text": "input"
+          },
+          {
+            "actualHover": "@Button@75:<Button#35450259104>",
+            "afterDown": {
+              "held": true,
+              "hover": "@Button@75:<Button#35450259104>",
+              "rect": "[P: (856.0, 649.0), S: (92.0, 43.0)]",
+              "valid": true
+            },
+            "afterUp": {
+              "held": false,
+              "hover": "@Button@75:<Button#35450259104>",
+              "rect": "[P: (856.0, 649.0), S: (92.0, 43.0)]",
+              "valid": true
+            },
+            "buttonEvents": [
+              "down",
+              "up"
+            ],
+            "disabledBefore": false,
+            "expected": "@Button@75:<Button#35450259104>",
+            "guiEvents": [
+              {
+                "global": [
+                  902.0,
+                  670.5
+                ],
+                "index": 1,
+                "local": [
+                  46.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": true
+              },
+              {
+                "global": [
+                  902.0,
+                  670.5
+                ],
+                "index": 1,
+                "local": [
+                  46.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": false
+              },
+              {
+                "global": [
+                  902.0,
+                  670.5
+                ],
+                "index": 1,
+                "local": [
+                  46.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": true
+              },
+              {
+                "global": [
+                  902.0,
+                  670.5
+                ],
+                "index": 1,
+                "local": [
+                  46.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": false
+              }
+            ],
+            "point": [
+              902.0,
+              670.5
+            ],
+            "pressedSignal": true,
+            "text": "\u53d1\u8868\u624b\u8bb0"
+          },
+          {
+            "actualHover": "@Button@37:<Button#33621542459>",
+            "afterDown": {
+              "held": true,
+              "hover": "@Button@37:<Button#33621542459>",
+              "rect": "[P: (1090.0, 118.0), S: (166.0, 43.0)]",
+              "valid": true
+            },
+            "afterUp": {
+              "held": false,
+              "hover": "@Button@37:<Button#33621542459>",
+              "rect": "[P: (1090.0, 118.0), S: (166.0, 43.0)]",
+              "valid": true
+            },
+            "buttonEvents": [
+              "down",
+              "up"
+            ],
+            "disabledBefore": false,
+            "expected": "@Button@37:<Button#33621542459>",
+            "guiEvents": [
+              {
+                "global": [
+                  1173.0,
+                  139.5
+                ],
+                "index": 1,
+                "local": [
+                  83.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": true
+              },
+              {
+                "global": [
+                  1173.0,
+                  139.5
+                ],
+                "index": 1,
+                "local": [
+                  83.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": false
+              }
+            ],
+            "point": [
+              1173.0,
+              139.5
+            ],
+            "pressedSignal": true,
+            "text": "\u65e7\u6865\u624b\u8bb0"
+          },
+          {
+            "actualHover": "@Button@746:<Button#80195094914>",
+            "afterDown": {
+              "held": true,
+              "hover": "@Button@746:<Button#80195094914>",
+              "rect": "[P: (856.0, 388.0), S: (376.0, 43.0)]",
+              "valid": true
+            },
+            "afterUp": {
+              "held": false,
+              "hover": "@Button@746:<Button#80195094914>",
+              "rect": "[P: (856.0, 388.0), S: (376.0, 43.0)]",
+              "valid": true
+            },
+            "buttonEvents": [
+              "down",
+              "up"
+            ],
+            "disabledBefore": false,
+            "expected": "@Button@746:<Button#80195094914>",
+            "guiEvents": [
+              {
+                "global": [
+                  1044.0,
+                  409.5
+                ],
+                "index": 1,
+                "local": [
+                  188.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": true
+              },
+              {
+                "global": [
+                  1044.0,
+                  409.5
+                ],
+                "index": 1,
+                "local": [
+                  188.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": false
+              }
+            ],
+            "point": [
+              1044.0,
+              409.5
+            ],
+            "pressedSignal": true,
+            "text": "\u63a5\u5199 #1"
+          },
+          {
+            "actualHover": "@Button@75:<Button#35450259104>",
+            "afterDown": {
+              "held": true,
+              "hover": "@Button@75:<Button#35450259104>",
+              "rect": "[P: (856.0, 649.0), S: (92.0, 43.0)]",
+              "valid": true
+            },
+            "afterUp": {
+              "held": false,
+              "hover": "@Button@75:<Button#35450259104>",
+              "rect": "[P: (856.0, 649.0), S: (92.0, 43.0)]",
+              "valid": true
+            },
+            "buttonEvents": [
+              "down",
+              "up"
+            ],
+            "disabledBefore": false,
+            "expected": "@Button@75:<Button#35450259104>",
+            "guiEvents": [
+              {
+                "global": [
+                  902.0,
+                  670.5
+                ],
+                "index": 1,
+                "local": [
+                  46.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": true
+              },
+              {
+                "global": [
+                  902.0,
+                  670.5
+                ],
+                "index": 1,
+                "local": [
+                  46.0,
+                  21.5
+                ],
+                "mask": 0,
+                "pressed": false
+              }
+            ],
+            "point": [
+              902.0,
+              670.5
+            ],
+            "pressedSignal": true,
+            "text": "\u53d1\u8868\u624b\u8bb0"
+          }
+        ],
+        "layouts": [
+          {
+            "actionsClearOfFooter": true,
+            "actionsInsideViewport": true,
+            "footer": [
+              314.0,
+              642.0,
+              652.0,
+              134.0
+            ],
+            "footerVisible": true,
+            "footerZ": 0,
+            "geometricActionOverlap": true,
+            "panel": [
+              840.0,
+              170.0,
+              416.0,
+              532.0
+            ],
+            "panelFooterIntersect": true,
+            "panelZ": 0,
+            "phase": "draft",
+            "pointerTargets": [
+              {
+                "actual": "@Button@75:<Button#35450259104>",
+                "correct": true,
+                "expected": "\u53d1\u8868\u624b\u8bb0",
+                "point": [
+                  902.0,
+                  670.5
+                ]
+              },
+              {
+                "actual": "@Button@75:<Button#35450259104>",
+                "correct": true,
+                "expected": "\u53d1\u8868\u624b\u8bb0",
+                "point": [
+                  902.0,
+                  690.0
+                ]
+              },
+              {
+                "actual": "@Button@76:<Button#35500590755>",
+                "correct": true,
+                "expected": "\u8d70\u5230\u65e7\u6865",
+                "point": [
+                  998.0,
+                  670.5
+                ]
+              },
+              {
+                "actual": "@Button@76:<Button#35500590755>",
+                "correct": true,
+                "expected": "\u8d70\u5230\u65e7\u6865",
+                "point": [
+                  998.0,
+                  690.0
+                ]
+              }
+            ],
+            "send": [
+              856.0,
+              649.0,
+              92.0,
+              43.0
+            ],
+            "travel": [
+              952.0,
+              649.0,
+              92.0,
+              43.0
+            ]
+          },
+          {
+            "actionsClearOfFooter": true,
+            "actionsInsideViewport": true,
+            "footer": [
+              314.0,
+              642.0,
+              652.0,
+              134.0
+            ],
+            "footerVisible": true,
+            "footerZ": 0,
+            "geometricActionOverlap": true,
+            "panel": [
+              840.0,
+              170.0,
+              416.0,
+              532.0
+            ],
+            "panelFooterIntersect": true,
+            "panelZ": 0,
+            "phase": "published",
+            "pointerTargets": [
+              {
+                "actual": "@Button@75:<Button#35450259104>",
+                "correct": true,
+                "expected": "\u53d1\u8868\u624b\u8bb0",
+                "point": [
+                  902.0,
+                  670.5
+                ]
+              },
+              {
+                "actual": "@Button@75:<Button#35450259104>",
+                "correct": true,
+                "expected": "\u53d1\u8868\u624b\u8bb0",
+                "point": [
+                  902.0,
+                  690.0
+                ]
+              },
+              {
+                "actual": "@Button@76:<Button#35500590755>",
+                "correct": true,
+                "expected": "\u8d70\u5230\u65e7\u6865",
+                "point": [
+                  998.0,
+                  670.5
+                ]
+              },
+              {
+                "actual": "@Button@76:<Button#35500590755>",
+                "correct": true,
+                "expected": "\u8d70\u5230\u65e7\u6865",
+                "point": [
+                  998.0,
+                  690.0
+                ]
+              }
+            ],
+            "send": [
+              856.0,
+              649.0,
+              92.0,
+              43.0
+            ],
+            "travel": [
+              952.0,
+              649.0,
+              92.0,
+              43.0
+            ]
+          },
+          {
+            "actionsClearOfFooter": true,
+            "actionsInsideViewport": true,
+            "footer": [
+              314.0,
+              642.0,
+              652.0,
+              134.0
+            ],
+            "footerVisible": true,
+            "footerZ": 0,
+            "geometricActionOverlap": true,
+            "panel": [
+              840.0,
+              170.0,
+              416.0,
+              532.0
+            ],
+            "panelFooterIntersect": true,
+            "panelZ": 0,
+            "phase": "reply",
+            "pointerTargets": [
+              {
+                "actual": "@Button@75:<Button#35450259104>",
+                "correct": true,
+                "expected": "\u53d1\u8868\u624b\u8bb0",
+                "point": [
+                  902.0,
+                  670.5
+                ]
+              },
+              {
+                "actual": "@Button@75:<Button#35450259104>",
+                "correct": true,
+                "expected": "\u53d1\u8868\u624b\u8bb0",
+                "point": [
+                  902.0,
+                  690.0
+                ]
+              },
+              {
+                "actual": "@Button@76:<Button#35500590755>",
+                "correct": true,
+                "expected": "\u8d70\u5230\u65e7\u6865",
+                "point": [
+                  998.0,
+                  670.5
+                ]
+              },
+              {
+                "actual": "@Button@76:<Button#35500590755>",
+                "correct": true,
+                "expected": "\u8d70\u5230\u65e7\u6865",
+                "point": [
+                  998.0,
+                  690.0
+                ]
+              }
+            ],
+            "send": [
+              856.0,
+              649.0,
+              92.0,
+              43.0
+            ],
+            "travel": [
+              952.0,
+              649.0,
+              92.0,
+              43.0
+            ]
+          }
+        ],
+        "passed": true
+      },
+      "actualNotes": [
+        {
+          "noteId": "n4a082a6c00b744e79da7a339ad06e499",
+          "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "godot_a41c2645ae45b13b4a6ccdbe100a858c",
+          "text": "\u4e1c\u5cb8\u7684\u6811\u5df2\u7ecf\u91c7\u5c3d\uff0c\u65e7\u6865\u4ecd\u7136\u8ba9\u4e24\u5cb8\u76f8\u901a\u3002\u6211\u7ad9\u5728\u6865\u4e2d\u592e\u8bfb\u5230\u524d\u4eba\u7684\u8bdd\uff0c\u628a\u4eca\u5929\u770b\u89c1\u7684\u6c34\u7eb9\u5199\u5728\u8fd9\u91cc\u3002\u4e1c\u5cb8\u7684\u6811\u5df2\u7ecf\u91c7\u5c3d\uff0c\u65e7\u6865\u4ecd\u7136\u8ba9\u4e24\u5cb8\u76f8\u901a\u3002\u6211\u7ad9\u5728\u6865\u4e2d\u592e\u8bfb\u5230\u524d\u4eba\u7684\u8bdd\uff0c\u628a\u4eca\u5929\u770b\u89c1\u7684\u6c34\u7eb9\u5199\u5728\u8fd9\u91cc\u3002\u4e1c\u5cb8\u7684\u6811\u5df2\u7ecf\u91c7\u5c3d\uff0c\u65e7\u6865\u4ecd\u7136\u8ba9\u4e24\u5cb8\u76f8\u901a\u3002\u6211\u7ad9\u5728\u6865\u4e2d\u592e\u8bfb\u5230\u524d\u4eba\u7684\u8bdd\uff0c\u628a\u4eca\u5929\u770b\u89c1\u7684\u6c34\u7eb9\u5199\u5728\u8fd9\u91cc\u3002\u4e1c\u5cb8\u7684\u6811\u5df2\u7ecf\u91c7\u5c3d\uff0c\u65e7\u6865\u4ecd\u7136\u8ba9\u4e24\u5cb8\u76f8\u901a\u3002\u6211\u7ad9\u5728\u6865\u4e2d\u592e",
+          "replyToNoteId": null,
+          "stateVersion": 516,
+          "eventCursor": 517,
+          "sharedAtUtc": "2026-10-26T05:20:16.9746750+00:00",
+          "position": [
+            18,
+            12
+          ],
+          "inventoryWood": 0,
+          "capabilityVersion": 1
+        },
+        {
+          "noteId": "nf35027e181da4f468da9e9d1f38960f6",
+          "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+          "authorActorId": "a3",
+          "operatorId": "declared-third",
+          "commandId": "godot_817c605cd36e7272b757889b26c2ccd4",
+          "text": "\u6211\u8bfb\u5230\u4e86\u4f60\u7684\u8bdd\uff0c\u4e5f\u4ece\u8fd9\u5ea7\u6865\u7ecf\u8fc7\u3002",
+          "replyToNoteId": "n4a082a6c00b744e79da7a339ad06e499",
+          "stateVersion": 517,
+          "eventCursor": 518,
+          "sharedAtUtc": "2026-10-26T05:20:24.6562221+00:00",
+          "position": [
+            18,
+            12
+          ],
+          "inventoryWood": 0,
+          "capabilityVersion": 1
+        }
+      ],
+      "audit": {
+        "issued": 24,
+        "generated": 12,
+        "wild": 0,
+        "source": 0,
+        "inventory": 6,
+        "embodied": 18,
+        "activeReserved": 0,
+        "serviceMs": 101449,
+        "processedPeriod": 8,
+        "production": [
+          [
+            1,
+            31047,
+            3,
+            258
+          ],
+          [
+            2,
+            41047,
+            3,
+            287
+          ],
+          [
+            3,
+            51047,
+            3,
+            337
+          ],
+          [
+            4,
+            61047,
+            3,
+            364
+          ]
+        ],
+        "stateVersion": 517,
+        "realCommandsThisBranch": 103,
+        "processStopped": true
+      },
+      "preserved": {
+        "originalReceiptsPreserved": 404,
+        "allOriginalEntitiesInventoriesLedgerAndProductionUnchanged": true
+      }
+    }
+  },
+  "worlds": [
+    {
+      "name": "actual-ui",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    }
+  ],
+  "scope": "independent frozen Godot entity notes recovery",
+  "contractSha256": "0049ac5c2f1c3a369d0450efd497a1e383433115949bf6db093cadf9b3c550e0",
+  "externalModelCalls": 0,
+  "directSqlStateEdits": false,
+  "controlledClock": false,
+  "earnedExhaustedSeed": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/notes-exhausted-baseline-20261026T045741197461Z",
+  "clonedStoppedBranches": true,
+  "sourceHashes": {
+    "clients/godot/command_evidence.gd": "f7d3c1e1af823d264259a56bfa13902cda5ff65b7e0811a18d5d4857176a7d68",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/entity_notes_panel.gd": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803",
+    "clients/godot/main.gd": "4086812666a4b56f395c5e571d8fa607ee5fce33c1216ca4df7dfeebf23b93b9",
+    "clients/godot/material_panel.gd": "39624af0442670059f6408b73b46cf21eaefb2aa0b75b19828194bba9a48cc3c",
+    "clients/godot/pending_store.gd": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/world_client.gd": "9d30e2c8bcfc0287b68605ecdab6f046f575410a069b2ddf3a6bc729e0aca193",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "ebf2271dd1541216ec7f0785600032e18607e1b027a95a5100f41f37395535d2",
+    "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424",
+    "clients/godot/main.tscn": "58496e2c5357a2774f2a70f19d0dcb9a015167d8bf9849dc68f4f20a7841e6b1",
+    "clients/godot/river.gdshader": "b5de02167c429ce338fff61bb0ad180aa4d2d1b7c5c1e96f3cbce3f4ba88631b",
+    "tests/godot/entity_notes.gd": "2de8b011e0481df9bd60cdf705f673055b895da5dda89f68583797bcc4cff22e"
+  }
+}

@@ -64,6 +64,8 @@ func _valid_record(record: Variant) -> bool:
 			return false
 		if command.action.get("type") in ["reserve_material", "cancel_reservation", "harvest_material"] and before.get("materialActorId") != record.actorId:
 			return false
+		if command.action.get("type") == "append_entity_note" and before.get("noteActorId") != record.actorId:
+			return false
 	elif command.has("preconditionMode"):
 		return false
 	return command.get("commandId") == record.commandId and command.get("schemaVersion") == 1 \
@@ -71,7 +73,7 @@ func _valid_record(record: Variant) -> bool:
 		and (command.rulesVersion != "r10" or record_version == 4) \
 		and command.get("action") is Dictionary and (command.action.get("type") in ["walk", "gather", "build"] \
 			or (command.action.get("type") == "transfer" and command.rulesVersion in ["r9", "r10"] and record_version in [3, 4]) \
-			or (command.action.get("type") in ["reserve_material", "cancel_reservation", "harvest_material"] and command.rulesVersion == "r10" and record_version == 4))
+			or (command.action.get("type") in ["reserve_material", "cancel_reservation", "harvest_material", "append_entity_note"] and command.rulesVersion == "r10" and record_version == 4))
 
 func can_act() -> bool:
 	return healthy and not busy and storage_ok and not legacy_unbound and pending.is_empty()
@@ -235,6 +237,10 @@ func refresh() -> void:
 func send_action(action: Dictionary) -> void:
 	if not can_act():
 		return
+	if action.get("type") == "append_entity_note" and (not Evidence.Notes.supported(observation) or not Evidence.supported(observation)):
+		message = "这个世界尚未提供旧桥共同手记。"
+		changed.emit()
+		return
 	if action.get("type") == "transfer" and (not Evidence.transfer_supported(observation) or not Evidence.supported(observation)):
 		message = "这个世界尚未提供木材赠送。"
 		changed.emit()
@@ -310,13 +316,21 @@ func _settle(reply: Dictionary) -> bool:
 		var before: Dictionary = JSON.parse_string(pending.before)
 		if not Evidence.result(data, command, before):
 			return false
-		if command.action.type == "reserve_material":
+		if command.action.type in ["reserve_material", "append_entity_note"]:
 			if not Evidence.whole(data.get("eventCursor")) or data.eventCursor < 1:
 				return false
 			var events_reply: Dictionary = await _request(API + "/events?after=" + str(int(data.eventCursor) - 1))
 			if events_reply.code != 200 or not _reply_binding(events_reply) or not events_reply.data.get("events") is Array \
-				or events_reply.data.events.is_empty() or not Evidence.reserved_event(events_reply.data.events[0], data, command):
+				or events_reply.data.events.is_empty():
 				return false
+			if command.action.type == "reserve_material" and not Evidence.reserved_event(events_reply.data.events[0], data, command):
+				return false
+			if command.action.type == "append_entity_note" and not Evidence.Notes.event(events_reply.data.events[0], data):
+				return false
+		if command.action.type == "append_entity_note":
+			if not await _observe() or not Evidence.Notes.confirmed(observation, data, before):
+				return false
+			observed_build = true
 		if command.action.type == "build":
 			if not await _observe() or not Evidence.built_entity(observation, data, command, before, pending.actorId):
 				return false
@@ -348,6 +362,18 @@ func _lookup() -> void:
 	var reply = await _request(API + "/commands/" + pending.commandId.uri_encode())
 	if not await _settle(reply):
 		retry_allowed = _reply_binding(reply) and reply.code == 404 and reply.data.get("error", {}).get("code") == "COMMAND_NOT_FOUND" and reply.data.get("identity", {}).get("actorId") == pending.actorId
+		var command = JSON.parse_string(pending.body)
+		if command.action.get("type") == "append_entity_note":
+			# An old r10 service parses POST before receipt lookup. Never let its
+			# unknown-action response replace the result of this original request.
+			var capable := false
+			if await _observe():
+				capable = Evidence.Notes.supported(observation)
+			retry_allowed = retry_allowed and capable
+			if not capable:
+				healthy = false
+				message = "原手记请求已保留。当前服务缺少手记能力，请恢复支持该能力的服务后查询。"
+				return
 		healthy = false
 		message = "尚未确认原动作。新动作暂停；可查询或原样重试。"
 

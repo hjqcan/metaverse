@@ -1,0 +1,76 @@
+{
+  "task": "ITER0023 Python entity notes",
+  "validationLevel": "builder-self-check",
+  "scope": [
+    "scripts/resident_entity_notes.py",
+    "scripts/resident_mission.py",
+    "scripts/command_preconditions.py",
+    "scripts/run_resident.py",
+    "tests/entity_notes_mission_api.py",
+    "tests/fixtures/entity-note.json"
+  ],
+  "sourceHashes": {
+    "scripts/resident_entity_notes.py": "b15f9efaf3ad1dc6980e5d084689005efad36d2b37017f7b53dff048ccad36dc",
+    "scripts/resident_mission.py": "0b4e4fc3aa81649fe4bfa48f144446b2f8673e5da9e258fd5f4f4440b82789c8",
+    "scripts/command_preconditions.py": "fe4bb88eb0222b68ea071e34c1316a13c69969d02e94af9a6aacb7aab969d1c8",
+    "scripts/run_resident.py": "5b8f536d9e354b043fa7af35fec96dd2a781d1896092bce03277bbce90c5b521",
+    "tests/entity_notes_mission_api.py": "b7bfe1ce4fd5df3e77aca9d8c83e82647f8de94d06b596533d5e1014e5c6b4ad",
+    "tests/fixtures/entity-note.json": "89631943906fc1b7ef445399410a94ae6e94a9e13ee89402d6989a2a92f7cf84"
+  },
+  "fullSuite": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0023/python/20261026T051629Z-0f5a12/results.json",
+  "fullTestsPassed": 13,
+  "fullTestsSkipped": 0,
+  "defaultEntrypoint": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0023/python/20261026T051638Z-5d94bb/results.json",
+  "defaultPassed": 1,
+  "defaultSkipped": [
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_07_old_service_with_and_without_original_receipt_never_blindly_posts",
+      "reason": "ENTITY_NOTES_OLD_DLL is required for the actual old-service probe"
+    }
+  ],
+  "defaultGeneratedBaseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0023/api/20261026T051638Z-3d5745/test_05_budget_capacity_and_exhausted_budget_does_not_reset-world",
+  "actualCliReports": [
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0023/python/20261026T051629Z-0f5a12/test_01_actual_cli_first_note_and_original_reference_reply-world/a2-report.json",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0023/python/20261026T051629Z-0f5a12/test_01_actual_cli_first_note_and_original_reference_reply-world/a3-report.json"
+  ],
+  "query4ConfirmedReport": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0023/python/20261026T051629Z-0f5a12/query4-confirmed-report.json",
+  "actualModelCalls": 0,
+  "cliBudgets": [
+    {
+      "commands": 33,
+      "wood": 0,
+      "modelCalls": 1,
+      "seconds": 17.185866355895996,
+      "queries": 37
+    },
+    {
+      "commands": 33,
+      "wood": 0,
+      "modelCalls": 1,
+      "seconds": 7.442116022109985,
+      "queries": 37
+    }
+  ],
+  "baseline": ".local/qa/20261026-test-agent/notes-exhausted-baseline-20261026T045741197461Z",
+  "baselineSha256": "543f34f773904e5ada52951ff890d508ac3203a45b330ad256d10b505ff26e5f",
+  "newDllSha256": "c9d9ccaa5b1e194e17abc41a79c2ce255d436c77ff4116ddaa6b72b6ee7b2c8e",
+  "oldDllSha256": "4a66fd0a2382bb71597d3ae25f2b169bc70af8a469b33d6cb149b748a6b96b37",
+  "sourceStable": true,
+  "servicesStopped": true,
+  "invariantsChecked": [
+    "original instance and target",
+    "all original receipts byte-identical",
+    "original entities wood trees ledger source unchanged",
+    "three matching original receipt/note/event proofs",
+    "same pending body and commandId across failures",
+    "durable first failed observation budget",
+    "query=4 projection and settlement atomic",
+    "corrupt local state refused before I/O"
+  ],
+  "limitations": [
+    "No independent QA claim",
+    "No human experience or model-authored text claim",
+    "Godot browser and core acceptance owned by root agent"
+  ],
+  "ownership": "six files ready for root integration; author stops edits at this hash set"
+}

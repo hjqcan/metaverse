@@ -1,0 +1,105 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T050630653726Z/results.json",
+      "sha256": "7246cfcd05fe1dbe63ed97b089a49ab71d93c62484af47bacad0ed7345984701",
+      "case": "recovery",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T050630653726Z/results.json",
+      "sha256": "7246cfcd05fe1dbe63ed97b089a49ab71d93c62484af47bacad0ed7345984701",
+      "case": "preflight",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T050630653726Z/results.json",
+      "sha256": "7246cfcd05fe1dbe63ed97b089a49ab71d93c62484af47bacad0ed7345984701",
+      "case": "evidence",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T050630653726Z/results.json",
+      "sha256": "7246cfcd05fe1dbe63ed97b089a49ab71d93c62484af47bacad0ed7345984701",
+      "case": "replacement",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T050630653726Z/results.json",
+      "sha256": "7246cfcd05fe1dbe63ed97b089a49ab71d93c62484af47bacad0ed7345984701",
+      "case": "downgrade",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T050630653726Z/results.json",
+      "sha256": "7246cfcd05fe1dbe63ed97b089a49ab71d93c62484af47bacad0ed7345984701",
+      "case": "old_client",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T050741531936Z/results.json",
+      "sha256": "28178ff3f3e8a3985257bb2be782007563e0d90db6a3f1afb7fc025a64e7d26c",
+      "case": "old_records",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T051141977150Z/results.json",
+      "sha256": "375cb2ed442a8cd193dadedf928c94ec1ce3c54597545917abfb7f4ae59144fd",
+      "case": "bridge_evidence",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T051141977150Z/results.json",
+      "sha256": "375cb2ed442a8cd193dadedf928c94ec1ce3c54597545917abfb7f4ae59144fd",
+      "case": "recovery",
+      "wholeRunPassed": true,
+      "passed": true
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T051946842787Z/results.json",
+      "sha256": "860d8156112c2551be931f78e45a334db7fdd6fc821f395b0b3c318e5bc3b8a5",
+      "case": "ui",
+      "wholeRunPassed": true,
+      "passed": true
+    }
+  ],
+  "finalClientManifest": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-v4-frozen.json",
+  "boundaries": [
+    "v1 recovery plus v3 original-bridge evidence checks; v4 changes only main scene panel child order.",
+    "v4 native UI driver ran 24 checks, first publication 160 scalars, second resident replies to the original immutable note, zero wood, 404 original receipts and all prior entities/inventories/production preserved.",
+    "16 corrupted evidence cases and 18 damaged local records are QA fault injections, not additional gameplay."
+  ],
+  "closedProductFindings": [
+    {
+      "finding": "v1 full text status expands action row beyond viewport",
+      "fixedIn": "v3 fixed-height status scroll",
+      "verified": "v4 long text UI"
+    },
+    {
+      "finding": "v3 z_index draws on top but footer still captures pointer",
+      "fixedIn": "v4 notes panel moved after footer in GUI tree",
+      "verified": "v4 12 actual native pointer targets at centers and bottom edges"
+    }
+  ],
+  "qaCorrections": [
+    {
+      "finding": "Long reply click failure in UI driver v2-v5",
+      "cause": "Synthetic wheel press omitted matching release, leaving GUI mouse focus captured",
+      "correction": "v6 sends actual wheel press/release before mouse press/release; gui_input and button down/up/pressed observed",
+      "evidence": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/notes-godot-20261026T051946842787Z/ui.json",
+      "productDefect": false
+    }
+  ],
+  "externalModelCalls": 0,
+  "productFilesModifiedByTester": false,
+  "createdAtUtc": "2026-10-26T05:20:59.385674+00:00"
+}

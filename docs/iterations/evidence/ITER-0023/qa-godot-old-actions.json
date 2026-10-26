@@ -1,0 +1,4403 @@
+{
+  "passed": true,
+  "binarySha256": "c9d9ccaa5b1e194e17abc41a79c2ce255d436c77ff4116ddaa6b72b6ee7b2c8e",
+  "cases": {
+    "old_records": {
+      "passed": true,
+      "actualOldV4Records": [
+        {
+          "originalClientBuildPending": {
+            "canAct": false,
+            "foreignPending": 0,
+            "healthy": false,
+            "lastReceipt": {},
+            "message": "\u52a8\u4f5c\u7ed3\u679c\u5f85\u786e\u8ba4\u3002\u539f\u8bf7\u6c42\u5df2\u4fdd\u7559\uff1b\u53ef\u67e5\u8be2\u6216\u539f\u6837\u91cd\u8bd5\u3002",
+            "observation": {
+              "commandBinding": {
+                "header": "World-Instance-Id",
+                "required": true,
+                "version": 1
+              },
+              "commandConcurrency": {
+                "supportedModes": [
+                  "actor-state-v1"
+                ],
+                "version": 1
+              },
+              "commandId": null,
+              "depot": {
+                "available": false,
+                "wood": 0
+              },
+              "entities": [
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "e76a6cc3bf333423e874d310f1f0371a0",
+                  "ownerActorId": "a3",
+                  "position": [
+                    27,
+                    17
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "e9df7ee47564546f098a988085e93ce3d",
+                  "ownerActorId": "a3",
+                  "position": [
+                    30,
+                    17
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "eb40dd030a24941f28c3fb5313fe44784",
+                  "ownerActorId": "a3",
+                  "position": [
+                    27,
+                    14
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "eca67171501f8438e9fe790bfdbef9789",
+                  "ownerActorId": "a3",
+                  "position": [
+                    30,
+                    14
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "bridge",
+                  "definitionVersion": 1,
+                  "embodiedWood": 6,
+                  "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                  "ownerActorId": "a1",
+                  "position": [
+                    18,
+                    12
+                  ],
+                  "rulesVersion": "r10"
+                }
+              ],
+              "entityNotes": {
+                "capability": "entity-notes-v1",
+                "maxPerOperator": 2,
+                "maxTextScalars": 160,
+                "maxTotal": 6,
+                "notes": [
+                  {
+                    "authorActorId": "a1",
+                    "capabilityVersion": 1,
+                    "commandId": "41c29dc4234d46a2a3d9793a9b23a9bb",
+                    "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                    "eventCursor": 527,
+                    "inventoryWood": 6,
+                    "noteId": "n6977d5211fae49929441974b6c5f2757",
+                    "operatorId": "local-operator",
+                    "position": [
+                      18,
+                      12
+                    ],
+                    "replyToNoteId": null,
+                    "sharedAtUtc": "2026-10-26T05:07:54.3965740+00:00",
+                    "stateVersion": 526,
+                    "text": "\u539f\u6865\u4ecd\u5728\uff0c\u8fd9\u662f\u53ef\u4ee5\u63a5\u5199\u7684\u539f\u6587\u3002"
+                  }
+                ],
+                "reach": 1.6,
+                "selfCount": 1,
+                "target": {
+                  "definitionId": "bridge",
+                  "definitionVersion": 1,
+                  "embodiedWood": 6,
+                  "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                  "ownerActorId": "a1",
+                  "position": [
+                    18,
+                    12
+                  ],
+                  "rulesVersion": "r10"
+                },
+                "totalCount": 1,
+                "version": 1
+              },
+              "error": null,
+              "eventCursor": 545,
+              "gathering": {
+                "quantityPerAction": 1,
+                "version": 1
+              },
+              "identity": {
+                "actorId": "a1",
+                "operatorId": "local-operator",
+                "sessionId": "s48ab04efc6f7451aa43d6a8caf8e0108"
+              },
+              "materialAccess": {
+                "active": true,
+                "buildExclusion": [
+                  27,
+                  9,
+                  29,
+                  11
+                ],
+                "capacity": 6,
+                "controlBasis": "declared-local-fixture",
+                "controlRoster": [
+                  {
+                    "actorId": "a1",
+                    "operatorId": "local-operator"
+                  },
+                  {
+                    "actorId": "a1_alias",
+                    "operatorId": "local-operator"
+                  },
+                  {
+                    "actorId": "a2",
+                    "operatorId": "declared-late"
+                  },
+                  {
+                    "actorId": "a3",
+                    "operatorId": "declared-third"
+                  }
+                ],
+                "currentReservation": null,
+                "enabledAtServiceMs": 21047,
+                "freeWood": 0,
+                "generatedWood": 12,
+                "inputBudget": 12,
+                "leaseMs": 60000,
+                "nextProductionAtMs": 81047,
+                "position": [
+                  28,
+                  10
+                ],
+                "productionIntervalMs": 10000,
+                "queue": [],
+                "recentReservations": [],
+                "reservationQuantity": 3,
+                "serviceMs": 76610,
+                "sourceId": "wood-source-east",
+                "stockWood": 0,
+                "version": 1
+              },
+              "materialTransfer": {
+                "maxQuantity": 12,
+                "reach": 1.6,
+                "recipientConfirmation": false,
+                "resource": "wood",
+                "version": 1
+              },
+              "movement": {
+                "buildReach": 3.2,
+                "gatherReach": 1.6,
+                "kind": "continuous",
+                "maxStepDistance": 0.6,
+                "radius": 0.28,
+                "speed": 3,
+                "version": 1
+              },
+              "recentTransfers": {
+                "items": [],
+                "limit": 20,
+                "truncated": false
+              },
+              "recipes": [
+                {
+                  "definitionId": "platform",
+                  "id": "platform.v1",
+                  "woodCost": 3
+                },
+                {
+                  "definitionId": "bridge",
+                  "id": "bridge.v1",
+                  "woodCost": 6
+                }
+              ],
+              "residents": [
+                {
+                  "actorId": "a1",
+                  "position": [
+                    13,
+                    12
+                  ]
+                },
+                {
+                  "actorId": "a1_alias",
+                  "position": [
+                    5,
+                    7
+                  ]
+                },
+                {
+                  "actorId": "a2",
+                  "position": [
+                    18,
+                    12
+                  ]
+                },
+                {
+                  "actorId": "a3",
+                  "position": [
+                    18,
+                    12
+                  ]
+                }
+              ],
+              "resourceAudit": {
+                "conserved": true,
+                "depotWood": 0,
+                "embodiedWood": 18,
+                "generatedWood": 12,
+                "initialWood": 12,
+                "inventoryWood": 6,
+                "issuedWood": 24,
+                "sourceWood": 0,
+                "wildWood": 0
+              },
+              "resourceNodes": [
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-east-north",
+                  "position": [
+                    25.4,
+                    5.8
+                  ],
+                  "remainingWood": 0
+                },
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-east-south",
+                  "position": [
+                    25.7,
+                    18.2
+                  ],
+                  "remainingWood": 0
+                },
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-west-north",
+                  "position": [
+                    6.2,
+                    7.8
+                  ],
+                  "remainingWood": 0
+                },
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-west-south",
+                  "position": [
+                    9.2,
+                    16.3
+                  ],
+                  "remainingWood": 0
+                }
+              ],
+              "rulesVersion": "r10",
+              "schemaVersion": 1,
+              "self": {
+                "actorId": "a1",
+                "inventory": {
+                  "wood": 6
+                },
+                "position": [
+                  13,
+                  12
+                ]
+              },
+              "stateVersion": 544,
+              "terrain": {
+                "obstacles": [
+                  {
+                    "id": "rock-west",
+                    "kind": "rock",
+                    "position": [
+                      10.5,
+                      8.5
+                    ],
+                    "radius": 1.05
+                  },
+                  {
+                    "id": "rock-south",
+                    "kind": "rock",
+                    "position": [
+                      5.6,
+                      19.7
+                    ],
+                    "radius": 0.8
+                  },
+                  {
+                    "id": "rock-east",
+                    "kind": "rock",
+                    "position": [
+                      23,
+                      12.5
+                    ],
+                    "radius": 1.2
+                  },
+                  {
+                    "id": "rock-north",
+                    "kind": "rock",
+                    "position": [
+                      21.8,
+                      3.2
+                    ],
+                    "radius": 0.75
+                  }
+                ],
+                "river": {
+                  "centerline": [
+                    [
+                      16,
+                      0
+                    ],
+                    [
+                      15.9064453125,
+                      0.5
+                    ],
+                    [
+                      15.7640625,
+                      1
+                    ],
+                    [
+                      15.5927734375,
+                      1.5
+                    ],
+                    [
+                      15.4125,
+                      2
+                    ],
+                    [
+                      15.2431640625,
+                      2.5
+                    ],
+                    [
+                      15.1046875,
+                      3
+                    ],
+                    [
+                      15.0169921875,
+                      3.5
+                    ],
+                    [
+                      15,
+                      4
+                    ],
+                    [
+                      15.0587890625,
+                      4.5
+                    ],
+                    [
+                      15.1765625,
+                      5
+                    ],
+                    [
+                      15.3404296875,
+                      5.5
+                    ],
+                    [
+                      15.5375,
+                      6
+                    ],
+                    [
+                      15.7548828125,
+                      6.5
+                    ],
+                    [
+                      15.9796875,
+                      7
+                    ],
+                    [
+                      16.1990234375,
+                      7.5
+                    ],
+                    [
+                      16.4,
+                      8
+                    ],
+                    [
+                      16.608203125,
+                      8.5
+                    ],
+                    [
+                      16.846875,
+                      9
+                    ],
+                    [
+                      17.099609375,
+                      9.5
+                    ],
+                    [
+                      17.35,
+                      10
+                    ],
+                    [
+                      17.581640625,
+                      10.5
+                    ],
+                    [
+                      17.778125,
+                      11
+                    ],
+                    [
+                      17.923046875,
+                      11.5
+                    ],
+                    [
+                      18,
+                      12
+                    ],
+                    [
+                      18.00419921875,
+                      12.5
+                    ],
+                    [
+                      17.94921875,
+                      13
+                    ],
+                    [
+                      17.84619140625,
+                      13.5
+                    ],
+                    [
+                      17.70625,
+                      14
+                    ],
+                    [
+                      17.54052734375,
+                      14.5
+                    ],
+                    [
+                      17.36015625,
+                      15
+                    ],
+                    [
+                      17.17626953125,
+                      15.5
+                    ],
+                    [
+                      17,
+                      16
+                    ],
+                    [
+                      16.81142578125,
+                      16.5
+                    ],
+                    [
+                      16.59140625,
+                      17
+                    ],
+                    [
+                      16.35224609375,
+                      17.5
+                    ],
+                    [
+                      16.10625,
+                      18
+                    ],
+                    [
+                      15.86572265625,
+                      18.5
+                    ],
+                    [
+                      15.64296875,
+                      19
+                    ],
+                    [
+                      15.45029296875,
+                      19.5
+                    ],
+                    [
+                      15.3,
+                      20
+                    ],
+                    [
+                      15.19345703125,
+                      20.5
+                    ],
+                    [
+                      15.11953125,
+                      21
+                    ],
+                    [
+                      15.07177734375,
+                      21.5
+                    ],
+                    [
+                      15.04375,
+                      22
+                    ],
+                    [
+                      15.02900390625,
+                      22.5
+                    ],
+                    [
+                      15.02109375,
+                      23
+                    ],
+                    [
+                      15.01357421875,
+                      23.5
+                    ],
+                    [
+                      15.0,
+                      24
+                    ]
+                  ],
+                  "halfWidth": 1.4,
+                  "polygon": [
+                    [
+                      14.6,
+                      0
+                    ],
+                    [
+                      14.5064453125,
+                      0.5
+                    ],
+                    [
+                      14.3640625,
+                      1
+                    ],
+                    [
+                      14.1927734375,
+                      1.5
+                    ],
+                    [
+                      14.0125,
+                      2
+                    ],
+                    [
+                      13.8431640625,
+                      2.5
+                    ],
+                    [
+                      13.7046875,
+                      3
+                    ],
+                    [
+                      13.6169921875,
+                      3.5
+                    ],
+                    [
+                      13.6,
+                      4
+                    ],
+                    [
+                      13.6587890625,
+                      4.5
+                    ],
+                    [
+                      13.7765625,
+                      5
+                    ],
+                    [
+                      13.9404296875,
+                      5.5
+                    ],
+                    [
+                      14.1375,
+                      6
+                    ],
+                    [
+                      14.3548828125,
+                      6.5
+                    ],
+                    [
+                      14.5796875,
+                      7
+                    ],
+                    [
+                      14.7990234375,
+                      7.5
+                    ],
+                    [
+                      15.0,
+                      8
+                    ],
+                    [
+                      15.208203125,
+                      8.5
+                    ],
+                    [
+                      15.446875,
+                      9
+                    ],
+                    [
+                      15.699609375,
+                      9.5
+                    ],
+                    [
+                      15.95,
+                      10
+                    ],
+                    [
+                      16.181640625,
+                      10.5
+                    ],
+                    [
+                      16.378125,
+                      11
+                    ],
+                    [
+                      16.523046875,
+                      11.5
+                    ],
+                    [
+                      16.6,
+                      12
+                    ],
+                    [
+                      16.60419921875,
+                      12.5
+                    ],
+                    [
+                      16.54921875,
+                      13
+                    ],
+                    [
+                      16.44619140625,
+                      13.5
+                    ],
+                    [
+                      16.30625,
+                      14
+                    ],
+                    [
+                      16.14052734375,
+                      14.5
+                    ],
+                    [
+                      15.96015625,
+                      15
+                    ],
+                    [
+                      15.77626953125,
+                      15.5
+                    ],
+                    [
+                      15.6,
+                      16
+                    ],
+                    [
+                      15.41142578125,
+                      16.5
+                    ],
+                    [
+                      15.19140625,
+                      17
+                    ],
+                    [
+                      14.95224609375,
+                      17.5
+                    ],
+                    [
+                      14.70625,
+                      18
+                    ],
+                    [
+                      14.46572265625,
+                      18.5
+                    ],
+                    [
+                      14.24296875,
+                      19
+                    ],
+                    [
+                      14.05029296875,
+                      19.5
+                    ],
+                    [
+                      13.9,
+                      20
+                    ],
+                    [
+                      13.79345703125,
+                      20.5
+                    ],
+                    [
+                      13.71953125,
+                      21
+                    ],
+                    [
+                      13.67177734375,
+                      21.5
+                    ],
+                    [
+                      13.64375,
+                      22
+                    ],
+                    [
+                      13.62900390625,
+                      22.5
+                    ],
+                    [
+                      13.62109375,
+                      23
+                    ],
+                    [
+                      13.61357421875,
+                      23.5
+                    ],
+                    [
+                      13.6,
+                      24
+                    ],
+                    [
+                      16.4,
+                      24
+                    ],
+                    [
+                      16.41357421875,
+                      23.5
+                    ],
+                    [
+                      16.42109375,
+                      23
+                    ],
+                    [
+                      16.42900390625,
+                      22.5
+                    ],
+                    [
+                      16.44375,
+                      22
+                    ],
+                    [
+                      16.47177734375,
+                      21.5
+                    ],
+                    [
+                      16.51953125,
+                      21
+                    ],
+                    [
+                      16.59345703125,
+                      20.5
+                    ],
+                    [
+                      16.7,
+                      20
+                    ],
+                    [
+                      16.85029296875,
+                      19.5
+                    ],
+                    [
+                      17.04296875,
+                      19
+                    ],
+                    [
+                      17.26572265625,
+                      18.5
+                    ],
+                    [
+                      17.50625,
+                      18
+                    ],
+                    [
+                      17.75224609375,
+                      17.5
+                    ],
+                    [
+                      17.99140625,
+                      17
+                    ],
+                    [
+                      18.21142578125,
+                      16.5
+                    ],
+                    [
+                      18.4,
+                      16
+                    ],
+                    [
+                      18.57626953125,
+                      15.5
+                    ],
+                    [
+                      18.76015625,
+                      15
+                    ],
+                    [
+                      18.94052734375,
+                      14.5
+                    ],
+                    [
+                      19.10625,
+                      14
+                    ],
+                    [
+                      19.24619140625,
+                      13.5
+                    ],
+                    [
+                      19.34921875,
+                      13
+                    ],
+                    [
+                      19.40419921875,
+                      12.5
+                    ],
+                    [
+                      19.4,
+                      12
+                    ],
+                    [
+                      19.323046875,
+                      11.5
+                    ],
+                    [
+                      19.178125,
+                      11
+                    ],
+                    [
+                      18.981640625,
+                      10.5
+                    ],
+                    [
+                      18.75,
+                      10
+                    ],
+                    [
+                      18.499609375,
+                      9.5
+                    ],
+                    [
+                      18.246875,
+                      9
+                    ],
+                    [
+                      18.008203125,
+                      8.5
+                    ],
+                    [
+                      17.8,
+                      8
+                    ],
+                    [
+                      17.5990234375,
+                      7.5
+                    ],
+                    [
+                      17.3796875,
+                      7
+                    ],
+                    [
+                      17.1548828125,
+                      6.5
+                    ],
+                    [
+                      16.9375,
+                      6
+                    ],
+                    [
+                      16.7404296875,
+                      5.5
+                    ],
+                    [
+                      16.5765625,
+                      5
+                    ],
+                    [
+                      16.4587890625,
+                      4.5
+                    ],
+                    [
+                      16.4,
+                      4
+                    ],
+                    [
+                      16.4169921875,
+                      3.5
+                    ],
+                    [
+                      16.5046875,
+                      3
+                    ],
+                    [
+                      16.6431640625,
+                      2.5
+                    ],
+                    [
+                      16.8125,
+                      2
+                    ],
+                    [
+                      16.9927734375,
+                      1.5
+                    ],
+                    [
+                      17.1640625,
+                      1
+                    ],
+                    [
+                      17.3064453125,
+                      0.5
+                    ],
+                    [
+                      17.4,
+                      0
+                    ]
+                  ]
+                },
+                "version": 1
+              },
+              "world": {
+                "bounds": [
+                  0,
+                  0,
+                  32,
+                  24
+                ],
+                "coordinateSystem": "continuous-xz",
+                "height": 24,
+                "id": "foundation-01",
+                "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+                "scenarioId": "wilderness-material-access-v1",
+                "width": 32
+              }
+            },
+            "pending": {
+              "actorId": "a1",
+              "before": "{\"inventoryWood\":6,\"position\":[13,12],\"woodCost\":3}",
+              "body": "{\"action\":{\"at\":[13.0,13.0],\"recipeId\":\"platform.v1\",\"type\":\"build\"},\"commandId\":\"godot_b15cdbbbdf2cadc1f6fa51fb336327ae\",\"expectedStateVersion\":544,\"preconditionMode\":\"actor-state-v1\",\"rulesVersion\":\"r10\",\"schemaVersion\":1}",
+              "commandId": "godot_b15cdbbbdf2cadc1f6fa51fb336327ae",
+              "endpoint": "http://127.0.0.1:34973",
+              "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+              "recordVersion": 4,
+              "worldId": "foundation-01"
+            },
+            "storageOk": true
+          },
+          "otherAuthorNote": {
+            "request": {
+              "schemaVersion": 1,
+              "rulesVersion": "r10",
+              "commandId": "9fb0437efdc24146afe4c09e29b0edf8",
+              "expectedStateVersion": 545,
+              "action": {
+                "type": "append_entity_note",
+                "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                "text": "\u53e6\u4e00\u4f4d\u5df2\u5efa\u597d\uff0c\u6211\u4ece\u6865\u4e0a\u7559\u4e0b\u624b\u8bb0\u3002",
+                "replyToNoteId": null
+              },
+              "preconditionMode": "actor-state-v1"
+            },
+            "receipt": {
+              "schemaVersion": 1,
+              "rulesVersion": "r10",
+              "stateVersion": 546,
+              "commandId": "9fb0437efdc24146afe4c09e29b0edf8",
+              "identity": {
+                "operatorId": "declared-late",
+                "actorId": "a2",
+                "sessionId": "s131d61be279840df94f00244eea8851d"
+              },
+              "eventCursor": 547,
+              "error": null,
+              "status": "committed",
+              "result": {
+                "noteId": "n6296316415854669a7411fa319eafd24",
+                "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                "authorActorId": "a2",
+                "operatorId": "declared-late",
+                "commandId": "9fb0437efdc24146afe4c09e29b0edf8",
+                "text": "\u53e6\u4e00\u4f4d\u5df2\u5efa\u597d\uff0c\u6211\u4ece\u6865\u4e0a\u7559\u4e0b\u624b\u8bb0\u3002",
+                "replyToNoteId": null,
+                "stateVersion": 546,
+                "eventCursor": 547,
+                "sharedAtUtc": "2026-10-26T05:07:59.1000035+00:00",
+                "position": [
+                  18,
+                  12
+                ],
+                "inventoryWood": 0,
+                "capabilityVersion": 1,
+                "action": "append_entity_note"
+              },
+              "execution": {
+                "preconditionMode": "actor-state-v1",
+                "observedStateVersion": 545,
+                "appliedOnStateVersion": 545
+              }
+            },
+            "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":546,\"commandId\":\"9fb0437efdc24146afe4c09e29b0edf8\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":547,\"error\":null,\"status\":\"committed\",\"result\":{\"noteId\":\"n6296316415854669a7411fa319eafd24\",\"entityId\":\"efbde20b258d74a0eaca3a86e8d455755\",\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"9fb0437efdc24146afe4c09e29b0edf8\",\"text\":\"\\u53E6\\u4E00\\u4F4D\\u5DF2\\u5EFA\\u597D\\uFF0C\\u6211\\u4ECE\\u6865\\u4E0A\\u7559\\u4E0B\\u624B\\u8BB0\\u3002\",\"replyToNoteId\":null,\"stateVersion\":546,\"eventCursor\":547,\"sharedAtUtc\":\"2026-10-26T05:07:59.1000035\\u002B00:00\",\"position\":[18,12],\"inventoryWood\":0,\"capabilityVersion\":1,\"action\":\"append_entity_note\"},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":545,\"appliedOnStateVersion\":545}}",
+            "note": {
+              "noteId": "n6296316415854669a7411fa319eafd24",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "authorActorId": "a2",
+              "operatorId": "declared-late",
+              "commandId": "9fb0437efdc24146afe4c09e29b0edf8",
+              "text": "\u53e6\u4e00\u4f4d\u5df2\u5efa\u597d\uff0c\u6211\u4ece\u6865\u4e0a\u7559\u4e0b\u624b\u8bb0\u3002",
+              "replyToNoteId": null,
+              "stateVersion": 546,
+              "eventCursor": 547,
+              "sharedAtUtc": "2026-10-26T05:07:59.1000035+00:00",
+              "position": [
+                18,
+                12
+              ],
+              "inventoryWood": 0,
+              "capabilityVersion": 1
+            }
+          },
+          "newClientRecovered": {
+            "canAct": true,
+            "foreignPending": 0,
+            "healthy": true,
+            "lastReceipt": {
+              "commandId": "godot_b15cdbbbdf2cadc1f6fa51fb336327ae",
+              "error": null,
+              "eventCursor": 546,
+              "execution": {
+                "appliedOnStateVersion": 544,
+                "observedStateVersion": 544,
+                "preconditionMode": "actor-state-v1"
+              },
+              "identity": {
+                "actorId": "a1",
+                "operatorId": "local-operator",
+                "sessionId": "s48ab04efc6f7451aa43d6a8caf8e0108"
+              },
+              "result": {
+                "action": "build",
+                "entityId": "edc179960c13547a59b4f6360674830af",
+                "inventoryWood": 3,
+                "position": [
+                  13,
+                  13
+                ]
+              },
+              "rulesVersion": "r10",
+              "schemaVersion": 1,
+              "stateVersion": 545,
+              "status": "committed"
+            },
+            "message": "\u52a8\u4f5c\u5df2\u5b8c\u6210\u3002",
+            "observation": {
+              "commandBinding": {
+                "header": "World-Instance-Id",
+                "required": true,
+                "version": 1
+              },
+              "commandConcurrency": {
+                "supportedModes": [
+                  "actor-state-v1"
+                ],
+                "version": 1
+              },
+              "commandId": null,
+              "depot": {
+                "available": false,
+                "wood": 0
+              },
+              "entities": [
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "e76a6cc3bf333423e874d310f1f0371a0",
+                  "ownerActorId": "a3",
+                  "position": [
+                    27,
+                    17
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "e9df7ee47564546f098a988085e93ce3d",
+                  "ownerActorId": "a3",
+                  "position": [
+                    30,
+                    17
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "eb40dd030a24941f28c3fb5313fe44784",
+                  "ownerActorId": "a3",
+                  "position": [
+                    27,
+                    14
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "eca67171501f8438e9fe790bfdbef9789",
+                  "ownerActorId": "a3",
+                  "position": [
+                    30,
+                    14
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "edc179960c13547a59b4f6360674830af",
+                  "ownerActorId": "a1",
+                  "position": [
+                    13,
+                    13
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "bridge",
+                  "definitionVersion": 1,
+                  "embodiedWood": 6,
+                  "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                  "ownerActorId": "a1",
+                  "position": [
+                    18,
+                    12
+                  ],
+                  "rulesVersion": "r10"
+                }
+              ],
+              "entityNotes": {
+                "capability": "entity-notes-v1",
+                "maxPerOperator": 2,
+                "maxTextScalars": 160,
+                "maxTotal": 6,
+                "notes": [
+                  {
+                    "authorActorId": "a1",
+                    "capabilityVersion": 1,
+                    "commandId": "41c29dc4234d46a2a3d9793a9b23a9bb",
+                    "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                    "eventCursor": 527,
+                    "inventoryWood": 6,
+                    "noteId": "n6977d5211fae49929441974b6c5f2757",
+                    "operatorId": "local-operator",
+                    "position": [
+                      18,
+                      12
+                    ],
+                    "replyToNoteId": null,
+                    "sharedAtUtc": "2026-10-26T05:07:54.3965740+00:00",
+                    "stateVersion": 526,
+                    "text": "\u539f\u6865\u4ecd\u5728\uff0c\u8fd9\u662f\u53ef\u4ee5\u63a5\u5199\u7684\u539f\u6587\u3002"
+                  },
+                  {
+                    "authorActorId": "a2",
+                    "capabilityVersion": 1,
+                    "commandId": "9fb0437efdc24146afe4c09e29b0edf8",
+                    "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                    "eventCursor": 547,
+                    "inventoryWood": 0,
+                    "noteId": "n6296316415854669a7411fa319eafd24",
+                    "operatorId": "declared-late",
+                    "position": [
+                      18,
+                      12
+                    ],
+                    "replyToNoteId": null,
+                    "sharedAtUtc": "2026-10-26T05:07:59.1000035+00:00",
+                    "stateVersion": 546,
+                    "text": "\u53e6\u4e00\u4f4d\u5df2\u5efa\u597d\uff0c\u6211\u4ece\u6865\u4e0a\u7559\u4e0b\u624b\u8bb0\u3002"
+                  }
+                ],
+                "reach": 1.6,
+                "selfCount": 1,
+                "target": {
+                  "definitionId": "bridge",
+                  "definitionVersion": 1,
+                  "embodiedWood": 6,
+                  "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                  "ownerActorId": "a1",
+                  "position": [
+                    18,
+                    12
+                  ],
+                  "rulesVersion": "r10"
+                },
+                "totalCount": 2,
+                "version": 1
+              },
+              "error": null,
+              "eventCursor": 547,
+              "gathering": {
+                "quantityPerAction": 1,
+                "version": 1
+              },
+              "identity": {
+                "actorId": "a1",
+                "operatorId": "local-operator",
+                "sessionId": "s48ab04efc6f7451aa43d6a8caf8e0108"
+              },
+              "materialAccess": {
+                "active": true,
+                "buildExclusion": [
+                  27,
+                  9,
+                  29,
+                  11
+                ],
+                "capacity": 6,
+                "controlBasis": "declared-local-fixture",
+                "controlRoster": [
+                  {
+                    "actorId": "a1",
+                    "operatorId": "local-operator"
+                  },
+                  {
+                    "actorId": "a1_alias",
+                    "operatorId": "local-operator"
+                  },
+                  {
+                    "actorId": "a2",
+                    "operatorId": "declared-late"
+                  },
+                  {
+                    "actorId": "a3",
+                    "operatorId": "declared-third"
+                  }
+                ],
+                "currentReservation": null,
+                "enabledAtServiceMs": 21047,
+                "freeWood": 0,
+                "generatedWood": 12,
+                "inputBudget": 12,
+                "leaseMs": 60000,
+                "nextProductionAtMs": 81047,
+                "position": [
+                  28,
+                  10
+                ],
+                "productionIntervalMs": 10000,
+                "queue": [],
+                "recentReservations": [],
+                "reservationQuantity": 3,
+                "serviceMs": 76859,
+                "sourceId": "wood-source-east",
+                "stockWood": 0,
+                "version": 1
+              },
+              "materialTransfer": {
+                "maxQuantity": 12,
+                "reach": 1.6,
+                "recipientConfirmation": false,
+                "resource": "wood",
+                "version": 1
+              },
+              "movement": {
+                "buildReach": 3.2,
+                "gatherReach": 1.6,
+                "kind": "continuous",
+                "maxStepDistance": 0.6,
+                "radius": 0.28,
+                "speed": 3,
+                "version": 1
+              },
+              "recentTransfers": {
+                "items": [],
+                "limit": 20,
+                "truncated": false
+              },
+              "recipes": [
+                {
+                  "definitionId": "platform",
+                  "id": "platform.v1",
+                  "woodCost": 3
+                },
+                {
+                  "definitionId": "bridge",
+                  "id": "bridge.v1",
+                  "woodCost": 6
+                }
+              ],
+              "residents": [
+                {
+                  "actorId": "a1",
+                  "position": [
+                    13,
+                    12
+                  ]
+                },
+                {
+                  "actorId": "a1_alias",
+                  "position": [
+                    5,
+                    7
+                  ]
+                },
+                {
+                  "actorId": "a2",
+                  "position": [
+                    18,
+                    12
+                  ]
+                },
+                {
+                  "actorId": "a3",
+                  "position": [
+                    18,
+                    12
+                  ]
+                }
+              ],
+              "resourceAudit": {
+                "conserved": true,
+                "depotWood": 0,
+                "embodiedWood": 21,
+                "generatedWood": 12,
+                "initialWood": 12,
+                "inventoryWood": 3,
+                "issuedWood": 24,
+                "sourceWood": 0,
+                "wildWood": 0
+              },
+              "resourceNodes": [
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-east-north",
+                  "position": [
+                    25.4,
+                    5.8
+                  ],
+                  "remainingWood": 0
+                },
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-east-south",
+                  "position": [
+                    25.7,
+                    18.2
+                  ],
+                  "remainingWood": 0
+                },
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-west-north",
+                  "position": [
+                    6.2,
+                    7.8
+                  ],
+                  "remainingWood": 0
+                },
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-west-south",
+                  "position": [
+                    9.2,
+                    16.3
+                  ],
+                  "remainingWood": 0
+                }
+              ],
+              "rulesVersion": "r10",
+              "schemaVersion": 1,
+              "self": {
+                "actorId": "a1",
+                "inventory": {
+                  "wood": 3
+                },
+                "position": [
+                  13,
+                  12
+                ]
+              },
+              "stateVersion": 546,
+              "terrain": {
+                "obstacles": [
+                  {
+                    "id": "rock-west",
+                    "kind": "rock",
+                    "position": [
+                      10.5,
+                      8.5
+                    ],
+                    "radius": 1.05
+                  },
+                  {
+                    "id": "rock-south",
+                    "kind": "rock",
+                    "position": [
+                      5.6,
+                      19.7
+                    ],
+                    "radius": 0.8
+                  },
+                  {
+                    "id": "rock-east",
+                    "kind": "rock",
+                    "position": [
+                      23,
+                      12.5
+                    ],
+                    "radius": 1.2
+                  },
+                  {
+                    "id": "rock-north",
+                    "kind": "rock",
+                    "position": [
+                      21.8,
+                      3.2
+                    ],
+                    "radius": 0.75
+                  }
+                ],
+                "river": {
+                  "centerline": [
+                    [
+                      16,
+                      0
+                    ],
+                    [
+                      15.9064453125,
+                      0.5
+                    ],
+                    [
+                      15.7640625,
+                      1
+                    ],
+                    [
+                      15.5927734375,
+                      1.5
+                    ],
+                    [
+                      15.4125,
+                      2
+                    ],
+                    [
+                      15.2431640625,
+                      2.5
+                    ],
+                    [
+                      15.1046875,
+                      3
+                    ],
+                    [
+                      15.0169921875,
+                      3.5
+                    ],
+                    [
+                      15,
+                      4
+                    ],
+                    [
+                      15.0587890625,
+                      4.5
+                    ],
+                    [
+                      15.1765625,
+                      5
+                    ],
+                    [
+                      15.3404296875,
+                      5.5
+                    ],
+                    [
+                      15.5375,
+                      6
+                    ],
+                    [
+                      15.7548828125,
+                      6.5
+                    ],
+                    [
+                      15.9796875,
+                      7
+                    ],
+                    [
+                      16.1990234375,
+                      7.5
+                    ],
+                    [
+                      16.4,
+                      8
+                    ],
+                    [
+                      16.608203125,
+                      8.5
+                    ],
+                    [
+                      16.846875,
+                      9
+                    ],
+                    [
+                      17.099609375,
+                      9.5
+                    ],
+                    [
+                      17.35,
+                      10
+                    ],
+                    [
+                      17.581640625,
+                      10.5
+                    ],
+                    [
+                      17.778125,
+                      11
+                    ],
+                    [
+                      17.923046875,
+                      11.5
+                    ],
+                    [
+                      18,
+                      12
+                    ],
+                    [
+                      18.00419921875,
+                      12.5
+                    ],
+                    [
+                      17.94921875,
+                      13
+                    ],
+                    [
+                      17.84619140625,
+                      13.5
+                    ],
+                    [
+                      17.70625,
+                      14
+                    ],
+                    [
+                      17.54052734375,
+                      14.5
+                    ],
+                    [
+                      17.36015625,
+                      15
+                    ],
+                    [
+                      17.17626953125,
+                      15.5
+                    ],
+                    [
+                      17,
+                      16
+                    ],
+                    [
+                      16.81142578125,
+                      16.5
+                    ],
+                    [
+                      16.59140625,
+                      17
+                    ],
+                    [
+                      16.35224609375,
+                      17.5
+                    ],
+                    [
+                      16.10625,
+                      18
+                    ],
+                    [
+                      15.86572265625,
+                      18.5
+                    ],
+                    [
+                      15.64296875,
+                      19
+                    ],
+                    [
+                      15.45029296875,
+                      19.5
+                    ],
+                    [
+                      15.3,
+                      20
+                    ],
+                    [
+                      15.19345703125,
+                      20.5
+                    ],
+                    [
+                      15.11953125,
+                      21
+                    ],
+                    [
+                      15.07177734375,
+                      21.5
+                    ],
+                    [
+                      15.04375,
+                      22
+                    ],
+                    [
+                      15.02900390625,
+                      22.5
+                    ],
+                    [
+                      15.02109375,
+                      23
+                    ],
+                    [
+                      15.01357421875,
+                      23.5
+                    ],
+                    [
+                      15.0,
+                      24
+                    ]
+                  ],
+                  "halfWidth": 1.4,
+                  "polygon": [
+                    [
+                      14.6,
+                      0
+                    ],
+                    [
+                      14.5064453125,
+                      0.5
+                    ],
+                    [
+                      14.3640625,
+                      1
+                    ],
+                    [
+                      14.1927734375,
+                      1.5
+                    ],
+                    [
+                      14.0125,
+                      2
+                    ],
+                    [
+                      13.8431640625,
+                      2.5
+                    ],
+                    [
+                      13.7046875,
+                      3
+                    ],
+                    [
+                      13.6169921875,
+                      3.5
+                    ],
+                    [
+                      13.6,
+                      4
+                    ],
+                    [
+                      13.6587890625,
+                      4.5
+                    ],
+                    [
+                      13.7765625,
+                      5
+                    ],
+                    [
+                      13.9404296875,
+                      5.5
+                    ],
+                    [
+                      14.1375,
+                      6
+                    ],
+                    [
+                      14.3548828125,
+                      6.5
+                    ],
+                    [
+                      14.5796875,
+                      7
+                    ],
+                    [
+                      14.7990234375,
+                      7.5
+                    ],
+                    [
+                      15.0,
+                      8
+                    ],
+                    [
+                      15.208203125,
+                      8.5
+                    ],
+                    [
+                      15.446875,
+                      9
+                    ],
+                    [
+                      15.699609375,
+                      9.5
+                    ],
+                    [
+                      15.95,
+                      10
+                    ],
+                    [
+                      16.181640625,
+                      10.5
+                    ],
+                    [
+                      16.378125,
+                      11
+                    ],
+                    [
+                      16.523046875,
+                      11.5
+                    ],
+                    [
+                      16.6,
+                      12
+                    ],
+                    [
+                      16.60419921875,
+                      12.5
+                    ],
+                    [
+                      16.54921875,
+                      13
+                    ],
+                    [
+                      16.44619140625,
+                      13.5
+                    ],
+                    [
+                      16.30625,
+                      14
+                    ],
+                    [
+                      16.14052734375,
+                      14.5
+                    ],
+                    [
+                      15.96015625,
+                      15
+                    ],
+                    [
+                      15.77626953125,
+                      15.5
+                    ],
+                    [
+                      15.6,
+                      16
+                    ],
+                    [
+                      15.41142578125,
+                      16.5
+                    ],
+                    [
+                      15.19140625,
+                      17
+                    ],
+                    [
+                      14.95224609375,
+                      17.5
+                    ],
+                    [
+                      14.70625,
+                      18
+                    ],
+                    [
+                      14.46572265625,
+                      18.5
+                    ],
+                    [
+                      14.24296875,
+                      19
+                    ],
+                    [
+                      14.05029296875,
+                      19.5
+                    ],
+                    [
+                      13.9,
+                      20
+                    ],
+                    [
+                      13.79345703125,
+                      20.5
+                    ],
+                    [
+                      13.71953125,
+                      21
+                    ],
+                    [
+                      13.67177734375,
+                      21.5
+                    ],
+                    [
+                      13.64375,
+                      22
+                    ],
+                    [
+                      13.62900390625,
+                      22.5
+                    ],
+                    [
+                      13.62109375,
+                      23
+                    ],
+                    [
+                      13.61357421875,
+                      23.5
+                    ],
+                    [
+                      13.6,
+                      24
+                    ],
+                    [
+                      16.4,
+                      24
+                    ],
+                    [
+                      16.41357421875,
+                      23.5
+                    ],
+                    [
+                      16.42109375,
+                      23
+                    ],
+                    [
+                      16.42900390625,
+                      22.5
+                    ],
+                    [
+                      16.44375,
+                      22
+                    ],
+                    [
+                      16.47177734375,
+                      21.5
+                    ],
+                    [
+                      16.51953125,
+                      21
+                    ],
+                    [
+                      16.59345703125,
+                      20.5
+                    ],
+                    [
+                      16.7,
+                      20
+                    ],
+                    [
+                      16.85029296875,
+                      19.5
+                    ],
+                    [
+                      17.04296875,
+                      19
+                    ],
+                    [
+                      17.26572265625,
+                      18.5
+                    ],
+                    [
+                      17.50625,
+                      18
+                    ],
+                    [
+                      17.75224609375,
+                      17.5
+                    ],
+                    [
+                      17.99140625,
+                      17
+                    ],
+                    [
+                      18.21142578125,
+                      16.5
+                    ],
+                    [
+                      18.4,
+                      16
+                    ],
+                    [
+                      18.57626953125,
+                      15.5
+                    ],
+                    [
+                      18.76015625,
+                      15
+                    ],
+                    [
+                      18.94052734375,
+                      14.5
+                    ],
+                    [
+                      19.10625,
+                      14
+                    ],
+                    [
+                      19.24619140625,
+                      13.5
+                    ],
+                    [
+                      19.34921875,
+                      13
+                    ],
+                    [
+                      19.40419921875,
+                      12.5
+                    ],
+                    [
+                      19.4,
+                      12
+                    ],
+                    [
+                      19.323046875,
+                      11.5
+                    ],
+                    [
+                      19.178125,
+                      11
+                    ],
+                    [
+                      18.981640625,
+                      10.5
+                    ],
+                    [
+                      18.75,
+                      10
+                    ],
+                    [
+                      18.499609375,
+                      9.5
+                    ],
+                    [
+                      18.246875,
+                      9
+                    ],
+                    [
+                      18.008203125,
+                      8.5
+                    ],
+                    [
+                      17.8,
+                      8
+                    ],
+                    [
+                      17.5990234375,
+                      7.5
+                    ],
+                    [
+                      17.3796875,
+                      7
+                    ],
+                    [
+                      17.1548828125,
+                      6.5
+                    ],
+                    [
+                      16.9375,
+                      6
+                    ],
+                    [
+                      16.7404296875,
+                      5.5
+                    ],
+                    [
+                      16.5765625,
+                      5
+                    ],
+                    [
+                      16.4587890625,
+                      4.5
+                    ],
+                    [
+                      16.4,
+                      4
+                    ],
+                    [
+                      16.4169921875,
+                      3.5
+                    ],
+                    [
+                      16.5046875,
+                      3
+                    ],
+                    [
+                      16.6431640625,
+                      2.5
+                    ],
+                    [
+                      16.8125,
+                      2
+                    ],
+                    [
+                      16.9927734375,
+                      1.5
+                    ],
+                    [
+                      17.1640625,
+                      1
+                    ],
+                    [
+                      17.3064453125,
+                      0.5
+                    ],
+                    [
+                      17.4,
+                      0
+                    ]
+                  ]
+                },
+                "version": 1
+              },
+              "world": {
+                "bounds": [
+                  0,
+                  0,
+                  32,
+                  24
+                ],
+                "coordinateSystem": "continuous-xz",
+                "height": 24,
+                "id": "foundation-01",
+                "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+                "scenarioId": "wilderness-material-access-v1",
+                "width": 32
+              }
+            },
+            "pending": {},
+            "storageOk": true
+          },
+          "originalEntity": {
+            "entityId": "edc179960c13547a59b4f6360674830af",
+            "definitionId": "platform",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a1",
+            "position": [
+              13,
+              13
+            ],
+            "embodiedWood": 3
+          },
+          "originalPostOnly": true,
+          "audit": {
+            "issued": 24,
+            "generated": 12,
+            "wild": 0,
+            "source": 0,
+            "inventory": 3,
+            "embodied": 21,
+            "activeReserved": 0,
+            "serviceMs": 77109,
+            "processedPeriod": 5,
+            "production": [
+              [
+                1,
+                31047,
+                3,
+                258
+              ],
+              [
+                2,
+                41047,
+                3,
+                287
+              ],
+              [
+                3,
+                51047,
+                3,
+                337
+              ],
+              [
+                4,
+                61047,
+                3,
+                364
+              ]
+            ],
+            "stateVersion": 546,
+            "realCommandsThisBranch": 19,
+            "processStopped": true
+          }
+        },
+        {
+          "originalClientWalkPending": {
+            "canAct": false,
+            "foreignPending": 0,
+            "healthy": false,
+            "lastReceipt": {},
+            "message": "\u52a8\u4f5c\u7ed3\u679c\u5f85\u786e\u8ba4\u3002\u539f\u8bf7\u6c42\u5df2\u4fdd\u7559\uff1b\u53ef\u67e5\u8be2\u6216\u539f\u6837\u91cd\u8bd5\u3002",
+            "observation": {
+              "commandBinding": {
+                "header": "World-Instance-Id",
+                "required": true,
+                "version": 1
+              },
+              "commandConcurrency": {
+                "supportedModes": [
+                  "actor-state-v1"
+                ],
+                "version": 1
+              },
+              "commandId": null,
+              "depot": {
+                "available": false,
+                "wood": 0
+              },
+              "entities": [
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "e76a6cc3bf333423e874d310f1f0371a0",
+                  "ownerActorId": "a3",
+                  "position": [
+                    27,
+                    17
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "e9df7ee47564546f098a988085e93ce3d",
+                  "ownerActorId": "a3",
+                  "position": [
+                    30,
+                    17
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "eb40dd030a24941f28c3fb5313fe44784",
+                  "ownerActorId": "a3",
+                  "position": [
+                    27,
+                    14
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "eca67171501f8438e9fe790bfdbef9789",
+                  "ownerActorId": "a3",
+                  "position": [
+                    30,
+                    14
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "bridge",
+                  "definitionVersion": 1,
+                  "embodiedWood": 6,
+                  "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                  "ownerActorId": "a1",
+                  "position": [
+                    18,
+                    12
+                  ],
+                  "rulesVersion": "r10"
+                }
+              ],
+              "entityNotes": {
+                "capability": "entity-notes-v1",
+                "maxPerOperator": 2,
+                "maxTextScalars": 160,
+                "maxTotal": 6,
+                "notes": [
+                  {
+                    "authorActorId": "a1",
+                    "capabilityVersion": 1,
+                    "commandId": "41c29dc4234d46a2a3d9793a9b23a9bb",
+                    "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                    "eventCursor": 527,
+                    "inventoryWood": 6,
+                    "noteId": "n6977d5211fae49929441974b6c5f2757",
+                    "operatorId": "local-operator",
+                    "position": [
+                      18,
+                      12
+                    ],
+                    "replyToNoteId": null,
+                    "sharedAtUtc": "2026-10-26T05:07:54.3965740+00:00",
+                    "stateVersion": 526,
+                    "text": "\u539f\u6865\u4ecd\u5728\uff0c\u8fd9\u662f\u53ef\u4ee5\u63a5\u5199\u7684\u539f\u6587\u3002"
+                  }
+                ],
+                "reach": 1.6,
+                "selfCount": 0,
+                "target": {
+                  "definitionId": "bridge",
+                  "definitionVersion": 1,
+                  "embodiedWood": 6,
+                  "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                  "ownerActorId": "a1",
+                  "position": [
+                    18,
+                    12
+                  ],
+                  "rulesVersion": "r10"
+                },
+                "totalCount": 1,
+                "version": 1
+              },
+              "error": null,
+              "eventCursor": 527,
+              "gathering": {
+                "quantityPerAction": 1,
+                "version": 1
+              },
+              "identity": {
+                "actorId": "a2",
+                "operatorId": "declared-late",
+                "sessionId": "s131d61be279840df94f00244eea8851d"
+              },
+              "materialAccess": {
+                "active": true,
+                "buildExclusion": [
+                  27,
+                  9,
+                  29,
+                  11
+                ],
+                "capacity": 6,
+                "controlBasis": "declared-local-fixture",
+                "controlRoster": [
+                  {
+                    "actorId": "a1",
+                    "operatorId": "local-operator"
+                  },
+                  {
+                    "actorId": "a1_alias",
+                    "operatorId": "local-operator"
+                  },
+                  {
+                    "actorId": "a2",
+                    "operatorId": "declared-late"
+                  },
+                  {
+                    "actorId": "a3",
+                    "operatorId": "declared-third"
+                  }
+                ],
+                "currentReservation": null,
+                "enabledAtServiceMs": 21047,
+                "freeWood": 0,
+                "generatedWood": 12,
+                "inputBudget": 12,
+                "leaseMs": 60000,
+                "nextProductionAtMs": 81047,
+                "position": [
+                  28,
+                  10
+                ],
+                "productionIntervalMs": 10000,
+                "queue": [],
+                "recentReservations": [],
+                "reservationQuantity": 3,
+                "serviceMs": 74826,
+                "sourceId": "wood-source-east",
+                "stockWood": 0,
+                "version": 1
+              },
+              "materialTransfer": {
+                "maxQuantity": 12,
+                "reach": 1.6,
+                "recipientConfirmation": false,
+                "resource": "wood",
+                "version": 1
+              },
+              "movement": {
+                "buildReach": 3.2,
+                "gatherReach": 1.6,
+                "kind": "continuous",
+                "maxStepDistance": 0.6,
+                "radius": 0.28,
+                "speed": 3,
+                "version": 1
+              },
+              "recentTransfers": {
+                "items": [],
+                "limit": 20,
+                "truncated": false
+              },
+              "recipes": [
+                {
+                  "definitionId": "platform",
+                  "id": "platform.v1",
+                  "woodCost": 3
+                },
+                {
+                  "definitionId": "bridge",
+                  "id": "bridge.v1",
+                  "woodCost": 6
+                }
+              ],
+              "residents": [
+                {
+                  "actorId": "a1",
+                  "position": [
+                    18,
+                    12
+                  ]
+                },
+                {
+                  "actorId": "a1_alias",
+                  "position": [
+                    5,
+                    7
+                  ]
+                },
+                {
+                  "actorId": "a2",
+                  "position": [
+                    18,
+                    12
+                  ]
+                },
+                {
+                  "actorId": "a3",
+                  "position": [
+                    18,
+                    12
+                  ]
+                }
+              ],
+              "resourceAudit": {
+                "conserved": true,
+                "depotWood": 0,
+                "embodiedWood": 18,
+                "generatedWood": 12,
+                "initialWood": 12,
+                "inventoryWood": 6,
+                "issuedWood": 24,
+                "sourceWood": 0,
+                "wildWood": 0
+              },
+              "resourceNodes": [
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-east-north",
+                  "position": [
+                    25.4,
+                    5.8
+                  ],
+                  "remainingWood": 0
+                },
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-east-south",
+                  "position": [
+                    25.7,
+                    18.2
+                  ],
+                  "remainingWood": 0
+                },
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-west-north",
+                  "position": [
+                    6.2,
+                    7.8
+                  ],
+                  "remainingWood": 0
+                },
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-west-south",
+                  "position": [
+                    9.2,
+                    16.3
+                  ],
+                  "remainingWood": 0
+                }
+              ],
+              "rulesVersion": "r10",
+              "schemaVersion": 1,
+              "self": {
+                "actorId": "a2",
+                "inventory": {
+                  "wood": 0
+                },
+                "position": [
+                  18,
+                  12
+                ]
+              },
+              "stateVersion": 526,
+              "terrain": {
+                "obstacles": [
+                  {
+                    "id": "rock-west",
+                    "kind": "rock",
+                    "position": [
+                      10.5,
+                      8.5
+                    ],
+                    "radius": 1.05
+                  },
+                  {
+                    "id": "rock-south",
+                    "kind": "rock",
+                    "position": [
+                      5.6,
+                      19.7
+                    ],
+                    "radius": 0.8
+                  },
+                  {
+                    "id": "rock-east",
+                    "kind": "rock",
+                    "position": [
+                      23,
+                      12.5
+                    ],
+                    "radius": 1.2
+                  },
+                  {
+                    "id": "rock-north",
+                    "kind": "rock",
+                    "position": [
+                      21.8,
+                      3.2
+                    ],
+                    "radius": 0.75
+                  }
+                ],
+                "river": {
+                  "centerline": [
+                    [
+                      16,
+                      0
+                    ],
+                    [
+                      15.9064453125,
+                      0.5
+                    ],
+                    [
+                      15.7640625,
+                      1
+                    ],
+                    [
+                      15.5927734375,
+                      1.5
+                    ],
+                    [
+                      15.4125,
+                      2
+                    ],
+                    [
+                      15.2431640625,
+                      2.5
+                    ],
+                    [
+                      15.1046875,
+                      3
+                    ],
+                    [
+                      15.0169921875,
+                      3.5
+                    ],
+                    [
+                      15,
+                      4
+                    ],
+                    [
+                      15.0587890625,
+                      4.5
+                    ],
+                    [
+                      15.1765625,
+                      5
+                    ],
+                    [
+                      15.3404296875,
+                      5.5
+                    ],
+                    [
+                      15.5375,
+                      6
+                    ],
+                    [
+                      15.7548828125,
+                      6.5
+                    ],
+                    [
+                      15.9796875,
+                      7
+                    ],
+                    [
+                      16.1990234375,
+                      7.5
+                    ],
+                    [
+                      16.4,
+                      8
+                    ],
+                    [
+                      16.608203125,
+                      8.5
+                    ],
+                    [
+                      16.846875,
+                      9
+                    ],
+                    [
+                      17.099609375,
+                      9.5
+                    ],
+                    [
+                      17.35,
+                      10
+                    ],
+                    [
+                      17.581640625,
+                      10.5
+                    ],
+                    [
+                      17.778125,
+                      11
+                    ],
+                    [
+                      17.923046875,
+                      11.5
+                    ],
+                    [
+                      18,
+                      12
+                    ],
+                    [
+                      18.00419921875,
+                      12.5
+                    ],
+                    [
+                      17.94921875,
+                      13
+                    ],
+                    [
+                      17.84619140625,
+                      13.5
+                    ],
+                    [
+                      17.70625,
+                      14
+                    ],
+                    [
+                      17.54052734375,
+                      14.5
+                    ],
+                    [
+                      17.36015625,
+                      15
+                    ],
+                    [
+                      17.17626953125,
+                      15.5
+                    ],
+                    [
+                      17,
+                      16
+                    ],
+                    [
+                      16.81142578125,
+                      16.5
+                    ],
+                    [
+                      16.59140625,
+                      17
+                    ],
+                    [
+                      16.35224609375,
+                      17.5
+                    ],
+                    [
+                      16.10625,
+                      18
+                    ],
+                    [
+                      15.86572265625,
+                      18.5
+                    ],
+                    [
+                      15.64296875,
+                      19
+                    ],
+                    [
+                      15.45029296875,
+                      19.5
+                    ],
+                    [
+                      15.3,
+                      20
+                    ],
+                    [
+                      15.19345703125,
+                      20.5
+                    ],
+                    [
+                      15.11953125,
+                      21
+                    ],
+                    [
+                      15.07177734375,
+                      21.5
+                    ],
+                    [
+                      15.04375,
+                      22
+                    ],
+                    [
+                      15.02900390625,
+                      22.5
+                    ],
+                    [
+                      15.02109375,
+                      23
+                    ],
+                    [
+                      15.01357421875,
+                      23.5
+                    ],
+                    [
+                      15.0,
+                      24
+                    ]
+                  ],
+                  "halfWidth": 1.4,
+                  "polygon": [
+                    [
+                      14.6,
+                      0
+                    ],
+                    [
+                      14.5064453125,
+                      0.5
+                    ],
+                    [
+                      14.3640625,
+                      1
+                    ],
+                    [
+                      14.1927734375,
+                      1.5
+                    ],
+                    [
+                      14.0125,
+                      2
+                    ],
+                    [
+                      13.8431640625,
+                      2.5
+                    ],
+                    [
+                      13.7046875,
+                      3
+                    ],
+                    [
+                      13.6169921875,
+                      3.5
+                    ],
+                    [
+                      13.6,
+                      4
+                    ],
+                    [
+                      13.6587890625,
+                      4.5
+                    ],
+                    [
+                      13.7765625,
+                      5
+                    ],
+                    [
+                      13.9404296875,
+                      5.5
+                    ],
+                    [
+                      14.1375,
+                      6
+                    ],
+                    [
+                      14.3548828125,
+                      6.5
+                    ],
+                    [
+                      14.5796875,
+                      7
+                    ],
+                    [
+                      14.7990234375,
+                      7.5
+                    ],
+                    [
+                      15.0,
+                      8
+                    ],
+                    [
+                      15.208203125,
+                      8.5
+                    ],
+                    [
+                      15.446875,
+                      9
+                    ],
+                    [
+                      15.699609375,
+                      9.5
+                    ],
+                    [
+                      15.95,
+                      10
+                    ],
+                    [
+                      16.181640625,
+                      10.5
+                    ],
+                    [
+                      16.378125,
+                      11
+                    ],
+                    [
+                      16.523046875,
+                      11.5
+                    ],
+                    [
+                      16.6,
+                      12
+                    ],
+                    [
+                      16.60419921875,
+                      12.5
+                    ],
+                    [
+                      16.54921875,
+                      13
+                    ],
+                    [
+                      16.44619140625,
+                      13.5
+                    ],
+                    [
+                      16.30625,
+                      14
+                    ],
+                    [
+                      16.14052734375,
+                      14.5
+                    ],
+                    [
+                      15.96015625,
+                      15
+                    ],
+                    [
+                      15.77626953125,
+                      15.5
+                    ],
+                    [
+                      15.6,
+                      16
+                    ],
+                    [
+                      15.41142578125,
+                      16.5
+                    ],
+                    [
+                      15.19140625,
+                      17
+                    ],
+                    [
+                      14.95224609375,
+                      17.5
+                    ],
+                    [
+                      14.70625,
+                      18
+                    ],
+                    [
+                      14.46572265625,
+                      18.5
+                    ],
+                    [
+                      14.24296875,
+                      19
+                    ],
+                    [
+                      14.05029296875,
+                      19.5
+                    ],
+                    [
+                      13.9,
+                      20
+                    ],
+                    [
+                      13.79345703125,
+                      20.5
+                    ],
+                    [
+                      13.71953125,
+                      21
+                    ],
+                    [
+                      13.67177734375,
+                      21.5
+                    ],
+                    [
+                      13.64375,
+                      22
+                    ],
+                    [
+                      13.62900390625,
+                      22.5
+                    ],
+                    [
+                      13.62109375,
+                      23
+                    ],
+                    [
+                      13.61357421875,
+                      23.5
+                    ],
+                    [
+                      13.6,
+                      24
+                    ],
+                    [
+                      16.4,
+                      24
+                    ],
+                    [
+                      16.41357421875,
+                      23.5
+                    ],
+                    [
+                      16.42109375,
+                      23
+                    ],
+                    [
+                      16.42900390625,
+                      22.5
+                    ],
+                    [
+                      16.44375,
+                      22
+                    ],
+                    [
+                      16.47177734375,
+                      21.5
+                    ],
+                    [
+                      16.51953125,
+                      21
+                    ],
+                    [
+                      16.59345703125,
+                      20.5
+                    ],
+                    [
+                      16.7,
+                      20
+                    ],
+                    [
+                      16.85029296875,
+                      19.5
+                    ],
+                    [
+                      17.04296875,
+                      19
+                    ],
+                    [
+                      17.26572265625,
+                      18.5
+                    ],
+                    [
+                      17.50625,
+                      18
+                    ],
+                    [
+                      17.75224609375,
+                      17.5
+                    ],
+                    [
+                      17.99140625,
+                      17
+                    ],
+                    [
+                      18.21142578125,
+                      16.5
+                    ],
+                    [
+                      18.4,
+                      16
+                    ],
+                    [
+                      18.57626953125,
+                      15.5
+                    ],
+                    [
+                      18.76015625,
+                      15
+                    ],
+                    [
+                      18.94052734375,
+                      14.5
+                    ],
+                    [
+                      19.10625,
+                      14
+                    ],
+                    [
+                      19.24619140625,
+                      13.5
+                    ],
+                    [
+                      19.34921875,
+                      13
+                    ],
+                    [
+                      19.40419921875,
+                      12.5
+                    ],
+                    [
+                      19.4,
+                      12
+                    ],
+                    [
+                      19.323046875,
+                      11.5
+                    ],
+                    [
+                      19.178125,
+                      11
+                    ],
+                    [
+                      18.981640625,
+                      10.5
+                    ],
+                    [
+                      18.75,
+                      10
+                    ],
+                    [
+                      18.499609375,
+                      9.5
+                    ],
+                    [
+                      18.246875,
+                      9
+                    ],
+                    [
+                      18.008203125,
+                      8.5
+                    ],
+                    [
+                      17.8,
+                      8
+                    ],
+                    [
+                      17.5990234375,
+                      7.5
+                    ],
+                    [
+                      17.3796875,
+                      7
+                    ],
+                    [
+                      17.1548828125,
+                      6.5
+                    ],
+                    [
+                      16.9375,
+                      6
+                    ],
+                    [
+                      16.7404296875,
+                      5.5
+                    ],
+                    [
+                      16.5765625,
+                      5
+                    ],
+                    [
+                      16.4587890625,
+                      4.5
+                    ],
+                    [
+                      16.4,
+                      4
+                    ],
+                    [
+                      16.4169921875,
+                      3.5
+                    ],
+                    [
+                      16.5046875,
+                      3
+                    ],
+                    [
+                      16.6431640625,
+                      2.5
+                    ],
+                    [
+                      16.8125,
+                      2
+                    ],
+                    [
+                      16.9927734375,
+                      1.5
+                    ],
+                    [
+                      17.1640625,
+                      1
+                    ],
+                    [
+                      17.3064453125,
+                      0.5
+                    ],
+                    [
+                      17.4,
+                      0
+                    ]
+                  ]
+                },
+                "version": 1
+              },
+              "world": {
+                "bounds": [
+                  0,
+                  0,
+                  32,
+                  24
+                ],
+                "coordinateSystem": "continuous-xz",
+                "height": 24,
+                "id": "foundation-01",
+                "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+                "scenarioId": "wilderness-material-access-v1",
+                "width": 32
+              }
+            },
+            "pending": {
+              "actorId": "a2",
+              "before": "{\"inventoryWood\":0,\"maxStepDistance\":0.6,\"position\":[18,12]}",
+              "body": "{\"action\":{\"to\":[18.1,12.0],\"type\":\"walk\"},\"commandId\":\"godot_15c83a70b7b1bfb58b3d6e5f543e45b0\",\"expectedStateVersion\":526,\"preconditionMode\":\"actor-state-v1\",\"rulesVersion\":\"r10\",\"schemaVersion\":1}",
+              "commandId": "godot_15c83a70b7b1bfb58b3d6e5f543e45b0",
+              "endpoint": "http://127.0.0.1:44669",
+              "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+              "recordVersion": 4,
+              "worldId": "foundation-01"
+            },
+            "storageOk": true
+          },
+          "ownLaterNote": {
+            "request": {
+              "schemaVersion": 1,
+              "rulesVersion": "r10",
+              "commandId": "2bf08f1efe4847e6a8e05d321993f897",
+              "expectedStateVersion": 526,
+              "action": {
+                "type": "append_entity_note",
+                "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                "text": "\u6211\u5728\u539f\u79fb\u52a8\u6267\u884c\u524d\uff0c\u5148\u5b8c\u6210\u4e86\u8fd9\u6761\u53d1\u8868\u3002",
+                "replyToNoteId": null
+              },
+              "preconditionMode": "actor-state-v1"
+            },
+            "receipt": {
+              "schemaVersion": 1,
+              "rulesVersion": "r10",
+              "stateVersion": 527,
+              "commandId": "2bf08f1efe4847e6a8e05d321993f897",
+              "identity": {
+                "operatorId": "declared-late",
+                "actorId": "a2",
+                "sessionId": "s131d61be279840df94f00244eea8851d"
+              },
+              "eventCursor": 528,
+              "error": null,
+              "status": "committed",
+              "result": {
+                "noteId": "na20ca8f14ce64bd8b5fc7a05358af906",
+                "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                "authorActorId": "a2",
+                "operatorId": "declared-late",
+                "commandId": "2bf08f1efe4847e6a8e05d321993f897",
+                "text": "\u6211\u5728\u539f\u79fb\u52a8\u6267\u884c\u524d\uff0c\u5148\u5b8c\u6210\u4e86\u8fd9\u6761\u53d1\u8868\u3002",
+                "replyToNoteId": null,
+                "stateVersion": 527,
+                "eventCursor": 528,
+                "sharedAtUtc": "2026-10-26T05:08:00.2397910+00:00",
+                "position": [
+                  18,
+                  12
+                ],
+                "inventoryWood": 0,
+                "capabilityVersion": 1,
+                "action": "append_entity_note"
+              },
+              "execution": {
+                "preconditionMode": "actor-state-v1",
+                "observedStateVersion": 526,
+                "appliedOnStateVersion": 526
+              }
+            },
+            "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":527,\"commandId\":\"2bf08f1efe4847e6a8e05d321993f897\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":528,\"error\":null,\"status\":\"committed\",\"result\":{\"noteId\":\"na20ca8f14ce64bd8b5fc7a05358af906\",\"entityId\":\"efbde20b258d74a0eaca3a86e8d455755\",\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"2bf08f1efe4847e6a8e05d321993f897\",\"text\":\"\\u6211\\u5728\\u539F\\u79FB\\u52A8\\u6267\\u884C\\u524D\\uFF0C\\u5148\\u5B8C\\u6210\\u4E86\\u8FD9\\u6761\\u53D1\\u8868\\u3002\",\"replyToNoteId\":null,\"stateVersion\":527,\"eventCursor\":528,\"sharedAtUtc\":\"2026-10-26T05:08:00.2397910\\u002B00:00\",\"position\":[18,12],\"inventoryWood\":0,\"capabilityVersion\":1,\"action\":\"append_entity_note\"},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":526,\"appliedOnStateVersion\":526}}",
+            "note": {
+              "noteId": "na20ca8f14ce64bd8b5fc7a05358af906",
+              "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+              "authorActorId": "a2",
+              "operatorId": "declared-late",
+              "commandId": "2bf08f1efe4847e6a8e05d321993f897",
+              "text": "\u6211\u5728\u539f\u79fb\u52a8\u6267\u884c\u524d\uff0c\u5148\u5b8c\u6210\u4e86\u8fd9\u6761\u53d1\u8868\u3002",
+              "replyToNoteId": null,
+              "stateVersion": 527,
+              "eventCursor": 528,
+              "sharedAtUtc": "2026-10-26T05:08:00.2397910+00:00",
+              "position": [
+                18,
+                12
+              ],
+              "inventoryWood": 0,
+              "capabilityVersion": 1
+            }
+          },
+          "newClientStopped": {
+            "canAct": true,
+            "foreignPending": 0,
+            "healthy": true,
+            "lastReceipt": {
+              "commandId": "godot_15c83a70b7b1bfb58b3d6e5f543e45b0",
+              "error": {
+                "code": "STALE_ACTOR_STATE",
+                "message": "\u8fd9\u4f4d\u5c45\u6c11\u7684\u72b6\u6001\u5df2\u53d8\u5316\uff0c\u8bf7\u91cd\u65b0\u89c2\u5bdf",
+                "mutated": false,
+                "retryable": false
+              },
+              "eventCursor": 528,
+              "execution": {
+                "appliedOnStateVersion": 527,
+                "observedStateVersion": 526,
+                "preconditionMode": "actor-state-v1"
+              },
+              "identity": {
+                "actorId": "a2",
+                "operatorId": "declared-late",
+                "sessionId": "s131d61be279840df94f00244eea8851d"
+              },
+              "rulesVersion": "r10",
+              "schemaVersion": 1,
+              "stateVersion": 527,
+              "status": "rejected"
+            },
+            "message": "\u64cd\u4f5c\u672a\u5b8c\u6210\uff1a\u8fd9\u4f4d\u5c45\u6c11\u7684\u72b6\u6001\u5df2\u53d8\u5316\uff0c\u8bf7\u91cd\u65b0\u89c2\u5bdf",
+            "observation": {
+              "commandBinding": {
+                "header": "World-Instance-Id",
+                "required": true,
+                "version": 1
+              },
+              "commandConcurrency": {
+                "supportedModes": [
+                  "actor-state-v1"
+                ],
+                "version": 1
+              },
+              "commandId": null,
+              "depot": {
+                "available": false,
+                "wood": 0
+              },
+              "entities": [
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "e76a6cc3bf333423e874d310f1f0371a0",
+                  "ownerActorId": "a3",
+                  "position": [
+                    27,
+                    17
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "e9df7ee47564546f098a988085e93ce3d",
+                  "ownerActorId": "a3",
+                  "position": [
+                    30,
+                    17
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "eb40dd030a24941f28c3fb5313fe44784",
+                  "ownerActorId": "a3",
+                  "position": [
+                    27,
+                    14
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "platform",
+                  "definitionVersion": 1,
+                  "embodiedWood": 3,
+                  "entityId": "eca67171501f8438e9fe790bfdbef9789",
+                  "ownerActorId": "a3",
+                  "position": [
+                    30,
+                    14
+                  ],
+                  "rulesVersion": "r10"
+                },
+                {
+                  "definitionId": "bridge",
+                  "definitionVersion": 1,
+                  "embodiedWood": 6,
+                  "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                  "ownerActorId": "a1",
+                  "position": [
+                    18,
+                    12
+                  ],
+                  "rulesVersion": "r10"
+                }
+              ],
+              "entityNotes": {
+                "capability": "entity-notes-v1",
+                "maxPerOperator": 2,
+                "maxTextScalars": 160,
+                "maxTotal": 6,
+                "notes": [
+                  {
+                    "authorActorId": "a1",
+                    "capabilityVersion": 1,
+                    "commandId": "41c29dc4234d46a2a3d9793a9b23a9bb",
+                    "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                    "eventCursor": 527,
+                    "inventoryWood": 6,
+                    "noteId": "n6977d5211fae49929441974b6c5f2757",
+                    "operatorId": "local-operator",
+                    "position": [
+                      18,
+                      12
+                    ],
+                    "replyToNoteId": null,
+                    "sharedAtUtc": "2026-10-26T05:07:54.3965740+00:00",
+                    "stateVersion": 526,
+                    "text": "\u539f\u6865\u4ecd\u5728\uff0c\u8fd9\u662f\u53ef\u4ee5\u63a5\u5199\u7684\u539f\u6587\u3002"
+                  },
+                  {
+                    "authorActorId": "a2",
+                    "capabilityVersion": 1,
+                    "commandId": "2bf08f1efe4847e6a8e05d321993f897",
+                    "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                    "eventCursor": 528,
+                    "inventoryWood": 0,
+                    "noteId": "na20ca8f14ce64bd8b5fc7a05358af906",
+                    "operatorId": "declared-late",
+                    "position": [
+                      18,
+                      12
+                    ],
+                    "replyToNoteId": null,
+                    "sharedAtUtc": "2026-10-26T05:08:00.2397910+00:00",
+                    "stateVersion": 527,
+                    "text": "\u6211\u5728\u539f\u79fb\u52a8\u6267\u884c\u524d\uff0c\u5148\u5b8c\u6210\u4e86\u8fd9\u6761\u53d1\u8868\u3002"
+                  }
+                ],
+                "reach": 1.6,
+                "selfCount": 1,
+                "target": {
+                  "definitionId": "bridge",
+                  "definitionVersion": 1,
+                  "embodiedWood": 6,
+                  "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+                  "ownerActorId": "a1",
+                  "position": [
+                    18,
+                    12
+                  ],
+                  "rulesVersion": "r10"
+                },
+                "totalCount": 2,
+                "version": 1
+              },
+              "error": null,
+              "eventCursor": 528,
+              "gathering": {
+                "quantityPerAction": 1,
+                "version": 1
+              },
+              "identity": {
+                "actorId": "a2",
+                "operatorId": "declared-late",
+                "sessionId": "s131d61be279840df94f00244eea8851d"
+              },
+              "materialAccess": {
+                "active": true,
+                "buildExclusion": [
+                  27,
+                  9,
+                  29,
+                  11
+                ],
+                "capacity": 6,
+                "controlBasis": "declared-local-fixture",
+                "controlRoster": [
+                  {
+                    "actorId": "a1",
+                    "operatorId": "local-operator"
+                  },
+                  {
+                    "actorId": "a1_alias",
+                    "operatorId": "local-operator"
+                  },
+                  {
+                    "actorId": "a2",
+                    "operatorId": "declared-late"
+                  },
+                  {
+                    "actorId": "a3",
+                    "operatorId": "declared-third"
+                  }
+                ],
+                "currentReservation": null,
+                "enabledAtServiceMs": 21047,
+                "freeWood": 0,
+                "generatedWood": 12,
+                "inputBudget": 12,
+                "leaseMs": 60000,
+                "nextProductionAtMs": 81047,
+                "position": [
+                  28,
+                  10
+                ],
+                "productionIntervalMs": 10000,
+                "queue": [],
+                "recentReservations": [],
+                "reservationQuantity": 3,
+                "serviceMs": 75474,
+                "sourceId": "wood-source-east",
+                "stockWood": 0,
+                "version": 1
+              },
+              "materialTransfer": {
+                "maxQuantity": 12,
+                "reach": 1.6,
+                "recipientConfirmation": false,
+                "resource": "wood",
+                "version": 1
+              },
+              "movement": {
+                "buildReach": 3.2,
+                "gatherReach": 1.6,
+                "kind": "continuous",
+                "maxStepDistance": 0.6,
+                "radius": 0.28,
+                "speed": 3,
+                "version": 1
+              },
+              "recentTransfers": {
+                "items": [],
+                "limit": 20,
+                "truncated": false
+              },
+              "recipes": [
+                {
+                  "definitionId": "platform",
+                  "id": "platform.v1",
+                  "woodCost": 3
+                },
+                {
+                  "definitionId": "bridge",
+                  "id": "bridge.v1",
+                  "woodCost": 6
+                }
+              ],
+              "residents": [
+                {
+                  "actorId": "a1",
+                  "position": [
+                    18,
+                    12
+                  ]
+                },
+                {
+                  "actorId": "a1_alias",
+                  "position": [
+                    5,
+                    7
+                  ]
+                },
+                {
+                  "actorId": "a2",
+                  "position": [
+                    18,
+                    12
+                  ]
+                },
+                {
+                  "actorId": "a3",
+                  "position": [
+                    18,
+                    12
+                  ]
+                }
+              ],
+              "resourceAudit": {
+                "conserved": true,
+                "depotWood": 0,
+                "embodiedWood": 18,
+                "generatedWood": 12,
+                "initialWood": 12,
+                "inventoryWood": 6,
+                "issuedWood": 24,
+                "sourceWood": 0,
+                "wildWood": 0
+              },
+              "resourceNodes": [
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-east-north",
+                  "position": [
+                    25.4,
+                    5.8
+                  ],
+                  "remainingWood": 0
+                },
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-east-south",
+                  "position": [
+                    25.7,
+                    18.2
+                  ],
+                  "remainingWood": 0
+                },
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-west-north",
+                  "position": [
+                    6.2,
+                    7.8
+                  ],
+                  "remainingWood": 0
+                },
+                {
+                  "initialWood": 3,
+                  "kind": "tree",
+                  "nodeId": "tree-west-south",
+                  "position": [
+                    9.2,
+                    16.3
+                  ],
+                  "remainingWood": 0
+                }
+              ],
+              "rulesVersion": "r10",
+              "schemaVersion": 1,
+              "self": {
+                "actorId": "a2",
+                "inventory": {
+                  "wood": 0
+                },
+                "position": [
+                  18,
+                  12
+                ]
+              },
+              "stateVersion": 527,
+              "terrain": {
+                "obstacles": [
+                  {
+                    "id": "rock-west",
+                    "kind": "rock",
+                    "position": [
+                      10.5,
+                      8.5
+                    ],
+                    "radius": 1.05
+                  },
+                  {
+                    "id": "rock-south",
+                    "kind": "rock",
+                    "position": [
+                      5.6,
+                      19.7
+                    ],
+                    "radius": 0.8
+                  },
+                  {
+                    "id": "rock-east",
+                    "kind": "rock",
+                    "position": [
+                      23,
+                      12.5
+                    ],
+                    "radius": 1.2
+                  },
+                  {
+                    "id": "rock-north",
+                    "kind": "rock",
+                    "position": [
+                      21.8,
+                      3.2
+                    ],
+                    "radius": 0.75
+                  }
+                ],
+                "river": {
+                  "centerline": [
+                    [
+                      16,
+                      0
+                    ],
+                    [
+                      15.9064453125,
+                      0.5
+                    ],
+                    [
+                      15.7640625,
+                      1
+                    ],
+                    [
+                      15.5927734375,
+                      1.5
+                    ],
+                    [
+                      15.4125,
+                      2
+                    ],
+                    [
+                      15.2431640625,
+                      2.5
+                    ],
+                    [
+                      15.1046875,
+                      3
+                    ],
+                    [
+                      15.0169921875,
+                      3.5
+                    ],
+                    [
+                      15,
+                      4
+                    ],
+                    [
+                      15.0587890625,
+                      4.5
+                    ],
+                    [
+                      15.1765625,
+                      5
+                    ],
+                    [
+                      15.3404296875,
+                      5.5
+                    ],
+                    [
+                      15.5375,
+                      6
+                    ],
+                    [
+                      15.7548828125,
+                      6.5
+                    ],
+                    [
+                      15.9796875,
+                      7
+                    ],
+                    [
+                      16.1990234375,
+                      7.5
+                    ],
+                    [
+                      16.4,
+                      8
+                    ],
+                    [
+                      16.608203125,
+                      8.5
+                    ],
+                    [
+                      16.846875,
+                      9
+                    ],
+                    [
+                      17.099609375,
+                      9.5
+                    ],
+                    [
+                      17.35,
+                      10
+                    ],
+                    [
+                      17.581640625,
+                      10.5
+                    ],
+                    [
+                      17.778125,
+                      11
+                    ],
+                    [
+                      17.923046875,
+                      11.5
+                    ],
+                    [
+                      18,
+                      12
+                    ],
+                    [
+                      18.00419921875,
+                      12.5
+                    ],
+                    [
+                      17.94921875,
+                      13
+                    ],
+                    [
+                      17.84619140625,
+                      13.5
+                    ],
+                    [
+                      17.70625,
+                      14
+                    ],
+                    [
+                      17.54052734375,
+                      14.5
+                    ],
+                    [
+                      17.36015625,
+                      15
+                    ],
+                    [
+                      17.17626953125,
+                      15.5
+                    ],
+                    [
+                      17,
+                      16
+                    ],
+                    [
+                      16.81142578125,
+                      16.5
+                    ],
+                    [
+                      16.59140625,
+                      17
+                    ],
+                    [
+                      16.35224609375,
+                      17.5
+                    ],
+                    [
+                      16.10625,
+                      18
+                    ],
+                    [
+                      15.86572265625,
+                      18.5
+                    ],
+                    [
+                      15.64296875,
+                      19
+                    ],
+                    [
+                      15.45029296875,
+                      19.5
+                    ],
+                    [
+                      15.3,
+                      20
+                    ],
+                    [
+                      15.19345703125,
+                      20.5
+                    ],
+                    [
+                      15.11953125,
+                      21
+                    ],
+                    [
+                      15.07177734375,
+                      21.5
+                    ],
+                    [
+                      15.04375,
+                      22
+                    ],
+                    [
+                      15.02900390625,
+                      22.5
+                    ],
+                    [
+                      15.02109375,
+                      23
+                    ],
+                    [
+                      15.01357421875,
+                      23.5
+                    ],
+                    [
+                      15.0,
+                      24
+                    ]
+                  ],
+                  "halfWidth": 1.4,
+                  "polygon": [
+                    [
+                      14.6,
+                      0
+                    ],
+                    [
+                      14.5064453125,
+                      0.5
+                    ],
+                    [
+                      14.3640625,
+                      1
+                    ],
+                    [
+                      14.1927734375,
+                      1.5
+                    ],
+                    [
+                      14.0125,
+                      2
+                    ],
+                    [
+                      13.8431640625,
+                      2.5
+                    ],
+                    [
+                      13.7046875,
+                      3
+                    ],
+                    [
+                      13.6169921875,
+                      3.5
+                    ],
+                    [
+                      13.6,
+                      4
+                    ],
+                    [
+                      13.6587890625,
+                      4.5
+                    ],
+                    [
+                      13.7765625,
+                      5
+                    ],
+                    [
+                      13.9404296875,
+                      5.5
+                    ],
+                    [
+                      14.1375,
+                      6
+                    ],
+                    [
+                      14.3548828125,
+                      6.5
+                    ],
+                    [
+                      14.5796875,
+                      7
+                    ],
+                    [
+                      14.7990234375,
+                      7.5
+                    ],
+                    [
+                      15.0,
+                      8
+                    ],
+                    [
+                      15.208203125,
+                      8.5
+                    ],
+                    [
+                      15.446875,
+                      9
+                    ],
+                    [
+                      15.699609375,
+                      9.5
+                    ],
+                    [
+                      15.95,
+                      10
+                    ],
+                    [
+                      16.181640625,
+                      10.5
+                    ],
+                    [
+                      16.378125,
+                      11
+                    ],
+                    [
+                      16.523046875,
+                      11.5
+                    ],
+                    [
+                      16.6,
+                      12
+                    ],
+                    [
+                      16.60419921875,
+                      12.5
+                    ],
+                    [
+                      16.54921875,
+                      13
+                    ],
+                    [
+                      16.44619140625,
+                      13.5
+                    ],
+                    [
+                      16.30625,
+                      14
+                    ],
+                    [
+                      16.14052734375,
+                      14.5
+                    ],
+                    [
+                      15.96015625,
+                      15
+                    ],
+                    [
+                      15.77626953125,
+                      15.5
+                    ],
+                    [
+                      15.6,
+                      16
+                    ],
+                    [
+                      15.41142578125,
+                      16.5
+                    ],
+                    [
+                      15.19140625,
+                      17
+                    ],
+                    [
+                      14.95224609375,
+                      17.5
+                    ],
+                    [
+                      14.70625,
+                      18
+                    ],
+                    [
+                      14.46572265625,
+                      18.5
+                    ],
+                    [
+                      14.24296875,
+                      19
+                    ],
+                    [
+                      14.05029296875,
+                      19.5
+                    ],
+                    [
+                      13.9,
+                      20
+                    ],
+                    [
+                      13.79345703125,
+                      20.5
+                    ],
+                    [
+                      13.71953125,
+                      21
+                    ],
+                    [
+                      13.67177734375,
+                      21.5
+                    ],
+                    [
+                      13.64375,
+                      22
+                    ],
+                    [
+                      13.62900390625,
+                      22.5
+                    ],
+                    [
+                      13.62109375,
+                      23
+                    ],
+                    [
+                      13.61357421875,
+                      23.5
+                    ],
+                    [
+                      13.6,
+                      24
+                    ],
+                    [
+                      16.4,
+                      24
+                    ],
+                    [
+                      16.41357421875,
+                      23.5
+                    ],
+                    [
+                      16.42109375,
+                      23
+                    ],
+                    [
+                      16.42900390625,
+                      22.5
+                    ],
+                    [
+                      16.44375,
+                      22
+                    ],
+                    [
+                      16.47177734375,
+                      21.5
+                    ],
+                    [
+                      16.51953125,
+                      21
+                    ],
+                    [
+                      16.59345703125,
+                      20.5
+                    ],
+                    [
+                      16.7,
+                      20
+                    ],
+                    [
+                      16.85029296875,
+                      19.5
+                    ],
+                    [
+                      17.04296875,
+                      19
+                    ],
+                    [
+                      17.26572265625,
+                      18.5
+                    ],
+                    [
+                      17.50625,
+                      18
+                    ],
+                    [
+                      17.75224609375,
+                      17.5
+                    ],
+                    [
+                      17.99140625,
+                      17
+                    ],
+                    [
+                      18.21142578125,
+                      16.5
+                    ],
+                    [
+                      18.4,
+                      16
+                    ],
+                    [
+                      18.57626953125,
+                      15.5
+                    ],
+                    [
+                      18.76015625,
+                      15
+                    ],
+                    [
+                      18.94052734375,
+                      14.5
+                    ],
+                    [
+                      19.10625,
+                      14
+                    ],
+                    [
+                      19.24619140625,
+                      13.5
+                    ],
+                    [
+                      19.34921875,
+                      13
+                    ],
+                    [
+                      19.40419921875,
+                      12.5
+                    ],
+                    [
+                      19.4,
+                      12
+                    ],
+                    [
+                      19.323046875,
+                      11.5
+                    ],
+                    [
+                      19.178125,
+                      11
+                    ],
+                    [
+                      18.981640625,
+                      10.5
+                    ],
+                    [
+                      18.75,
+                      10
+                    ],
+                    [
+                      18.499609375,
+                      9.5
+                    ],
+                    [
+                      18.246875,
+                      9
+                    ],
+                    [
+                      18.008203125,
+                      8.5
+                    ],
+                    [
+                      17.8,
+                      8
+                    ],
+                    [
+                      17.5990234375,
+                      7.5
+                    ],
+                    [
+                      17.3796875,
+                      7
+                    ],
+                    [
+                      17.1548828125,
+                      6.5
+                    ],
+                    [
+                      16.9375,
+                      6
+                    ],
+                    [
+                      16.7404296875,
+                      5.5
+                    ],
+                    [
+                      16.5765625,
+                      5
+                    ],
+                    [
+                      16.4587890625,
+                      4.5
+                    ],
+                    [
+                      16.4,
+                      4
+                    ],
+                    [
+                      16.4169921875,
+                      3.5
+                    ],
+                    [
+                      16.5046875,
+                      3
+                    ],
+                    [
+                      16.6431640625,
+                      2.5
+                    ],
+                    [
+                      16.8125,
+                      2
+                    ],
+                    [
+                      16.9927734375,
+                      1.5
+                    ],
+                    [
+                      17.1640625,
+                      1
+                    ],
+                    [
+                      17.3064453125,
+                      0.5
+                    ],
+                    [
+                      17.4,
+                      0
+                    ]
+                  ]
+                },
+                "version": 1
+              },
+              "world": {
+                "bounds": [
+                  0,
+                  0,
+                  32,
+                  24
+                ],
+                "coordinateSystem": "continuous-xz",
+                "height": 24,
+                "id": "foundation-01",
+                "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+                "scenarioId": "wilderness-material-access-v1",
+                "width": 32
+              }
+            },
+            "pending": {},
+            "storageOk": true
+          },
+          "onlyOriginalBodyResubmitted": true,
+          "audit": {
+            "issued": 24,
+            "generated": 12,
+            "wild": 0,
+            "source": 0,
+            "inventory": 6,
+            "embodied": 18,
+            "activeReserved": 0,
+            "serviceMs": 75611,
+            "processedPeriod": 5,
+            "production": [
+              [
+                1,
+                31047,
+                3,
+                258
+              ],
+              [
+                2,
+                41047,
+                3,
+                287
+              ],
+              [
+                3,
+                51047,
+                3,
+                337
+              ],
+              [
+                4,
+                61047,
+                3,
+                364
+              ]
+            ],
+            "stateVersion": 527,
+            "realCommandsThisBranch": 1,
+            "processStopped": true
+          },
+          "preserved": {
+            "originalReceiptsPreserved": 518,
+            "allOriginalEntitiesInventoriesLedgerAndProductionUnchanged": true
+          }
+        }
+      ]
+    }
+  },
+  "worlds": [
+    {
+      "name": "ready-fixture",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "original-old-build",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "original-old-walk",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    }
+  ],
+  "scope": "independent frozen Godot entity notes recovery",
+  "contractSha256": "0049ac5c2f1c3a369d0450efd497a1e383433115949bf6db093cadf9b3c550e0",
+  "externalModelCalls": 0,
+  "directSqlStateEdits": false,
+  "controlledClock": false,
+  "earnedExhaustedSeed": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/notes-exhausted-baseline-20261026T045741197461Z",
+  "clonedStoppedBranches": true,
+  "sourceHashes": {
+    "clients/godot/command_evidence.gd": "f7d3c1e1af823d264259a56bfa13902cda5ff65b7e0811a18d5d4857176a7d68",
+    "clients/godot/entity_note_evidence.gd": "f80e6f82a54e58bbfb2e9dcf8ee9512447c546427c1d1dcc00787f4f3682d1a5",
+    "clients/godot/entity_notes_panel.gd": "3901132c790dd452c699b94e268aa1022faa8337e2dd840ab809bfda0e29968b",
+    "clients/godot/main.gd": "dfe4f751d62e677fb789b27b334f451160ab766e4984d120d67ec18216aa7c32",
+    "clients/godot/material_panel.gd": "39624af0442670059f6408b73b46cf21eaefb2aa0b75b19828194bba9a48cc3c",
+    "clients/godot/pending_store.gd": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/world_client.gd": "9d30e2c8bcfc0287b68605ecdab6f046f575410a069b2ddf3a6bc729e0aca193",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "ebf2271dd1541216ec7f0785600032e18607e1b027a95a5100f41f37395535d2",
+    "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424",
+    "clients/godot/main.tscn": "58496e2c5357a2774f2a70f19d0dcb9a015167d8bf9849dc68f4f20a7841e6b1",
+    "clients/godot/river.gdshader": "b5de02167c429ce338fff61bb0ad180aa4d2d1b7c5c1e96f3cbce3f4ba88631b"
+  },
+  "fixture": {
+    "originalReference": {
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "commandId": "41c29dc4234d46a2a3d9793a9b23a9bb",
+        "expectedStateVersion": 525,
+        "action": {
+          "type": "append_entity_note",
+          "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+          "text": "\u539f\u6865\u4ecd\u5728\uff0c\u8fd9\u662f\u53ef\u4ee5\u63a5\u5199\u7684\u539f\u6587\u3002",
+          "replyToNoteId": null
+        },
+        "preconditionMode": "actor-state-v1"
+      },
+      "receipt": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 526,
+        "commandId": "41c29dc4234d46a2a3d9793a9b23a9bb",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "s48ab04efc6f7451aa43d6a8caf8e0108"
+        },
+        "eventCursor": 527,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "noteId": "n6977d5211fae49929441974b6c5f2757",
+          "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+          "authorActorId": "a1",
+          "operatorId": "local-operator",
+          "commandId": "41c29dc4234d46a2a3d9793a9b23a9bb",
+          "text": "\u539f\u6865\u4ecd\u5728\uff0c\u8fd9\u662f\u53ef\u4ee5\u63a5\u5199\u7684\u539f\u6587\u3002",
+          "replyToNoteId": null,
+          "stateVersion": 526,
+          "eventCursor": 527,
+          "sharedAtUtc": "2026-10-26T05:07:54.3965740+00:00",
+          "position": [
+            18,
+            12
+          ],
+          "inventoryWood": 6,
+          "capabilityVersion": 1,
+          "action": "append_entity_note"
+        },
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 525,
+          "appliedOnStateVersion": 525
+        }
+      },
+      "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":526,\"commandId\":\"41c29dc4234d46a2a3d9793a9b23a9bb\",\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s48ab04efc6f7451aa43d6a8caf8e0108\"},\"eventCursor\":527,\"error\":null,\"status\":\"committed\",\"result\":{\"noteId\":\"n6977d5211fae49929441974b6c5f2757\",\"entityId\":\"efbde20b258d74a0eaca3a86e8d455755\",\"authorActorId\":\"a1\",\"operatorId\":\"local-operator\",\"commandId\":\"41c29dc4234d46a2a3d9793a9b23a9bb\",\"text\":\"\\u539F\\u6865\\u4ECD\\u5728\\uFF0C\\u8FD9\\u662F\\u53EF\\u4EE5\\u63A5\\u5199\\u7684\\u539F\\u6587\\u3002\",\"replyToNoteId\":null,\"stateVersion\":526,\"eventCursor\":527,\"sharedAtUtc\":\"2026-10-26T05:07:54.3965740\\u002B00:00\",\"position\":[18,12],\"inventoryWood\":6,\"capabilityVersion\":1,\"action\":\"append_entity_note\"},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":525,\"appliedOnStateVersion\":525}}",
+      "note": {
+        "noteId": "n6977d5211fae49929441974b6c5f2757",
+        "entityId": "efbde20b258d74a0eaca3a86e8d455755",
+        "authorActorId": "a1",
+        "operatorId": "local-operator",
+        "commandId": "41c29dc4234d46a2a3d9793a9b23a9bb",
+        "text": "\u539f\u6865\u4ecd\u5728\uff0c\u8fd9\u662f\u53ef\u4ee5\u63a5\u5199\u7684\u539f\u6587\u3002",
+        "replyToNoteId": null,
+        "stateVersion": 526,
+        "eventCursor": 527,
+        "sharedAtUtc": "2026-10-26T05:07:54.3965740+00:00",
+        "position": [
+          18,
+          12
+        ],
+        "inventoryWood": 6,
+        "capabilityVersion": 1
+      }
+    },
+    "audit": {
+      "issued": 24,
+      "generated": 12,
+      "wild": 0,
+      "source": 0,
+      "inventory": 6,
+      "embodied": 18,
+      "activeReserved": 0,
+      "serviceMs": 74826,
+      "processedPeriod": 5,
+      "production": [
+        [
+          1,
+          31047,
+          3,
+          258
+        ],
+        [
+          2,
+          41047,
+          3,
+          287
+        ],
+        [
+          3,
+          51047,
+          3,
+          337
+        ],
+        [
+          4,
+          61047,
+          3,
+          364
+        ]
+      ],
+      "stateVersion": 526,
+      "realCommandsThisBranch": 114,
+      "processStopped": true
+    },
+    "preserved": {
+      "originalReceiptsPreserved": 404,
+      "allOriginalEntitiesInventoriesLedgerAndProductionUnchanged": true
+    }
+  }
+}

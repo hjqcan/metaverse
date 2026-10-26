@@ -15,7 +15,7 @@
   };
   const providers = { "codex-exec": "模型决策", "fixed-reference": "固定策略基线", "test-double": "测试替身 · 非真实模型" };
   const structures = { "platform.v1": { label: "平台", definition: "platform", wood: 3 }, "bridge.v1": { label: "木桥", definition: "bridge", wood: 6 } };
-  const actionNames = { reserve_material: "预约材料", harvest_material: "按原预约领取", walk: "行走", move: "移动", claim: "领取木材", gather: "采集木材", transfer: "赠送木材", build: "建造", visit: "到访", postcard: "分享手记", mosaic: "绘制画布", mosaic_propose: "提出修改建议", mosaic_review: "审阅修改建议", observe: "观察", wait: "等待" };
+  const actionNames = { append_entity_note: "发表旧桥手记", reserve_material: "预约材料", harvest_material: "按原预约领取", walk: "行走", move: "移动", claim: "领取木材", gather: "采集木材", transfer: "赠送木材", build: "建造", visit: "到访", postcard: "分享手记", mosaic: "绘制画布", mosaic_propose: "提出修改建议", mosaic_review: "审阅修改建议", observe: "观察", wait: "等待" };
   const stepStatuses = { committed: "已提交", rejected: "已拒绝", unknown: "结果未知", pending: "待确认", failed: "失败" };
   const reasonNames = { round_trip_verified: "已核验到达目标并返回原起点", max_steps: "本次分段步数已到，等待恢复" };
   let report = null;
@@ -145,7 +145,7 @@
       require(step.inventoryWood === null || integer(step.inventoryWood), `${prefix}的木材库存格式不正确。`);
       if (actorState) {
         require(step.preconditionMode === m.preconditionMode && integer(step.expectedStateVersion)
-          && (["walk", "gather", "build"].includes(step.action.type) || ["r9", "r10"].includes(m.rulesVersion) && step.action.type === "transfer" || m.rulesVersion === "r10" && window.MaterialReport.action(step.action)), `${prefix}缺少原命令的前置模式或观察版本。`);
+          && (["walk", "gather", "build"].includes(step.action.type) || ["r9", "r10"].includes(m.rulesVersion) && step.action.type === "transfer" || m.rulesVersion === "r10" && (window.MaterialReport.action(step.action) || window.EntityNoteReport.action(step.action))), `${prefix}缺少原命令的前置模式或观察版本。`);
         if (["committed", "rejected"].includes(step.status)) {
           const execution = step.execution;
           require(object(execution) && execution.preconditionMode === m.preconditionMode
@@ -178,6 +178,7 @@
     });
     require(string(feedback.summary) && [feedback.issues, feedback.suggestions].every((v) => Array.isArray(v) && v.every(string)), "执行反馈须包含 summary 及字符串数组 issues、suggestions。");
     window.MaterialReport.validate(data, require);
+    window.EntityNoteReport.validate(data, require);
     return data;
   }
 
@@ -356,6 +357,13 @@
     put("verified-at", f.verifiedAtUtc ? `${new Date(f.verifiedAtUtc).toISOString().replace("T", " ").replace(".000Z", " UTC").replace(/Z$/, " UTC")}` : "未记录核实时间");
     put("state-versions", `${f.startStateVersion ?? "未知"} → ${f.endStateVersion ?? "未知"}`);
     put("created-summary", `${f.woodGathered === undefined ? "" : `采集 ${f.woodGathered} · 领取 `}${f.woodClaimed} 单位木材${m.rulesVersion === "r10" ? ` · 预约领取 ${f.materialWoodHarvested ?? 0}` : ""}${["r9", "r10"].includes(m.rulesVersion) ? ` · 赠送 ${f.woodTransferred ?? 0}` : ""} / ${f.createdEntityIds.length} 个设施`);
+    const notes = window.EntityNoteReport.assess(data);
+    $("entity-note-panel").hidden = !notes.uses;
+    $("entity-note-fact").dataset.verified = String(notes.verified);
+    put("entity-note-draft", notes.uses ? `任务原文：${m.goal.entityNote.text}` : "");
+    put("entity-note-reference", notes.uses ? `目标：${m.goal.entityNote.entityId} · 引用：${m.goal.entityNote.replyToNoteId ?? "独立留言"}` : "");
+    put("entity-note-fact", notes.verified ? `已核对发表记录：居民 ${f.entityNote.authorActorId} · v${f.entityNote.stateVersion}` : "尚未确认发表；到达或任务正文不能代替原手记事实。");
+    put("entity-note-text", notes.verified ? f.entityNote.text : "");
     const material = window.MaterialReport.assess(data);
     $("material-fact").hidden = !material.uses;
     $("material-fact").dataset.verified = String(material.verified);
@@ -365,6 +373,7 @@
       : "尚未核实本任务材料领取；排队、余额或来源存量不能代替原领取事实。" : "");
     $("query-budget-item").hidden = b.limits.queries === undefined;
     const warnings = [];
+    if (!notes.consistent) warnings.push("手记汇总与原命令、正文、引用或作者记录不一致。");
     if (!material.consistent) warnings.push("材料入口汇总与原预约、领取步骤或身份不一致。");
     const cuts = data.steps.filter((s) => s.action.type === "gather" && s.status === "committed").length;
     const gatheringConsistent = (f.woodGathered ?? 0) === cuts && (cuts === 0 || m.allowGather === true && ["r7", "r8", "r9", "r10"].includes(m.rulesVersion));
@@ -376,7 +385,7 @@
       && data.steps.slice(data.steps.findIndex(s => s.commandId === built.commandId))
         .some(s => s.status === "committed" && s.position && near(s.position, m.goal.target));
     const walkConsistent = !continuous(data.world) || m.goal && [m.origin, ...committedPositions].some(p => near(p, m.goal.target)) && near(committedPositions.at(-1) || m.origin, m.origin) && !data.steps.some(s => s.status === "committed" && s.blocked === true);
-    const incomplete = material.uses && !material.verified || !walkConsistent || !constructionVisited || !gatheringConsistent || !transferConsistent || !f.goalReached || !f.returned || !m.goal || requiresTransfer && !transferVerified || requiresConstruction && !constructionVerified || requiresActivity && !activityVerified || requiresPostcard && !postcardVerified || requiresMosaic && !mosaicVerified || (m.proposeMosaic || m.reviewMosaicProposal) && !consentVerified;
+    const incomplete = notes.uses && !notes.verified || material.uses && !material.verified || !walkConsistent || !constructionVisited || !gatheringConsistent || !transferConsistent || !f.goalReached || !f.returned || !m.goal || requiresTransfer && !transferVerified || requiresConstruction && !constructionVerified || requiresActivity && !activityVerified || requiresPostcard && !postcardVerified || requiresMosaic && !mosaicVerified || (m.proposeMosaic || m.reviewMosaicProposal) && !consentVerified;
     if (m.status === "completed" && incomplete) warnings.push("报告标记为已完成，但到达、返回、目标、到访或本次创作事实不完整，不能据此认定任务成功。");
     if (d && m.goal && d.goalId !== m.goal.id) warnings.push("模型选择与执行目标编号不一致，请复核原始报告。");
     if (d?.provider.kind === "test-double") warnings.push("这份报告使用测试替身，不是一次真实模型运行；仅供客户端或执行器测试。");
