@@ -1,0 +1,23 @@
+{
+  "missionId": "mosaic-second",
+  "objective": "先读取花园当前画布里上一位居民留下的河流，再到静谧花园，在河流旁的空白格添加叶绿植物，可点缀花红。保留所有已有非空白格，最多改 8 格，然后返回。",
+  "goals": [
+    {
+      "id": "garden",
+      "label": "静谧花园",
+      "target": [
+        1,
+        6
+      ],
+      "activityId": "garden"
+    }
+  ],
+  "allowBuild": false,
+  "paintMosaic": true,
+  "budgets": {
+    "commands": 12,
+    "wood": 0,
+    "seconds": 600,
+    "modelCalls": 1
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "recordedAtUtc": "2026-10-25T14:31:32.066872+00:00",
+  "previews": [
+    {
+      "url": "http://127.0.0.1:5080",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r1",
+      "stateVersion": 7,
+      "position": [
+        1,
+        1
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 12
+      },
+      "entityCount": 0,
+      "postcardCount": 0,
+      "mosaicRevision": null
+    },
+    {
+      "url": "http://127.0.0.1:5081",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r2",
+      "stateVersion": 19,
+      "position": [
+        1,
+        1
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 6
+      },
+      "entityCount": 2,
+      "postcardCount": 0,
+      "mosaicRevision": null
+    },
+    {
+      "url": "http://127.0.0.1:5082",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r3",
+      "stateVersion": 0,
+      "position": [
+        1,
+        1
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 12
+      },
+      "entityCount": 0,
+      "postcardCount": 0,
+      "mosaicRevision": null
+    },
+    {
+      "url": "http://127.0.0.1:5083",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r4",
+      "stateVersion": 0,
+      "position": [
+        1,
+        1
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 12
+      },
+      "entityCount": 0,
+      "postcardCount": 0,
+      "mosaicRevision": null
+    },
+    {
+      "url": "http://127.0.0.1:5084",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r5",
+      "stateVersion": 0,
+      "position": [
+        1,
+        1
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 12
+      },
+      "entityCount": 0,
+      "postcardCount": 0,
+      "mosaicRevision": 0
+    }
+  ]
+}

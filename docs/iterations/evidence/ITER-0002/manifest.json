@@ -1,0 +1,53 @@
+{
+  "iteration": "ITER-0002",
+  "recordedAtUtc": "2026-10-25T09:40:01.017645+00:00",
+  "baseCommit": "8401e81a1d88d6fa79cd78bbc043470cbcc22ae8",
+  "workingTree": "uncommitted implementation; hashes identify reviewed files",
+  "implementation": {
+    "README.md": "3c883e0ad690cee720e116436f9ad8ed0d35d118c83bd6e1738994287f1d3513",
+    "docs/contracts/passage-v1.md": "496fca7f88856ff4d3af18d4bc8f1f077813179548d52474f3a466f46b38ba73",
+    "docs/iterations/ITER-0002-results.md": "fe8a4717f20f7b07123ff5795d7e8a1c4b1a813d82800aee4183a8caf1f9871a",
+    "docs/proposals/ITER-0002-passage.md": "112b4738b277dfdf759fdc9762b14a1a6d1db229037b8e43a201643be35056f8",
+    "scripts/foundation_agent.py": "010977c5864481e06100d65c7b51463455773a45300c1780b20d4fb36a682388",
+    "scripts/passage_agent.py": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e",
+    "scripts/run_passage.sh": "68487fef2616ec02c159dfbbd24bd72494e99e2761d4ed73d4a087c051ccbe74",
+    "scripts/run_world.sh": "a79189f83b6f866dac3a1591f7430129942be929efa084e0cd9984b11b1d63c5",
+    "src/World.Server/Program.cs": "300f8e566de3f2f185b50ff1b43733d914099df7b8e496793a11a2e748f1e43d",
+    "src/World.Server/Protocol.cs": "e9b4703acab970c4f54f183397b4b383a703a2dd40e3b370915177e24bca3bd0",
+    "src/World.Server/ServerConfiguration.cs": "8b33f7b3aae70229397362d0571769198303507712accd624ecedb1320eea8d1",
+    "src/World.Server/World.Server.csproj": "4353103ef1279d936ac936becd189f6396d5df1acc48311cc9aa3be9e50124f8",
+    "src/World.Server/WorldDatabase.cs": "f0ae1732002ec090906e8c7d9c530acd7d3b3f4b5ace047bd49dff487d5d5ab0",
+    "src/World.Server/WorldScenario.cs": "557ec16d09f37acb86c244c519a2542766d6f94cc6de2a077747412fc00e6cbf",
+    "src/World.Server/WorldService.cs": "a53277e70eed741f7c7451fe7f258640418b443e882ef85833b47dc26d66d481",
+    "src/World.Server/packages.lock.json": "0bc843612f280bb6f5b99a0dc84e140f7d4d0deb02313af6c05e7e41ea7c2516",
+    "src/World.Server/wwwroot/app.js": "e7e837c848d26fe33251efb0b6b77d650cdaf346f4209426d798fbdc724e03f3",
+    "src/World.Server/wwwroot/index.html": "8b5e90d6e9256765aaaa477aaab75db8b6a4b03f87bb0d8e16b1668009728183",
+    "src/World.Server/wwwroot/styles.css": "17a926abf13dd7da9c206aa9e19517e19b5c425100bbc57737a516c982e7bcd8",
+    "tests/README.md": "87fee6285d0500da78f6e9855488689af8a34c04cf6d9d814e8d1e802b1194b2",
+    "tests/browser/foundation.mjs": "75c11de07f1b3558c9aa5f304410be298166acae1b243fd85021ac4882e7b387",
+    "tests/browser/package-lock.json": "aa7adb1b42951187624497fbe4d45a7869e1f797a4df6714ba006cad74659977",
+    "tests/browser/package.json": "187e2a417705243b49b58850684a2941284a8be3b030ed87856e027857aef498",
+    "tests/browser/passage.mjs": "af8804b46ee36a83cbee35e0d5fe0b3ba7314bf229353b16d6ceda78b344f2dd",
+    "tests/fixtures/foundation-v1-populated.sql": "1fc203d0a7802006c66dd7f3e46c455041e1c3917c231cb700e4fbf3ffcc6e63",
+    "tests/foundation_api.py": "8835cc77d18f007746242723648850bfe462082cd702bfa8645fce23d99da8d7",
+    "tests/passage_api.py": "be1f2c2697429c520eea0251bcc270873bafaf6d966914cddf53f4f9a788b93b"
+  },
+  "evidence": {
+    "docs/iterations/evidence/ITER-0002/browser-results.json": "1a284f02d8d35534c2d7c7afe08ec95d26c7302abc175c5abd5f55da7d4d9c4a",
+    "docs/iterations/evidence/ITER-0002/comparison.json": "e7a6fab7dbc22c727b6b4fadca82a2a5e15c0d60e916e2bdf16ac676df6e8f42",
+    "docs/iterations/evidence/ITER-0002/desktop.png": "362f983fa4f04f73c977c9490225d823615ded4c93e16cc75ffb99fb04d2948e",
+    "docs/iterations/evidence/ITER-0002/feedback-before.json": "c9eaa9629d2421a2eaa9de2b253d3f4142d0c0705c6c87565d708e26ac8f964e",
+    "docs/iterations/evidence/ITER-0002/foundation-browser-regression.json": "31b903be7f442ab102a674aa3dc569059099ca2d59b6a5543633e604e19d3bdf",
+    "docs/iterations/evidence/ITER-0002/foundation-http-regression.json": "44afe341d66edb357a1de071d60486b4e5b4df3128ed20f43c69f69b39af4b58",
+    "docs/iterations/evidence/ITER-0002/http-results.json": "fa4709443988336650deec3d13aec21ee4ee61196fdded468d711e39a1b27e91",
+    "docs/iterations/evidence/ITER-0002/mobile.png": "ed585dff5f9a435e6ed36c97f530063bf82ba8dbfe1b71ebe6e201d0db317b71"
+  },
+  "validation": {
+    "passageHttp": 13,
+    "passageChrome": 8,
+    "foundationHttp": 17,
+    "foundationChrome": 10,
+    "modelCalls": 0
+  },
+  "historicalFailure": "feedback-before.json is an expected preserved failure before trip-origin correction"
+}

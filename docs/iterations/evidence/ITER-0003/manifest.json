@@ -1,0 +1,92 @@
+{
+  "iteration": "ITER-0003",
+  "recordedAtUtc": "2026-10-25T10:38:50.876491+00:00",
+  "baseCommit": "8401e81a1d88d6fa79cd78bbc043470cbcc22ae8",
+  "workingTree": "uncommitted implementation; hashes identify reviewed files",
+  "implementation": {
+    "README.md": "d26c7efa4e994e051a6c7eef5c0d8e2ca6836375faf75d02187193c5f313e807",
+    "docs/00-project-charter.md": "dae13e4cb1eb78b74808702ddddb4814db727b1b40637dcd2314ff32f32fc45a",
+    "docs/03-human-and-agent-participation.md": "03765a43abcab4e3f410d6647fb6f12c5f86b6a7c3164dde4690c36ca4e1407d",
+    "docs/04-agent-rnd-loop.md": "51468ccefafdd5c7e6557488a85679147b3479db56ca0effdf443f51febd9009",
+    "docs/09-decisions-and-open-questions.md": "055061b72ac4b82d241ca71aab39a42748bfd825e4b3e67c20288e061bc1897d",
+    "docs/contracts/resident-mission-v1.md": "6fd73f781eca990b447f69ac278f436eb8964baa8d0dce24b7e965835a0e0896",
+    "docs/proposals/ITER-0003-residents.md": "84143a5b52ca72e80ae4cdda06a76ec420872c7987e4382e57c5516fd4253d2b",
+    "docs/iterations/ITER-0003-results.md": "51059541f3093f987072569537f2f5c47efe2afc44b318fb925129d7ef053823",
+    "scripts/codex_goal_selector.py": "58632f55d8e811257cf64b2786e6f23a251cd53779927d7925fb66695d8a4060",
+    "scripts/resident_mission.py": "fbfe214f7e76e66132c178f7b6d8cf524bcd00c3ed1b51d88922c541e207d327",
+    "scripts/run_resident.py": "7aad72b5d5233da494a2d0bec4ddc3910637c62729e290d1f893ca65ead7a412",
+    "tests/README.md": "48d639be874c9e61766bbcda83cdcdec27b034759a642759948fd41525f88d51",
+    "tests/resident_mission_api.py": "d0e447530f6cd9b2c84f57abd53cd0b159311e23ec611b92ba448ef3e1509fb0",
+    "tests/resident_live.py": "e4c2a1e451c033ab17d1aab6261c7872191a062b2998fc033a151e5c8d32e215",
+    "tests/browser/resident.mjs": "ee961d9f51c8b6758f5edfbaa59d53671a0a1651f15a35fff4e0f04131a12115",
+    "src/World.Server/wwwroot/index.html": "8457006043f1f27d543ff8735e7cc4ff88df573227796081e99a7515ca74b0fa",
+    "src/World.Server/wwwroot/resident.html": "bd8848839a44aee3817884192f6c36a2d7c92d08f3c3ade7c5b3a6b70f50fe41",
+    "src/World.Server/wwwroot/resident.js": "5dd59457ca6e984802719fa606175b96517a995f091acb37efe35c7e47f62133",
+    "src/World.Server/wwwroot/resident.css": "aa323f4648d0011faa3c08e2518cc9a8b724f9e940d5e004f9316b2c158f31eb",
+    "src/World.Server/wwwroot/reports/resident-demo.json": "191ffa5aac83d734be48827cfb239c13c548f33e70b44d4fd90d51464b3ce71f",
+    "examples/resident/builder.json": "d0f63f36d488c713f295d91d3be1da7eb9fda8de2b7cf4f704b087219928f25c",
+    "examples/resident/traveler.json": "f6e65ca75d8f0efdf04ca860e28bbd72d6e4ce4f5faa01f81ce9db5f190b476f"
+  },
+  "unchangedSinceIter0002": {
+    "scripts/foundation_agent.py": "010977c5864481e06100d65c7b51463455773a45300c1780b20d4fb36a682388",
+    "scripts/passage_agent.py": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e",
+    "src/World.Server/Program.cs": "300f8e566de3f2f185b50ff1b43733d914099df7b8e496793a11a2e748f1e43d",
+    "src/World.Server/Protocol.cs": "e9b4703acab970c4f54f183397b4b383a703a2dd40e3b370915177e24bca3bd0",
+    "src/World.Server/ServerConfiguration.cs": "8b33f7b3aae70229397362d0571769198303507712accd624ecedb1320eea8d1",
+    "src/World.Server/World.Server.csproj": "4353103ef1279d936ac936becd189f6396d5df1acc48311cc9aa3be9e50124f8",
+    "src/World.Server/WorldDatabase.cs": "f0ae1732002ec090906e8c7d9c530acd7d3b3f4b5ace047bd49dff487d5d5ab0",
+    "src/World.Server/WorldScenario.cs": "557ec16d09f37acb86c244c519a2542766d6f94cc6de2a077747412fc00e6cbf",
+    "src/World.Server/WorldService.cs": "a53277e70eed741f7c7451fe7f258640418b443e882ef85833b47dc26d66d481",
+    "src/World.Server/wwwroot/app.js": "e7e837c848d26fe33251efb0b6b77d650cdaf346f4209426d798fbdc724e03f3",
+    "src/World.Server/wwwroot/styles.css": "17a926abf13dd7da9c206aa9e19517e19b5c425100bbc57737a516c982e7bcd8"
+  },
+  "evidence": {
+    "docs/iterations/evidence/ITER-0003/api-results.json": "92fee081083b2b463ceec13c422f364a22e9235c73014aff334407e9a52d756d",
+    "docs/iterations/evidence/ITER-0003/browser-results.json": "2f483630dd8dc453c631a6bb0b863644a46bf3293f93c7eaf83979220e05dad6",
+    "docs/iterations/evidence/ITER-0003/decision-events.json": "1327d7cfee3f7e85f073c826cfb79308fe03c61b3b9faa0c5bf075667be4ffcb",
+    "docs/iterations/evidence/ITER-0003/desktop.png": "49d8173ce0f900e6048588190493d19ea76eaed93b264094d3a9520dc20882eb",
+    "docs/iterations/evidence/ITER-0003/foundation-browser-regression.json": "8c27793776f511df957e463afc90a6a0ae9f56916ee3e141fad337ab00cf4c88",
+    "docs/iterations/evidence/ITER-0003/live-builder.json": "191ffa5aac83d734be48827cfb239c13c548f33e70b44d4fd90d51464b3ce71f",
+    "docs/iterations/evidence/ITER-0003/live-results.json": "1c62505bd920c3146a77deddb49a21ceddf56188158d9e54e1c738f380a35a49",
+    "docs/iterations/evidence/ITER-0003/live-traveler.json": "16989adcabbe710f23a06ec383a2e784e50be7c530ce11bd9877b37ba2009a55",
+    "docs/iterations/evidence/ITER-0003/mobile.png": "f99710242a89bcd5c1af3c3fa593a1e2d95d80da3384a0bcff78b957f66f39d6",
+    "docs/iterations/evidence/ITER-0003/test-double-decision-failed.json": "bca57effacf089ba2f20156132bdbd3dd8b99edb2ef0c7265be6a959cede4da4",
+    "docs/iterations/evidence/ITER-0003/test-double-paused.json": "97cd4463db891ae0d7c6ce62a77bd0f2c0d6762aac97c578124da59c93e7f859"
+  },
+  "validation": {
+    "missionHttp": 14,
+    "realModelMissions": 2,
+    "realModelCallsIncludingProbe": 3,
+    "reportChrome": 8,
+    "foundationChrome": 10,
+    "javascriptErrors": 0
+  },
+  "previewChecks": {
+    "5080": {
+      "stateVersion": 7,
+      "entityCount": 0,
+      "depotWood": 12
+    },
+    "5081": {
+      "stateVersion": 19,
+      "entityCount": 2,
+      "depotWood": 6
+    }
+  },
+  "workers": {
+    "executor": {
+      "account": "newton",
+      "model": "gpt-6-astra",
+      "task": "task_820050976d62",
+      "dispatch": "ctx_56375ecba957",
+      "outcome": "succeeded"
+    },
+    "reportView": {
+      "account": "hjqcan",
+      "model": "gpt-6-astra",
+      "task": "task_b993c1ea53d5",
+      "dispatch": "ctx_771274960f6b",
+      "outcome": "succeeded"
+    }
+  }
+}

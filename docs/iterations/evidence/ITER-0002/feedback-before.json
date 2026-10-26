@@ -1,0 +1,20 @@
+{
+  "suite": "passage-http-v1",
+  "recordedAtUtc": "2026-10-25T09:37:49.876584+00:00",
+  "passed": false,
+  "testsRun": 1,
+  "tests": [
+    {
+      "test": "__main__.PassageAcceptance.test_13_resident_unknown_bridge_recovers_same_trip_and_id",
+      "passed": false,
+      "seconds": 1.7484560739831068
+    }
+  ],
+  "failures": [
+    {
+      "test": "test_13_resident_unknown_bridge_recovers_same_trip_and_id (__main__.PassageAcceptance.test_13_resident_unknown_bridge_recovers_same_trip_and_id)",
+      "detail": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/passage_api.py\", line 283, in test_13_resident_unknown_bridge_recovers_same_trip_and_id\n    self.assertEqual([1, 1], second[\"final\"][\"self\"][\"position\"], \"recovery must return to the original trip origin\")\nAssertionError: Lists differ: [1, 1] != [3, 3]\n\nFirst differing element 0:\n1\n3\n\n- [1, 1]\n+ [3, 3] : recovery must return to the original trip origin\n"
+    }
+  ],
+  "dataRoot": ".local/iter0002/api/20261025T173748-3aeea1"
+}

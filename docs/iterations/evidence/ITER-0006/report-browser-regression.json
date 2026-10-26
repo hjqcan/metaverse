@@ -1,0 +1,52 @@
+{
+  "suite": "resident-real-report-chrome-v1",
+  "recordedAtUtc": "2026-10-25T14:28:55.690Z",
+  "browser": "152.0.7977.82",
+  "passed": true,
+  "tests": [
+    {
+      "name": "actual_gpt6_builder_report_facts_usage_actions",
+      "passed": true,
+      "milliseconds": 491
+    },
+    {
+      "name": "keyboard_and_step_position_replay_of_actual_report",
+      "passed": true,
+      "milliseconds": 64
+    },
+    {
+      "name": "actual_traveler_uses_existing_bridges_without_materials",
+      "passed": true,
+      "milliseconds": 67
+    },
+    {
+      "name": "actual_http_paused_and_decision_failed_records",
+      "passed": true,
+      "milliseconds": 37
+    },
+    {
+      "name": "adversarial_text_and_false_completion_not_rendered_as_success",
+      "passed": true,
+      "milliseconds": 66
+    },
+    {
+      "name": "invalid_json_schema_steps_and_size_preserve_valid_report",
+      "passed": true,
+      "milliseconds": 205
+    },
+    {
+      "name": "default_missing_report_still_allows_actual_file_import",
+      "passed": true,
+      "milliseconds": 139
+    },
+    {
+      "name": "mobile_390px_actual_report_no_overflow_or_world_calls",
+      "passed": true,
+      "milliseconds": 249
+    }
+  ],
+  "javascriptErrors": [],
+  "worldRequests": [],
+  "actualModelCallsDuringUiTest": 0,
+  "dataRoot": ".local/iter0003/browser/2026-10-25T14-28-53-748Z"
+}

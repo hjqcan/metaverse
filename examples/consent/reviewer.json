@@ -1,0 +1,26 @@
+{
+  "missionId": "consent-reviewer",
+  "objective": "去静谧花园，审阅指定提议。若它只将原蓝色河流的一个端点改为日黄且其他格不变，可以同意；否则拒绝并说明理由。独立决定，不自动迎合对方，之后返回。",
+  "goals": [
+    {
+      "id": "garden",
+      "label": "静谧花园",
+      "target": [
+        1,
+        6
+      ],
+      "activityId": "garden"
+    }
+  ],
+  "allowBuild": false,
+  "budgets": {
+    "commands": 14,
+    "wood": 0,
+    "seconds": 600,
+    "modelCalls": 1
+  },
+  "reviewMosaicProposal": {
+    "proposalActorId": "a2",
+    "proposalCommandId": "replace-with-actual-proposal-command"
+  }
+}

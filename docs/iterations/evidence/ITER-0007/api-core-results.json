@@ -1,0 +1,72 @@
+{
+  "suite": "mosaic-consent-http-v1",
+  "decisionSource": "explicit-test-double",
+  "actualModelCalls": 0,
+  "recordedAtUtc": "2026-10-25T15:02:02.892926+00:00",
+  "passed": true,
+  "testsRun": 12,
+  "tests": [
+    {
+      "test": "__main__.ConsentAcceptance.test_01_proposal_is_public_immutable_and_does_not_paint",
+      "passed": true,
+      "seconds": 0.6542371829855256
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_02_direct_edit_requires_consent_including_erased_foreign_cells",
+      "passed": true,
+      "seconds": 0.42325814900686964
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_03_proposal_shape_target_visit_and_one_per_visit",
+      "passed": true,
+      "seconds": 0.4217131960322149
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_04_accept_preserves_proposer_and_records_actual_reviewer_edit",
+      "passed": true,
+      "seconds": 0.6813286580145359
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_05_reject_does_not_paint_and_cannot_be_reopened",
+      "passed": true,
+      "seconds": 0.4433866500039585
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_06_only_target_can_review_and_requires_own_visit",
+      "passed": true,
+      "seconds": 0.44020031101536006
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_07_stale_accept_fails_but_stale_reject_is_allowed",
+      "passed": true,
+      "seconds": 0.4488449270138517
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_08_concurrent_reviews_have_only_one_terminal_decision",
+      "passed": true,
+      "seconds": 0.582106598012615
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_09_before_commit_exit_rolls_back_review_and_all_tiles",
+      "passed": true,
+      "seconds": 0.6907903330284171
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_10_after_commit_exit_retains_review_and_all_tiles",
+      "passed": true,
+      "seconds": 0.6829426719923504
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_17_populated_r5_stays_unchanged_with_original_overwrite_rules",
+      "passed": true,
+      "seconds": 0.7770704440190457
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_18_history_limits_preserve_complete_database",
+      "passed": true,
+      "seconds": 5.508832161023747
+    }
+  ],
+  "dataRoot": ".local/iter0007/api/20261025T230151-ae705a",
+  "failures": []
+}

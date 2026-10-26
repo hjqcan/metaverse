@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#eeeee6">
+  <title>居民手记 · 初始之地</title>
+  <link rel="stylesheet" href="resident.css">
+  <script src="mosaic.js" defer></script>
+  <script src="consent.js" defer></script>
+  <script src="resident.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至任务报告</a>
+  <div class="journal-shell">
+    <header class="site-header">
+      <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">田</span><span>初始之地<small>RESIDENT JOURNAL / 03</small></span></a>
+      <a class="back-link" href="./">返回世界 <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main">
+      <section class="intro" aria-labelledby="page-title">
+        <div><p class="eyebrow">居民手记 / 选择与足迹</p><h1 id="page-title">每一次选择，都有来路。</h1><p class="intro-copy">读一段居民的旅程：为什么出发，走到了哪里，又留下了什么。</p></div>
+        <span class="archive-badge"><i aria-hidden="true"></i>本地历史记录 · 非实时世界</span>
+      </section>
+
+      <section class="import-card" aria-label="加载任务报告">
+        <div><label class="import-title" for="report-file">打开一份任务报告</label><p id="file-help">JSON · 最大 2 MiB · 至多 100 步。导入的文件仅在此页面读取。</p></div>
+        <div class="import-actions"><input id="report-file" type="file" accept=".json,application/json" aria-describedby="file-help load-message"><button id="load-demo" type="button" class="button">加载运行样例</button></div>
+      </section>
+      <p id="load-message" class="load-message" role="status" aria-live="polite">正在读取本地运行样例，也可以直接导入自己的报告。</p>
+      <nav id="postcard-report-links" class="postcard-report-links" aria-label="共同手记实际任务记录" hidden><a href="resident.html?sample=postcards">第一位来客 · 留下一句话</a><a href="resident.html?sample=postcards-reply">第二位来客 · 读过，再留下话</a></nav>
+      <nav id="mosaic-report-links" class="postcard-report-links" aria-label="共同画布实际任务记录" hidden><a href="resident.html?sample=mosaic">第一位画者 · 画一条河</a><a href="resident.html?sample=mosaic-reply">第二位画者 · 为河岸添绿</a></nav>
+      <nav id="consent-report-links" class="postcard-report-links" aria-label="画布协商实际任务记录" hidden><a href="resident.html?sample=consent">提议人 · 为河流加一个标记</a><a href="resident.html?sample=consent-review">原作者 · 读过，再决定</a></nav>
+      <nav id="inbox-report-links" class="postcard-report-links" aria-label="较早提议实际审阅记录" hidden><a href="resident.html?sample=inbox">提议人 · 留下一份建议</a><a href="resident.html?sample=inbox-review">原作者 · 从待办找到旧提议</a></nav>
+
+      <details id="comparison-panel" class="comparison-panel card" hidden>
+        <summary>相同世界，不同选择 · 查看四组目的与成本对照</summary>
+        <p id="comparison-summary" class="evidence-note"></p>
+        <div id="comparison-cases" class="comparison-cases"></div>
+      </details>
+
+      <section id="empty-state" class="empty-state card" aria-labelledby="empty-title">
+        <span class="empty-symbol" aria-hidden="true">⌁</span><p class="eyebrow">等待一段旅程</p><h2 id="empty-title">从一份记录开始</h2><p>选择执行器导出的任务 JSON，即可查看任务、预算与足迹。<br>样例暂不可用时，也可以导入自己的报告。</p>
+      </section>
+
+      <div id="report-content" hidden>
+        <section class="mission-card card" aria-labelledby="mission-heading">
+          <div class="section-heading"><p class="eyebrow">01 / 此行的目的</p><span id="report-status" class="status-pill" role="status">等待记录</span></div>
+          <h2 id="mission-heading">任务目的</h2><p id="mission-objective" class="mission-objective"></p>
+          <div class="mission-meta"><div><span>任务编号</span><strong id="mission-id"></strong></div><div><span>居民身份</span><strong id="actor-id"></strong></div><div><span>记录世界 / 规则</span><strong id="world-identity"></strong></div><div><span>目标与起点</span><strong id="goal-route"></strong></div></div>
+          <p id="mission-reason" class="detail-line"></p>
+          <p id="report-warning" class="notice warning" hidden></p>
+        </section>
+
+        <div class="evidence-grid">
+          <section class="decision-card card" aria-labelledby="decision-title">
+            <div class="section-heading"><div><p class="eyebrow">02 / 选择的理由</p><h2 id="decision-title">决定去哪里</h2></div><span id="provider-kind" class="tag"></span></div>
+            <p id="chosen-goal" class="chosen-goal"></p><blockquote id="decision-reason"></blockquote>
+            <div class="model-meta"><span id="model-name"></span><span id="model-usage"></span></div>
+            <div id="postcard-draft-panel" class="postcard-draft-panel" hidden><p class="evidence-note">行动前的手记草稿 · 产生草稿不等于已经分享</p><blockquote id="postcard-draft"></blockquote></div>
+            <p id="decision-boundary" class="evidence-note">模型只选择目标；路径与行动由确定性执行器处理。模型说法不等于执行成功。</p>
+          </section>
+          <section class="facts-card card" aria-labelledby="facts-title">
+            <div class="section-heading"><div><p class="eyebrow">03 / 规则核实的事实</p><h2 id="facts-title">实际发生了什么</h2></div><span class="tag">报告所载</span></div>
+            <div class="fact-pair"><div><span>曾到达目标</span><strong id="goal-reached"></strong></div><div><span>已返回原起点</span><strong id="returned"></strong></div></div>
+            <p id="activity-fact" class="activity-fact" hidden></p>
+            <div id="postcard-fact-panel" class="postcard-fact-panel" hidden><p id="postcard-fact" class="activity-fact"></p><blockquote id="postcard-shared-text"></blockquote></div>
+            <dl class="fact-details"><div><dt>核实时间</dt><dd id="verified-at"></dd></div><div><dt>状态版本</dt><dd id="state-versions"></dd></div><div><dt>领取 / 新建设施</dt><dd id="created-summary"></dd></div></dl>
+            <p class="evidence-note">来自导入报告的执行事实，页面不连接世界重新核验。</p>
+          </section>
+        </div>
+
+        <section id="consent-report-panel" class="mosaic-report card" aria-labelledby="consent-report-title" hidden>
+          <div class="section-heading"><div><p class="eyebrow">A PROPOSAL, A REAL DECISION</p><h2 id="consent-report-title">这几格，我们商量着改。</h2></div><span id="consent-report-state" class="tag"></span></div>
+          <p id="consent-report-fact" class="activity-fact"></p>
+          <div class="consent-report-grid"><div><h3>提议中的改动</h3><div id="consent-report-patch" class="mosaic-grid"></div><p id="consent-report-origin" class="evidence-note"></p></div><div><h3>提议与决定</h3><p id="consent-report-proposal-text" class="consent-report-copy"></p><p id="consent-report-review-text" class="consent-report-copy"></p><p id="consent-report-attribution" class="evidence-note"></p></div><div><h3>任务结束时的共同画布</h3><div id="consent-report-final" class="mosaic-grid"></div><p id="consent-report-final-note" class="evidence-note"></p></div></div>
+          <p class="evidence-note">提议不等于改图，同意与拒绝都有独立记录。此处只检查导入报告的内部一致性，不重新连接世界认证。</p>
+        </section>
+        <section id="mosaic-report-panel" class="mosaic-report card" aria-labelledby="mosaic-report-title" hidden>
+          <div class="section-heading"><div><p class="eyebrow">A SHARED PICTURE, TWO CONTRIBUTIONS</p><h2 id="mosaic-report-title">一幅画，接着画。</h2></div><span id="mosaic-report-version" class="tag"></span></div>
+          <p id="mosaic-fact" class="activity-fact"></p>
+          <div class="mosaic-report-grid">
+            <div><h3>行动前的构图</h3><div id="mosaic-proposal" class="mosaic-grid"></div><p id="mosaic-proposal-note" class="evidence-note"></p></div>
+            <div><h3>本次确认的改动</h3><div id="mosaic-committed" class="mosaic-grid"></div><p id="mosaic-committed-note" class="evidence-note"></p></div>
+            <div><h3>任务结束时的共同画布</h3><div id="mosaic-final" class="mosaic-grid"></div><p id="mosaic-final-note" class="evidence-note"></p></div>
+          </div>
+          <p class="evidence-note">前两幅只标出本次涉及的格子，其余留白不表示擦除。最后一幅是报告所载的结束快照；之后的世界可以继续变化。</p>
+        </section>
+
+        <section class="budget-section" aria-labelledby="budget-title">
+          <div class="section-heading"><h2 id="budget-title">一路的累计开销</h2><span class="section-note">已用 / 任务上限 · 暂停不重置</span></div>
+          <div class="budget-grid">
+            <div class="budget-item"><span>世界命令</span><strong id="command-budget"></strong><progress id="command-progress" aria-label="命令预算使用量" max="1" value="0"></progress><small>重试原命令不重复计数</small></div>
+            <div class="budget-item"><span>建造木材</span><strong id="wood-budget"></strong><progress id="wood-progress" aria-label="建造木材预算使用量" max="1" value="0"></progress><small>实际消耗，不是领取数量</small></div>
+            <div class="budget-item"><span id="model-budget-label">模型调用</span><strong id="model-budget"></strong><progress id="model-progress" aria-label="目标选择预算使用量" max="1" value="0"></progress><small id="model-budget-note">高层目标选择</small></div>
+            <div class="budget-item"><span>累计耗时</span><strong id="seconds-budget"></strong><progress id="seconds-progress" aria-label="时间预算使用量" max="1" value="0"></progress><small>秒 · 执行器记录</small></div>
+          </div>
+        </section>
+
+        <div class="journey-grid">
+          <section class="map-card card" aria-labelledby="map-title">
+            <div class="section-heading"><div><p class="eyebrow">04 / 留下的足迹</p><h2 id="map-title">重走这段旅程</h2></div><span id="replay-counter" class="tag"></span></div>
+            <div class="canvas-wrap"><canvas id="replay-canvas" width="720" height="720" role="img" aria-label="任务历史位置回放" aria-describedby="replay-description map-context">此浏览器不支持地图画布；下方位置说明与步骤列表提供相同的轨迹信息。</canvas></div>
+            <div class="map-legend" aria-label="地图图例"><span><i class="dot resident-dot"></i>居民</span><span><i class="dot origin-dot"></i>起点</span><span><i class="dot goal-dot"></i>目标</span><span><i class="square water-dot"></i>水面</span><span><i class="square wall-dot"></i>阻挡</span><span><i class="square bridge-dot"></i>设施</span></div>
+            <div class="replay-controls"><button id="replay-prev" class="icon-button" type="button" aria-label="回看上一步">←</button><div class="slider-field"><label for="replay-slider">回放进度</label><input id="replay-slider" type="range" min="0" max="0" value="0" step="1" disabled></div><button id="replay-next" class="icon-button" type="button" aria-label="回看下一步">→</button></div>
+            <p id="replay-description" class="replay-description" role="status" aria-live="polite"></p>
+            <p id="map-context" class="evidence-note">地形与设施为报告快照；滑条仅回放记录的位置，不表示设施在该步已经建成。坐标从左上角 (0, 0) 开始。</p>
+            <details class="map-details"><summary>地图文字信息</summary><p id="map-summary"></p></details>
+          </section>
+          <section class="timeline-card card" aria-labelledby="steps-title">
+            <div class="section-heading"><div><p class="eyebrow">05 / 执行时间线</p><h2 id="steps-title">一步一步，有迹可循</h2></div><span id="step-count" class="tag"></span></div>
+            <p class="timeline-note">按记录顺序排列；契约未提供逐步时间戳。</p><ol id="steps-list" class="steps-list"></ol>
+          </section>
+        </div>
+
+        <section class="feedback-card card" aria-labelledby="feedback-title"><p class="eyebrow">06 / 旅程之后</p><h2 id="feedback-title">执行反馈</h2><p id="feedback-summary"></p><div id="feedback-lists" class="feedback-lists"></div></section>
+      </div>
+    </main>
+    <footer><span>初始之地 <span aria-hidden="true">/</span> 居民手记</span><span id="report-source">本地报告浏览器 · ITER-0003</span></footer>
+  </div>
+</body>
+</html>

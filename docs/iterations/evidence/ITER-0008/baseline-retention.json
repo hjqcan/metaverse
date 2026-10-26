@@ -1,0 +1,36 @@
+{
+  "kind": "read-path-retention-baseline",
+  "actualModelCalls": 0,
+  "programFixture": true,
+  "proposalCount": 52,
+  "reviewedCount": 51,
+  "publicListCount": 50,
+  "originalProposalVisible": false,
+  "originalProposal": {
+    "activityId": "garden",
+    "authorActorId": "a2",
+    "targetActorId": "a1",
+    "commandId": "c838d1122c56470b9d7380760df172cf",
+    "visitCommandId": "2b840cfee7754064bc0acbd8decf1e49",
+    "baseRevision": 1,
+    "patch": [
+      {
+        "x": 1,
+        "y": 2,
+        "color": "sun"
+      }
+    ],
+    "text": "原始待办",
+    "stateVersion": 13,
+    "proposedAtUtc": "2026-10-25T15:21:05.6575788+00:00",
+    "position": [
+      1,
+      6
+    ],
+    "action": "mosaic_propose"
+  },
+  "missionPreflightFailure": "mosaic_proposal_not_found",
+  "choiceCalls": 0,
+  "worldStateVersion": 217,
+  "mosaicRevision": 1
+}

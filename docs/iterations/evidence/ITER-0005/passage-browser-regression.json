@@ -1,0 +1,49 @@
+{
+  "suite": "passage-real-chrome-v1",
+  "recordedAtUtc": "2026-10-25T13:16:48.143Z",
+  "passed": true,
+  "tests": [
+    {
+      "name": "passage_connect_recipes_and_land_rejection",
+      "passed": true,
+      "milliseconds": 628
+    },
+    {
+      "name": "river_blocks_movement_and_platform_cannot_pave_water",
+      "passed": true,
+      "milliseconds": 438
+    },
+    {
+      "name": "first_bridge_is_walkable_but_second_water_cell_blocks",
+      "passed": true,
+      "milliseconds": 229
+    },
+    {
+      "name": "second_bridge_lost_response_reload_queries_original_receipt",
+      "passed": true,
+      "milliseconds": 386
+    },
+    {
+      "name": "human_crosses_and_returns_other_resident_uses_free_bridge",
+      "passed": true,
+      "milliseconds": 2299
+    },
+    {
+      "name": "restart_retains_bridge_ids_and_live_ui",
+      "passed": true,
+      "milliseconds": 3037
+    },
+    {
+      "name": "recipe_keyboard_does_not_move_actor",
+      "passed": true,
+      "milliseconds": 359
+    },
+    {
+      "name": "mobile_water_bridge_selection_and_layout",
+      "passed": true,
+      "milliseconds": 378
+    }
+  ],
+  "javascriptErrors": [],
+  "dataRoot": ".local/iter0002/browser/2026-10-25T13-16-39-705Z"
+}

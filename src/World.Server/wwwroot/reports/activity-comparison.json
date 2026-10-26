@@ -1,0 +1,4200 @@
+{
+  "schemaVersion": 1,
+  "kind": "activity-choice-comparison",
+  "recordedAtUtc": "2026-10-25T11:32:13.905519+00:00",
+  "actualModelCalls": 4,
+  "modelAttemptLimit": 4,
+  "cases": [
+    {
+      "id": "panorama",
+      "objective": "我想去彼岸观景台看两岸全景，愿意用最多6木材建桥，体验后返回。",
+      "expectedGoalId": "lookout",
+      "initialEquivalent": true,
+      "runs": [
+        {
+          "kind": "fixed-reference",
+          "report": {
+            "schemaVersion": 1,
+            "kind": "resident-mission-report",
+            "mission": {
+              "id": "panorama-fixed",
+              "objective": "我想去彼岸观景台看两岸全景，愿意用最多6木材建桥，体验后返回。",
+              "actorId": "a1",
+              "worldId": "foundation-01",
+              "rulesVersion": "r3",
+              "origin": [
+                1,
+                1
+              ],
+              "goal": {
+                "id": "garden",
+                "label": "静谧花园",
+                "target": [
+                  1,
+                  6
+                ],
+                "activityId": "garden"
+              },
+              "status": "completed",
+              "reason": "round_trip_verified"
+            },
+            "decision": {
+              "goalId": "garden",
+              "reason": "固定成本参考：按木材、预计命令数、目标 ID 升序选择可行目标。",
+              "provider": {
+                "kind": "fixed-reference",
+                "model": "least-cost-v1",
+                "usage": {}
+              }
+            },
+            "budget": {
+              "limits": {
+                "commands": 30,
+                "wood": 6,
+                "seconds": 600,
+                "modelCalls": 1
+              },
+              "used": {
+                "commands": 11,
+                "wood": 0,
+                "modelCalls": 1,
+                "seconds": 0.08245301246643066
+              }
+            },
+            "facts": {
+              "goalReached": true,
+              "returned": true,
+              "activityCompleted": true,
+              "activityVisit": {
+                "activityId": "garden",
+                "commandId": "d60d0980877b4201a23638e1a0a8487c",
+                "stateVersion": 6,
+                "visitedAtUtc": "2026-10-25T11:32:14.1772742+00:00",
+                "position": [
+                  1,
+                  6
+                ]
+              },
+              "startStateVersion": 0,
+              "endStateVersion": 11,
+              "woodClaimed": 0,
+              "createdEntityIds": [],
+              "verifiedAtUtc": "2026-10-25T11:32:14.209837+00:00"
+            },
+            "steps": [
+              {
+                "index": 1,
+                "commandId": "efdec72b1628483a9b2d16af2d3d5510",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 1,
+                "position": [
+                  1,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 2,
+                "commandId": "fa0cbac475d74116a6d68b8204f0fdee",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 2,
+                "position": [
+                  1,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 3,
+                "commandId": "e189bb8a56e44c9cb287c48f2d3f88eb",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 3,
+                "position": [
+                  1,
+                  4
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 4,
+                "commandId": "181bb9fd59ef4ecf9c9f144318402eec",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 4,
+                "position": [
+                  1,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 5,
+                "commandId": "d87bb1bbf3a545078fc78c86e299eada",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 5,
+                "position": [
+                  1,
+                  6
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 6,
+                "commandId": "d60d0980877b4201a23638e1a0a8487c",
+                "action": {
+                  "type": "visit",
+                  "activityId": "garden"
+                },
+                "reason": "在已选活动地点确认到访",
+                "status": "committed",
+                "stateVersion": 6,
+                "position": [
+                  1,
+                  6
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200,
+                "evidenceSource": "command_receipt"
+              },
+              {
+                "index": 7,
+                "commandId": "ae1f90424ad84ef8959b50b18fb3c1bd",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 7,
+                "position": [
+                  1,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 8,
+                "commandId": "6af0fef0cc5d40329a6d9e614ed41993",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 8,
+                "position": [
+                  1,
+                  4
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 9,
+                "commandId": "52feb79a451341a6bf65d793566f81c9",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 9,
+                "position": [
+                  1,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 10,
+                "commandId": "a70bd01c053a4786a59617ca85693dc7",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 10,
+                "position": [
+                  1,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 11,
+                "commandId": "6e6fa8f307f94a339931900a5c729a41",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 11,
+                "position": [
+                  1,
+                  1
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              }
+            ],
+            "feedback": {
+              "summary": "已核验活动到访与返回",
+              "issues": [],
+              "suggestions": []
+            },
+            "world": {
+              "id": "foundation-01",
+              "width": 8,
+              "height": 8,
+              "blocked": [
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "water": [
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "entities": [],
+              "activities": [
+                {
+                  "id": "garden",
+                  "label": "静谧花园",
+                  "position": [
+                    1,
+                    6
+                  ],
+                  "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+                },
+                {
+                  "id": "riverwalk",
+                  "label": "河岸步道",
+                  "position": [
+                    2,
+                    5
+                  ],
+                  "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+                },
+                {
+                  "id": "lookout",
+                  "label": "彼岸观景台",
+                  "position": [
+                    6,
+                    1
+                  ],
+                  "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+                }
+              ]
+            }
+          },
+          "actualModelCalls": 0,
+          "error": null,
+          "initialDigest": "f253dd28c8306a54a3742f4890c03021f127b86947da50ce63bf770e9fe441f8",
+          "expectedGoalMatch": false,
+          "executionVerified": true,
+          "databaseAudit": {
+            "issuedWood": 12,
+            "depotWood": 12,
+            "inventoryWood": 0,
+            "embodiedWood": 0,
+            "conserved": true,
+            "visitRows": 1,
+            "stateVersion": 11,
+            "eventRows": 12,
+            "foreignKeyErrors": 0
+          },
+          "decisionEvents": [],
+          "elapsedSeconds": 0.322996
+        },
+        {
+          "kind": "codex-exec",
+          "report": {
+            "schemaVersion": 1,
+            "kind": "resident-mission-report",
+            "mission": {
+              "id": "panorama-model",
+              "objective": "我想去彼岸观景台看两岸全景，愿意用最多6木材建桥，体验后返回。",
+              "actorId": "a1",
+              "worldId": "foundation-01",
+              "rulesVersion": "r3",
+              "origin": [
+                1,
+                1
+              ],
+              "goal": {
+                "id": "lookout",
+                "label": "彼岸观景台",
+                "target": [
+                  6,
+                  1
+                ],
+                "activityId": "lookout"
+              },
+              "status": "completed",
+              "reason": "round_trip_verified"
+            },
+            "decision": {
+              "goalId": "lookout",
+              "reason": "彼岸观景台直接满足看两岸全景的目的。两段桥需6木材，仓库储量足够，预计22条命令且候选标记可行，符合预算，可安排观景后返回。",
+              "provider": {
+                "kind": "codex-exec",
+                "model": "gpt-6-astra",
+                "usage": {
+                  "inputTokens": 12056,
+                  "cachedInputTokens": 0,
+                  "outputTokens": 72
+                }
+              }
+            },
+            "budget": {
+              "limits": {
+                "commands": 30,
+                "wood": 6,
+                "seconds": 600,
+                "modelCalls": 1
+              },
+              "used": {
+                "commands": 22,
+                "wood": 6,
+                "modelCalls": 1,
+                "seconds": 8.429516553878784
+              }
+            },
+            "facts": {
+              "goalReached": true,
+              "returned": true,
+              "activityCompleted": true,
+              "activityVisit": {
+                "activityId": "lookout",
+                "commandId": "51a57b766dbf45259ce82cdb20b682b6",
+                "stateVersion": 13,
+                "visitedAtUtc": "2026-10-25T11:32:22.8683022+00:00",
+                "position": [
+                  6,
+                  1
+                ]
+              },
+              "startStateVersion": 0,
+              "endStateVersion": 22,
+              "woodClaimed": 6,
+              "createdEntityIds": [
+                "ea5c812aa8f9e40649a7b544cd8a4253f",
+                "e8abcc1e1851d4433a80c6b01611bd53a"
+              ],
+              "verifiedAtUtc": "2026-10-25T11:32:22.927305+00:00"
+            },
+            "steps": [
+              {
+                "index": 1,
+                "commandId": "d9d6da96515e4e6ca9a8f68b35dc265a",
+                "action": {
+                  "type": "claim",
+                  "quantity": 6
+                },
+                "reason": "为剩余桥梁补足材料",
+                "status": "committed",
+                "stateVersion": 1,
+                "position": [
+                  1,
+                  1
+                ],
+                "inventoryWood": 6,
+                "httpStatus": 200
+              },
+              {
+                "index": 2,
+                "commandId": "d715f7b30aa741399a0ab3299dcc29c5",
+                "action": {
+                  "type": "move",
+                  "dx": 1,
+                  "dy": 0
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 2,
+                "position": [
+                  2,
+                  1
+                ],
+                "inventoryWood": 6,
+                "httpStatus": 200
+              },
+              {
+                "index": 3,
+                "commandId": "9f2bb9c2c807411fb619ae2d51fbf208",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 3,
+                "position": [
+                  2,
+                  2
+                ],
+                "inventoryWood": 6,
+                "httpStatus": 200
+              },
+              {
+                "index": 4,
+                "commandId": "8c839b9d3465466ca121a3dbcefec214",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 4,
+                "position": [
+                  2,
+                  3
+                ],
+                "inventoryWood": 6,
+                "httpStatus": 200
+              },
+              {
+                "index": 5,
+                "commandId": "e852a3b0108f4546915a7ba827d7caca",
+                "action": {
+                  "type": "move",
+                  "dx": 1,
+                  "dy": 0
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 5,
+                "position": [
+                  3,
+                  3
+                ],
+                "inventoryWood": 6,
+                "httpStatus": 200
+              },
+              {
+                "index": 6,
+                "commandId": "f66b3e8d6bcd45a4bd201dc6b99ec1d5",
+                "action": {
+                  "type": "build",
+                  "recipeId": "bridge.v1",
+                  "at": [
+                    4,
+                    3
+                  ]
+                },
+                "reason": "建造通向任务目标的桥段",
+                "status": "committed",
+                "stateVersion": 6,
+                "position": [
+                  3,
+                  3
+                ],
+                "inventoryWood": 3,
+                "httpStatus": 200
+              },
+              {
+                "index": 7,
+                "commandId": "ad15a1614b7648b095418a6d782bcc43",
+                "action": {
+                  "type": "move",
+                  "dx": 1,
+                  "dy": 0
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 7,
+                "position": [
+                  4,
+                  3
+                ],
+                "inventoryWood": 3,
+                "httpStatus": 200
+              },
+              {
+                "index": 8,
+                "commandId": "e38dc8b383e142e38cf48f9cf696e5ff",
+                "action": {
+                  "type": "build",
+                  "recipeId": "bridge.v1",
+                  "at": [
+                    5,
+                    3
+                  ]
+                },
+                "reason": "建造通向任务目标的桥段",
+                "status": "committed",
+                "stateVersion": 8,
+                "position": [
+                  4,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 9,
+                "commandId": "d4f5711659b147408ffd081829928f9b",
+                "action": {
+                  "type": "move",
+                  "dx": 1,
+                  "dy": 0
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 9,
+                "position": [
+                  5,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 10,
+                "commandId": "098e39be87aa4d70aca786f244de4059",
+                "action": {
+                  "type": "move",
+                  "dx": 1,
+                  "dy": 0
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 10,
+                "position": [
+                  6,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 11,
+                "commandId": "e1566384e4734979a38091ae04575804",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 11,
+                "position": [
+                  6,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 12,
+                "commandId": "68b8291519c441d29ed60484f6730159",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 12,
+                "position": [
+                  6,
+                  1
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 13,
+                "commandId": "51a57b766dbf45259ce82cdb20b682b6",
+                "action": {
+                  "type": "visit",
+                  "activityId": "lookout"
+                },
+                "reason": "在已选活动地点确认到访",
+                "status": "committed",
+                "stateVersion": 13,
+                "position": [
+                  6,
+                  1
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200,
+                "evidenceSource": "command_receipt"
+              },
+              {
+                "index": 14,
+                "commandId": "2da105fc6d1f45948a7550fba5d306d4",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 14,
+                "position": [
+                  6,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 15,
+                "commandId": "1860fb3d59984edcb4f0fc5d63e6fd79",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 15,
+                "position": [
+                  6,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 16,
+                "commandId": "28f44509f47c47b2bd8646f34c8582b0",
+                "action": {
+                  "type": "move",
+                  "dx": -1,
+                  "dy": 0
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 16,
+                "position": [
+                  5,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 17,
+                "commandId": "5c400a2444334daeb23d037420145b67",
+                "action": {
+                  "type": "move",
+                  "dx": -1,
+                  "dy": 0
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 17,
+                "position": [
+                  4,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 18,
+                "commandId": "17b5ec1e823d476a9f8ebf73ad275390",
+                "action": {
+                  "type": "move",
+                  "dx": -1,
+                  "dy": 0
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 18,
+                "position": [
+                  3,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 19,
+                "commandId": "6034ca4cecdb42acad9c533b87aa4339",
+                "action": {
+                  "type": "move",
+                  "dx": -1,
+                  "dy": 0
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 19,
+                "position": [
+                  2,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 20,
+                "commandId": "617fbcdfd08244a18aec14876c589cbd",
+                "action": {
+                  "type": "move",
+                  "dx": -1,
+                  "dy": 0
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 20,
+                "position": [
+                  1,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 21,
+                "commandId": "03187bdd78e0491d9a469cfc890810e5",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 21,
+                "position": [
+                  1,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 22,
+                "commandId": "1b86f0e65887458a8c734ee8d8dae423",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 22,
+                "position": [
+                  1,
+                  1
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              }
+            ],
+            "feedback": {
+              "summary": "已核验活动到访与返回",
+              "issues": [],
+              "suggestions": []
+            },
+            "world": {
+              "id": "foundation-01",
+              "width": 8,
+              "height": 8,
+              "blocked": [
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "water": [
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "entities": [
+                {
+                  "entityId": "e8abcc1e1851d4433a80c6b01611bd53a",
+                  "definitionId": "bridge",
+                  "definitionVersion": 1,
+                  "rulesVersion": "r3",
+                  "ownerActorId": "a1",
+                  "position": [
+                    5,
+                    3
+                  ],
+                  "embodiedWood": 3
+                },
+                {
+                  "entityId": "ea5c812aa8f9e40649a7b544cd8a4253f",
+                  "definitionId": "bridge",
+                  "definitionVersion": 1,
+                  "rulesVersion": "r3",
+                  "ownerActorId": "a1",
+                  "position": [
+                    4,
+                    3
+                  ],
+                  "embodiedWood": 3
+                }
+              ],
+              "activities": [
+                {
+                  "id": "garden",
+                  "label": "静谧花园",
+                  "position": [
+                    1,
+                    6
+                  ],
+                  "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+                },
+                {
+                  "id": "riverwalk",
+                  "label": "河岸步道",
+                  "position": [
+                    2,
+                    5
+                  ],
+                  "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+                },
+                {
+                  "id": "lookout",
+                  "label": "彼岸观景台",
+                  "position": [
+                    6,
+                    1
+                  ],
+                  "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+                }
+              ]
+            }
+          },
+          "actualModelCalls": 1,
+          "error": null,
+          "initialDigest": "f253dd28c8306a54a3742f4890c03021f127b86947da50ce63bf770e9fe441f8",
+          "expectedGoalMatch": true,
+          "executionVerified": true,
+          "databaseAudit": {
+            "issuedWood": 12,
+            "depotWood": 6,
+            "inventoryWood": 0,
+            "embodiedWood": 6,
+            "conserved": true,
+            "visitRows": 1,
+            "stateVersion": 22,
+            "eventRows": 23,
+            "foreignKeyErrors": 0
+          },
+          "decisionEvents": [
+            {
+              "kind": "codex-exec",
+              "requestedModel": "gpt-6-astra",
+              "startedAtUtc": "2026-10-25T11:32:14.616260+00:00",
+              "status": "completed",
+              "exitCode": 0,
+              "toolTypes": [],
+              "usage": {
+                "input_tokens": 12056,
+                "cached_input_tokens": 0,
+                "cache_write_input_tokens": 0,
+                "output_tokens": 72,
+                "reasoning_output_tokens": 0
+              },
+              "decision": {
+                "goalId": "lookout",
+                "reason": "彼岸观景台直接满足看两岸全景的目的。两段桥需6木材，仓库储量足够，预计22条命令且候选标记可行，符合预算，可安排观景后返回。"
+              },
+              "elapsedSeconds": 8.159265934024006
+            }
+          ],
+          "elapsedSeconds": 8.717513
+        }
+      ]
+    },
+    {
+      "id": "quiet",
+      "objective": "我只想在静谧花园短途安静散步，体验后返回，不领取也不建造。",
+      "expectedGoalId": "garden",
+      "initialEquivalent": true,
+      "runs": [
+        {
+          "kind": "fixed-reference",
+          "report": {
+            "schemaVersion": 1,
+            "kind": "resident-mission-report",
+            "mission": {
+              "id": "quiet-fixed",
+              "objective": "我只想在静谧花园短途安静散步，体验后返回，不领取也不建造。",
+              "actorId": "a1",
+              "worldId": "foundation-01",
+              "rulesVersion": "r3",
+              "origin": [
+                1,
+                1
+              ],
+              "goal": {
+                "id": "garden",
+                "label": "静谧花园",
+                "target": [
+                  1,
+                  6
+                ],
+                "activityId": "garden"
+              },
+              "status": "completed",
+              "reason": "round_trip_verified"
+            },
+            "decision": {
+              "goalId": "garden",
+              "reason": "固定成本参考：按木材、预计命令数、目标 ID 升序选择可行目标。",
+              "provider": {
+                "kind": "fixed-reference",
+                "model": "least-cost-v1",
+                "usage": {}
+              }
+            },
+            "budget": {
+              "limits": {
+                "commands": 12,
+                "wood": 0,
+                "seconds": 600,
+                "modelCalls": 1
+              },
+              "used": {
+                "commands": 11,
+                "wood": 0,
+                "modelCalls": 1,
+                "seconds": 0.07673001289367676
+              }
+            },
+            "facts": {
+              "goalReached": true,
+              "returned": true,
+              "activityCompleted": true,
+              "activityVisit": {
+                "activityId": "garden",
+                "commandId": "dd1f375bfb96466a8d8adb485b476abf",
+                "stateVersion": 6,
+                "visitedAtUtc": "2026-10-25T11:32:23.2527803+00:00",
+                "position": [
+                  1,
+                  6
+                ]
+              },
+              "startStateVersion": 0,
+              "endStateVersion": 11,
+              "woodClaimed": 0,
+              "createdEntityIds": [],
+              "verifiedAtUtc": "2026-10-25T11:32:23.285346+00:00"
+            },
+            "steps": [
+              {
+                "index": 1,
+                "commandId": "d0b7b45345c6430d8d1ed0d1b36128e9",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 1,
+                "position": [
+                  1,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 2,
+                "commandId": "b9d192205d6448f58167982371a7c51b",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 2,
+                "position": [
+                  1,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 3,
+                "commandId": "e038852145c44bd0bec0da59baaffae3",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 3,
+                "position": [
+                  1,
+                  4
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 4,
+                "commandId": "2eaefa4df4f947beab94034371403b0c",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 4,
+                "position": [
+                  1,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 5,
+                "commandId": "5c408915b44249feb5fa367b1c6a87d0",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 5,
+                "position": [
+                  1,
+                  6
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 6,
+                "commandId": "dd1f375bfb96466a8d8adb485b476abf",
+                "action": {
+                  "type": "visit",
+                  "activityId": "garden"
+                },
+                "reason": "在已选活动地点确认到访",
+                "status": "committed",
+                "stateVersion": 6,
+                "position": [
+                  1,
+                  6
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200,
+                "evidenceSource": "command_receipt"
+              },
+              {
+                "index": 7,
+                "commandId": "70f6fb65d57c47c7ad7339c41e341a40",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 7,
+                "position": [
+                  1,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 8,
+                "commandId": "18dff7daa5734a76a44d889ab5171d63",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 8,
+                "position": [
+                  1,
+                  4
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 9,
+                "commandId": "c01d51776281462b862d2a3e126188fa",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 9,
+                "position": [
+                  1,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 10,
+                "commandId": "44e850e9e2f047189038ec1215c579ba",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 10,
+                "position": [
+                  1,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 11,
+                "commandId": "8478b949abf8452ea5cf99d5f98641d1",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 11,
+                "position": [
+                  1,
+                  1
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              }
+            ],
+            "feedback": {
+              "summary": "已核验活动到访与返回",
+              "issues": [],
+              "suggestions": []
+            },
+            "world": {
+              "id": "foundation-01",
+              "width": 8,
+              "height": 8,
+              "blocked": [
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "water": [
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "entities": [],
+              "activities": [
+                {
+                  "id": "garden",
+                  "label": "静谧花园",
+                  "position": [
+                    1,
+                    6
+                  ],
+                  "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+                },
+                {
+                  "id": "riverwalk",
+                  "label": "河岸步道",
+                  "position": [
+                    2,
+                    5
+                  ],
+                  "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+                },
+                {
+                  "id": "lookout",
+                  "label": "彼岸观景台",
+                  "position": [
+                    6,
+                    1
+                  ],
+                  "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+                }
+              ]
+            }
+          },
+          "actualModelCalls": 0,
+          "error": null,
+          "initialDigest": "f253dd28c8306a54a3742f4890c03021f127b86947da50ce63bf770e9fe441f8",
+          "expectedGoalMatch": true,
+          "executionVerified": true,
+          "databaseAudit": {
+            "issuedWood": 12,
+            "depotWood": 12,
+            "inventoryWood": 0,
+            "embodiedWood": 0,
+            "conserved": true,
+            "visitRows": 1,
+            "stateVersion": 11,
+            "eventRows": 12,
+            "foreignKeyErrors": 0
+          },
+          "decisionEvents": [],
+          "elapsedSeconds": 0.356557
+        },
+        {
+          "kind": "codex-exec",
+          "report": {
+            "schemaVersion": 1,
+            "kind": "resident-mission-report",
+            "mission": {
+              "id": "quiet-model",
+              "objective": "我只想在静谧花园短途安静散步，体验后返回，不领取也不建造。",
+              "actorId": "a1",
+              "worldId": "foundation-01",
+              "rulesVersion": "r3",
+              "origin": [
+                1,
+                1
+              ],
+              "goal": {
+                "id": "garden",
+                "label": "静谧花园",
+                "target": [
+                  1,
+                  6
+                ],
+                "activityId": "garden"
+              },
+              "status": "completed",
+              "reason": "round_trip_verified"
+            },
+            "decision": {
+              "goalId": "garden",
+              "reason": "静谧花园直接符合你短途安静散步、体验后返回的目的，无需领取物资或建造。该目标可行，预计需要11条命令，在12条命令预算内，且不消耗木材。",
+              "provider": {
+                "kind": "codex-exec",
+                "model": "gpt-6-astra",
+                "usage": {
+                  "inputTokens": 12036,
+                  "cachedInputTokens": 0,
+                  "outputTokens": 74
+                }
+              }
+            },
+            "budget": {
+              "limits": {
+                "commands": 12,
+                "wood": 0,
+                "seconds": 600,
+                "modelCalls": 1
+              },
+              "used": {
+                "commands": 11,
+                "wood": 0,
+                "modelCalls": 1,
+                "seconds": 9.500405311584473
+              }
+            },
+            "facts": {
+              "goalReached": true,
+              "returned": true,
+              "activityCompleted": true,
+              "activityVisit": {
+                "activityId": "garden",
+                "commandId": "87545bcffb534dd18c299d183ec14aea",
+                "stateVersion": 6,
+                "visitedAtUtc": "2026-10-25T11:32:32.9716442+00:00",
+                "position": [
+                  1,
+                  6
+                ]
+              },
+              "startStateVersion": 0,
+              "endStateVersion": 11,
+              "woodClaimed": 0,
+              "createdEntityIds": [],
+              "verifiedAtUtc": "2026-10-25T11:32:33.016183+00:00"
+            },
+            "steps": [
+              {
+                "index": 1,
+                "commandId": "41ee6a4aee144556b9f28e56eed3af87",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 1,
+                "position": [
+                  1,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 2,
+                "commandId": "858f394856204d6db0f96a06ec4638b2",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 2,
+                "position": [
+                  1,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 3,
+                "commandId": "afb4b74f0184449a9e42a74801832289",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 3,
+                "position": [
+                  1,
+                  4
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 4,
+                "commandId": "810716818b7045d2bffd67d20c1ec099",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 4,
+                "position": [
+                  1,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 5,
+                "commandId": "7a5e545635a8433c95788d5c09e2bda6",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 5,
+                "position": [
+                  1,
+                  6
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 6,
+                "commandId": "87545bcffb534dd18c299d183ec14aea",
+                "action": {
+                  "type": "visit",
+                  "activityId": "garden"
+                },
+                "reason": "在已选活动地点确认到访",
+                "status": "committed",
+                "stateVersion": 6,
+                "position": [
+                  1,
+                  6
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200,
+                "evidenceSource": "command_receipt"
+              },
+              {
+                "index": 7,
+                "commandId": "db6310608baf4fbc8fd8001dab009234",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 7,
+                "position": [
+                  1,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 8,
+                "commandId": "0ed6dbddaa404045bd8f69a662cdd0a0",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 8,
+                "position": [
+                  1,
+                  4
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 9,
+                "commandId": "4e3d2e399bab4b31855db404e0a135fc",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 9,
+                "position": [
+                  1,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 10,
+                "commandId": "e6580ce44d864dc3b38bc5f5f10b459e",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 10,
+                "position": [
+                  1,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 11,
+                "commandId": "4065ad92fbed4008971e2a3d0e89a6fb",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 11,
+                "position": [
+                  1,
+                  1
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              }
+            ],
+            "feedback": {
+              "summary": "已核验活动到访与返回",
+              "issues": [],
+              "suggestions": []
+            },
+            "world": {
+              "id": "foundation-01",
+              "width": 8,
+              "height": 8,
+              "blocked": [
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "water": [
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "entities": [],
+              "activities": [
+                {
+                  "id": "garden",
+                  "label": "静谧花园",
+                  "position": [
+                    1,
+                    6
+                  ],
+                  "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+                },
+                {
+                  "id": "riverwalk",
+                  "label": "河岸步道",
+                  "position": [
+                    2,
+                    5
+                  ],
+                  "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+                },
+                {
+                  "id": "lookout",
+                  "label": "彼岸观景台",
+                  "position": [
+                    6,
+                    1
+                  ],
+                  "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+                }
+              ]
+            }
+          },
+          "actualModelCalls": 1,
+          "error": null,
+          "initialDigest": "f253dd28c8306a54a3742f4890c03021f127b86947da50ce63bf770e9fe441f8",
+          "expectedGoalMatch": true,
+          "executionVerified": true,
+          "databaseAudit": {
+            "issuedWood": 12,
+            "depotWood": 12,
+            "inventoryWood": 0,
+            "embodiedWood": 0,
+            "conserved": true,
+            "visitRows": 1,
+            "stateVersion": 11,
+            "eventRows": 12,
+            "foreignKeyErrors": 0
+          },
+          "decisionEvents": [
+            {
+              "kind": "codex-exec",
+              "requestedModel": "gpt-6-astra",
+              "startedAtUtc": "2026-10-25T11:32:23.636685+00:00",
+              "status": "completed",
+              "exitCode": 0,
+              "toolTypes": [],
+              "usage": {
+                "input_tokens": 12036,
+                "cached_input_tokens": 0,
+                "cache_write_input_tokens": 0,
+                "output_tokens": 74,
+                "reasoning_output_tokens": 0
+              },
+              "decision": {
+                "goalId": "garden",
+                "reason": "静谧花园直接符合你短途安静散步、体验后返回的目的，无需领取物资或建造。该目标可行，预计需要11条命令，在12条命令预算内，且不消耗木材。"
+              },
+              "elapsedSeconds": 9.260644834022969
+            }
+          ],
+          "elapsedSeconds": 9.731723
+        }
+      ]
+    },
+    {
+      "id": "constrained",
+      "objective": "我优先想看彼岸全景，但不能花木材且最多12条命令；如果不可行，改去静谧花园放松后返回。",
+      "expectedGoalId": "garden",
+      "initialEquivalent": true,
+      "runs": [
+        {
+          "kind": "fixed-reference",
+          "report": {
+            "schemaVersion": 1,
+            "kind": "resident-mission-report",
+            "mission": {
+              "id": "constrained-fixed",
+              "objective": "我优先想看彼岸全景，但不能花木材且最多12条命令；如果不可行，改去静谧花园放松后返回。",
+              "actorId": "a1",
+              "worldId": "foundation-01",
+              "rulesVersion": "r3",
+              "origin": [
+                1,
+                1
+              ],
+              "goal": {
+                "id": "garden",
+                "label": "静谧花园",
+                "target": [
+                  1,
+                  6
+                ],
+                "activityId": "garden"
+              },
+              "status": "completed",
+              "reason": "round_trip_verified"
+            },
+            "decision": {
+              "goalId": "garden",
+              "reason": "固定成本参考：按木材、预计命令数、目标 ID 升序选择可行目标。",
+              "provider": {
+                "kind": "fixed-reference",
+                "model": "least-cost-v1",
+                "usage": {}
+              }
+            },
+            "budget": {
+              "limits": {
+                "commands": 12,
+                "wood": 0,
+                "seconds": 600,
+                "modelCalls": 1
+              },
+              "used": {
+                "commands": 11,
+                "wood": 0,
+                "modelCalls": 1,
+                "seconds": 0.08732223510742188
+              }
+            },
+            "facts": {
+              "goalReached": true,
+              "returned": true,
+              "activityCompleted": true,
+              "activityVisit": {
+                "activityId": "garden",
+                "commandId": "d1dafddb8c0841659bf53a99d0a61e08",
+                "stateVersion": 6,
+                "visitedAtUtc": "2026-10-25T11:32:33.3625601+00:00",
+                "position": [
+                  1,
+                  6
+                ]
+              },
+              "startStateVersion": 0,
+              "endStateVersion": 11,
+              "woodClaimed": 0,
+              "createdEntityIds": [],
+              "verifiedAtUtc": "2026-10-25T11:32:33.402229+00:00"
+            },
+            "steps": [
+              {
+                "index": 1,
+                "commandId": "d044408fa39f4737a1512b802183cd32",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 1,
+                "position": [
+                  1,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 2,
+                "commandId": "d8fddfe58d7040acaf976c8c3ca8f32e",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 2,
+                "position": [
+                  1,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 3,
+                "commandId": "045456ecf9d34a4aa7454a82449d3940",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 3,
+                "position": [
+                  1,
+                  4
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 4,
+                "commandId": "e975740eb9cb4ebea4bcd94006ed592c",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 4,
+                "position": [
+                  1,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 5,
+                "commandId": "6ef1b95289a94b7b9fcf599e33d348f8",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 5,
+                "position": [
+                  1,
+                  6
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 6,
+                "commandId": "d1dafddb8c0841659bf53a99d0a61e08",
+                "action": {
+                  "type": "visit",
+                  "activityId": "garden"
+                },
+                "reason": "在已选活动地点确认到访",
+                "status": "committed",
+                "stateVersion": 6,
+                "position": [
+                  1,
+                  6
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200,
+                "evidenceSource": "command_receipt"
+              },
+              {
+                "index": 7,
+                "commandId": "43357c4f112e4fd0ab2d047110362b77",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 7,
+                "position": [
+                  1,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 8,
+                "commandId": "b0959e958f8143a5bec268cec888d48f",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 8,
+                "position": [
+                  1,
+                  4
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 9,
+                "commandId": "2894edd845784e528d218a81584c0581",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 9,
+                "position": [
+                  1,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 10,
+                "commandId": "137aaf2d73c34105b764521c336283df",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 10,
+                "position": [
+                  1,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 11,
+                "commandId": "1e8efd0f7520460796fd353bb2dc3226",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 11,
+                "position": [
+                  1,
+                  1
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              }
+            ],
+            "feedback": {
+              "summary": "已核验活动到访与返回",
+              "issues": [],
+              "suggestions": []
+            },
+            "world": {
+              "id": "foundation-01",
+              "width": 8,
+              "height": 8,
+              "blocked": [
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "water": [
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "entities": [],
+              "activities": [
+                {
+                  "id": "garden",
+                  "label": "静谧花园",
+                  "position": [
+                    1,
+                    6
+                  ],
+                  "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+                },
+                {
+                  "id": "riverwalk",
+                  "label": "河岸步道",
+                  "position": [
+                    2,
+                    5
+                  ],
+                  "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+                },
+                {
+                  "id": "lookout",
+                  "label": "彼岸观景台",
+                  "position": [
+                    6,
+                    1
+                  ],
+                  "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+                }
+              ]
+            }
+          },
+          "actualModelCalls": 0,
+          "error": null,
+          "initialDigest": "f253dd28c8306a54a3742f4890c03021f127b86947da50ce63bf770e9fe441f8",
+          "expectedGoalMatch": true,
+          "executionVerified": true,
+          "databaseAudit": {
+            "issuedWood": 12,
+            "depotWood": 12,
+            "inventoryWood": 0,
+            "embodiedWood": 0,
+            "conserved": true,
+            "visitRows": 1,
+            "stateVersion": 11,
+            "eventRows": 12,
+            "foreignKeyErrors": 0
+          },
+          "decisionEvents": [],
+          "elapsedSeconds": 0.382647
+        },
+        {
+          "kind": "codex-exec",
+          "report": {
+            "schemaVersion": 1,
+            "kind": "resident-mission-report",
+            "mission": {
+              "id": "constrained-model",
+              "objective": "我优先想看彼岸全景，但不能花木材且最多12条命令；如果不可行，改去静谧花园放松后返回。",
+              "actorId": "a1",
+              "worldId": "foundation-01",
+              "rulesVersion": "r3",
+              "origin": [
+                1,
+                1
+              ],
+              "goal": {
+                "id": "garden",
+                "label": "静谧花园",
+                "target": [
+                  1,
+                  6
+                ],
+                "activityId": "garden"
+              },
+              "status": "completed",
+              "reason": "round_trip_verified"
+            },
+            "decision": {
+              "goalId": "garden",
+              "reason": "彼岸观景台需要建桥，无法满足禁止建设和零木材预算，当前无可行路线。按你的备选意愿选择静谧花园，放松后返回预计需11条命令、不消耗木材，符合12条命令上限。",
+              "provider": {
+                "kind": "codex-exec",
+                "model": "gpt-6-astra",
+                "usage": {
+                  "inputTokens": 12077,
+                  "cachedInputTokens": 0,
+                  "outputTokens": 81
+                }
+              }
+            },
+            "budget": {
+              "limits": {
+                "commands": 12,
+                "wood": 0,
+                "seconds": 600,
+                "modelCalls": 1
+              },
+              "used": {
+                "commands": 11,
+                "wood": 0,
+                "modelCalls": 1,
+                "seconds": 8.558979749679565
+              }
+            },
+            "facts": {
+              "goalReached": true,
+              "returned": true,
+              "activityCompleted": true,
+              "activityVisit": {
+                "activityId": "garden",
+                "commandId": "c5054ad2238540e7880492d00f3c75a4",
+                "stateVersion": 6,
+                "visitedAtUtc": "2026-10-25T11:32:42.2151452+00:00",
+                "position": [
+                  1,
+                  6
+                ]
+              },
+              "startStateVersion": 0,
+              "endStateVersion": 11,
+              "woodClaimed": 0,
+              "createdEntityIds": [],
+              "verifiedAtUtc": "2026-10-25T11:32:42.249915+00:00"
+            },
+            "steps": [
+              {
+                "index": 1,
+                "commandId": "660367248d0f4bd5be2380e4a42bf8a9",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 1,
+                "position": [
+                  1,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 2,
+                "commandId": "8a5f1efd31794f91a1af0ba079cf2843",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 2,
+                "position": [
+                  1,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 3,
+                "commandId": "f2cf8236b82f4cbfafdd98910a098a5b",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 3,
+                "position": [
+                  1,
+                  4
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 4,
+                "commandId": "60e4d9122f204c22b6a42a322a07c17d",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 4,
+                "position": [
+                  1,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 5,
+                "commandId": "fbbc3c332b1a4079a92127eae7f60ee3",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 5,
+                "position": [
+                  1,
+                  6
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 6,
+                "commandId": "c5054ad2238540e7880492d00f3c75a4",
+                "action": {
+                  "type": "visit",
+                  "activityId": "garden"
+                },
+                "reason": "在已选活动地点确认到访",
+                "status": "committed",
+                "stateVersion": 6,
+                "position": [
+                  1,
+                  6
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200,
+                "evidenceSource": "command_receipt"
+              },
+              {
+                "index": 7,
+                "commandId": "07ce2dfa408e426bbd0ff7fd08882ebf",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 7,
+                "position": [
+                  1,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 8,
+                "commandId": "76d52eba41bf40eda602e21d8ea7b25e",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 8,
+                "position": [
+                  1,
+                  4
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 9,
+                "commandId": "bbf5a056facc489e9b3fe28db2075960",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 9,
+                "position": [
+                  1,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 10,
+                "commandId": "470147eb759a4363985a8643f3a31d3f",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 10,
+                "position": [
+                  1,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 11,
+                "commandId": "ccf590ca70be4e5da5bb1dc7e6b0ebde",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 11,
+                "position": [
+                  1,
+                  1
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              }
+            ],
+            "feedback": {
+              "summary": "已核验活动到访与返回",
+              "issues": [],
+              "suggestions": []
+            },
+            "world": {
+              "id": "foundation-01",
+              "width": 8,
+              "height": 8,
+              "blocked": [
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "water": [
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "entities": [],
+              "activities": [
+                {
+                  "id": "garden",
+                  "label": "静谧花园",
+                  "position": [
+                    1,
+                    6
+                  ],
+                  "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+                },
+                {
+                  "id": "riverwalk",
+                  "label": "河岸步道",
+                  "position": [
+                    2,
+                    5
+                  ],
+                  "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+                },
+                {
+                  "id": "lookout",
+                  "label": "彼岸观景台",
+                  "position": [
+                    6,
+                    1
+                  ],
+                  "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+                }
+              ]
+            }
+          },
+          "actualModelCalls": 1,
+          "error": null,
+          "initialDigest": "f253dd28c8306a54a3742f4890c03021f127b86947da50ce63bf770e9fe441f8",
+          "expectedGoalMatch": true,
+          "executionVerified": true,
+          "databaseAudit": {
+            "issuedWood": 12,
+            "depotWood": 12,
+            "inventoryWood": 0,
+            "embodiedWood": 0,
+            "conserved": true,
+            "visitRows": 1,
+            "stateVersion": 11,
+            "eventRows": 12,
+            "foreignKeyErrors": 0
+          },
+          "decisionEvents": [
+            {
+              "kind": "codex-exec",
+              "requestedModel": "gpt-6-astra",
+              "startedAtUtc": "2026-10-25T11:32:33.819921+00:00",
+              "status": "completed",
+              "exitCode": 0,
+              "toolTypes": [],
+              "usage": {
+                "input_tokens": 12077,
+                "cached_input_tokens": 0,
+                "cache_write_input_tokens": 0,
+                "output_tokens": 81,
+                "reasoning_output_tokens": 0
+              },
+              "decision": {
+                "goalId": "garden",
+                "reason": "彼岸观景台需要建桥，无法满足禁止建设和零木材预算，当前无可行路线。按你的备选意愿选择静谧花园，放松后返回预计需11条命令、不消耗木材，符合12条命令上限。"
+              },
+              "elapsedSeconds": 8.350199006963521
+            }
+          ],
+          "elapsedSeconds": 8.845819
+        }
+      ]
+    },
+    {
+      "id": "riverside",
+      "objective": "我想沿本岸河岸步道看水散步，体验后返回，不去花园也不建造。",
+      "expectedGoalId": "riverwalk",
+      "initialEquivalent": true,
+      "runs": [
+        {
+          "kind": "fixed-reference",
+          "report": {
+            "schemaVersion": 1,
+            "kind": "resident-mission-report",
+            "mission": {
+              "id": "riverside-fixed",
+              "objective": "我想沿本岸河岸步道看水散步，体验后返回，不去花园也不建造。",
+              "actorId": "a1",
+              "worldId": "foundation-01",
+              "rulesVersion": "r3",
+              "origin": [
+                1,
+                1
+              ],
+              "goal": {
+                "id": "garden",
+                "label": "静谧花园",
+                "target": [
+                  1,
+                  6
+                ],
+                "activityId": "garden"
+              },
+              "status": "completed",
+              "reason": "round_trip_verified"
+            },
+            "decision": {
+              "goalId": "garden",
+              "reason": "固定成本参考：按木材、预计命令数、目标 ID 升序选择可行目标。",
+              "provider": {
+                "kind": "fixed-reference",
+                "model": "least-cost-v1",
+                "usage": {}
+              }
+            },
+            "budget": {
+              "limits": {
+                "commands": 12,
+                "wood": 0,
+                "seconds": 600,
+                "modelCalls": 1
+              },
+              "used": {
+                "commands": 11,
+                "wood": 0,
+                "modelCalls": 1,
+                "seconds": 0.07932162284851074
+              }
+            },
+            "facts": {
+              "goalReached": true,
+              "returned": true,
+              "activityCompleted": true,
+              "activityVisit": {
+                "activityId": "garden",
+                "commandId": "abcc619af74a4519a14077736b41ff73",
+                "stateVersion": 6,
+                "visitedAtUtc": "2026-10-25T11:32:42.5362488+00:00",
+                "position": [
+                  1,
+                  6
+                ]
+              },
+              "startStateVersion": 0,
+              "endStateVersion": 11,
+              "woodClaimed": 0,
+              "createdEntityIds": [],
+              "verifiedAtUtc": "2026-10-25T11:32:42.568886+00:00"
+            },
+            "steps": [
+              {
+                "index": 1,
+                "commandId": "26c213f60f8d40158c1219e8e0fae36a",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 1,
+                "position": [
+                  1,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 2,
+                "commandId": "b88c2faa6f674ee7a0f3ab25f3c390e6",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 2,
+                "position": [
+                  1,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 3,
+                "commandId": "8ff203e52ea84be6a7237590b0d6b56b",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 3,
+                "position": [
+                  1,
+                  4
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 4,
+                "commandId": "87ed800fb6374ec39c663cc5ee35e8e0",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 4,
+                "position": [
+                  1,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 5,
+                "commandId": "63561dec718b40bbaaab866416e7e735",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 5,
+                "position": [
+                  1,
+                  6
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 6,
+                "commandId": "abcc619af74a4519a14077736b41ff73",
+                "action": {
+                  "type": "visit",
+                  "activityId": "garden"
+                },
+                "reason": "在已选活动地点确认到访",
+                "status": "committed",
+                "stateVersion": 6,
+                "position": [
+                  1,
+                  6
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200,
+                "evidenceSource": "command_receipt"
+              },
+              {
+                "index": 7,
+                "commandId": "2e570d933a514067a8b1f5da468efbbb",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 7,
+                "position": [
+                  1,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 8,
+                "commandId": "0c54fb2b16d24ad78a51363eff1e960d",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 8,
+                "position": [
+                  1,
+                  4
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 9,
+                "commandId": "7dc733af972543b687fefc79e8ea648a",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 9,
+                "position": [
+                  1,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 10,
+                "commandId": "d020c1b766364f38aa67cd1d8f4e47fd",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 10,
+                "position": [
+                  1,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 11,
+                "commandId": "9c49a88fd11b43898f6ec16088e1900d",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 11,
+                "position": [
+                  1,
+                  1
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              }
+            ],
+            "feedback": {
+              "summary": "已核验活动到访与返回",
+              "issues": [],
+              "suggestions": []
+            },
+            "world": {
+              "id": "foundation-01",
+              "width": 8,
+              "height": 8,
+              "blocked": [
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "water": [
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "entities": [],
+              "activities": [
+                {
+                  "id": "garden",
+                  "label": "静谧花园",
+                  "position": [
+                    1,
+                    6
+                  ],
+                  "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+                },
+                {
+                  "id": "riverwalk",
+                  "label": "河岸步道",
+                  "position": [
+                    2,
+                    5
+                  ],
+                  "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+                },
+                {
+                  "id": "lookout",
+                  "label": "彼岸观景台",
+                  "position": [
+                    6,
+                    1
+                  ],
+                  "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+                }
+              ]
+            }
+          },
+          "actualModelCalls": 0,
+          "error": null,
+          "initialDigest": "f253dd28c8306a54a3742f4890c03021f127b86947da50ce63bf770e9fe441f8",
+          "expectedGoalMatch": false,
+          "executionVerified": true,
+          "databaseAudit": {
+            "issuedWood": 12,
+            "depotWood": 12,
+            "inventoryWood": 0,
+            "embodiedWood": 0,
+            "conserved": true,
+            "visitRows": 1,
+            "stateVersion": 11,
+            "eventRows": 12,
+            "foreignKeyErrors": 0
+          },
+          "decisionEvents": [],
+          "elapsedSeconds": 0.316416
+        },
+        {
+          "kind": "codex-exec",
+          "report": {
+            "schemaVersion": 1,
+            "kind": "resident-mission-report",
+            "mission": {
+              "id": "riverside-model",
+              "objective": "我想沿本岸河岸步道看水散步，体验后返回，不去花园也不建造。",
+              "actorId": "a1",
+              "worldId": "foundation-01",
+              "rulesVersion": "r3",
+              "origin": [
+                1,
+                1
+              ],
+              "goal": {
+                "id": "riverwalk",
+                "label": "河岸步道",
+                "target": [
+                  2,
+                  5
+                ],
+                "activityId": "riverwalk"
+              },
+              "status": "completed",
+              "reason": "round_trip_verified"
+            },
+            "decision": {
+              "goalId": "riverwalk",
+              "reason": "河岸步道符合在本岸看水散步、体验后返回的目的，无需去花园、过河或建造。该目标可行，预计需11条命令，在12条命令预算内，且不消耗木材。",
+              "provider": {
+                "kind": "codex-exec",
+                "model": "gpt-6-astra",
+                "usage": {
+                  "inputTokens": 12040,
+                  "cachedInputTokens": 8960,
+                  "outputTokens": 76
+                }
+              }
+            },
+            "budget": {
+              "limits": {
+                "commands": 12,
+                "wood": 0,
+                "seconds": 600,
+                "modelCalls": 1
+              },
+              "used": {
+                "commands": 11,
+                "wood": 0,
+                "modelCalls": 1,
+                "seconds": 7.7172253131866455
+              }
+            },
+            "facts": {
+              "goalReached": true,
+              "returned": true,
+              "activityCompleted": true,
+              "activityVisit": {
+                "activityId": "riverwalk",
+                "commandId": "8110661797a04f6aa17ade9aca383309",
+                "stateVersion": 6,
+                "visitedAtUtc": "2026-10-25T11:32:50.4844488+00:00",
+                "position": [
+                  2,
+                  5
+                ]
+              },
+              "startStateVersion": 0,
+              "endStateVersion": 11,
+              "woodClaimed": 0,
+              "createdEntityIds": [],
+              "verifiedAtUtc": "2026-10-25T11:32:50.518574+00:00"
+            },
+            "steps": [
+              {
+                "index": 1,
+                "commandId": "40658d93604c4f2294365c8cbab40e9d",
+                "action": {
+                  "type": "move",
+                  "dx": 1,
+                  "dy": 0
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 1,
+                "position": [
+                  2,
+                  1
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 2,
+                "commandId": "148b2ddb0caf497a8cb7e80230009858",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 2,
+                "position": [
+                  2,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 3,
+                "commandId": "1fc64e906c7049439e8a0ae6bb5b2d8c",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 3,
+                "position": [
+                  2,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 4,
+                "commandId": "22ef4cda6b8d41b2a9adb71b77114fef",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 4,
+                "position": [
+                  2,
+                  4
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 5,
+                "commandId": "125e14d1cc154ccb962000fd50e55bcc",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": 1
+                },
+                "reason": "前往已选目标",
+                "status": "committed",
+                "stateVersion": 5,
+                "position": [
+                  2,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 6,
+                "commandId": "8110661797a04f6aa17ade9aca383309",
+                "action": {
+                  "type": "visit",
+                  "activityId": "riverwalk"
+                },
+                "reason": "在已选活动地点确认到访",
+                "status": "committed",
+                "stateVersion": 6,
+                "position": [
+                  2,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200,
+                "evidenceSource": "command_receipt"
+              },
+              {
+                "index": 7,
+                "commandId": "8187b35af8514bcbb94de15c3cd76499",
+                "action": {
+                  "type": "move",
+                  "dx": -1,
+                  "dy": 0
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 7,
+                "position": [
+                  1,
+                  5
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 8,
+                "commandId": "e72c7ca5e2394e0dbfc60f1631ef2f4c",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 8,
+                "position": [
+                  1,
+                  4
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 9,
+                "commandId": "1a768f9a295a46e6870d95ef4a4e4cd9",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 9,
+                "position": [
+                  1,
+                  3
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 10,
+                "commandId": "3c6349f772b249ea8041cb8becbf9021",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 10,
+                "position": [
+                  1,
+                  2
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              },
+              {
+                "index": 11,
+                "commandId": "2cc5d3035b3e45a1b704b4ceaec6909a",
+                "action": {
+                  "type": "move",
+                  "dx": 0,
+                  "dy": -1
+                },
+                "reason": "返回原起点",
+                "status": "committed",
+                "stateVersion": 11,
+                "position": [
+                  1,
+                  1
+                ],
+                "inventoryWood": 0,
+                "httpStatus": 200
+              }
+            ],
+            "feedback": {
+              "summary": "已核验活动到访与返回",
+              "issues": [],
+              "suggestions": []
+            },
+            "world": {
+              "id": "foundation-01",
+              "width": 8,
+              "height": 8,
+              "blocked": [
+                [
+                  3,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "water": [
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  5,
+                  0
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  2
+                ],
+                [
+                  5,
+                  3
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  5,
+                  5
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "goal": [
+                6,
+                1
+              ],
+              "entities": [],
+              "activities": [
+                {
+                  "id": "garden",
+                  "label": "静谧花园",
+                  "position": [
+                    1,
+                    6
+                  ],
+                  "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+                },
+                {
+                  "id": "riverwalk",
+                  "label": "河岸步道",
+                  "position": [
+                    2,
+                    5
+                  ],
+                  "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+                },
+                {
+                  "id": "lookout",
+                  "label": "彼岸观景台",
+                  "position": [
+                    6,
+                    1
+                  ],
+                  "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+                }
+              ]
+            }
+          },
+          "actualModelCalls": 1,
+          "error": null,
+          "initialDigest": "f253dd28c8306a54a3742f4890c03021f127b86947da50ce63bf770e9fe441f8",
+          "expectedGoalMatch": true,
+          "executionVerified": true,
+          "databaseAudit": {
+            "issuedWood": 12,
+            "depotWood": 12,
+            "inventoryWood": 0,
+            "embodiedWood": 0,
+            "conserved": true,
+            "visitRows": 1,
+            "stateVersion": 11,
+            "eventRows": 12,
+            "foreignKeyErrors": 0
+          },
+          "decisionEvents": [
+            {
+              "kind": "codex-exec",
+              "requestedModel": "gpt-6-astra",
+              "startedAtUtc": "2026-10-25T11:32:42.912268+00:00",
+              "status": "completed",
+              "exitCode": 0,
+              "toolTypes": [],
+              "usage": {
+                "input_tokens": 12040,
+                "cached_input_tokens": 8960,
+                "cache_write_input_tokens": 0,
+                "output_tokens": 76,
+                "reasoning_output_tokens": 0
+              },
+              "decision": {
+                "goalId": "riverwalk",
+                "reason": "河岸步道符合在本岸看水散步、体验后返回的目的，无需去花园、过河或建造。该目标可行，预计需11条命令，在12条命令预算内，且不消耗木材。"
+              },
+              "elapsedSeconds": 7.526531586016063
+            }
+          ],
+          "elapsedSeconds": 7.94698
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "summary": {
+    "fixed-reference": {
+      "purposeMatches": 2,
+      "executionsVerified": 4
+    },
+    "codex-exec": {
+      "purposeMatches": 4,
+      "executionsVerified": 4
+    }
+  },
+  "finishedAtUtc": "2026-10-25T11:32:50.541084+00:00"
+}

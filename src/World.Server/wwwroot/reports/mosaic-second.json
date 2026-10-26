@@ -1,0 +1,831 @@
+{
+  "schemaVersion": 1,
+  "kind": "resident-mission-report",
+  "mission": {
+    "id": "mosaic-second",
+    "objective": "先读取花园当前画布里上一位居民留下的河流，再到静谧花园，在河流旁的空白格添加叶绿植物，可点缀花红。保留所有已有非空白格，最多改 8 格，然后返回。",
+    "sharePostcard": false,
+    "paintMosaic": true,
+    "actorId": "a2",
+    "worldId": "foundation-01",
+    "rulesVersion": "r5",
+    "origin": [
+      1,
+      2
+    ],
+    "goal": {
+      "id": "garden",
+      "label": "静谧花园",
+      "target": [
+        1,
+        6
+      ],
+      "activityId": "garden"
+    },
+    "status": "completed",
+    "reason": "round_trip_verified"
+  },
+  "decision": {
+    "goalId": "garden",
+    "reason": "选择静谧花园：无需木材或建桥，预计10条命令符合12条预算，可按目的前往并返回。草图保留上一位居民的全部河蓝格，仅在河流旁8个空白格安排6格叶绿与2格花红，供后来者欣赏；尚未发表。",
+    "provider": {
+      "kind": "codex-exec",
+      "model": "gpt-6-astra",
+      "usage": {
+        "inputTokens": 13108,
+        "cachedInputTokens": 0,
+        "outputTokens": 195
+      }
+    },
+    "mosaicPatch": [
+      {
+        "x": 0,
+        "y": 0,
+        "color": "leaf"
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "color": "rose"
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "color": "leaf"
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "color": "rose"
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "color": "leaf"
+      },
+      {
+        "x": 1,
+        "y": 3,
+        "color": "leaf"
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "color": "leaf"
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "color": "leaf"
+      }
+    ],
+    "mosaicBaseRevision": 1
+  },
+  "budget": {
+    "limits": {
+      "commands": 12,
+      "wood": 0,
+      "seconds": 600,
+      "modelCalls": 1
+    },
+    "used": {
+      "commands": 10,
+      "wood": 0,
+      "modelCalls": 1,
+      "seconds": 12.007057905197144
+    }
+  },
+  "facts": {
+    "goalReached": true,
+    "returned": true,
+    "activityCompleted": true,
+    "activityVisit": {
+      "activityId": "garden",
+      "commandId": "c12d6617cb5e4ae3aa5b3d48f7b5efe9",
+      "stateVersion": 17,
+      "visitedAtUtc": "2026-10-25T14:29:15.0413577+00:00",
+      "position": [
+        1,
+        6
+      ]
+    },
+    "postcardShared": false,
+    "postcard": null,
+    "mosaicPainted": true,
+    "mosaicEdit": {
+      "activityId": "garden",
+      "authorActorId": "a2",
+      "commandId": "49bd14213c4245a3a1034dd704e6723c",
+      "visitCommandId": "c12d6617cb5e4ae3aa5b3d48f7b5efe9",
+      "baseRevision": 1,
+      "revision": 2,
+      "patch": [
+        {
+          "x": 0,
+          "y": 0,
+          "color": "leaf"
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "color": "rose"
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "color": "leaf"
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "color": "rose"
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "color": "leaf"
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "color": "leaf"
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "color": "leaf"
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "color": "leaf"
+        }
+      ],
+      "stateVersion": 18,
+      "paintedAtUtc": "2026-10-25T14:29:15.0483553+00:00",
+      "position": [
+        1,
+        6
+      ]
+    },
+    "startStateVersion": 12,
+    "endStateVersion": 22,
+    "woodClaimed": 0,
+    "createdEntityIds": [],
+    "verifiedAtUtc": "2026-10-25T14:29:15.079720+00:00"
+  },
+  "steps": [
+    {
+      "index": 1,
+      "commandId": "7af268fdb1c648708672f021e409fc5f",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 13,
+      "position": [
+        1,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 2,
+      "commandId": "e1cd45fa7dcf41a0af4d79027b55b17d",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 14,
+      "position": [
+        1,
+        4
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 3,
+      "commandId": "8061e6386550427f8231ebfcb2335771",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 15,
+      "position": [
+        1,
+        5
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 4,
+      "commandId": "34ab8830ac334716b983416a47e3c804",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 16,
+      "position": [
+        1,
+        6
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 5,
+      "commandId": "c12d6617cb5e4ae3aa5b3d48f7b5efe9",
+      "action": {
+        "type": "visit",
+        "activityId": "garden"
+      },
+      "reason": "在已选活动地点确认到访",
+      "status": "committed",
+      "stateVersion": 17,
+      "position": [
+        1,
+        6
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 6,
+      "commandId": "49bd14213c4245a3a1034dd704e6723c",
+      "action": {
+        "type": "mosaic",
+        "activityId": "garden",
+        "visitCommandId": "c12d6617cb5e4ae3aa5b3d48f7b5efe9",
+        "expectedMosaicRevision": 1,
+        "patch": [
+          {
+            "x": 0,
+            "y": 0,
+            "color": "leaf"
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "color": "rose"
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "color": "leaf"
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "color": "rose"
+          },
+          {
+            "x": 0,
+            "y": 2,
+            "color": "leaf"
+          },
+          {
+            "x": 1,
+            "y": 3,
+            "color": "leaf"
+          },
+          {
+            "x": 2,
+            "y": 3,
+            "color": "leaf"
+          },
+          {
+            "x": 4,
+            "y": 4,
+            "color": "leaf"
+          }
+        ]
+      },
+      "reason": "在已确认到访的花园提交原画布草图",
+      "status": "committed",
+      "stateVersion": 18,
+      "position": [
+        1,
+        6
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 7,
+      "commandId": "9c8fdf4c9ba94989a4dea6d9c4b0e182",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 19,
+      "position": [
+        1,
+        5
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 8,
+      "commandId": "6430ec5253864203b3c7cb2ba417ec0b",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 20,
+      "position": [
+        1,
+        4
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 9,
+      "commandId": "44d3ed83defa4ad3a316212d4f1bf54b",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 21,
+      "position": [
+        1,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 10,
+      "commandId": "3a475ace10a047cfae97cf6bddcce3b8",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 22,
+      "position": [
+        1,
+        2
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    }
+  ],
+  "feedback": {
+    "summary": "已核验活动到访、共同画布修改与返回",
+    "issues": [],
+    "suggestions": []
+  },
+  "world": {
+    "id": "foundation-01",
+    "width": 8,
+    "height": 8,
+    "blocked": [
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "water": [
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "goal": [
+      6,
+      1
+    ],
+    "entities": [],
+    "activities": [
+      {
+        "id": "garden",
+        "label": "静谧花园",
+        "position": [
+          1,
+          6
+        ],
+        "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+      },
+      {
+        "id": "riverwalk",
+        "label": "河岸步道",
+        "position": [
+          2,
+          5
+        ],
+        "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+      },
+      {
+        "id": "lookout",
+        "label": "彼岸观景台",
+        "position": [
+          6,
+          1
+        ],
+        "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+      }
+    ],
+    "mosaic": {
+      "activityId": "garden",
+      "width": 5,
+      "height": 5,
+      "revision": 2,
+      "palette": [
+        {
+          "id": "blank",
+          "label": "空白",
+          "hex": "#F4F0E6"
+        },
+        {
+          "id": "leaf",
+          "label": "叶绿",
+          "hex": "#42745B"
+        },
+        {
+          "id": "river",
+          "label": "河蓝",
+          "hex": "#477FA3"
+        },
+        {
+          "id": "sun",
+          "label": "日黄",
+          "hex": "#E4B858"
+        },
+        {
+          "id": "rose",
+          "label": "花红",
+          "hex": "#C86A70"
+        },
+        {
+          "id": "ink",
+          "label": "墨色",
+          "hex": "#37444D"
+        }
+      ],
+      "cells": [
+        {
+          "x": 0,
+          "y": 0,
+          "color": "leaf",
+          "authorActorId": "a2",
+          "commandId": "49bd14213c4245a3a1034dd704e6723c",
+          "stateVersion": 18
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "color": "rose",
+          "authorActorId": "a2",
+          "commandId": "49bd14213c4245a3a1034dd704e6723c",
+          "stateVersion": 18
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "color": "river",
+          "authorActorId": "a1",
+          "commandId": "e86f2642363e4ca3be25c801e353b35f",
+          "stateVersion": 7
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "color": "river",
+          "authorActorId": "a1",
+          "commandId": "e86f2642363e4ca3be25c801e353b35f",
+          "stateVersion": 7
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "color": "leaf",
+          "authorActorId": "a2",
+          "commandId": "49bd14213c4245a3a1034dd704e6723c",
+          "stateVersion": 18
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "color": "rose",
+          "authorActorId": "a2",
+          "commandId": "49bd14213c4245a3a1034dd704e6723c",
+          "stateVersion": 18
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "color": "leaf",
+          "authorActorId": "a2",
+          "commandId": "49bd14213c4245a3a1034dd704e6723c",
+          "stateVersion": 18
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "color": "river",
+          "authorActorId": "a1",
+          "commandId": "e86f2642363e4ca3be25c801e353b35f",
+          "stateVersion": 7
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "color": "river",
+          "authorActorId": "a1",
+          "commandId": "e86f2642363e4ca3be25c801e353b35f",
+          "stateVersion": 7
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "color": "river",
+          "authorActorId": "a1",
+          "commandId": "e86f2642363e4ca3be25c801e353b35f",
+          "stateVersion": 7
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "color": "leaf",
+          "authorActorId": "a2",
+          "commandId": "49bd14213c4245a3a1034dd704e6723c",
+          "stateVersion": 18
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "color": "leaf",
+          "authorActorId": "a2",
+          "commandId": "49bd14213c4245a3a1034dd704e6723c",
+          "stateVersion": 18
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "color": "river",
+          "authorActorId": "a1",
+          "commandId": "e86f2642363e4ca3be25c801e353b35f",
+          "stateVersion": 7
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "color": "river",
+          "authorActorId": "a1",
+          "commandId": "e86f2642363e4ca3be25c801e353b35f",
+          "stateVersion": 7
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "color": "leaf",
+          "authorActorId": "a2",
+          "commandId": "49bd14213c4245a3a1034dd704e6723c",
+          "stateVersion": 18
+        }
+      ]
+    }
+  }
+}

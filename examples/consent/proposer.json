@@ -1,0 +1,23 @@
+{
+  "missionId": "consent-proposer",
+  "objective": "去静谧花园，向原画者提议：只把蓝色河流的一个端点改成日黄，作为阳光标记，其余格子保持不变。写清理由，提交提议后返回；提议还不是实际改图。",
+  "goals": [
+    {
+      "id": "garden",
+      "label": "静谧花园",
+      "target": [
+        1,
+        6
+      ],
+      "activityId": "garden"
+    }
+  ],
+  "allowBuild": false,
+  "budgets": {
+    "commands": 12,
+    "wood": 0,
+    "seconds": 600,
+    "modelCalls": 1
+  },
+  "proposeMosaic": true
+}

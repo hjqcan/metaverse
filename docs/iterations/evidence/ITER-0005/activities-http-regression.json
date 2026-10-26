@@ -1,0 +1,87 @@
+{
+  "suite": "activity-http-v1",
+  "decisionSource": "test-double-or-fixed-reference",
+  "actualModelCalls": 0,
+  "recordedAtUtc": "2026-10-25T13:15:51.166089+00:00",
+  "passed": true,
+  "testsRun": 15,
+  "tests": [
+    {
+      "test": "__main__.ActivityAcceptance.test_01_catalog_and_identity_private_visits",
+      "passed": true,
+      "seconds": 0.3014359759981744
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_02_not_at_unknown_and_invalid_visit_never_change_world",
+      "passed": true,
+      "seconds": 0.2569670509546995
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_03_visit_transaction_idempotence_and_other_actor_scope",
+      "passed": true,
+      "seconds": 0.5778920080047101
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_04_concurrent_same_visit_id_creates_one_record",
+      "passed": true,
+      "seconds": 0.43642698402982205
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_05_visit_exit_before_commit_is_atomic",
+      "passed": true,
+      "seconds": 0.5394504769938067
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_06_visit_exit_after_commit_keeps_original_receipt",
+      "passed": true,
+      "seconds": 0.5849594820174389
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_07_arrival_without_visit_is_not_activity_completion",
+      "passed": true,
+      "seconds": 0.28336682001827285
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_08_activity_roundtrip_completed_resume_noop",
+      "passed": true,
+      "seconds": 0.3882158109918237
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_09_pending_visit_after_service_exit_recovers_same_task",
+      "passed": true,
+      "seconds": 0.5849854450207204
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_10_previous_visit_cannot_complete_new_mission",
+      "passed": true,
+      "seconds": 0.469601966033224
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_11_invalid_catalog_binding_precedes_choice_and_actions",
+      "passed": true,
+      "seconds": 0.31434509897371754
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_12_cost_baseline_uses_feasibility_and_counts_visit",
+      "passed": true,
+      "seconds": 0.3737548710196279
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_13_wrong_activity_in_success_receipt_retains_pending",
+      "passed": true,
+      "seconds": 0.33623672602698207
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_14_existing_schema2_world_unchanged_and_visit_unavailable",
+      "passed": true,
+      "seconds": 0.7474178539705463
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_15_recent_visits_are_ordered_bounded_and_without_rewards",
+      "passed": true,
+      "seconds": 0.6930289129959419
+    }
+  ],
+  "dataRoot": ".local/iter0004/api/20261025T211544-ce1a66",
+  "failures": []
+}

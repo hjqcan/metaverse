@@ -1,0 +1,12 @@
+{
+  "experiment": "foundation-transactions-v1",
+  "gitBaseCommit": "8401e81a1d88d6fa79cd78bbc043470cbcc22ae8",
+  "workingTreeStatus": "uncommitted research additions; hashes identify actual experiment inputs",
+  "sdk": "10.0.302",
+  "sha256": {
+    "experiments/FoundationProbe/Program.cs": "fc6a7504d10694847da3f4fea56e6c1a6b7e5dfce5606b6df0a485b8e610c7b8",
+    "experiments/FoundationProbe/FoundationProbe.csproj": "10ac6ac303f8ff8aad945420660757fe26674e504605b2d39a407191025b7131",
+    "experiments/FoundationProbe/packages.lock.json": "0bc843612f280bb6f5b99a0dc84e140f7d4d0deb02313af6c05e7e41ea7c2516",
+    "docs/research/2026-10-25-foundation/evidence/transactions-v1.json": "071f007d415fb77ec02f3e9150dd00eb0f87c2b5b24ba2463b0916513504abd8"
+  }
+}

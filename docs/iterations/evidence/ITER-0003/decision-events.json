@@ -1,0 +1,68 @@
+[
+  {
+    "role": "read-only-probe",
+    "kind": "codex-exec",
+    "accountAlias": "newton-ming",
+    "requestedModel": "gpt-6-astra",
+    "startedAtUtc": "2026-10-25T10:31:57.538032+00:00",
+    "status": "completed",
+    "exitCode": 0,
+    "toolTypes": [],
+    "usage": {
+      "input_tokens": 11578,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 76,
+      "reasoning_output_tokens": 0
+    },
+    "decision": {
+      "goalId": "far-bank",
+      "reason": "彼岸目标符合经现有公共桥游览后返回起点的目的；[4,3]与[5,3]已有桥，可往返通行，无需领取或制造，也不消耗木材，50条命令预算充足。"
+    },
+    "elapsedSeconds": 7.749560283962637
+  },
+  {
+    "role": "live-mission",
+    "kind": "codex-exec",
+    "accountAlias": "newton-ming",
+    "requestedModel": "gpt-6-astra",
+    "startedAtUtc": "2026-10-25T10:33:42.871293+00:00",
+    "status": "completed",
+    "exitCode": 0,
+    "toolTypes": [],
+    "usage": {
+      "input_tokens": 11604,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 81,
+      "reasoning_output_tokens": 0
+    },
+    "decision": {
+      "goalId": "far-bank",
+      "reason": "选择彼岸：建造两座桥可连通两岸，供后来者使用，符合公共建设优先的目的。所需6单位木材符合预算，预计21条命令也为完成后返回原始起点[1,1]留有余量。"
+    },
+    "elapsedSeconds": 7.609195139957592
+  },
+  {
+    "role": "live-mission",
+    "kind": "codex-exec",
+    "accountAlias": "hjqcan",
+    "requestedModel": "gpt-6-astra",
+    "startedAtUtc": "2026-10-25T10:33:50.741345+00:00",
+    "status": "completed",
+    "exitCode": 0,
+    "toolTypes": [],
+    "usage": {
+      "input_tokens": 11717,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 80,
+      "reasoning_output_tokens": 0
+    },
+    "decision": {
+      "goalId": "far-bank",
+      "reason": "彼岸目标符合走已有公共桥跨河游览、再返回起点的目的。两格河道均已有他人建造的桥，无需领取木材或建造；预计16条命令，往返也可控制在50条命令预算内。"
+    },
+    "elapsedSeconds": 9.844753012002911
+  }
+]

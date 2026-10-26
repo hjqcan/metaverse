@@ -1,0 +1,17 @@
+{
+  "suite": "mosaic-consent-http-v1",
+  "decisionSource": "explicit-test-double",
+  "actualModelCalls": 0,
+  "recordedAtUtc": "2026-10-25T15:04:25.725461+00:00",
+  "passed": true,
+  "testsRun": 1,
+  "tests": [
+    {
+      "test": "__main__.ConsentAcceptance.test_15_wrong_receipt_and_query_failure_keep_original_pending",
+      "passed": true,
+      "seconds": 0.5623527970165014
+    }
+  ],
+  "dataRoot": ".local/iter0007/api/20261025T230425-188cc7",
+  "failures": []
+}

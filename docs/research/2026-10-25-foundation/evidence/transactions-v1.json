@@ -1,0 +1,158 @@
+{
+  "experiment": "foundation-transactions-v1",
+  "recordedAtUtc": "2026-10-25T09:03:44.9633778+00:00",
+  "runtime": ".NET 10.0.10",
+  "os": "Ubuntu 24.04.4 LTS",
+  "sqliteVersion": "3.53.4",
+  "providerVersion": "10.0.10",
+  "journalMode": "wal",
+  "synchronous": "FULL",
+  "scenarios": [
+    {
+      "scenario": "unsafe_read_then_write",
+      "passed": true,
+      "expectedInvariantViolation": true,
+      "initialUnits": 2,
+      "final": {
+        "Units": 0,
+        "Version": 2,
+        "Items": 2,
+        "Events": 0,
+        "Receipts": 0,
+        "Delta": 0
+      },
+      "accountedUnits": 4
+    },
+    {
+      "scenario": "concurrent_finite_stock",
+      "passed": true,
+      "callers": 32,
+      "applied": 5,
+      "rejected": 27,
+      "final": {
+        "Units": 0,
+        "Version": 5,
+        "Items": 5,
+        "Events": 5,
+        "Receipts": 32,
+        "Delta": -10
+      }
+    },
+    {
+      "scenario": "duplicates_and_payload_conflict",
+      "passed": true,
+      "callers": 16,
+      "identicalResults": true,
+      "alteredPayloadCode": "IDEMPOTENCY_CONFLICT",
+      "final": {
+        "Units": 8,
+        "Version": 1,
+        "Items": 1,
+        "Events": 1,
+        "Receipts": 1,
+        "Delta": -2
+      }
+    },
+    {
+      "scenario": "stale_version",
+      "passed": true,
+      "result": {
+        "Code": "VERSION_CONFLICT",
+        "StockVersion": 1,
+        "RemainingUnits": 8
+      },
+      "final": {
+        "Units": 8,
+        "Version": 1,
+        "Items": 1,
+        "Events": 1,
+        "Receipts": 2,
+        "Delta": -2
+      }
+    },
+    {
+      "scenario": "actor_scoped_command_identity",
+      "passed": true,
+      "final": {
+        "Units": 0,
+        "Version": 2,
+        "Items": 2,
+        "Events": 2,
+        "Receipts": 2,
+        "Delta": -4
+      }
+    },
+    {
+      "scenario": "insufficient_resource",
+      "passed": true,
+      "final": {
+        "Units": 1,
+        "Version": 0,
+        "Items": 0,
+        "Events": 0,
+        "Receipts": 1,
+        "Delta": 0
+      }
+    },
+    {
+      "scenario": "exception_after_debit",
+      "passed": true,
+      "final": {
+        "Units": 0,
+        "Version": 1,
+        "Items": 1,
+        "Events": 1,
+        "Receipts": 1,
+        "Delta": -2
+      }
+    },
+    {
+      "scenario": "process_exit_before_commit",
+      "passed": true,
+      "exitCode": 81,
+      "beforeRetry": {
+        "Units": 2,
+        "Version": 0,
+        "Items": 0,
+        "Events": 0,
+        "Receipts": 0,
+        "Delta": 0
+      },
+      "afterRetry": {
+        "Units": 0,
+        "Version": 1,
+        "Items": 1,
+        "Events": 1,
+        "Receipts": 1,
+        "Delta": -2
+      }
+    },
+    {
+      "scenario": "process_exit_after_commit",
+      "passed": true,
+      "exitCode": 82,
+      "beforeRetry": {
+        "Units": 0,
+        "Version": 1,
+        "Items": 1,
+        "Events": 1,
+        "Receipts": 1,
+        "Delta": -2
+      },
+      "afterRetry": {
+        "Units": 0,
+        "Version": 1,
+        "Items": 1,
+        "Events": 1,
+        "Receipts": 1,
+        "Delta": -2
+      }
+    }
+  ],
+  "passed": true,
+  "limits": [
+    "Local process and SQLite only; no HTTP/auth/client/LLM integration",
+    "Process exit is not host power-loss testing",
+    "No performance SLA or long-running economy claim"
+  ]
+}

@@ -1,0 +1,2778 @@
+{
+  "control": {
+    "policy": "walk-only-v1",
+    "actorId": "a1",
+    "outcome": "blocked",
+    "reason": "no_route",
+    "origin": [
+      1,
+      1
+    ],
+    "goal": [
+      6,
+      1
+    ],
+    "startedAtUtc": "2026-10-25T09:38:09.510973+00:00",
+    "initial": {
+      "schemaVersion": 1,
+      "rulesVersion": "r2",
+      "stateVersion": 0,
+      "commandId": null,
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1",
+        "sessionId": "s606efab869c24c11b26b736f348b11a8"
+      },
+      "eventCursor": 1,
+      "error": null,
+      "world": {
+        "id": "foundation-01",
+        "scenarioId": "passage-v1",
+        "width": 8,
+        "height": 8,
+        "blocked": [
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "water": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "goal": [
+          6,
+          1
+        ]
+      },
+      "recipes": [
+        {
+          "id": "platform.v1",
+          "definitionId": "platform",
+          "woodCost": 3
+        },
+        {
+          "id": "bridge.v1",
+          "definitionId": "bridge",
+          "woodCost": 3
+        }
+      ],
+      "self": {
+        "actorId": "a1",
+        "position": [
+          1,
+          1
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      },
+      "residents": [
+        {
+          "actorId": "a1",
+          "position": [
+            1,
+            1
+          ]
+        },
+        {
+          "actorId": "a2",
+          "position": [
+            1,
+            2
+          ]
+        }
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 12
+      },
+      "entities": [],
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      }
+    },
+    "final": {
+      "schemaVersion": 1,
+      "rulesVersion": "r2",
+      "stateVersion": 0,
+      "commandId": null,
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1",
+        "sessionId": "s606efab869c24c11b26b736f348b11a8"
+      },
+      "eventCursor": 1,
+      "error": null,
+      "world": {
+        "id": "foundation-01",
+        "scenarioId": "passage-v1",
+        "width": 8,
+        "height": 8,
+        "blocked": [
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "water": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "goal": [
+          6,
+          1
+        ]
+      },
+      "recipes": [
+        {
+          "id": "platform.v1",
+          "definitionId": "platform",
+          "woodCost": 3
+        },
+        {
+          "id": "bridge.v1",
+          "definitionId": "bridge",
+          "woodCost": 3
+        }
+      ],
+      "self": {
+        "actorId": "a1",
+        "position": [
+          1,
+          1
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      },
+      "residents": [
+        {
+          "actorId": "a1",
+          "position": [
+            1,
+            1
+          ]
+        },
+        {
+          "actorId": "a2",
+          "position": [
+            1,
+            2
+          ]
+        }
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 12
+      },
+      "entities": [],
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      }
+    },
+    "trace": [],
+    "commands": 0,
+    "goalReached": false,
+    "roundTripCompleted": false,
+    "modelCalls": 0,
+    "elapsedSeconds": 0.020967900985851884
+  },
+  "builder": {
+    "policy": "least-material-bridge-v1",
+    "actorId": "a1",
+    "outcome": "completed",
+    "reason": null,
+    "origin": [
+      1,
+      1
+    ],
+    "goal": [
+      6,
+      1
+    ],
+    "startedAtUtc": "2026-10-25T09:38:09.513647+00:00",
+    "initial": {
+      "schemaVersion": 1,
+      "rulesVersion": "r2",
+      "stateVersion": 0,
+      "commandId": null,
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1",
+        "sessionId": "s606efab869c24c11b26b736f348b11a8"
+      },
+      "eventCursor": 1,
+      "error": null,
+      "world": {
+        "id": "foundation-01",
+        "scenarioId": "passage-v1",
+        "width": 8,
+        "height": 8,
+        "blocked": [
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "water": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "goal": [
+          6,
+          1
+        ]
+      },
+      "recipes": [
+        {
+          "id": "platform.v1",
+          "definitionId": "platform",
+          "woodCost": 3
+        },
+        {
+          "id": "bridge.v1",
+          "definitionId": "bridge",
+          "woodCost": 3
+        }
+      ],
+      "self": {
+        "actorId": "a1",
+        "position": [
+          1,
+          1
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      },
+      "residents": [
+        {
+          "actorId": "a1",
+          "position": [
+            1,
+            1
+          ]
+        },
+        {
+          "actorId": "a2",
+          "position": [
+            1,
+            2
+          ]
+        }
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 12
+      },
+      "entities": [],
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      }
+    },
+    "final": {
+      "schemaVersion": 1,
+      "rulesVersion": "r2",
+      "stateVersion": 21,
+      "commandId": null,
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1",
+        "sessionId": "s606efab869c24c11b26b736f348b11a8"
+      },
+      "eventCursor": 22,
+      "error": null,
+      "world": {
+        "id": "foundation-01",
+        "scenarioId": "passage-v1",
+        "width": 8,
+        "height": 8,
+        "blocked": [
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "water": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "goal": [
+          6,
+          1
+        ]
+      },
+      "recipes": [
+        {
+          "id": "platform.v1",
+          "definitionId": "platform",
+          "woodCost": 3
+        },
+        {
+          "id": "bridge.v1",
+          "definitionId": "bridge",
+          "woodCost": 3
+        }
+      ],
+      "self": {
+        "actorId": "a1",
+        "position": [
+          1,
+          1
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      },
+      "residents": [
+        {
+          "actorId": "a1",
+          "position": [
+            1,
+            1
+          ]
+        },
+        {
+          "actorId": "a2",
+          "position": [
+            1,
+            2
+          ]
+        }
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 6
+      },
+      "entities": [
+        {
+          "entityId": "e6dc2098a673e49d5ae013294458527c8",
+          "definitionId": "bridge",
+          "definitionVersion": 1,
+          "rulesVersion": "r2",
+          "ownerActorId": "a1",
+          "position": [
+            4,
+            3
+          ],
+          "embodiedWood": 3
+        },
+        {
+          "entityId": "ed5887a7f194e4c2a85aa89dab948ad23",
+          "definitionId": "bridge",
+          "definitionVersion": 1,
+          "rulesVersion": "r2",
+          "ownerActorId": "a1",
+          "position": [
+            5,
+            3
+          ],
+          "embodiedWood": 3
+        }
+      ],
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 6,
+        "inventoryWood": 0,
+        "embodiedWood": 6,
+        "conserved": true
+      }
+    },
+    "trace": [
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "0c60179a0ff747eea7e2cc62c760ab33",
+          "expectedStateVersion": 0,
+          "action": {
+            "type": "claim",
+            "quantity": 6
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 1,
+          "commandId": "0c60179a0ff747eea7e2cc62c760ab33",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 2,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "claim",
+            "quantity": 6,
+            "inventoryWood": 6,
+            "depotWood": 6
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "b0fa236437a147d58065029885e085b3",
+          "expectedStateVersion": 1,
+          "action": {
+            "type": "move",
+            "dx": 1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 2,
+          "commandId": "b0fa236437a147d58065029885e085b3",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 3,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              2,
+              1
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "3dd014e692b849f5a0f1ce1ed7edf3b3",
+          "expectedStateVersion": 2,
+          "action": {
+            "type": "move",
+            "dx": 0,
+            "dy": 1
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 3,
+          "commandId": "3dd014e692b849f5a0f1ce1ed7edf3b3",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 4,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              2,
+              2
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "72b0946cc8a2405882d602cdbadaea01",
+          "expectedStateVersion": 3,
+          "action": {
+            "type": "move",
+            "dx": 0,
+            "dy": 1
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 4,
+          "commandId": "72b0946cc8a2405882d602cdbadaea01",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 5,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              2,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "c6dd5c96fe854bdfabad438c23489f60",
+          "expectedStateVersion": 4,
+          "action": {
+            "type": "move",
+            "dx": 1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 5,
+          "commandId": "c6dd5c96fe854bdfabad438c23489f60",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 6,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              3,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "a275876a4b304ba29821186e4832365e",
+          "expectedStateVersion": 5,
+          "action": {
+            "type": "build",
+            "recipeId": "bridge.v1",
+            "at": [
+              4,
+              3
+            ]
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 6,
+          "commandId": "a275876a4b304ba29821186e4832365e",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 7,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "build",
+            "entityId": "e6dc2098a673e49d5ae013294458527c8",
+            "position": [
+              4,
+              3
+            ],
+            "inventoryWood": 3
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "b66b633104a347198b4fa0c8979369b7",
+          "expectedStateVersion": 6,
+          "action": {
+            "type": "move",
+            "dx": 1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 7,
+          "commandId": "b66b633104a347198b4fa0c8979369b7",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 8,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              4,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "7c6277bc32f04ba09145e4bfb8b31b21",
+          "expectedStateVersion": 7,
+          "action": {
+            "type": "build",
+            "recipeId": "bridge.v1",
+            "at": [
+              5,
+              3
+            ]
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 8,
+          "commandId": "7c6277bc32f04ba09145e4bfb8b31b21",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 9,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "build",
+            "entityId": "ed5887a7f194e4c2a85aa89dab948ad23",
+            "position": [
+              5,
+              3
+            ],
+            "inventoryWood": 0
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "1279666a256d4186b46fdf173c4f447e",
+          "expectedStateVersion": 8,
+          "action": {
+            "type": "move",
+            "dx": 1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 9,
+          "commandId": "1279666a256d4186b46fdf173c4f447e",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 10,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              5,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "313c2759c5ca41a6b1bd3e1881a0c935",
+          "expectedStateVersion": 9,
+          "action": {
+            "type": "move",
+            "dx": 1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 10,
+          "commandId": "313c2759c5ca41a6b1bd3e1881a0c935",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 11,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              6,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "a6e03f77105e4e9dbf744e45047eebf1",
+          "expectedStateVersion": 10,
+          "action": {
+            "type": "move",
+            "dx": 0,
+            "dy": -1
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 11,
+          "commandId": "a6e03f77105e4e9dbf744e45047eebf1",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 12,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              6,
+              2
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "cbfd59663cd1487c811e47fc46daf53c",
+          "expectedStateVersion": 11,
+          "action": {
+            "type": "move",
+            "dx": 0,
+            "dy": -1
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 12,
+          "commandId": "cbfd59663cd1487c811e47fc46daf53c",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 13,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              6,
+              1
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "8c2efad8821047c5b9b73a3317d38bc5",
+          "expectedStateVersion": 12,
+          "action": {
+            "type": "move",
+            "dx": 0,
+            "dy": 1
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 13,
+          "commandId": "8c2efad8821047c5b9b73a3317d38bc5",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 14,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              6,
+              2
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "d8ec683fb77549179d8bd5dcf55c032d",
+          "expectedStateVersion": 13,
+          "action": {
+            "type": "move",
+            "dx": 0,
+            "dy": 1
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 14,
+          "commandId": "d8ec683fb77549179d8bd5dcf55c032d",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 15,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              6,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "f3b7f017f8664d968665691cda529df7",
+          "expectedStateVersion": 14,
+          "action": {
+            "type": "move",
+            "dx": -1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 15,
+          "commandId": "f3b7f017f8664d968665691cda529df7",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 16,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              5,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "e220c1a4bf3c44cb9ad322e74fc01165",
+          "expectedStateVersion": 15,
+          "action": {
+            "type": "move",
+            "dx": -1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 16,
+          "commandId": "e220c1a4bf3c44cb9ad322e74fc01165",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 17,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              4,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "f43ebd50b0e2495ea8d4f8c83dd785d8",
+          "expectedStateVersion": 16,
+          "action": {
+            "type": "move",
+            "dx": -1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 17,
+          "commandId": "f43ebd50b0e2495ea8d4f8c83dd785d8",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 18,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              3,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "d89275b211c94958b7742a7784d6d4d1",
+          "expectedStateVersion": 17,
+          "action": {
+            "type": "move",
+            "dx": -1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 18,
+          "commandId": "d89275b211c94958b7742a7784d6d4d1",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 19,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              2,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "d489862f7d5247b3bbd964aa3d6d57dd",
+          "expectedStateVersion": 18,
+          "action": {
+            "type": "move",
+            "dx": -1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 19,
+          "commandId": "d489862f7d5247b3bbd964aa3d6d57dd",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 20,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              1,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "81c25aa16b1842dfa749f76c484d3d5e",
+          "expectedStateVersion": 19,
+          "action": {
+            "type": "move",
+            "dx": 0,
+            "dy": -1
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 20,
+          "commandId": "81c25aa16b1842dfa749f76c484d3d5e",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 21,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              1,
+              2
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "435a0fb5de824aeba853c05718ad21e3",
+          "expectedStateVersion": 20,
+          "action": {
+            "type": "move",
+            "dx": 0,
+            "dy": -1
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 21,
+          "commandId": "435a0fb5de824aeba853c05718ad21e3",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s606efab869c24c11b26b736f348b11a8"
+          },
+          "eventCursor": 22,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              1,
+              1
+            ]
+          }
+        },
+        "recovery": false
+      }
+    ],
+    "commands": 21,
+    "goalReached": true,
+    "roundTripCompleted": true,
+    "modelCalls": 0,
+    "elapsedSeconds": 0.10659621498780325
+  },
+  "traveler": {
+    "policy": "walk-only-v1",
+    "actorId": "a2",
+    "outcome": "completed",
+    "reason": null,
+    "origin": [
+      1,
+      2
+    ],
+    "goal": [
+      6,
+      1
+    ],
+    "startedAtUtc": "2026-10-25T09:38:09.618679+00:00",
+    "initial": {
+      "schemaVersion": 1,
+      "rulesVersion": "r2",
+      "stateVersion": 21,
+      "commandId": null,
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a2",
+        "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+      },
+      "eventCursor": 22,
+      "error": null,
+      "world": {
+        "id": "foundation-01",
+        "scenarioId": "passage-v1",
+        "width": 8,
+        "height": 8,
+        "blocked": [
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "water": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "goal": [
+          6,
+          1
+        ]
+      },
+      "recipes": [
+        {
+          "id": "platform.v1",
+          "definitionId": "platform",
+          "woodCost": 3
+        },
+        {
+          "id": "bridge.v1",
+          "definitionId": "bridge",
+          "woodCost": 3
+        }
+      ],
+      "self": {
+        "actorId": "a2",
+        "position": [
+          1,
+          2
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      },
+      "residents": [
+        {
+          "actorId": "a1",
+          "position": [
+            1,
+            1
+          ]
+        },
+        {
+          "actorId": "a2",
+          "position": [
+            1,
+            2
+          ]
+        }
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 6
+      },
+      "entities": [
+        {
+          "entityId": "e6dc2098a673e49d5ae013294458527c8",
+          "definitionId": "bridge",
+          "definitionVersion": 1,
+          "rulesVersion": "r2",
+          "ownerActorId": "a1",
+          "position": [
+            4,
+            3
+          ],
+          "embodiedWood": 3
+        },
+        {
+          "entityId": "ed5887a7f194e4c2a85aa89dab948ad23",
+          "definitionId": "bridge",
+          "definitionVersion": 1,
+          "rulesVersion": "r2",
+          "ownerActorId": "a1",
+          "position": [
+            5,
+            3
+          ],
+          "embodiedWood": 3
+        }
+      ],
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 6,
+        "inventoryWood": 0,
+        "embodiedWood": 6,
+        "conserved": true
+      }
+    },
+    "final": {
+      "schemaVersion": 1,
+      "rulesVersion": "r2",
+      "stateVersion": 37,
+      "commandId": null,
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a2",
+        "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+      },
+      "eventCursor": 38,
+      "error": null,
+      "world": {
+        "id": "foundation-01",
+        "scenarioId": "passage-v1",
+        "width": 8,
+        "height": 8,
+        "blocked": [
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "water": [
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "goal": [
+          6,
+          1
+        ]
+      },
+      "recipes": [
+        {
+          "id": "platform.v1",
+          "definitionId": "platform",
+          "woodCost": 3
+        },
+        {
+          "id": "bridge.v1",
+          "definitionId": "bridge",
+          "woodCost": 3
+        }
+      ],
+      "self": {
+        "actorId": "a2",
+        "position": [
+          1,
+          2
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      },
+      "residents": [
+        {
+          "actorId": "a1",
+          "position": [
+            1,
+            1
+          ]
+        },
+        {
+          "actorId": "a2",
+          "position": [
+            1,
+            2
+          ]
+        }
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 6
+      },
+      "entities": [
+        {
+          "entityId": "e6dc2098a673e49d5ae013294458527c8",
+          "definitionId": "bridge",
+          "definitionVersion": 1,
+          "rulesVersion": "r2",
+          "ownerActorId": "a1",
+          "position": [
+            4,
+            3
+          ],
+          "embodiedWood": 3
+        },
+        {
+          "entityId": "ed5887a7f194e4c2a85aa89dab948ad23",
+          "definitionId": "bridge",
+          "definitionVersion": 1,
+          "rulesVersion": "r2",
+          "ownerActorId": "a1",
+          "position": [
+            5,
+            3
+          ],
+          "embodiedWood": 3
+        }
+      ],
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 6,
+        "inventoryWood": 0,
+        "embodiedWood": 6,
+        "conserved": true
+      }
+    },
+    "trace": [
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "03b27608243d4999a86cc39facc2a076",
+          "expectedStateVersion": 21,
+          "action": {
+            "type": "move",
+            "dx": 1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 22,
+          "commandId": "03b27608243d4999a86cc39facc2a076",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 23,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              2,
+              2
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "85b03fb69874436fa298dbad164d1831",
+          "expectedStateVersion": 22,
+          "action": {
+            "type": "move",
+            "dx": 0,
+            "dy": 1
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 23,
+          "commandId": "85b03fb69874436fa298dbad164d1831",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 24,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              2,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "3931c067db3146d0861aac3c50794832",
+          "expectedStateVersion": 23,
+          "action": {
+            "type": "move",
+            "dx": 1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 24,
+          "commandId": "3931c067db3146d0861aac3c50794832",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 25,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              3,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "b5990f759f5b44fe9b4553c041a5e51c",
+          "expectedStateVersion": 24,
+          "action": {
+            "type": "move",
+            "dx": 1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 25,
+          "commandId": "b5990f759f5b44fe9b4553c041a5e51c",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 26,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              4,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "0f86c3f4d1cd481384b27491dbf41bba",
+          "expectedStateVersion": 25,
+          "action": {
+            "type": "move",
+            "dx": 1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 26,
+          "commandId": "0f86c3f4d1cd481384b27491dbf41bba",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 27,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              5,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "7d64e2be0e344fc888186ca33e2d82a3",
+          "expectedStateVersion": 26,
+          "action": {
+            "type": "move",
+            "dx": 1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 27,
+          "commandId": "7d64e2be0e344fc888186ca33e2d82a3",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 28,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              6,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "9c2f4654cc2c4499a9090bb72337a77e",
+          "expectedStateVersion": 27,
+          "action": {
+            "type": "move",
+            "dx": 0,
+            "dy": -1
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 28,
+          "commandId": "9c2f4654cc2c4499a9090bb72337a77e",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 29,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              6,
+              2
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "659c70f36abf428ca4e5973b2cba5719",
+          "expectedStateVersion": 28,
+          "action": {
+            "type": "move",
+            "dx": 0,
+            "dy": -1
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 29,
+          "commandId": "659c70f36abf428ca4e5973b2cba5719",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 30,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              6,
+              1
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "1449e5d9f86140cba00a1874ec3978c3",
+          "expectedStateVersion": 29,
+          "action": {
+            "type": "move",
+            "dx": 0,
+            "dy": 1
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 30,
+          "commandId": "1449e5d9f86140cba00a1874ec3978c3",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 31,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              6,
+              2
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "27b60df8532f4f40bc57671c37e428b6",
+          "expectedStateVersion": 30,
+          "action": {
+            "type": "move",
+            "dx": 0,
+            "dy": 1
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 31,
+          "commandId": "27b60df8532f4f40bc57671c37e428b6",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 32,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              6,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "78e03a05172b439ba043667098d216d9",
+          "expectedStateVersion": 31,
+          "action": {
+            "type": "move",
+            "dx": -1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 32,
+          "commandId": "78e03a05172b439ba043667098d216d9",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 33,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              5,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "fff9910fcd7f452288465e3d126ae987",
+          "expectedStateVersion": 32,
+          "action": {
+            "type": "move",
+            "dx": -1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 33,
+          "commandId": "fff9910fcd7f452288465e3d126ae987",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 34,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              4,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "cf03cb0764304ceda852d6400f0f9e46",
+          "expectedStateVersion": 33,
+          "action": {
+            "type": "move",
+            "dx": -1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 34,
+          "commandId": "cf03cb0764304ceda852d6400f0f9e46",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 35,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              3,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "4cd58776620a4242908ad2c61183da82",
+          "expectedStateVersion": 34,
+          "action": {
+            "type": "move",
+            "dx": -1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 35,
+          "commandId": "4cd58776620a4242908ad2c61183da82",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 36,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              2,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "8bac55a12a7246d1bf7c08727a2a3d2f",
+          "expectedStateVersion": 35,
+          "action": {
+            "type": "move",
+            "dx": -1,
+            "dy": 0
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 36,
+          "commandId": "8bac55a12a7246d1bf7c08727a2a3d2f",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 37,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              1,
+              3
+            ]
+          }
+        },
+        "recovery": false
+      },
+      {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "commandId": "a9413183ccec4d6d99e0588d0374952c",
+          "expectedStateVersion": 36,
+          "action": {
+            "type": "move",
+            "dx": 0,
+            "dy": -1
+          }
+        },
+        "httpStatus": 200,
+        "response": {
+          "schemaVersion": 1,
+          "rulesVersion": "r2",
+          "stateVersion": 37,
+          "commandId": "a9413183ccec4d6d99e0588d0374952c",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "s33b5841a057a45c2a7168062d34fb17b"
+          },
+          "eventCursor": 38,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "move",
+            "position": [
+              1,
+              2
+            ]
+          }
+        },
+        "recovery": false
+      }
+    ],
+    "commands": 16,
+    "goalReached": true,
+    "roundTripCompleted": true,
+    "modelCalls": 0,
+    "elapsedSeconds": 0.046039681998081505
+  }
+}

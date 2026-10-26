@@ -1,0 +1,72 @@
+{
+  "suite": "postcards-real-chrome-v1",
+  "recordedAtUtc": "2026-10-25T13:16:48.793Z",
+  "browser": "152.0.7977.82",
+  "passed": true,
+  "tests": [
+    {
+      "name": "public_notice_draft_persists_polling_and_keyboard_does_not_move",
+      "passed": true,
+      "milliseconds": 2134
+    },
+    {
+      "name": "human_visit_and_share_create_public_fact_and_clear_only_after_success",
+      "passed": true,
+      "milliseconds": 390
+    },
+    {
+      "name": "another_resident_reads_shared_text_and_place_filter_is_real",
+      "passed": true,
+      "milliseconds": 1535
+    },
+    {
+      "name": "unicode_limit_counts_scalars_and_preserves_draft_by_place",
+      "passed": true,
+      "milliseconds": 88
+    },
+    {
+      "name": "actual_stale_share_rejection_preserves_draft",
+      "passed": true,
+      "milliseconds": 254
+    },
+    {
+      "name": "lost_share_response_reload_recovers_same_id_once",
+      "passed": true,
+      "milliseconds": 314
+    },
+    {
+      "name": "server_restart_preserves_public_and_author_records",
+      "passed": true,
+      "milliseconds": 2912
+    },
+    {
+      "name": "unsent_drafts_are_isolated_between_actor_logins",
+      "passed": true,
+      "milliseconds": 171
+    },
+    {
+      "name": "mobile_world_read_and_write_layout_390px",
+      "passed": true,
+      "milliseconds": 305
+    },
+    {
+      "name": "actual_two_gpt6_reports_separate_draft_and_confirmed_share",
+      "passed": true,
+      "milliseconds": 276
+    },
+    {
+      "name": "visit_only_and_forged_share_never_show_completed_and_legacy_still_loads",
+      "passed": true,
+      "milliseconds": 31
+    },
+    {
+      "name": "mobile_report_no_overflow_javascript_errors_or_world_requests",
+      "passed": true,
+      "milliseconds": 185
+    }
+  ],
+  "javascriptErrors": [],
+  "reportWorldRequests": [],
+  "actualModelCallsDuringUiTest": 0,
+  "dataRoot": ".local/iter0005/browser/2026-10-25T13-16-39-706Z"
+}

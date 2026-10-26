@@ -1,0 +1,75 @@
+{
+  "suite": "passage-http-v1",
+  "recordedAtUtc": "2026-10-25T13:15:53.564341+00:00",
+  "passed": true,
+  "testsRun": 13,
+  "tests": [
+    {
+      "test": "__main__.PassageAcceptance.test_01_water_blocks_goal_and_walk_only_control",
+      "passed": true,
+      "seconds": 0.3159471449907869
+    },
+    {
+      "test": "__main__.PassageAcceptance.test_02_progressive_bridge_changes_reachability",
+      "passed": true,
+      "seconds": 0.5075968190212734
+    },
+    {
+      "test": "__main__.PassageAcceptance.test_03_invalid_construction_and_insufficient_material",
+      "passed": true,
+      "seconds": 0.365713011007756
+    },
+    {
+      "test": "__main__.PassageAcceptance.test_04_parallel_duplicate_bridge_and_parameter_conflict",
+      "passed": true,
+      "seconds": 1.082051675999537
+    },
+    {
+      "test": "__main__.PassageAcceptance.test_05_two_actors_compete_for_same_water_cell",
+      "passed": true,
+      "seconds": 0.5152502359705977
+    },
+    {
+      "test": "__main__.PassageAcceptance.test_06_failure_after_debit_rolls_back_bridge",
+      "passed": true,
+      "seconds": 0.2880497280275449
+    },
+    {
+      "test": "__main__.PassageAcceptance.test_07_bridge_exit_before_commit",
+      "passed": true,
+      "seconds": 0.6045483479974791
+    },
+    {
+      "test": "__main__.PassageAcceptance.test_08_bridge_exit_after_commit",
+      "passed": true,
+      "seconds": 0.5817747539840639
+    },
+    {
+      "test": "__main__.PassageAcceptance.test_09_scenario_persists_and_cannot_be_reinterpreted",
+      "passed": true,
+      "seconds": 1.8797387279919349
+    },
+    {
+      "test": "__main__.PassageAcceptance.test_10_populated_schema_v1_keeps_original_facts",
+      "passed": true,
+      "seconds": 0.7537737319944426
+    },
+    {
+      "test": "__main__.PassageAcceptance.test_11_fixed_builder_and_free_traveler_comparison",
+      "passed": true,
+      "seconds": 0.37027994997333735
+    },
+    {
+      "test": "__main__.PassageAcceptance.test_12_rules_rejection_and_all_state_envelopes",
+      "passed": true,
+      "seconds": 0.2518426420283504
+    },
+    {
+      "test": "__main__.PassageAcceptance.test_13_resident_unknown_bridge_recovers_same_trip_and_id",
+      "passed": true,
+      "seconds": 1.7712849809904583
+    }
+  ],
+  "failures": [],
+  "dataRoot": ".local/iter0002/api/20261025T211544-bd6f89"
+}

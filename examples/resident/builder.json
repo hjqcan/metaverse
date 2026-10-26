@@ -1,0 +1,29 @@
+{
+  "missionId": "example-builder",
+  "objective": "优先连通彼岸供他人使用，完成后回到原始起点。",
+  "goals": [
+    {
+      "id": "far-bank",
+      "label": "彼岸",
+      "target": [
+        6,
+        1
+      ]
+    },
+    {
+      "id": "nearby",
+      "label": "本岸探索",
+      "target": [
+        1,
+        6
+      ]
+    }
+  ],
+  "allowBuild": true,
+  "budgets": {
+    "commands": 50,
+    "wood": 6,
+    "seconds": 600,
+    "modelCalls": 1
+  }
+}

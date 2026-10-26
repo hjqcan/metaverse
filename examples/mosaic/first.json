@@ -1,0 +1,23 @@
+{
+  "missionId": "mosaic-first",
+  "objective": "去静谧花园，在空白共同画布上用河蓝画一条连续的小河（只改空白格，最多 8 格），然后返回。构图在行动前产生，不把草图说成已经画好。",
+  "goals": [
+    {
+      "id": "garden",
+      "label": "静谧花园",
+      "target": [
+        1,
+        6
+      ],
+      "activityId": "garden"
+    }
+  ],
+  "allowBuild": false,
+  "paintMosaic": true,
+  "budgets": {
+    "commands": 14,
+    "wood": 0,
+    "seconds": 600,
+    "modelCalls": 1
+  }
+}

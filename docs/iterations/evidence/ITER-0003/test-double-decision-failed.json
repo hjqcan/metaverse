@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "kind": "resident-mission-report",
+  "mission": {
+    "id": "mission-test",
+    "objective": "优先连通彼岸供他人使用，完成后回到原始起点。",
+    "actorId": "a1",
+    "worldId": "foundation-01",
+    "rulesVersion": "r2",
+    "origin": [
+      1,
+      1
+    ],
+    "goal": null,
+    "status": "decision_failed",
+    "reason": "decision_failed:RuntimeError"
+  },
+  "decision": null,
+  "budget": {
+    "limits": {
+      "commands": 50,
+      "wood": 6,
+      "seconds": 600,
+      "modelCalls": 1
+    },
+    "used": {
+      "commands": 0,
+      "wood": 0,
+      "modelCalls": 1,
+      "seconds": 0.0031015872955322266
+    }
+  },
+  "facts": {
+    "goalReached": false,
+    "returned": true,
+    "startStateVersion": 0,
+    "endStateVersion": 0,
+    "woodClaimed": 0,
+    "createdEntityIds": [],
+    "verifiedAtUtc": "2026-10-25T10:36:01.544804+00:00"
+  },
+  "steps": [],
+  "feedback": {
+    "summary": "decision_failed:RuntimeError",
+    "issues": [
+      "decision_failed:RuntimeError"
+    ],
+    "suggestions": []
+  },
+  "world": {
+    "id": "foundation-01",
+    "width": 8,
+    "height": 8,
+    "blocked": [
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "water": [
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "goal": [
+      6,
+      1
+    ],
+    "entities": []
+  }
+}

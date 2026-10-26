@@ -1,0 +1,3677 @@
+{
+  "schemaVersion": 1,
+  "kind": "mosaic-consent-session",
+  "recordedAtUtc": "2026-10-25T15:04:32.320760+00:00",
+  "modelAttemptLimit": 2,
+  "actualModelCalls": 2,
+  "fixtureSource": "explicit-program-using-normal-HTTP-not-a-model-creation",
+  "seedCommands": [
+    {
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r6",
+        "commandId": "8d314a0266d24a6d90b7dcbdeb816ffc",
+        "expectedStateVersion": 0,
+        "action": {
+          "type": "move",
+          "dx": 0,
+          "dy": 1
+        }
+      },
+      "result": {
+        "action": "move",
+        "position": [
+          1,
+          2
+        ]
+      },
+      "stateVersion": 1
+    },
+    {
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r6",
+        "commandId": "ef94999726bb490d9f925b427e2c66ec",
+        "expectedStateVersion": 1,
+        "action": {
+          "type": "move",
+          "dx": 0,
+          "dy": 1
+        }
+      },
+      "result": {
+        "action": "move",
+        "position": [
+          1,
+          3
+        ]
+      },
+      "stateVersion": 2
+    },
+    {
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r6",
+        "commandId": "0bede8a8ca264c8a95749c27771d321c",
+        "expectedStateVersion": 2,
+        "action": {
+          "type": "move",
+          "dx": 0,
+          "dy": 1
+        }
+      },
+      "result": {
+        "action": "move",
+        "position": [
+          1,
+          4
+        ]
+      },
+      "stateVersion": 3
+    },
+    {
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r6",
+        "commandId": "3a8a2860178b4bddb68c0ffe7e892611",
+        "expectedStateVersion": 3,
+        "action": {
+          "type": "move",
+          "dx": 0,
+          "dy": 1
+        }
+      },
+      "result": {
+        "action": "move",
+        "position": [
+          1,
+          5
+        ]
+      },
+      "stateVersion": 4
+    },
+    {
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r6",
+        "commandId": "22f2e080e4004f75b539b8c53798b84c",
+        "expectedStateVersion": 4,
+        "action": {
+          "type": "move",
+          "dx": 0,
+          "dy": 1
+        }
+      },
+      "result": {
+        "action": "move",
+        "position": [
+          1,
+          6
+        ]
+      },
+      "stateVersion": 5
+    },
+    {
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r6",
+        "commandId": "535838832c0f41b69772de8ba343dc45",
+        "expectedStateVersion": 5,
+        "action": {
+          "type": "visit",
+          "activityId": "garden"
+        }
+      },
+      "result": {
+        "action": "visit",
+        "activityId": "garden",
+        "position": [
+          1,
+          6
+        ],
+        "visitedAtUtc": "2026-10-25T15:04:32.5849950+00:00"
+      },
+      "stateVersion": 6
+    },
+    {
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r6",
+        "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+        "expectedStateVersion": 6,
+        "action": {
+          "type": "mosaic",
+          "activityId": "garden",
+          "visitCommandId": "535838832c0f41b69772de8ba343dc45",
+          "expectedMosaicRevision": 0,
+          "patch": [
+            {
+              "x": 1,
+              "y": 2,
+              "color": "river"
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "color": "river"
+            },
+            {
+              "x": 3,
+              "y": 2,
+              "color": "river"
+            }
+          ]
+        }
+      },
+      "result": {
+        "action": "mosaic",
+        "activityId": "garden",
+        "authorActorId": "a1",
+        "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+        "visitCommandId": "535838832c0f41b69772de8ba343dc45",
+        "baseRevision": 0,
+        "revision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "river"
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "color": "river"
+          },
+          {
+            "x": 3,
+            "y": 2,
+            "color": "river"
+          }
+        ],
+        "stateVersion": 7,
+        "paintedAtUtc": "2026-10-25T15:04:32.5950645+00:00",
+        "position": [
+          1,
+          6
+        ]
+      },
+      "stateVersion": 7
+    },
+    {
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r6",
+        "commandId": "bd799bf545544fab826ecc8ca88acd47",
+        "expectedStateVersion": 7,
+        "action": {
+          "type": "move",
+          "dx": 0,
+          "dy": -1
+        }
+      },
+      "result": {
+        "action": "move",
+        "position": [
+          1,
+          5
+        ]
+      },
+      "stateVersion": 8
+    },
+    {
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r6",
+        "commandId": "f7319078403e479bac054b92ebf34cfc",
+        "expectedStateVersion": 8,
+        "action": {
+          "type": "move",
+          "dx": 0,
+          "dy": -1
+        }
+      },
+      "result": {
+        "action": "move",
+        "position": [
+          1,
+          4
+        ]
+      },
+      "stateVersion": 9
+    },
+    {
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r6",
+        "commandId": "78d1e92b42984b6db7ce27a282269888",
+        "expectedStateVersion": 9,
+        "action": {
+          "type": "move",
+          "dx": 0,
+          "dy": -1
+        }
+      },
+      "result": {
+        "action": "move",
+        "position": [
+          1,
+          3
+        ]
+      },
+      "stateVersion": 10
+    },
+    {
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r6",
+        "commandId": "a325be10a4244a4687f42b595e024d28",
+        "expectedStateVersion": 10,
+        "action": {
+          "type": "move",
+          "dx": 0,
+          "dy": -1
+        }
+      },
+      "result": {
+        "action": "move",
+        "position": [
+          1,
+          2
+        ]
+      },
+      "stateVersion": 11
+    },
+    {
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r6",
+        "commandId": "9840d2b3a72148c5a2a1fa3c1741beba",
+        "expectedStateVersion": 11,
+        "action": {
+          "type": "move",
+          "dx": 0,
+          "dy": -1
+        }
+      },
+      "result": {
+        "action": "move",
+        "position": [
+          1,
+          1
+        ]
+      },
+      "stateVersion": 12
+    }
+  ],
+  "runs": [
+    {
+      "actorId": "a2",
+      "role": "proposer",
+      "report": {
+        "schemaVersion": 1,
+        "kind": "resident-mission-report",
+        "mission": {
+          "id": "consent-proposer",
+          "objective": "去静谧花园，向原画者提议：只把蓝色河流的一个端点改成日黄，作为阳光标记，其余格子保持不变。写清理由，提交提议后返回；提议还不是实际改图。",
+          "sharePostcard": false,
+          "paintMosaic": false,
+          "proposeMosaic": true,
+          "reviewMosaicProposal": null,
+          "actorId": "a2",
+          "worldId": "foundation-01",
+          "rulesVersion": "r6",
+          "origin": [
+            1,
+            2
+          ],
+          "goal": {
+            "id": "garden",
+            "label": "静谧花园",
+            "target": [
+              1,
+              6
+            ],
+            "activityId": "garden"
+          },
+          "status": "completed",
+          "reason": "round_trip_verified"
+        },
+        "decision": {
+          "goalId": "garden",
+          "reason": "静谧花园无需建桥或木材，预计10条命令符合预算；可向原画者提出单格修改建议，提交后返回，等待其自行审阅。",
+          "provider": {
+            "kind": "codex-exec",
+            "model": "gpt-6-astra",
+            "usage": {
+              "inputTokens": 13083,
+              "cachedInputTokens": 0,
+              "outputTokens": 147
+            }
+          },
+          "mosaicPatch": [
+            {
+              "x": 1,
+              "y": 2,
+              "color": "sun"
+            }
+          ],
+          "mosaicBaseRevision": 1,
+          "mosaicTargetActorId": "a1",
+          "proposalText": "原画者a1：建议您仅将蓝色河流左端点（1,2）由河蓝改为日黄，作为阳光标记，为花园增添暖意，其余格子保持不变。这只是提议，尚未改图，请您自行审阅决定。"
+        },
+        "budget": {
+          "limits": {
+            "commands": 12,
+            "wood": 0,
+            "seconds": 600,
+            "modelCalls": 1
+          },
+          "used": {
+            "commands": 10,
+            "wood": 0,
+            "modelCalls": 1,
+            "seconds": 11.190320491790771
+          }
+        },
+        "facts": {
+          "goalReached": true,
+          "returned": true,
+          "activityCompleted": true,
+          "activityVisit": {
+            "activityId": "garden",
+            "commandId": "098129af864748c1929b802764e9ea10",
+            "stateVersion": 17,
+            "visitedAtUtc": "2026-10-25T15:04:43.7680948+00:00",
+            "position": [
+              1,
+              6
+            ]
+          },
+          "postcardShared": false,
+          "postcard": null,
+          "mosaicPainted": false,
+          "mosaicEdit": null,
+          "mosaicProposed": true,
+          "mosaicProposal": {
+            "activityId": "garden",
+            "authorActorId": "a2",
+            "targetActorId": "a1",
+            "commandId": "b5f0b41f95ae44ee9821acbe9de0b63b",
+            "visitCommandId": "098129af864748c1929b802764e9ea10",
+            "baseRevision": 1,
+            "patch": [
+              {
+                "x": 1,
+                "y": 2,
+                "color": "sun"
+              }
+            ],
+            "text": "原画者a1：建议您仅将蓝色河流左端点（1,2）由河蓝改为日黄，作为阳光标记，为花园增添暖意，其余格子保持不变。这只是提议，尚未改图，请您自行审阅决定。",
+            "stateVersion": 18,
+            "proposedAtUtc": "2026-10-25T15:04:43.7765431+00:00",
+            "position": [
+              1,
+              6
+            ]
+          },
+          "mosaicReviewed": false,
+          "mosaicReview": null,
+          "startStateVersion": 12,
+          "endStateVersion": 22,
+          "woodClaimed": 0,
+          "createdEntityIds": [],
+          "verifiedAtUtc": "2026-10-25T15:04:43.811312+00:00"
+        },
+        "steps": [
+          {
+            "index": 1,
+            "commandId": "5000647ac11249d7877283a638844838",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": 1
+            },
+            "reason": "前往已选目标",
+            "status": "committed",
+            "stateVersion": 13,
+            "position": [
+              1,
+              3
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 2,
+            "commandId": "8775423339534af29905b16637c3ab3c",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": 1
+            },
+            "reason": "前往已选目标",
+            "status": "committed",
+            "stateVersion": 14,
+            "position": [
+              1,
+              4
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 3,
+            "commandId": "8af40fea28a8424397139ec812e3eb54",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": 1
+            },
+            "reason": "前往已选目标",
+            "status": "committed",
+            "stateVersion": 15,
+            "position": [
+              1,
+              5
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 4,
+            "commandId": "db2bfd22feac4ec08bdaa7f288a2c847",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": 1
+            },
+            "reason": "前往已选目标",
+            "status": "committed",
+            "stateVersion": 16,
+            "position": [
+              1,
+              6
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 5,
+            "commandId": "098129af864748c1929b802764e9ea10",
+            "action": {
+              "type": "visit",
+              "activityId": "garden"
+            },
+            "reason": "在已选活动地点确认到访",
+            "status": "committed",
+            "stateVersion": 17,
+            "position": [
+              1,
+              6
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200,
+            "evidenceSource": "command_receipt"
+          },
+          {
+            "index": 6,
+            "commandId": "b5f0b41f95ae44ee9821acbe9de0b63b",
+            "action": {
+              "type": "mosaic_propose",
+              "activityId": "garden",
+              "visitCommandId": "098129af864748c1929b802764e9ea10",
+              "expectedMosaicRevision": 1,
+              "patch": [
+                {
+                  "x": 1,
+                  "y": 2,
+                  "color": "sun"
+                }
+              ],
+              "text": "原画者a1：建议您仅将蓝色河流左端点（1,2）由河蓝改为日黄，作为阳光标记，为花园增添暖意，其余格子保持不变。这只是提议，尚未改图，请您自行审阅决定。"
+            },
+            "reason": "在已确认到访的花园提交原修改提议；提议不改图",
+            "status": "committed",
+            "stateVersion": 18,
+            "position": [
+              1,
+              6
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200,
+            "evidenceSource": "command_receipt"
+          },
+          {
+            "index": 7,
+            "commandId": "dcc236e333e54036a102d679adf98970",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": -1
+            },
+            "reason": "返回原起点",
+            "status": "committed",
+            "stateVersion": 19,
+            "position": [
+              1,
+              5
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 8,
+            "commandId": "1415f82e47c94a6e913f2798cb163262",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": -1
+            },
+            "reason": "返回原起点",
+            "status": "committed",
+            "stateVersion": 20,
+            "position": [
+              1,
+              4
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 9,
+            "commandId": "3a548234a91441c7a20ea6edb1182f20",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": -1
+            },
+            "reason": "返回原起点",
+            "status": "committed",
+            "stateVersion": 21,
+            "position": [
+              1,
+              3
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 10,
+            "commandId": "0d1e688d018a4fd59a1a262604da0b66",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": -1
+            },
+            "reason": "返回原起点",
+            "status": "committed",
+            "stateVersion": 22,
+            "position": [
+              1,
+              2
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          }
+        ],
+        "feedback": {
+          "summary": "已核验活动到访、修改提议发表与返回；提议本身未改图",
+          "issues": [],
+          "suggestions": []
+        },
+        "world": {
+          "id": "foundation-01",
+          "width": 8,
+          "height": 8,
+          "blocked": [
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "water": [
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "goal": [
+            6,
+            1
+          ],
+          "entities": [],
+          "activities": [
+            {
+              "id": "garden",
+              "label": "静谧花园",
+              "position": [
+                1,
+                6
+              ],
+              "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+            },
+            {
+              "id": "riverwalk",
+              "label": "河岸步道",
+              "position": [
+                2,
+                5
+              ],
+              "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+            },
+            {
+              "id": "lookout",
+              "label": "彼岸观景台",
+              "position": [
+                6,
+                1
+              ],
+              "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+            }
+          ],
+          "mosaic": {
+            "activityId": "garden",
+            "width": 5,
+            "height": 5,
+            "revision": 1,
+            "palette": [
+              {
+                "id": "blank",
+                "label": "空白",
+                "hex": "#F4F0E6"
+              },
+              {
+                "id": "leaf",
+                "label": "叶绿",
+                "hex": "#42745B"
+              },
+              {
+                "id": "river",
+                "label": "河蓝",
+                "hex": "#477FA3"
+              },
+              {
+                "id": "sun",
+                "label": "日黄",
+                "hex": "#E4B858"
+              },
+              {
+                "id": "rose",
+                "label": "花红",
+                "hex": "#C86A70"
+              },
+              {
+                "id": "ink",
+                "label": "墨色",
+                "hex": "#37444D"
+              }
+            ],
+            "cells": [
+              {
+                "x": 0,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 2,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 2,
+                "color": "river",
+                "authorActorId": "a1",
+                "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+                "stateVersion": 7
+              },
+              {
+                "x": 2,
+                "y": 2,
+                "color": "river",
+                "authorActorId": "a1",
+                "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+                "stateVersion": 7
+              },
+              {
+                "x": 3,
+                "y": 2,
+                "color": "river",
+                "authorActorId": "a1",
+                "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+                "stateVersion": 7
+              },
+              {
+                "x": 4,
+                "y": 2,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              }
+            ]
+          },
+          "mosaicProposals": [
+            {
+              "activityId": "garden",
+              "authorActorId": "a2",
+              "targetActorId": "a1",
+              "commandId": "b5f0b41f95ae44ee9821acbe9de0b63b",
+              "visitCommandId": "098129af864748c1929b802764e9ea10",
+              "baseRevision": 1,
+              "patch": [
+                {
+                  "x": 1,
+                  "y": 2,
+                  "color": "sun"
+                }
+              ],
+              "text": "原画者a1：建议您仅将蓝色河流左端点（1,2）由河蓝改为日黄，作为阳光标记，为花园增添暖意，其余格子保持不变。这只是提议，尚未改图，请您自行审阅决定。",
+              "stateVersion": 18,
+              "proposedAtUtc": "2026-10-25T15:04:43.7765431+00:00",
+              "position": [
+                1,
+                6
+              ],
+              "review": null
+            }
+          ]
+        }
+      },
+      "decisionInput": {
+        "purpose": "去静谧花园，向原画者提议：只把蓝色河流的一个端点改成日黄，作为阳光标记，其余格子保持不变。写清理由，提交提议后返回；提议还不是实际改图。",
+        "spec": {
+          "missionId": "consent-proposer",
+          "objective": "去静谧花园，向原画者提议：只把蓝色河流的一个端点改成日黄，作为阳光标记，其余格子保持不变。写清理由，提交提议后返回；提议还不是实际改图。",
+          "goals": [
+            {
+              "id": "garden",
+              "label": "静谧花园",
+              "target": [
+                1,
+                6
+              ],
+              "activityId": "garden"
+            }
+          ],
+          "allowBuild": false,
+          "budgets": {
+            "commands": 12,
+            "wood": 0,
+            "seconds": 600,
+            "modelCalls": 1
+          },
+          "proposeMosaic": true
+        },
+        "observation": {
+          "rulesVersion": "r6",
+          "stateVersion": 12,
+          "self": {
+            "actorId": "a2",
+            "position": [
+              1,
+              2
+            ],
+            "inventory": {
+              "wood": 0
+            }
+          },
+          "world": {
+            "id": "foundation-01",
+            "width": 8,
+            "height": 8,
+            "blocked": [
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                5,
+                0
+              ],
+              [
+                5,
+                1
+              ],
+              [
+                5,
+                2
+              ],
+              [
+                5,
+                3
+              ],
+              [
+                5,
+                4
+              ],
+              [
+                5,
+                5
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "water": [
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                5,
+                0
+              ],
+              [
+                5,
+                1
+              ],
+              [
+                5,
+                2
+              ],
+              [
+                5,
+                3
+              ],
+              [
+                5,
+                4
+              ],
+              [
+                5,
+                5
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "goal": [
+              6,
+              1
+            ],
+            "entities": [],
+            "activities": [
+              {
+                "id": "garden",
+                "label": "静谧花园",
+                "position": [
+                  1,
+                  6
+                ],
+                "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+              },
+              {
+                "id": "riverwalk",
+                "label": "河岸步道",
+                "position": [
+                  2,
+                  5
+                ],
+                "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+              },
+              {
+                "id": "lookout",
+                "label": "彼岸观景台",
+                "position": [
+                  6,
+                  1
+                ],
+                "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+              }
+            ]
+          },
+          "depot": {
+            "position": [
+              1,
+              1
+            ],
+            "wood": 12
+          },
+          "recipes": [
+            {
+              "id": "platform.v1",
+              "woodCost": 3
+            },
+            {
+              "id": "bridge.v1",
+              "woodCost": 3
+            }
+          ],
+          "activities": [
+            {
+              "id": "garden",
+              "label": "静谧花园",
+              "position": [
+                1,
+                6
+              ],
+              "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+            },
+            {
+              "id": "riverwalk",
+              "label": "河岸步道",
+              "position": [
+                2,
+                5
+              ],
+              "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+            },
+            {
+              "id": "lookout",
+              "label": "彼岸观景台",
+              "position": [
+                6,
+                1
+              ],
+              "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+            }
+          ],
+          "mosaic": {
+            "activityId": "garden",
+            "width": 5,
+            "height": 5,
+            "revision": 1,
+            "palette": [
+              {
+                "id": "blank",
+                "label": "空白",
+                "hex": "#F4F0E6"
+              },
+              {
+                "id": "leaf",
+                "label": "叶绿",
+                "hex": "#42745B"
+              },
+              {
+                "id": "river",
+                "label": "河蓝",
+                "hex": "#477FA3"
+              },
+              {
+                "id": "sun",
+                "label": "日黄",
+                "hex": "#E4B858"
+              },
+              {
+                "id": "rose",
+                "label": "花红",
+                "hex": "#C86A70"
+              },
+              {
+                "id": "ink",
+                "label": "墨色",
+                "hex": "#37444D"
+              }
+            ],
+            "cells": [
+              {
+                "x": 0,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 2,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 2,
+                "color": "river",
+                "authorActorId": "a1",
+                "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+                "stateVersion": 7
+              },
+              {
+                "x": 2,
+                "y": 2,
+                "color": "river",
+                "authorActorId": "a1",
+                "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+                "stateVersion": 7
+              },
+              {
+                "x": 3,
+                "y": 2,
+                "color": "river",
+                "authorActorId": "a1",
+                "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+                "stateVersion": 7
+              },
+              {
+                "x": 4,
+                "y": 2,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              }
+            ]
+          }
+        },
+        "candidates": [
+          {
+            "id": "garden",
+            "label": "静谧花园",
+            "target": [
+              1,
+              6
+            ],
+            "activityId": "garden",
+            "newBridges": 0,
+            "woodRequired": 0,
+            "estimatedCommands": 10,
+            "feasible": true,
+            "reason": null,
+            "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+          }
+        ],
+        "mosaicProposing": true
+      },
+      "error": null,
+      "actualModelCalls": 1,
+      "journeyVerified": true,
+      "proposalVerified": true,
+      "proposalDidNotPaint": true,
+      "purposeVerified": true,
+      "decisionEvents": [
+        {
+          "kind": "codex-exec",
+          "requestedModel": "gpt-6-astra",
+          "startedAtUtc": "2026-10-25T15:04:32.740368+00:00",
+          "status": "completed",
+          "exitCode": 0,
+          "toolTypes": [],
+          "usage": {
+            "input_tokens": 13083,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 147,
+            "reasoning_output_tokens": 0
+          },
+          "decision": {
+            "goalId": "garden",
+            "reason": "静谧花园无需建桥或木材，预计10条命令符合预算；可向原画者提出单格修改建议，提交后返回，等待其自行审阅。",
+            "mosaicPatch": [
+              {
+                "x": 1,
+                "y": 2,
+                "color": "sun"
+              }
+            ],
+            "proposalText": "原画者a1：建议您仅将蓝色河流左端点（1,2）由河蓝改为日黄，作为阳光标记，为花园增添暖意，其余格子保持不变。这只是提议，尚未改图，请您自行审阅决定。"
+          },
+          "elapsedSeconds": 10.989579124958254
+        }
+      ]
+    },
+    {
+      "actorId": "a1",
+      "role": "reviewer",
+      "report": {
+        "schemaVersion": 1,
+        "kind": "resident-mission-report",
+        "mission": {
+          "id": "consent-reviewer",
+          "objective": "去静谧花园，审阅指定提议。若它只将原蓝色河流的一个端点改为日黄且其他格不变，可以同意；否则拒绝并说明理由。独立决定，不自动迎合对方，之后返回。",
+          "sharePostcard": false,
+          "paintMosaic": false,
+          "proposeMosaic": false,
+          "reviewMosaicProposal": {
+            "proposalActorId": "a2",
+            "proposalCommandId": "b5f0b41f95ae44ee9821acbe9de0b63b"
+          },
+          "actorId": "a1",
+          "worldId": "foundation-01",
+          "rulesVersion": "r6",
+          "origin": [
+            1,
+            1
+          ],
+          "goal": {
+            "id": "garden",
+            "label": "静谧花园",
+            "target": [
+              1,
+              6
+            ],
+            "activityId": "garden"
+          },
+          "status": "completed",
+          "reason": "round_trip_verified"
+        },
+        "decision": {
+          "goalId": "garden",
+          "reason": "静谧花园符合指定目的，预计12条命令且无需木材，在预算内可行。",
+          "provider": {
+            "kind": "codex-exec",
+            "model": "gpt-6-astra",
+            "usage": {
+              "inputTokens": 13282,
+              "cachedInputTokens": 0,
+              "outputTokens": 93
+            }
+          },
+          "reviewDecision": "accept",
+          "reviewText": "原提议仅将蓝色河流左端点（1,2）改为日黄，其他格不变，且baseRevision与当前revision均为1，符合接受条件。",
+          "mosaicProposal": {
+            "activityId": "garden",
+            "authorActorId": "a2",
+            "targetActorId": "a1",
+            "commandId": "b5f0b41f95ae44ee9821acbe9de0b63b",
+            "visitCommandId": "098129af864748c1929b802764e9ea10",
+            "baseRevision": 1,
+            "patch": [
+              {
+                "x": 1,
+                "y": 2,
+                "color": "sun"
+              }
+            ],
+            "text": "原画者a1：建议您仅将蓝色河流左端点（1,2）由河蓝改为日黄，作为阳光标记，为花园增添暖意，其余格子保持不变。这只是提议，尚未改图，请您自行审阅决定。",
+            "stateVersion": 18,
+            "proposedAtUtc": "2026-10-25T15:04:43.7765431+00:00",
+            "position": [
+              1,
+              6
+            ],
+            "review": null
+          },
+          "mosaicPatch": [
+            {
+              "x": 1,
+              "y": 2,
+              "color": "sun"
+            }
+          ],
+          "mosaicBaseRevision": 1
+        },
+        "budget": {
+          "limits": {
+            "commands": 14,
+            "wood": 0,
+            "seconds": 600,
+            "modelCalls": 1
+          },
+          "used": {
+            "commands": 12,
+            "wood": 0,
+            "modelCalls": 1,
+            "seconds": 7.495514869689941
+          }
+        },
+        "facts": {
+          "goalReached": true,
+          "returned": true,
+          "activityCompleted": true,
+          "activityVisit": {
+            "activityId": "garden",
+            "commandId": "efb84e089dfa415090fa2b219f68ad67",
+            "stateVersion": 28,
+            "visitedAtUtc": "2026-10-25T15:04:51.2531566+00:00",
+            "position": [
+              1,
+              6
+            ]
+          },
+          "postcardShared": false,
+          "postcard": null,
+          "mosaicPainted": true,
+          "mosaicEdit": {
+            "activityId": "garden",
+            "authorActorId": "a1",
+            "commandId": "b64d1d9ae37b465ba2e485748e0956bd",
+            "visitCommandId": "efb84e089dfa415090fa2b219f68ad67",
+            "baseRevision": 1,
+            "revision": 2,
+            "patch": [
+              {
+                "x": 1,
+                "y": 2,
+                "color": "sun"
+              }
+            ],
+            "stateVersion": 29,
+            "paintedAtUtc": "2026-10-25T15:04:51.2616486+00:00",
+            "position": [
+              1,
+              6
+            ]
+          },
+          "mosaicProposed": false,
+          "mosaicProposal": null,
+          "mosaicReviewed": true,
+          "mosaicReview": {
+            "activityId": "garden",
+            "authorActorId": "a1",
+            "commandId": "b64d1d9ae37b465ba2e485748e0956bd",
+            "visitCommandId": "efb84e089dfa415090fa2b219f68ad67",
+            "proposalActorId": "a2",
+            "proposalCommandId": "b5f0b41f95ae44ee9821acbe9de0b63b",
+            "decision": "accept",
+            "text": "原提议仅将蓝色河流左端点（1,2）改为日黄，其他格不变，且baseRevision与当前revision均为1，符合接受条件。",
+            "stateVersion": 29,
+            "reviewedAtUtc": "2026-10-25T15:04:51.2616486+00:00",
+            "position": [
+              1,
+              6
+            ],
+            "mosaicEdit": {
+              "activityId": "garden",
+              "authorActorId": "a1",
+              "commandId": "b64d1d9ae37b465ba2e485748e0956bd",
+              "visitCommandId": "efb84e089dfa415090fa2b219f68ad67",
+              "baseRevision": 1,
+              "revision": 2,
+              "patch": [
+                {
+                  "x": 1,
+                  "y": 2,
+                  "color": "sun"
+                }
+              ],
+              "stateVersion": 29,
+              "paintedAtUtc": "2026-10-25T15:04:51.2616486+00:00",
+              "position": [
+                1,
+                6
+              ]
+            }
+          },
+          "startStateVersion": 22,
+          "endStateVersion": 34,
+          "woodClaimed": 0,
+          "createdEntityIds": [],
+          "verifiedAtUtc": "2026-10-25T15:04:51.313018+00:00"
+        },
+        "steps": [
+          {
+            "index": 1,
+            "commandId": "c4acda10ca99434d91bedbca9e0a6730",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": 1
+            },
+            "reason": "前往已选目标",
+            "status": "committed",
+            "stateVersion": 23,
+            "position": [
+              1,
+              2
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 2,
+            "commandId": "8479b53c4d324cdea1a977b6eb6adfb7",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": 1
+            },
+            "reason": "前往已选目标",
+            "status": "committed",
+            "stateVersion": 24,
+            "position": [
+              1,
+              3
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 3,
+            "commandId": "fed0e8508fc440b4abc71dcbda10a70c",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": 1
+            },
+            "reason": "前往已选目标",
+            "status": "committed",
+            "stateVersion": 25,
+            "position": [
+              1,
+              4
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 4,
+            "commandId": "596f23ceb70049558542fad5de6b419e",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": 1
+            },
+            "reason": "前往已选目标",
+            "status": "committed",
+            "stateVersion": 26,
+            "position": [
+              1,
+              5
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 5,
+            "commandId": "5c6ba9d0eb4f42eb9dde19020457f199",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": 1
+            },
+            "reason": "前往已选目标",
+            "status": "committed",
+            "stateVersion": 27,
+            "position": [
+              1,
+              6
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 6,
+            "commandId": "efb84e089dfa415090fa2b219f68ad67",
+            "action": {
+              "type": "visit",
+              "activityId": "garden"
+            },
+            "reason": "在已选活动地点确认到访",
+            "status": "committed",
+            "stateVersion": 28,
+            "position": [
+              1,
+              6
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200,
+            "evidenceSource": "command_receipt"
+          },
+          {
+            "index": 7,
+            "commandId": "b64d1d9ae37b465ba2e485748e0956bd",
+            "action": {
+              "type": "mosaic_review",
+              "activityId": "garden",
+              "visitCommandId": "efb84e089dfa415090fa2b219f68ad67",
+              "proposalActorId": "a2",
+              "proposalCommandId": "b5f0b41f95ae44ee9821acbe9de0b63b",
+              "decision": "accept",
+              "text": "原提议仅将蓝色河流左端点（1,2）改为日黄，其他格不变，且baseRevision与当前revision均为1，符合接受条件。"
+            },
+            "reason": "在已确认到访的花园提交原提议的审阅决定",
+            "status": "committed",
+            "stateVersion": 29,
+            "position": [
+              1,
+              6
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200,
+            "evidenceSource": "command_receipt"
+          },
+          {
+            "index": 8,
+            "commandId": "2a760e48bfd84c3aaa0ee2069a7e7f48",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": -1
+            },
+            "reason": "返回原起点",
+            "status": "committed",
+            "stateVersion": 30,
+            "position": [
+              1,
+              5
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 9,
+            "commandId": "b531406e6f154dc69e4eae27093e712d",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": -1
+            },
+            "reason": "返回原起点",
+            "status": "committed",
+            "stateVersion": 31,
+            "position": [
+              1,
+              4
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 10,
+            "commandId": "40f6f57a972f4b17be0e9309a9f2565c",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": -1
+            },
+            "reason": "返回原起点",
+            "status": "committed",
+            "stateVersion": 32,
+            "position": [
+              1,
+              3
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 11,
+            "commandId": "80eae7894da34375b906fd3ca6ae3b33",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": -1
+            },
+            "reason": "返回原起点",
+            "status": "committed",
+            "stateVersion": 33,
+            "position": [
+              1,
+              2
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          },
+          {
+            "index": 12,
+            "commandId": "5b35804cc91341869904680ec941cebc",
+            "action": {
+              "type": "move",
+              "dx": 0,
+              "dy": -1
+            },
+            "reason": "返回原起点",
+            "status": "committed",
+            "stateVersion": 34,
+            "position": [
+              1,
+              1
+            ],
+            "inventoryWood": 0,
+            "httpStatus": 200
+          }
+        ],
+        "feedback": {
+          "summary": "已核验活动到访、接受提议、实际改图与返回",
+          "issues": [],
+          "suggestions": []
+        },
+        "world": {
+          "id": "foundation-01",
+          "width": 8,
+          "height": 8,
+          "blocked": [
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "water": [
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "goal": [
+            6,
+            1
+          ],
+          "entities": [],
+          "activities": [
+            {
+              "id": "garden",
+              "label": "静谧花园",
+              "position": [
+                1,
+                6
+              ],
+              "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+            },
+            {
+              "id": "riverwalk",
+              "label": "河岸步道",
+              "position": [
+                2,
+                5
+              ],
+              "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+            },
+            {
+              "id": "lookout",
+              "label": "彼岸观景台",
+              "position": [
+                6,
+                1
+              ],
+              "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+            }
+          ],
+          "mosaic": {
+            "activityId": "garden",
+            "width": 5,
+            "height": 5,
+            "revision": 2,
+            "palette": [
+              {
+                "id": "blank",
+                "label": "空白",
+                "hex": "#F4F0E6"
+              },
+              {
+                "id": "leaf",
+                "label": "叶绿",
+                "hex": "#42745B"
+              },
+              {
+                "id": "river",
+                "label": "河蓝",
+                "hex": "#477FA3"
+              },
+              {
+                "id": "sun",
+                "label": "日黄",
+                "hex": "#E4B858"
+              },
+              {
+                "id": "rose",
+                "label": "花红",
+                "hex": "#C86A70"
+              },
+              {
+                "id": "ink",
+                "label": "墨色",
+                "hex": "#37444D"
+              }
+            ],
+            "cells": [
+              {
+                "x": 0,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 2,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 2,
+                "color": "sun",
+                "authorActorId": "a1",
+                "commandId": "b64d1d9ae37b465ba2e485748e0956bd",
+                "stateVersion": 29
+              },
+              {
+                "x": 2,
+                "y": 2,
+                "color": "river",
+                "authorActorId": "a1",
+                "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+                "stateVersion": 7
+              },
+              {
+                "x": 3,
+                "y": 2,
+                "color": "river",
+                "authorActorId": "a1",
+                "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+                "stateVersion": 7
+              },
+              {
+                "x": 4,
+                "y": 2,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              }
+            ]
+          },
+          "mosaicProposals": [
+            {
+              "activityId": "garden",
+              "authorActorId": "a2",
+              "targetActorId": "a1",
+              "commandId": "b5f0b41f95ae44ee9821acbe9de0b63b",
+              "visitCommandId": "098129af864748c1929b802764e9ea10",
+              "baseRevision": 1,
+              "patch": [
+                {
+                  "x": 1,
+                  "y": 2,
+                  "color": "sun"
+                }
+              ],
+              "text": "原画者a1：建议您仅将蓝色河流左端点（1,2）由河蓝改为日黄，作为阳光标记，为花园增添暖意，其余格子保持不变。这只是提议，尚未改图，请您自行审阅决定。",
+              "stateVersion": 18,
+              "proposedAtUtc": "2026-10-25T15:04:43.7765431+00:00",
+              "position": [
+                1,
+                6
+              ],
+              "review": {
+                "activityId": "garden",
+                "authorActorId": "a1",
+                "commandId": "b64d1d9ae37b465ba2e485748e0956bd",
+                "visitCommandId": "efb84e089dfa415090fa2b219f68ad67",
+                "proposalActorId": "a2",
+                "proposalCommandId": "b5f0b41f95ae44ee9821acbe9de0b63b",
+                "decision": "accept",
+                "text": "原提议仅将蓝色河流左端点（1,2）改为日黄，其他格不变，且baseRevision与当前revision均为1，符合接受条件。",
+                "stateVersion": 29,
+                "reviewedAtUtc": "2026-10-25T15:04:51.2616486+00:00",
+                "position": [
+                  1,
+                  6
+                ],
+                "mosaicEdit": {
+                  "activityId": "garden",
+                  "authorActorId": "a1",
+                  "commandId": "b64d1d9ae37b465ba2e485748e0956bd",
+                  "visitCommandId": "efb84e089dfa415090fa2b219f68ad67",
+                  "baseRevision": 1,
+                  "revision": 2,
+                  "patch": [
+                    {
+                      "x": 1,
+                      "y": 2,
+                      "color": "sun"
+                    }
+                  ],
+                  "stateVersion": 29,
+                  "paintedAtUtc": "2026-10-25T15:04:51.2616486+00:00",
+                  "position": [
+                    1,
+                    6
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "decisionInput": {
+        "purpose": "去静谧花园，审阅指定提议。若它只将原蓝色河流的一个端点改为日黄且其他格不变，可以同意；否则拒绝并说明理由。独立决定，不自动迎合对方，之后返回。",
+        "spec": {
+          "missionId": "consent-reviewer",
+          "objective": "去静谧花园，审阅指定提议。若它只将原蓝色河流的一个端点改为日黄且其他格不变，可以同意；否则拒绝并说明理由。独立决定，不自动迎合对方，之后返回。",
+          "goals": [
+            {
+              "id": "garden",
+              "label": "静谧花园",
+              "target": [
+                1,
+                6
+              ],
+              "activityId": "garden"
+            }
+          ],
+          "allowBuild": false,
+          "budgets": {
+            "commands": 14,
+            "wood": 0,
+            "seconds": 600,
+            "modelCalls": 1
+          },
+          "reviewMosaicProposal": {
+            "proposalActorId": "a2",
+            "proposalCommandId": "b5f0b41f95ae44ee9821acbe9de0b63b"
+          }
+        },
+        "observation": {
+          "rulesVersion": "r6",
+          "stateVersion": 22,
+          "self": {
+            "actorId": "a1",
+            "position": [
+              1,
+              1
+            ],
+            "inventory": {
+              "wood": 0
+            }
+          },
+          "world": {
+            "id": "foundation-01",
+            "width": 8,
+            "height": 8,
+            "blocked": [
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                5,
+                0
+              ],
+              [
+                5,
+                1
+              ],
+              [
+                5,
+                2
+              ],
+              [
+                5,
+                3
+              ],
+              [
+                5,
+                4
+              ],
+              [
+                5,
+                5
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "water": [
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                4,
+                7
+              ],
+              [
+                5,
+                0
+              ],
+              [
+                5,
+                1
+              ],
+              [
+                5,
+                2
+              ],
+              [
+                5,
+                3
+              ],
+              [
+                5,
+                4
+              ],
+              [
+                5,
+                5
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "goal": [
+              6,
+              1
+            ],
+            "entities": [],
+            "activities": [
+              {
+                "id": "garden",
+                "label": "静谧花园",
+                "position": [
+                  1,
+                  6
+                ],
+                "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+              },
+              {
+                "id": "riverwalk",
+                "label": "河岸步道",
+                "position": [
+                  2,
+                  5
+                ],
+                "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+              },
+              {
+                "id": "lookout",
+                "label": "彼岸观景台",
+                "position": [
+                  6,
+                  1
+                ],
+                "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+              }
+            ]
+          },
+          "depot": {
+            "position": [
+              1,
+              1
+            ],
+            "wood": 12
+          },
+          "recipes": [
+            {
+              "id": "platform.v1",
+              "woodCost": 3
+            },
+            {
+              "id": "bridge.v1",
+              "woodCost": 3
+            }
+          ],
+          "activities": [
+            {
+              "id": "garden",
+              "label": "静谧花园",
+              "position": [
+                1,
+                6
+              ],
+              "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+            },
+            {
+              "id": "riverwalk",
+              "label": "河岸步道",
+              "position": [
+                2,
+                5
+              ],
+              "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+            },
+            {
+              "id": "lookout",
+              "label": "彼岸观景台",
+              "position": [
+                6,
+                1
+              ],
+              "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+            }
+          ],
+          "mosaic": {
+            "activityId": "garden",
+            "width": 5,
+            "height": 5,
+            "revision": 1,
+            "palette": [
+              {
+                "id": "blank",
+                "label": "空白",
+                "hex": "#F4F0E6"
+              },
+              {
+                "id": "leaf",
+                "label": "叶绿",
+                "hex": "#42745B"
+              },
+              {
+                "id": "river",
+                "label": "河蓝",
+                "hex": "#477FA3"
+              },
+              {
+                "id": "sun",
+                "label": "日黄",
+                "hex": "#E4B858"
+              },
+              {
+                "id": "rose",
+                "label": "花红",
+                "hex": "#C86A70"
+              },
+              {
+                "id": "ink",
+                "label": "墨色",
+                "hex": "#37444D"
+              }
+            ],
+            "cells": [
+              {
+                "x": 0,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 0,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 1,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 2,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 2,
+                "color": "river",
+                "authorActorId": "a1",
+                "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+                "stateVersion": 7
+              },
+              {
+                "x": 2,
+                "y": 2,
+                "color": "river",
+                "authorActorId": "a1",
+                "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+                "stateVersion": 7
+              },
+              {
+                "x": 3,
+                "y": 2,
+                "color": "river",
+                "authorActorId": "a1",
+                "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+                "stateVersion": 7
+              },
+              {
+                "x": 4,
+                "y": 2,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 3,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 0,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 1,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 2,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 3,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              },
+              {
+                "x": 4,
+                "y": 4,
+                "color": "blank",
+                "authorActorId": null,
+                "commandId": null,
+                "stateVersion": null
+              }
+            ]
+          },
+          "mosaicProposal": {
+            "activityId": "garden",
+            "authorActorId": "a2",
+            "targetActorId": "a1",
+            "commandId": "b5f0b41f95ae44ee9821acbe9de0b63b",
+            "visitCommandId": "098129af864748c1929b802764e9ea10",
+            "baseRevision": 1,
+            "patch": [
+              {
+                "x": 1,
+                "y": 2,
+                "color": "sun"
+              }
+            ],
+            "text": "原画者a1：建议您仅将蓝色河流左端点（1,2）由河蓝改为日黄，作为阳光标记，为花园增添暖意，其余格子保持不变。这只是提议，尚未改图，请您自行审阅决定。",
+            "stateVersion": 18,
+            "proposedAtUtc": "2026-10-25T15:04:43.7765431+00:00",
+            "position": [
+              1,
+              6
+            ],
+            "review": null
+          }
+        },
+        "candidates": [
+          {
+            "id": "garden",
+            "label": "静谧花园",
+            "target": [
+              1,
+              6
+            ],
+            "activityId": "garden",
+            "newBridges": 0,
+            "woodRequired": 0,
+            "estimatedCommands": 12,
+            "feasible": true,
+            "reason": null,
+            "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+          }
+        ],
+        "mosaicReviewing": true
+      },
+      "error": null,
+      "actualModelCalls": 1,
+      "journeyVerified": true,
+      "originalProposalInInput": true,
+      "reviewVerified": true,
+      "decision": "accept",
+      "effectVerified": true,
+      "decisionEvents": [
+        {
+          "kind": "codex-exec",
+          "requestedModel": "gpt-6-astra",
+          "startedAtUtc": "2026-10-25T15:04:43.936653+00:00",
+          "status": "completed",
+          "exitCode": 0,
+          "toolTypes": [],
+          "usage": {
+            "input_tokens": 13282,
+            "cached_input_tokens": 0,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 93,
+            "reasoning_output_tokens": 0
+          },
+          "decision": {
+            "goalId": "garden",
+            "reason": "静谧花园符合指定目的，预计12条命令且无需木材，在预算内可行。",
+            "reviewDecision": "accept",
+            "reviewText": "原提议仅将蓝色河流左端点（1,2）改为日黄，其他格不变，且baseRevision与当前revision均为1，符合接受条件。"
+          },
+          "elapsedSeconds": 7.26738369895611
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "initialMosaic": {
+    "activityId": "garden",
+    "width": 5,
+    "height": 5,
+    "revision": 1,
+    "palette": [
+      {
+        "id": "blank",
+        "label": "空白",
+        "hex": "#F4F0E6"
+      },
+      {
+        "id": "leaf",
+        "label": "叶绿",
+        "hex": "#42745B"
+      },
+      {
+        "id": "river",
+        "label": "河蓝",
+        "hex": "#477FA3"
+      },
+      {
+        "id": "sun",
+        "label": "日黄",
+        "hex": "#E4B858"
+      },
+      {
+        "id": "rose",
+        "label": "花红",
+        "hex": "#C86A70"
+      },
+      {
+        "id": "ink",
+        "label": "墨色",
+        "hex": "#37444D"
+      }
+    ],
+    "cells": [
+      {
+        "x": 0,
+        "y": 0,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "color": "river",
+        "authorActorId": "a1",
+        "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+        "stateVersion": 7
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "color": "river",
+        "authorActorId": "a1",
+        "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+        "stateVersion": 7
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "color": "river",
+        "authorActorId": "a1",
+        "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+        "stateVersion": 7
+      },
+      {
+        "x": 4,
+        "y": 2,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 0,
+        "y": 3,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 1,
+        "y": 3,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 3,
+        "y": 3,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 0,
+        "y": 4,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 1,
+        "y": 4,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 2,
+        "y": 4,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 3,
+        "y": 4,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      }
+    ]
+  },
+  "finalMosaic": {
+    "activityId": "garden",
+    "width": 5,
+    "height": 5,
+    "revision": 2,
+    "palette": [
+      {
+        "id": "blank",
+        "label": "空白",
+        "hex": "#F4F0E6"
+      },
+      {
+        "id": "leaf",
+        "label": "叶绿",
+        "hex": "#42745B"
+      },
+      {
+        "id": "river",
+        "label": "河蓝",
+        "hex": "#477FA3"
+      },
+      {
+        "id": "sun",
+        "label": "日黄",
+        "hex": "#E4B858"
+      },
+      {
+        "id": "rose",
+        "label": "花红",
+        "hex": "#C86A70"
+      },
+      {
+        "id": "ink",
+        "label": "墨色",
+        "hex": "#37444D"
+      }
+    ],
+    "cells": [
+      {
+        "x": 0,
+        "y": 0,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "color": "sun",
+        "authorActorId": "a1",
+        "commandId": "b64d1d9ae37b465ba2e485748e0956bd",
+        "stateVersion": 29
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "color": "river",
+        "authorActorId": "a1",
+        "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+        "stateVersion": 7
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "color": "river",
+        "authorActorId": "a1",
+        "commandId": "5b270b406c8c4db08fe8e46568e30f9e",
+        "stateVersion": 7
+      },
+      {
+        "x": 4,
+        "y": 2,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 0,
+        "y": 3,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 1,
+        "y": 3,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 3,
+        "y": 3,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 0,
+        "y": 4,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 1,
+        "y": 4,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 2,
+        "y": 4,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 3,
+        "y": 4,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "color": "blank",
+        "authorActorId": null,
+        "commandId": null,
+        "stateVersion": null
+      }
+    ]
+  },
+  "publicProposals": [
+    {
+      "activityId": "garden",
+      "authorActorId": "a2",
+      "targetActorId": "a1",
+      "commandId": "b5f0b41f95ae44ee9821acbe9de0b63b",
+      "visitCommandId": "098129af864748c1929b802764e9ea10",
+      "baseRevision": 1,
+      "patch": [
+        {
+          "x": 1,
+          "y": 2,
+          "color": "sun"
+        }
+      ],
+      "text": "原画者a1：建议您仅将蓝色河流左端点（1,2）由河蓝改为日黄，作为阳光标记，为花园增添暖意，其余格子保持不变。这只是提议，尚未改图，请您自行审阅决定。",
+      "stateVersion": 18,
+      "proposedAtUtc": "2026-10-25T15:04:43.7765431+00:00",
+      "position": [
+        1,
+        6
+      ],
+      "review": {
+        "activityId": "garden",
+        "authorActorId": "a1",
+        "commandId": "b64d1d9ae37b465ba2e485748e0956bd",
+        "visitCommandId": "efb84e089dfa415090fa2b219f68ad67",
+        "proposalActorId": "a2",
+        "proposalCommandId": "b5f0b41f95ae44ee9821acbe9de0b63b",
+        "decision": "accept",
+        "text": "原提议仅将蓝色河流左端点（1,2）改为日黄，其他格不变，且baseRevision与当前revision均为1，符合接受条件。",
+        "stateVersion": 29,
+        "reviewedAtUtc": "2026-10-25T15:04:51.2616486+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "mosaicEdit": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "b64d1d9ae37b465ba2e485748e0956bd",
+          "visitCommandId": "efb84e089dfa415090fa2b219f68ad67",
+          "baseRevision": 1,
+          "revision": 2,
+          "patch": [
+            {
+              "x": 1,
+              "y": 2,
+              "color": "sun"
+            }
+          ],
+          "stateVersion": 29,
+          "paintedAtUtc": "2026-10-25T15:04:51.2616486+00:00",
+          "position": [
+            1,
+            6
+          ]
+        }
+      }
+    }
+  ],
+  "resourceAudit": {
+    "issuedWood": 12,
+    "depotWood": 12,
+    "inventoryWood": 0,
+    "embodiedWood": 0,
+    "conserved": true
+  },
+  "databaseAudit": {
+    "issuedWood": 12,
+    "depotWood": 12,
+    "inventoryWood": 0,
+    "embodiedWood": 0,
+    "conserved": true,
+    "visitRows": 3,
+    "stateVersion": 34,
+    "eventRows": 35,
+    "foreignKeyErrors": 0,
+    "proposalRows": 1,
+    "reviewRows": 1,
+    "mosaicEditRows": 2
+  },
+  "finishedAtUtc": "2026-10-25T15:04:51.337849+00:00"
+}

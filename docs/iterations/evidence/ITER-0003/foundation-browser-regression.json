@@ -1,0 +1,59 @@
+{
+  "suite": "foundation-real-chrome-v1",
+  "recordedAtUtc": "2026-10-25T10:36:12.634Z",
+  "passed": true,
+  "tests": [
+    {
+      "name": "connect_claim_build_and_reject",
+      "passed": true,
+      "milliseconds": 650
+    },
+    {
+      "name": "human_navigation_and_wall_rejection",
+      "passed": true,
+      "milliseconds": 451
+    },
+    {
+      "name": "fixed_resident_and_shared_observation",
+      "passed": true,
+      "milliseconds": 1669
+    },
+    {
+      "name": "keyboard_after_button_focus_and_input_isolation",
+      "passed": true,
+      "milliseconds": 568
+    },
+    {
+      "name": "offline_then_fresh_snapshot",
+      "passed": true,
+      "milliseconds": 23
+    },
+    {
+      "name": "committed_response_lost_then_query",
+      "passed": true,
+      "milliseconds": 343
+    },
+    {
+      "name": "not_sent_404_then_same_command_retry",
+      "passed": true,
+      "milliseconds": 385
+    },
+    {
+      "name": "service_restart_preserves_visible_world",
+      "passed": true,
+      "milliseconds": 2950
+    },
+    {
+      "name": "mobile_layout_and_accessible_controls",
+      "passed": true,
+      "milliseconds": 349
+    },
+    {
+      "name": "revocation_clears_browser_access",
+      "passed": true,
+      "milliseconds": 1237
+    }
+  ],
+  "javascriptErrors": [],
+  "dataRoot": ".local/iter0001/browser/2026-10-25T10-36-03-494Z"
+}

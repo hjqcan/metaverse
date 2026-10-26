@@ -1,0 +1,12 @@
+{
+  "missionId": "postcard-first",
+  "objective": "去静谧花园短途散步，留一句给后来者的温和问候，然后返回。行动前只起草，不要声称已经看见未发生的事情。",
+  "goals": [
+    { "id": "garden", "label": "静谧花园", "target": [1, 6], "activityId": "garden" },
+    { "id": "riverwalk", "label": "河岸步道", "target": [2, 5], "activityId": "riverwalk" },
+    { "id": "lookout", "label": "彼岸观景台", "target": [6, 1], "activityId": "lookout" }
+  ],
+  "sharePostcard": true,
+  "allowBuild": false,
+  "budgets": { "commands": 14, "wood": 0, "seconds": 600, "modelCalls": 1 }
+}

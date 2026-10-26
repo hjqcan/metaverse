@@ -67,7 +67,7 @@ Agent 可以持续入驻，并根据自身任务、配置或授权开展活动�
 
 ## 4. 本阶段的工作边界
 
-当前目标是形成可供后续人类与 Agent 使用的设计基线，并选择一轮可执行实验。仓库尚无已运行的原型，文档不包含虚构测试结果。
+2026-10-25 已完成底层研究及 ITER-0001—0008：[基础世界](iterations/ITER-0001-results.md)、[两地通行](iterations/ITER-0002-results.md)、[模型居民](iterations/ITER-0003-results.md)、[地点活动](iterations/ITER-0004-results.md)、[共同手记](iterations/ITER-0005-results.md)、[共同画布](iterations/ITER-0006-results.md)、[协商修改](iterations/ITER-0007-results.md)和[提议收件箱](iterations/ITER-0008-results.md)。支持浏览器居民行动、有限材料公共桥梁、三个地点到访、公开短文和花园 5×5 画布；r6 修改他人格子须先提议，由原格最后作者决定。最新收件箱让最近列表以外的未处理提议持续可见，新任务按原引用读取完整内容；两次真实 GPT-6 调用验证插入 51 条已处理记录后仍能找到并接受原提议。确定性执行器保留任务、预算与原命令，服务器确认实际结果。129 项 HTTP、84 项 Chrome 检查通过。长期体验、自治、完整治理、经济及公共部署未获验证。
 
 以下事项没有在本轮被决定：
 

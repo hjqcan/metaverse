@@ -1,0 +1,95 @@
+{
+  "suite": "foundation-http-v1",
+  "recordedAtUtc": "2026-10-25T11:31:47.870407+00:00",
+  "passed": true,
+  "testsRun": 17,
+  "tests": [
+    {
+      "test": "__main__.FoundationAcceptance.test_01_initial_identity_and_world_boundary",
+      "passed": true,
+      "seconds": 0.2557334689772688
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_02_move_rejects_wall_boundary_and_invalid_shape",
+      "passed": true,
+      "seconds": 0.29059505299665034
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_03_finite_source_build_and_stable_rejection",
+      "passed": true,
+      "seconds": 0.31736649200320244
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_04_parallel_duplicates_and_normalized_payload",
+      "passed": true,
+      "seconds": 1.2159623789484613
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_05_compete_for_last_material",
+      "passed": true,
+      "seconds": 0.4525550819816999
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_06_compete_for_build_cell",
+      "passed": true,
+      "seconds": 0.4698058280046098
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_07_identity_override_revoke_and_renew",
+      "passed": true,
+      "seconds": 0.8557697989745066
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_08_expired_session",
+      "passed": true,
+      "seconds": 0.6000976550276391
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_09_restart_preserves_world_and_receipts",
+      "passed": true,
+      "seconds": 0.5089584390516393
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_10_events_are_ordered_and_paginated",
+      "passed": true,
+      "seconds": 0.6304327229736373
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_11_exception_rolls_back_and_original_id_retries",
+      "passed": true,
+      "seconds": 0.262825965997763
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_12_exit_before_commit",
+      "passed": true,
+      "seconds": 0.5147184859961271
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_13_exit_after_commit_before_response",
+      "passed": true,
+      "seconds": 0.5476324509945698
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_14_fault_injection_is_disabled_by_default",
+      "passed": true,
+      "seconds": 0.46366262598894536
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_15_fixed_resident_reaches_goal_without_work",
+      "passed": true,
+      "seconds": 0.28604448901023716
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_16_same_id_in_different_actor_scopes",
+      "passed": true,
+      "seconds": 0.24176345497835428
+    },
+    {
+      "test": "__main__.FoundationAcceptance.test_17_separate_candidates_do_not_share_tokens_or_assets",
+      "passed": true,
+      "seconds": 0.5467522089602426
+    }
+  ],
+  "failures": [],
+  "dataRoot": ".local/iter0001/api/20261025T193139-16a4f3"
+}

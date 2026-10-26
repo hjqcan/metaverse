@@ -1,0 +1,92 @@
+{
+  "suite": "activity-http-v1",
+  "decisionSource": "test-double-or-fixed-reference",
+  "actualModelCalls": 0,
+  "recordedAtUtc": "2026-10-25T11:31:46.629550+00:00",
+  "passed": false,
+  "testsRun": 15,
+  "tests": [
+    {
+      "test": "__main__.ActivityAcceptance.test_01_catalog_and_identity_private_visits",
+      "passed": true,
+      "seconds": 0.24212178797461092
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_02_not_at_unknown_and_invalid_visit_never_change_world",
+      "passed": true,
+      "seconds": 0.25603049801429734
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_03_visit_transaction_idempotence_and_other_actor_scope",
+      "passed": true,
+      "seconds": 0.5775310870376416
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_04_concurrent_same_visit_id_creates_one_record",
+      "passed": true,
+      "seconds": 0.43640637898351997
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_05_visit_exit_before_commit_is_atomic",
+      "passed": true,
+      "seconds": 0.5135640560183674
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_06_visit_exit_after_commit_keeps_original_receipt",
+      "passed": true,
+      "seconds": 0.5807367659872398
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_07_arrival_without_visit_is_not_activity_completion",
+      "passed": true,
+      "seconds": 0.27576258103363216
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_08_activity_roundtrip_completed_resume_noop",
+      "passed": true,
+      "seconds": 0.398868775984738
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_09_pending_visit_after_service_exit_recovers_same_task",
+      "passed": true,
+      "seconds": 0.5765144570032135
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_10_previous_visit_cannot_complete_new_mission",
+      "passed": true,
+      "seconds": 0.4306633460219018
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_11_invalid_catalog_binding_precedes_choice_and_actions",
+      "passed": true,
+      "seconds": 0.26076950103743
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_12_cost_baseline_uses_feasibility_and_counts_visit",
+      "passed": true,
+      "seconds": 0.31632944504963234
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_13_wrong_activity_in_success_receipt_retains_pending",
+      "passed": true,
+      "seconds": 0.3189645910169929
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_14_existing_schema2_world_unchanged_and_visit_unavailable",
+      "passed": false,
+      "seconds": 1.368837944988627
+    },
+    {
+      "test": "__main__.ActivityAcceptance.test_15_recent_visits_are_ordered_bounded_and_without_rewards",
+      "passed": true,
+      "seconds": 0.6598393149906769
+    }
+  ],
+  "dataRoot": ".local/iter0004/api/20261025T193139-22fa23",
+  "failures": [
+    {
+      "test": "test_14_existing_schema2_world_unchanged_and_visit_unavailable (__main__.ActivityAcceptance.test_14_existing_schema2_world_unchanged_and_visit_unavailable)",
+      "detail": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/activities_api.py\", line 233, in test_14_existing_schema2_world_unchanged_and_visit_unavailable\n    old = ActivityCandidate(self._testMethodName + \"-r2\", scenario=None, fixture=\"passage-v2-populated.sql\")\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/activities_api.py\", line 42, in __init__\n    self.start()\n  File \"/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/foundation_api.py\", line 45, in start\n    raise RuntimeError(f\"Candidate exited {self.process.returncode}; see {self.data / 'server.log'}\")\nRuntimeError: Candidate exited -6; see /home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/.local/iter0004/api/20261025T193139-22fa23/test_14_existing_schema2_world_unchanged_and_visit_unavailable-r2/server.log\n"
+    }
+  ]
+}

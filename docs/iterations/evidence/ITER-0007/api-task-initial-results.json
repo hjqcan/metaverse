@@ -1,0 +1,52 @@
+{
+  "suite": "mosaic-consent-http-v1",
+  "decisionSource": "explicit-test-double",
+  "actualModelCalls": 0,
+  "recordedAtUtc": "2026-10-25T15:04:17.341464+00:00",
+  "passed": false,
+  "testsRun": 7,
+  "tests": [
+    {
+      "test": "__main__.ConsentAcceptance.test_11_proposer_pause_resume_and_budget_visit_only",
+      "passed": true,
+      "seconds": 0.4871307769790292
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_12_reviewer_accept_and_reject_reports_distinguish_actual_paint",
+      "passed": true,
+      "seconds": 0.644170492014382
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_13_lost_review_commit_recovers_original_once",
+      "passed": true,
+      "seconds": 0.916582455043681
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_14_stale_frozen_review_stops_without_new_decision",
+      "passed": true,
+      "seconds": 0.6296293740160763
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_15_wrong_receipt_and_query_failure_keep_original_pending",
+      "passed": false,
+      "seconds": 0.5324344409746118
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_16_capabilities_and_bad_draft_fail_before_world_actions",
+      "passed": true,
+      "seconds": 0.47233470098581165
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_19_world_stale_retries_only_settled_attempt_with_same_frozen_decision",
+      "passed": true,
+      "seconds": 0.5580902729998343
+    }
+  ],
+  "dataRoot": ".local/iter0007/api/20261025T230413-6a2644",
+  "failures": [
+    {
+      "test": "test_15_wrong_receipt_and_query_failure_keep_original_pending (__main__.ConsentAcceptance.test_15_wrong_receipt_and_query_failure_keep_original_pending)",
+      "detail": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/consent_api.py\", line 230, in test_15_wrong_receipt_and_query_failure_keep_original_pending\n    self.task(spec,choose,client=bad);self.assertEqual(original,json.loads(self.state.read_text())['pending']['commandId'])\n                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'pending'\n"
+    }
+  ]
+}

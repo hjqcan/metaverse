@@ -1,0 +1,122 @@
+{
+  "recordedAtUtc": "2026-10-25T13:18:41.544453+00:00",
+  "previews": [
+    {
+      "url": "http://127.0.0.1:5080",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r1",
+      "stateVersion": 7,
+      "selfPosition": [
+        1,
+        1
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 12
+      },
+      "entities": [],
+      "postcardCount": 0
+    },
+    {
+      "url": "http://127.0.0.1:5081",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r2",
+      "stateVersion": 19,
+      "selfPosition": [
+        1,
+        1
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 6
+      },
+      "entities": [
+        {
+          "entityId": "ecbe9a0f6cd174d308faa1a38b44512f4",
+          "definitionId": "bridge",
+          "definitionVersion": 1,
+          "rulesVersion": "r2",
+          "ownerActorId": "a2",
+          "position": [
+            5,
+            3
+          ],
+          "embodiedWood": 3
+        },
+        {
+          "entityId": "ef95f72f35d6e4c32a70526746d016d7e",
+          "definitionId": "bridge",
+          "definitionVersion": 1,
+          "rulesVersion": "r2",
+          "ownerActorId": "a2",
+          "position": [
+            4,
+            3
+          ],
+          "embodiedWood": 3
+        }
+      ],
+      "postcardCount": 0
+    },
+    {
+      "url": "http://127.0.0.1:5082",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r3",
+      "stateVersion": 0,
+      "selfPosition": [
+        1,
+        1
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 12
+      },
+      "entities": [],
+      "postcardCount": 0
+    },
+    {
+      "url": "http://127.0.0.1:5083",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r4",
+      "stateVersion": 0,
+      "selfPosition": [
+        1,
+        1
+      ],
+      "depot": {
+        "position": [
+          1,
+          1
+        ],
+        "wood": 12
+      },
+      "entities": [],
+      "postcardCount": 0
+    }
+  ]
+}

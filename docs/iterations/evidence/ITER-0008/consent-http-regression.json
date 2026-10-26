@@ -1,0 +1,107 @@
+{
+  "suite": "mosaic-consent-http-v1",
+  "decisionSource": "explicit-test-double",
+  "actualModelCalls": 0,
+  "recordedAtUtc": "2026-10-25T15:30:15.864752+00:00",
+  "passed": true,
+  "testsRun": 19,
+  "tests": [
+    {
+      "test": "__main__.ConsentAcceptance.test_01_proposal_is_public_immutable_and_does_not_paint",
+      "passed": true,
+      "seconds": 0.7464443470234983
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_02_direct_edit_requires_consent_including_erased_foreign_cells",
+      "passed": true,
+      "seconds": 0.5347997350036167
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_03_proposal_shape_target_visit_and_one_per_visit",
+      "passed": true,
+      "seconds": 0.4495262380223721
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_04_accept_preserves_proposer_and_records_actual_reviewer_edit",
+      "passed": true,
+      "seconds": 0.770657396002207
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_05_reject_does_not_paint_and_cannot_be_reopened",
+      "passed": true,
+      "seconds": 0.5702417400316335
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_06_only_target_can_review_and_requires_own_visit",
+      "passed": true,
+      "seconds": 0.586053593957331
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_07_stale_accept_fails_but_stale_reject_is_allowed",
+      "passed": true,
+      "seconds": 0.5712741700117476
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_08_concurrent_reviews_have_only_one_terminal_decision",
+      "passed": true,
+      "seconds": 0.7671609440003522
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_09_before_commit_exit_rolls_back_review_and_all_tiles",
+      "passed": true,
+      "seconds": 1.3732232130132616
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_10_after_commit_exit_retains_review_and_all_tiles",
+      "passed": true,
+      "seconds": 1.6081313200411387
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_11_proposer_pause_resume_and_budget_visit_only",
+      "passed": true,
+      "seconds": 0.7182947910041548
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_12_reviewer_accept_and_reject_reports_distinguish_actual_paint",
+      "passed": true,
+      "seconds": 1.0657891379669309
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_13_lost_review_commit_recovers_original_once",
+      "passed": true,
+      "seconds": 1.2742982659838162
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_14_stale_frozen_review_stops_without_new_decision",
+      "passed": true,
+      "seconds": 0.73106896399986
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_15_wrong_receipt_and_query_failure_keep_original_pending",
+      "passed": true,
+      "seconds": 0.6007196360151283
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_16_capabilities_and_bad_draft_fail_before_world_actions",
+      "passed": true,
+      "seconds": 0.445401014003437
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_17_populated_r5_stays_unchanged_with_original_overwrite_rules",
+      "passed": true,
+      "seconds": 0.9050115910358727
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_18_history_limits_preserve_complete_database",
+      "passed": true,
+      "seconds": 6.133048338000663
+    },
+    {
+      "test": "__main__.ConsentAcceptance.test_19_world_stale_retries_only_settled_attempt_with_same_frozen_decision",
+      "passed": true,
+      "seconds": 0.5066716530127451
+    }
+  ],
+  "dataRoot": ".local/iter0007/api/20261025T232955-c925b9",
+  "failures": []
+}

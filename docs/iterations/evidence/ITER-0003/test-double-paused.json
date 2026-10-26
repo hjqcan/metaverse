@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "kind": "resident-mission-report",
+  "mission": {
+    "id": "mission-test",
+    "objective": "优先连通彼岸供他人使用，完成后回到原始起点。",
+    "actorId": "a1",
+    "worldId": "foundation-01",
+    "rulesVersion": "r2",
+    "origin": [
+      1,
+      1
+    ],
+    "goal": {
+      "id": "far-bank",
+      "label": "彼岸",
+      "target": [
+        6,
+        1
+      ]
+    },
+    "status": "paused",
+    "reason": "max_steps"
+  },
+  "decision": {
+    "goalId": "far-bank",
+    "reason": "测试替身选择，不能计为模型推理。",
+    "provider": {
+      "kind": "test-double",
+      "model": "none",
+      "usage": {}
+    }
+  },
+  "budget": {
+    "limits": {
+      "commands": 50,
+      "wood": 6,
+      "seconds": 600,
+      "modelCalls": 1
+    },
+    "used": {
+      "commands": 4,
+      "wood": 0,
+      "modelCalls": 1,
+      "seconds": 0.03583979606628418
+    }
+  },
+  "facts": {
+    "goalReached": false,
+    "returned": false,
+    "startStateVersion": 0,
+    "endStateVersion": 4,
+    "woodClaimed": 6,
+    "createdEntityIds": [],
+    "verifiedAtUtc": "2026-10-25T10:36:00.165321+00:00"
+  },
+  "steps": [
+    {
+      "index": 1,
+      "commandId": "ed5a9a02afd7402ea6e87d2ca7271c2a",
+      "action": {
+        "type": "claim",
+        "quantity": 6
+      },
+      "reason": "为剩余桥梁补足材料",
+      "status": "committed",
+      "stateVersion": 1,
+      "position": [
+        1,
+        1
+      ],
+      "inventoryWood": 6,
+      "httpStatus": 200
+    },
+    {
+      "index": 2,
+      "commandId": "c5d01b9dd6e64d799ad8f104386c0abb",
+      "action": {
+        "type": "move",
+        "dx": 1,
+        "dy": 0
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 2,
+      "position": [
+        2,
+        1
+      ],
+      "inventoryWood": 6,
+      "httpStatus": 200
+    },
+    {
+      "index": 3,
+      "commandId": "1bbdaab1bf64410db75a2ec1ed1109f4",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 3,
+      "position": [
+        2,
+        2
+      ],
+      "inventoryWood": 6,
+      "httpStatus": 200
+    },
+    {
+      "index": 4,
+      "commandId": "6468f3b4d9424661a6e8c7a79e65cadb",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 4,
+      "position": [
+        2,
+        3
+      ],
+      "inventoryWood": 6,
+      "httpStatus": 200
+    }
+  ],
+  "feedback": {
+    "summary": "max_steps",
+    "issues": [],
+    "suggestions": []
+  },
+  "world": {
+    "id": "foundation-01",
+    "width": 8,
+    "height": 8,
+    "blocked": [
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "water": [
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "goal": [
+      6,
+      1
+    ],
+    "entities": []
+  }
+}

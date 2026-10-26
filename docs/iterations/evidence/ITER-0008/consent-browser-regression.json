@@ -1,0 +1,67 @@
+{
+  "suite": "mosaic-consent-real-chrome-v1",
+  "recordedAtUtc": "2026-10-25T15:31:02.661Z",
+  "browser": "152.0.7977.82",
+  "passed": true,
+  "tests": [
+    {
+      "name": "original_author_creates_picture_through_shared_interface",
+      "passed": true,
+      "milliseconds": 1295
+    },
+    {
+      "name": "peer_proposal_draft_survives_poll_reload_and_cannot_paint_directly",
+      "passed": true,
+      "milliseconds": 2810
+    },
+    {
+      "name": "target_accepts_after_own_visit_and_both_contributions_are_attributed",
+      "passed": true,
+      "milliseconds": 423
+    },
+    {
+      "name": "reject_keeps_picture_and_renders_proposal_text_literally",
+      "passed": true,
+      "milliseconds": 1617
+    },
+    {
+      "name": "mixed_draft_is_split_and_stale_proposal_cannot_overwrite_new_picture",
+      "passed": true,
+      "milliseconds": 3397
+    },
+    {
+      "name": "lost_accept_response_reload_recovers_original_review_once",
+      "passed": true,
+      "milliseconds": 1894
+    },
+    {
+      "name": "restart_preserves_proposals_reviews_and_picture",
+      "passed": true,
+      "milliseconds": 304
+    },
+    {
+      "name": "mobile_world_negotiation_layout_390px",
+      "passed": true,
+      "milliseconds": 363
+    },
+    {
+      "name": "actual_reports_separate_proposed_reviewed_and_painted_facts",
+      "passed": true,
+      "milliseconds": 290
+    },
+    {
+      "name": "forged_review_rejected_report_and_legacy_report_remain_distinct",
+      "passed": true,
+      "milliseconds": 26
+    },
+    {
+      "name": "mobile_actual_review_report_layout_390px",
+      "passed": true,
+      "milliseconds": 213
+    }
+  ],
+  "javascriptErrors": [],
+  "reportWorldRequests": [],
+  "actualModelCallsDuringUiTest": 0,
+  "dataRoot": ".local/iter0007/browser/2026-10-25T15-30-49-574Z"
+}

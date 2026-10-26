@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "panorama",
+      "expectedGoalId": "lookout",
+      "spec": {
+        "missionId": "panorama",
+        "objective": "我想去彼岸观景台看两岸全景，愿意用最多6木材建桥，体验后返回。",
+        "goals": [
+          {
+            "id": "garden",
+            "label": "静谧花园",
+            "target": [
+              1,
+              6
+            ],
+            "activityId": "garden"
+          },
+          {
+            "id": "riverwalk",
+            "label": "河岸步道",
+            "target": [
+              2,
+              5
+            ],
+            "activityId": "riverwalk"
+          },
+          {
+            "id": "lookout",
+            "label": "彼岸观景台",
+            "target": [
+              6,
+              1
+            ],
+            "activityId": "lookout"
+          }
+        ],
+        "allowBuild": true,
+        "budgets": {
+          "commands": 30,
+          "wood": 6,
+          "seconds": 600,
+          "modelCalls": 1
+        }
+      }
+    },
+    {
+      "id": "quiet",
+      "expectedGoalId": "garden",
+      "spec": {
+        "missionId": "quiet",
+        "objective": "我只想在静谧花园短途安静散步，体验后返回，不领取也不建造。",
+        "goals": [
+          {
+            "id": "garden",
+            "label": "静谧花园",
+            "target": [
+              1,
+              6
+            ],
+            "activityId": "garden"
+          },
+          {
+            "id": "riverwalk",
+            "label": "河岸步道",
+            "target": [
+              2,
+              5
+            ],
+            "activityId": "riverwalk"
+          },
+          {
+            "id": "lookout",
+            "label": "彼岸观景台",
+            "target": [
+              6,
+              1
+            ],
+            "activityId": "lookout"
+          }
+        ],
+        "allowBuild": false,
+        "budgets": {
+          "commands": 12,
+          "wood": 0,
+          "seconds": 600,
+          "modelCalls": 1
+        }
+      }
+    },
+    {
+      "id": "constrained",
+      "expectedGoalId": "garden",
+      "spec": {
+        "missionId": "constrained",
+        "objective": "我优先想看彼岸全景，但不能花木材且最多12条命令；如果不可行，改去静谧花园放松后返回。",
+        "goals": [
+          {
+            "id": "garden",
+            "label": "静谧花园",
+            "target": [
+              1,
+              6
+            ],
+            "activityId": "garden"
+          },
+          {
+            "id": "riverwalk",
+            "label": "河岸步道",
+            "target": [
+              2,
+              5
+            ],
+            "activityId": "riverwalk"
+          },
+          {
+            "id": "lookout",
+            "label": "彼岸观景台",
+            "target": [
+              6,
+              1
+            ],
+            "activityId": "lookout"
+          }
+        ],
+        "allowBuild": false,
+        "budgets": {
+          "commands": 12,
+          "wood": 0,
+          "seconds": 600,
+          "modelCalls": 1
+        }
+      }
+    },
+    {
+      "id": "riverside",
+      "expectedGoalId": "riverwalk",
+      "spec": {
+        "missionId": "riverside",
+        "objective": "我想沿本岸河岸步道看水散步，体验后返回，不去花园也不建造。",
+        "goals": [
+          {
+            "id": "garden",
+            "label": "静谧花园",
+            "target": [
+              1,
+              6
+            ],
+            "activityId": "garden"
+          },
+          {
+            "id": "riverwalk",
+            "label": "河岸步道",
+            "target": [
+              2,
+              5
+            ],
+            "activityId": "riverwalk"
+          },
+          {
+            "id": "lookout",
+            "label": "彼岸观景台",
+            "target": [
+              6,
+              1
+            ],
+            "activityId": "lookout"
+          }
+        ],
+        "allowBuild": false,
+        "budgets": {
+          "commands": 12,
+          "wood": 0,
+          "seconds": 600,
+          "modelCalls": 1
+        }
+      }
+    }
+  ]
+}

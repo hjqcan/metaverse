@@ -1,0 +1,125 @@
+{
+  "recordedAtUtc": "2026-10-25T15:05:02.774455+00:00",
+  "previews": [
+    {
+      "url": "http://127.0.0.1:5080",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r1",
+      "stateVersion": 7,
+      "entities": 0,
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      },
+      "mosaicRevision": null,
+      "mosaicProposals": 0
+    },
+    {
+      "url": "http://127.0.0.1:5081",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r2",
+      "stateVersion": 19,
+      "entities": 2,
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 6,
+        "inventoryWood": 0,
+        "embodiedWood": 6,
+        "conserved": true
+      },
+      "mosaicRevision": null,
+      "mosaicProposals": 0
+    },
+    {
+      "url": "http://127.0.0.1:5082",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r3",
+      "stateVersion": 0,
+      "entities": 0,
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      },
+      "mosaicRevision": null,
+      "mosaicProposals": 0
+    },
+    {
+      "url": "http://127.0.0.1:5083",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r4",
+      "stateVersion": 0,
+      "entities": 0,
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      },
+      "mosaicRevision": null,
+      "mosaicProposals": 0
+    },
+    {
+      "url": "http://127.0.0.1:5084",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r5",
+      "stateVersion": 0,
+      "entities": 0,
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      },
+      "mosaicRevision": 0,
+      "mosaicProposals": 0
+    },
+    {
+      "url": "http://127.0.0.1:5085",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r6",
+      "stateVersion": 0,
+      "entities": 0,
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      },
+      "mosaicRevision": 0,
+      "mosaicProposals": 0
+    }
+  ]
+}

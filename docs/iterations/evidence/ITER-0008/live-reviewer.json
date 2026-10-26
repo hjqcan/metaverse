@@ -1,0 +1,2780 @@
+{
+  "schemaVersion": 1,
+  "kind": "resident-mission-report",
+  "mission": {
+    "id": "inbox-reviewer",
+    "objective": "去静谧花园，审阅指定提议。若它只将原蓝色河流的一个端点改为日黄且其他格不变，可以同意；否则拒绝并说明理由。独立决定，不自动迎合对方，之后返回。",
+    "sharePostcard": false,
+    "paintMosaic": false,
+    "proposeMosaic": false,
+    "reviewMosaicProposal": {
+      "proposalActorId": "a2",
+      "proposalCommandId": "3651130f072c4de5abea39845e36ec81"
+    },
+    "actorId": "a1",
+    "worldId": "foundation-01",
+    "rulesVersion": "r6",
+    "origin": [
+      1,
+      1
+    ],
+    "goal": {
+      "id": "garden",
+      "label": "静谧花园",
+      "target": [
+        1,
+        6
+      ],
+      "activityId": "garden"
+    },
+    "status": "completed",
+    "reason": "round_trip_verified"
+  },
+  "decision": {
+    "goalId": "garden",
+    "reason": "静谧花园是指定审阅地点，预计12条命令且无需木材，符合预算。",
+    "provider": {
+      "kind": "codex-exec",
+      "model": "gpt-6-astra",
+      "usage": {
+        "inputTokens": 13269,
+        "cachedInputTokens": 0,
+        "outputTokens": 94
+      }
+    },
+    "reviewDecision": "accept",
+    "reviewText": "原提议仅将蓝色河流左端点（1,2）改为日黄，其余格子不变，且当前revision与baseRevision均为1，符合接受条件。",
+    "mosaicProposal": {
+      "activityId": "garden",
+      "authorActorId": "a2",
+      "targetActorId": "a1",
+      "commandId": "3651130f072c4de5abea39845e36ec81",
+      "visitCommandId": "9f3f45454b8d41d88a0bbec9a8636074",
+      "baseRevision": 1,
+      "patch": [
+        {
+          "x": 1,
+          "y": 2,
+          "color": "sun"
+        }
+      ],
+      "text": "向原画者a1提议：请仅将蓝色河流左端点（1,2）改为日黄，作为阳光标记，为花园增添暖意，其余格子保持不变。这只是修改提议，等待您审阅并自行决定是否改图。",
+      "stateVersion": 18,
+      "proposedAtUtc": "2026-10-25T15:30:05.6973636+00:00",
+      "position": [
+        1,
+        6
+      ],
+      "review": null
+    },
+    "mosaicPatch": [
+      {
+        "x": 1,
+        "y": 2,
+        "color": "sun"
+      }
+    ],
+    "mosaicBaseRevision": 1
+  },
+  "budget": {
+    "limits": {
+      "commands": 14,
+      "wood": 0,
+      "seconds": 600,
+      "modelCalls": 1
+    },
+    "used": {
+      "commands": 12,
+      "wood": 0,
+      "modelCalls": 1,
+      "seconds": 9.88828730583191
+    }
+  },
+  "facts": {
+    "goalReached": true,
+    "returned": true,
+    "activityCompleted": true,
+    "activityVisit": {
+      "activityId": "garden",
+      "commandId": "c5e03e38f6c34d0c9e103b8d0b71c338",
+      "stateVersion": 250,
+      "visitedAtUtc": "2026-10-25T15:30:17.9569869+00:00",
+      "position": [
+        1,
+        6
+      ]
+    },
+    "postcardShared": false,
+    "postcard": null,
+    "mosaicPainted": true,
+    "mosaicEdit": {
+      "activityId": "garden",
+      "authorActorId": "a1",
+      "commandId": "aada3eb33a524076b28d37174a6d27a7",
+      "visitCommandId": "c5e03e38f6c34d0c9e103b8d0b71c338",
+      "baseRevision": 1,
+      "revision": 2,
+      "patch": [
+        {
+          "x": 1,
+          "y": 2,
+          "color": "sun"
+        }
+      ],
+      "stateVersion": 251,
+      "paintedAtUtc": "2026-10-25T15:30:17.9696673+00:00",
+      "position": [
+        1,
+        6
+      ]
+    },
+    "mosaicProposed": false,
+    "mosaicProposal": null,
+    "mosaicReviewed": true,
+    "mosaicReview": {
+      "activityId": "garden",
+      "authorActorId": "a1",
+      "commandId": "aada3eb33a524076b28d37174a6d27a7",
+      "visitCommandId": "c5e03e38f6c34d0c9e103b8d0b71c338",
+      "proposalActorId": "a2",
+      "proposalCommandId": "3651130f072c4de5abea39845e36ec81",
+      "decision": "accept",
+      "text": "原提议仅将蓝色河流左端点（1,2）改为日黄，其余格子不变，且当前revision与baseRevision均为1，符合接受条件。",
+      "stateVersion": 251,
+      "reviewedAtUtc": "2026-10-25T15:30:17.9696673+00:00",
+      "position": [
+        1,
+        6
+      ],
+      "mosaicEdit": {
+        "activityId": "garden",
+        "authorActorId": "a1",
+        "commandId": "aada3eb33a524076b28d37174a6d27a7",
+        "visitCommandId": "c5e03e38f6c34d0c9e103b8d0b71c338",
+        "baseRevision": 1,
+        "revision": 2,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "stateVersion": 251,
+        "paintedAtUtc": "2026-10-25T15:30:17.9696673+00:00",
+        "position": [
+          1,
+          6
+        ]
+      }
+    },
+    "startStateVersion": 244,
+    "endStateVersion": 256,
+    "woodClaimed": 0,
+    "createdEntityIds": [],
+    "verifiedAtUtc": "2026-10-25T15:30:18.043207+00:00"
+  },
+  "steps": [
+    {
+      "index": 1,
+      "commandId": "3334a40999124466b34b8b08a81e3aae",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 245,
+      "position": [
+        1,
+        2
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 2,
+      "commandId": "3e7b84c3ab3a410ab273e4ff1e75e0b1",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 246,
+      "position": [
+        1,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 3,
+      "commandId": "8479e127ef7044d29517188bf5107026",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 247,
+      "position": [
+        1,
+        4
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 4,
+      "commandId": "13e7181416bf4fef879a7ef5a1446901",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 248,
+      "position": [
+        1,
+        5
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 5,
+      "commandId": "f33bb230dce549fda594921339c496d6",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 249,
+      "position": [
+        1,
+        6
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 6,
+      "commandId": "c5e03e38f6c34d0c9e103b8d0b71c338",
+      "action": {
+        "type": "visit",
+        "activityId": "garden"
+      },
+      "reason": "在已选活动地点确认到访",
+      "status": "committed",
+      "stateVersion": 250,
+      "position": [
+        1,
+        6
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 7,
+      "commandId": "aada3eb33a524076b28d37174a6d27a7",
+      "action": {
+        "type": "mosaic_review",
+        "activityId": "garden",
+        "visitCommandId": "c5e03e38f6c34d0c9e103b8d0b71c338",
+        "proposalActorId": "a2",
+        "proposalCommandId": "3651130f072c4de5abea39845e36ec81",
+        "decision": "accept",
+        "text": "原提议仅将蓝色河流左端点（1,2）改为日黄，其余格子不变，且当前revision与baseRevision均为1，符合接受条件。"
+      },
+      "reason": "在已确认到访的花园提交原提议的审阅决定",
+      "status": "committed",
+      "stateVersion": 251,
+      "position": [
+        1,
+        6
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 8,
+      "commandId": "5140927324e34921bb2ce5937949d381",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 252,
+      "position": [
+        1,
+        5
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 9,
+      "commandId": "d6b2cf653caf4ab6b69b92336f625a01",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 253,
+      "position": [
+        1,
+        4
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 10,
+      "commandId": "fada03369ca349bfa1a4f95e6830e699",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 254,
+      "position": [
+        1,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 11,
+      "commandId": "d2f6cde8aaa144c4ba4ce7a3961f7d76",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 255,
+      "position": [
+        1,
+        2
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 12,
+      "commandId": "290b749e365a4324aeff5f2a7cac554c",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 256,
+      "position": [
+        1,
+        1
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    }
+  ],
+  "feedback": {
+    "summary": "已核验活动到访、接受提议、实际改图与返回",
+    "issues": [],
+    "suggestions": []
+  },
+  "world": {
+    "id": "foundation-01",
+    "width": 8,
+    "height": 8,
+    "blocked": [
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "water": [
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "goal": [
+      6,
+      1
+    ],
+    "entities": [],
+    "activities": [
+      {
+        "id": "garden",
+        "label": "静谧花园",
+        "position": [
+          1,
+          6
+        ],
+        "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+      },
+      {
+        "id": "riverwalk",
+        "label": "河岸步道",
+        "position": [
+          2,
+          5
+        ],
+        "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+      },
+      {
+        "id": "lookout",
+        "label": "彼岸观景台",
+        "position": [
+          6,
+          1
+        ],
+        "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+      }
+    ],
+    "mosaic": {
+      "activityId": "garden",
+      "width": 5,
+      "height": 5,
+      "revision": 2,
+      "palette": [
+        {
+          "id": "blank",
+          "label": "空白",
+          "hex": "#F4F0E6"
+        },
+        {
+          "id": "leaf",
+          "label": "叶绿",
+          "hex": "#42745B"
+        },
+        {
+          "id": "river",
+          "label": "河蓝",
+          "hex": "#477FA3"
+        },
+        {
+          "id": "sun",
+          "label": "日黄",
+          "hex": "#E4B858"
+        },
+        {
+          "id": "rose",
+          "label": "花红",
+          "hex": "#C86A70"
+        },
+        {
+          "id": "ink",
+          "label": "墨色",
+          "hex": "#37444D"
+        }
+      ],
+      "cells": [
+        {
+          "x": 0,
+          "y": 0,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "color": "sun",
+          "authorActorId": "a1",
+          "commandId": "aada3eb33a524076b28d37174a6d27a7",
+          "stateVersion": 251
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "color": "river",
+          "authorActorId": "a1",
+          "commandId": "913d82e328af4412bf98a4383173a6c5",
+          "stateVersion": 7
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "color": "river",
+          "authorActorId": "a1",
+          "commandId": "913d82e328af4412bf98a4383173a6c5",
+          "stateVersion": 7
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "color": "blank",
+          "authorActorId": null,
+          "commandId": null,
+          "stateVersion": null
+        }
+      ]
+    },
+    "mosaicProposals": [
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "7c7e779650c540be927df74c35592e8c",
+        "visitCommandId": "071b801f242a4b949c302954b611b4e9",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 2，用于检验旧待办持续可见。",
+        "stateVersion": 37,
+        "proposedAtUtc": "2026-10-25T15:30:05.8945625+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "07e7b198aeaa4c769ae3278f58acfa93",
+          "visitCommandId": "964da289729c4b6086f2c1f983d4942e",
+          "proposalActorId": "a2",
+          "proposalCommandId": "7c7e779650c540be927df74c35592e8c",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 39,
+          "reviewedAtUtc": "2026-10-25T15:30:05.9081298+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "5d4fef5e4b4d41ca810cd58f0d4609aa",
+        "visitCommandId": "d15e2bfedf6c4838a738a2774bddfb67",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 3，用于检验旧待办持续可见。",
+        "stateVersion": 41,
+        "proposedAtUtc": "2026-10-25T15:30:05.9223783+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "54c53a4845ca42d69f7ab91a1d731bcb",
+          "visitCommandId": "49fb499054544a8e9cca4e146d205638",
+          "proposalActorId": "a2",
+          "proposalCommandId": "5d4fef5e4b4d41ca810cd58f0d4609aa",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 43,
+          "reviewedAtUtc": "2026-10-25T15:30:05.9345762+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "b30ba43f41f8405f8084bb5f19bcc54c",
+        "visitCommandId": "ed9f093d57c64ab99bf340b1415bf961",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 4，用于检验旧待办持续可见。",
+        "stateVersion": 45,
+        "proposedAtUtc": "2026-10-25T15:30:05.9476395+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "92c4eae0262b4dcd959b8cbaf37880d7",
+          "visitCommandId": "8fd7df1ad5504b6984330396aa2c9944",
+          "proposalActorId": "a2",
+          "proposalCommandId": "b30ba43f41f8405f8084bb5f19bcc54c",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 47,
+          "reviewedAtUtc": "2026-10-25T15:30:05.9614143+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "619f9f702121487fb8640ba0425cdc86",
+        "visitCommandId": "660d98a31dbf495e82fd1fc3455730bb",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 5，用于检验旧待办持续可见。",
+        "stateVersion": 49,
+        "proposedAtUtc": "2026-10-25T15:30:05.9804418+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "6ba34de4849f45668e708586489cf667",
+          "visitCommandId": "443740bf21e945d29ec7e03de71f1f0f",
+          "proposalActorId": "a2",
+          "proposalCommandId": "619f9f702121487fb8640ba0425cdc86",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 51,
+          "reviewedAtUtc": "2026-10-25T15:30:05.9974033+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "6b6b166697d140118f9bbfd3c59b3ff8",
+        "visitCommandId": "fecc4938732e42f9ab0914072060c69d",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 6，用于检验旧待办持续可见。",
+        "stateVersion": 53,
+        "proposedAtUtc": "2026-10-25T15:30:06.0176409+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "de45346de4df4062ab3a58ba11e77a8c",
+          "visitCommandId": "152ae252a7df48cab249a5c3ab1c34e8",
+          "proposalActorId": "a2",
+          "proposalCommandId": "6b6b166697d140118f9bbfd3c59b3ff8",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 55,
+          "reviewedAtUtc": "2026-10-25T15:30:06.0360162+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "2ac62e1209c7469a80228ec5a6f151ab",
+        "visitCommandId": "4ef1199795db416e8c0d236cf922a739",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 7，用于检验旧待办持续可见。",
+        "stateVersion": 57,
+        "proposedAtUtc": "2026-10-25T15:30:06.0647327+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "10fa32c884914dfcb0578532f4e8161c",
+          "visitCommandId": "dfd9408669694348ba66df0405e3722d",
+          "proposalActorId": "a2",
+          "proposalCommandId": "2ac62e1209c7469a80228ec5a6f151ab",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 59,
+          "reviewedAtUtc": "2026-10-25T15:30:06.0845225+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "ca332d3506ca4c05acdb13471795bbcf",
+        "visitCommandId": "19e3fa5c14b14bf98703129b33d8ea10",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 8，用于检验旧待办持续可见。",
+        "stateVersion": 61,
+        "proposedAtUtc": "2026-10-25T15:30:06.1058147+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "b51814cb3d394144921ca1c536a07063",
+          "visitCommandId": "40f2f8270bf94e5caaa8e248cbb72a68",
+          "proposalActorId": "a2",
+          "proposalCommandId": "ca332d3506ca4c05acdb13471795bbcf",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 63,
+          "reviewedAtUtc": "2026-10-25T15:30:06.1263521+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "189dcf1d7ee14a6caf9891c17d21c750",
+        "visitCommandId": "df8a4b457bdf400da63327d0d4995893",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 9，用于检验旧待办持续可见。",
+        "stateVersion": 65,
+        "proposedAtUtc": "2026-10-25T15:30:06.1468649+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "b499a9afc5864760bb193dda5c5ab5e7",
+          "visitCommandId": "902a9e1158c04b2dafea86beed288dfd",
+          "proposalActorId": "a2",
+          "proposalCommandId": "189dcf1d7ee14a6caf9891c17d21c750",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 67,
+          "reviewedAtUtc": "2026-10-25T15:30:06.1723484+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "90cddad6e1744cbd9eaf70160c1ee26e",
+        "visitCommandId": "43d1d355d73f4311966cf28f27e19e79",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 10，用于检验旧待办持续可见。",
+        "stateVersion": 69,
+        "proposedAtUtc": "2026-10-25T15:30:06.1960349+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "07ab094a90a34027b232cf9f823d190c",
+          "visitCommandId": "d1b0f517ff1e4e0ab9df466774f8ea44",
+          "proposalActorId": "a2",
+          "proposalCommandId": "90cddad6e1744cbd9eaf70160c1ee26e",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 71,
+          "reviewedAtUtc": "2026-10-25T15:30:06.2184593+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "b79839421ba64950bf6d0df98cc65fe4",
+        "visitCommandId": "29c1072fd4394cdfa02613ed6c6820bc",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 11，用于检验旧待办持续可见。",
+        "stateVersion": 73,
+        "proposedAtUtc": "2026-10-25T15:30:06.2451492+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "5a797dc2f34a4b2886e917c80bdda1fc",
+          "visitCommandId": "1eda18ea562148158eb6e5537aee44d4",
+          "proposalActorId": "a2",
+          "proposalCommandId": "b79839421ba64950bf6d0df98cc65fe4",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 75,
+          "reviewedAtUtc": "2026-10-25T15:30:06.2697723+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "bfb07ed282814ebf96bcb2349c925e58",
+        "visitCommandId": "821887e0036c4bdb91e2b24307f7e8b0",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 12，用于检验旧待办持续可见。",
+        "stateVersion": 77,
+        "proposedAtUtc": "2026-10-25T15:30:06.2968181+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "572d470819f94220af30205b1c84f10d",
+          "visitCommandId": "01df59803ccb42deb8cbc80a41763448",
+          "proposalActorId": "a2",
+          "proposalCommandId": "bfb07ed282814ebf96bcb2349c925e58",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 79,
+          "reviewedAtUtc": "2026-10-25T15:30:06.3235163+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "b7e9ad6fe8364b1d86e90d9dc70b0b58",
+        "visitCommandId": "d6d8500fe4f8442ca3743a2bf9b83906",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 13，用于检验旧待办持续可见。",
+        "stateVersion": 81,
+        "proposedAtUtc": "2026-10-25T15:30:06.3453160+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "47247be61e6548a2be26f66e55cef653",
+          "visitCommandId": "6bf144a648dc4957a2a091ace5ec85d0",
+          "proposalActorId": "a2",
+          "proposalCommandId": "b7e9ad6fe8364b1d86e90d9dc70b0b58",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 83,
+          "reviewedAtUtc": "2026-10-25T15:30:06.3634341+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "887827c5776146a38b0b75dfd5e566fa",
+        "visitCommandId": "41b3c37b09f746e79c4435e79237ae18",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 14，用于检验旧待办持续可见。",
+        "stateVersion": 85,
+        "proposedAtUtc": "2026-10-25T15:30:06.3898521+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "b90488cff7944a91857d82e8f35c3d2a",
+          "visitCommandId": "54f459dfcbde4907a09f499cf0dae850",
+          "proposalActorId": "a2",
+          "proposalCommandId": "887827c5776146a38b0b75dfd5e566fa",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 87,
+          "reviewedAtUtc": "2026-10-25T15:30:06.4103022+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "2b1ae73cff5c481da72bc0546d1f129d",
+        "visitCommandId": "a6a212eac36a42e6a9f02daa16ba1ebc",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 15，用于检验旧待办持续可见。",
+        "stateVersion": 89,
+        "proposedAtUtc": "2026-10-25T15:30:06.4350053+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "a813540553d4489a85f0e747363d74fd",
+          "visitCommandId": "ba5597fbf7514bbc9e26349af7186951",
+          "proposalActorId": "a2",
+          "proposalCommandId": "2b1ae73cff5c481da72bc0546d1f129d",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 91,
+          "reviewedAtUtc": "2026-10-25T15:30:06.4595027+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "3e3db45693e44cad8cc0c7e9c4c7e2d7",
+        "visitCommandId": "871cafc09548426f99ba68bd42ce1a02",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 16，用于检验旧待办持续可见。",
+        "stateVersion": 93,
+        "proposedAtUtc": "2026-10-25T15:30:06.4891890+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "43ebcba0306b47df90e5a3675831b0e3",
+          "visitCommandId": "31d56e98e3154f79ab2f22c07c76120f",
+          "proposalActorId": "a2",
+          "proposalCommandId": "3e3db45693e44cad8cc0c7e9c4c7e2d7",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 95,
+          "reviewedAtUtc": "2026-10-25T15:30:06.5139932+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "14334108df1f4d55b10ad225e733b02c",
+        "visitCommandId": "707aa0a7611f49bca18ea6b141349f3b",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 17，用于检验旧待办持续可见。",
+        "stateVersion": 97,
+        "proposedAtUtc": "2026-10-25T15:30:06.5445100+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "c859d1f379be40e09415252496a48861",
+          "visitCommandId": "ee34b063d992443dad53155250b58f70",
+          "proposalActorId": "a2",
+          "proposalCommandId": "14334108df1f4d55b10ad225e733b02c",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 99,
+          "reviewedAtUtc": "2026-10-25T15:30:06.5689659+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "3e7bd2a8858343cfa9ef1f46ae7aa342",
+        "visitCommandId": "f6402a167c704af785c211685830465b",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 18，用于检验旧待办持续可见。",
+        "stateVersion": 101,
+        "proposedAtUtc": "2026-10-25T15:30:06.5942496+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "5ff63fce34224bcda76d2e43686bc705",
+          "visitCommandId": "0910844876b8402bbe9465aab8f17433",
+          "proposalActorId": "a2",
+          "proposalCommandId": "3e7bd2a8858343cfa9ef1f46ae7aa342",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 103,
+          "reviewedAtUtc": "2026-10-25T15:30:06.6168161+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "f3a3aebcbd6240d7b80f39dd8b359de8",
+        "visitCommandId": "746c64bd79674233b04e3778c0555015",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 19，用于检验旧待办持续可见。",
+        "stateVersion": 105,
+        "proposedAtUtc": "2026-10-25T15:30:06.6454538+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "106fc6f59d1148b0a44a7e602a5cfd8a",
+          "visitCommandId": "e4a9894aad4d474990e8c0b874649361",
+          "proposalActorId": "a2",
+          "proposalCommandId": "f3a3aebcbd6240d7b80f39dd8b359de8",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 107,
+          "reviewedAtUtc": "2026-10-25T15:30:06.6642633+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "445c2d9620904998ac1728b917080c88",
+        "visitCommandId": "41ba7bef978b47db901f6c9ad7e9eb86",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 20，用于检验旧待办持续可见。",
+        "stateVersion": 109,
+        "proposedAtUtc": "2026-10-25T15:30:06.6874096+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "34210cd358eb4329859a23a5d15963e2",
+          "visitCommandId": "7addafd1ad154c11bd84ab0a2e257483",
+          "proposalActorId": "a2",
+          "proposalCommandId": "445c2d9620904998ac1728b917080c88",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 111,
+          "reviewedAtUtc": "2026-10-25T15:30:06.7015758+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "a1682b56bfd74c139963358d3a772855",
+        "visitCommandId": "254749fb800546c8b1bec88e5bf1d723",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 21，用于检验旧待办持续可见。",
+        "stateVersion": 113,
+        "proposedAtUtc": "2026-10-25T15:30:06.7185650+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "a4fe0f154b68422882b541f306d6f6ba",
+          "visitCommandId": "9ba04c2418504b24becc9b5ce9384bc3",
+          "proposalActorId": "a2",
+          "proposalCommandId": "a1682b56bfd74c139963358d3a772855",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 115,
+          "reviewedAtUtc": "2026-10-25T15:30:06.7382107+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "6ebb3ef3ba404ff4828ece1e36984035",
+        "visitCommandId": "6fd680858b4c43a6980429fb37c26429",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 22，用于检验旧待办持续可见。",
+        "stateVersion": 117,
+        "proposedAtUtc": "2026-10-25T15:30:06.7642191+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "3fd937f915e64c1fb75a65c9807c1cb0",
+          "visitCommandId": "36cd6df787e5439095314f194d180a7e",
+          "proposalActorId": "a2",
+          "proposalCommandId": "6ebb3ef3ba404ff4828ece1e36984035",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 119,
+          "reviewedAtUtc": "2026-10-25T15:30:06.7837412+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "e67313bd16bd4ff297252a72633c4bf4",
+        "visitCommandId": "4d01897cef0f4d3394d4a5c8c9fb1331",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 23，用于检验旧待办持续可见。",
+        "stateVersion": 121,
+        "proposedAtUtc": "2026-10-25T15:30:06.8083598+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "0e3c5fd80e8141b48014adcc19e10c43",
+          "visitCommandId": "c90039b4515441c6b386c9f96404de73",
+          "proposalActorId": "a2",
+          "proposalCommandId": "e67313bd16bd4ff297252a72633c4bf4",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 123,
+          "reviewedAtUtc": "2026-10-25T15:30:06.8287532+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "87dbf8e1a9af477097f95a98d866d32f",
+        "visitCommandId": "ee66d1c600d147b5a3d2c6840d469bd1",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 24，用于检验旧待办持续可见。",
+        "stateVersion": 125,
+        "proposedAtUtc": "2026-10-25T15:30:06.8510095+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "1a97f16afcda478d873a95b4b5b000de",
+          "visitCommandId": "f6f3ef54c23a4fb5be9faae97e211e60",
+          "proposalActorId": "a2",
+          "proposalCommandId": "87dbf8e1a9af477097f95a98d866d32f",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 127,
+          "reviewedAtUtc": "2026-10-25T15:30:06.8747118+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "e3d1ec18995e471da9a87b55ebf35035",
+        "visitCommandId": "f8a9e2d86cbc432aa8b106f9abb7ff11",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 25，用于检验旧待办持续可见。",
+        "stateVersion": 129,
+        "proposedAtUtc": "2026-10-25T15:30:06.8932747+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "4d35b595191a4af193e59340f3b57e7b",
+          "visitCommandId": "d5391077147641b7a8c02f1368aba0e7",
+          "proposalActorId": "a2",
+          "proposalCommandId": "e3d1ec18995e471da9a87b55ebf35035",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 131,
+          "reviewedAtUtc": "2026-10-25T15:30:06.9102794+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "3972527948b3428eaae2b37aac700a48",
+        "visitCommandId": "b484ccbf584244a5bacd0f330c86bb1d",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 26，用于检验旧待办持续可见。",
+        "stateVersion": 133,
+        "proposedAtUtc": "2026-10-25T15:30:06.9301208+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "6854e4b964ca4a9c8ddb54eca38d1f5b",
+          "visitCommandId": "fba38fdee3e74b678c77dc9a1e30df2d",
+          "proposalActorId": "a2",
+          "proposalCommandId": "3972527948b3428eaae2b37aac700a48",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 135,
+          "reviewedAtUtc": "2026-10-25T15:30:06.9509527+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "f8f82c4f5bb048fa95cb8d9126e7f33e",
+        "visitCommandId": "79cd0f12957d43698c0b6b8523adc413",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 27，用于检验旧待办持续可见。",
+        "stateVersion": 137,
+        "proposedAtUtc": "2026-10-25T15:30:06.9783390+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "8a349ccd03af4bb48e35be653d269c01",
+          "visitCommandId": "5bd3514739584bca9e31d47352d321a6",
+          "proposalActorId": "a2",
+          "proposalCommandId": "f8f82c4f5bb048fa95cb8d9126e7f33e",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 139,
+          "reviewedAtUtc": "2026-10-25T15:30:07.0046087+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "94137a54d06548fc9ef5a80bcb7fa077",
+        "visitCommandId": "f6e66c7b419e48b292bdbafe38c3c51c",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 28，用于检验旧待办持续可见。",
+        "stateVersion": 141,
+        "proposedAtUtc": "2026-10-25T15:30:07.0369437+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "6811259b616e4d8b899f4ea509750a94",
+          "visitCommandId": "2a208f0983dd4c05b788c3dc82f0305a",
+          "proposalActorId": "a2",
+          "proposalCommandId": "94137a54d06548fc9ef5a80bcb7fa077",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 143,
+          "reviewedAtUtc": "2026-10-25T15:30:07.0586758+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "f1cd676843864cc6b8cc6570ebba35b0",
+        "visitCommandId": "f61fc92770784bc893a25fb9d46ced3d",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 29，用于检验旧待办持续可见。",
+        "stateVersion": 145,
+        "proposedAtUtc": "2026-10-25T15:30:07.0843366+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "381ac0be1fb64c95ab3297fb74919cc0",
+          "visitCommandId": "ff098e72d5f54ae6ae005b497dd414ec",
+          "proposalActorId": "a2",
+          "proposalCommandId": "f1cd676843864cc6b8cc6570ebba35b0",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 147,
+          "reviewedAtUtc": "2026-10-25T15:30:07.1057518+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "207038183f8549488ebe0346942e8f05",
+        "visitCommandId": "a35317be35e74434ab5d308768f9d563",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 30，用于检验旧待办持续可见。",
+        "stateVersion": 149,
+        "proposedAtUtc": "2026-10-25T15:30:07.1316853+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "1d349e81ebfb4585b23a5e00d1dd19c2",
+          "visitCommandId": "2bce0b1a6a774f918239f6368e29c1af",
+          "proposalActorId": "a2",
+          "proposalCommandId": "207038183f8549488ebe0346942e8f05",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 151,
+          "reviewedAtUtc": "2026-10-25T15:30:07.1469864+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "6e85c2f860bd4d2c84104b43f993675f",
+        "visitCommandId": "de6cbf8f6d6241bdbdcb2fadb2a92177",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 31，用于检验旧待办持续可见。",
+        "stateVersion": 153,
+        "proposedAtUtc": "2026-10-25T15:30:07.1780822+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "633eb25c5c3f4decbeeb3baf0c544740",
+          "visitCommandId": "d443bef9c0704d578058e83999d9de89",
+          "proposalActorId": "a2",
+          "proposalCommandId": "6e85c2f860bd4d2c84104b43f993675f",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 155,
+          "reviewedAtUtc": "2026-10-25T15:30:07.2001409+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "5489be9d990c4fe48ac5b2bc800a7e65",
+        "visitCommandId": "7cfd51c5d50b4cbfb5ef08cf4299c1d1",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 32，用于检验旧待办持续可见。",
+        "stateVersion": 157,
+        "proposedAtUtc": "2026-10-25T15:30:07.2218570+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "9e219938bd4041f8bfa2a3d2f4bb7dfe",
+          "visitCommandId": "6961558a7b3f43b4898917816d86c4ec",
+          "proposalActorId": "a2",
+          "proposalCommandId": "5489be9d990c4fe48ac5b2bc800a7e65",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 159,
+          "reviewedAtUtc": "2026-10-25T15:30:07.2389589+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "e1d6f6613c594876b1b0e810b6eb2e58",
+        "visitCommandId": "1ba78b7509d348beba59743f5544f7f8",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 33，用于检验旧待办持续可见。",
+        "stateVersion": 161,
+        "proposedAtUtc": "2026-10-25T15:30:07.2583845+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "0aed080d41bb47be890e4251c4cf4074",
+          "visitCommandId": "192eb617d555449ba37457f628fb4d17",
+          "proposalActorId": "a2",
+          "proposalCommandId": "e1d6f6613c594876b1b0e810b6eb2e58",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 163,
+          "reviewedAtUtc": "2026-10-25T15:30:07.2750984+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "2f395dda2dd44e258c068d4a9f581a74",
+        "visitCommandId": "c3164dc190e949c68cae053e0bf58bd7",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 34，用于检验旧待办持续可见。",
+        "stateVersion": 165,
+        "proposedAtUtc": "2026-10-25T15:30:07.3056053+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "75dace1ad8154f84a895a02f8ae2ab77",
+          "visitCommandId": "7fadd1cd0bfd4578bf68ab438a3e80c4",
+          "proposalActorId": "a2",
+          "proposalCommandId": "2f395dda2dd44e258c068d4a9f581a74",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 167,
+          "reviewedAtUtc": "2026-10-25T15:30:07.3296766+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "dda1e4f16e9044e1a9d3dc7f352181ba",
+        "visitCommandId": "016dbdcd4cc54cf791e3926e700830b0",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 35，用于检验旧待办持续可见。",
+        "stateVersion": 169,
+        "proposedAtUtc": "2026-10-25T15:30:07.3486253+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "cfbdfa35f6b24656a213f64590975bfe",
+          "visitCommandId": "5487d6ca53b943dab5d88f2e1d1b0af3",
+          "proposalActorId": "a2",
+          "proposalCommandId": "dda1e4f16e9044e1a9d3dc7f352181ba",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 171,
+          "reviewedAtUtc": "2026-10-25T15:30:07.3714602+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "0061a955813145508bbc8d8abcdfccbb",
+        "visitCommandId": "692cbe53b4434b499c5199bc8280893c",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 36，用于检验旧待办持续可见。",
+        "stateVersion": 173,
+        "proposedAtUtc": "2026-10-25T15:30:07.3918003+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "e5e8a914ae194f34959f800ed61bdeb3",
+          "visitCommandId": "d40215a26b914d64834d17f38f544da7",
+          "proposalActorId": "a2",
+          "proposalCommandId": "0061a955813145508bbc8d8abcdfccbb",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 175,
+          "reviewedAtUtc": "2026-10-25T15:30:07.4075823+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "e568d17cd1db42be85692ea50984c644",
+        "visitCommandId": "509d6c1cfd394df7bcaed7589275d0f8",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 37，用于检验旧待办持续可见。",
+        "stateVersion": 177,
+        "proposedAtUtc": "2026-10-25T15:30:07.4359017+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "b78eb164bce347d0af69ecdd8eb6a22c",
+          "visitCommandId": "f3a3559f227748a682892addfc9aa599",
+          "proposalActorId": "a2",
+          "proposalCommandId": "e568d17cd1db42be85692ea50984c644",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 179,
+          "reviewedAtUtc": "2026-10-25T15:30:07.4554620+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "4c4fe1222f5c4da2ac79370aec8bdf85",
+        "visitCommandId": "3adbd850bb334a39b69a3bb7cfb63254",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 38，用于检验旧待办持续可见。",
+        "stateVersion": 181,
+        "proposedAtUtc": "2026-10-25T15:30:07.4749641+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "31a66a870da24bcbbcc4fc3fd1bb7d06",
+          "visitCommandId": "313a57551d644d56af5c333c8e6a4d41",
+          "proposalActorId": "a2",
+          "proposalCommandId": "4c4fe1222f5c4da2ac79370aec8bdf85",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 183,
+          "reviewedAtUtc": "2026-10-25T15:30:07.4909165+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "7836345b5bbc429d96ddec868ffb3495",
+        "visitCommandId": "be3d9d75072b42da873890f040ef90b4",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 39，用于检验旧待办持续可见。",
+        "stateVersion": 185,
+        "proposedAtUtc": "2026-10-25T15:30:07.5113943+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "96f17ca2d9d34f7b96bdf500a46882bc",
+          "visitCommandId": "1d27d959a8364af5b4e3dd957b544781",
+          "proposalActorId": "a2",
+          "proposalCommandId": "7836345b5bbc429d96ddec868ffb3495",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 187,
+          "reviewedAtUtc": "2026-10-25T15:30:07.5268791+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "48af362a09a34cba88b4e108e62f91c9",
+        "visitCommandId": "72eb3205e3a84b459be1ac8d3922d278",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 40，用于检验旧待办持续可见。",
+        "stateVersion": 189,
+        "proposedAtUtc": "2026-10-25T15:30:07.5503102+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "db5d6bb0a1704f54851d8f22d1bf540f",
+          "visitCommandId": "3f40ccd0a96b418bb6d1648fa197ef00",
+          "proposalActorId": "a2",
+          "proposalCommandId": "48af362a09a34cba88b4e108e62f91c9",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 191,
+          "reviewedAtUtc": "2026-10-25T15:30:07.5656185+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "21a85c0fe3b34fe9bbccbad057f0a530",
+        "visitCommandId": "b9ad9e8b92db4f46ac2e008ea6122c66",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 41，用于检验旧待办持续可见。",
+        "stateVersion": 193,
+        "proposedAtUtc": "2026-10-25T15:30:07.5853660+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "e89ebfb1ac934d8994dbe9a772051977",
+          "visitCommandId": "55c392458dcc435c8ebddeabd91d409b",
+          "proposalActorId": "a2",
+          "proposalCommandId": "21a85c0fe3b34fe9bbccbad057f0a530",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 195,
+          "reviewedAtUtc": "2026-10-25T15:30:07.6031376+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "14db1a54e0124d369243cdfaddc12d0a",
+        "visitCommandId": "f3fe10e248f64be5b36f13b4ad2d6852",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 42，用于检验旧待办持续可见。",
+        "stateVersion": 197,
+        "proposedAtUtc": "2026-10-25T15:30:07.6237665+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "e29ec728d46e42c3a8887212c01aa1ed",
+          "visitCommandId": "befcd294fdd74bb6a4a2363eb65bb1b4",
+          "proposalActorId": "a2",
+          "proposalCommandId": "14db1a54e0124d369243cdfaddc12d0a",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 199,
+          "reviewedAtUtc": "2026-10-25T15:30:07.6398157+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "7fc1caf6d6ae40d981c22c7d129740dc",
+        "visitCommandId": "9f6649f375c446339f6cfb07a936651d",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 43，用于检验旧待办持续可见。",
+        "stateVersion": 201,
+        "proposedAtUtc": "2026-10-25T15:30:07.6692614+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "27059c5fca7347ad9e8655f5b7d57029",
+          "visitCommandId": "ba10cf8bad7d4e68932361901912cbe3",
+          "proposalActorId": "a2",
+          "proposalCommandId": "7fc1caf6d6ae40d981c22c7d129740dc",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 203,
+          "reviewedAtUtc": "2026-10-25T15:30:07.6865594+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "f31ed838dfe4434a9898a319b208dd07",
+        "visitCommandId": "c4561494ea614e59a6810c789fa2fae6",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 44，用于检验旧待办持续可见。",
+        "stateVersion": 205,
+        "proposedAtUtc": "2026-10-25T15:30:07.7157009+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "4f43ea9716ad43d89bb7854a0ddf6862",
+          "visitCommandId": "0269d03665ef423389837285b593b034",
+          "proposalActorId": "a2",
+          "proposalCommandId": "f31ed838dfe4434a9898a319b208dd07",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 207,
+          "reviewedAtUtc": "2026-10-25T15:30:07.7316635+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "76077d23a4504cfabd394a060abbfce3",
+        "visitCommandId": "a41e9e3649584d69ba03c6e7be2f24bf",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 45，用于检验旧待办持续可见。",
+        "stateVersion": 209,
+        "proposedAtUtc": "2026-10-25T15:30:07.7523355+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "1968af2a1cb04328b27c15129f57dd0c",
+          "visitCommandId": "42a334780ae14f1583a62c3b3e1d40ed",
+          "proposalActorId": "a2",
+          "proposalCommandId": "76077d23a4504cfabd394a060abbfce3",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 211,
+          "reviewedAtUtc": "2026-10-25T15:30:07.7687052+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "8f2fbda555e542f18917b2ac84dd6b57",
+        "visitCommandId": "1418d469c80b4c279bfac727ade62c7b",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 46，用于检验旧待办持续可见。",
+        "stateVersion": 213,
+        "proposedAtUtc": "2026-10-25T15:30:07.7928602+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "7d87c8b5886d472fbbacc63e978372be",
+          "visitCommandId": "3b8c92f3e4ec40bf96dc5f5fc89ac138",
+          "proposalActorId": "a2",
+          "proposalCommandId": "8f2fbda555e542f18917b2ac84dd6b57",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 215,
+          "reviewedAtUtc": "2026-10-25T15:30:07.8107649+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "b6a347b09ea14b829fd7f9492c6b9b84",
+        "visitCommandId": "b60fe0d157df4e86ae364985a23b147a",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 47，用于检验旧待办持续可见。",
+        "stateVersion": 217,
+        "proposedAtUtc": "2026-10-25T15:30:07.8360659+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "3fc6c41d7c20487b8b6d308463f3d0fb",
+          "visitCommandId": "ec814f4431654d8d84075811938a8601",
+          "proposalActorId": "a2",
+          "proposalCommandId": "b6a347b09ea14b829fd7f9492c6b9b84",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 219,
+          "reviewedAtUtc": "2026-10-25T15:30:07.8531926+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "ecd170b20981482aacd02ea302f72649",
+        "visitCommandId": "097018d0913c4494ad984d8bbf8bacc7",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 48，用于检验旧待办持续可见。",
+        "stateVersion": 221,
+        "proposedAtUtc": "2026-10-25T15:30:07.8749325+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "b2675ba7ecae42ae952398dd9d1e197d",
+          "visitCommandId": "1a2c4a6faafd4493a3d2cd45b386f344",
+          "proposalActorId": "a2",
+          "proposalCommandId": "ecd170b20981482aacd02ea302f72649",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 223,
+          "reviewedAtUtc": "2026-10-25T15:30:07.8915901+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "f00e5efaed344b2caa3b9945424feaa7",
+        "visitCommandId": "2229f3ac334444338065bb3dc84b7593",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 49，用于检验旧待办持续可见。",
+        "stateVersion": 225,
+        "proposedAtUtc": "2026-10-25T15:30:07.9136273+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "5689b976525945d39abcf4bfc82f04a5",
+          "visitCommandId": "0628f9e3b3ef404da5fda56a5c3b0175",
+          "proposalActorId": "a2",
+          "proposalCommandId": "f00e5efaed344b2caa3b9945424feaa7",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 227,
+          "reviewedAtUtc": "2026-10-25T15:30:07.9354036+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "6dc1a113d70543ccaa5626386fa06f49",
+        "visitCommandId": "3205ad934b744ec5ba2e775ef05729f1",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 50，用于检验旧待办持续可见。",
+        "stateVersion": 229,
+        "proposedAtUtc": "2026-10-25T15:30:07.9577294+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "624353c2b4034c3dbe662d59f3b6101e",
+          "visitCommandId": "cafa49c3ab8140d599dbc1a1e5e055ee",
+          "proposalActorId": "a2",
+          "proposalCommandId": "6dc1a113d70543ccaa5626386fa06f49",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 231,
+          "reviewedAtUtc": "2026-10-25T15:30:07.9776472+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      },
+      {
+        "activityId": "garden",
+        "authorActorId": "a2",
+        "targetActorId": "a1",
+        "commandId": "edd88323ef9b463592436a98c6b346b7",
+        "visitCommandId": "d1b3b93badb44781882471196e9e5052",
+        "baseRevision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 2,
+            "color": "sun"
+          }
+        ],
+        "text": "明确程序历史样本 51，用于检验旧待办持续可见。",
+        "stateVersion": 233,
+        "proposedAtUtc": "2026-10-25T15:30:08.0003733+00:00",
+        "position": [
+          1,
+          6
+        ],
+        "review": {
+          "activityId": "garden",
+          "authorActorId": "a1",
+          "commandId": "87c0d6eed1b241b8a485785e0e8be7d2",
+          "visitCommandId": "106462e3295b463bbf1d281a5cf994cc",
+          "proposalActorId": "a2",
+          "proposalCommandId": "edd88323ef9b463592436a98c6b346b7",
+          "decision": "reject",
+          "text": "程序样本已处理，保留原图。",
+          "stateVersion": 235,
+          "reviewedAtUtc": "2026-10-25T15:30:08.0179667+00:00",
+          "position": [
+            1,
+            6
+          ],
+          "mosaicEdit": null
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "suite": "resident-real-gpt6-v1",
+  "recordedAtUtc": "2026-10-25T10:33:42.731159+00:00",
+  "passed": true,
+  "dataRoot": ".local/iter0003/live/20261025T183342-c3d1b0",
+  "missions": [
+    {
+      "role": "builder",
+      "status": "completed",
+      "goalId": "far-bank",
+      "provider": {
+        "kind": "codex-exec",
+        "model": "gpt-6-astra",
+        "usage": {
+          "inputTokens": 11604,
+          "cachedInputTokens": 8960,
+          "outputTokens": 81
+        }
+      },
+      "used": {
+        "commands": 21,
+        "wood": 6,
+        "modelCalls": 1,
+        "seconds": 7.875786066055298
+      }
+    },
+    {
+      "role": "traveler",
+      "status": "completed",
+      "goalId": "far-bank",
+      "provider": {
+        "kind": "codex-exec",
+        "model": "gpt-6-astra",
+        "usage": {
+          "inputTokens": 11717,
+          "cachedInputTokens": 0,
+          "outputTokens": 80
+        }
+      },
+      "used": {
+        "commands": 16,
+        "wood": 0,
+        "modelCalls": 1,
+        "seconds": 10.064905881881714
+      }
+    }
+  ],
+  "actualModelCalls": 2,
+  "finalAudit": {
+    "issuedWood": 12,
+    "depotWood": 6,
+    "inventoryWood": 0,
+    "embodiedWood": 6,
+    "conserved": true
+  }
+}

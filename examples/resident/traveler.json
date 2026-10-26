@@ -1,0 +1,29 @@
+{
+  "missionId": "example-traveler",
+  "objective": "只游玩：希望走别人已建好的公共跨河桥去彼岸看看，再回起点，不领取也不建造。",
+  "goals": [
+    {
+      "id": "far-bank",
+      "label": "彼岸",
+      "target": [
+        6,
+        1
+      ]
+    },
+    {
+      "id": "nearby",
+      "label": "本岸探索",
+      "target": [
+        1,
+        6
+      ]
+    }
+  ],
+  "allowBuild": false,
+  "budgets": {
+    "commands": 50,
+    "wood": 0,
+    "seconds": 600,
+    "modelCalls": 1
+  }
+}

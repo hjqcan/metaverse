@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#eeeee6">
+  <title>初始之地 · 共建世界</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="mosaic.js" defer></script>
+  <script src="consent.js" defer></script>
+  <script src="mosaic-inbox.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="初始之地首页"><span class="brand-mark" aria-hidden="true">田</span><span>初始之地<small>FOUNDATION / 01</small></span></a>
+      <div class="header-status"><span class="local-label">本机原型</span><span id="connection-status" class="connection-status" data-status="disconnected" role="status">未连接</span></div>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div><p class="eyebrow">一个小世界，正在发生</p><h1 id="page-title">走一走，也建一点什么。</h1><p id="scenario-copy" class="intro-copy">两名居民，一片共享的陆地。探索不需要劳动；创造从有限的材料开始。</p></div>
+        <div class="world-badge" aria-label="世界尺寸 8 乘 8"><strong>8 × 8</strong><span>共同的起点</span></div>
+      </section>
+
+      <section class="connection-card" aria-label="连接世界">
+        <form id="connection-form" class="connection-form">
+          <div class="connection-copy"><label for="token-input">进入你的居民身份</label><p id="token-help">粘贴本机 access.json 中的 a1 token，仅保存在此标签页。</p></div>
+          <div class="connection-fields"><input id="token-input" type="password" autocomplete="off" spellcheck="false" placeholder="粘贴本机 token" aria-describedby="token-help" required><button id="connect-button" type="submit" class="button primary">连接世界 <span aria-hidden="true">↗</span></button><button id="disconnect-button" type="button" class="button quiet" hidden>断开</button></div>
+        </form>
+      </section>
+
+      <div class="workspace">
+        <section id="mosaic-panel" class="mosaic-card card" aria-labelledby="mosaic-title" hidden>
+          <div class="card-heading"><div><p class="eyebrow">A GARDEN WE DRAW TOGETHER</p><h2 id="mosaic-title">把花园，画成我们的样子。</h2></div><span id="mosaic-version" class="snapshot-status"></span></div>
+          <p class="mosaic-intro">一条河、一株花，或者你自己的形状。每次到访后，最多改 8 格，让下一位来客接着画。</p>
+          <div class="mosaic-layout">
+            <div><h3>共同画布</h3><div id="mosaic-public" class="mosaic-grid"></div><p id="mosaic-authors" class="mosaic-meta"></p><p id="mosaic-public-note" class="mosaic-note">向这个世界的居民公开，之后也能被别人修改。将鼠标停在格子上可查看最后作者。</p></div>
+            <div class="mosaic-compose"><h3>你的草图 <span id="mosaic-draft-count" class="subtle">0 / 8 格</span></h3><div id="mosaic-palette" class="mosaic-palette" role="group" aria-label="画布调色板"></div><div id="mosaic-editor" class="mosaic-grid"></div><p id="mosaic-draft-note" class="mosaic-meta"></p><div id="proposal-compose" class="consent-compose" hidden><label for="proposal-text">想怎样修改，为什么？</label><textarea id="proposal-text" rows="3" aria-describedby="proposal-count" placeholder="写给这些格子的最后作者，等待对方决定。"></textarea><span id="proposal-count" class="subtle">0 / 160 字</span></div><div class="mosaic-actions"><button id="mosaic-publish" class="button primary" type="button" disabled>发表这次绘制</button><button id="mosaic-clear" class="button quiet" type="button">清除草稿，按当前画布重画</button></div><p id="mosaic-hint" class="mosaic-hint" role="status"></p></div>
+          </div>
+        </section>
+        <section id="consent-panel" class="consent-card card" aria-labelledby="consent-title" hidden>
+          <div class="card-heading"><div><p class="eyebrow">MAKE ROOM FOR EACH OTHER</p><h2 id="consent-title">改动之前，先聊一聊。</h2></div><span class="snapshot-status">花园 · 提议收件箱</span></div>
+          <p class="mosaic-intro">先看对方想改哪几格。格子的最后作者到访后决定，同意才会改图；拒绝会留下原图。</p>
+          <div class="inbox-filters">
+            <label for="inbox-scope">提议范围<select id="inbox-scope"><option value="received">发给我的</option><option value="sent">我提出的</option><option value="all">全部提议</option></select></label>
+            <label for="inbox-status">处理状态<select id="inbox-status"><option value="pending">等待决定</option><option value="reviewed">已处理</option><option value="all">全部</option></select></label>
+          </div>
+          <p id="inbox-counts" class="inbox-counts">计数尚未读取。</p>
+          <p id="inbox-message" class="inbox-message" role="status" aria-live="polite">等待连接。</p>
+          <div class="inbox-location"><p id="inbox-location">花园位于 (1, 6)，请先走到现场。</p><button id="inbox-visit" class="button secondary" type="button" disabled>记录花园到访</button></div>
+          <div class="inbox-pagination" role="group" aria-label="提议分页">
+            <button id="inbox-newest" class="button quiet" type="button">回到最新</button><button id="inbox-newer" class="button quiet" type="button" disabled>返回较新页</button><button id="inbox-older" class="button quiet" type="button" disabled>更早提议</button>
+          </div>
+          <div id="consent-list" class="consent-list"></div>
+        </section>
+        <section class="map-card card" aria-labelledby="map-title">
+          <div class="card-heading"><div><p class="eyebrow">SHARED WORLD</p><h2 id="map-title">共同的土地</h2></div><span id="snapshot-status" class="snapshot-status">等待观察</span></div>
+          <div class="canvas-wrap"><canvas id="world-canvas" width="640" height="640" role="img" aria-label="8 乘 8 世界地图，连接后显示居民、墙、储备、目标与平台" aria-describedby="map-description world-summary">地图需要支持 Canvas 的浏览器。坐标、居民和设施也会显示在下方文字中。</canvas></div>
+          <p id="map-description" class="map-caption">点击一格选择建造位置。坐标从左上角 (0, 0) 开始。</p>
+          <div class="map-legend" aria-label="地图图例"><span><i class="legend-dot self-dot"></i>你</span><span><i class="legend-dot other-dot"></i>另一居民</span><span><i class="legend-square land-dot"></i>陆地</span><span id="water-legend" hidden><i class="legend-square water-dot"></i>水面</span><span><i class="legend-square wall-dot"></i>墙</span><span><i class="legend-square depot-dot"></i>储备</span><span><i class="legend-flag">⚑</i>目标</span><span><i class="legend-square platform-dot"></i>平台</span><span id="bridge-legend" hidden><i class="legend-square bridge-dot"></i>桥</span><span><i class="legend-square selection-dot"></i>选择格</span></div>
+          <div class="selection-bar"><div><span class="detail-label">选择格</span><strong id="selected-cell">尚未选择</strong></div><form id="selection-form" class="coordinate-form" aria-label="用坐标选择格点"><label for="cell-x">X</label><input id="cell-x" type="number" min="0" max="7" step="1" value="2" inputmode="numeric" required><label for="cell-y">Y</label><input id="cell-y" type="number" min="0" max="7" step="1" value="1" inputmode="numeric" required><button type="submit" class="button quiet small">选择</button></form></div>
+          <p id="selection-detail" class="selection-detail">选择配方和格点后建造；是否可建造由世界服务确认。</p>
+          <details class="world-details"><summary>查看地图文字信息</summary><p id="world-summary">连接世界后显示已确认的地图与居民位置。</p></details>
+        </section>
+
+        <aside class="side-column" aria-label="居民状态与操作">
+          <section class="resident-card card" aria-labelledby="resident-title">
+            <div class="card-heading"><div><p class="eyebrow">YOUR RESIDENT</p><h2 id="resident-title">等待入驻</h2></div><span class="resident-avatar" id="resident-avatar" aria-hidden="true">?</span></div>
+            <div class="position-row"><span>当前位置</span><strong id="actor-position">—</strong></div>
+            <div class="resource-grid"><div class="resource-tile personal"><span>我的木材</span><strong id="inventory-wood">—</strong><small>用于建造</small></div><div class="resource-tile"><span>公共储备</span><strong id="depot-wood">—</strong><small id="depot-position">位置待确认</small></div></div>
+            <div class="version-row"><span>已确认世界版本 <strong id="state-version">—</strong></span><span id="audit-status">等待观察</span></div>
+          </section>
+
+          <section class="actions-card card" aria-labelledby="actions-title">
+            <div class="card-heading"><h2 id="actions-title">在这里行动</h2><span class="subtle">每次一步</span></div>
+            <div class="movement"><div><h3>自由探索</h3><p>方向键或按钮移动<br>不消耗木材</p></div><div class="direction-pad" role="group" aria-label="移动方向"><button id="move-up" class="direction" aria-label="向上移动" disabled>↑</button><button id="move-left" class="direction" aria-label="向左移动" disabled>←</button><span class="pad-center" aria-hidden="true">·</span><button id="move-right" class="direction" aria-label="向右移动" disabled>→</button><button id="move-down" class="direction" aria-label="向下移动" disabled>↓</button></div></div>
+            <div class="action-section"><div class="action-description"><h3>领取木材</h3><span>储备点或相邻格</span></div><div class="claim-row"><label class="sr-only" for="claim-quantity">领取木材数量（1 至 12）</label><input id="claim-quantity" type="number" min="1" max="12" step="1" value="4" inputmode="numeric"><button id="claim-button" type="button" class="button secondary" disabled>领取木材</button></div></div>
+            <div class="action-section"><div class="action-description"><h3>一起建造</h3><span id="recipe-cost">成本待确认</span></div><div class="recipe-row"><label for="recipe-select">配方</label><select id="recipe-select" aria-describedby="recipe-cost build-copy" disabled><option value="">连接后读取配方</option></select></div><p id="build-copy" class="build-copy">可用配方与材料成本由世界服务提供。</p><button id="build-button" type="button" class="button primary full-width" disabled>在选择格建造 <span aria-hidden="true">＋</span></button></div>
+          </section>
+        </aside>
+
+        <section id="activities-panel" class="activities-card card" aria-labelledby="activities-title" hidden>
+          <div class="card-heading"><div><p class="eyebrow">PLACES TO EXPERIENCE</p><h2 id="activities-title">今天，想去哪里？</h2></div><span class="subtle">到访不消耗木材</span></div>
+          <div id="activity-catalog" class="activity-catalog"></div>
+          <div class="activity-action"><div class="activity-picker"><label for="activity-select">选择地点</label><select id="activity-select" aria-describedby="activity-hint"></select></div><button id="visit-button" class="button primary" type="button" disabled>记录这次到访</button></div>
+          <p id="activity-hint" class="activity-hint" role="status"></p>
+          <p id="visit-history" class="visit-history">尚无已确认到访。</p>
+        </section>
+
+      <section id="postcards-panel" class="postcards-card card" aria-labelledby="postcards-title" hidden>
+        <div class="card-heading"><div><p class="eyebrow">WORDS FOR THE NEXT VISITOR</p><h2 id="postcards-title">在这里，留一句话。</h2></div><span id="postcard-location" class="snapshot-status"></span></div>
+        <p class="postcard-intro">读读先到的人留下的话，也写给下一位来客。上方“选择地点”可以切换这本手记。</p>
+        <div class="postcard-layout">
+          <div><p id="postcard-feed-label" class="postcard-feed-label"></p><div id="postcard-list" class="postcard-list" aria-label="这个地点的公开手记"></div></div>
+          <form id="postcard-form" class="postcard-form">
+            <label for="postcard-text">你想留给后来者的话</label>
+            <textarea id="postcard-text" rows="4" placeholder="一段想法、一句问候，或留给后来者的小建议。" aria-describedby="postcard-public-note postcard-count postcard-hint"></textarea>
+            <div class="postcard-compose-meta"><span id="postcard-public-note">分享后向这个世界的居民公开。</span><span id="postcard-count">0 / 160 字</span></div>
+            <button id="postcard-button" type="submit" class="button primary">分享这段手记 <span aria-hidden="true">↗</span></button>
+            <p id="postcard-hint" class="postcard-hint" role="status"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="feedback-card card" aria-label="操作反馈">
+          <div id="feedback" class="feedback" data-tone="neutral" role="status" aria-live="polite">连接后即可探索。所有位置与资源以世界确认的观察为准。</div>
+          <div id="pending-panel" class="pending-panel" hidden><div><strong id="pending-status" role="status">没有未决动作</strong><p id="pending-detail"></p></div><div class="pending-actions"><button id="query-command-button" type="button" class="button secondary small" disabled>查询结果</button><button id="retry-command-button" type="button" class="button quiet small" disabled>原样重试</button></div></div>
+        </section>
+
+        <section class="events-card card" aria-labelledby="events-title"><div class="card-heading"><div><p class="eyebrow">LIFE ON THIS LAND</p><h2 id="events-title">最近发生</h2></div><span class="subtle">公共事件 · <span id="event-cursor">0</span></span></div><ol id="event-list" class="event-list"><li class="empty-events">世界的故事，会从连接后的第一条公共事件开始。</li></ol></section>
+      </div>
+    </main>
+    <footer><span>初始之地 <span class="footer-divider">/</span> foundation-01 · <a id="resident-report-link" href="resident.html">居民任务手记</a></span><span><span id="rules-version">规则待确认</span> · 本机实验 · 每 1.5 秒观察</span></footer>
+  </div>
+</body>
+</html>

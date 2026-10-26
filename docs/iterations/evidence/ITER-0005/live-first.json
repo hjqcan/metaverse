@@ -1,0 +1,512 @@
+{
+  "schemaVersion": 1,
+  "kind": "resident-mission-report",
+  "mission": {
+    "id": "postcard-first",
+    "objective": "去静谧花园短途散步，留一句给后来者的温和问候，然后返回。行动前只起草，不要声称已经看见未发生的事情。",
+    "sharePostcard": true,
+    "actorId": "a1",
+    "worldId": "foundation-01",
+    "rulesVersion": "r4",
+    "origin": [
+      1,
+      1
+    ],
+    "goal": {
+      "id": "garden",
+      "label": "静谧花园",
+      "target": [
+        1,
+        6
+      ],
+      "activityId": "garden"
+    },
+    "status": "completed",
+    "reason": "round_trip_verified"
+  },
+  "decision": {
+    "goalId": "garden",
+    "reason": "静谧花园符合指定的短途散步目的，无需过河、建设或木材，预计12条命令在14条预算内，可安排散步、留问候后返回。当前仅选择目标并起草手记，尚未行动。",
+    "provider": {
+      "kind": "codex-exec",
+      "model": "gpt-6-astra",
+      "usage": {
+        "inputTokens": 12244,
+        "cachedInputTokens": 0,
+        "outputTokens": 119
+      }
+    },
+    "postcardText": "愿来到静谧花园的你，能暂缓脚步，给自己一点从容的时间。祝你散步愉快，归途安然。"
+  },
+  "budget": {
+    "limits": {
+      "commands": 14,
+      "wood": 0,
+      "seconds": 600,
+      "modelCalls": 1
+    },
+    "used": {
+      "commands": 12,
+      "wood": 0,
+      "modelCalls": 1,
+      "seconds": 11.612128973007202
+    }
+  },
+  "facts": {
+    "goalReached": true,
+    "returned": true,
+    "activityCompleted": true,
+    "activityVisit": {
+      "activityId": "garden",
+      "commandId": "37db3125e89c4691896f6fd101b0733e",
+      "stateVersion": 6,
+      "visitedAtUtc": "2026-10-25T13:15:56.0749449+00:00",
+      "position": [
+        1,
+        6
+      ]
+    },
+    "postcardShared": true,
+    "postcard": {
+      "activityId": "garden",
+      "authorActorId": "a1",
+      "commandId": "c7bf16cceb94426d8af40e70fd9d8896",
+      "visitCommandId": "37db3125e89c4691896f6fd101b0733e",
+      "text": "愿来到静谧花园的你，能暂缓脚步，给自己一点从容的时间。祝你散步愉快，归途安然。",
+      "stateVersion": 7,
+      "sharedAtUtc": "2026-10-25T13:15:56.0839594+00:00",
+      "position": [
+        1,
+        6
+      ]
+    },
+    "startStateVersion": 0,
+    "endStateVersion": 12,
+    "woodClaimed": 0,
+    "createdEntityIds": [],
+    "verifiedAtUtc": "2026-10-25T13:15:56.121395+00:00"
+  },
+  "steps": [
+    {
+      "index": 1,
+      "commandId": "1e111991fc3640a09ece325719558c34",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 1,
+      "position": [
+        1,
+        2
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 2,
+      "commandId": "03b74b0e958d4a709013e87410897e57",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 2,
+      "position": [
+        1,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 3,
+      "commandId": "86a8793d992f47adbb89ec807e7ccbc8",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 3,
+      "position": [
+        1,
+        4
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 4,
+      "commandId": "e32df34143f54f8484e52b9a50ae36ba",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 4,
+      "position": [
+        1,
+        5
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 5,
+      "commandId": "310610252e4449d89d64db1fcf7be6cf",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 5,
+      "position": [
+        1,
+        6
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 6,
+      "commandId": "37db3125e89c4691896f6fd101b0733e",
+      "action": {
+        "type": "visit",
+        "activityId": "garden"
+      },
+      "reason": "在已选活动地点确认到访",
+      "status": "committed",
+      "stateVersion": 6,
+      "position": [
+        1,
+        6
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 7,
+      "commandId": "c7bf16cceb94426d8af40e70fd9d8896",
+      "action": {
+        "type": "postcard",
+        "activityId": "garden",
+        "visitCommandId": "37db3125e89c4691896f6fd101b0733e",
+        "text": "愿来到静谧花园的你，能暂缓脚步，给自己一点从容的时间。祝你散步愉快，归途安然。"
+      },
+      "reason": "在已确认到访的地点分享共同手记草稿",
+      "status": "committed",
+      "stateVersion": 7,
+      "position": [
+        1,
+        6
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 8,
+      "commandId": "ee65da5322fe43b6995ed613d4de6248",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 8,
+      "position": [
+        1,
+        5
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 9,
+      "commandId": "1d6e5765c1e44038a5f531e18044ccb5",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 9,
+      "position": [
+        1,
+        4
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 10,
+      "commandId": "ca2b40d3c47a43ed906a97f381d28443",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 10,
+      "position": [
+        1,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 11,
+      "commandId": "26a983b214a047f9901204a6e6fcf350",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 11,
+      "position": [
+        1,
+        2
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 12,
+      "commandId": "d0daced9ebe448df9c48e139fb3d8f51",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 12,
+      "position": [
+        1,
+        1
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    }
+  ],
+  "feedback": {
+    "summary": "已核验活动到访、共同手记分享与返回",
+    "issues": [],
+    "suggestions": []
+  },
+  "world": {
+    "id": "foundation-01",
+    "width": 8,
+    "height": 8,
+    "blocked": [
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "water": [
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "goal": [
+      6,
+      1
+    ],
+    "entities": [],
+    "activities": [
+      {
+        "id": "garden",
+        "label": "静谧花园",
+        "position": [
+          1,
+          6
+        ],
+        "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+      },
+      {
+        "id": "riverwalk",
+        "label": "河岸步道",
+        "position": [
+          2,
+          5
+        ],
+        "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+      },
+      {
+        "id": "lookout",
+        "label": "彼岸观景台",
+        "position": [
+          6,
+          1
+        ],
+        "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+      }
+    ],
+    "postcards": [
+      {
+        "activityId": "garden",
+        "authorActorId": "a1",
+        "commandId": "c7bf16cceb94426d8af40e70fd9d8896",
+        "visitCommandId": "37db3125e89c4691896f6fd101b0733e",
+        "text": "愿来到静谧花园的你，能暂缓脚步，给自己一点从容的时间。祝你散步愉快，归途安然。",
+        "stateVersion": 7,
+        "sharedAtUtc": "2026-10-25T13:15:56.0839594+00:00",
+        "position": [
+          1,
+          6
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "missionId": "postcard-second",
+  "objective": "读一读公开手记里先到的居民在花园留下的话，再去静谧花园，留下一句与那句话有关的回应，然后返回。只使用给出的文字，不虚构现场经历。",
+  "goals": [
+    { "id": "garden", "label": "静谧花园", "target": [1, 6], "activityId": "garden" },
+    { "id": "riverwalk", "label": "河岸步道", "target": [2, 5], "activityId": "riverwalk" },
+    { "id": "lookout", "label": "彼岸观景台", "target": [6, 1], "activityId": "lookout" }
+  ],
+  "sharePostcard": true,
+  "allowBuild": false,
+  "budgets": { "commands": 12, "wood": 0, "seconds": 600, "modelCalls": 1 }
+}

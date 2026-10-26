@@ -1,0 +1,74 @@
+{
+  "recordedAtUtc": "2026-10-25T11:37:39.700767+00:00",
+  "previews": [
+    {
+      "url": "http://127.0.0.1:5080",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r1",
+      "stateVersion": 7,
+      "entityCount": 0,
+      "a1Position": [
+        1,
+        1
+      ],
+      "activityCount": 0,
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      }
+    },
+    {
+      "url": "http://127.0.0.1:5081",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r2",
+      "stateVersion": 19,
+      "entityCount": 2,
+      "a1Position": [
+        1,
+        1
+      ],
+      "activityCount": 0,
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 6,
+        "inventoryWood": 0,
+        "embodiedWood": 6,
+        "conserved": true
+      }
+    },
+    {
+      "url": "http://127.0.0.1:5082",
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r3",
+      "stateVersion": 0,
+      "entityCount": 0,
+      "a1Position": [
+        1,
+        1
+      ],
+      "activityCount": 3,
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      }
+    }
+  ]
+}

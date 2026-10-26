@@ -1,0 +1,684 @@
+{
+  "schemaVersion": 1,
+  "kind": "resident-mission-report",
+  "mission": {
+    "id": "panorama-model",
+    "objective": "我想去彼岸观景台看两岸全景，愿意用最多6木材建桥，体验后返回。",
+    "actorId": "a1",
+    "worldId": "foundation-01",
+    "rulesVersion": "r3",
+    "origin": [
+      1,
+      1
+    ],
+    "goal": {
+      "id": "lookout",
+      "label": "彼岸观景台",
+      "target": [
+        6,
+        1
+      ],
+      "activityId": "lookout"
+    },
+    "status": "completed",
+    "reason": "round_trip_verified"
+  },
+  "decision": {
+    "goalId": "lookout",
+    "reason": "彼岸观景台直接满足看两岸全景的目的。两段桥需6木材，仓库储量足够，预计22条命令且候选标记可行，符合预算，可安排观景后返回。",
+    "provider": {
+      "kind": "codex-exec",
+      "model": "gpt-6-astra",
+      "usage": {
+        "inputTokens": 12056,
+        "cachedInputTokens": 0,
+        "outputTokens": 72
+      }
+    }
+  },
+  "budget": {
+    "limits": {
+      "commands": 30,
+      "wood": 6,
+      "seconds": 600,
+      "modelCalls": 1
+    },
+    "used": {
+      "commands": 22,
+      "wood": 6,
+      "modelCalls": 1,
+      "seconds": 8.429516553878784
+    }
+  },
+  "facts": {
+    "goalReached": true,
+    "returned": true,
+    "activityCompleted": true,
+    "activityVisit": {
+      "activityId": "lookout",
+      "commandId": "51a57b766dbf45259ce82cdb20b682b6",
+      "stateVersion": 13,
+      "visitedAtUtc": "2026-10-25T11:32:22.8683022+00:00",
+      "position": [
+        6,
+        1
+      ]
+    },
+    "startStateVersion": 0,
+    "endStateVersion": 22,
+    "woodClaimed": 6,
+    "createdEntityIds": [
+      "ea5c812aa8f9e40649a7b544cd8a4253f",
+      "e8abcc1e1851d4433a80c6b01611bd53a"
+    ],
+    "verifiedAtUtc": "2026-10-25T11:32:22.927305+00:00"
+  },
+  "steps": [
+    {
+      "index": 1,
+      "commandId": "d9d6da96515e4e6ca9a8f68b35dc265a",
+      "action": {
+        "type": "claim",
+        "quantity": 6
+      },
+      "reason": "为剩余桥梁补足材料",
+      "status": "committed",
+      "stateVersion": 1,
+      "position": [
+        1,
+        1
+      ],
+      "inventoryWood": 6,
+      "httpStatus": 200
+    },
+    {
+      "index": 2,
+      "commandId": "d715f7b30aa741399a0ab3299dcc29c5",
+      "action": {
+        "type": "move",
+        "dx": 1,
+        "dy": 0
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 2,
+      "position": [
+        2,
+        1
+      ],
+      "inventoryWood": 6,
+      "httpStatus": 200
+    },
+    {
+      "index": 3,
+      "commandId": "9f2bb9c2c807411fb619ae2d51fbf208",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 3,
+      "position": [
+        2,
+        2
+      ],
+      "inventoryWood": 6,
+      "httpStatus": 200
+    },
+    {
+      "index": 4,
+      "commandId": "8c839b9d3465466ca121a3dbcefec214",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 4,
+      "position": [
+        2,
+        3
+      ],
+      "inventoryWood": 6,
+      "httpStatus": 200
+    },
+    {
+      "index": 5,
+      "commandId": "e852a3b0108f4546915a7ba827d7caca",
+      "action": {
+        "type": "move",
+        "dx": 1,
+        "dy": 0
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 5,
+      "position": [
+        3,
+        3
+      ],
+      "inventoryWood": 6,
+      "httpStatus": 200
+    },
+    {
+      "index": 6,
+      "commandId": "f66b3e8d6bcd45a4bd201dc6b99ec1d5",
+      "action": {
+        "type": "build",
+        "recipeId": "bridge.v1",
+        "at": [
+          4,
+          3
+        ]
+      },
+      "reason": "建造通向任务目标的桥段",
+      "status": "committed",
+      "stateVersion": 6,
+      "position": [
+        3,
+        3
+      ],
+      "inventoryWood": 3,
+      "httpStatus": 200
+    },
+    {
+      "index": 7,
+      "commandId": "ad15a1614b7648b095418a6d782bcc43",
+      "action": {
+        "type": "move",
+        "dx": 1,
+        "dy": 0
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 7,
+      "position": [
+        4,
+        3
+      ],
+      "inventoryWood": 3,
+      "httpStatus": 200
+    },
+    {
+      "index": 8,
+      "commandId": "e38dc8b383e142e38cf48f9cf696e5ff",
+      "action": {
+        "type": "build",
+        "recipeId": "bridge.v1",
+        "at": [
+          5,
+          3
+        ]
+      },
+      "reason": "建造通向任务目标的桥段",
+      "status": "committed",
+      "stateVersion": 8,
+      "position": [
+        4,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 9,
+      "commandId": "d4f5711659b147408ffd081829928f9b",
+      "action": {
+        "type": "move",
+        "dx": 1,
+        "dy": 0
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 9,
+      "position": [
+        5,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 10,
+      "commandId": "098e39be87aa4d70aca786f244de4059",
+      "action": {
+        "type": "move",
+        "dx": 1,
+        "dy": 0
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 10,
+      "position": [
+        6,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 11,
+      "commandId": "e1566384e4734979a38091ae04575804",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 11,
+      "position": [
+        6,
+        2
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 12,
+      "commandId": "68b8291519c441d29ed60484f6730159",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 12,
+      "position": [
+        6,
+        1
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 13,
+      "commandId": "51a57b766dbf45259ce82cdb20b682b6",
+      "action": {
+        "type": "visit",
+        "activityId": "lookout"
+      },
+      "reason": "在已选活动地点确认到访",
+      "status": "committed",
+      "stateVersion": 13,
+      "position": [
+        6,
+        1
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200,
+      "evidenceSource": "command_receipt"
+    },
+    {
+      "index": 14,
+      "commandId": "2da105fc6d1f45948a7550fba5d306d4",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 14,
+      "position": [
+        6,
+        2
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 15,
+      "commandId": "1860fb3d59984edcb4f0fc5d63e6fd79",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 15,
+      "position": [
+        6,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 16,
+      "commandId": "28f44509f47c47b2bd8646f34c8582b0",
+      "action": {
+        "type": "move",
+        "dx": -1,
+        "dy": 0
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 16,
+      "position": [
+        5,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 17,
+      "commandId": "5c400a2444334daeb23d037420145b67",
+      "action": {
+        "type": "move",
+        "dx": -1,
+        "dy": 0
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 17,
+      "position": [
+        4,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 18,
+      "commandId": "17b5ec1e823d476a9f8ebf73ad275390",
+      "action": {
+        "type": "move",
+        "dx": -1,
+        "dy": 0
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 18,
+      "position": [
+        3,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 19,
+      "commandId": "6034ca4cecdb42acad9c533b87aa4339",
+      "action": {
+        "type": "move",
+        "dx": -1,
+        "dy": 0
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 19,
+      "position": [
+        2,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 20,
+      "commandId": "617fbcdfd08244a18aec14876c589cbd",
+      "action": {
+        "type": "move",
+        "dx": -1,
+        "dy": 0
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 20,
+      "position": [
+        1,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 21,
+      "commandId": "03187bdd78e0491d9a469cfc890810e5",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 21,
+      "position": [
+        1,
+        2
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 22,
+      "commandId": "1b86f0e65887458a8c734ee8d8dae423",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 22,
+      "position": [
+        1,
+        1
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    }
+  ],
+  "feedback": {
+    "summary": "已核验活动到访与返回",
+    "issues": [],
+    "suggestions": []
+  },
+  "world": {
+    "id": "foundation-01",
+    "width": 8,
+    "height": 8,
+    "blocked": [
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "water": [
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "goal": [
+      6,
+      1
+    ],
+    "entities": [
+      {
+        "entityId": "e8abcc1e1851d4433a80c6b01611bd53a",
+        "definitionId": "bridge",
+        "definitionVersion": 1,
+        "rulesVersion": "r3",
+        "ownerActorId": "a1",
+        "position": [
+          5,
+          3
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "ea5c812aa8f9e40649a7b544cd8a4253f",
+        "definitionId": "bridge",
+        "definitionVersion": 1,
+        "rulesVersion": "r3",
+        "ownerActorId": "a1",
+        "position": [
+          4,
+          3
+        ],
+        "embodiedWood": 3
+      }
+    ],
+    "activities": [
+      {
+        "id": "garden",
+        "label": "静谧花园",
+        "position": [
+          1,
+          6
+        ],
+        "description": "在本岸花园安静散步，适合短途放松，不需过河。"
+      },
+      {
+        "id": "riverwalk",
+        "label": "河岸步道",
+        "position": [
+          2,
+          5
+        ],
+        "description": "沿本岸步道观察河流，适合看水与散步，不需过河。"
+      },
+      {
+        "id": "lookout",
+        "label": "彼岸观景台",
+        "position": [
+          6,
+          1
+        ],
+        "description": "从彼岸看两岸全景，需要跨河；初始须建设两段桥。"
+      }
+    ]
+  }
+}

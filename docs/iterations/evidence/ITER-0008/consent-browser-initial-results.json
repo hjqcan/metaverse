@@ -1,0 +1,27 @@
+{
+  "suite": "mosaic-consent-real-chrome-v1",
+  "recordedAtUtc": "2026-10-25T15:30:06.616Z",
+  "browser": "152.0.7977.82",
+  "passed": false,
+  "tests": [
+    {
+      "name": "original_author_creates_picture_through_shared_interface",
+      "passed": true,
+      "milliseconds": 1599
+    },
+    {
+      "name": "peer_proposal_draft_survives_poll_reload_and_cannot_paint_directly",
+      "passed": true,
+      "milliseconds": 2695
+    },
+    {
+      "name": "uncaught",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /已同意并改图.*居民 a1/. Input:\n\n'居民 a2 → 居民 a1建议改 1 格 · 基于画布第 1 版 · 提议版本 13 · 虚线只是提议只把河流端点改为阳光标记。等待对方决定 · 共同画布尚未因此改变你的决定与理由收件箱尚未更新，审阅已暂停；已输入的理由保留。同意并改图拒绝，保留原图'\n\n    at file:///home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/browser/consent.mjs:131:12\n    at async check (file:///home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/browser/consent.mjs:33:29)\n    at async file:///home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/browser/consent.mjs:125:3"
+    }
+  ],
+  "javascriptErrors": [],
+  "reportWorldRequests": [],
+  "actualModelCallsDuringUiTest": 0,
+  "dataRoot": ".local/iter0007/browser/2026-10-25T15-30-00-850Z"
+}

@@ -1,0 +1,97 @@
+{
+  "suite": "mosaic-http-v1",
+  "decisionSource": "explicit-test-double",
+  "actualModelCalls": 0,
+  "recordedAtUtc": "2026-10-25T14:28:38.076034+00:00",
+  "passed": true,
+  "testsRun": 17,
+  "tests": [
+    {
+      "test": "__main__.MosaicAcceptance.test_01_public_tiles_authorship_restart_and_immutable_history",
+      "passed": true,
+      "seconds": 0.5604167020064779
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_02_location_identity_visit_and_independent_postcard_slots",
+      "passed": true,
+      "seconds": 0.35004583903355524
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_03_original_id_patch_order_and_one_edit_per_visit",
+      "passed": true,
+      "seconds": 0.30417831998784095
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_04_parallel_duplicate_and_two_authors_cannot_lose_update",
+      "passed": true,
+      "seconds": 0.4911786820157431
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_05_atomic_batch_strict_shape_and_same_color_reject",
+      "passed": true,
+      "seconds": 0.4080052759964019
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_06_before_commit_exit_rolls_back_entire_patch",
+      "passed": true,
+      "seconds": 0.607260012999177
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_07_after_commit_exit_retains_entire_patch",
+      "passed": true,
+      "seconds": 0.5546000049798749
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_08_budget_stops_after_visit_before_paint",
+      "passed": true,
+      "seconds": 0.30919492000248283
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_09_pause_resume_uses_one_decision_and_completed_is_noop",
+      "passed": true,
+      "seconds": 0.3488744119531475
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_10_after_commit_exit_task_recovers_original_edit",
+      "passed": true,
+      "seconds": 0.5895768079790287
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_11_old_edit_never_completes_new_task",
+      "passed": true,
+      "seconds": 0.47290280897868797
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_12_wrong_evidence_and_query_failure_keep_original_pending",
+      "passed": true,
+      "seconds": 0.3648374460171908
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_13_changed_board_stops_frozen_draft_without_overwrite",
+      "passed": true,
+      "seconds": 0.3997539560077712
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_14_capabilities_bad_goals_and_invalid_draft_fail_before_actions",
+      "passed": true,
+      "seconds": 0.46814448200166225
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_15_populated_r4_unchanged_and_postcards_still_work_on_r5",
+      "passed": true,
+      "seconds": 0.5948533450136892
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_16_bounded_public_own_history_and_public_model_context",
+      "passed": true,
+      "seconds": 1.7898891699733213
+    },
+    {
+      "test": "__main__.MosaicAcceptance.test_17_committed_edit_remains_true_after_later_overwrite",
+      "passed": true,
+      "seconds": 0.3788439520285465
+    }
+  ],
+  "dataRoot": ".local/iter0006/api/20261025T222829-1b77b5",
+  "failures": []
+}

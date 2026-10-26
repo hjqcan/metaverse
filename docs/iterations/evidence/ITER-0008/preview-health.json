@@ -1,0 +1,176 @@
+{
+  "checkedAtUtc": "2026-10-25T15:31:14.708368+00:00",
+  "previews": [
+    {
+      "port": 5080,
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r1",
+      "stateVersion": 7,
+      "a1Position": [
+        1,
+        1
+      ],
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      },
+      "entityCount": 0,
+      "mosaicRevision": null,
+      "mosaicProposalInbox": null
+    },
+    {
+      "port": 5081,
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r2",
+      "stateVersion": 19,
+      "a1Position": [
+        1,
+        1
+      ],
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 6,
+        "inventoryWood": 0,
+        "embodiedWood": 6,
+        "conserved": true
+      },
+      "entityCount": 2,
+      "mosaicRevision": null,
+      "mosaicProposalInbox": null
+    },
+    {
+      "port": 5082,
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r3",
+      "stateVersion": 0,
+      "a1Position": [
+        1,
+        1
+      ],
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      },
+      "entityCount": 0,
+      "mosaicRevision": null,
+      "mosaicProposalInbox": null
+    },
+    {
+      "port": 5083,
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r4",
+      "stateVersion": 0,
+      "a1Position": [
+        1,
+        1
+      ],
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      },
+      "entityCount": 0,
+      "mosaicRevision": null,
+      "mosaicProposalInbox": null
+    },
+    {
+      "port": 5084,
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r5",
+      "stateVersion": 0,
+      "a1Position": [
+        1,
+        1
+      ],
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      },
+      "entityCount": 0,
+      "mosaicRevision": 0,
+      "mosaicProposalInbox": null
+    },
+    {
+      "port": 5085,
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r6",
+      "stateVersion": 0,
+      "a1Position": [
+        1,
+        1
+      ],
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      },
+      "entityCount": 0,
+      "mosaicRevision": 0,
+      "mosaicProposalInbox": null
+    },
+    {
+      "port": 5086,
+      "health": {
+        "status": "ok",
+        "worldId": "foundation-01",
+        "sqliteVersion": "3.53.4"
+      },
+      "rulesVersion": "r6",
+      "stateVersion": 0,
+      "a1Position": [
+        1,
+        1
+      ],
+      "resourceAudit": {
+        "issuedWood": 12,
+        "depotWood": 12,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      },
+      "entityCount": 0,
+      "mosaicRevision": 0,
+      "mosaicProposalInbox": {
+        "version": 1,
+        "maxPageSize": 20
+      }
+    }
+  ]
+}
