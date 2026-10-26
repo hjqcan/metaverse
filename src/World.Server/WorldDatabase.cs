@@ -46,12 +46,14 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
         {
             Scenario = ReadScenario(connection, transaction, schemaVersion);
             InstanceId = WorldInstance.Read(connection, transaction);
+            if (Scenario.SupportsTransfer && InstanceId is null)
+                throw new InvalidOperationException("合作世界缺少实例身份，拒绝作为旧世界运行");
             transaction.Commit();
             return;
         }
 
         Scenario = configuration.RequestedScenario ?? WorldScenario.Wilderness;
-        Run(connection, transaction, Scenario.SupportsContinuous ? SchemaV8 : Scenario.SupportsGathering ? SchemaV7 : Scenario.SupportsMosaicConsent ? SchemaV6 : Scenario.SupportsMosaic ? SchemaV5 : Scenario.SupportsPostcards ? SchemaV4 : Scenario.SupportsActivities ? SchemaV3 : SchemaV2);
+        Run(connection, transaction, Scenario.SupportsTransfer ? SchemaV9 : Scenario.SupportsContinuous ? SchemaV8 : Scenario.SupportsGathering ? SchemaV7 : Scenario.SupportsMosaicConsent ? SchemaV6 : Scenario.SupportsMosaic ? SchemaV5 : Scenario.SupportsPostcards ? SchemaV4 : Scenario.SupportsActivities ? SchemaV3 : SchemaV2);
         if (Scenario.SupportsContinuous) WorldInstance.Create(connection, transaction);
         InstanceId = WorldInstance.Read(connection, transaction);
         Run(connection, transaction, """
@@ -83,7 +85,7 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
         }
         var seed = JsonSerializer.Serialize(new { seq = 1, stateVersion = 0, commandId = (string?)null,
             actorId = (string?)null, type = "worldSeeded", quantity = 12,
-            source = Scenario.SupportsContinuous ? "ITER-0014 initial wild wood" : Scenario.SupportsGathering ? "ITER-0010 initial wild wood" : Scenario == WorldScenario.Foundation ? "ITER-0001 initial allocation" :
+            source = Scenario.SupportsTransfer ? "ITER-0020 initial wild wood" : Scenario.SupportsContinuous ? "ITER-0014 initial wild wood" : Scenario.SupportsGathering ? "ITER-0010 initial wild wood" : Scenario == WorldScenario.Foundation ? "ITER-0001 initial allocation" :
                 Scenario.SupportsMosaicConsent ? "ITER-0007 initial allocation" :
                 Scenario.SupportsMosaic ? "ITER-0006 initial allocation" :
                 Scenario.SupportsPostcards ? "ITER-0005 initial allocation" :
@@ -118,7 +120,7 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
 
     private WorldScenario ReadScenario(SqliteConnection connection, SqliteTransaction transaction, long schemaVersion)
     {
-        if (schemaVersion is not (1 or 2 or 3 or 4 or 5 or 6 or 7 or 8)) throw new InvalidOperationException("不支持的数据库版本");
+        if (schemaVersion is not (1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9)) throw new InvalidOperationException("不支持的数据库版本");
         // v1 predates scenario persistence and is always the original world. Do not migrate it,
         // rewrite historical objects/receipts, or infer a different world from environment values.
         using var command = Command(connection, transaction, schemaVersion == 1
@@ -307,6 +309,10 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
         .Replace(", CHECK(NOT(x=3 AND y<=2))", "")
         .Replace("embodied_wood=3", "embodied_wood IN(3,6)")
         .Replace("PRAGMA user_version=7;", "ALTER TABLE residents ADD COLUMN last_walk_ms INTEGER NOT NULL DEFAULT 0; ALTER TABLE residents ADD COLUMN walk_credit REAL NOT NULL DEFAULT 0.6; PRAGMA user_version=8;");
+
+    private static readonly string SchemaV9 = SchemaV8
+        .Replace("'wilderness-continuous-v1'", "'wilderness-cooperation-v1'").Replace("'r8'", "'r9'")
+        .Replace("PRAGMA user_version=8;", "PRAGMA user_version=9;");
 
     private const string MosaicSchema = """
 

@@ -1,0 +1,36 @@
+{
+  "scope": "Chrome readonly report import with explicit perturbations",
+  "results": [
+    {
+      "name": "original_actual_report",
+      "load": "已加载：original_actual_report.json · 98 条步骤 · 本地历史记录，非实时世界。",
+      "status": "已完成",
+      "transferVerified": "true",
+      "transferText": "赠送已核实：a1 → a2 · 3 木材 · v57",
+      "warning": "",
+      "passed": true
+    },
+    {
+      "name": "wrong_recipient_fact_only",
+      "load": "已加载：wrong_recipient_fact_only.json · 98 条步骤 · 本地历史记录，非实时世界。",
+      "status": "完成标记待复核",
+      "transferVerified": "false",
+      "transferText": "尚未核实本次赠送；当前余额或对方作品不能代替原交付记录。",
+      "warning": "报告标记为已完成，但到达、返回、目标、到访或本次创作事实不完整，不能据此认定任务成功。 赠送汇总与原交付步骤、身份或任务权限不一致，请复核原始记录。",
+      "passed": true
+    },
+    {
+      "name": "self_transfer_consistent_goal_step_fact",
+      "load": "导入失败：赠送目标需要另一位收件人、木材数量和独立会面点。 当前仍显示上一份有效报告。",
+      "status": "已完成",
+      "transferVerified": "true",
+      "transferText": "赠送已核实：a1 → a2 · 3 木材 · v57",
+      "warning": "",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "worldRequests": [],
+  "actualModelCalls": 0,
+  "browserVersion": "152.0.7977.82"
+}

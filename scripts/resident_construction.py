@@ -1,4 +1,4 @@
-"""Explicit r8 facility goals: public geometry plans; original receipts prove builds."""
+"""Explicit continuous facility goals: geometry plans; original receipts prove builds."""
 from copy import deepcopy
 import math
 
@@ -106,7 +106,8 @@ def evidence(receipt, intent, actor, before, observed):
     position = intent['action'].get('at')
     if (receipt.get('commandId') != intent['commandId'] or receipt.get('status') != 'committed'
             or type(receipt.get('schemaVersion')) is not int or receipt['schemaVersion'] != 1
-            or receipt.get('rulesVersion') != 'r8' or not isinstance(receipt.get('identity'), dict)
+            or receipt.get('rulesVersion') != intent.get('rulesVersion') or intent.get('rulesVersion') not in ('r8', 'r9')
+            or not isinstance(receipt.get('identity'), dict)
             or receipt['identity'].get('actorId') != actor
             or not valid_execution(receipt, intent) or not integer(before.get('inventoryWood'))
             or observed['stateVersion'] < receipt['stateVersion'] or observed['self']['actorId'] != actor
@@ -115,7 +116,7 @@ def evidence(receipt, intent, actor, before, observed):
             or type(result.get('inventoryWood')) is not int or result['inventoryWood'] != before['inventoryWood'] - cost):
         return None
     entity = next((e for e in observed['entities'] if e['entityId'] == result['entityId']), None)
-    if (entity is None or entity['ownerActorId'] != actor or entity['rulesVersion'] != 'r8'
+    if (entity is None or entity['ownerActorId'] != actor or entity['rulesVersion'] != intent['rulesVersion']
             or entity['definitionId'] != definition or entity['definitionVersion'] != 1
             or entity['position'] != position or entity['embodiedWood'] != cost):
         return None

@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "testsRun": 9,
+  "results": [
+    {
+      "name": "legacy_report_still_loads_without_transfer_controls",
+      "passed": true
+    },
+    {
+      "name": "actual_gift_report_has_original_sender_recipient_and_amount",
+      "passed": true
+    },
+    {
+      "name": "actual_recipient_separately_shows_received_event_and_own_construction",
+      "passed": true
+    },
+    {
+      "name": "wrong_transfer_facts_or_authorization_never_claim_verified",
+      "passed": true
+    },
+    {
+      "name": "missing_execution_and_mixed_rules_are_rejected_without_replacing_valid_report",
+      "passed": true
+    },
+    {
+      "name": "unknown_gift_remains_unconfirmed_even_when_an_incoming_event_exists",
+      "passed": true
+    },
+    {
+      "name": "recent_events_keep_sender_scope_and_truncation",
+      "passed": true
+    },
+    {
+      "name": "mobile_report_keeps_actual_gift_and_build_readable",
+      "passed": true
+    },
+    {
+      "name": "report_view_has_no_world_commands_or_runtime_errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "worldRequests": [],
+  "browserVersion": "152.0.7977.82",
+  "actualModelCalls": 0
+}

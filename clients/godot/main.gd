@@ -3,6 +3,7 @@ extends Node3D
 const Client = preload("res://world_client.gd")
 const View = preload("res://world_view.gd")
 const Navigation = preload("res://world_navigation.gd")
+const TransferPanel = preload("res://transfer_panel.gd")
 var client: Node
 var navigation: Node
 var world_view: SubViewportContainer
@@ -14,6 +15,9 @@ var platform_button: Button
 var bridge_button: Button
 var query_button: Button
 var retry_button: Button
+var transfer_button: Button
+var transfer_panel: PanelContainer
+var transfer_history: Label
 var url_input: LineEdit
 var token_input: LineEdit
 var connection_panel: PanelContainer
@@ -115,6 +119,8 @@ func _build_ui() -> void:
 	top.add_child(info)
 	_text(info,"荒野  /  最初的居民",21)
 	inventory_label = _text(info,"正在进入世界…",16,Color("e6c98a"))
+	transfer_history = _text(info,"",13,Color("b7c2a4"))
+	transfer_history.hide()
 	var controls = VBoxContainer.new()
 	controls.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
 	controls.offset_left = -190
@@ -123,7 +129,20 @@ func _build_ui() -> void:
 	root.add_child(controls)
 	_button(controls,"连接 / 切换居民",func():
 		_stop_walk()
+		transfer_panel.hide()
 		connection_panel.visible = not connection_panel.visible)
+	transfer_button = _button(controls,"赠送木材",func():
+		_stop_walk()
+		connection_panel.hide()
+		transfer_panel.visible = not transfer_panel.visible)
+	transfer_panel = TransferPanel.new()
+	transfer_panel.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+	transfer_panel.offset_left = -420
+	transfer_panel.offset_right = -24
+	transfer_panel.offset_top = 125
+	transfer_panel.add_theme_stylebox_override("panel", _style(Color(0.09,0.15,0.12,0.96)))
+	root.add_child(transfer_panel)
+	transfer_panel.requested.connect(_transfer)
 	connection_panel = _panel(root,Control.PRESET_TOP_RIGHT,Vector2(-420,80))
 	connection_panel.custom_minimum_size.x = 396
 	var connection = VBoxContainer.new()
@@ -201,6 +220,20 @@ func _render() -> void:
 	gather_button.disabled = not ready or _nearest().is_empty()
 	platform_button.disabled = not ready or observation.get("self",{}).get("inventory",{}).get("wood",0) < 3
 	bridge_button.disabled = not ready or observation.get("self",{}).get("inventory",{}).get("wood",0) < 6
+	transfer_button.visible = Client.Evidence.transfer_supported(observation)
+	transfer_button.disabled = not ready
+	transfer_panel.update_world(observation, ready)
+	if not transfer_button.visible:
+		transfer_panel.hide()
+	transfer_history.visible = transfer_button.visible
+	var history: Array[String] = []
+	for event in observation.get("recentTransfers", {}).get("items", []).slice(-3):
+		if event.get("type") == "woodTransferred" and event.get("actorId") is String \
+			and event.get("recipientActorId") is String and Client.Evidence.whole(event.get("quantity")):
+			var sender = "你" if event.actorId == observation.get("self", {}).get("actorId") else event.actorId
+			var recipient = "你" if event.recipientActorId == observation.get("self", {}).get("actorId") else event.recipientActorId
+			history.append("%s → %s · %d 木材" % [sender, recipient, event.quantity])
+	transfer_history.text = "最近交付\n" + "\n".join(history) if not history.is_empty() else "尚无木材交付记录"
 	if observation.is_empty():
 		status_label.text = client.message
 		return
@@ -213,6 +246,7 @@ func _render() -> void:
 			selected_node = ""
 			build_recipe = ""
 			world_view.ghost.visible = false
+			transfer_panel.hide()
 			input_suspended = true
 		if connection_changed:
 			receipt_id = ""
@@ -239,7 +273,11 @@ func _render() -> void:
 		else:
 			if client.last_receipt.result.action == "gather":
 				world_view.gather_feedback(client.last_receipt.result.nodeId)
-			status_label.text = "采集完成  +1 木材" if client.last_receipt.result.action == "gather" else "建造完成"
+			if client.last_receipt.result.action == "transfer":
+				status_label.text = "已向 %s 赠送 %d 木材" % [client.last_receipt.result.recipientActorId, client.last_receipt.result.quantity]
+				transfer_panel.hide()
+			else:
+				status_label.text = "采集完成  +1 木材" if client.last_receipt.result.action == "gather" else "建造完成"
 			message_until = Time.get_ticks_msec()/1000.0+2
 	if not ready and not client.busy:
 		input_suspended = true
@@ -255,6 +293,8 @@ func _render() -> void:
 		target_label.text = "探索河谷，寻找树木与合适的营地。"
 
 func _clicked(point: Vector2, node_id: String) -> void:
+	if transfer_panel.visible:
+		return
 	_stop_walk()
 	var request := route_request
 	while client.busy:
@@ -354,6 +394,7 @@ func _begin_build(recipe: String) -> void:
 	_render()
 
 func _cancel() -> void:
+	transfer_panel.hide()
 	_stop_walk()
 	selected_node = ""
 	build_recipe = ""
@@ -373,8 +414,17 @@ func _gather() -> void:
 		return
 	await client.send_action({"type":"gather","nodeId":tree.nodeId})
 
+func _transfer(recipient: String, amount: int) -> void:
+	_stop_walk()
+	input_suspended = true
+	await client.send_action({"type": "transfer", "recipientActorId": recipient, "resource": "wood", "quantity": amount})
+
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo or get_viewport().gui_get_focus_owner() is LineEdit:
+		return
+	if transfer_panel.visible:
+		if event.physical_keycode == KEY_ESCAPE:
+			transfer_panel.hide()
 		return
 	match event.physical_keycode:
 		KEY_W, KEY_A, KEY_S, KEY_D, KEY_UP, KEY_LEFT, KEY_DOWN, KEY_RIGHT: _stop_walk()
@@ -395,7 +445,7 @@ func _physics_process(delta: float) -> void:
 			await client.refresh()
 		return
 	var direction = Vector2.ZERO
-	if not get_viewport().gui_get_focus_owner() is LineEdit and build_recipe.is_empty():
+	if not get_viewport().gui_get_focus_owner() is LineEdit and build_recipe.is_empty() and not transfer_panel.visible:
 		direction = Vector2(int(Input.is_physical_key_pressed(KEY_D) or Input.is_physical_key_pressed(KEY_RIGHT))-int(Input.is_physical_key_pressed(KEY_A) or Input.is_physical_key_pressed(KEY_LEFT)),int(Input.is_physical_key_pressed(KEY_S) or Input.is_physical_key_pressed(KEY_DOWN))-int(Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_UP))).normalized()
 	if direction == Vector2.ZERO:
 		input_suspended = false

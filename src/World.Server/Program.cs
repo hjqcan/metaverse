@@ -98,13 +98,16 @@ if (database.Scenario.SupportsContinuous)
         if (context.Request.Path is { Value: "/" or "/index.html" })
         {
             context.Response.ContentType = "text/html; charset=utf-8";
-            await context.Response.WriteAsync("""
+            var nativeCommand = database.Scenario.SupportsTransfer ? "npm run start:godot:cooperation" : "npm run start:godot";
+            var cooperation = database.Scenario.SupportsTransfer ? "<p>走近另一位居民，选择「赠送木材」，确认收件人与数量后交付。</p>" : "";
+            await context.Response.WriteAsync($$"""
                 <!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
                 <title>荒野 · 连续世界</title>
                 <style>body{margin:12vh auto;padding:24px;max-width:620px;background:#17271f;color:#e9e8d5;font:18px/1.8 sans-serif}h1{font-size:34px}code{display:block;padding:18px;background:#294032;border-radius:8px;color:#e4c98e}a{color:#bbd3ad}</style>
                 <h1>荒野 · 连续世界</h1><p>河谷、树木与最初的居民。使用 Godot 客户端进入3D场景，自由行走、采集木材并建造。</p>
-                <p>在项目目录运行：</p><code>npm run start:godot</code>
+                <p>在项目目录运行：</p><code>{{nativeCommand}}</code>
                 <p>WASD 行走 · E 采集 · 1 / 2 建造 · 点击地面前往</p>
+                {{cooperation}}
                 <p><a href="/resident.html">查看居民任务报告</a></p></html>
                 """);
             return;

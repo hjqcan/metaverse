@@ -27,6 +27,7 @@ from wilderness_materials import collection_plan, valid_gather_receipt
 import continuous_navigation as continuous
 import resident_construction as construction
 import command_preconditions as preconditions
+import resident_transfer as transfer
 
 
 def _utc():
@@ -40,7 +41,7 @@ def _integer(value, low, high):
 def _spec(value):
     required = {"missionId", "objective", "goals", "allowBuild", "budgets"}
     if (not isinstance(value, dict) or not required <= set(value)
-            or set(value) - required - {"allowGather", "sharePostcard", "paintMosaic", "proposeMosaic", "reviewMosaicProposal"}):
+            or set(value) - required - {"allowGather", "allowTransfer", "sharePostcard", "paintMosaic", "proposeMosaic", "reviewMosaicProposal"}):
         raise ValueError("Invalid mission spec fields")
     if not isinstance(value["missionId"], str) or not re.fullmatch(r"[A-Za-z0-9_-]{1,64}", value["missionId"]):
         raise ValueError("Invalid missionId")
@@ -50,6 +51,8 @@ def _spec(value):
         raise ValueError("allowBuild must be boolean")
     if "allowGather" in value and type(value["allowGather"]) is not bool:
         raise ValueError("allowGather must be boolean")
+    if 'allowTransfer' in value and type(value['allowTransfer']) is not bool:
+        raise ValueError('allowTransfer must be boolean')
     if "sharePostcard" in value and type(value["sharePostcard"]) is not bool:
         raise ValueError("sharePostcard must be boolean")
     if "paintMosaic" in value and type(value["paintMosaic"]) is not bool:
@@ -69,8 +72,11 @@ def _spec(value):
     ids = set()
     for goal in goals:
         if (not isinstance(goal, dict) or not {'id', 'label', 'target'} <= set(goal)
-                or set(goal) - {'id', 'label', 'target', 'activityId', 'buildRecipeId'}):
+                or set(goal) - {'id', 'label', 'target', 'activityId', 'buildRecipeId', 'transfer'}):
             raise ValueError("Invalid goal fields")
+        if 'transfer' in goal and (not transfer.valid_goal(goal['transfer']) or value.get('allowTransfer') is not True
+                                   or any(k in goal for k in ('activityId', 'buildRecipeId'))):
+            raise ValueError('Transfer goals require explicit recipient, quantity, permission and a separate meeting point')
         if 'buildRecipeId' in goal:
             if (not isinstance(goal['buildRecipeId'], str) or goal['buildRecipeId'] not in construction.RECIPES or not value['allowBuild']
                     or 'activityId' in goal):
@@ -134,7 +140,7 @@ def _save(path, state):
 def _public(observed, share_postcard=False, paint_mosaic=False, consent=False):
     """No session identity, credentials, private peer inventory or client fields."""
     world = {key: deepcopy(observed["world"][key])
-             for key in ("id", "instanceId", "width", "height", "blocked", "water", "goal", "coordinateSystem", "bounds") if key in observed["world"]}
+             for key in ("id", "instanceId", "scenarioId", "width", "height", "blocked", "water", "goal", "coordinateSystem", "bounds") if key in observed["world"]}
     world["entities"] = [{key: deepcopy(entity[key]) for key in (
         "entityId", "definitionId", "definitionVersion", "rulesVersion", "ownerActorId", "position", "embodiedWood")
         if key in entity} for entity in observed.get("entities", [])]
@@ -160,6 +166,10 @@ def _public(observed, share_postcard=False, paint_mosaic=False, consent=False):
         public['terrain'] = continuous.public_geometry(observed)
         world['terrain'] = deepcopy(public['terrain'])
         world['resourceNodes'] = deepcopy(public['resourceNodes'])
+    if transfer.supported(observed):
+        public['materialTransfer'] = deepcopy(observed['materialTransfer'])
+        public['residents'] = [{'actorId': r['actorId'], 'position': deepcopy(r['position'])} for r in observed['residents']]
+        world['recentTransfers'] = deepcopy(observed['recentTransfers'])
     entry = public_entry_guide(observed)
     if entry is not None:
         public["entryGuide"] = entry
@@ -194,7 +204,10 @@ def _validate_goals(spec, observed):
             raise ValueError("invalid_mosaic_consent_capability")
     for goal in spec["goals"]:
         if 'buildRecipeId' in goal and not free_movement:
-            raise ValueError('Explicit construction goals require the continuous r8 world')
+            raise ValueError('Explicit construction goals require a continuous world')
+        if 'transfer' in goal and (not transfer.supported(observed) or preconditions.select_mode(observed) is None
+                                   or goal['transfer']['recipientActorId'] == observed['self']['actorId']):
+            raise ValueError('Transfer goals require the protected r9 capability and another recipient')
         if any(n >= bound for n, bound in zip(goal["target"], (observed["world"]["width"], observed["world"]["height"]))):
             raise ValueError("Goal target outside world")
         if "activityId" in goal:
@@ -337,7 +350,8 @@ def _route_info(observed, target, allow_build, allow_gather=False):
 def _context(spec, observed):
     candidates = []
     for goal in spec["goals"]:
-        info = (construction.plan(observed, goal, spec.get('allowGather', False)) if 'buildRecipeId' in goal
+        info = (transfer.plan(observed, goal, spec['allowBuild'], spec.get('allowGather', False)) if 'transfer' in goal else
+                construction.plan(observed, goal, spec.get('allowGather', False)) if 'buildRecipeId' in goal
                 else _route_info(observed, goal["target"], spec["allowBuild"], spec.get("allowGather", False)))
         activity = next((a for a in observed.get("activities", []) if a["id"] == goal.get("activityId")), None)
         if activity is not None and info["commands"] is not None:
@@ -452,6 +466,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             if saved["spec"] != spec:
                 raise ValueError("State belongs to a different mission spec")
         mode = preconditions.saved_mode(state) if state is not None else None
+        if state is not None:
+            transfer.validate_saved(state)
 
         def report():
             result = deepcopy({k: v for k, v in state.items() if k != "_state"})
@@ -459,6 +475,10 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             result["mission"].setdefault("sharePostcard", spec.get("sharePostcard", False))
             result["mission"].setdefault("allowGather", spec.get("allowGather", False))
             result['mission'].setdefault('allowBuild', spec['allowBuild'])
+            result['mission'].setdefault('allowTransfer', spec.get('allowTransfer', False))
+            result['facts'].setdefault('transferCompleted', False)
+            result['facts'].setdefault('transfer', None)
+            result['facts'].setdefault('woodTransferred', 0)
             result["facts"].setdefault("woodGathered", 0)
             result["mission"].setdefault("paintMosaic", spec.get("paintMosaic", False))
             result["mission"].setdefault("proposeMosaic", spec.get("proposeMosaic", False))
@@ -495,6 +515,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                            else "已核验活动到访、拒绝提议与返回；未改图")
             if state['facts'].get('constructionBuilt'):
                 summary = '已核验指定设施建成、到达与返回'
+            if state['facts'].get('transferCompleted'):
+                summary = '已核验会面交付木材与返回'
             state["feedback"] = {"summary": summary if status == "completed" else reason,
                                  "issues": [] if status in ("completed", "paused") else [reason], "suggestions": []}
             save()
@@ -556,6 +578,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                      "mission": {"id": spec["missionId"], "objective": spec["objective"],
                                  "allowBuild": spec['allowBuild'],
                                  "allowGather": spec.get("allowGather", False),
+                                 "allowTransfer": spec.get("allowTransfer", False),
                                  "arrivalTolerance": continuous.ARRIVAL_TOLERANCE if continuous.continuous(observed) else 0,
                                  "sharePostcard": spec.get("sharePostcard", False),
                                  "paintMosaic": spec.get("paintMosaic", False),
@@ -589,6 +612,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
         facts.setdefault("woodGathered", 0)
         facts.setdefault('constructionBuilt', False)
         facts.setdefault('construction', None)
+        facts.setdefault('transferCompleted', False)
+        facts.setdefault('transfer', None)
+        facts.setdefault('woodTransferred', 0)
         facts.setdefault("activityCompleted", False)
         facts.setdefault("activityVisit", None)
         facts.setdefault("postcardShared", False)
@@ -655,8 +681,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             needs_proposal = spec.get("proposeMosaic", False) and not facts["mosaicProposed"]
             needs_review = bool(spec.get("reviewMosaicProposal")) and not facts["mosaicReviewed"]
             needs_construction = 'buildRecipeId' in goal and not facts['constructionBuilt']
+            needs_transfer = 'transfer' in goal and not facts['transferCompleted']
             ready_to_return = (facts["goalReached"] and not any((needs_visit, needs_postcard, needs_mosaic,
-                                                               needs_proposal, needs_review, needs_construction)))
+                                                               needs_proposal, needs_review, needs_construction, needs_transfer)))
             if pending is None:
                 if ready_to_return and facts["returned"]:
                     return finish("completed", "round_trip_verified")
@@ -672,7 +699,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                     return finish("budget_exhausted", "commands")
                 returning = ready_to_return
                 target = state["mission"]["origin"] if returning else goal["target"]
-                info = (construction.plan(observed, goal, spec.get('allowGather', False)) if needs_construction
+                info = (transfer.plan(observed, goal, spec['allowBuild'], spec.get('allowGather', False)) if needs_transfer else
+                        construction.plan(observed, goal, spec.get('allowGather', False)) if needs_construction
                         else _route_info(observed, target, spec['allowBuild'] and 'buildRecipeId' not in goal,
                                          spec.get('allowGather', False)))
                 if continuous.continuous(observed):
@@ -690,6 +718,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                     action, reason = deepcopy(info['nextAction']), info['nextReason']
                     if action['type'] == 'build':
                         cost = next(r['woodCost'] for r in observed['recipes'] if r['id'] == action['recipeId'])
+                    if action['type'] == 'transfer':
+                        cost = action['quantity']
                     if action['type'] == 'walk':
                         time.sleep(observed['movement']['maxStepDistance'] / observed['movement']['speed'] + .005)
                         save()
@@ -747,6 +777,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 if mode is not None:
                     intent['preconditionMode'] = mode
                 pending = {"request": intent, "woodCost": cost}
+                if action['type'] == 'transfer':
+                    pending['transferBefore'] = {'position': deepcopy(position), 'inventoryWood': observed['self']['inventory']['wood']}
                 if continuous.continuous(observed) and action['type'] == 'build':
                     pending['constructionBefore'] = {'inventoryWood': observed['self']['inventory']['wood']}
                 if action['type'] == 'walk':
@@ -868,7 +900,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             committed = (status == 200 and isinstance(result, dict) and result.get("status") == "committed"
                          and result.get("commandId") == intent["commandId"] and not error)
             rejected = (400 <= status < 500 and isinstance(error, dict) and error.get("mutated") is False
-                        and status not in (404, 412, 428)
+                        and status not in (412, 428) and (status != 404 or (intent['action']['type'] == 'transfer'
+                            and error.get('code') == 'RESIDENT_NOT_FOUND' and result.get('status') == 'rejected'
+                            and result.get('commandId') == intent['commandId']))
                         and error.get("code") not in ("IDEMPOTENCY_CONFLICT", "INVALID_WORLD_INSTANCE",
                                                      "WORLD_INSTANCE_REQUIRED", "WORLD_INSTANCE_MISMATCH", "WORLD_INSTANCE_UNAVAILABLE")
                         and (not receipt_query or (result.get("status") == "rejected"
@@ -878,7 +912,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 # A proxy/query error that resembles STALE_STATE cannot settle it.
                 rejected = (rejected and result.get("status") == "rejected"
                             and result.get("commandId") == intent["commandId"])
-            if (intent["action"]["type"] in ("gather", "walk") or 'constructionBefore' in pending) and rejected:
+            if (intent["action"]["type"] in ("gather", "walk", "transfer") or 'constructionBefore' in pending) and rejected:
                 rejected = (result.get("status") == "rejected" and result.get("commandId") == intent["commandId"]
                             and isinstance(result.get("identity"), dict)
                             and result["identity"].get("actorId") == state["mission"]["actorId"]
@@ -907,6 +941,14 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                         return finish("unknown", "unconfirmed_gather_receipt")
                     facts["woodGathered"] += 1
                     step["evidenceSource"] = "command_receipt"
+                elif intent['action']['type'] == 'transfer':
+                    given = transfer.evidence(result, intent, state['mission']['actorId'], pending.get('transferBefore'),
+                                              state['mission']['worldInstanceId'])
+                    if given is None:
+                        step['status'] = 'unknown'
+                        return finish('unknown', 'unconfirmed_transfer_receipt')
+                    facts.update(transferCompleted=True, transfer=given, woodTransferred=facts['woodTransferred'] + given['quantity'])
+                    step['evidenceSource'] = 'command_receipt'
                 elif 'constructionBefore' in pending:
                     try:
                         after_build = observe()
@@ -972,6 +1014,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                     facts["createdEntityIds"].append(result_action["entityId"])
                 elif intent["action"]["type"] == "claim":
                     facts["woodClaimed"] += intent["action"]["quantity"]
+                elif intent['action']['type'] == 'transfer':
+                    used['wood'] += pending['woodCost']
                 if "inventoryWood" in result_action:
                     step["inventoryWood"] = result_action["inventoryWood"]
                 if intent["action"]["type"] == "move":

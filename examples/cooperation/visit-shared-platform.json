@@ -1,0 +1,15 @@
+{
+  "missionId": "visit-gift-built-platform",
+  "objective": "从西岸沿已有公共桥到达 a2 用赠送木材建成的平台，再返回原起点。全程不采集、不建造、不赠送木材。",
+  "goals": [
+    {
+      "id": "platform",
+      "label": "a2 建成的东岸平台",
+      "target": [28, 16]
+    }
+  ],
+  "allowBuild": false,
+  "allowGather": false,
+  "allowTransfer": false,
+  "budgets": {"commands": 200, "wood": 0, "seconds": 600, "modelCalls": 1}
+}

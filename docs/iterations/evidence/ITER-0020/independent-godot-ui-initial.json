@@ -1,0 +1,113 @@
+{
+  "passed": false,
+  "client": "godot",
+  "binarySha256": "28da17e28113f3d039fbce3962c4ed6f877ca90b3544c8327f3ecb85b8273534",
+  "sourceHashes": {
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/mosaic_inbox.py": "a9c0772e5946af581c3b423c8e5986b05413348a3e528c8d5a0b18401367aa59",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/check.py": "19f406e2cd4023ef106c8787ddc94ff6de6959defb5c44930a9f3ea70f23cce1",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/postcard_text.py": "db3429983b8ee2062ab70f4c7e46b763c5839934f65a2a6776638f8c0a280a4c",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/activity_choice.py": "84bd020783870725947663eb41500977096c86e366099b4fb8607c9d1c049b5a",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/passage_agent.py": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/test_agent_accounts.py": "07c9e2e66bcfec99a9d57ed7b9ba3497769d06bee5b838ca6c24a0264647df5c",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/agent_accounts.py": "f1844d9db668e864ab215d0d811b884b6301500bfe260bb9bf9d9cfdbc481f10",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/resident_transfer.py": "02a24a41c1a3957abfcadc4622336e9ac1de95ff261e6c8e1c4cdb5147264ed0",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/resident_mission.py": "48512543a1593cd58ecdfaad39cc696398c9c41ab211ff6a860ab5c2209e603d",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/wilderness_materials.py": "12a74e971b97aa64623082f8c7606ac2a6ed357278f52ab9daedbc7e1e728fa7",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/codex_goal_selector.py": "3a455c2906aaa3764c85794cb581300979f57cb3f24b46fe437fbd287a8b6936",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/continuous_navigation.py": "236b06a0224c99c921d90da56511f819c6121f44cf1849e6978af93bbf3b8294",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/entry_guide.py": "9b768237d39f2e4b4820e0178508c132408215aa6653c996eaf9b6e913d79dbb",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/mosaic_consent.py": "cb3acc34abe43c6988359bc307755ad6d2743ac5e850bccaf165f14ae561eae9",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/run_resident.py": "735e383aa13aa68a79ecb9e94f434de280485fe4636a4ed03dbf0ee7422c30aa",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/mosaic_patch.py": "4abdb035967733e4aacbe175a37f8b32686de6182ded2fee888203726b0461a6",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/command_preconditions.py": "6ff9b88e923c71c1193c047c380371278d144d236f8a91f873c058779196bb9a",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/scripts/resident_construction.py": "bf75c0d373ad8268b461d66a523258d00cf5b2e1c8138be11d1dbed23b009c02",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/godot_recovery.py": "124b7333368bf037c139ffa0f4ffabaa2a0443c74fac1f42437dab6defd54904",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/world_instance_api.py": "fa9d90866795de5efe03f57eede1bf087faf771aabc5bba4fdd3c4b28a94bd80",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/construction_mission_api.py": "e9dc566e333f1eacbd534c128c494b797d5a2dfa2f88c56ee8365eb5a74be646",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/wilderness_mission_api.py": "af5794e74ec77b9f063ae00f139ec796fc370f3e412b572c9abc2b16dacace5a",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/godot_client.py": "0dc1af28d42a8643da0f9e2eb2fcd3074ded46be79b56d9bc16224fb98ae7d10",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/material_transfer_api.py": "bc0d889878d3b2ee8597df20df8c2135561bfd39d26e187c8afd6e2376c9fca6",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/passage_api.py": "be1f2c2697429c520eea0251bcc270873bafaf6d966914cddf53f4f9a788b93b",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/resident_mission_api.py": "d0e447530f6cd9b2c84f57abd53cd0b159311e23ec611b92ba448ef3e1509fb0",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/godot_navigation.py": "77c4718c4cd66fda06a8812067bdb34cf714398d38f05a8f35155d436d9864eb",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_api.py": "92be7e3b925a10d54489bce2eda2d11fc725ae0be3f26a0dfde1089ef7588210",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/actor_state_api.py": "41f93c2bff865302cd6b009165883fd557e9a2d43d09d47ebf2632a3562f664e",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/mosaic_api.py": "6a0b48b0bdf8761a68d1e5154be98bdb62adc9a18fee20f063cd107f264099ec",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/transfer_mission_api.py": "e1c7ae52d96d6260de78482d1e21684d810f6119b56a075ee02b462c860ea239",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/inbox_live.py": "3e85c54f4d602662682785746b0887bd962a0b9f74718ecc20cf5fdf2ae66509",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/wilderness_api.py": "467885da080ee14ca57a03a7dbe8df33799ab546b3a0ba2e4070b9df32fd1c33",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/godot_attribution.py": "9f34aad109cb1f67506c0c4d1559e2b738f7d769764492209cc8d3ea4408ddf5",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/consent_live.py": "1bc9ce77646bfe08690189fc827c2ce60f0851080a2b65a2fdfb9203ca94711d",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/postcards_api.py": "2e611014d4c01c09c1ef5f25acfe2abcce040ae64137dd127a11f091162ef99f",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_mission_api.py": "e0dfbf6083d2773dff0dc4d978d0493d4ee5ac8db34785b0a3a6d12a33951d3e",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/actor_state_godot.py": "b4c07012ff2618e19b4fb3640226872f6bdf2080e980a4351026d0039c21f690",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/activity_comparison.py": "827145d8307035ad075ad5dbdae73e09cd550c38cbb03155fbfef4d13ed1a18d",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/continuous_godot.py": "70b058cdbf0fcfb819db8fe6eeea142d4d4d7733c5a42a0314396b1196e31eed",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/inbox_api.py": "d2efc6118a78da6ec1dc55f9121b4abc8a39841139917cd5ad26893772ef6aa8",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/entry_guide_api.py": "91df590e7840cf2368e83e0df1e67972e626f0efda7f249f087b61daf51144f3",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/mosaic_live.py": "048df0681a989c31a37b470b79e984b2b83ee265de49cb0a362fce427a1a9df4",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/postcards_live.py": "862eb94300c6bdb2943f55700381c6ee57a3b2f49bae7c9da234782b408a9347",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/actor_mission_api.py": "5151c1a1d6dff76df082262fe222e4b1fc43de819fc7c4298e4b9cb15e19e796",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/world_instance_godot.py": "9ddf85e234e48fd62307e57178820d9e7d1a5535a04efcb4aae5ee5d2129984c",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/activities_api.py": "e38baa375a59e19d898adb4a77284419bd3bb93ab6bb62d638353aa9128efb0b",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/consent_api.py": "50d09e00e9f108103cf0f981acfa6ec1c48d360d0aae20f57474e5d38e56279e",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/resident_live.py": "e4c2a1e451c033ab17d1aab6261c7872191a062b2998fc033a151e5c8d32e215",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/transfer_godot.py": "e21d09f4375ac2515bc41e74fc24fdb6d1acf1880d4f29e0931bfcc9670183b2",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/foundation_api.py": "3ac9a40c8c29ff6a299eb3cb439e0f05415f995d15e5f45b40f86a6c4e771e55",
+    "/home/wangjunfeng/文档/Workspace/metaverse/tests/instance_mission_api.py": "f0545d2e55a3666df4a47fcb7d9094936dee2acc687c384d8773ac5e8890d80d",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/world_client.gd": "d02789910d833acd128794df5d7d51c0b43b791486a5d0dab74684c86a4d6ebc",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/main.tscn": "58496e2c5357a2774f2a70f19d0dcb9a015167d8bf9849dc68f4f20a7841e6b1",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/command_evidence.gd.uid": "7b4374e8d001f8b3fc7e3ff5d12a2975db836dcd02ed9e2ca0a4e0f85024f2dc",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/world_navigation.gd.uid": "d4ccd2ac77e3f4408df2a01e7c895f3add5e4523ac8d06c557b378f837c91bba",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/world_view.gd": "da4041cefec6ad60eb85ef7aba0c46e484c376461134a5c077e182ffd3a5b9b9",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/river.gdshader": "b5de02167c429ce338fff61bb0ad180aa4d2d1b7c5c1e96f3cbce3f4ba88631b",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/README.md": "bd145a3d1bbe0ff948d6164ea2eacf183764a2cb6ad3ff71c2a9dd552ee6cdab",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/main.gd": "886e5894ea0145295081e837b7e16f487487b2bf17e759a43e18cbba5dceab84",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/world_client.gd.uid": "56abf8fa207cd4ea42750a280d472a0f255957518312f7acb823a21d3ba251cf",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/pending_store.gd.uid": "86d0ee47a1ed2066f59a72b18ed3c5e2de1e3f5d504844eb4f08a08591a95237",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/main.gd.uid": "c960be527e23887e33cebd30a057161ab66d1a9f6b73c43a631bc9579333629c",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/river.gdshader.uid": "9fe415d335f9b2211ea606d9d9dd46917ca94024e0c3bf7cb55256ac92f1fd79",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/command_evidence.gd": "02b4a6b863526ac66e8ecfdc8f0b052621caf8ed2b381724fa3dc308db4428b0",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/transfer_panel.gd.uid": "4ee0363972e8c292566b98aa83768be222ae0c559d213a0000b8f0d62d49c4d2",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/world_view.gd.uid": "6e6fc39c648867029e54ecf8c84d97c24ab76b8c5a8b3b18745e10d09eb77029",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-ui-source-20261026T034905136104Z/clients/godot/pending_store.gd": "3b74ae2abe449eba670bc5874be1dcdc79de21a7cea18f31c8ab82016d2b4b31"
+  },
+  "externalModelCalls": 0,
+  "cases": [
+    {
+      "name": "ui",
+      "passed": false,
+      "ui": {
+        "checks": [
+          {
+            "name": "r9 gift entry ready",
+            "passed": true
+          },
+          {
+            "name": "mouse opens gift panel",
+            "passed": true
+          },
+          {
+            "name": "keyboard explicitly selects three wood",
+            "passed": false
+          }
+        ],
+        "evidence": {}
+      },
+      "failure": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer_godot_ui.py\", line 180, in <module>\n    assert run.returncode==0,(mode,run.returncode)\n           ^^^^^^^^^^^^^^^^^\nAssertionError: ('ui', 1)\n",
+      "audit": {
+        "totalMaterial": 12,
+        "stateVersion": 330,
+        "gifts": 0,
+        "processStopped": true
+      }
+    }
+  ],
+  "godotVersion": "4.7.2.stable.official.ed1daf0bf",
+  "scope": "Godot rendered r9 gift and incoming input stop",
+  "seedDir": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/transfer-http-20261026T033803285971Z/natural-seed"
+}

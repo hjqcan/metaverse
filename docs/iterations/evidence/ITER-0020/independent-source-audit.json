@@ -1,0 +1,258 @@
+{
+  "recordedAtUtc": "2026-10-26T04:01:17.358163+00:00",
+  "passed": true,
+  "finalCandidateFiles": [
+    {
+      "path": "clients/godot/command_evidence.gd",
+      "sha256": "74fe697d6ca09f97d3e527549e837e133aa02a026114a1238477625bcb9e99e7",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-ui-final-source-20261026T040007553131Z/clients/godot/command_evidence.gd"
+    },
+    {
+      "path": "clients/godot/main.gd",
+      "sha256": "886e5894ea0145295081e837b7e16f487487b2bf17e759a43e18cbba5dceab84",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-ui-final-source-20261026T040007553131Z/clients/godot/main.gd"
+    },
+    {
+      "path": "clients/godot/pending_store.gd",
+      "sha256": "3b74ae2abe449eba670bc5874be1dcdc79de21a7cea18f31c8ab82016d2b4b31",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-ui-final-source-20261026T040007553131Z/clients/godot/pending_store.gd"
+    },
+    {
+      "path": "clients/godot/transfer_panel.gd",
+      "sha256": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-ui-final-source-20261026T040007553131Z/clients/godot/transfer_panel.gd"
+    },
+    {
+      "path": "clients/godot/world_client.gd",
+      "sha256": "d02789910d833acd128794df5d7d51c0b43b791486a5d0dab74684c86a4d6ebc",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-ui-final-source-20261026T040007553131Z/clients/godot/world_client.gd"
+    },
+    {
+      "path": "clients/godot/world_navigation.gd",
+      "sha256": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-ui-final-source-20261026T040007553131Z/clients/godot/world_navigation.gd"
+    },
+    {
+      "path": "clients/godot/world_view.gd",
+      "sha256": "da4041cefec6ad60eb85ef7aba0c46e484c376461134a5c077e182ffd3a5b9b9",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-ui-final-source-20261026T040007553131Z/clients/godot/world_view.gd"
+    },
+    {
+      "path": "scripts/activity_choice.py",
+      "sha256": "84bd020783870725947663eb41500977096c86e366099b4fb8607c9d1c049b5a",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/activity_choice.py"
+    },
+    {
+      "path": "scripts/agent_accounts.py",
+      "sha256": "f1844d9db668e864ab215d0d811b884b6301500bfe260bb9bf9d9cfdbc481f10",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/agent_accounts.py"
+    },
+    {
+      "path": "scripts/check.py",
+      "sha256": "2f0224d10d2838610d86876c1eaa72f5f37bf1c1234491ba8f046c5a052f63c9",
+      "matchesIndependentFrozenSource": false,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/check.py"
+    },
+    {
+      "path": "scripts/codex_goal_selector.py",
+      "sha256": "3a455c2906aaa3764c85794cb581300979f57cb3f24b46fe437fbd287a8b6936",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/codex_goal_selector.py"
+    },
+    {
+      "path": "scripts/command_preconditions.py",
+      "sha256": "6ff9b88e923c71c1193c047c380371278d144d236f8a91f873c058779196bb9a",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/command_preconditions.py"
+    },
+    {
+      "path": "scripts/continuous_navigation.py",
+      "sha256": "236b06a0224c99c921d90da56511f819c6121f44cf1849e6978af93bbf3b8294",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/continuous_navigation.py"
+    },
+    {
+      "path": "scripts/entry_guide.py",
+      "sha256": "9b768237d39f2e4b4820e0178508c132408215aa6653c996eaf9b6e913d79dbb",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/entry_guide.py"
+    },
+    {
+      "path": "scripts/foundation_agent.py",
+      "sha256": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/foundation_agent.py"
+    },
+    {
+      "path": "scripts/mosaic_consent.py",
+      "sha256": "cb3acc34abe43c6988359bc307755ad6d2743ac5e850bccaf165f14ae561eae9",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/mosaic_consent.py"
+    },
+    {
+      "path": "scripts/mosaic_inbox.py",
+      "sha256": "a9c0772e5946af581c3b423c8e5986b05413348a3e528c8d5a0b18401367aa59",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/mosaic_inbox.py"
+    },
+    {
+      "path": "scripts/mosaic_patch.py",
+      "sha256": "4abdb035967733e4aacbe175a37f8b32686de6182ded2fee888203726b0461a6",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/mosaic_patch.py"
+    },
+    {
+      "path": "scripts/passage_agent.py",
+      "sha256": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/passage_agent.py"
+    },
+    {
+      "path": "scripts/postcard_text.py",
+      "sha256": "db3429983b8ee2062ab70f4c7e46b763c5839934f65a2a6776638f8c0a280a4c",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/postcard_text.py"
+    },
+    {
+      "path": "scripts/resident_construction.py",
+      "sha256": "bf75c0d373ad8268b461d66a523258d00cf5b2e1c8138be11d1dbed23b009c02",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/resident_construction.py"
+    },
+    {
+      "path": "scripts/resident_mission.py",
+      "sha256": "48512543a1593cd58ecdfaad39cc696398c9c41ab211ff6a860ab5c2209e603d",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/resident_mission.py"
+    },
+    {
+      "path": "scripts/resident_transfer.py",
+      "sha256": "1dae777a54fff93d1a73da96412e1a8a72b422e472c9ce5af5f77e12931d71d5",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/resident_transfer.py"
+    },
+    {
+      "path": "scripts/run_resident.py",
+      "sha256": "735e383aa13aa68a79ecb9e94f434de280485fe4636a4ed03dbf0ee7422c30aa",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/run_resident.py"
+    },
+    {
+      "path": "scripts/test_agent_accounts.py",
+      "sha256": "07c9e2e66bcfec99a9d57ed7b9ba3497769d06bee5b838ca6c24a0264647df5c",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/test_agent_accounts.py"
+    },
+    {
+      "path": "scripts/wilderness_materials.py",
+      "sha256": "12a74e971b97aa64623082f8c7606ac2a6ed357278f52ab9daedbc7e1e728fa7",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-python-v2-source-20261026T035210988031Z/scripts/wilderness_materials.py"
+    },
+    {
+      "path": "src/World.Server/ContinuousWorld.cs",
+      "sha256": "2135b427557aa12e2987333794759ca253e91e1d30bbe6fcd6c1cb8a491e6f0a",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-final-core-20261026T035624094793Z/src/World.Server/ContinuousWorld.cs"
+    },
+    {
+      "path": "src/World.Server/EntryGuide.cs",
+      "sha256": "097a08ad3f90f72e25743708e4f9a32e1cf2baec401c275bf7001a92655f3e8d",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-final-core-20261026T035624094793Z/src/World.Server/EntryGuide.cs"
+    },
+    {
+      "path": "src/World.Server/MaterialTransfer.cs",
+      "sha256": "413db75abfec5f98f7fc35344c7820ffd45b5f10c05f889918e0155e194befe1",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-final-core-20261026T035624094793Z/src/World.Server/MaterialTransfer.cs"
+    },
+    {
+      "path": "src/World.Server/Program.cs",
+      "sha256": "a4660bb99de219a3b937863bab43118257d5997997a26eee58b299918e176298",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-final-core-20261026T035624094793Z/src/World.Server/Program.cs"
+    },
+    {
+      "path": "src/World.Server/Protocol.cs",
+      "sha256": "b46e69f88a74d579a630d779ec4108006e72903df3c74638c2f52c30894a2e7f",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-final-core-20261026T035624094793Z/src/World.Server/Protocol.cs"
+    },
+    {
+      "path": "src/World.Server/ServerConfiguration.cs",
+      "sha256": "8b33f7b3aae70229397362d0571769198303507712accd624ecedb1320eea8d1",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-final-core-20261026T035624094793Z/src/World.Server/ServerConfiguration.cs"
+    },
+    {
+      "path": "src/World.Server/WorldDatabase.cs",
+      "sha256": "e38747e81cced79cb30a30423a647651f302bc84feb01e0a903aff249a8f578f",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-final-core-20261026T035624094793Z/src/World.Server/WorldDatabase.cs"
+    },
+    {
+      "path": "src/World.Server/WorldInstance.cs",
+      "sha256": "f865654d13b63ac9659fa119353b5e32b303484eab49215bb7796a49a5b3fd1b",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-final-core-20261026T035624094793Z/src/World.Server/WorldInstance.cs"
+    },
+    {
+      "path": "src/World.Server/WorldScenario.cs",
+      "sha256": "225bdf1cbe6f050e0d11b54b5572ab1d6bbff7800dd1902ed8b213c5b70f9563",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-final-core-20261026T035624094793Z/src/World.Server/WorldScenario.cs"
+    },
+    {
+      "path": "src/World.Server/WorldService.cs",
+      "sha256": "b3c53fefa10829f2c9980315f3e6d8c4e1ac5259a214d5e2fab1caedd5c41e98",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-final-core-20261026T035624094793Z/src/World.Server/WorldService.cs"
+    },
+    {
+      "path": "src/World.Server/bin/Debug/net10.0/World.Server.dll",
+      "sha256": "61b485499a20c3b45bc7ba0d26be995e4858ea2622ffedcf8c4eff414c3112e4",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-final-core-20261026T035624094793Z/server-bin/World.Server.dll"
+    },
+    {
+      "path": "src/World.Server/wwwroot/resident.css",
+      "sha256": "cd3986c35631c56a0e9e751edd958c0b5df3b3b4de1c9d40bba906c539d1c83c",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-ui-final-source-20261026T040007553131Z/src/World.Server/wwwroot/resident.css"
+    },
+    {
+      "path": "src/World.Server/wwwroot/resident.html",
+      "sha256": "1c742a92492f816a67a4338bb69e680e110a902807b793c1cc637ebf924b80aa",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-ui-final-source-20261026T040007553131Z/src/World.Server/wwwroot/resident.html"
+    },
+    {
+      "path": "src/World.Server/wwwroot/resident.js",
+      "sha256": "8f05d895187786f08036edef9536912e0c8798b93048135f792f30998f98413d",
+      "matchesIndependentFrozenSource": true,
+      "snapshot": "transfer-ui-final-source-20261026T040007553131Z/src/World.Server/wwwroot/resident.js"
+    }
+  ],
+  "sourceSnapshotMatches": 39,
+  "totalFiles": 40,
+  "testRunnerDifference": "scripts/check.py only adds material_transfer and transfer_mission HTTP suites and transfer-resident Chrome suite; no client/runtime behavior change; final npm test is builder run, not independent rerun",
+  "binaryCoverage": {
+    "28da17e28113f3d039fbce3962c4ed6f877ca90b3544c8327f3ecb85b8273534": "independent complete8 r9 core groups plus natural baseline and most Python/Godot/UI activity tests",
+    "61b485499a20c3b45bc7ba0d26be995e4858ea2622ffedcf8c4eff414c3112e4": "independent actual Godotv2 13 persisted invalid records plus original uncommitted recovery single gift and r8/r9 native entry pages"
+  },
+  "coreChange": "Only Program.cs native launch instruction text; transaction/protocol source hashes equal; full8 groups were not repeated on final DLL",
+  "browserFinal": "transfer-browser-final-20261026T040007555389Z/results.json",
+  "allSelfStartedServicesStopped": true,
+  "liveQaProcesses": [],
+  "finalGitCommitNotYetSupplied": true
+}

@@ -1,0 +1,4 @@
+{
+  "liveWorkspaceTestServices": [],
+  "scope": "World.Server dotnet processes and Python static HTTP servers with workspace cwd; no services stopped by this audit"
+}

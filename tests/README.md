@@ -4,7 +4,7 @@
 
 完整普通回归（构建一次，并行执行隔离的 HTTP／Chrome 套件，**不会调用真实模型**）：
 
-当前组合覆盖 **238 项 HTTP／SQLite、143 项 Chrome**，最终通过；包含完整运行及两处旧测试夹具修正后的专项复验，原始失败保留。结果见 [ITER-0019](../docs/iterations/ITER-0019-results.md)。Godot 专项单独运行，不计入这个总数。
+当前组合覆盖 **257 项 HTTP／SQLite、154 项 Chrome**，最终通过。完整执行先通过257／153，报告页最后的会面点与预算标签修正以11项专项复验替换原10项；结果见 [ITER-0020](../docs/iterations/ITER-0020-results.md)。Godot 专项单独运行，不计入这个总数。
 
 ```bash
 npm ci --prefix tests/browser --ignore-scripts
@@ -223,3 +223,12 @@ ITER-0018 时的 `npm run test:godot` 执行共享记录（6场景、400断言�
 普通回归新增 `python3 tests/actor_state_api.py`（10项）、`python3 tests/actor_mission_api.py`（12项）和 `node tests/browser/actor-resident.mjs`（9项）。验证无关居民干扰下的实际进展、同角色冲突停止、材料／占地争抢、原模式／原命令恢复和报告执行依据。全部使用实际服务，选择器为固定策略或明确测试替身，真实模型调用0。
 
 Godot入口另含 `python3 tests/actor_state_godot.py`（6组、43断言）和 `python3 tests/godot_attribution.py`（1组、27断言），均使用真实渲染进程；最终6套合计36组、595断言通过。独立测试者对原回执、损坏恢复记录、真实持键／路线停止及报告页面的验收，与作者回归分别列于[结果报告](../docs/iterations/ITER-0019-results.md)。
+
+
+## ITER-0020 自愿转让与合作建设
+
+`python3 tests/material_transfer_api.py` 验证9项真实HTTP／SQLite转账、空间、并发、故障与原回执；`python3 tests/transfer_mission_api.py` 验证10项真实有界任务、原ID恢复、权限／预算和零库存初态，均已加入 `npm test`。隔离初态由真实采集／建桥命令形成，冷副本不使用SQL注入材料。
+
+`node tests/browser/transfer-resident.mjs` 用真实任务报告执行11项Chrome检查，包含赠送与建造分列、自赠和会面点矛盾、旧报告及390px。可用 `TRANSFER_REPORT_DIR` 指向已完成测试的 `sender-report.json` / `recipient-report.json` 所在目录；否则脚本生成真实任务报告。
+
+`python3 tests/transfer_godot.py` 已加入 `npm run test:godot`；5组35断言覆盖真实鼠标／键盘赠送、接收后建造、入账停止、损坏回执和提交前后退出恢复，证据位于 `.local/iter0020/godot/`。合并旧套件为41组630断言；原始输入夹具失败和专项复验分别保留。独立测试Agent、研究反例及构建者CLI自检分列于[结果报告](../docs/iterations/ITER-0020-results.md)，不能互相代替。

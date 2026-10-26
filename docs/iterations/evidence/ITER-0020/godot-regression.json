@@ -1,0 +1,2906 @@
+{
+  "passed": true,
+  "groups": 41,
+  "assertions": 630,
+  "actualModelCalls": 0,
+  "scope": "Six existing suites plus five new transfer groups, with explicit focused reruns",
+  "existingSuites": [
+    {
+      "evidence": ".local/godot-recovery/20261026T034834Z-72c396/results.json",
+      "sha256": "a4a7292a5d50683da07d88a3276ac7f06cfa11184218746da4c17645cbda627a",
+      "groups": 6,
+      "assertions": 400,
+      "summary": {
+        "recordedAtUtc": "2026-10-26T03:48:35.723398+00:00",
+        "passed": true,
+        "actualModelCalls": 0,
+        "results": [
+          {
+            "name": "first",
+            "checks": [
+              {
+                "name": "both writers reached barrier",
+                "passed": true
+              },
+              {
+                "name": "publish first_0",
+                "passed": true
+              },
+              {
+                "name": "settle only first_0",
+                "passed": true
+              },
+              {
+                "name": "publish first_1",
+                "passed": true
+              },
+              {
+                "name": "publish first_2",
+                "passed": true
+              },
+              {
+                "name": "settle only first_2",
+                "passed": true
+              },
+              {
+                "name": "publish first_3",
+                "passed": true
+              },
+              {
+                "name": "publish first_4",
+                "passed": true
+              },
+              {
+                "name": "settle only first_4",
+                "passed": true
+              },
+              {
+                "name": "publish first_5",
+                "passed": true
+              },
+              {
+                "name": "publish first_6",
+                "passed": true
+              },
+              {
+                "name": "settle only first_6",
+                "passed": true
+              },
+              {
+                "name": "publish first_7",
+                "passed": true
+              },
+              {
+                "name": "publish first_8",
+                "passed": true
+              },
+              {
+                "name": "settle only first_8",
+                "passed": true
+              },
+              {
+                "name": "publish first_9",
+                "passed": true
+              },
+              {
+                "name": "publish first_10",
+                "passed": true
+              },
+              {
+                "name": "settle only first_10",
+                "passed": true
+              },
+              {
+                "name": "publish first_11",
+                "passed": true
+              },
+              {
+                "name": "publish first_12",
+                "passed": true
+              },
+              {
+                "name": "settle only first_12",
+                "passed": true
+              },
+              {
+                "name": "publish first_13",
+                "passed": true
+              },
+              {
+                "name": "publish first_14",
+                "passed": true
+              },
+              {
+                "name": "settle only first_14",
+                "passed": true
+              },
+              {
+                "name": "publish first_15",
+                "passed": true
+              },
+              {
+                "name": "publish first_16",
+                "passed": true
+              },
+              {
+                "name": "settle only first_16",
+                "passed": true
+              },
+              {
+                "name": "publish first_17",
+                "passed": true
+              },
+              {
+                "name": "publish first_18",
+                "passed": true
+              },
+              {
+                "name": "settle only first_18",
+                "passed": true
+              },
+              {
+                "name": "publish first_19",
+                "passed": true
+              },
+              {
+                "name": "publish first_20",
+                "passed": true
+              },
+              {
+                "name": "settle only first_20",
+                "passed": true
+              },
+              {
+                "name": "publish first_21",
+                "passed": true
+              },
+              {
+                "name": "publish first_22",
+                "passed": true
+              },
+              {
+                "name": "settle only first_22",
+                "passed": true
+              },
+              {
+                "name": "publish first_23",
+                "passed": true
+              },
+              {
+                "name": "publish first_24",
+                "passed": true
+              },
+              {
+                "name": "settle only first_24",
+                "passed": true
+              },
+              {
+                "name": "publish first_25",
+                "passed": true
+              },
+              {
+                "name": "publish first_26",
+                "passed": true
+              },
+              {
+                "name": "settle only first_26",
+                "passed": true
+              },
+              {
+                "name": "publish first_27",
+                "passed": true
+              },
+              {
+                "name": "publish first_28",
+                "passed": true
+              },
+              {
+                "name": "settle only first_28",
+                "passed": true
+              },
+              {
+                "name": "publish first_29",
+                "passed": true
+              },
+              {
+                "name": "publish first_30",
+                "passed": true
+              },
+              {
+                "name": "settle only first_30",
+                "passed": true
+              },
+              {
+                "name": "publish first_31",
+                "passed": true
+              },
+              {
+                "name": "publish first_32",
+                "passed": true
+              },
+              {
+                "name": "settle only first_32",
+                "passed": true
+              },
+              {
+                "name": "publish first_33",
+                "passed": true
+              },
+              {
+                "name": "publish first_34",
+                "passed": true
+              },
+              {
+                "name": "settle only first_34",
+                "passed": true
+              },
+              {
+                "name": "publish first_35",
+                "passed": true
+              },
+              {
+                "name": "publish first_36",
+                "passed": true
+              },
+              {
+                "name": "settle only first_36",
+                "passed": true
+              },
+              {
+                "name": "publish first_37",
+                "passed": true
+              },
+              {
+                "name": "publish first_38",
+                "passed": true
+              },
+              {
+                "name": "settle only first_38",
+                "passed": true
+              },
+              {
+                "name": "publish first_39",
+                "passed": true
+              },
+              {
+                "name": "publish first_40",
+                "passed": true
+              },
+              {
+                "name": "settle only first_40",
+                "passed": true
+              },
+              {
+                "name": "publish first_41",
+                "passed": true
+              },
+              {
+                "name": "publish first_42",
+                "passed": true
+              },
+              {
+                "name": "settle only first_42",
+                "passed": true
+              },
+              {
+                "name": "publish first_43",
+                "passed": true
+              },
+              {
+                "name": "publish first_44",
+                "passed": true
+              },
+              {
+                "name": "settle only first_44",
+                "passed": true
+              },
+              {
+                "name": "publish first_45",
+                "passed": true
+              },
+              {
+                "name": "publish first_46",
+                "passed": true
+              },
+              {
+                "name": "settle only first_46",
+                "passed": true
+              },
+              {
+                "name": "publish first_47",
+                "passed": true
+              },
+              {
+                "name": "publish first_48",
+                "passed": true
+              },
+              {
+                "name": "settle only first_48",
+                "passed": true
+              },
+              {
+                "name": "publish first_49",
+                "passed": true
+              },
+              {
+                "name": "publish first_50",
+                "passed": true
+              },
+              {
+                "name": "settle only first_50",
+                "passed": true
+              },
+              {
+                "name": "publish first_51",
+                "passed": true
+              },
+              {
+                "name": "publish first_52",
+                "passed": true
+              },
+              {
+                "name": "settle only first_52",
+                "passed": true
+              },
+              {
+                "name": "publish first_53",
+                "passed": true
+              },
+              {
+                "name": "publish first_54",
+                "passed": true
+              },
+              {
+                "name": "settle only first_54",
+                "passed": true
+              },
+              {
+                "name": "publish first_55",
+                "passed": true
+              },
+              {
+                "name": "publish first_56",
+                "passed": true
+              },
+              {
+                "name": "settle only first_56",
+                "passed": true
+              },
+              {
+                "name": "publish first_57",
+                "passed": true
+              },
+              {
+                "name": "publish first_58",
+                "passed": true
+              },
+              {
+                "name": "settle only first_58",
+                "passed": true
+              },
+              {
+                "name": "publish first_59",
+                "passed": true
+              },
+              {
+                "name": "publish first_60",
+                "passed": true
+              },
+              {
+                "name": "settle only first_60",
+                "passed": true
+              },
+              {
+                "name": "publish first_61",
+                "passed": true
+              },
+              {
+                "name": "publish first_62",
+                "passed": true
+              },
+              {
+                "name": "settle only first_62",
+                "passed": true
+              },
+              {
+                "name": "publish first_63",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "second",
+            "checks": [
+              {
+                "name": "both writers reached barrier",
+                "passed": true
+              },
+              {
+                "name": "publish second_0",
+                "passed": true
+              },
+              {
+                "name": "settle only second_0",
+                "passed": true
+              },
+              {
+                "name": "publish second_1",
+                "passed": true
+              },
+              {
+                "name": "publish second_2",
+                "passed": true
+              },
+              {
+                "name": "settle only second_2",
+                "passed": true
+              },
+              {
+                "name": "publish second_3",
+                "passed": true
+              },
+              {
+                "name": "publish second_4",
+                "passed": true
+              },
+              {
+                "name": "settle only second_4",
+                "passed": true
+              },
+              {
+                "name": "publish second_5",
+                "passed": true
+              },
+              {
+                "name": "publish second_6",
+                "passed": true
+              },
+              {
+                "name": "settle only second_6",
+                "passed": true
+              },
+              {
+                "name": "publish second_7",
+                "passed": true
+              },
+              {
+                "name": "publish second_8",
+                "passed": true
+              },
+              {
+                "name": "settle only second_8",
+                "passed": true
+              },
+              {
+                "name": "publish second_9",
+                "passed": true
+              },
+              {
+                "name": "publish second_10",
+                "passed": true
+              },
+              {
+                "name": "settle only second_10",
+                "passed": true
+              },
+              {
+                "name": "publish second_11",
+                "passed": true
+              },
+              {
+                "name": "publish second_12",
+                "passed": true
+              },
+              {
+                "name": "settle only second_12",
+                "passed": true
+              },
+              {
+                "name": "publish second_13",
+                "passed": true
+              },
+              {
+                "name": "publish second_14",
+                "passed": true
+              },
+              {
+                "name": "settle only second_14",
+                "passed": true
+              },
+              {
+                "name": "publish second_15",
+                "passed": true
+              },
+              {
+                "name": "publish second_16",
+                "passed": true
+              },
+              {
+                "name": "settle only second_16",
+                "passed": true
+              },
+              {
+                "name": "publish second_17",
+                "passed": true
+              },
+              {
+                "name": "publish second_18",
+                "passed": true
+              },
+              {
+                "name": "settle only second_18",
+                "passed": true
+              },
+              {
+                "name": "publish second_19",
+                "passed": true
+              },
+              {
+                "name": "publish second_20",
+                "passed": true
+              },
+              {
+                "name": "settle only second_20",
+                "passed": true
+              },
+              {
+                "name": "publish second_21",
+                "passed": true
+              },
+              {
+                "name": "publish second_22",
+                "passed": true
+              },
+              {
+                "name": "settle only second_22",
+                "passed": true
+              },
+              {
+                "name": "publish second_23",
+                "passed": true
+              },
+              {
+                "name": "publish second_24",
+                "passed": true
+              },
+              {
+                "name": "settle only second_24",
+                "passed": true
+              },
+              {
+                "name": "publish second_25",
+                "passed": true
+              },
+              {
+                "name": "publish second_26",
+                "passed": true
+              },
+              {
+                "name": "settle only second_26",
+                "passed": true
+              },
+              {
+                "name": "publish second_27",
+                "passed": true
+              },
+              {
+                "name": "publish second_28",
+                "passed": true
+              },
+              {
+                "name": "settle only second_28",
+                "passed": true
+              },
+              {
+                "name": "publish second_29",
+                "passed": true
+              },
+              {
+                "name": "publish second_30",
+                "passed": true
+              },
+              {
+                "name": "settle only second_30",
+                "passed": true
+              },
+              {
+                "name": "publish second_31",
+                "passed": true
+              },
+              {
+                "name": "publish second_32",
+                "passed": true
+              },
+              {
+                "name": "settle only second_32",
+                "passed": true
+              },
+              {
+                "name": "publish second_33",
+                "passed": true
+              },
+              {
+                "name": "publish second_34",
+                "passed": true
+              },
+              {
+                "name": "settle only second_34",
+                "passed": true
+              },
+              {
+                "name": "publish second_35",
+                "passed": true
+              },
+              {
+                "name": "publish second_36",
+                "passed": true
+              },
+              {
+                "name": "settle only second_36",
+                "passed": true
+              },
+              {
+                "name": "publish second_37",
+                "passed": true
+              },
+              {
+                "name": "publish second_38",
+                "passed": true
+              },
+              {
+                "name": "settle only second_38",
+                "passed": true
+              },
+              {
+                "name": "publish second_39",
+                "passed": true
+              },
+              {
+                "name": "publish second_40",
+                "passed": true
+              },
+              {
+                "name": "settle only second_40",
+                "passed": true
+              },
+              {
+                "name": "publish second_41",
+                "passed": true
+              },
+              {
+                "name": "publish second_42",
+                "passed": true
+              },
+              {
+                "name": "settle only second_42",
+                "passed": true
+              },
+              {
+                "name": "publish second_43",
+                "passed": true
+              },
+              {
+                "name": "publish second_44",
+                "passed": true
+              },
+              {
+                "name": "settle only second_44",
+                "passed": true
+              },
+              {
+                "name": "publish second_45",
+                "passed": true
+              },
+              {
+                "name": "publish second_46",
+                "passed": true
+              },
+              {
+                "name": "settle only second_46",
+                "passed": true
+              },
+              {
+                "name": "publish second_47",
+                "passed": true
+              },
+              {
+                "name": "publish second_48",
+                "passed": true
+              },
+              {
+                "name": "settle only second_48",
+                "passed": true
+              },
+              {
+                "name": "publish second_49",
+                "passed": true
+              },
+              {
+                "name": "publish second_50",
+                "passed": true
+              },
+              {
+                "name": "settle only second_50",
+                "passed": true
+              },
+              {
+                "name": "publish second_51",
+                "passed": true
+              },
+              {
+                "name": "publish second_52",
+                "passed": true
+              },
+              {
+                "name": "settle only second_52",
+                "passed": true
+              },
+              {
+                "name": "publish second_53",
+                "passed": true
+              },
+              {
+                "name": "publish second_54",
+                "passed": true
+              },
+              {
+                "name": "settle only second_54",
+                "passed": true
+              },
+              {
+                "name": "publish second_55",
+                "passed": true
+              },
+              {
+                "name": "publish second_56",
+                "passed": true
+              },
+              {
+                "name": "settle only second_56",
+                "passed": true
+              },
+              {
+                "name": "publish second_57",
+                "passed": true
+              },
+              {
+                "name": "publish second_58",
+                "passed": true
+              },
+              {
+                "name": "settle only second_58",
+                "passed": true
+              },
+              {
+                "name": "publish second_59",
+                "passed": true
+              },
+              {
+                "name": "publish second_60",
+                "passed": true
+              },
+              {
+                "name": "settle only second_60",
+                "passed": true
+              },
+              {
+                "name": "publish second_61",
+                "passed": true
+              },
+              {
+                "name": "publish second_62",
+                "passed": true
+              },
+              {
+                "name": "settle only second_62",
+                "passed": true
+              },
+              {
+                "name": "publish second_63",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "verify-concurrent",
+            "checks": [
+              {
+                "name": "both processes retained all 64 unresolved commands",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_0",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_1",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_2",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_3",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_4",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_5",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_6",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_7",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_8",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_9",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_10",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_11",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_12",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_13",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_14",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_15",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_16",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_17",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_18",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_19",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_20",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_21",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_22",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_23",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_24",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_25",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_26",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_27",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_28",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_29",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_30",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_31",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_32",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_33",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_34",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_35",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_36",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_37",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_38",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_39",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_40",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_41",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_42",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_43",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_44",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_45",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_46",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_47",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_48",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_49",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_50",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_51",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_52",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_53",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_54",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_55",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_56",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_57",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_58",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_59",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_60",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_61",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_62",
+                "passed": true
+              },
+              {
+                "name": "exact pending state first_63",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_0",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_1",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_2",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_3",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_4",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_5",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_6",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_7",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_8",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_9",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_10",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_11",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_12",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_13",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_14",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_15",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_16",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_17",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_18",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_19",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_20",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_21",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_22",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_23",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_24",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_25",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_26",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_27",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_28",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_29",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_30",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_31",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_32",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_33",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_34",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_35",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_36",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_37",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_38",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_39",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_40",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_41",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_42",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_43",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_44",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_45",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_46",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_47",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_48",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_49",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_50",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_51",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_52",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_53",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_54",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_55",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_56",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_57",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_58",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_59",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_60",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_61",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_62",
+                "passed": true
+              },
+              {
+                "name": "exact pending state second_63",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_39",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_53",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_37",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_5",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_7",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_41",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_35",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_49",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_19",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_45",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_29",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_11",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_55",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_37",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_17",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_51",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_61",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_63",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_57",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_3",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_25",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_23",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_5",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_57",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_59",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_41",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_49",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_23",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_47",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_19",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_61",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_27",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_9",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_31",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_17",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_21",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_15",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_31",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_59",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_47",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_45",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_1",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_39",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_29",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_7",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_33",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_15",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_3",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_27",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_25",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_63",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_33",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_43",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_53",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_51",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_43",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_13",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_9",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_21",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_35",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_1",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_55",
+                "passed": true
+              },
+              {
+                "name": "settle recovered second_11",
+                "passed": true
+              },
+              {
+                "name": "settle recovered first_13",
+                "passed": true
+              },
+              {
+                "name": "all recovered records settled",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "legacy",
+            "checks": [
+              {
+                "name": "read original aggregate",
+                "passed": true
+              },
+              {
+                "name": "other actor persists separately",
+                "passed": true
+              },
+              {
+                "name": "other actor settles separately",
+                "passed": true
+              },
+              {
+                "name": "restart still finds original actor",
+                "passed": true
+              },
+              {
+                "name": "settle original legacy entry",
+                "passed": true
+              },
+              {
+                "name": "settled legacy command does not reappear",
+                "passed": true
+              },
+              {
+                "name": "legacy file remains unchanged",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "conflict",
+            "checks": [
+              {
+                "name": "save original command",
+                "passed": true
+              },
+              {
+                "name": "reject changed body for same command",
+                "passed": true
+              },
+              {
+                "name": "conflict preserves original",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "corrupt",
+            "checks": [
+              {
+                "name": "save before corruption",
+                "passed": true
+              },
+              {
+                "name": "unknown record schema pauses recovery",
+                "passed": true
+              }
+            ],
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "evidence": ".local/world-instance/godot/20261026T034835Z-155064/results.json",
+      "sha256": "1ba0ae852a6f58661139f9ebdcd6aff799c0a3aa90c1641279c157b2baaa81e4",
+      "groups": 9,
+      "assertions": 27,
+      "summary": {
+        "passed": true,
+        "actualModelCalls": 0,
+        "groups": 9,
+        "assertions": 27,
+        "results": [
+          {
+            "name": "after-save",
+            "checks": [
+              {
+                "name": "new world establishes instance binding",
+                "passed": true
+              },
+              {
+                "name": "lost response retains original protected record",
+                "passed": true
+              },
+              {
+                "name": "original freezes persistent world identity",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "after-replacement",
+            "checks": [
+              {
+                "name": "same endpoint identifies a different world",
+                "passed": true
+              },
+              {
+                "name": "replacement does not load original but reports its retained record",
+                "passed": true
+              },
+              {
+                "name": "recovery sends no original action to replacement",
+                "passed": true
+              },
+              {
+                "name": "explicitly connected replacement can use its own independent records",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "after-corrupt",
+            "checks": [
+              {
+                "name": "protected format missing instance is corruption, not legacy",
+                "passed": true
+              },
+              {
+                "name": "corrupt protected record prevents replacement action",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "after-return",
+            "checks": [
+              {
+                "name": "relocated original keeps its identity after token rotation",
+                "passed": true
+              },
+              {
+                "name": "original world resolves the original command",
+                "passed": true
+              },
+              {
+                "name": "original command has exactly one material effect",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "before-save",
+            "checks": [
+              {
+                "name": "new world establishes instance binding",
+                "passed": true
+              },
+              {
+                "name": "lost response retains original protected record",
+                "passed": true
+              },
+              {
+                "name": "original freezes persistent world identity",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "before-replacement",
+            "checks": [
+              {
+                "name": "same endpoint identifies a different world",
+                "passed": true
+              },
+              {
+                "name": "replacement does not load original but reports its retained record",
+                "passed": true
+              },
+              {
+                "name": "recovery sends no original action to replacement",
+                "passed": true
+              },
+              {
+                "name": "explicitly connected replacement can use its own independent records",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "before-corrupt",
+            "checks": [
+              {
+                "name": "protected format missing instance is corruption, not legacy",
+                "passed": true
+              },
+              {
+                "name": "corrupt protected record prevents replacement action",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "before-return",
+            "checks": [
+              {
+                "name": "relocated original keeps its identity after token rotation",
+                "passed": true
+              },
+              {
+                "name": "unsubmitted original stays byte-identical",
+                "passed": true
+              },
+              {
+                "name": "original world resolves the original command",
+                "passed": true
+              },
+              {
+                "name": "original command has exactly one material effect",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "legacy-check",
+            "checks": [
+              {
+                "name": "old unbound pending is not adopted into protected world",
+                "passed": true
+              },
+              {
+                "name": "legacy barrier cannot send a replacement command",
+                "passed": true
+              }
+            ],
+            "passed": true
+          }
+        ],
+        "allExperimentProcessesStopped": true
+      }
+    },
+    {
+      "evidence": ".local/iter0014/godot/20261026T034841Z-8eb348/results.json",
+      "sha256": "ef2ca08c8798dd6a6563a150fcfa586834aaad45b293f02e6b5f686a2a148ab5",
+      "groups": 9,
+      "assertions": 56,
+      "summary": {
+        "passed": true,
+        "groups": 9,
+        "assertions": 56,
+        "results": [
+          {
+            "name": "basic",
+            "checks": [
+              {
+                "name": "r8 observation authenticated",
+                "passed": true
+              },
+              {
+                "name": "rendered initial",
+                "passed": true
+              },
+              {
+                "name": "held WASD moves in metres",
+                "passed": true
+              },
+              {
+                "name": "position has actual fractional coordinates",
+                "passed": true
+              },
+              {
+                "name": "mouse walks to unsnapped ground coordinate",
+                "passed": true
+              },
+              {
+                "name": "canopy raycast selects real tree",
+                "passed": true
+              },
+              {
+                "name": "walk approaches tree without entering trunk",
+                "passed": true
+              },
+              {
+                "name": "E gathers three authoritative units",
+                "passed": true
+              },
+              {
+                "name": "build shortcut opens preview",
+                "passed": true
+              },
+              {
+                "name": "continuous footprint preview visible",
+                "passed": true
+              },
+              {
+                "name": "rendered preview",
+                "passed": true
+              },
+              {
+                "name": "platform constructed from collected wood",
+                "passed": true
+              },
+              {
+                "name": "building position preserves fractions",
+                "passed": true
+              },
+              {
+                "name": "resource audit conserved",
+                "passed": true
+              },
+              {
+                "name": "rendered built",
+                "passed": true
+              },
+              {
+                "name": "rendered compact",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "bridge",
+            "checks": [
+              {
+                "name": "r8 observation authenticated",
+                "passed": true
+              },
+              {
+                "name": "rendered initial",
+                "passed": true
+              },
+              {
+                "name": "whole bridge preview selected",
+                "passed": true
+              },
+              {
+                "name": "bridge spans natural river from near bank",
+                "passed": true
+              },
+              {
+                "name": "six gathered wood builds one complete bridge",
+                "passed": true
+              },
+              {
+                "name": "rendered bridge-built",
+                "passed": true
+              },
+              {
+                "name": "builder crosses actual bridge",
+                "passed": true
+              },
+              {
+                "name": "bridge reuse really switches to second resident",
+                "passed": true
+              },
+              {
+                "name": "other resident reuses bridge without wood",
+                "passed": true
+              },
+              {
+                "name": "rendered bridge-reused",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "input-loss",
+            "checks": [
+              {
+                "name": "r8 observation authenticated",
+                "passed": true
+              },
+              {
+                "name": "rendered initial",
+                "passed": true
+              },
+              {
+                "name": "automatic lookup recovers dropped walk receipt",
+                "passed": true
+              },
+              {
+                "name": "held key does not resume after uncertain result",
+                "passed": true
+              },
+              {
+                "name": "fresh key press resumes movement",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "after",
+            "checks": [
+              {
+                "name": "r8 initial observation",
+                "passed": true
+              },
+              {
+                "name": "lost response retains request and blocks new actions",
+                "passed": true
+              },
+              {
+                "name": "other identity cannot inherit pending command",
+                "passed": true
+              },
+              {
+                "name": "other resident remains unchanged",
+                "passed": true
+              },
+              {
+                "name": "restart resolves original persisted command",
+                "passed": true
+              },
+              {
+                "name": "lost response has exactly one effect",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "before",
+            "checks": [
+              {
+                "name": "r8 initial observation",
+                "passed": true
+              },
+              {
+                "name": "lost response retains request and blocks new actions",
+                "passed": true
+              },
+              {
+                "name": "other identity cannot inherit pending command",
+                "passed": true
+              },
+              {
+                "name": "other resident remains unchanged",
+                "passed": true
+              },
+              {
+                "name": "404 preserves original request",
+                "passed": true
+              },
+              {
+                "name": "original retry commits once",
+                "passed": true
+              },
+              {
+                "name": "original command ID preserved",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "wrong-receipt",
+            "checks": [
+              {
+                "name": "r8 initial observation",
+                "passed": true
+              },
+              {
+                "name": "wrong node receipt cannot settle original",
+                "passed": true
+              },
+              {
+                "name": "lookup resolves original once",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "stale",
+            "checks": [
+              {
+                "name": "r8 initial observation",
+                "passed": true
+              },
+              {
+                "name": "stale command settled as rejection",
+                "passed": true
+              },
+              {
+                "name": "stale command creates no material",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "offline",
+            "checks": [
+              {
+                "name": "r8 initial observation",
+                "passed": true
+              },
+              {
+                "name": "known receipt retained while observation unavailable",
+                "passed": true
+              },
+              {
+                "name": "commit remains known during observation outage",
+                "passed": true
+              },
+              {
+                "name": "outage blocks further action",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "corrupt-journal",
+            "checks": [
+              {
+                "name": "invalid durable record blocks actions",
+                "passed": true
+              },
+              {
+                "name": "invalid journal cannot mutate",
+                "passed": true
+              }
+            ],
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "evidence": ".local/iter0016/20261026T034932Z-a1d749/results.json",
+      "sha256": "e169a7aa4b7cb0e615a80188df03c6e02d18246135438834652082793a251385",
+      "groups": 5,
+      "assertions": 42,
+      "summary": {
+        "passed": true,
+        "groups": 5,
+        "assertions": 42,
+        "results": [
+          {
+            "name": "obstacles",
+            "checks": [
+              {
+                "name": "authenticated r8 navigation world",
+                "passed": true
+              },
+              {
+                "name": "authoritative arrival at (8.0, 9.0)",
+                "passed": true
+              },
+              {
+                "name": "mouse route detours around live tree",
+                "passed": true
+              },
+              {
+                "name": "authoritative arrival at (13.0, 8.5)",
+                "passed": true
+              },
+              {
+                "name": "mouse route detours around rock",
+                "passed": true
+              },
+              {
+                "name": "walking does not rebake geometry",
+                "passed": true
+              },
+              {
+                "name": "unreachable bank issues no walk",
+                "passed": true
+              },
+              {
+                "name": "unreachable location explains failure",
+                "passed": true
+              },
+              {
+                "name": "rendered route",
+                "passed": true
+              },
+              {
+                "name": "all navigation steps accepted without collision",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "tree-change",
+            "checks": [
+              {
+                "name": "authenticated r8 navigation world",
+                "passed": true
+              },
+              {
+                "name": "partially gathered tree keeps navigation",
+                "passed": true
+              },
+              {
+                "name": "partially gathered tree keeps navigation",
+                "passed": true
+              },
+              {
+                "name": "depleted tree rebuilds navigation once",
+                "passed": true
+              },
+              {
+                "name": "depleted trunk opens direct route",
+                "passed": true
+              },
+              {
+                "name": "authoritative arrival at (8.0, 9.0)",
+                "passed": true
+              },
+              {
+                "name": "authoritative arrival at (5.0, 7.0)",
+                "passed": true
+              },
+              {
+                "name": "all navigation steps accepted without collision",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "bridge",
+            "checks": [
+              {
+                "name": "authenticated r8 navigation world",
+                "passed": true
+              },
+              {
+                "name": "before building other bank is unreachable",
+                "passed": true
+              },
+              {
+                "name": "real gathered materials build one bridge",
+                "passed": true
+              },
+              {
+                "name": "authoritative arrival at (26.0, 9.0)",
+                "passed": true
+              },
+              {
+                "name": "distant destination routes through bridge",
+                "passed": true
+              },
+              {
+                "name": "rendered crossed",
+                "passed": true
+              },
+              {
+                "name": "resident switch requested during active polling",
+                "passed": true
+              },
+              {
+                "name": "connection switched to the second resident",
+                "passed": true
+              },
+              {
+                "name": "authoritative arrival at (13.0, 7.0)",
+                "passed": true
+              },
+              {
+                "name": "second resident crosses existing bridge with zero wood",
+                "passed": true
+              },
+              {
+                "name": "rendered reused",
+                "passed": true
+              },
+              {
+                "name": "all navigation steps accepted without collision",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "cancel",
+            "checks": [
+              {
+                "name": "authenticated r8 navigation world",
+                "passed": true
+              },
+              {
+                "name": "escape cancels route after outstanding request",
+                "passed": true
+              },
+              {
+                "name": "WASD cancels automatic route",
+                "passed": true
+              },
+              {
+                "name": "newest queued click wins",
+                "passed": true
+              },
+              {
+                "name": "cancel invalidates click awaiting HTTP",
+                "passed": true
+              },
+              {
+                "name": "cancel clears destination and route dots",
+                "passed": true
+              },
+              {
+                "name": "all navigation steps accepted without collision",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "route-loss",
+            "checks": [
+              {
+                "name": "authenticated r8 navigation world",
+                "passed": true
+              },
+              {
+                "name": "lost step recovered by original receipt lookup",
+                "passed": true
+              },
+              {
+                "name": "recovery does not silently resume canceled route",
+                "passed": true
+              },
+              {
+                "name": "authoritative arrival at (8.0, 9.0)",
+                "passed": true
+              },
+              {
+                "name": "all navigation steps accepted without collision",
+                "passed": true
+              }
+            ],
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "evidence": ".local/iter0019/godot/20261026T035055Z-73666e/results.json",
+      "sha256": "c830ad12dc75a69853b625fa1b4cc90c6cba2c3e4ce9c1a46731fcd3f70bd9ad",
+      "groups": 6,
+      "assertions": 43,
+      "summary": {
+        "passed": true,
+        "actualModelCalls": 0,
+        "groups": 6,
+        "assertions": 43,
+        "results": [
+          {
+            "name": "unrelated",
+            "checks": [
+              {
+                "name": "authenticated observation",
+                "passed": true
+              },
+              {
+                "name": "unrelated real walk permits original gather",
+                "passed": true
+              },
+              {
+                "name": "actual application exceeds frozen anchor",
+                "passed": true
+              },
+              {
+                "name": "impossible past business rejection is not evidence",
+                "passed": true
+              },
+              {
+                "name": "genuine future anchor rejection remains valid",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "held",
+            "checks": [
+              {
+                "name": "authenticated native app",
+                "passed": true
+              },
+              {
+                "name": "same actor later success rejects old input",
+                "passed": true
+              },
+              {
+                "name": "confirmed conflict settles and cancels route",
+                "passed": true
+              },
+              {
+                "name": "old intent cannot silently resume",
+                "passed": true
+              },
+              {
+                "name": "held key remains suspended",
+                "passed": true
+              },
+              {
+                "name": "explicit new input resumes",
+                "passed": true
+              },
+              {
+                "name": "impossible past business rejection is not evidence",
+                "passed": true
+              },
+              {
+                "name": "genuine future anchor rejection remains valid",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "route",
+            "checks": [
+              {
+                "name": "authenticated native app",
+                "passed": true
+              },
+              {
+                "name": "same actor later success rejects old input",
+                "passed": true
+              },
+              {
+                "name": "confirmed conflict settles and cancels route",
+                "passed": true
+              },
+              {
+                "name": "old intent cannot silently resume",
+                "passed": true
+              },
+              {
+                "name": "explicit new input resumes",
+                "passed": true
+              },
+              {
+                "name": "impossible past business rejection is not evidence",
+                "passed": true
+              },
+              {
+                "name": "genuine future anchor rejection remains valid",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "missing-execution",
+            "checks": [
+              {
+                "name": "authenticated observation",
+                "passed": true
+              },
+              {
+                "name": "forged receipt retains v3 original",
+                "passed": true
+              },
+              {
+                "name": "damaged before facts rejected before network",
+                "passed": true
+              },
+              {
+                "name": "valid lookup settles original exactly once",
+                "passed": true
+              },
+              {
+                "name": "recovered original ID",
+                "passed": true
+              },
+              {
+                "name": "impossible past business rejection is not evidence",
+                "passed": true
+              },
+              {
+                "name": "genuine future anchor rejection remains valid",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "bad-quantity",
+            "checks": [
+              {
+                "name": "authenticated observation",
+                "passed": true
+              },
+              {
+                "name": "forged receipt retains v3 original",
+                "passed": true
+              },
+              {
+                "name": "damaged before facts rejected before network",
+                "passed": true
+              },
+              {
+                "name": "valid lookup settles original exactly once",
+                "passed": true
+              },
+              {
+                "name": "recovered original ID",
+                "passed": true
+              },
+              {
+                "name": "impossible past business rejection is not evidence",
+                "passed": true
+              },
+              {
+                "name": "genuine future anchor rejection remains valid",
+                "passed": true
+              }
+            ],
+            "passed": true
+          },
+          {
+            "name": "strict-save",
+            "checks": [
+              {
+                "name": "authenticated observation",
+                "passed": true
+              },
+              {
+                "name": "old server capability creates strict v2",
+                "passed": true
+              },
+              {
+                "name": "impossible past business rejection is not evidence",
+                "passed": true
+              },
+              {
+                "name": "genuine future anchor rejection remains valid",
+                "passed": true
+              },
+              {
+                "name": "old strict v2 preserved despite new capability",
+                "passed": true
+              },
+              {
+                "name": "saved strict body not upgraded",
+                "passed": true
+              },
+              {
+                "name": "original strict retry commits once",
+                "passed": true
+              },
+              {
+                "name": "impossible past business rejection is not evidence",
+                "passed": true
+              },
+              {
+                "name": "genuine future anchor rejection remains valid",
+                "passed": true
+              }
+            ],
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "evidence": ".local/iter0021/20261026T035111Z-21c20a/results.json",
+      "sha256": "5b9cab98d292e9077a7c0d03324477dad0a967da766cde7d556719bb468c6482",
+      "groups": 1,
+      "assertions": 27,
+      "summary": {
+        "passed": true,
+        "actualModelCalls": 0,
+        "checks": [
+          {
+            "name": "authenticated first resident",
+            "passed": true
+          },
+          {
+            "name": "first identity nameplates and rings match observation",
+            "passed": true
+          },
+          {
+            "name": "actual first platform credits its builder",
+            "passed": true
+          },
+          {
+            "name": "rendered first-resident",
+            "passed": true
+          },
+          {
+            "name": "switch starts while a read is in flight",
+            "passed": true
+          },
+          {
+            "name": "authenticated switch moves own marker to a2 and removes it from a1",
+            "passed": true
+          },
+          {
+            "name": "switching controller preserves the first platform builder",
+            "passed": true
+          },
+          {
+            "name": "actual gather command commits a new receipt",
+            "passed": true
+          },
+          {
+            "name": "real gather produces one temporary material caption",
+            "passed": true
+          },
+          {
+            "name": "actual walk command commits a new receipt",
+            "passed": true
+          },
+          {
+            "name": "ordinary observation keeps the live visual actor for interpolation",
+            "passed": true
+          },
+          {
+            "name": "interpolation target follows a committed movement",
+            "passed": true
+          },
+          {
+            "name": "same-instance reconnect snaps to the authoritative position",
+            "passed": true
+          },
+          {
+            "name": "reconnect removes old material captions and arm effects",
+            "passed": true
+          },
+          {
+            "name": "actual walk command commits a new receipt",
+            "passed": true
+          },
+          {
+            "name": "actual gather command commits a new receipt",
+            "passed": true
+          },
+          {
+            "name": "actual gather command commits a new receipt",
+            "passed": true
+          },
+          {
+            "name": "actual build command commits a new receipt",
+            "passed": true
+          },
+          {
+            "name": "second resident spends its own three gathered wood on a platform",
+            "passed": true
+          },
+          {
+            "name": "observed platform attribution stays with a1",
+            "passed": true
+          },
+          {
+            "name": "observed platform attribution stays with a2",
+            "passed": true
+          },
+          {
+            "name": "rendered second-resident",
+            "passed": true
+          },
+          {
+            "name": "same resident connects to a different persistent world",
+            "passed": true
+          },
+          {
+            "name": "replacement world contains no old platform or builder captions",
+            "passed": true
+          },
+          {
+            "name": "replacement identity and position form a fresh visual baseline",
+            "passed": true
+          },
+          {
+            "name": "replacement clears temporary effects and action visuals",
+            "passed": true
+          },
+          {
+            "name": "rendered replacement-world",
+            "passed": true
+          }
+        ],
+        "databaseAudit": {
+          "original": {
+            "materialTotal": 12,
+            "entities": [
+              [
+                "e03eaf3e1870e49b5bc396f691cbfbee8",
+                "a1",
+                3
+              ],
+              [
+                "eb90832c4aa3b4ae49f267fa506bdad47",
+                "a2",
+                3
+              ]
+            ],
+            "receiptCount": 21,
+            "buildCount": 2
+          },
+          "replacement": {
+            "materialTotal": 12,
+            "entities": [],
+            "receiptCount": 0,
+            "buildCount": 0
+          }
+        },
+        "allSelfStartedServicesStopped": true,
+        "sourceBefore": {
+          "clients/godot/main.gd": "886e5894ea0145295081e837b7e16f487487b2bf17e759a43e18cbba5dceab84",
+          "clients/godot/world_view.gd": "da4041cefec6ad60eb85ef7aba0c46e484c376461134a5c077e182ffd3a5b9b9",
+          "clients/godot/world_client.gd": "d02789910d833acd128794df5d7d51c0b43b791486a5d0dab74684c86a4d6ebc",
+          "clients/godot/pending_store.gd": "3b74ae2abe449eba670bc5874be1dcdc79de21a7cea18f31c8ab82016d2b4b31",
+          "tests/godot/attribution.gd": "54157ec38fb28a3d1c78ff346731a2d83f4b70ad231fe84e15d9ea0017e4def0",
+          "tests/godot_attribution.py": "9f34aad109cb1f67506c0c4d1559e2b738f7d769764492209cc8d3ea4408ddf5"
+        },
+        "sourceAfter": {
+          "clients/godot/main.gd": "886e5894ea0145295081e837b7e16f487487b2bf17e759a43e18cbba5dceab84",
+          "clients/godot/world_view.gd": "da4041cefec6ad60eb85ef7aba0c46e484c376461134a5c077e182ffd3a5b9b9",
+          "clients/godot/world_client.gd": "d02789910d833acd128794df5d7d51c0b43b791486a5d0dab74684c86a4d6ebc",
+          "clients/godot/pending_store.gd": "3b74ae2abe449eba670bc5874be1dcdc79de21a7cea18f31c8ab82016d2b4b31",
+          "tests/godot/attribution.gd": "54157ec38fb28a3d1c78ff346731a2d83f4b70ad231fe84e15d9ea0017e4def0",
+          "tests/godot_attribution.py": "9f34aad109cb1f67506c0c4d1559e2b738f7d769764492209cc8d3ea4408ddf5"
+        },
+        "serverDllSha256": "28da17e28113f3d039fbce3962c4ed6f877ca90b3544c8327f3ecb85b8273534"
+      }
+    }
+  ],
+  "transfer": {
+    "passed": true,
+    "groups": 5,
+    "assertions": 35,
+    "actualModelCalls": 0,
+    "scope": "Final passing groups after fixture corrections and funded-before validation; not one all-green initial run",
+    "results": [
+      {
+        "name": "corrupt",
+        "checks": [
+          {
+            "name": "r9 adapter authenticated",
+            "passed": true
+          },
+          {
+            "name": "unknown gift preserves original v3 record",
+            "passed": true
+          },
+          {
+            "name": "missing senderActorId cannot settle",
+            "passed": true
+          },
+          {
+            "name": "missing recipientActorId cannot settle",
+            "passed": true
+          },
+          {
+            "name": "missing quantity cannot settle",
+            "passed": true
+          },
+          {
+            "name": "missing resource cannot settle",
+            "passed": true
+          },
+          {
+            "name": "missing inventoryWood cannot settle",
+            "passed": true
+          },
+          {
+            "name": "other accepted rule version cannot settle original r9",
+            "passed": true
+          },
+          {
+            "name": "boolean amount is not transfer evidence",
+            "passed": true
+          },
+          {
+            "name": "missing execution retains original",
+            "passed": true
+          },
+          {
+            "name": "saved sender cannot disagree with original actor",
+            "passed": true
+          },
+          {
+            "name": "saved inventory must have funded the original gift",
+            "passed": true
+          },
+          {
+            "name": "authoritative original receipt settles once",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "evidence": ".local/iter0020/godot/20261026T035150Z-ddfe5a/results.json"
+      },
+      {
+        "name": "before-save",
+        "checks": [
+          {
+            "name": "r9 adapter authenticated",
+            "passed": true
+          },
+          {
+            "name": "unknown gift preserves original v3 record",
+            "passed": true
+          },
+          {
+            "name": "fresh process recovers original gift exactly once",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "evidence": ".local/iter0020/godot/20261026T034402Z-52576e/results.json"
+      },
+      {
+        "name": "after-save",
+        "checks": [
+          {
+            "name": "r9 adapter authenticated",
+            "passed": true
+          },
+          {
+            "name": "unknown gift preserves original v3 record",
+            "passed": true
+          },
+          {
+            "name": "fresh process recovers original gift exactly once",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "evidence": ".local/iter0020/godot/20261026T034402Z-52576e/results.json"
+      },
+      {
+        "name": "incoming",
+        "checks": [
+          {
+            "name": "native r9 world authenticated",
+            "passed": true
+          },
+          {
+            "name": "incoming gift rejects recipient old walk",
+            "passed": true
+          },
+          {
+            "name": "held input stays stopped without renewed command",
+            "passed": true
+          },
+          {
+            "name": "receipt rejection does not hide actual incoming material",
+            "passed": true
+          },
+          {
+            "name": "fresh user input may proceed",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "evidence": ".local/iter0020/godot/20261026T034540Z-bad1e0/results.json"
+      },
+      {
+        "name": "ui",
+        "checks": [
+          {
+            "name": "native r9 world authenticated",
+            "passed": true
+          },
+          {
+            "name": "gift entry advertised",
+            "passed": true
+          },
+          {
+            "name": "actual mouse opens recipient and amount",
+            "passed": true
+          },
+          {
+            "name": "recipient explicitly displayed as a2",
+            "passed": true
+          },
+          {
+            "name": "rendered gift-choice",
+            "passed": true
+          },
+          {
+            "name": "actual submit settles gift receipt",
+            "passed": true
+          },
+          {
+            "name": "sender sees completed delivery distinct from construction",
+            "passed": true
+          },
+          {
+            "name": "recipient sees the actual source event",
+            "passed": true
+          },
+          {
+            "name": "recipient uses delivered material for own platform",
+            "passed": true
+          },
+          {
+            "name": "construction belongs to its actual recipient builder",
+            "passed": true
+          },
+          {
+            "name": "rendered recipient-built",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "evidence": ".local/iter0020/godot/20261026T034657Z-73145c/results.json"
+      }
+    ]
+  }
+}

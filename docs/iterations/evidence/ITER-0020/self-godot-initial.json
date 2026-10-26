@@ -1,0 +1,108 @@
+{
+  "passed": false,
+  "actualModelCalls": 0,
+  "groups": 5,
+  "assertions": 18,
+  "results": [
+    {
+      "name": "ui",
+      "passed": false,
+      "error": "ui: exit 1\nGodot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nWARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.\n     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)\nWARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.\n     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:372)\nOpenGL API 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.2 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 20.1.2, 256 bits)\n\nERROR: actual mouse opens recipient and amount\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:64)\n       [2] click (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:35)\n       [3] idle (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:20)\nERROR: actual submit settles gift receipt\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:69)\n       [2] click (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:35)\n       [3] idle (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:20)\nERROR: sender sees completed delivery distinct from construction\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:70)\n       [2] click (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:35)\n       [3] idle (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:20)\nERROR: recipient sees the actual source event\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:73)\n       [2] idle (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:20)\nERROR: recipient uses delivered material for own platform\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:77)\n       [2] idle (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:20)\nERROR: construction belongs to its actual recipient builder\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:79)\n       [2] idle (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:20)\n"
+    },
+    {
+      "name": "incoming",
+      "passed": false,
+      "error": "incoming: exit 1\nGodot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nWARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.\n     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)\nWARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.\n     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:372)\nOpenGL API 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.2 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 20.1.2, 256 bits)\n\nERROR: incoming gift rejects recipient old walk\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:87)\n       [2] idle (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:20)\nERROR: receipt rejection does not hide actual incoming material\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:92)\n       [2] idle (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:20)\n"
+    },
+    {
+      "name": "corrupt",
+      "checks": [
+        {
+          "name": "r9 adapter authenticated",
+          "passed": true
+        },
+        {
+          "name": "unknown gift preserves original v3 record",
+          "passed": true
+        },
+        {
+          "name": "missing senderActorId cannot settle",
+          "passed": true
+        },
+        {
+          "name": "missing recipientActorId cannot settle",
+          "passed": true
+        },
+        {
+          "name": "missing quantity cannot settle",
+          "passed": true
+        },
+        {
+          "name": "missing resource cannot settle",
+          "passed": true
+        },
+        {
+          "name": "missing inventoryWood cannot settle",
+          "passed": true
+        },
+        {
+          "name": "other accepted rule version cannot settle original r9",
+          "passed": true
+        },
+        {
+          "name": "boolean amount is not transfer evidence",
+          "passed": true
+        },
+        {
+          "name": "missing execution retains original",
+          "passed": true
+        },
+        {
+          "name": "saved sender cannot disagree with original actor",
+          "passed": true
+        },
+        {
+          "name": "authoritative original receipt settles once",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "before-save",
+      "checks": [
+        {
+          "name": "r9 adapter authenticated",
+          "passed": true
+        },
+        {
+          "name": "unknown gift preserves original v3 record",
+          "passed": true
+        },
+        {
+          "name": "fresh process recovers original gift exactly once",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "after-save",
+      "checks": [
+        {
+          "name": "r9 adapter authenticated",
+          "passed": true
+        },
+        {
+          "name": "unknown gift preserves original v3 record",
+          "passed": true
+        },
+        {
+          "name": "fresh process recovers original gift exactly once",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

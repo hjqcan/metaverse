@@ -1,0 +1,325 @@
+{
+  "kind": "construction-self-check",
+  "passed": true,
+  "actualModelCalls": 0,
+  "recordedAtUtc": "2026-10-26T03:55:24.049079+00:00",
+  "runDirectory": "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5",
+  "baseCommit": "7907afb23796b83abe3ae1c5a43d618ed2797d97",
+  "commands": [
+    {
+      "label": "restore",
+      "argv": [
+        "dotnet",
+        "restore",
+        "src/World.Server/World.Server.csproj",
+        "--locked-mode"
+      ],
+      "exitCode": 0,
+      "seconds": 0.715,
+      "log": "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/restore.log"
+    },
+    {
+      "label": "build",
+      "argv": [
+        "dotnet",
+        "build",
+        "src/World.Server/World.Server.csproj",
+        "--no-restore"
+      ],
+      "exitCode": 0,
+      "seconds": 1.266,
+      "log": "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/build.log"
+    },
+    {
+      "label": "gift-wood",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/source/scripts/run_resident.py",
+        "--url",
+        "http://127.0.0.1:43121",
+        "--access-file",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/world/access.json",
+        "--actor",
+        "a1",
+        "--fixed-reference",
+        "--spec",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/source/examples/cooperation/gift-wood.json",
+        "--state",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/missions/gift-wood.state.json",
+        "--output",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/reports/gift-wood.json"
+      ],
+      "exitCode": 0,
+      "seconds": 67.891,
+      "log": "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/gift-wood.log"
+    },
+    {
+      "label": "recipient-platform",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/source/scripts/run_resident.py",
+        "--url",
+        "http://127.0.0.1:43121",
+        "--access-file",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/world/access.json",
+        "--actor",
+        "a2",
+        "--fixed-reference",
+        "--spec",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/source/examples/cooperation/recipient-platform.json",
+        "--state",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/missions/recipient-platform.state.json",
+        "--output",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/reports/recipient-platform.json"
+      ],
+      "exitCode": 0,
+      "seconds": 2.017,
+      "log": "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/recipient-platform.log"
+    },
+    {
+      "label": "visit-shared-platform",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/source/scripts/run_resident.py",
+        "--url",
+        "http://127.0.0.1:43121",
+        "--access-file",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/world/access.json",
+        "--actor",
+        "a1",
+        "--fixed-reference",
+        "--spec",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/source/examples/cooperation/visit-shared-platform.json",
+        "--state",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/missions/visit-shared-platform.state.json",
+        "--output",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/reports/visit-shared-platform.json"
+      ],
+      "exitCode": 0,
+      "seconds": 37.478,
+      "log": "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/visit-shared-platform.log"
+    },
+    {
+      "label": "gift-wood-completed-replay",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/source/scripts/run_resident.py",
+        "--url",
+        "http://127.0.0.1:43121",
+        "--access-file",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/world/access.json",
+        "--actor",
+        "a1",
+        "--fixed-reference",
+        "--spec",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/source/examples/cooperation/gift-wood.json",
+        "--state",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/missions/gift-wood.state.json",
+        "--output",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/reports/gift-wood.json"
+      ],
+      "exitCode": 0,
+      "seconds": 0.064,
+      "log": "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/gift-wood-completed-replay.log"
+    },
+    {
+      "label": "recipient-platform-completed-replay",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/source/scripts/run_resident.py",
+        "--url",
+        "http://127.0.0.1:43121",
+        "--access-file",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/world/access.json",
+        "--actor",
+        "a2",
+        "--fixed-reference",
+        "--spec",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/source/examples/cooperation/recipient-platform.json",
+        "--state",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/missions/recipient-platform.state.json",
+        "--output",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/reports/recipient-platform.json"
+      ],
+      "exitCode": 0,
+      "seconds": 0.064,
+      "log": "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/recipient-platform-completed-replay.log"
+    },
+    {
+      "label": "visit-shared-platform-completed-replay",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/source/scripts/run_resident.py",
+        "--url",
+        "http://127.0.0.1:43121",
+        "--access-file",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/world/access.json",
+        "--actor",
+        "a1",
+        "--fixed-reference",
+        "--spec",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/source/examples/cooperation/visit-shared-platform.json",
+        "--state",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/missions/visit-shared-platform.state.json",
+        "--output",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/reports/visit-shared-platform.json"
+      ],
+      "exitCode": 0,
+      "seconds": 0.064,
+      "log": "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/visit-shared-platform-completed-replay.log"
+    }
+  ],
+  "checks": [
+    {
+      "name": "r9_empty_hands_scattered_start",
+      "passed": true
+    },
+    {
+      "name": "gift-wood_actually_completed",
+      "passed": true
+    },
+    {
+      "name": "gift-wood_original_instance_and_budget",
+      "passed": true
+    },
+    {
+      "name": "gift-wood_actual_material_distribution",
+      "passed": true
+    },
+    {
+      "name": "recipient-platform_actually_completed",
+      "passed": true
+    },
+    {
+      "name": "recipient-platform_original_instance_and_budget",
+      "passed": true
+    },
+    {
+      "name": "recipient-platform_actual_material_distribution",
+      "passed": true
+    },
+    {
+      "name": "visit-shared-platform_actually_completed",
+      "passed": true
+    },
+    {
+      "name": "visit-shared-platform_original_instance_and_budget",
+      "passed": true
+    },
+    {
+      "name": "visit-shared-platform_actual_material_distribution",
+      "passed": true
+    },
+    {
+      "name": "gift_and_build_are_separate_facts",
+      "passed": true
+    },
+    {
+      "name": "recipient_observes_original_gift",
+      "passed": true
+    },
+    {
+      "name": "visitor_creates_no_material_fact",
+      "passed": true
+    },
+    {
+      "name": "reports_end_at_original_positions",
+      "passed": true
+    },
+    {
+      "name": "gift-wood_completed_report_unchanged",
+      "passed": true
+    },
+    {
+      "name": "recipient-platform_completed_report_unchanged",
+      "passed": true
+    },
+    {
+      "name": "visit-shared-platform_completed_report_unchanged",
+      "passed": true
+    },
+    {
+      "name": "completed_cli_replay_changes_no_world_state",
+      "passed": true
+    },
+    {
+      "name": "sqlite_integrity_and_conservation",
+      "passed": true
+    },
+    {
+      "name": "sqlite_one_original_transfer",
+      "passed": true
+    },
+    {
+      "name": "sqlite_receipts_match_all_committed_steps",
+      "passed": true
+    },
+    {
+      "name": "sqlite_entity_authorship",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "dllSha256": "c8841799f7c8490fba5e6a8f28d00d983700be80e01824000c9e86c6e4740ef3",
+  "url": "http://127.0.0.1:43121",
+  "servicePid": 3722023,
+  "worldInstanceId": "w_e2b9417e506c4b56b4d1f1a652d07bb7",
+  "stages": [
+    {
+      "name": "gift-wood",
+      "actor": "a1",
+      "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/reports/gift-wood.json",
+      "used": {
+        "commands": 98,
+        "wood": 9,
+        "modelCalls": 1,
+        "seconds": 67.7737627029419
+      },
+      "materials": {
+        "natural": 3,
+        "a1": 0,
+        "a2": 3,
+        "embodied": 6
+      }
+    },
+    {
+      "name": "recipient-platform",
+      "actor": "a2",
+      "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/reports/recipient-platform.json",
+      "used": {
+        "commands": 9,
+        "wood": 3,
+        "modelCalls": 1,
+        "seconds": 1.9392189979553223
+      },
+      "materials": {
+        "natural": 3,
+        "a1": 0,
+        "a2": 0,
+        "embodied": 9
+      }
+    },
+    {
+      "name": "visit-shared-platform",
+      "actor": "a1",
+      "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/build-agent2/20261026T035524Z-ce78e5/reports/visit-shared-platform.json",
+      "used": {
+        "commands": 88,
+        "wood": 0,
+        "modelCalls": 1,
+        "seconds": 37.39367985725403
+      },
+      "materials": {
+        "natural": 3,
+        "a1": 0,
+        "a2": 0,
+        "embodied": 9
+      }
+    }
+  ],
+  "serviceExitCode": 0,
+  "serviceStopped": true,
+  "liveSourceChangesDuringRun": [
+    "src/World.Server/wwwroot/resident.js"
+  ]
+}

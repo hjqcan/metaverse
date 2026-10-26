@@ -1,0 +1,16 @@
+{
+  "missionId": "received-wood-platform",
+  "objective": "用 a1 自愿赠送的3木材在东岸建成自己的平台，到达平台中心后返回。不采集、不向他人赠送。",
+  "goals": [
+    {
+      "id": "platform",
+      "label": "收到木材后的东岸平台",
+      "target": [28, 16],
+      "buildRecipeId": "platform.v1"
+    }
+  ],
+  "allowBuild": true,
+  "allowGather": false,
+  "allowTransfer": false,
+  "budgets": {"commands": 50, "wood": 3, "seconds": 600, "modelCalls": 1}
+}

@@ -1,0 +1,1091 @@
+{
+  "passed": true,
+  "binarySha256": "28da17e28113f3d039fbce3962c4ed6f877ca90b3544c8327f3ecb85b8273534",
+  "cases": {
+    "geometry": {
+      "passed": true,
+      "nearButRockOccluded": {
+        "schemaVersion": 1,
+        "rulesVersion": "r9",
+        "stateVersion": 415,
+        "commandId": "a92008aefe2943e49c37556f0cc5cb23",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+        },
+        "eventCursor": 416,
+        "error": {
+          "code": "TRANSFER_UNREACHABLE",
+          "message": "\u8bf7\u5230\u6536\u4ef6\u4eba 1.6 \u7c73\u5185\uff0c\u4e14\u53cc\u65b9\u4e4b\u95f4\u6ca1\u6709\u969c\u788d",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected",
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 415,
+          "appliedOnStateVersion": 415
+        }
+      },
+      "nearClearSuccess": {
+        "schemaVersion": 1,
+        "rulesVersion": "r9",
+        "stateVersion": 418,
+        "commandId": "41bb1cd91ef141e79c4fb3e841ab510b",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+        },
+        "eventCursor": 419,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "transfer",
+          "resource": "wood",
+          "quantity": 1,
+          "senderActorId": "a1",
+          "recipientActorId": "a2",
+          "inventoryWood": 5
+        },
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 417,
+          "appliedOnStateVersion": 417
+        }
+      },
+      "exactReachSuccess": {
+        "schemaVersion": 1,
+        "rulesVersion": "r9",
+        "stateVersion": 420,
+        "commandId": "3e90835bcd9e429ca2b5eec4e8457d9f",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+        },
+        "eventCursor": 421,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "transfer",
+          "resource": "wood",
+          "quantity": 1,
+          "senderActorId": "a1",
+          "recipientActorId": "a2",
+          "inventoryWood": 4
+        },
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 419,
+          "appliedOnStateVersion": 419
+        }
+      },
+      "overReachRejection": {
+        "schemaVersion": 1,
+        "rulesVersion": "r9",
+        "stateVersion": 421,
+        "commandId": "a7521bf45226410f8b64dce4e29eaa56",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+        },
+        "eventCursor": 422,
+        "error": {
+          "code": "TRANSFER_UNREACHABLE",
+          "message": "\u8bf7\u5230\u6536\u4ef6\u4eba 1.6 \u7c73\u5185\uff0c\u4e14\u53cc\u65b9\u4e4b\u95f4\u6ca1\u6709\u969c\u788d",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected",
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 421,
+          "appliedOnStateVersion": 421
+        }
+      },
+      "occludedPositions": {
+        "a1": [
+          11.25,
+          7.3
+        ],
+        "a2": [
+          9.75,
+          7.3
+        ]
+      },
+      "audit": {
+        "materialTotal": 12,
+        "stateVersion": 421,
+        "requests": 93,
+        "processStopped": true
+      }
+    },
+    "instance_boundary": {
+      "passed": true,
+      "instances": [
+        "w_a2d7cd9ccbde4295b2fe38adfc3de6b8",
+        "w_a5304a57d58c4b5cb11bc50093569c33"
+      ],
+      "rejectedForeignInstance": [
+        {
+          "method": "POST",
+          "status": 412,
+          "reply": {
+            "schemaVersion": 1,
+            "rulesVersion": "r9",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "local-operator",
+              "actorId": "a1",
+              "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "WORLD_INSTANCE_MISMATCH",
+              "message": "\u8fde\u63a5\u5df2\u6307\u5411\u53e6\u4e00\u4e2a\u4e16\u754c\uff0c\u539f\u52a8\u4f5c\u4ecd\u987b\u5728\u539f\u4e16\u754c\u786e\u8ba4",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "method": "GET",
+          "status": 412,
+          "reply": {
+            "schemaVersion": 1,
+            "rulesVersion": "r9",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "local-operator",
+              "actorId": "a1",
+              "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "WORLD_INSTANCE_MISMATCH",
+              "message": "\u8fde\u63a5\u5df2\u6307\u5411\u53e6\u4e00\u4e2a\u4e16\u754c\uff0c\u539f\u52a8\u4f5c\u4ecd\u987b\u5728\u539f\u4e16\u754c\u786e\u8ba4",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        }
+      ],
+      "validReceipt": {
+        "schemaVersion": 1,
+        "rulesVersion": "r9",
+        "stateVersion": 331,
+        "commandId": "410fa75b5eb34efdbfe98f55125a2436",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+        },
+        "eventCursor": 332,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "transfer",
+          "resource": "wood",
+          "quantity": 3,
+          "senderActorId": "a1",
+          "recipientActorId": "a2",
+          "inventoryWood": 3
+        },
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 330,
+          "appliedOnStateVersion": 330
+        }
+      },
+      "audit": {
+        "materialTotal": 12,
+        "stateVersion": 331,
+        "requests": 1,
+        "processStopped": true
+      }
+    },
+    "legacy": {
+      "passed": true,
+      "databaseDumpUnchangedOnNewBinaryBoot": true,
+      "originalReceiptsVerified": 335,
+      "transferUnavailableReplies": [
+        {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 334,
+          "commandId": "4c6c3e692b6f47919bec3f94206ea652",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s09a5f28af75246daa28fd3138d783d1e"
+          },
+          "eventCursor": 335,
+          "error": {
+            "code": "ACTION_UNAVAILABLE",
+            "message": "\u5f53\u524d\u4e16\u754c\u4e0d\u652f\u6301\u6728\u6750\u8f6c\u8ba9",
+            "retryable": false,
+            "mutated": false
+          },
+          "status": "rejected"
+        },
+        {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 334,
+          "commandId": "7e93f5f8d5014713b4f0a00b9af26f70",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s09a5f28af75246daa28fd3138d783d1e"
+          },
+          "eventCursor": 335,
+          "error": {
+            "code": "PRECONDITION_MODE_UNAVAILABLE",
+            "message": "\u5f53\u524d\u4e16\u754c\u6216\u52a8\u4f5c\u4e0d\u652f\u6301\u8fd9\u4e2a\u524d\u7f6e\u6761\u4ef6\u6a21\u5f0f",
+            "retryable": false,
+            "mutated": false
+          },
+          "status": "rejected",
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 334,
+            "appliedOnStateVersion": 334
+          }
+        }
+      ],
+      "legacyObservation": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 334,
+        "commandId": null,
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "s09a5f28af75246daa28fd3138d783d1e"
+        },
+        "eventCursor": 335,
+        "error": null,
+        "world": {
+          "id": "foundation-01",
+          "scenarioId": "wilderness-continuous-v1",
+          "width": 32,
+          "height": 24,
+          "coordinateSystem": "continuous-xz",
+          "bounds": [
+            0,
+            0,
+            32,
+            24
+          ],
+          "instanceId": "w_3d2805527a3444e5a534a794f21d0a76"
+        },
+        "movement": {
+          "version": 1,
+          "kind": "continuous",
+          "speed": 3,
+          "radius": 0.28,
+          "maxStepDistance": 0.6,
+          "gatherReach": 1.6,
+          "buildReach": 3.2
+        },
+        "terrain": {
+          "version": 1,
+          "river": {
+            "polygon": [
+              [
+                14.6,
+                0
+              ],
+              [
+                14.506445312499999,
+                0.5
+              ],
+              [
+                14.364062500000001,
+                1
+              ],
+              [
+                14.1927734375,
+                1.5
+              ],
+              [
+                14.0125,
+                2
+              ],
+              [
+                13.8431640625,
+                2.5
+              ],
+              [
+                13.7046875,
+                3
+              ],
+              [
+                13.6169921875,
+                3.5
+              ],
+              [
+                13.6,
+                4
+              ],
+              [
+                13.658789062499999,
+                4.5
+              ],
+              [
+                13.7765625,
+                5
+              ],
+              [
+                13.940429687499998,
+                5.5
+              ],
+              [
+                14.1375,
+                6
+              ],
+              [
+                14.3548828125,
+                6.5
+              ],
+              [
+                14.579687499999999,
+                7
+              ],
+              [
+                14.799023437499999,
+                7.5
+              ],
+              [
+                14.999999999999998,
+                8
+              ],
+              [
+                15.208203124999999,
+                8.5
+              ],
+              [
+                15.446874999999997,
+                9
+              ],
+              [
+                15.699609375,
+                9.5
+              ],
+              [
+                15.949999999999998,
+                10
+              ],
+              [
+                16.181640625,
+                10.5
+              ],
+              [
+                16.378125,
+                11
+              ],
+              [
+                16.523046875,
+                11.5
+              ],
+              [
+                16.6,
+                12
+              ],
+              [
+                16.604199218750004,
+                12.5
+              ],
+              [
+                16.54921875,
+                13
+              ],
+              [
+                16.44619140625,
+                13.5
+              ],
+              [
+                16.30625,
+                14
+              ],
+              [
+                16.14052734375,
+                14.5
+              ],
+              [
+                15.960156250000002,
+                15
+              ],
+              [
+                15.77626953125,
+                15.5
+              ],
+              [
+                15.6,
+                16
+              ],
+              [
+                15.411425781249998,
+                16.5
+              ],
+              [
+                15.191406250000002,
+                17
+              ],
+              [
+                14.95224609375,
+                17.5
+              ],
+              [
+                14.706249999999999,
+                18
+              ],
+              [
+                14.46572265625,
+                18.5
+              ],
+              [
+                14.24296875,
+                19
+              ],
+              [
+                14.050292968749998,
+                19.5
+              ],
+              [
+                13.9,
+                20
+              ],
+              [
+                13.79345703125,
+                20.5
+              ],
+              [
+                13.719531250000001,
+                21
+              ],
+              [
+                13.67177734375,
+                21.5
+              ],
+              [
+                13.64375,
+                22
+              ],
+              [
+                13.62900390625,
+                22.5
+              ],
+              [
+                13.621093750000002,
+                23
+              ],
+              [
+                13.613574218750003,
+                23.5
+              ],
+              [
+                13.600000000000003,
+                24
+              ],
+              [
+                16.400000000000002,
+                24
+              ],
+              [
+                16.413574218750004,
+                23.5
+              ],
+              [
+                16.42109375,
+                23
+              ],
+              [
+                16.42900390625,
+                22.5
+              ],
+              [
+                16.44375,
+                22
+              ],
+              [
+                16.47177734375,
+                21.5
+              ],
+              [
+                16.51953125,
+                21
+              ],
+              [
+                16.59345703125,
+                20.5
+              ],
+              [
+                16.7,
+                20
+              ],
+              [
+                16.850292968749997,
+                19.5
+              ],
+              [
+                17.04296875,
+                19
+              ],
+              [
+                17.26572265625,
+                18.5
+              ],
+              [
+                17.506249999999998,
+                18
+              ],
+              [
+                17.75224609375,
+                17.5
+              ],
+              [
+                17.99140625,
+                17
+              ],
+              [
+                18.211425781249996,
+                16.5
+              ],
+              [
+                18.4,
+                16
+              ],
+              [
+                18.57626953125,
+                15.5
+              ],
+              [
+                18.76015625,
+                15
+              ],
+              [
+                18.94052734375,
+                14.5
+              ],
+              [
+                19.106249999999996,
+                14
+              ],
+              [
+                19.24619140625,
+                13.5
+              ],
+              [
+                19.34921875,
+                13
+              ],
+              [
+                19.40419921875,
+                12.5
+              ],
+              [
+                19.4,
+                12
+              ],
+              [
+                19.323046874999996,
+                11.5
+              ],
+              [
+                19.178124999999998,
+                11
+              ],
+              [
+                18.981640624999997,
+                10.5
+              ],
+              [
+                18.749999999999996,
+                10
+              ],
+              [
+                18.499609375,
+                9.5
+              ],
+              [
+                18.246874999999996,
+                9
+              ],
+              [
+                18.008203124999998,
+                8.5
+              ],
+              [
+                17.799999999999997,
+                8
+              ],
+              [
+                17.599023437499998,
+                7.5
+              ],
+              [
+                17.3796875,
+                7
+              ],
+              [
+                17.1548828125,
+                6.5
+              ],
+              [
+                16.9375,
+                6
+              ],
+              [
+                16.740429687499997,
+                5.5
+              ],
+              [
+                16.5765625,
+                5
+              ],
+              [
+                16.4587890625,
+                4.5
+              ],
+              [
+                16.4,
+                4
+              ],
+              [
+                16.4169921875,
+                3.5
+              ],
+              [
+                16.5046875,
+                3
+              ],
+              [
+                16.6431640625,
+                2.5
+              ],
+              [
+                16.8125,
+                2
+              ],
+              [
+                16.9927734375,
+                1.5
+              ],
+              [
+                17.1640625,
+                1
+              ],
+              [
+                17.3064453125,
+                0.5
+              ],
+              [
+                17.4,
+                0
+              ]
+            ],
+            "centerline": [
+              [
+                16,
+                0
+              ],
+              [
+                15.906445312499999,
+                0.5
+              ],
+              [
+                15.764062500000001,
+                1
+              ],
+              [
+                15.5927734375,
+                1.5
+              ],
+              [
+                15.4125,
+                2
+              ],
+              [
+                15.2431640625,
+                2.5
+              ],
+              [
+                15.1046875,
+                3
+              ],
+              [
+                15.0169921875,
+                3.5
+              ],
+              [
+                15,
+                4
+              ],
+              [
+                15.058789062499999,
+                4.5
+              ],
+              [
+                15.176562500000001,
+                5
+              ],
+              [
+                15.340429687499999,
+                5.5
+              ],
+              [
+                15.5375,
+                6
+              ],
+              [
+                15.7548828125,
+                6.5
+              ],
+              [
+                15.979687499999999,
+                7
+              ],
+              [
+                16.1990234375,
+                7.5
+              ],
+              [
+                16.4,
+                8
+              ],
+              [
+                16.608203125,
+                8.5
+              ],
+              [
+                16.846874999999997,
+                9
+              ],
+              [
+                17.099609375,
+                9.5
+              ],
+              [
+                17.349999999999998,
+                10
+              ],
+              [
+                17.581640625,
+                10.5
+              ],
+              [
+                17.778125,
+                11
+              ],
+              [
+                17.923046874999997,
+                11.5
+              ],
+              [
+                18,
+                12
+              ],
+              [
+                18.004199218750003,
+                12.5
+              ],
+              [
+                17.94921875,
+                13
+              ],
+              [
+                17.84619140625,
+                13.5
+              ],
+              [
+                17.706249999999997,
+                14
+              ],
+              [
+                17.54052734375,
+                14.5
+              ],
+              [
+                17.360156250000003,
+                15
+              ],
+              [
+                17.17626953125,
+                15.5
+              ],
+              [
+                17,
+                16
+              ],
+              [
+                16.811425781249998,
+                16.5
+              ],
+              [
+                16.591406250000002,
+                17
+              ],
+              [
+                16.35224609375,
+                17.5
+              ],
+              [
+                16.10625,
+                18
+              ],
+              [
+                15.86572265625,
+                18.5
+              ],
+              [
+                15.64296875,
+                19
+              ],
+              [
+                15.450292968749999,
+                19.5
+              ],
+              [
+                15.3,
+                20
+              ],
+              [
+                15.19345703125,
+                20.5
+              ],
+              [
+                15.119531250000001,
+                21
+              ],
+              [
+                15.07177734375,
+                21.5
+              ],
+              [
+                15.043750000000001,
+                22
+              ],
+              [
+                15.02900390625,
+                22.5
+              ],
+              [
+                15.021093750000002,
+                23
+              ],
+              [
+                15.013574218750003,
+                23.5
+              ],
+              [
+                15.000000000000004,
+                24
+              ]
+            ],
+            "halfWidth": 1.4
+          },
+          "obstacles": [
+            {
+              "id": "rock-west",
+              "kind": "rock",
+              "position": [
+                10.5,
+                8.5
+              ],
+              "radius": 1.05
+            },
+            {
+              "id": "rock-south",
+              "kind": "rock",
+              "position": [
+                5.6,
+                19.7
+              ],
+              "radius": 0.8
+            },
+            {
+              "id": "rock-east",
+              "kind": "rock",
+              "position": [
+                23,
+                12.5
+              ],
+              "radius": 1.2
+            },
+            {
+              "id": "rock-north",
+              "kind": "rock",
+              "position": [
+                21.8,
+                3.2
+              ],
+              "radius": 0.75
+            }
+          ]
+        },
+        "self": {
+          "actorId": "a1",
+          "position": [
+            15.72,
+            12
+          ],
+          "inventory": {
+            "wood": 6
+          }
+        },
+        "residents": [
+          {
+            "actorId": "a1",
+            "position": [
+              15.72,
+              12
+            ]
+          },
+          {
+            "actorId": "a2",
+            "position": [
+              15,
+              12
+            ]
+          }
+        ],
+        "resourceNodes": [
+          {
+            "nodeId": "tree-east-north",
+            "kind": "tree",
+            "position": [
+              25.4,
+              5.8
+            ],
+            "initialWood": 3,
+            "remainingWood": 0
+          },
+          {
+            "nodeId": "tree-east-south",
+            "kind": "tree",
+            "position": [
+              25.7,
+              18.2
+            ],
+            "initialWood": 3,
+            "remainingWood": 0
+          },
+          {
+            "nodeId": "tree-west-north",
+            "kind": "tree",
+            "position": [
+              6.2,
+              7.8
+            ],
+            "initialWood": 3,
+            "remainingWood": 0
+          },
+          {
+            "nodeId": "tree-west-south",
+            "kind": "tree",
+            "position": [
+              9.2,
+              16.3
+            ],
+            "initialWood": 3,
+            "remainingWood": 0
+          }
+        ],
+        "entities": [
+          {
+            "entityId": "ec3cc7798e49e43a7845f019df0c6ffb8",
+            "definitionId": "bridge",
+            "definitionVersion": 1,
+            "rulesVersion": "r8",
+            "ownerActorId": "a1",
+            "position": [
+              18,
+              12
+            ],
+            "embodiedWood": 6
+          }
+        ],
+        "recipes": [
+          {
+            "id": "platform.v1",
+            "definitionId": "platform",
+            "woodCost": 3
+          },
+          {
+            "id": "bridge.v1",
+            "definitionId": "bridge",
+            "woodCost": 6
+          }
+        ],
+        "gathering": {
+          "version": 1,
+          "quantityPerAction": 1
+        },
+        "depot": {
+          "wood": 0,
+          "available": false
+        },
+        "resourceAudit": {
+          "issuedWood": 12,
+          "wildWood": 0,
+          "depotWood": 0,
+          "inventoryWood": 6,
+          "embodiedWood": 6,
+          "conserved": true
+        },
+        "commandBinding": {
+          "version": 1,
+          "required": true,
+          "header": "World-Instance-Id"
+        },
+        "commandConcurrency": {
+          "version": 1,
+          "supportedModes": [
+            "actor-state-v1"
+          ]
+        }
+      },
+      "audit": {
+        "materialTotal": 12,
+        "stateVersion": 334,
+        "requests": 2,
+        "processStopped": true
+      }
+    }
+  },
+  "worlds": [
+    {
+      "name": "geometry",
+      "instance": "w_a2d7cd9ccbde4295b2fe38adfc3de6b8"
+    },
+    {
+      "name": "instance_boundary",
+      "instance": "w_a2d7cd9ccbde4295b2fe38adfc3de6b8"
+    },
+    {
+      "name": "other-instance",
+      "instance": "w_a5304a57d58c4b5cb11bc50093569c33"
+    },
+    {
+      "name": "legacy",
+      "instance": "w_3d2805527a3444e5a534a794f21d0a76"
+    }
+  ],
+  "scope": "r9 supplemental geometry/instance/r8 compatibility",
+  "contractSha256": "38611746e3e20f006bcd8eac0730317aed22e8e6d1b3e44424737a5a9d22288c",
+  "fixedProgram": true,
+  "externalModelCalls": 0,
+  "sqlStateSeeding": false,
+  "otherWorldAudit": {
+    "materialTotal": 12,
+    "stateVersion": 0,
+    "requests": 0,
+    "processStopped": true
+  }
+}

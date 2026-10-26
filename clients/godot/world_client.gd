@@ -54,11 +54,14 @@ func _valid_record(record: Variant) -> bool:
 		var before = JSON.parse_string(record.before)
 		if not command.get("action") is Dictionary or not Evidence.valid_before(command.action, before):
 			return false
+		if command.action.get("type") == "transfer" and before.get("senderActorId") != record.actorId:
+			return false
 	elif command.has("preconditionMode"):
 		return false
 	return command.get("commandId") == record.commandId and command.get("schemaVersion") == 1 \
-		and command.get("rulesVersion") == "r8" and Evidence.whole(command.get("expectedStateVersion")) \
-		and command.get("action") is Dictionary and command.action.get("type") in ["walk", "gather", "build"]
+		and command.get("rulesVersion") in ["r8", "r9"] and Evidence.whole(command.get("expectedStateVersion")) \
+		and command.get("action") is Dictionary and (command.action.get("type") in ["walk", "gather", "build"] \
+			or (command.action.get("type") == "transfer" and command.rulesVersion == "r9" and record.get("recordVersion") == 3))
 
 func can_act() -> bool:
 	return healthy and not busy and storage_ok and not legacy_unbound and pending.is_empty()
@@ -174,9 +177,10 @@ func _valid_observation(data: Dictionary) -> bool:
 	for field in ["world", "identity", "self"]:
 		if not data.get(field) is Dictionary:
 			return false
-	return data.get("schemaVersion") == 1 and data.get("rulesVersion") == "r8" \
+	return data.get("schemaVersion") == 1 and Evidence.continuous_world(data) \
 		and data.get("world", {}).get("id") == "foundation-01" \
-		and data.get("world", {}).get("scenarioId") == "wilderness-continuous-v1" \
+		and (data.rulesVersion != "r9" or (Evidence.transfer_supported(data) and data.get("recentTransfers") is Dictionary \
+			and data.recentTransfers.get("items") is Array and data.recentTransfers.get("truncated") is bool)) \
 		and data.get("identity", {}).get("actorId", "") == data.get("self", {}).get("actorId", "?") \
 		and data.get("stateVersion") is int and data.get("stateVersion", -1) >= floor_version \
 		and (identity.is_empty() or data.get("identity", {}).get("actorId") == identity.get("actorId")) \
@@ -188,7 +192,7 @@ func _observe() -> bool:
 	var reply = await _request(API + "/observation")
 	if reply.code != 200 or not _valid_observation(reply.data) or not _observation_binding(reply):
 		healthy = false
-		message = "世界未同步，操作暂停。请检查连接、令牌及 wilderness-continuous-v1 场景。"
+		message = "世界未同步，操作暂停。请检查连接、令牌及连续荒野场景。"
 		return false
 	observation = reply.data
 	identity = observation.identity
@@ -219,6 +223,10 @@ func refresh() -> void:
 
 func send_action(action: Dictionary) -> void:
 	if not can_act():
+		return
+	if action.get("type") == "transfer" and (not Evidence.transfer_supported(observation) or not Evidence.supported(observation)):
+		message = "这个世界尚未提供木材赠送。"
+		changed.emit()
 		return
 	# Another process may have saved an unresolved command since the last poll.
 	_load_pending()
@@ -262,10 +270,12 @@ func _settle(reply: Dictionary) -> bool:
 	var data = reply.data
 	if pending.is_empty() or not _reply_binding(reply) or not data.get("identity") is Dictionary or data.get("commandId") != pending.commandId \
 		or data.get("identity", {}).get("actorId") != pending.actorId \
-		or data.get("schemaVersion") != 1 or data.get("rulesVersion") != "r8" \
+		or data.get("schemaVersion") != 1 \
 		or data.get("stateVersion", -1) < 0:
 		return false
 	var command = JSON.parse_string(pending.body)
+	if data.get("rulesVersion") != command.get("rulesVersion"):
+		return false
 	var committed = reply.code == 200 and data.get("status") == "committed" and data.get("error") == null
 	var rejected = reply.code in [403, 404, 409, 422] and data.get("status") == "rejected" and data.get("error") is Dictionary and data.error.get("mutated") == false
 	var actor_mode = command.get("preconditionMode") == Evidence.MODE

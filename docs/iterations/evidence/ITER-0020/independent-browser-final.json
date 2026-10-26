@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "legacy_report_still_loads",
+      "passed": true
+    },
+    {
+      "name": "gift_only_budget_is_expenditure_not_construction",
+      "passed": true
+    },
+    {
+      "name": "real_initial_bridge_plus_gift_totals_nine",
+      "passed": true
+    },
+    {
+      "name": "recipient_mobile_keeps_build_and_income_separate",
+      "passed": true
+    },
+    {
+      "name": "readonly_no_errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "worldRequests": [],
+  "staticStopped": true
+}

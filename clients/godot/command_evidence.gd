@@ -2,9 +2,17 @@ extends RefCounted
 ## Frozen pre-submit facts for the opt-in actor-state protocol.
 const MODE = "actor-state-v1"
 
+static func continuous_world(observed: Dictionary) -> bool:
+	return {"r8": "wilderness-continuous-v1", "r9": "wilderness-cooperation-v1"}.get(observed.get("rulesVersion"), "") \
+		== observed.get("world", {}).get("scenarioId", "?")
+
+static func transfer_supported(observed: Dictionary) -> bool:
+	return observed.get("rulesVersion") == "r9" and continuous_world(observed) \
+		and observed.get("materialTransfer") == {"version": 1, "resource": "wood", "maxQuantity": 12, "reach": 1.6, "recipientConfirmation": false}
+
 static func supported(observed: Dictionary) -> bool:
 	var capability = observed.get("commandConcurrency")
-	return observed.get("world", {}).get("instanceId") is String and capability is Dictionary \
+	return continuous_world(observed) and observed.get("world", {}).get("instanceId") is String and capability is Dictionary \
 		and capability.get("version") == 1 and capability.get("supportedModes") is Array \
 		and MODE in capability.supportedModes
 
@@ -32,6 +40,10 @@ static func capture(observed: Dictionary, action: Dictionary) -> Dictionary:
 			for recipe in observed.get("recipes", []):
 				if recipe.get("id") == action.get("recipeId"):
 					before.woodCost = recipe.get("woodCost")
+		"transfer":
+			if not transfer_supported(observed):
+				return {}
+			before.senderActorId = observed.self.actorId
 	return before if valid_before(action, before) else {}
 
 static func valid_before(action: Dictionary, before: Variant) -> bool:
@@ -46,6 +58,13 @@ static func valid_before(action: Dictionary, before: Variant) -> bool:
 		"build":
 			var cost = {"platform.v1": 3, "bridge.v1": 6}.get(action.get("recipeId"), -1)
 			return point(action.get("at")) and cost > 0 and before.get("woodCost") == cost
+		"transfer":
+			return action.size() == 4 and action.get("resource") == "wood" \
+				and action.get("recipientActorId") is String and not action.recipientActorId.is_empty() \
+				and before.get("senderActorId") is String and not before.senderActorId.is_empty() \
+				and action.recipientActorId != before.senderActorId \
+				and whole(action.get("quantity")) and action.quantity >= 1 and action.quantity <= 12 \
+				and before.inventoryWood >= action.quantity
 	return false
 
 static func execution(data: Dictionary, command: Dictionary, committed: bool) -> bool:
@@ -92,6 +111,12 @@ static func result(data: Dictionary, command: Dictionary, before: Dictionary) ->
 			return actual.get("entityId") is String and not actual.entityId.is_empty() \
 				and point(actual.get("position")) and distance(actual.position, action.at) <= 0.000001 \
 				and whole(actual.get("inventoryWood")) and actual.inventoryWood == before.inventoryWood - before.woodCost
+		"transfer":
+			return actual.get("resource") == action.resource and whole(actual.get("quantity")) \
+				and actual.quantity == action.quantity and actual.get("senderActorId") == before.senderActorId \
+				and actual.senderActorId == data.get("identity", {}).get("actorId") \
+				and actual.get("recipientActorId") == action.recipientActorId \
+				and whole(actual.get("inventoryWood")) and actual.inventoryWood == before.inventoryWood - action.quantity
 	return false
 
 static func built_entity(observed: Dictionary, data: Dictionary, command: Dictionary, before: Dictionary, actor: String) -> bool:
@@ -99,7 +124,7 @@ static func built_entity(observed: Dictionary, data: Dictionary, command: Dictio
 		return false
 	for entity in observed.get("entities", []):
 		if entity.get("entityId") == data.result.entityId:
-			return entity.get("ownerActorId") == actor and entity.get("rulesVersion") == "r8" \
+			return entity.get("ownerActorId") == actor and entity.get("rulesVersion") == command.get("rulesVersion") \
 				and entity.get("definitionId") == command.action.recipeId.trim_suffix(".v1") \
 				and entity.get("definitionVersion") == 1 and entity.get("embodiedWood") == before.woodCost \
 				and point(entity.get("position")) and distance(entity.position, command.action.at) <= 0.000001

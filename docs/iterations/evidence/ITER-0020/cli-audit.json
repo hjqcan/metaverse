@@ -1,0 +1,2546 @@
+{
+  "integrityCheck": "ok",
+  "naturalWood": 3,
+  "issuedWood": 12,
+  "residents": [
+    {
+      "actor_id": "a1",
+      "x": 5.0,
+      "y": 7.0,
+      "wood": 0
+    },
+    {
+      "actor_id": "a2",
+      "x": 26.0,
+      "y": 17.0,
+      "wood": 0
+    }
+  ],
+  "entities": [
+    {
+      "entity_id": "e12b336428ff8449a910ee8b49af5dc90",
+      "world_id": "foundation-01",
+      "owner_actor_id": "a1",
+      "recipe_id": "bridge.v1",
+      "definition_id": "bridge",
+      "definition_version": 1,
+      "rules_version": "r9",
+      "x": 17.0,
+      "y": 16.0,
+      "embodied_wood": 6
+    },
+    {
+      "entity_id": "eb95ba3ee602c4b38bfc3536ba91e17bc",
+      "world_id": "foundation-01",
+      "owner_actor_id": "a2",
+      "recipe_id": "platform.v1",
+      "definition_id": "platform",
+      "definition_version": 1,
+      "rules_version": "r9",
+      "x": 28.0,
+      "y": 16.0,
+      "embodied_wood": 3
+    }
+  ],
+  "ledger": [
+    {
+      "id": 1,
+      "world_id": "foundation-01",
+      "event_seq": 1,
+      "command_id": null,
+      "actor_id": null,
+      "source_account": "initial-issuance",
+      "destination_account": "wild-wood",
+      "quantity": 12
+    },
+    {
+      "id": 2,
+      "world_id": "foundation-01",
+      "event_seq": 2,
+      "command_id": "ac9ac2f1960e4b85becdcaa09d63b244",
+      "actor_id": "a1",
+      "source_account": "wild-wood",
+      "destination_account": "inventory:a1",
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "world_id": "foundation-01",
+      "event_seq": 3,
+      "command_id": "bb6dea1e958c4778bfeb0af81b7a212e",
+      "actor_id": "a1",
+      "source_account": "wild-wood",
+      "destination_account": "inventory:a1",
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "world_id": "foundation-01",
+      "event_seq": 4,
+      "command_id": "cebb3c56fae948df8451f61ff234401c",
+      "actor_id": "a1",
+      "source_account": "wild-wood",
+      "destination_account": "inventory:a1",
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "world_id": "foundation-01",
+      "event_seq": 20,
+      "command_id": "5dfd16d03c47483ab40896f09d48cd94",
+      "actor_id": "a1",
+      "source_account": "wild-wood",
+      "destination_account": "inventory:a1",
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "world_id": "foundation-01",
+      "event_seq": 21,
+      "command_id": "ea1d05bdbfa14aa9aefc6a8ea5a87257",
+      "actor_id": "a1",
+      "source_account": "wild-wood",
+      "destination_account": "inventory:a1",
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "world_id": "foundation-01",
+      "event_seq": 22,
+      "command_id": "89787ce39feb453c811d2db0c71382ee",
+      "actor_id": "a1",
+      "source_account": "wild-wood",
+      "destination_account": "inventory:a1",
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "world_id": "foundation-01",
+      "event_seq": 32,
+      "command_id": "a51fb383e42f4bc8a7ff39ec5d039af7",
+      "actor_id": "a1",
+      "source_account": "inventory:a1",
+      "destination_account": "entity:e12b336428ff8449a910ee8b49af5dc90",
+      "quantity": 6
+    },
+    {
+      "id": 9,
+      "world_id": "foundation-01",
+      "event_seq": 51,
+      "command_id": "5d10033e8a514adb9e4a95dee4fc5bf7",
+      "actor_id": "a1",
+      "source_account": "wild-wood",
+      "destination_account": "inventory:a1",
+      "quantity": 1
+    },
+    {
+      "id": 10,
+      "world_id": "foundation-01",
+      "event_seq": 52,
+      "command_id": "6864b70e9679468e9c65646dd05d217e",
+      "actor_id": "a1",
+      "source_account": "wild-wood",
+      "destination_account": "inventory:a1",
+      "quantity": 1
+    },
+    {
+      "id": 11,
+      "world_id": "foundation-01",
+      "event_seq": 53,
+      "command_id": "ab7709a9f5ff4754b738161b62896f7f",
+      "actor_id": "a1",
+      "source_account": "wild-wood",
+      "destination_account": "inventory:a1",
+      "quantity": 1
+    },
+    {
+      "id": 12,
+      "world_id": "foundation-01",
+      "event_seq": 58,
+      "command_id": "a62c7b0e816c4195aa0b947a6c976b2b",
+      "actor_id": "a1",
+      "source_account": "inventory:a1",
+      "destination_account": "inventory:a2",
+      "quantity": 3
+    },
+    {
+      "id": 13,
+      "world_id": "foundation-01",
+      "event_seq": 100,
+      "command_id": "02123bff2e884428a58fcb63697bff07",
+      "actor_id": "a2",
+      "source_account": "inventory:a2",
+      "destination_account": "entity:eb95ba3ee602c4b38bfc3536ba91e17bc",
+      "quantity": 3
+    }
+  ],
+  "events": [
+    {
+      "seq": 1,
+      "stateVersion": 0,
+      "commandId": null,
+      "actorId": null,
+      "type": "worldSeeded",
+      "quantity": 12,
+      "source": "ITER-0020 initial wild wood"
+    },
+    {
+      "seq": 2,
+      "stateVersion": 1,
+      "commandId": "ac9ac2f1960e4b85becdcaa09d63b244",
+      "actorId": "a1",
+      "type": "gathered",
+      "nodeId": "tree-west-north",
+      "quantity": 1,
+      "position": [
+        6.2,
+        7.8
+      ],
+      "remainingWood": 2
+    },
+    {
+      "seq": 3,
+      "stateVersion": 2,
+      "commandId": "bb6dea1e958c4778bfeb0af81b7a212e",
+      "actorId": "a1",
+      "type": "gathered",
+      "nodeId": "tree-west-north",
+      "quantity": 1,
+      "position": [
+        6.2,
+        7.8
+      ],
+      "remainingWood": 1
+    },
+    {
+      "seq": 4,
+      "stateVersion": 3,
+      "commandId": "cebb3c56fae948df8451f61ff234401c",
+      "actorId": "a1",
+      "type": "gathered",
+      "nodeId": "tree-west-north",
+      "quantity": 1,
+      "position": [
+        6.2,
+        7.8
+      ],
+      "remainingWood": 0
+    },
+    {
+      "seq": 5,
+      "stateVersion": 4,
+      "commandId": "1499ea3666004ef4be8c7730ee7368cf",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        5.246952033455899,
+        7.546822359795205
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 6,
+      "stateVersion": 5,
+      "commandId": "8f89f61e8b1e42cb8d719197247c6bfd",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        5.493904066911798,
+        8.09364471959041
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 7,
+      "stateVersion": 6,
+      "commandId": "75ec137514a04c918e9f7fa1d3d3be97",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        5.740856100367696,
+        8.640467079385616
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 8,
+      "stateVersion": 7,
+      "commandId": "0424afee495142ef920ffe3dc60492c6",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        5.987808133823595,
+        9.187289439180821
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 9,
+      "stateVersion": 8,
+      "commandId": "6b729c2b29c742adbafb7e9b4b7b9c14",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        6.234760167279494,
+        9.734111798976027
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 10,
+      "stateVersion": 9,
+      "commandId": "e10ccb2a5d0144d885e25488a8dd6c11",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        6.481712200735393,
+        10.280934158771231
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 11,
+      "stateVersion": 10,
+      "commandId": "f2376042c4e94b51ba6befb41398af9d",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        6.7286642341912914,
+        10.827756518566435
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 12,
+      "stateVersion": 11,
+      "commandId": "255a05e3f57b47a2907f7b3a645425db",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        6.97561626764719,
+        11.374578878361639
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 13,
+      "stateVersion": 12,
+      "commandId": "15b36403612145eda4b94c522bb15405",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        7.222568301103089,
+        11.921401238156843
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 14,
+      "stateVersion": 13,
+      "commandId": "fc4786ad75a14dcf857eb045a78de4e6",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        7.469520334558988,
+        12.468223597952047
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 15,
+      "stateVersion": 14,
+      "commandId": "720524fb91de4ce0b51e7a829b991703",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        7.716472368014887,
+        13.015045957747251
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 16,
+      "stateVersion": 15,
+      "commandId": "3529ae69cf4b4540a291efce08a538c0",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        7.963424401470785,
+        13.561868317542457
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 17,
+      "stateVersion": 16,
+      "commandId": "56cecef7a10348cbaf17cc0b216fed55",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        8.210376434926685,
+        14.108690677337663
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 18,
+      "stateVersion": 17,
+      "commandId": "7bfa73b435924f1ba007727b6515f893",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        8.457328468382585,
+        14.655513037132867
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 19,
+      "stateVersion": 18,
+      "commandId": "577569c97cea447ab5a9a9165f0ac9a2",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        8.590851650808782,
+        14.951171512505162
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 20,
+      "stateVersion": 19,
+      "commandId": "5dfd16d03c47483ab40896f09d48cd94",
+      "actorId": "a1",
+      "type": "gathered",
+      "nodeId": "tree-west-south",
+      "quantity": 1,
+      "position": [
+        9.2,
+        16.3
+      ],
+      "remainingWood": 2
+    },
+    {
+      "seq": 21,
+      "stateVersion": 20,
+      "commandId": "ea1d05bdbfa14aa9aefc6a8ea5a87257",
+      "actorId": "a1",
+      "type": "gathered",
+      "nodeId": "tree-west-south",
+      "quantity": 1,
+      "position": [
+        9.2,
+        16.3
+      ],
+      "remainingWood": 1
+    },
+    {
+      "seq": 22,
+      "stateVersion": 21,
+      "commandId": "89787ce39feb453c811d2db0c71382ee",
+      "actorId": "a1",
+      "type": "gathered",
+      "nodeId": "tree-west-south",
+      "quantity": 1,
+      "position": [
+        9.2,
+        16.3
+      ],
+      "remainingWood": 0
+    },
+    {
+      "seq": 23,
+      "stateVersion": 22,
+      "commandId": "60458d9b9c574d7aa744b701a63620ee",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        9.181447565251371,
+        15.05698486631139
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 24,
+      "stateVersion": 23,
+      "commandId": "951fd4c564e24f80801ba926a3a78ad8",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        9.771516933558255,
+        15.165696137971304
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 25,
+      "stateVersion": 24,
+      "commandId": "a4d3b5fe44ca4ea1997225ee2ff8ec10",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        10.361586301865138,
+        15.274407409631218
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 26,
+      "stateVersion": 25,
+      "commandId": "b116ee1e6ad7490c8fbb87389d7985f8",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        10.951655670172022,
+        15.383118681291132
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 27,
+      "stateVersion": 26,
+      "commandId": "671c026a2f584f2181098663ef10d398",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        11.541725038478905,
+        15.491829952951045
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 28,
+      "stateVersion": 27,
+      "commandId": "7d816fb47b544e978812e69e3db9cd7b",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        12.131794406785788,
+        15.600541224610959
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 29,
+      "stateVersion": 28,
+      "commandId": "09155397791840dcac7589ea635b8705",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        12.721863775092672,
+        15.709252496270873
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 30,
+      "stateVersion": 29,
+      "commandId": "c64c4d2585c647caac50f4e48b1f3513",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        13.311933143399555,
+        15.817963767930785
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 31,
+      "stateVersion": 30,
+      "commandId": "2c99d91673db43f4b1d54003b0796e4f",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        13.902002511706439,
+        15.926675039590698
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 32,
+      "stateVersion": 31,
+      "commandId": "a51fb383e42f4bc8a7ff39ec5d039af7",
+      "actorId": "a1",
+      "type": "built",
+      "entityId": "e12b336428ff8449a910ee8b49af5dc90",
+      "position": [
+        17,
+        16
+      ]
+    },
+    {
+      "seq": 33,
+      "stateVersion": 32,
+      "commandId": "0b406beb380b4d46b35201cef69ea322",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        14.49746544390472,
+        16.000322146647424
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 34,
+      "stateVersion": 33,
+      "commandId": "928bab6570a54a0ca4e7787de5d85e86",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        15.092928376103,
+        16.07396925370415
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 35,
+      "stateVersion": 34,
+      "commandId": "1616227c8b494124b00c0c36989d44e2",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        15.68839130830128,
+        16.14761636076088
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 36,
+      "stateVersion": 35,
+      "commandId": "9dff75b801174b82b4a7dd3a5ba7c324",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        16.28385424049956,
+        16.221263467817604
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 37,
+      "stateVersion": 36,
+      "commandId": "d6e0de25d900413486cb0e5d49b56f81",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        16.879317172697842,
+        16.294910574874333
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 38,
+      "stateVersion": 37,
+      "commandId": "ebbd742b51eb42cd8b61ba3d006049ea",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        17.474780104896123,
+        16.36855768193106
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 39,
+      "stateVersion": 38,
+      "commandId": "c40257b9c34d46a4b966ef9de33a4508",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        18.070243037094404,
+        16.442204788987787
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 40,
+      "stateVersion": 39,
+      "commandId": "576966b1c9754590841196344f2ae596",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        18.537537778079173,
+        16.5
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 41,
+      "stateVersion": 40,
+      "commandId": "a0bf6f9f24af4452aa2472b4af9074fc",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        19.12131958000431,
+        16.63855976234477
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 42,
+      "stateVersion": 41,
+      "commandId": "9e1f178c073244228ec208f7d23b6af1",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        19.70510138192945,
+        16.77711952468954
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 43,
+      "stateVersion": 42,
+      "commandId": "b6c866f90f44492fbca6c454836733b1",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        20.288883183854587,
+        16.91567928703431
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 44,
+      "stateVersion": 43,
+      "commandId": "9a99486a16eb4329bcf28a7f66c9f60d",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        20.872664985779725,
+        17.054239049379078
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 45,
+      "stateVersion": 44,
+      "commandId": "62616f8cd00740ba803f013fa4b82d9f",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        21.456446787704863,
+        17.192798811723847
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 46,
+      "stateVersion": 45,
+      "commandId": "5394171368744118b9069c0b86f7bd66",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        22.04022858963,
+        17.331358574068616
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 47,
+      "stateVersion": 46,
+      "commandId": "06db72eed1504b7aa2a62468f853f8f8",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        22.62401039155514,
+        17.469918336413386
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 48,
+      "stateVersion": 47,
+      "commandId": "6a06dbeae8c040e0931f545edf61f5f2",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        23.207792193480277,
+        17.608478098758155
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 49,
+      "stateVersion": 48,
+      "commandId": "a9bf115d7280422b8713b50df9fcc3e3",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        23.791573995405415,
+        17.74703786110292
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 50,
+      "stateVersion": 49,
+      "commandId": "c4f16a21532444478c5d011eb8868aec",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        24.260004888584657,
+        17.858219252882904
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 51,
+      "stateVersion": 50,
+      "commandId": "5d10033e8a514adb9e4a95dee4fc5bf7",
+      "actorId": "a1",
+      "type": "gathered",
+      "nodeId": "tree-east-south",
+      "quantity": 1,
+      "position": [
+        25.7,
+        18.2
+      ],
+      "remainingWood": 2
+    },
+    {
+      "seq": 52,
+      "stateVersion": 51,
+      "commandId": "6864b70e9679468e9c65646dd05d217e",
+      "actorId": "a1",
+      "type": "gathered",
+      "nodeId": "tree-east-south",
+      "quantity": 1,
+      "position": [
+        25.7,
+        18.2
+      ],
+      "remainingWood": 1
+    },
+    {
+      "seq": 53,
+      "stateVersion": 52,
+      "commandId": "ab7709a9f5ff4754b738161b62896f7f",
+      "actorId": "a1",
+      "type": "gathered",
+      "nodeId": "tree-east-south",
+      "quantity": 1,
+      "position": [
+        25.7,
+        18.2
+      ],
+      "remainingWood": 0
+    },
+    {
+      "seq": 54,
+      "stateVersion": 53,
+      "commandId": "d6fb789bd0e44904bf978eb750927617",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        24.798110299987997,
+        17.592809068039813
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 55,
+      "stateVersion": 54,
+      "commandId": "ee9e59c02ec545a1a3ea73790c2532af",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        25.336215711391336,
+        17.32739888319672
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 56,
+      "stateVersion": 55,
+      "commandId": "b6bbf1f11b074753991bc6784fa5c72c",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        25.874321122794676,
+        17.06198869835363
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 57,
+      "stateVersion": 56,
+      "commandId": "c0cfb3132f264f7c9f60e49e81bbf28e",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        26,
+        17
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 58,
+      "stateVersion": 57,
+      "commandId": "a62c7b0e816c4195aa0b947a6c976b2b",
+      "actorId": "a1",
+      "type": "woodTransferred",
+      "recipientActorId": "a2",
+      "resource": "wood",
+      "quantity": 3
+    },
+    {
+      "seq": 59,
+      "stateVersion": 58,
+      "commandId": "5fc5dcc7859145c78979d7cce0ed2c5d",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        25.40597430456486,
+        16.91554010914761
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 60,
+      "stateVersion": 59,
+      "commandId": "3d5e8bb228eb44538e30c06f1489d3fd",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        24.811948609129722,
+        16.83108021829522
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 61,
+      "stateVersion": 60,
+      "commandId": "5bbff5f954cd49719631ee5dfdb5fc5d",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        24.217922913694583,
+        16.74662032744283
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 62,
+      "stateVersion": 61,
+      "commandId": "00c5dfe73c50457da23e258a98bd0de0",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        23.623897218259444,
+        16.66216043659044
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 63,
+      "stateVersion": 62,
+      "commandId": "5256d02f702840bfbc8ca492a55fd8d0",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        23.0298715228243,
+        16.577700545738054
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 64,
+      "stateVersion": 63,
+      "commandId": "9b44178490134d7d931e5b484984b272",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        22.43584582738916,
+        16.493240654885664
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 65,
+      "stateVersion": 64,
+      "commandId": "959416d179604215a7e9039f66e5a2e9",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        21.84182013195402,
+        16.408780764033274
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 66,
+      "stateVersion": 65,
+      "commandId": "922e2be33ad94cae9951447904d082a3",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        21.24779443651888,
+        16.324320873180888
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 67,
+      "stateVersion": 66,
+      "commandId": "2cb786a337d847d497d79b04367b1272",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        20.653768741083738,
+        16.2398609823285
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 68,
+      "stateVersion": 67,
+      "commandId": "6872db74d45644f486cee5402063a9c2",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        20.0597430456486,
+        16.15540109147611
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 69,
+      "stateVersion": 68,
+      "commandId": "80e1728b15154fa4ab43b69b7dfb03d1",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        19.46571735021346,
+        16.070941200623725
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 70,
+      "stateVersion": 69,
+      "commandId": "11da6aa18cbd4ecab24cda53cccdfdae",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        18.87169165477832,
+        15.986481309771337
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 71,
+      "stateVersion": 70,
+      "commandId": "1dc8157253284156ba35b0f852b24345",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        18.27766595934318,
+        15.902021418918949
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 72,
+      "stateVersion": 71,
+      "commandId": "42ec1a9c43024baf8ab8552ac379db9f",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        17.68364026390804,
+        15.81756152806656
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 73,
+      "stateVersion": 72,
+      "commandId": "6ffa031387bb4d0aaffd5fdff7c83698",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        17.0896145684729,
+        15.733101637214173
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 74,
+      "stateVersion": 73,
+      "commandId": "364f286eda6743248b9df3cc02c9e296",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        16.49558887303776,
+        15.648641746361784
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 75,
+      "stateVersion": 74,
+      "commandId": "8b9e0dc9bed042259629c5ef7139b740",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        15.90156317760262,
+        15.564181855509396
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 76,
+      "stateVersion": 75,
+      "commandId": "85ac6ba2f6234ffeacba76c21c106c22",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        15.450157534420823,
+        15.5
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 77,
+      "stateVersion": 76,
+      "commandId": "5e050ef602314a4ca7229abf4024ddaf",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        14.984690777566023,
+        15.121396383716327
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 78,
+      "stateVersion": 77,
+      "commandId": "1802d44a78b44a029dbb73fdcf6d7b63",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        14.519224020711222,
+        14.742792767432654
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 79,
+      "stateVersion": 78,
+      "commandId": "6bef19de7f95411c9cf56aee7b4f3402",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        14.053757263856422,
+        14.364189151148981
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 80,
+      "stateVersion": 79,
+      "commandId": "333a84d36c8e495f8e5699ee234ca8ef",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        13.588290507001622,
+        13.985585534865308
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 81,
+      "stateVersion": 80,
+      "commandId": "0b12e100519a496995c1c8be594dff84",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        13.122823750146821,
+        13.606981918581635
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 82,
+      "stateVersion": 81,
+      "commandId": "59032d9fd8824a58b4e2fca7e574eb3c",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        12.657356993292021,
+        13.228378302297962
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 83,
+      "stateVersion": 82,
+      "commandId": "8f15dd0f10594fdf9100944e55a489ed",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        12.19189023643722,
+        12.849774686014289
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 84,
+      "stateVersion": 83,
+      "commandId": "3195a293ea504204ba6640f067083829",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        11.72642347958242,
+        12.471171069730616
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 85,
+      "stateVersion": 84,
+      "commandId": "9907ccf7d75d43888b2446973290f3d0",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        11.26095672272762,
+        12.092567453446943
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 86,
+      "stateVersion": 85,
+      "commandId": "a8097d42b5024891a5f47b92e04fb23e",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        10.795489965872822,
+        11.71396383716327
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 87,
+      "stateVersion": 86,
+      "commandId": "70890a17fa31400d8ced3b84ee0da2dc",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        10.330023209018023,
+        11.335360220879597
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 88,
+      "stateVersion": 87,
+      "commandId": "06e5017578734d688fcd198c5b6be939",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        9.864556452163223,
+        10.956756604595924
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 89,
+      "stateVersion": 88,
+      "commandId": "256d61f9c84f4b61aa70821383a3bfee",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        9.399089695308424,
+        10.578152988312251
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 90,
+      "stateVersion": 89,
+      "commandId": "3d6196ff7aad47d39b804e08123d42df",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        8.933622938453624,
+        10.199549372028578
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 91,
+      "stateVersion": 90,
+      "commandId": "39f0979c74b34e6eb895b917f18544de",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        8.468156181598825,
+        9.820945755744905
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 92,
+      "stateVersion": 91,
+      "commandId": "54ba3df99dcd4617879017780970cadf",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        8.002689424744027,
+        9.442342139461232
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 93,
+      "stateVersion": 92,
+      "commandId": "924b8a5707f24d789f05c1934258ebdd",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        7.537222667889227,
+        9.063738523177559
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 94,
+      "stateVersion": 93,
+      "commandId": "39b9ac011be44501a792ee87f81c44ec",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        7.071755911034428,
+        8.685134906893886
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 95,
+      "stateVersion": 94,
+      "commandId": "592b463e1f6a446b89dae94d63cbf61d",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        6.6062891541796285,
+        8.306531290610213
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 96,
+      "stateVersion": 95,
+      "commandId": "abc2691cab42436dbaeeb98f35b175ee",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        6.140822397324829,
+        7.927927674326539
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 97,
+      "stateVersion": 96,
+      "commandId": "f6a8733c54a1463eb335036152301dfa",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        5.67535564047003,
+        7.549324058042865
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 98,
+      "stateVersion": 97,
+      "commandId": "88c76758774740e9ba8a2a905197e5f1",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        5.20988888361523,
+        7.170720441759191
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 99,
+      "stateVersion": 98,
+      "commandId": "e8b777923a344384a4e2faa48651b956",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        5,
+        7
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 100,
+      "stateVersion": 99,
+      "commandId": "02123bff2e884428a58fcb63697bff07",
+      "actorId": "a2",
+      "type": "built",
+      "entityId": "eb95ba3ee602c4b38bfc3536ba91e17bc",
+      "position": [
+        28,
+        16
+      ]
+    },
+    {
+      "seq": 101,
+      "stateVersion": 100,
+      "commandId": "e6f7074b0de5408cad2b4d2c0df0e270",
+      "actorId": "a2",
+      "type": "walked",
+      "position": [
+        26.53665631459995,
+        16.731671842700024
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 102,
+      "stateVersion": 101,
+      "commandId": "b8fbccc788dd4586ad40a223f003697f",
+      "actorId": "a2",
+      "type": "walked",
+      "position": [
+        27.073312629199897,
+        16.46334368540005
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 103,
+      "stateVersion": 102,
+      "commandId": "55a1d3daef7744d3af2b052c46ffb769",
+      "actorId": "a2",
+      "type": "walked",
+      "position": [
+        27.609968943799846,
+        16.195015528100075
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 104,
+      "stateVersion": 103,
+      "commandId": "709e6d961d624f80a844b21e8c9894ce",
+      "actorId": "a2",
+      "type": "walked",
+      "position": [
+        28,
+        16
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 105,
+      "stateVersion": 104,
+      "commandId": "3b89dffe3af342adaba10f4e86ef6501",
+      "actorId": "a2",
+      "type": "walked",
+      "position": [
+        27.46334368540005,
+        16.268328157299976
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 106,
+      "stateVersion": 105,
+      "commandId": "afb8cdb227ba4b58ac77356e3ca2ddc4",
+      "actorId": "a2",
+      "type": "walked",
+      "position": [
+        26.926687370800103,
+        16.53665631459995
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 107,
+      "stateVersion": 106,
+      "commandId": "15b44f038de34fed8834eabe24970fc8",
+      "actorId": "a2",
+      "type": "walked",
+      "position": [
+        26.390031056200154,
+        16.804984471899925
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 108,
+      "stateVersion": 107,
+      "commandId": "baf7dcf912964bf98b2a3de681d3831f",
+      "actorId": "a2",
+      "type": "walked",
+      "position": [
+        26,
+        17
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 109,
+      "stateVersion": 108,
+      "commandId": "cedf638c2dbe45d7a7e068481fa76df8",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        5.465466756854799,
+        7.378603616283673
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 110,
+      "stateVersion": 109,
+      "commandId": "07551e23b23447768317f6d9b0686209",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        5.930933513709599,
+        7.757207232567346
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 111,
+      "stateVersion": 110,
+      "commandId": "5558dbd8a587477aaab7b6ce829133a1",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        6.396400270564398,
+        8.135810848851019
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 112,
+      "stateVersion": 111,
+      "commandId": "f015909b38074fa5b865be72982e812a",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        6.861867027419198,
+        8.514414465134692
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 113,
+      "stateVersion": 112,
+      "commandId": "15de8f5d86414bda94ede5135b9edc18",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        7.327333784273997,
+        8.893018081418365
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 114,
+      "stateVersion": 113,
+      "commandId": "ead0cf0fb1a04198a1a49fd44edb49b5",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        7.792800541128797,
+        9.271621697702038
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 115,
+      "stateVersion": 114,
+      "commandId": "2821ccf230ff4bd6a488fa66085b426b",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        8.258267297983597,
+        9.650225313985711
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 116,
+      "stateVersion": 115,
+      "commandId": "ac1e722e71a24fe2bf78f768582427a4",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        8.723734054838397,
+        10.028828930269384
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 117,
+      "stateVersion": 116,
+      "commandId": "113439671ad44727baae337f1fd7f82d",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        9.189200811693198,
+        10.407432546553057
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 118,
+      "stateVersion": 117,
+      "commandId": "275c4717e4e94c51b6ab3c5b5bf57b1c",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        9.654667568547998,
+        10.78603616283673
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 119,
+      "stateVersion": 118,
+      "commandId": "efef40e586b94073a6ff244fd65e2b9a",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        10.120134325402798,
+        11.164639779120403
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 120,
+      "stateVersion": 119,
+      "commandId": "90d8194c62ef4da6b50ef4fbe1a171c7",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        10.585601082257599,
+        11.543243395404076
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 121,
+      "stateVersion": 120,
+      "commandId": "472917e5323341d78bca43c1a014f568",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        11.051067839112399,
+        11.921847011687749
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 122,
+      "stateVersion": 121,
+      "commandId": "638f97d524174907bc9ffbe3dc40f4f9",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        11.516534595967197,
+        12.300450627971422
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 123,
+      "stateVersion": 122,
+      "commandId": "c28b80afb9f24ae28905119d9a791cf8",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        11.982001352821996,
+        12.679054244255095
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 124,
+      "stateVersion": 123,
+      "commandId": "d99e0101ef8445ea96d30a5216659cbb",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        12.447468109676796,
+        13.057657860538768
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 125,
+      "stateVersion": 124,
+      "commandId": "bb13557d08c34b61beba3d40cdd0c4c2",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        12.912934866531595,
+        13.436261476822441
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 126,
+      "stateVersion": 125,
+      "commandId": "20cacf2c70ef4308916e79285791afdc",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        13.378401623386395,
+        13.814865093106114
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 127,
+      "stateVersion": 126,
+      "commandId": "2664ec890eac425f8774ac9d83a42b6f",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        13.843868380241194,
+        14.193468709389787
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 128,
+      "stateVersion": 127,
+      "commandId": "e37c3219e8334a66bca5dde064a2114e",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        14.309335137095992,
+        14.57207232567346
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 129,
+      "stateVersion": 128,
+      "commandId": "6541f2bc77e84053a48c83b2f1b3b4c5",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        14.77480189395079,
+        14.950675941957133
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 130,
+      "stateVersion": 129,
+      "commandId": "3eb4a05cee4149c5a85c63373cff1651",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        15.24026865080559,
+        15.329279558240806
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 131,
+      "stateVersion": 130,
+      "commandId": "18e2e0ca0532473baf0d0f24b7fddfd5",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        15.450157534420823,
+        15.5
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 132,
+      "stateVersion": 131,
+      "commandId": "7ce7befb595c494caab7781f9e84e459",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        16.049681905703306,
+        15.523885732945526
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 133,
+      "stateVersion": 132,
+      "commandId": "5f9ce6b95d4f4fcd940346bc42997559",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        16.649206276985787,
+        15.547771465891053
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 134,
+      "stateVersion": 133,
+      "commandId": "dec2a5ee0083443f939b1d27b28aab6d",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        17.248730648268268,
+        15.571657198836578
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 135,
+      "stateVersion": 134,
+      "commandId": "a1f3ec944c954a42b6da19b5181635fd",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        17.84825501955075,
+        15.595542931782104
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 136,
+      "stateVersion": 135,
+      "commandId": "7762678c30784f6e8269a70c2bfc4b35",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        18.44777939083323,
+        15.619428664727629
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 137,
+      "stateVersion": 136,
+      "commandId": "86f617720b9140a4a062a185739a5328",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        19.04730376211571,
+        15.643314397673155
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 138,
+      "stateVersion": 137,
+      "commandId": "73d5620d17154547acba8fc9a0b238b6",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        19.64682813339819,
+        15.66720013061868
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 139,
+      "stateVersion": 138,
+      "commandId": "fb3a16d231a54426ba70ab3c6940ae51",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        20.246352504680672,
+        15.691085863564206
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 140,
+      "stateVersion": 139,
+      "commandId": "dbdeb6df241e47e5a7b9d2ec8b357418",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        20.845876875963153,
+        15.71497159650973
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 141,
+      "stateVersion": 140,
+      "commandId": "2d42d5b8aa004b5c895e9597ee9f484e",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        21.445401247245634,
+        15.738857329455257
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 142,
+      "stateVersion": 141,
+      "commandId": "ff282725142d4ec8afd7ccfa178f46d4",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        22.044925618528115,
+        15.762743062400782
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 143,
+      "stateVersion": 142,
+      "commandId": "2b5d0d59bb874a56bae627fdc3263f54",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        22.644449989810596,
+        15.786628795346308
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 144,
+      "stateVersion": 143,
+      "commandId": "50801807e6cf49f886269ad4f4138862",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        23.243974361093077,
+        15.810514528291833
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 145,
+      "stateVersion": 144,
+      "commandId": "941bd390ea44493fa7d26e4b69aa55d9",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        23.843498732375558,
+        15.83440026123736
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 146,
+      "stateVersion": 145,
+      "commandId": "5ab88c2b3dab43088001db5002c5d1f1",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        24.44302310365804,
+        15.858285994182884
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 147,
+      "stateVersion": 146,
+      "commandId": "440de7725d5541f5b910d23baeecd0ce",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        25.04254747494052,
+        15.88217172712841
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 148,
+      "stateVersion": 147,
+      "commandId": "7d68521170034f4c9c5fb27367e375ff",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        25.642071846223,
+        15.906057460073935
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 149,
+      "stateVersion": 148,
+      "commandId": "bd1b992db14046f0a00e9f53629f7739",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        26.24159621750548,
+        15.929943193019461
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 150,
+      "stateVersion": 149,
+      "commandId": "640f2bfd3f084c6b954370bba5975659",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        26.841120588787962,
+        15.953828925964986
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 151,
+      "stateVersion": 150,
+      "commandId": "0dc0fe8a91cf48a98b172b02338c2cab",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        27.440644960070443,
+        15.97771465891051
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 152,
+      "stateVersion": 151,
+      "commandId": "956beeeb2d294bf79da1b2e453cbaf1e",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        28,
+        16
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 153,
+      "stateVersion": 152,
+      "commandId": "0ed552ceeb62495e8811c5b51b46c575",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        27.40047562871752,
+        15.976114267054474
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 154,
+      "stateVersion": 153,
+      "commandId": "95d18e3c1ff746bc8aa72ab498e060ec",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        26.800951257435038,
+        15.952228534108947
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 155,
+      "stateVersion": 154,
+      "commandId": "d10b31f2ac764171950657bfbb9b1308",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        26.201426886152557,
+        15.928342801163422
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 156,
+      "stateVersion": 155,
+      "commandId": "ad3a0c203bc54bb1a8bd8918ae65e0d0",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        25.601902514870076,
+        15.904457068217896
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 157,
+      "stateVersion": 156,
+      "commandId": "72ece9e0708b4385828c16378629f61d",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        25.002378143587595,
+        15.880571335272371
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 158,
+      "stateVersion": 157,
+      "commandId": "52e3ed438f46477784620dcf3e68958d",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        24.402853772305114,
+        15.856685602326845
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 159,
+      "stateVersion": 158,
+      "commandId": "ed84b8bed26b4f91a16166a863259c01",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        23.803329401022634,
+        15.83279986938132
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 160,
+      "stateVersion": 159,
+      "commandId": "0d2d5d67ba9a43b3ace430fc2f0bef0e",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        23.203805029740153,
+        15.808914136435794
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 161,
+      "stateVersion": 160,
+      "commandId": "ceba9ea1ce9f430eb678cc86d92b5c72",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        22.60428065845767,
+        15.78502840349027
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 162,
+      "stateVersion": 161,
+      "commandId": "5fe6a2c529194277aeef7c26ed892cc0",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        22.00475628717519,
+        15.761142670544743
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 163,
+      "stateVersion": 162,
+      "commandId": "d7d1e531a73e48e59f4fe76cfbf7bd95",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        21.40523191589271,
+        15.737256937599218
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 164,
+      "stateVersion": 163,
+      "commandId": "96284719411842498fd3988333290937",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        20.80570754461023,
+        15.713371204653692
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 165,
+      "stateVersion": 164,
+      "commandId": "163a4f6c437449648dd1821e165b9382",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        20.206183173327748,
+        15.689485471708167
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 166,
+      "stateVersion": 165,
+      "commandId": "072e45eaf46c47c88cf85f55750e687d",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        19.606658802045267,
+        15.66559973876264
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 167,
+      "stateVersion": 166,
+      "commandId": "6ee87cd0fb73424e83713b8441f861f2",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        19.007134430762786,
+        15.641714005817116
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 168,
+      "stateVersion": 167,
+      "commandId": "c8fec0cea7b44b9c935ac0d8c06c6b67",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        18.407610059480305,
+        15.61782827287159
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 169,
+      "stateVersion": 168,
+      "commandId": "520cdb3053664a1595a9fdc78b0a5408",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        17.808085688197824,
+        15.593942539926065
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 170,
+      "stateVersion": 169,
+      "commandId": "d9daa1e843d1441c9a7d8039fa417d4a",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        17.208561316915343,
+        15.57005680698054
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 171,
+      "stateVersion": 170,
+      "commandId": "db9f8e4cd1be42b78e49d98901124f49",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        16.609036945632862,
+        15.546171074035014
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 172,
+      "stateVersion": 171,
+      "commandId": "93a5f2309a374218a0b6cb46a5cc7184",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        16.00951257435038,
+        15.52228534108949
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 173,
+      "stateVersion": 172,
+      "commandId": "945969c3681744d7a0fa34fff6ce054c",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        15.450157534420823,
+        15.5
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 174,
+      "stateVersion": 173,
+      "commandId": "afb8cdc7f0a341d3b609ad04cd986ecc",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        14.984690777566023,
+        15.121396383716327
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 175,
+      "stateVersion": 174,
+      "commandId": "e7b00fcdbdaf4862b839d5114f86a9f9",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        14.519224020711222,
+        14.742792767432654
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 176,
+      "stateVersion": 175,
+      "commandId": "82af596a534a44b98989c00a435bf859",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        14.053757263856422,
+        14.364189151148981
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 177,
+      "stateVersion": 176,
+      "commandId": "c1df0fe1612a46338e088ae45abf495a",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        13.588290507001622,
+        13.985585534865308
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 178,
+      "stateVersion": 177,
+      "commandId": "52a2f974a8a94f54bc6046d1ea8bf9b2",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        13.122823750146821,
+        13.606981918581635
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 179,
+      "stateVersion": 178,
+      "commandId": "6de54d8312364f14a1f264ee286e21f0",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        12.657356993292021,
+        13.228378302297962
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 180,
+      "stateVersion": 179,
+      "commandId": "dbb5c001de364a3cb8db6d7191aa48af",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        12.19189023643722,
+        12.849774686014289
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 181,
+      "stateVersion": 180,
+      "commandId": "963a3243f7564535a0dae68195fca140",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        11.72642347958242,
+        12.471171069730616
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 182,
+      "stateVersion": 181,
+      "commandId": "7020a2b373ae4208859149f6282601b3",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        11.26095672272762,
+        12.092567453446943
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 183,
+      "stateVersion": 182,
+      "commandId": "7bd854b7174b4c53bb8ec298578f084d",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        10.795489965872822,
+        11.71396383716327
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 184,
+      "stateVersion": 183,
+      "commandId": "01bdeea5b24e4f7abe561277458f5c30",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        10.330023209018023,
+        11.335360220879597
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 185,
+      "stateVersion": 184,
+      "commandId": "9ea92152ff9b4a8181b90ee1ce548898",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        9.864556452163223,
+        10.956756604595924
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 186,
+      "stateVersion": 185,
+      "commandId": "13790b8e47994dcda1ec8c2333cde4f5",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        9.399089695308424,
+        10.578152988312251
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 187,
+      "stateVersion": 186,
+      "commandId": "ae86d570bc164c4eb20751f4927983f4",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        8.933622938453624,
+        10.199549372028578
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 188,
+      "stateVersion": 187,
+      "commandId": "81f8025f456544179a86e0e6cb565d39",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        8.468156181598825,
+        9.820945755744905
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 189,
+      "stateVersion": 188,
+      "commandId": "1d881d6c34ad4aea8f22845a2df2302d",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        8.002689424744027,
+        9.442342139461232
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 190,
+      "stateVersion": 189,
+      "commandId": "f978715ebd9e493e9dc5e55de61fc363",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        7.537222667889227,
+        9.063738523177559
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 191,
+      "stateVersion": 190,
+      "commandId": "becd54656be0448098d2a7ce8ff72914",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        7.071755911034428,
+        8.685134906893886
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 192,
+      "stateVersion": 191,
+      "commandId": "5dd635416f3945bea0ceee0901f4eb2f",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        6.6062891541796285,
+        8.306531290610213
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 193,
+      "stateVersion": 192,
+      "commandId": "54c5ef487d8849b0b3d09f795e1e6c70",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        6.140822397324829,
+        7.927927674326539
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 194,
+      "stateVersion": 193,
+      "commandId": "8a96436b24d246f5bf8a8a4ee143cc9a",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        5.67535564047003,
+        7.549324058042865
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 195,
+      "stateVersion": 194,
+      "commandId": "2e452b829edf4ff5af16d88d4c404fbe",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        5.20988888361523,
+        7.170720441759191
+      ],
+      "blocked": false
+    },
+    {
+      "seq": 196,
+      "stateVersion": 195,
+      "commandId": "9f4a1ddb9a5349fdb02fd0ecf0c2e498",
+      "actorId": "a1",
+      "type": "walked",
+      "position": [
+        5,
+        7
+      ],
+      "blocked": false
+    }
+  ],
+  "receiptCount": 195,
+  "totalWood": 12
+}

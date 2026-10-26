@@ -240,7 +240,7 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         var state = ReadState(connection, transaction);
         var actor = ReadActor(connection, transaction, identity.ActorId);
         var action = request.Action;
-        var fault = configuration.FaultsEnabled && action.Type is "claim" or "gather" or "build" or "visit" or "postcard" or "mosaic" or "mosaic_propose" or "mosaic_review" ? requestedFault : null;
+        var fault = configuration.FaultsEnabled && action.Type is "claim" or "gather" or "build" or "transfer" or "visit" or "postcard" or "mosaic" or "mosaic_propose" or "mosaic_review" ? requestedFault : null;
         var rejection = Validate(connection, transaction, request, state, actor, identity.ActorId, instance);
         if (rejection is not null)
         {
@@ -307,6 +307,20 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
                 source = "wild-wood";
                 destination = "inventory:" + identity.ActorId;
                 quantity = 1;
+                break;
+            case "transfer":
+                GuardedDebit(Run(connection, transaction, "UPDATE residents SET wood=wood-$quantity WHERE world_id=$world AND actor_id=$actor AND wood>=$quantity",
+                    ("$quantity", action.Quantity), ("$world", Protocol.WorldId), ("$actor", identity.ActorId)));
+                InjectAfterDebit(fault);
+                GuardedDebit(Run(connection, transaction, "UPDATE residents SET wood=wood+$quantity WHERE world_id=$world AND actor_id=$actor AND wood+$quantity<=12",
+                    ("$quantity", action.Quantity), ("$world", Protocol.WorldId), ("$actor", action.RecipientActorId)));
+                result = new { action = "transfer", resource = "wood", quantity = action.Quantity,
+                    senderActorId = identity.ActorId, recipientActorId = action.RecipientActorId, inventoryWood = actor.Wood - action.Quantity };
+                worldEvent = new { seq = cursor, stateVersion = version, commandId = request.CommandId, actorId = identity.ActorId,
+                    type = "woodTransferred", recipientActorId = action.RecipientActorId, resource = "wood", quantity = action.Quantity };
+                source = "inventory:" + identity.ActorId;
+                destination = "inventory:" + action.RecipientActorId;
+                quantity = action.Quantity;
                 break;
             case "visit":
                 var visitedAtUtc = DateTimeOffset.UtcNow.ToString("O");
@@ -437,19 +451,22 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         }
         else
         {
-            if (instance is null || !Scenario.SupportsContinuous || request.Action.Type is not ("walk" or "gather" or "build"))
+            if (instance is null || !Scenario.SupportsContinuous ||
+                !(request.Action.Type is "walk" or "gather" or "build" || Scenario.SupportsTransfer && request.Action.Type == "transfer"))
                 return (422, new("PRECONDITION_MODE_UNAVAILABLE", "当前世界或动作不支持这个前置条件模式"));
             if (request.ExpectedStateVersion > state.Version)
                 return (409, new("STATE_VERSION_AHEAD", "观察版本超过当前世界，请重新观察"));
-            // Existing immutable events capture every personal state mutation in r8.
-            // Foreign inventory/position changes must extend this gate before adoption.
+            // A successful incoming transfer also changes the recipient's state. Reject even
+            // if later activity restores the original balance or position (ABA).
             if (Scalar(connection, transaction, """
                 SELECT EXISTS(SELECT 1 FROM events WHERE world_id=$world AND state_version>$observed
-                    AND json_extract(event_json,'$.actorId')=$actor)
+                    AND (json_extract(event_json,'$.actorId')=$actor OR
+                        (json_extract(event_json,'$.type')='woodTransferred' AND json_extract(event_json,'$.recipientActorId')=$actor)))
                 """, ("$world", Protocol.WorldId), ("$observed", request.ExpectedStateVersion), ("$actor", actorId)) != 0)
-                return (409, new("STALE_ACTOR_STATE", "这位居民已有更新的动作，请重新观察"));
+                return (409, new("STALE_ACTOR_STATE", "这位居民的状态已变化，请重新观察"));
         }
         var action = request.Action;
+        if (action.Type == "transfer") return ValidateTransfer(connection, transaction, action, actor, actorId);
         if (Scenario.SupportsContinuous) return ValidateContinuous(connection, transaction, action, actor);
         if (action.Type == "move")
         {
@@ -660,7 +677,7 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         if (instance is null) return;
         body["world"] = WithFields(body["world"]!, ("instanceId", instance));
         body["commandBinding"] = new { version = 1, required = true, header = WorldInstance.Header };
-        if (body["rulesVersion"] is "r8")
+        if (body["rulesVersion"] is "r8" or "r9")
             body["commandConcurrency"] = new { version = 1, supportedModes = new[] { Protocol.ActorStateMode } };
     }
 

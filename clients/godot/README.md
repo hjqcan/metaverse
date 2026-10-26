@@ -14,6 +14,8 @@ WORLD_ACTOR=a2 npm run start:godot
 
 默认服务 `http://127.0.0.1:5089`，新 r8 预览数据在 `.local/continuous`。启动脚本从该目录的 `access.json` 读取令牌，不打印凭据。旧 r7 数据保留在 `.local/wilderness`，可以用 `npm run start:wilderness` 启动其历史服务；不会迁移或重置旧存档。
 
+材料转让使用独立 r9 入口：先 `npm run start:cooperation`，另开终端运行 `npm run start:godot:cooperation`；第二居民加 `WORLD_ACTOR=a2`。服务地址5090，存档 `.local/cooperation`，恢复记录默认 `user://cooperation-pending.json`。旧 r8 客户端保持原恢复目录；旧二进制读取含 r9 新记录的共用目录不在兼容范围内。自定义 `WORLD_CLIENT_STATE` 时保留所需隔离，不搬移或清空旧未决记录。
+
 需安装 Godot 4.7.2，或设置 `GODOT_BIN=/path/to/godot`；本工作区已有经过官方 SHA512 校验的独立二进制。`WORLD_URL`、`WORLD_ACCESS_FILE`、`WORLD_ACTOR` 可覆盖连接。编辑器打开 `project.godot` 后运行，也可使用右上角连接面板。
 
 ## 操作
@@ -21,6 +23,7 @@ WORLD_ACTOR=a2 npm run start:godot
 - WASD / 方向键自由行走，支持斜向；点击地面显示路线并绕开树石、河道，已有桥可用于跨河，点击树冠走到采集范围。无路可达时提示并暂停；服务端判定受阻时停下。
 - 靠近树中心 1.6 米内按 E 采集，每次取得1木材；采空变为树桩并移除树干碰撞。
 - 1 选择平台，消耗3木材；2 选择整座木桥，消耗6木材。移动鼠标预览占地，左键确认。桥会对齐河道中心线；绿色表示当前可建，红色不可建。最终结果仍由服务器验证。
+- r9 右侧“赠送木材”打开面板，明确选择收件人、1—12数量后确认。双方须在1.6米内且直线无遮挡；只能赠送本人已有木材。左上角显示最近交付来源，收件人之后建造属于另一条独立事实。
 - Esc 取消行走／建造；滚轮缩放。镜头平滑跟随，遮住居民的树冠淡出，采集有动作与到账反馈。
 
 接入失败或结果未知时暂停新动作，保留上次确认状态。原 ID、原请求和居民关联逐条保存到 `user://continuous-pending.json.d/` 的独立命令文件，不保存令牌。新建 r8 世界使用[持久世界实例绑定](../../docs/contracts/world-instance-v1.md)：记录按实例／居民分组，查询与重试携带原实例前置条件，同地址换新库不会重放旧动作；同实例换地址、换会话仍可找回原记录。一次重试只针对点击时的原命令，同居民多条未决逐项确认。`WORLD_CLIENT_STATE` 指定恢复路径前缀。每次重新连接都会刷新场景，即使居民与版本号相同。
@@ -28,6 +31,8 @@ WORLD_ACTOR=a2 npm run start:godot
 已有 r8 数据库保持 legacy 模式，不自动迁移或新增实例标识，仍按原地址／居民恢复。旧 `continuous-pending.json` 只读兼容，确认后写入匹配原请求的完成标记，不整表回写；缺少实例来源的旧记录遇已标识新世界时保留并暂停替代动作。实例格式 `recordVersion=2` 和 `3` 缺少实例 ID 属于损坏，不能降级。多进程保护适用于新版客户端；这里验证进程退出和重启恢复，未验证断电持久性。
 
 服务公布[按居民状态校验能力](../../docs/contracts/actor-state-v1.md)时，新动作保存 v3 记录及提交前事实，无关居民动作不再使它过期。同角色已有后续成功动作时停止原路线和当前持键，须重新点击或松开方向键后再按下。旧 v2 记录保持严格模式；v3 的模式、锚点或原事实损坏时先暂停恢复，不从当前观察补齐。
+
+r9 收到木材也会使此前本人意图过期，确认拒绝后同样停止旧路线／持键。赠送回执须匹配原规则、双方、数量、执行版本与原库存扣减，不能以当前余额代替原交付事实；详情见[材料转让契约](../../docs/contracts/material-transfer-v1.md)。
 
 居民头顶显示“你”或居民 ID，平台和桥显示实际建造者；切换身份会同步更新圆环与署名，参见[身份与作品标记](../../docs/iterations/ITER-0021-results.md)。
 
@@ -39,6 +44,7 @@ WORLD_ACTOR=a2 npm run start:godot
 - `command_evidence.gd`：新模式提交前事实与原回执的一致性校验。
 - `pending_store.gd`：逐命令持久记录、多实例隔离及旧格式读取。
 - `main.gd`：键鼠输入、交互、建造预览和 HUD。
+- `transfer_panel.gd`：r9 收件人、数量和明确赠送操作。
 - `world_navigation.gd`：根据已确认地形生成导航网格与点击路线；服务端继续确认每次移动。
 - `world_view.gd`、`river.gdshader`：连续地形、场景对象、角色表现和跟随镜头；Godot 碰撞体用于场景拾取，服务端负责行走碰撞。
 - `src/World.Server/ContinuousWorld.cs`：可独立于引擎复用的几何、速度额度与资源规则。
@@ -57,7 +63,7 @@ HTTP 验证和真实 Godot / OpenGL 输入测试使用隔离数据库和随机�
 
 `test:godot` 还先运行双进程恢复存储回归：同居民并发发布、分别结算、重启保留全部未决，以及旧格式兼容、同ID异载荷和损坏记录。该部分使用真实 Godot 无画面进程，证据在 `.local/godot-recovery/`。随后运行同地址换库、同库搬地址与换会话、旧格式屏障和损坏保护记录回归，证据在 `.local/world-instance/godot/`；它们与实际渲染验收分别计数。
 
-入口还包括 `.local/iter0019/godot/` 的并发、停止与新旧记录恢复，以及 `.local/iter0021/` 的身份和作品署名渲染验收。最终组合36组595断言，见[ITER-0019报告](../../docs/iterations/ITER-0019-results.md)。
+入口还包括 `.local/iter0019/godot/` 的并发、停止与新旧记录恢复，以及 `.local/iter0021/` 的身份和作品署名渲染验收。新增 `tests/transfer_godot.py` 的5组35断言覆盖转让UI、入账停止、损坏回执和原请求恢复；旧36组595断言与新套件合计41组630断言通过，含输入夹具修正后的专项复验，见[ITER-0020报告](../../docs/iterations/ITER-0020-results.md)。
 
 本轮按用户提供的 [游戏开发技能库](https://github.com/gamedev-skills/awesome-gamedev-agent-skills) 使用 `godot-3d-essentials`、`godot-physics`、`camera-systems`。参考 [Sac 的 3D 游戏工作流](https://x.com/Saccc_c/status/2110694725640474759) 的统一风格、场景与角色分工、多角度实机检查；没有使用该游戏的模型、付费服务或改换引擎。
 

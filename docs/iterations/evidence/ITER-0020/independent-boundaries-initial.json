@@ -1,0 +1,238 @@
+{
+  "passed": false,
+  "binarySha256": "28da17e28113f3d039fbce3962c4ed6f877ca90b3544c8327f3ecb85b8273534",
+  "cases": {
+    "geometry": {
+      "passed": true,
+      "nearButRockOccluded": {
+        "schemaVersion": 1,
+        "rulesVersion": "r9",
+        "stateVersion": 416,
+        "commandId": "6751e95a2eb04a4cb3da5cf9255a2331",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+        },
+        "eventCursor": 417,
+        "error": {
+          "code": "TRANSFER_UNREACHABLE",
+          "message": "\u8bf7\u5230\u6536\u4ef6\u4eba 1.6 \u7c73\u5185\uff0c\u4e14\u53cc\u65b9\u4e4b\u95f4\u6ca1\u6709\u969c\u788d",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected",
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 416,
+          "appliedOnStateVersion": 416
+        }
+      },
+      "nearClearSuccess": {
+        "schemaVersion": 1,
+        "rulesVersion": "r9",
+        "stateVersion": 419,
+        "commandId": "7eeb4945f4064b9d9a1c7e592d16fb45",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+        },
+        "eventCursor": 420,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "transfer",
+          "resource": "wood",
+          "quantity": 1,
+          "senderActorId": "a1",
+          "recipientActorId": "a2",
+          "inventoryWood": 5
+        },
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 418,
+          "appliedOnStateVersion": 418
+        }
+      },
+      "exactReachSuccess": {
+        "schemaVersion": 1,
+        "rulesVersion": "r9",
+        "stateVersion": 421,
+        "commandId": "133a4bcc8f1b4221b0d004a51cf11936",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+        },
+        "eventCursor": 422,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "transfer",
+          "resource": "wood",
+          "quantity": 1,
+          "senderActorId": "a1",
+          "recipientActorId": "a2",
+          "inventoryWood": 4
+        },
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 420,
+          "appliedOnStateVersion": 420
+        }
+      },
+      "overReachRejection": {
+        "schemaVersion": 1,
+        "rulesVersion": "r9",
+        "stateVersion": 422,
+        "commandId": "981dc15e94ac425498cc55d3f8d16bc4",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+        },
+        "eventCursor": 423,
+        "error": {
+          "code": "TRANSFER_UNREACHABLE",
+          "message": "\u8bf7\u5230\u6536\u4ef6\u4eba 1.6 \u7c73\u5185\uff0c\u4e14\u53cc\u65b9\u4e4b\u95f4\u6ca1\u6709\u969c\u788d",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected",
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 422,
+          "appliedOnStateVersion": 422
+        }
+      },
+      "occludedPositions": {
+        "a1": [
+          11.25,
+          7.05
+        ],
+        "a2": [
+          9.649,
+          7.05
+        ]
+      },
+      "audit": {
+        "materialTotal": 12,
+        "stateVersion": 422,
+        "requests": 94,
+        "processStopped": true
+      }
+    },
+    "instance_boundary": {
+      "passed": true,
+      "instances": [
+        "w_a2d7cd9ccbde4295b2fe38adfc3de6b8",
+        "w_55c46a21c4824ac9b0cebb8415d2252f"
+      ],
+      "rejectedForeignInstance": [
+        {
+          "method": "POST",
+          "status": 412,
+          "reply": {
+            "schemaVersion": 1,
+            "rulesVersion": "r9",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "local-operator",
+              "actorId": "a1",
+              "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "WORLD_INSTANCE_MISMATCH",
+              "message": "\u8fde\u63a5\u5df2\u6307\u5411\u53e6\u4e00\u4e2a\u4e16\u754c\uff0c\u539f\u52a8\u4f5c\u4ecd\u987b\u5728\u539f\u4e16\u754c\u786e\u8ba4",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        },
+        {
+          "method": "GET",
+          "status": 412,
+          "reply": {
+            "schemaVersion": 1,
+            "rulesVersion": "r9",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "local-operator",
+              "actorId": "a1",
+              "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "WORLD_INSTANCE_MISMATCH",
+              "message": "\u8fde\u63a5\u5df2\u6307\u5411\u53e6\u4e00\u4e2a\u4e16\u754c\uff0c\u539f\u52a8\u4f5c\u4ecd\u987b\u5728\u539f\u4e16\u754c\u786e\u8ba4",
+              "retryable": false,
+              "mutated": false
+            }
+          }
+        }
+      ],
+      "validReceipt": {
+        "schemaVersion": 1,
+        "rulesVersion": "r9",
+        "stateVersion": 331,
+        "commandId": "d0e5782b4848441fb9be168e45e00a2c",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+        },
+        "eventCursor": 332,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "transfer",
+          "resource": "wood",
+          "quantity": 3,
+          "senderActorId": "a1",
+          "recipientActorId": "a2",
+          "inventoryWood": 3
+        },
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 330,
+          "appliedOnStateVersion": 330
+        }
+      },
+      "audit": {
+        "materialTotal": 12,
+        "stateVersion": 331,
+        "requests": 1,
+        "processStopped": true
+      }
+    }
+  },
+  "worlds": [
+    {
+      "name": "geometry",
+      "instance": "w_a2d7cd9ccbde4295b2fe38adfc3de6b8"
+    },
+    {
+      "name": "instance_boundary",
+      "instance": "w_a2d7cd9ccbde4295b2fe38adfc3de6b8"
+    },
+    {
+      "name": "other-instance",
+      "instance": "w_55c46a21c4824ac9b0cebb8415d2252f"
+    }
+  ],
+  "scope": "r9 supplemental geometry/instance/r8 compatibility",
+  "contractSha256": "38611746e3e20f006bcd8eac0730317aed22e8e6d1b3e44424737a5a9d22288c",
+  "fixedProgram": true,
+  "externalModelCalls": 0,
+  "sqlStateSeeding": false,
+  "otherWorldAudit": {
+    "materialTotal": 12,
+    "stateVersion": 0,
+    "requests": 0,
+    "processStopped": true
+  }
+}

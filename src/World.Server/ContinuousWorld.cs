@@ -130,6 +130,7 @@ internal sealed partial class WorldService
         body["recipes"] = new[] { new { id = "platform.v1", definitionId = "platform", woodCost = 3 }, new { id = "bridge.v1", definitionId = "bridge", woodCost = 6 } };
         body["gathering"] = new { version = 1, quantityPerAction = 1 }; body["depot"] = new { wood = 0, available = false };
         body["resourceAudit"] = new { issuedWood = state.IssuedWood, wildWood, depotWood = 0, inventoryWood, embodiedWood, conserved = wildWood + inventoryWood + embodiedWood == state.IssuedWood };
+        if (Scenario.SupportsTransfer) BindTransfers(body, c, t, identity.ActorId);
         BindObservation(body, instance);
         return Protocol.Reply(200, body).WithInstance(instance);
     }

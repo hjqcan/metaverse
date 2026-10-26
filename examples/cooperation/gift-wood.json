@@ -1,0 +1,16 @@
+{
+  "missionId": "first-wood-gift",
+  "objective": "前往 a2 的会面点，自愿赠送3木材，然后返回。允许为此采集并建一座公共桥，木材总支出不超过9。",
+  "goals": [
+    {
+      "id": "gift",
+      "label": "与 a2 会面交付木材",
+      "target": [26, 17],
+      "transfer": {"recipientActorId": "a2", "resource": "wood", "quantity": 3}
+    }
+  ],
+  "allowBuild": true,
+  "allowGather": true,
+  "allowTransfer": true,
+  "budgets": {"commands": 300, "wood": 9, "seconds": 600, "modelCalls": 1}
+}

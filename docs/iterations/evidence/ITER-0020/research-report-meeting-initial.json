@@ -1,0 +1,25 @@
+{
+  "scope": "Chrome readonly report import with explicit perturbations",
+  "results": [
+    {
+      "name": "original_actual_report",
+      "load": "已加载：original_actual_report.json · 98 条步骤 · 本地历史记录，非实时世界。",
+      "status": "已完成",
+      "transferVerified": "true",
+      "transferText": "赠送已核实：a1 → a2 · 3 木材 · v57",
+      "warning": ""
+    },
+    {
+      "name": "gift_away_from_frozen_meeting",
+      "load": "已加载：gift_away_from_frozen_meeting.json · 98 条步骤 · 本地历史记录，非实时世界。",
+      "status": "已完成",
+      "transferVerified": "true",
+      "transferText": "赠送已核实：a1 → a2 · 3 木材 · v57",
+      "warning": ""
+    }
+  ],
+  "errors": [],
+  "worldRequests": [],
+  "actualModelCalls": 0,
+  "browserVersion": "152.0.7977.82"
+}

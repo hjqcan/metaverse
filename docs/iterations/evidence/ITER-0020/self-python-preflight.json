@@ -1,0 +1,36 @@
+{
+  "suite": "transfer-mission-v1",
+  "passed": true,
+  "testsRun": 1,
+  "tests": [
+    {
+      "test": "__main__.TransferMissionAcceptance.test_07_damaged_pending_authorization_and_before_facts_make_no_request",
+      "passed": true,
+      "seconds": 44.54302645899588
+    }
+  ],
+  "actualModelCalls": 0,
+  "dllSha256": "28da17e28113f3d039fbce3962c4ed6f877ca90b3544c8327f3ecb85b8273534",
+  "sourceSha256": {
+    "scripts/activity_choice.py": "84bd020783870725947663eb41500977096c86e366099b4fb8607c9d1c049b5a",
+    "scripts/agent_accounts.py": "f1844d9db668e864ab215d0d811b884b6301500bfe260bb9bf9d9cfdbc481f10",
+    "scripts/check.py": "2f0224d10d2838610d86876c1eaa72f5f37bf1c1234491ba8f046c5a052f63c9",
+    "scripts/codex_goal_selector.py": "3a455c2906aaa3764c85794cb581300979f57cb3f24b46fe437fbd287a8b6936",
+    "scripts/command_preconditions.py": "6ff9b88e923c71c1193c047c380371278d144d236f8a91f873c058779196bb9a",
+    "scripts/continuous_navigation.py": "236b06a0224c99c921d90da56511f819c6121f44cf1849e6978af93bbf3b8294",
+    "scripts/entry_guide.py": "9b768237d39f2e4b4820e0178508c132408215aa6653c996eaf9b6e913d79dbb",
+    "scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+    "scripts/mosaic_consent.py": "cb3acc34abe43c6988359bc307755ad6d2743ac5e850bccaf165f14ae561eae9",
+    "scripts/mosaic_inbox.py": "a9c0772e5946af581c3b423c8e5986b05413348a3e528c8d5a0b18401367aa59",
+    "scripts/mosaic_patch.py": "4abdb035967733e4aacbe175a37f8b32686de6182ded2fee888203726b0461a6",
+    "scripts/passage_agent.py": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e",
+    "scripts/postcard_text.py": "db3429983b8ee2062ab70f4c7e46b763c5839934f65a2a6776638f8c0a280a4c",
+    "scripts/resident_construction.py": "bf75c0d373ad8268b461d66a523258d00cf5b2e1c8138be11d1dbed23b009c02",
+    "scripts/resident_mission.py": "48512543a1593cd58ecdfaad39cc696398c9c41ab211ff6a860ab5c2209e603d",
+    "scripts/resident_transfer.py": "1dae777a54fff93d1a73da96412e1a8a72b422e472c9ce5af5f77e12931d71d5",
+    "scripts/run_resident.py": "735e383aa13aa68a79ecb9e94f434de280485fe4636a4ed03dbf0ee7422c30aa",
+    "scripts/test_agent_accounts.py": "07c9e2e66bcfec99a9d57ed7b9ba3497769d06bee5b838ca6c24a0264647df5c",
+    "scripts/wilderness_materials.py": "12a74e971b97aa64623082f8c7606ac2a6ed357278f52ab9daedbc7e1e728fa7"
+  },
+  "failureDetails": []
+}

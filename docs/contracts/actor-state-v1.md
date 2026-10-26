@@ -1,10 +1,10 @@
 # 动作前置条件 actor-state-v1（ITER-0019）
 
-契约已实现；作者自测、独立验收与适用边界见[ITER-0019结果](../iterations/ITER-0019-results.md)。仅用于有持久实例身份的 r8 的 walk/gather/build，原 r8 物理规则、全局版本、实例身份、材料总量及旧请求语义不变。
+契约已实现；原 r8 的作者自测、独立验收与适用边界见[ITER-0019结果](../iterations/ITER-0019-results.md)。有持久实例身份的 r8/r9 的 walk/gather/build 使用此模式，r9 另支持 transfer；原 r8 物理规则、全局版本、实例身份、材料总量及旧请求语义不变。
 
 ## 能力与请求
 
-受保护 r8 的 observation 增加：
+受保护 r8/r9 的 observation 包含：
 
 ```json
 "commandConcurrency": {"version": 1, "supportedModes": ["actor-state-v1"]}
@@ -20,9 +20,9 @@
 
 读取当前世界版本 S。严格请求仍要求原观察锚点 E 等于 S。新模式依次要求：
 
-1. 当前是受保护 r8，且动作属于 walk/gather/build；否则持久拒绝422 `PRECONDITION_MODE_UNAVAILABLE`。
+1. 当前是受保护 r8/r9，且动作属于 walk/gather/build；r9 另允许 transfer。否则持久拒绝422 `PRECONDITION_MODE_UNAVAILABLE`。
 2. E 不超过 S；未来锚点持久拒绝409 `STATE_VERSION_AHEAD`。
-3. 不存在 `events.world_id=当前世界 AND state_version>E AND event_json.actorId=本人` 的成功事件；否则持久拒绝409 `STALE_ACTOR_STATE`。拒绝回执本身不消耗居民状态。
+3. 锚点 E 后不存在本人成功事件，也不存在以本人为 `recipientActorId` 的 `woodTransferred` 成功事件；否则持久拒绝409 `STALE_ACTOR_STATE`。拒绝回执本身不消耗居民状态。r9 入账影响接收者，但不伪造接收者发起的命令。
 4. 在同一事务中，按当前本人位置/库存、节点、速度、河道、树岩、桥和实体重新执行现有距离、完整 sweep、材料和占地校验。只有通过才扣料或移动，并提交全局版本 S+1、事件、账本和回执。
 
 锚点为非负整数的要求、规则版本校验和所有实例错误继续原契约。材料最后一份仍只能交付一次；抢先占地后另一个建造必须拒绝且不扣木材。本人走开再回原坐标仍有新事件，旧请求不得重新变为有效。服务不声称按客户端生成时间排序或提供写事务公平调度。
@@ -53,12 +53,12 @@ Python 新任务在 `_state.binding` 保存 `preconditionBindingVersion=1` 和 `
 
 新模式每条 pending 保留原 body、E、模式和 before 事实；未知结果只能查询或原样重试。原持久拒绝确认后，才可重新观察并用新 ID 提出仍有效的意图，累计命令预算照常计入。新模式公开步骤保存原 `expectedStateVersion` 和已验证的 `execution` 供审计，报告页面不据此发世界请求或暴露协议操作入口。
 
-`STALE_ACTOR_STATE` 采用停止策略：确认原拒绝后结清 pending，Godot 停止原点击路线与当前持键连续意图，Python 停止当前有界任务；保留原预算、起点和已完成事实。只有显式新输入或新任务才继续，不自动以新 ID 重提旧目标。这只说明同居民已有后续成功动作，不等于人类接管或权限撤销。普通严格模式 `STALE_STATE` 的原有策略不变。新版记录的 before 字段须在恢复请求发出前验证类型和值，不从当前观察补旧事实。
+`STALE_ACTOR_STATE` 采用停止策略：确认原拒绝后结清 pending，Godot 停止原点击路线与当前持键连续意图，Python 停止当前有界任务；保留原预算、起点和已完成事实。只有显式新输入或新任务才继续，不自动以新 ID 重提旧目标。这只说明本人状态已因成功动作或 r9 入账改变，不等于人类接管或权限撤销。普通严格模式 `STALE_STATE` 的原有策略不变。新版记录的 before 字段须在恢复请求发出前验证类型和值，不从当前观察补旧事实。
 
 ## 兼容与验证边界
 
 已有受保护 r8 可由升级服务公布新能力；已有无实例的 r8 及 r1—r7 不公布，不迁移。旧严格请求继续原行为，因此旧客户端的竞争问题没有被隐式修复。
 
-事件查询只扫描锚点后的区间；非常旧且本人未行动的请求可能读较长历史。本轮不自动加索引、不裁剪事件/回执、不改旧 pending 锚点。若未来其他居民能改变本人库存或位置，必须先扩大失效判据或保存受影响居民版本，再允许新动作使用此模式。
+事件查询只扫描锚点后的区间；非常旧且本人未行动的请求可能读较长历史。本轮不自动加索引、不裁剪事件/回执、不改旧 pending 锚点。ITER-0020 已为 r9 的转入扩大失效判据；walk/gather/build/transfer 的旧意图均受此约束。以后出现其他外部库存或位置变化时，仍须先扩大判据再采用新动作。赠送原子性、回执与恢复见[材料转让契约](material-transfer-v1.md)。
 
 必须同时验证真实 HTTP/SQLite、Godot 与 Python 任务的成功和保留原请求行为；研究的只读候选判据、源码构建或单个200响应不代表整轮验收。

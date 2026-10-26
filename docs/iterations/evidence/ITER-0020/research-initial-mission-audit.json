@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "cases": 5,
+  "worldCommands": 98,
+  "totalMaterial": 12,
+  "materials": {
+    "natural": 3,
+    "inventory": 3,
+    "embodied": 6
+  },
+  "eventCounts": [
+    [
+      "built",
+      1
+    ],
+    [
+      "gathered",
+      9
+    ],
+    [
+      "walked",
+      87
+    ],
+    [
+      "woodTransferred",
+      1
+    ],
+    [
+      "worldSeeded",
+      1
+    ]
+  ],
+  "entities": [
+    [
+      "ebd560ecd91b24dcbb87259281cd3916e",
+      "a1",
+      "bridge",
+      6
+    ]
+  ],
+  "transferLedger": [
+    [
+      "a1",
+      "58faacaa0c8d4600b0716282d6154ef7",
+      "inventory:a1",
+      "inventory:a2",
+      3,
+      58
+    ]
+  ],
+  "transferEvents": [
+    {
+      "seq": 58,
+      "stateVersion": 57,
+      "commandId": "58faacaa0c8d4600b0716282d6154ef7",
+      "actorId": "a1",
+      "type": "woodTransferred",
+      "recipientActorId": "a2",
+      "resource": "wood",
+      "quantity": 3
+    }
+  ],
+  "receiptStatus": "committed",
+  "foreignKeyErrors": 0,
+  "ownServiceStopped": true,
+  "resultSha256": "e0bb5fbaa1ec0ec35fdee08fdc61f3aebf88ee7d0f4cdafef2b5a94d8acd92cc",
+  "sourceManifestSha256": "3b7d2b569fcb6fb7fd575bf8841d6da469822aa85b66ae6440b9b8a90b3904a0"
+}

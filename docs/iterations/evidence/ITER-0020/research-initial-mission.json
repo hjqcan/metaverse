@@ -1,0 +1,159 @@
+{
+  "scope": "Actual fresh r9 HTTP observations and actual copied resident executor; old and fixed transfer planner snapshots with otherwise identical actual executor",
+  "actualModelCalls": 0,
+  "cases": [
+    {
+      "name": "before_no_authorized_bridge",
+      "status": "decision_failed",
+      "reason": "decision_failed:TypeError",
+      "budgetUsed": {
+        "commands": 0,
+        "wood": 0,
+        "modelCalls": 1,
+        "seconds": 6.581913471221924
+      },
+      "facts": {
+        "goalReached": false,
+        "returned": true,
+        "woodGathered": 0,
+        "woodTransferred": 0,
+        "createdEntityIds": [],
+        "transferCompleted": false,
+        "transfer": null
+      },
+      "actualChoiceCalls": 0,
+      "pending": null
+    },
+    {
+      "name": "before_authorized_bridge_and_gather",
+      "status": "blocked",
+      "reason": "insufficient_reachable_natural_material",
+      "budgetUsed": {
+        "commands": 0,
+        "wood": 0,
+        "modelCalls": 1,
+        "seconds": 12.717028141021729
+      },
+      "facts": {
+        "goalReached": false,
+        "returned": true,
+        "woodGathered": 0,
+        "woodTransferred": 0,
+        "createdEntityIds": [],
+        "transferCompleted": false,
+        "transfer": null
+      },
+      "actualChoiceCalls": 1,
+      "pending": null
+    },
+    {
+      "name": "fixed_no_authorized_bridge",
+      "status": "blocked",
+      "reason": "no_route",
+      "budgetUsed": {
+        "commands": 0,
+        "wood": 0,
+        "modelCalls": 1,
+        "seconds": 0.21047759056091309
+      },
+      "facts": {
+        "goalReached": false,
+        "returned": true,
+        "woodGathered": 0,
+        "woodTransferred": 0,
+        "createdEntityIds": [],
+        "transferCompleted": false,
+        "transfer": null
+      },
+      "actualChoiceCalls": 1,
+      "pending": null
+    },
+    {
+      "name": "fixed_total_budget_eight",
+      "status": "budget_exhausted",
+      "reason": "wood",
+      "budgetUsed": {
+        "commands": 0,
+        "wood": 0,
+        "modelCalls": 1,
+        "seconds": 0.6791589260101318
+      },
+      "facts": {
+        "goalReached": false,
+        "returned": true,
+        "woodGathered": 0,
+        "woodTransferred": 0,
+        "createdEntityIds": [],
+        "transferCompleted": false,
+        "transfer": null
+      },
+      "actualChoiceCalls": 1,
+      "pending": null
+    },
+    {
+      "name": "fixed_authorized_bridge_and_gather",
+      "status": "completed",
+      "reason": "round_trip_verified",
+      "budgetUsed": {
+        "commands": 98,
+        "wood": 9,
+        "modelCalls": 1,
+        "seconds": 62.99782991409302
+      },
+      "facts": {
+        "goalReached": true,
+        "returned": true,
+        "woodGathered": 9,
+        "woodTransferred": 3,
+        "createdEntityIds": [
+          "ebd560ecd91b24dcbb87259281cd3916e"
+        ],
+        "transferCompleted": true,
+        "transfer": {
+          "worldInstanceId": "w_eb272fb88a664cdd95aaa2018faec1dd",
+          "commandId": "58faacaa0c8d4600b0716282d6154ef7",
+          "senderActorId": "a1",
+          "recipientActorId": "a2",
+          "resource": "wood",
+          "quantity": 3,
+          "position": [
+            26,
+            17
+          ],
+          "inventoryWoodBefore": 3,
+          "inventoryWoodAfter": 0,
+          "stateVersion": 57
+        }
+      },
+      "actualChoiceCalls": 1,
+      "pending": null
+    }
+  ],
+  "world": {
+    "instanceId": "w_eb272fb88a664cdd95aaa2018faec1dd",
+    "scenario": "wilderness-cooperation-v1",
+    "rules": "r9"
+  },
+  "stateVersionBefore": 0,
+  "stateVersionAfter": 98,
+  "worldCommands": 98,
+  "httpRequests": 208,
+  "ownServiceStopped": true,
+  "ownServicePid": 3680530,
+  "sqlite": {
+    "integrity": "ok",
+    "receiptCount": 98,
+    "residentBalances": [
+      [
+        "a1",
+        0
+      ],
+      [
+        "a2",
+        3
+      ]
+    ],
+    "naturalWood": 3
+  },
+  "probeSha256": "589b77a33ba97605770a9f76df2d14d900b26624d1acee62dd30b3092791f7a4"
+}

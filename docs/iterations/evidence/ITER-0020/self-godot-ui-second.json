@@ -1,0 +1,39 @@
+{
+  "passed": false,
+  "actualModelCalls": 0,
+  "groups": 2,
+  "assertions": 5,
+  "results": [
+    {
+      "name": "ui",
+      "passed": false,
+      "error": "ui: exit 1\nGodot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nWARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.\n     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)\nWARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.\n     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:372)\nOpenGL API 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.2 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 20.1.2, 256 bits)\n\nERROR: gift entry advertised\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:63)\nERROR: actual mouse opens recipient and amount\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:65)\n       [2] click (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:36)\n       [3] idle (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:20)\nERROR: actual submit settles gift receipt\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:70)\n       [2] click (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:36)\n       [3] idle (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:20)\nERROR: sender sees completed delivery distinct from construction\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:71)\n       [2] click (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:36)\n       [3] idle (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:20)\nERROR: recipient sees the actual source event\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:74)\n       [2] idle (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:20)\nERROR: recipient uses delivered material for own platform\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:78)\n       [2] idle (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:20)\nERROR: construction belongs to its actual recipient builder\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:80)\n       [2] idle (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_transfer.gd:20)\n"
+    },
+    {
+      "name": "incoming",
+      "checks": [
+        {
+          "name": "native r9 world authenticated",
+          "passed": true
+        },
+        {
+          "name": "incoming gift rejects recipient old walk",
+          "passed": true
+        },
+        {
+          "name": "held input stays stopped without renewed command",
+          "passed": true
+        },
+        {
+          "name": "receipt rejection does not hide actual incoming material",
+          "passed": true
+        },
+        {
+          "name": "fresh user input may proceed",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

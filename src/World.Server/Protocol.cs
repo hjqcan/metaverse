@@ -54,7 +54,8 @@ internal sealed record WorldAction(string Type, long Dx = 0, long Dy = 0, long Q
     string? RecipeId = null, long X = 0, long Y = 0, string? ActivityId = null,
     string? VisitCommandId = null, string? Text = null, long ExpectedMosaicRevision = 0,
     MosaicPatchCell[]? Patch = null, string? ProposalActorId = null, string? ProposalCommandId = null,
-    string? Decision = null, string? NodeId = null, double TargetX = 0, double TargetY = 0, bool Continuous = false)
+    string? Decision = null, string? NodeId = null, double TargetX = 0, double TargetY = 0, bool Continuous = false,
+    string? RecipientActorId = null, string? Resource = null)
 {
     public object Canonical => Type switch
     {
@@ -63,6 +64,7 @@ internal sealed record WorldAction(string Type, long Dx = 0, long Dy = 0, long Q
         "build" when Continuous => new { type = Type, recipeId = RecipeId, at = new[] { TargetX, TargetY } },
         "claim" => new { type = Type, quantity = Quantity },
         "gather" => new { type = Type, nodeId = NodeId },
+        "transfer" => new { type = Type, recipientActorId = RecipientActorId, resource = Resource, quantity = Quantity },
         "visit" => new { type = Type, activityId = ActivityId },
         "postcard" => new { type = Type, activityId = ActivityId, visitCommandId = VisitCommandId, text = Text },
         "mosaic" => new { type = Type, activityId = ActivityId, visitCommandId = VisitCommandId,
@@ -160,6 +162,16 @@ internal sealed record WorldCommand(int SchemaVersion, string RulesVersion, stri
                     parsed = scenario.SupportsContinuous
                         ? new(type, RecipeId: recipe, TargetX: Coordinate(at[0]), TargetY: Coordinate(at[1]), Continuous: true)
                         : new(type, RecipeId: recipe, X: Integer(at[0]), Y: Integer(at[1]));
+                    break;
+                case "transfer":
+                    Fields(action, "type", "recipientActorId", "resource", "quantity");
+                    var recipient = String(action.GetProperty("recipientActorId"));
+                    var resource = String(action.GetProperty("resource"));
+                    var transferQuantity = Integer(action.GetProperty("quantity"));
+                    if (!Protocol.ValidCommandId(recipient)) Invalid("收件人 ID 格式无效");
+                    if (resource != "wood") Invalid("只能转让木材");
+                    if (transferQuantity is < 1 or > 12) Invalid("转让数量必须为 1 至 12 的整数");
+                    parsed = new(type, Quantity: transferQuantity, RecipientActorId: recipient, Resource: resource);
                     break;
                 case "visit":
                     Fields(action, "type", "activityId");

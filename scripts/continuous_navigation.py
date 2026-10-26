@@ -1,4 +1,4 @@
-"""Continuous XZ navigation from public r8 geometry; the server confirms movement."""
+"""Continuous XZ navigation from public r8/r9 geometry; the server confirms movement."""
 from copy import deepcopy
 from functools import lru_cache
 import heapq
@@ -26,7 +26,9 @@ def near(a, b):
 
 
 def continuous(observed):
-    return observed.get('rulesVersion') == 'r8' and observed.get('world', {}).get('coordinateSystem') == 'continuous-xz'
+    expected = {'r8': 'wilderness-continuous-v1', 'r9': 'wilderness-cooperation-v1'}.get(observed.get('rulesVersion'))
+    return (expected is not None and observed.get('world', {}).get('scenarioId') == expected
+            and observed.get('world', {}).get('coordinateSystem') == 'continuous-xz')
 
 
 def public_geometry(observed):
@@ -336,7 +338,8 @@ def valid_walk_receipt(receipt, intent, actor, before):
     from command_preconditions import valid_execution
     result = receipt.get('result')
     if (not isinstance(result, dict) or not isinstance(receipt.get('identity'), dict)
-            or receipt['identity'].get('actorId') != actor or receipt.get('rulesVersion') != 'r8'
+            or receipt['identity'].get('actorId') != actor or receipt.get('rulesVersion') != intent.get('rulesVersion')
+            or intent.get('rulesVersion') not in ('r8', 'r9')
             or type(receipt.get('schemaVersion')) is not int or receipt['schemaVersion'] != 1
             or not valid_execution(receipt, intent)
             or not isinstance(before, dict) or not point(before.get('position'))

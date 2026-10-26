@@ -1,0 +1,184 @@
+{
+  "passed": true,
+  "groups": 5,
+  "assertions": 35,
+  "actualModelCalls": 0,
+  "scope": "Final passing groups after fixture corrections and funded-before validation; not one all-green initial run",
+  "results": [
+    {
+      "name": "corrupt",
+      "checks": [
+        {
+          "name": "r9 adapter authenticated",
+          "passed": true
+        },
+        {
+          "name": "unknown gift preserves original v3 record",
+          "passed": true
+        },
+        {
+          "name": "missing senderActorId cannot settle",
+          "passed": true
+        },
+        {
+          "name": "missing recipientActorId cannot settle",
+          "passed": true
+        },
+        {
+          "name": "missing quantity cannot settle",
+          "passed": true
+        },
+        {
+          "name": "missing resource cannot settle",
+          "passed": true
+        },
+        {
+          "name": "missing inventoryWood cannot settle",
+          "passed": true
+        },
+        {
+          "name": "other accepted rule version cannot settle original r9",
+          "passed": true
+        },
+        {
+          "name": "boolean amount is not transfer evidence",
+          "passed": true
+        },
+        {
+          "name": "missing execution retains original",
+          "passed": true
+        },
+        {
+          "name": "saved sender cannot disagree with original actor",
+          "passed": true
+        },
+        {
+          "name": "saved inventory must have funded the original gift",
+          "passed": true
+        },
+        {
+          "name": "authoritative original receipt settles once",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "evidence": ".local/iter0020/godot/20261026T035150Z-ddfe5a/results.json"
+    },
+    {
+      "name": "before-save",
+      "checks": [
+        {
+          "name": "r9 adapter authenticated",
+          "passed": true
+        },
+        {
+          "name": "unknown gift preserves original v3 record",
+          "passed": true
+        },
+        {
+          "name": "fresh process recovers original gift exactly once",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "evidence": ".local/iter0020/godot/20261026T034402Z-52576e/results.json"
+    },
+    {
+      "name": "after-save",
+      "checks": [
+        {
+          "name": "r9 adapter authenticated",
+          "passed": true
+        },
+        {
+          "name": "unknown gift preserves original v3 record",
+          "passed": true
+        },
+        {
+          "name": "fresh process recovers original gift exactly once",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "evidence": ".local/iter0020/godot/20261026T034402Z-52576e/results.json"
+    },
+    {
+      "name": "incoming",
+      "checks": [
+        {
+          "name": "native r9 world authenticated",
+          "passed": true
+        },
+        {
+          "name": "incoming gift rejects recipient old walk",
+          "passed": true
+        },
+        {
+          "name": "held input stays stopped without renewed command",
+          "passed": true
+        },
+        {
+          "name": "receipt rejection does not hide actual incoming material",
+          "passed": true
+        },
+        {
+          "name": "fresh user input may proceed",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "evidence": ".local/iter0020/godot/20261026T034540Z-bad1e0/results.json"
+    },
+    {
+      "name": "ui",
+      "checks": [
+        {
+          "name": "native r9 world authenticated",
+          "passed": true
+        },
+        {
+          "name": "gift entry advertised",
+          "passed": true
+        },
+        {
+          "name": "actual mouse opens recipient and amount",
+          "passed": true
+        },
+        {
+          "name": "recipient explicitly displayed as a2",
+          "passed": true
+        },
+        {
+          "name": "rendered gift-choice",
+          "passed": true
+        },
+        {
+          "name": "actual submit settles gift receipt",
+          "passed": true
+        },
+        {
+          "name": "sender sees completed delivery distinct from construction",
+          "passed": true
+        },
+        {
+          "name": "recipient sees the actual source event",
+          "passed": true
+        },
+        {
+          "name": "recipient uses delivered material for own platform",
+          "passed": true
+        },
+        {
+          "name": "construction belongs to its actual recipient builder",
+          "passed": true
+        },
+        {
+          "name": "rendered recipient-built",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "evidence": ".local/iter0020/godot/20261026T034657Z-73145c/results.json"
+    }
+  ]
+}

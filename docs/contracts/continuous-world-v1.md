@@ -4,6 +4,8 @@
 
 场景 `wilderness-continuous-v1`，规则 `r8`，存储版本 8；独立预览 `http://127.0.0.1:5089`，数据 `.local/continuous`。旧 r1—r7 数据和接口保留。接口前缀仍为 `/v1/worlds/foundation-01`，身份、命令原 ID、事务回执、资源账本规则沿用原契约。
 
+ITER-0020 的独立 `wilderness-cooperation-v1 / r9 / schema 9` 沿用本文连续地形、初始12木材、移动、采集与建造规则，另增加[材料转让](material-transfer-v1.md)。新世界必须有持久实例身份；旧 r8 不迁移或增加转让能力。客户端按原请求精确匹配 r8/r9 规则，不以支持两个版本代替回执匹配。
+
 ## 坐标与观察
 
 - 所有 `position`、建造 `at`、行走 `to` 为有限实数 `[x,z]`，单位米；Godot 对应 `Vector3(x, height, z)`。无格子、无取整、无曼哈顿距离。

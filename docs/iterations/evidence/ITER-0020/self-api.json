@@ -1,0 +1,70 @@
+{
+  "suite": "material-transfer-http-v1",
+  "recordedAtUtc": "2026-10-26T03:55:56.913634+00:00",
+  "passed": true,
+  "testsRun": 9,
+  "tests": [
+    {
+      "test": "__main__.TransferAcceptance.test_01_cooperation_real_materials_received_then_built_and_original_receipt",
+      "passed": true,
+      "seconds": 41.41329696500907
+    },
+    {
+      "test": "__main__.TransferAcceptance.test_02_refusal_control_can_cross_but_cannot_build",
+      "passed": true,
+      "seconds": 15.224685647001024
+    },
+    {
+      "test": "__main__.TransferAcceptance.test_03_protocol_invalid_and_old_worlds_remain_unavailable",
+      "passed": true,
+      "seconds": 0.6974991330062039
+    },
+    {
+      "test": "__main__.TransferAcceptance.test_04_same_id_changes_conflict_and_different_actors_do_not_share_receipts",
+      "passed": true,
+      "seconds": 1.0451628009905107
+    },
+    {
+      "test": "__main__.TransferAcceptance.test_05_incoming_transfer_invalidates_all_four_actions_and_aba",
+      "passed": true,
+      "seconds": 0.6126334490254521
+    },
+    {
+      "test": "__main__.TransferAcceptance.test_06_sender_stable_receiver_movement_rechecked_and_obstacle_blocks",
+      "passed": true,
+      "seconds": 4.332072781980969
+    },
+    {
+      "test": "__main__.TransferAcceptance.test_07_competing_build_and_gift_do_not_double_spend",
+      "passed": true,
+      "seconds": 0.7162497670506127
+    },
+    {
+      "test": "__main__.TransferAcceptance.test_08_debit_rollback_and_both_process_exit_points_recover_once",
+      "passed": true,
+      "seconds": 1.0726479219738394
+    },
+    {
+      "test": "__main__.TransferAcceptance.test_09_recent_history_is_bounded_but_public_events_remain_complete",
+      "passed": true,
+      "seconds": 0.6592997150146402
+    }
+  ],
+  "actualModelCalls": 0,
+  "fixture": "cold isolated copies of an actual HTTP-created world; creation-trace.json retained",
+  "dllSha256": "61b485499a20c3b45bc7ba0d26be995e4858ea2622ffedcf8c4eff414c3112e4",
+  "sourceSha256": {
+    "src/World.Server/ContinuousWorld.cs": "2135b427557aa12e2987333794759ca253e91e1d30bbe6fcd6c1cb8a491e6f0a",
+    "src/World.Server/EntryGuide.cs": "097a08ad3f90f72e25743708e4f9a32e1cf2baec401c275bf7001a92655f3e8d",
+    "src/World.Server/MaterialTransfer.cs": "413db75abfec5f98f7fc35344c7820ffd45b5f10c05f889918e0155e194befe1",
+    "src/World.Server/Program.cs": "a4660bb99de219a3b937863bab43118257d5997997a26eee58b299918e176298",
+    "src/World.Server/Protocol.cs": "b46e69f88a74d579a630d779ec4108006e72903df3c74638c2f52c30894a2e7f",
+    "src/World.Server/ServerConfiguration.cs": "8b33f7b3aae70229397362d0571769198303507712accd624ecedb1320eea8d1",
+    "src/World.Server/WorldDatabase.cs": "e38747e81cced79cb30a30423a647651f302bc84feb01e0a903aff249a8f578f",
+    "src/World.Server/WorldInstance.cs": "f865654d13b63ac9659fa119353b5e32b303484eab49215bb7796a49a5b3fd1b",
+    "src/World.Server/WorldScenario.cs": "225bdf1cbe6f050e0d11b54b5572ab1d6bbff7800dd1902ed8b213c5b70f9563",
+    "src/World.Server/WorldService.cs": "b3c53fefa10829f2c9980315f3e6d8c4e1ac5259a214d5e2fab1caedd5c41e98",
+    "tests/material_transfer_api.py": "bc0d889878d3b2ee8597df20df8c2135561bfd39d26e187c8afd6e2376c9fca6"
+  },
+  "failureDetails": []
+}
