@@ -207,3 +207,12 @@ node tests/browser/wilderness.mjs
 `dotnet build src/World.Server/World.Server.csproj --no-restore` 后，运行 `GODOT_BIN=/path/to/godot npm run test:godot`。需要 Godot 4.7.2 和 Linux `xvfb-run`，当前连续地图的结果及截图保存在 `.local/iter0014/godot/`（ITER-0011 的历史证据仍保留）。此入口独立于不要求安装游戏引擎的 `npm test`，不能把普通 Chrome 回归写成 Godot 验收。
 
 真实 Godot OpenGL 渲染、实际场景鼠标／键盘输入、隔离 .NET / SQLite 服务及故障代理验证采集、搭建、跨岸复用、身份、状态冲突、错误回执、读失败、丢响应与客户端／服务重启。所有测试子进程和代理结束时停止，模型调用0；仅无头导入不算视觉验证。
+
+
+## ITER-0018 实例与原命令恢复
+
+`python3 tests/world_instance_api.py` 为8项实际 HTTP / SQLite 检查；`python3 tests/instance_mission_api.py` 为5项任务持久绑定检查，两者已加入 `npm test` 的普通回归。当前完整组合为216项 HTTP、134项 Chrome，全部外部模型调用0。作者自测、独立反例复验与已有预览状态见 [ITER-0018 报告](../docs/iterations/ITER-0018-results.md)。
+
+`npm run test:godot` 依次执行共享记录（6场景、400断言）、实例恢复（9组、27断言）、连续场景（9组、56断言）与导航（5组、42断言）。前两套使用真实无头 Godot 进程；后两套使用真实 OpenGL 渲染和鼠标／键盘输入。服务均在隔离目录和随机端口运行；实际身份及数据库核对是过桥验收的一部分，不能只根据画面位置判定另一居民完成。
+
+实例用例包含同地址换库、原世界迁址与会话轮换、旧格式和损坏记录、不制造业务回执的前置条件失败；任务用例还保留原起点、目标与累计预算。未更改已有预览数据库，旧库升级试验使用独立的旧程序建库。

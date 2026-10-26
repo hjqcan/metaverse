@@ -1,0 +1,406 @@
+{
+  "recordedAtUtc": "2026-10-26T02:12:17.424737+00:00",
+  "baseCommit": "0639ef331a1bfd44de0712a45daf8ca59c6d5692",
+  "kind": "research-counterexample",
+  "actualModelCalls": 0,
+  "policy": "explicit-fixed-program",
+  "worldScenario": "wilderness-v1",
+  "sourceHashes": {
+    "src/World.Server/WorldDatabase.cs": "03284195c64c27005a9365b81748492e9e632379fa1ab72fcaa0385dfcc904a7",
+    "src/World.Server/WorldService.cs": "0f8f0543c374075ed011289eedcdfbe63e8ad21e7fcfebb240e354c9dec3a58d",
+    "src/World.Server/WorldScenario.cs": "9850940f329ad1f87ae0fde3beae39f0d052d1ed7518857dc0d50b6a8429c64a",
+    "scripts/resident_mission.py": "1fffa8a599ae9bf42aff6ef48d9710ac2dda5d2b72d2abbc641b4dbb14f0cf8e",
+    "scripts/passage_agent.py": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e",
+    "scripts/foundation_agent.py": "010977c5864481e06100d65c7b51463455773a45300c1780b20d4fb36a682388"
+  },
+  "assemblySha256": "fc3e4118740106a009a51c11b84aac5c4635073b9734e2db45a506258d926d65",
+  "dataDirectory": ".local/research/resource-entry/20261026T021217Z-4f70cc/legal-exhaustion",
+  "scope": "a2 is a pre-existing resident acting later; no dynamic registration was tested",
+  "initial": {
+    "stateVersion": 0,
+    "self": {
+      "actorId": "a1",
+      "position": [
+        1,
+        1
+      ],
+      "inventory": {
+        "wood": 0
+      }
+    },
+    "resourceAudit": {
+      "issuedWood": 12,
+      "wildWood": 12,
+      "depotWood": 0,
+      "inventoryWood": 0,
+      "embodiedWood": 0,
+      "conserved": true
+    },
+    "resourceNodes": [
+      {
+        "nodeId": "tree-east-north",
+        "kind": "tree",
+        "position": [
+          6,
+          2
+        ],
+        "initialWood": 3,
+        "remainingWood": 3
+      },
+      {
+        "nodeId": "tree-east-south",
+        "kind": "tree",
+        "position": [
+          7,
+          6
+        ],
+        "initialWood": 3,
+        "remainingWood": 3
+      },
+      {
+        "nodeId": "tree-west-north",
+        "kind": "tree",
+        "position": [
+          0,
+          1
+        ],
+        "initialWood": 3,
+        "remainingWood": 3
+      },
+      {
+        "nodeId": "tree-west-south",
+        "kind": "tree",
+        "position": [
+          2,
+          5
+        ],
+        "initialWood": 3,
+        "remainingWood": 3
+      }
+    ],
+    "entities": []
+  },
+  "existingMission": {
+    "status": "blocked",
+    "reason": "natural_material_collection_required",
+    "used": {
+      "commands": 0,
+      "wood": 0,
+      "modelCalls": 1,
+      "seconds": 0.008530616760253906
+    },
+    "worldVersionUnchanged": true
+  },
+  "afterEarlyResident": {
+    "stateVersion": 28,
+    "self": {
+      "actorId": "a1",
+      "position": [
+        6,
+        6
+      ],
+      "inventory": {
+        "wood": 6
+      }
+    },
+    "resourceAudit": {
+      "issuedWood": 12,
+      "wildWood": 0,
+      "depotWood": 0,
+      "inventoryWood": 6,
+      "embodiedWood": 6,
+      "conserved": true
+    },
+    "resourceNodes": [
+      {
+        "nodeId": "tree-east-north",
+        "kind": "tree",
+        "position": [
+          6,
+          2
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-east-south",
+        "kind": "tree",
+        "position": [
+          7,
+          6
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-west-north",
+        "kind": "tree",
+        "position": [
+          0,
+          1
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-west-south",
+        "kind": "tree",
+        "position": [
+          2,
+          5
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      }
+    ],
+    "entities": [
+      {
+        "entityId": "e5c91f40f9f824ba1a71a3849f282200d",
+        "definitionId": "bridge",
+        "definitionVersion": 1,
+        "rulesVersion": "r7",
+        "ownerActorId": "a1",
+        "position": [
+          4,
+          3
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "e6d14729cf3dd461bb275566e29b1070f",
+        "definitionId": "bridge",
+        "definitionVersion": 1,
+        "rulesVersion": "r7",
+        "ownerActorId": "a1",
+        "position": [
+          5,
+          3
+        ],
+        "embodiedWood": 3
+      }
+    ]
+  },
+  "laterResidentBefore": {
+    "stateVersion": 28,
+    "self": {
+      "actorId": "a2",
+      "position": [
+        6,
+        6
+      ],
+      "inventory": {
+        "wood": 0
+      }
+    },
+    "resourceAudit": {
+      "issuedWood": 12,
+      "wildWood": 0,
+      "depotWood": 0,
+      "inventoryWood": 6,
+      "embodiedWood": 6,
+      "conserved": true
+    },
+    "resourceNodes": [
+      {
+        "nodeId": "tree-east-north",
+        "kind": "tree",
+        "position": [
+          6,
+          2
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-east-south",
+        "kind": "tree",
+        "position": [
+          7,
+          6
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-west-north",
+        "kind": "tree",
+        "position": [
+          0,
+          1
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-west-south",
+        "kind": "tree",
+        "position": [
+          2,
+          5
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      }
+    ],
+    "entities": [
+      {
+        "entityId": "e5c91f40f9f824ba1a71a3849f282200d",
+        "definitionId": "bridge",
+        "definitionVersion": 1,
+        "rulesVersion": "r7",
+        "ownerActorId": "a1",
+        "position": [
+          4,
+          3
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "e6d14729cf3dd461bb275566e29b1070f",
+        "definitionId": "bridge",
+        "definitionVersion": 1,
+        "rulesVersion": "r7",
+        "ownerActorId": "a1",
+        "position": [
+          5,
+          3
+        ],
+        "embodiedWood": 3
+      }
+    ]
+  },
+  "laterBuildFailure": {
+    "actorId": "a2",
+    "request": {
+      "schemaVersion": 1,
+      "rulesVersion": "r7",
+      "commandId": "probe_f738dc5916b9437980f4799cfba489f1",
+      "expectedStateVersion": 28,
+      "action": {
+        "type": "build",
+        "recipeId": "platform.v1",
+        "at": [
+          6,
+          6
+        ]
+      }
+    },
+    "httpStatus": 422,
+    "status": "rejected",
+    "stateVersion": 28,
+    "result": null,
+    "error": {
+      "code": "INSUFFICIENT_RESOURCE",
+      "message": "自身木材不足，建造需要 3 单位",
+      "retryable": false,
+      "mutated": false
+    }
+  },
+  "laterResidentAfter": {
+    "stateVersion": 48,
+    "self": {
+      "actorId": "a2",
+      "position": [
+        6,
+        6
+      ],
+      "inventory": {
+        "wood": 0
+      }
+    },
+    "resourceAudit": {
+      "issuedWood": 12,
+      "wildWood": 0,
+      "depotWood": 0,
+      "inventoryWood": 6,
+      "embodiedWood": 6,
+      "conserved": true
+    },
+    "resourceNodes": [
+      {
+        "nodeId": "tree-east-north",
+        "kind": "tree",
+        "position": [
+          6,
+          2
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-east-south",
+        "kind": "tree",
+        "position": [
+          7,
+          6
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-west-north",
+        "kind": "tree",
+        "position": [
+          0,
+          1
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      },
+      {
+        "nodeId": "tree-west-south",
+        "kind": "tree",
+        "position": [
+          2,
+          5
+        ],
+        "initialWood": 3,
+        "remainingWood": 0
+      }
+    ],
+    "entities": [
+      {
+        "entityId": "e5c91f40f9f824ba1a71a3849f282200d",
+        "definitionId": "bridge",
+        "definitionVersion": 1,
+        "rulesVersion": "r7",
+        "ownerActorId": "a1",
+        "position": [
+          4,
+          3
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "e6d14729cf3dd461bb275566e29b1070f",
+        "definitionId": "bridge",
+        "definitionVersion": 1,
+        "rulesVersion": "r7",
+        "ownerActorId": "a1",
+        "position": [
+          5,
+          3
+        ],
+        "embodiedWood": 3
+      }
+    ]
+  },
+  "sharedBridgeStillUsable": true,
+  "restartPreservesState": true,
+  "stoppedDatabaseAudit": {
+    "conserved": true,
+    "wildWood": 0,
+    "residentWood": {
+      "a1": 6,
+      "a2": 0
+    },
+    "embodiedWood": 6,
+    "gatheredCommands": 12,
+    "integrityCheck": "ok",
+    "foreignKeyViolations": 0
+  },
+  "sourceUnchangedDuringExperiment": true,
+  "commands": 49,
+  "counterexampleConfirmed": true,
+  "allExperimentProcessesStopped": true
+}

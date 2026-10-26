@@ -1,0 +1,45 @@
+{
+  "suite": "independent-construction-recovered-chrome",
+  "passed": true,
+  "recordedAtUtc": "2026-10-26T02:52:43.054Z",
+  "actualModelCalls": 0,
+  "browser": "152.0.7977.82",
+  "javascriptErrors": [],
+  "worldRequests": [],
+  "port": 43961,
+  "serviceStopped": true,
+  "tests": [
+    {
+      "name": "actual_recovered_construction_requires_command_entity_and_material",
+      "passed": true
+    },
+    {
+      "name": "arrival_and_existing_entity_cannot_substitute_for_this_build",
+      "passed": true
+    },
+    {
+      "name": "unknown_build_retains_unconfirmed_fact",
+      "passed": true
+    },
+    {
+      "name": "mismatched_identity_permission_material_and_step_are_not_completed",
+      "passed": true
+    },
+    {
+      "name": "malformed_construction_retains_previous_report",
+      "passed": true
+    },
+    {
+      "name": "construction_requires_visit_after_original_build",
+      "passed": true
+    },
+    {
+      "name": "legacy_bridge_report_does_not_acquire_a_construction_goal",
+      "passed": true
+    },
+    {
+      "name": "390px_construction_report_is_readonly_without_overflow",
+      "passed": true
+    }
+  ]
+}

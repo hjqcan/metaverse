@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "oldServerSha256": "5d0ca45b644374321fe523886bb516ba3bf15a932688e10540e7d6858cf8d5d7",
+  "newServerSha256": "bb9beb65ada000eb4f40f90766499ad5237b71e22153cbd7ef6fa828a2ff3b86",
+  "externalModelCalls": 0,
+  "oldPending": {
+    "actorId": "a1",
+    "body": "{\"action\":{\"nodeId\":\"tree-west-north\",\"type\":\"gather\"},\"commandId\":\"godot_896315b9d726b0062608a69f16669d95\",\"expectedStateVersion\":0,\"rulesVersion\":\"r8\",\"schemaVersion\":1}",
+    "commandId": "godot_896315b9d726b0062608a69f16669d95"
+  },
+  "recovered": {
+    "canAct": true,
+    "healthy": true,
+    "inventory": {
+      "wood": 1
+    },
+    "journalSize": 0,
+    "lastReceipt": {
+      "commandId": "godot_896315b9d726b0062608a69f16669d95",
+      "error": null,
+      "eventCursor": 2,
+      "identity": {
+        "actorId": "a1",
+        "operatorId": "local-operator",
+        "sessionId": "s58bad10859124d8187eca81e28136c32"
+      },
+      "result": {
+        "action": "gather",
+        "inventoryWood": 1,
+        "nodeId": "tree-west-north",
+        "position": [
+          6.2,
+          7.8
+        ],
+        "quantity": 1,
+        "remainingWood": 2
+      },
+      "rulesVersion": "r8",
+      "schemaVersion": 1,
+      "stateVersion": 1,
+      "status": "committed"
+    },
+    "mode": "upgraded-restart",
+    "pending": {}
+  },
+  "aggregateFirst": {
+    "canAct": true,
+    "healthy": true,
+    "inventory": {
+      "wood": 1
+    },
+    "journalSize": 0,
+    "lastReceipt": {
+      "commandId": "godot_896315b9d726b0062608a69f16669d95",
+      "error": null,
+      "eventCursor": 2,
+      "identity": {
+        "actorId": "a1",
+        "operatorId": "local-operator",
+        "sessionId": "s58bad10859124d8187eca81e28136c32"
+      },
+      "result": {
+        "action": "gather",
+        "inventoryWood": 1,
+        "nodeId": "tree-west-north",
+        "position": [
+          6.2,
+          7.8
+        ],
+        "quantity": 1,
+        "remainingWood": 2
+      },
+      "rulesVersion": "r8",
+      "schemaVersion": 1,
+      "stateVersion": 1,
+      "status": "committed"
+    },
+    "mode": "legacy-first",
+    "pending": {}
+  },
+  "aggregateSecond": {
+    "canAct": true,
+    "healthy": true,
+    "inventory": {
+      "wood": 1
+    },
+    "journalSize": 0,
+    "lastReceipt": {},
+    "mode": "legacy-second",
+    "pending": {}
+  },
+  "allDatabaseTablesUnchanged": true,
+  "aggregateUnchanged": true,
+  "postCount": 1,
+  "legacyWorldRemainsExplicitlyUnbound": true
+}

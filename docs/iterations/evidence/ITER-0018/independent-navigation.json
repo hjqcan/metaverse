@@ -1,0 +1,312 @@
+{
+  "passed": true,
+  "sourceBefore": {
+    "clients/godot/main.gd": "3567897ec6cd25f61b7589cfef11abc69df0b65ef138548ade826f3b3122a620",
+    "clients/godot/world_client.gd": "aa3c0a287806927b8a09e2a16f6e87b6642ddbff65e6be755b4bd7a1336db513",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "c05f772506740cd19d1ba4a23d150422b123037c42f560d17315f53b86d57490",
+    "clients/godot/pending_store.gd": "6746519f4ce68d863c30ddcc7db2ecc504d179516104b633755df44704669708",
+    "src/World.Server/bin/Debug/net10.0/World.Server.dll": "1473453f8e35c7591b926926c7765bfbd239c1fcceaa356bebb9b65ada00d90f",
+    "tests/godot/navigation.gd": "95710dfbe3a128abcd478b6ed5566c0851ab2dce90acd024c15a7dd61a9d1112",
+    "tests/godot/continuous.gd": "05c89e375536fe71a5555882cb140c57a8d3a9714ae6daaf4751fd806f9f5805",
+    "tests/godot_navigation.py": "77c4718c4cd66fda06a8812067bdb34cf714398d38f05a8f35155d436d9864eb"
+  },
+  "externalModelCalls": 0,
+  "suiteEvidence": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0016/20261026T023724Z-156a09/results.json",
+  "suite": {
+    "passed": true,
+    "groups": 5,
+    "assertions": 42,
+    "results": [
+      {
+        "name": "obstacles",
+        "checks": [
+          {
+            "name": "authenticated r8 navigation world",
+            "passed": true
+          },
+          {
+            "name": "authoritative arrival at (8.0, 9.0)",
+            "passed": true
+          },
+          {
+            "name": "mouse route detours around live tree",
+            "passed": true
+          },
+          {
+            "name": "authoritative arrival at (13.0, 8.5)",
+            "passed": true
+          },
+          {
+            "name": "mouse route detours around rock",
+            "passed": true
+          },
+          {
+            "name": "walking does not rebake geometry",
+            "passed": true
+          },
+          {
+            "name": "unreachable bank issues no walk",
+            "passed": true
+          },
+          {
+            "name": "unreachable location explains failure",
+            "passed": true
+          },
+          {
+            "name": "rendered route",
+            "passed": true
+          },
+          {
+            "name": "all navigation steps accepted without collision",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "name": "tree-change",
+        "checks": [
+          {
+            "name": "authenticated r8 navigation world",
+            "passed": true
+          },
+          {
+            "name": "partially gathered tree keeps navigation",
+            "passed": true
+          },
+          {
+            "name": "partially gathered tree keeps navigation",
+            "passed": true
+          },
+          {
+            "name": "depleted tree rebuilds navigation once",
+            "passed": true
+          },
+          {
+            "name": "depleted trunk opens direct route",
+            "passed": true
+          },
+          {
+            "name": "authoritative arrival at (8.0, 9.0)",
+            "passed": true
+          },
+          {
+            "name": "authoritative arrival at (5.0, 7.0)",
+            "passed": true
+          },
+          {
+            "name": "all navigation steps accepted without collision",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "name": "bridge",
+        "checks": [
+          {
+            "name": "authenticated r8 navigation world",
+            "passed": true
+          },
+          {
+            "name": "before building other bank is unreachable",
+            "passed": true
+          },
+          {
+            "name": "real gathered materials build one bridge",
+            "passed": true
+          },
+          {
+            "name": "authoritative arrival at (26.0, 9.0)",
+            "passed": true
+          },
+          {
+            "name": "distant destination routes through bridge",
+            "passed": true
+          },
+          {
+            "name": "rendered crossed",
+            "passed": true
+          },
+          {
+            "name": "resident switch requested during active polling",
+            "passed": true
+          },
+          {
+            "name": "connection switched to the second resident",
+            "passed": true
+          },
+          {
+            "name": "authoritative arrival at (13.0, 7.0)",
+            "passed": true
+          },
+          {
+            "name": "second resident crosses existing bridge with zero wood",
+            "passed": true
+          },
+          {
+            "name": "rendered reused",
+            "passed": true
+          },
+          {
+            "name": "all navigation steps accepted without collision",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "name": "cancel",
+        "checks": [
+          {
+            "name": "authenticated r8 navigation world",
+            "passed": true
+          },
+          {
+            "name": "escape cancels route after outstanding request",
+            "passed": true
+          },
+          {
+            "name": "WASD cancels automatic route",
+            "passed": true
+          },
+          {
+            "name": "newest queued click wins",
+            "passed": true
+          },
+          {
+            "name": "cancel invalidates click awaiting HTTP",
+            "passed": true
+          },
+          {
+            "name": "cancel clears destination and route dots",
+            "passed": true
+          },
+          {
+            "name": "all navigation steps accepted without collision",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "name": "route-loss",
+        "checks": [
+          {
+            "name": "authenticated r8 navigation world",
+            "passed": true
+          },
+          {
+            "name": "lost step recovered by original receipt lookup",
+            "passed": true
+          },
+          {
+            "name": "recovery does not silently resume canceled route",
+            "passed": true
+          },
+          {
+            "name": "authoritative arrival at (8.0, 9.0)",
+            "passed": true
+          },
+          {
+            "name": "all navigation steps accepted without collision",
+            "passed": true
+          }
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "residents": {
+    "a1": {
+      "position": [
+        26.0,
+        9.0
+      ],
+      "wood": 0
+    },
+    "a2": {
+      "position": [
+        13.0,
+        7.0
+      ],
+      "wood": 0
+    }
+  },
+  "lastWalkReceipts": {
+    "a1": {
+      "schemaVersion": 1,
+      "rulesVersion": "r8",
+      "stateVersion": 92,
+      "commandId": "godot_b24821952195e59abbc7f8b33bc3f169",
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1",
+        "sessionId": "s71a1393a450d426391b785c33c468a6c"
+      },
+      "eventCursor": 93,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "walk",
+        "position": [
+          26,
+          9
+        ],
+        "blocked": false
+      }
+    },
+    "a2": {
+      "schemaVersion": 1,
+      "rulesVersion": "r8",
+      "stateVersion": 122,
+      "commandId": "godot_517e05d19b0e4cb54bdfa1ace7830354",
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a2",
+        "sessionId": "scfb4dc0c0f5944289c3adf455347aa02"
+      },
+      "eventCursor": 123,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "walk",
+        "position": [
+          13,
+          7
+        ],
+        "blocked": false
+      }
+    }
+  },
+  "committedActions": {
+    "a1": {
+      "walk": 85,
+      "gather": 6,
+      "build": 1
+    },
+    "a2": {
+      "walk": 30,
+      "gather": 0,
+      "build": 0
+    }
+  },
+  "bridge": [
+    "ea5ecaea8953d4ae1ba41219c581cf4d8",
+    6
+  ],
+  "materialTotal": 12,
+  "sourceAfter": {
+    "clients/godot/main.gd": "3567897ec6cd25f61b7589cfef11abc69df0b65ef138548ade826f3b3122a620",
+    "clients/godot/world_client.gd": "aa3c0a287806927b8a09e2a16f6e87b6642ddbff65e6be755b4bd7a1336db513",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "c05f772506740cd19d1ba4a23d150422b123037c42f560d17315f53b86d57490",
+    "clients/godot/pending_store.gd": "6746519f4ce68d863c30ddcc7db2ecc504d179516104b633755df44704669708",
+    "src/World.Server/bin/Debug/net10.0/World.Server.dll": "1473453f8e35c7591b926926c7765bfbd239c1fcceaa356bebb9b65ada00d90f",
+    "tests/godot/navigation.gd": "95710dfbe3a128abcd478b6ed5566c0851ab2dce90acd024c15a7dd61a9d1112",
+    "tests/godot/continuous.gd": "05c89e375536fe71a5555882cb140c57a8d3a9714ae6daaf4751fd806f9f5805",
+    "tests/godot_navigation.py": "77c4718c4cd66fda06a8812067bdb34cf714398d38f05a8f35155d436d9864eb"
+  },
+  "sourceStable": true
+}

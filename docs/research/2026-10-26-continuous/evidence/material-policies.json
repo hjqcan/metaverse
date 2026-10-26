@@ -1,0 +1,1769 @@
+{
+  "recordedAtUtc": "2026-10-26T02:27:21.147309+00:00",
+  "kind": "hypothetical-policy-model",
+  "actualModelCalls": 0,
+  "actualWorldCommands": 0,
+  "serverProcessesStarted": 0,
+  "scriptSha256": "a11c021f6f5066008cafb650eb8c48c20c0618321267353e9e09cf7b0e77f13a",
+  "parameters": {
+    "horizonCycles": 36,
+    "growthBudgetPerCycle": 3,
+    "unharvestedCapacity": 6,
+    "projectMaterial": 3,
+    "initialTotalMaterial": 12,
+    "earlyInitialInventory": 6,
+    "initialEmbodiedMaterial": 6
+  },
+  "assumptions": [
+    "cycles have no chosen real-time duration",
+    "new material is an explicit candidate source, not current r8 behavior",
+    "all early aliases share one controller, late resident independent by construction",
+    "early actors always arrive first and have recurrent material-consuming demand",
+    "no travel, buildable area, latency, production capital, or unknown-control inference",
+    "late output is a reservation, not a verified gather or construction"
+  ],
+  "cases": [
+    {
+      "policy": "first_arrival",
+      "earlyActorCount": 1,
+      "controlGroupsKnown": false,
+      "earlyReservationUsersOffline": false,
+      "reservationLeaseCycles": null,
+      "lateFirstReservationCycle": null,
+      "lateHasThreeUnitsReserved": false,
+      "lateActualWorldProjectVerified": false,
+      "expiredReservations": 0,
+      "final": {
+        "cycle": 36,
+        "newMaterial": 3,
+        "issued": 120,
+        "availableNaturalMaterial": 0,
+        "reservedNaturalMaterial": 0,
+        "earlyInventory": 6,
+        "embodied": 114,
+        "lateReservationAvailable": false
+      },
+      "conservedAtEveryCycle": true,
+      "trace": [
+        {
+          "cycle": 1,
+          "newMaterial": 3,
+          "issued": 15,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 9,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 2,
+          "newMaterial": 3,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 12,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 3,
+          "newMaterial": 3,
+          "issued": 21,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 15,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 4,
+          "newMaterial": 3,
+          "issued": 24,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 18,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 5,
+          "newMaterial": 3,
+          "issued": 27,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 21,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 6,
+          "newMaterial": 3,
+          "issued": 30,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 24,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 7,
+          "newMaterial": 3,
+          "issued": 33,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 27,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 8,
+          "newMaterial": 3,
+          "issued": 36,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 30,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 9,
+          "newMaterial": 3,
+          "issued": 39,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 33,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 10,
+          "newMaterial": 3,
+          "issued": 42,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 36,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 11,
+          "newMaterial": 3,
+          "issued": 45,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 39,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 12,
+          "newMaterial": 3,
+          "issued": 48,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 42,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 13,
+          "newMaterial": 3,
+          "issued": 51,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 45,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 14,
+          "newMaterial": 3,
+          "issued": 54,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 48,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 15,
+          "newMaterial": 3,
+          "issued": 57,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 51,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 16,
+          "newMaterial": 3,
+          "issued": 60,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 54,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 17,
+          "newMaterial": 3,
+          "issued": 63,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 57,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 18,
+          "newMaterial": 3,
+          "issued": 66,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 60,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 19,
+          "newMaterial": 3,
+          "issued": 69,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 63,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 20,
+          "newMaterial": 3,
+          "issued": 72,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 66,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 21,
+          "newMaterial": 3,
+          "issued": 75,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 69,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 22,
+          "newMaterial": 3,
+          "issued": 78,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 72,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 23,
+          "newMaterial": 3,
+          "issued": 81,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 75,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 24,
+          "newMaterial": 3,
+          "issued": 84,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 78,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 25,
+          "newMaterial": 3,
+          "issued": 87,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 81,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 26,
+          "newMaterial": 3,
+          "issued": 90,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 84,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 27,
+          "newMaterial": 3,
+          "issued": 93,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 87,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 28,
+          "newMaterial": 3,
+          "issued": 96,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 90,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 29,
+          "newMaterial": 3,
+          "issued": 99,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 93,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 30,
+          "newMaterial": 3,
+          "issued": 102,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 96,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 31,
+          "newMaterial": 3,
+          "issued": 105,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 99,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 32,
+          "newMaterial": 3,
+          "issued": 108,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 102,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 33,
+          "newMaterial": 3,
+          "issued": 111,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 105,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 34,
+          "newMaterial": 3,
+          "issued": 114,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 108,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 35,
+          "newMaterial": 3,
+          "issued": 117,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 111,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 36,
+          "newMaterial": 3,
+          "issued": 120,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 114,
+          "lateReservationAvailable": false
+        }
+      ]
+    },
+    {
+      "policy": "inventory_cap",
+      "earlyActorCount": 1,
+      "controlGroupsKnown": false,
+      "earlyReservationUsersOffline": false,
+      "reservationLeaseCycles": null,
+      "lateFirstReservationCycle": null,
+      "lateHasThreeUnitsReserved": false,
+      "lateActualWorldProjectVerified": false,
+      "expiredReservations": 0,
+      "final": {
+        "cycle": 36,
+        "newMaterial": 3,
+        "issued": 120,
+        "availableNaturalMaterial": 0,
+        "reservedNaturalMaterial": 0,
+        "earlyInventory": 6,
+        "embodied": 114,
+        "lateReservationAvailable": false
+      },
+      "conservedAtEveryCycle": true,
+      "trace": [
+        {
+          "cycle": 1,
+          "newMaterial": 3,
+          "issued": 15,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 9,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 2,
+          "newMaterial": 3,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 12,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 3,
+          "newMaterial": 3,
+          "issued": 21,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 15,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 4,
+          "newMaterial": 3,
+          "issued": 24,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 18,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 5,
+          "newMaterial": 3,
+          "issued": 27,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 21,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 6,
+          "newMaterial": 3,
+          "issued": 30,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 24,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 7,
+          "newMaterial": 3,
+          "issued": 33,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 27,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 8,
+          "newMaterial": 3,
+          "issued": 36,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 30,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 9,
+          "newMaterial": 3,
+          "issued": 39,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 33,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 10,
+          "newMaterial": 3,
+          "issued": 42,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 36,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 11,
+          "newMaterial": 3,
+          "issued": 45,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 39,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 12,
+          "newMaterial": 3,
+          "issued": 48,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 42,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 13,
+          "newMaterial": 3,
+          "issued": 51,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 45,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 14,
+          "newMaterial": 3,
+          "issued": 54,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 48,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 15,
+          "newMaterial": 3,
+          "issued": 57,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 51,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 16,
+          "newMaterial": 3,
+          "issued": 60,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 54,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 17,
+          "newMaterial": 3,
+          "issued": 63,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 57,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 18,
+          "newMaterial": 3,
+          "issued": 66,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 60,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 19,
+          "newMaterial": 3,
+          "issued": 69,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 63,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 20,
+          "newMaterial": 3,
+          "issued": 72,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 66,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 21,
+          "newMaterial": 3,
+          "issued": 75,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 69,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 22,
+          "newMaterial": 3,
+          "issued": 78,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 72,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 23,
+          "newMaterial": 3,
+          "issued": 81,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 75,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 24,
+          "newMaterial": 3,
+          "issued": 84,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 78,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 25,
+          "newMaterial": 3,
+          "issued": 87,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 81,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 26,
+          "newMaterial": 3,
+          "issued": 90,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 84,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 27,
+          "newMaterial": 3,
+          "issued": 93,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 87,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 28,
+          "newMaterial": 3,
+          "issued": 96,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 90,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 29,
+          "newMaterial": 3,
+          "issued": 99,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 93,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 30,
+          "newMaterial": 3,
+          "issued": 102,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 96,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 31,
+          "newMaterial": 3,
+          "issued": 105,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 99,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 32,
+          "newMaterial": 3,
+          "issued": 108,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 102,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 33,
+          "newMaterial": 3,
+          "issued": 111,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 105,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 34,
+          "newMaterial": 3,
+          "issued": 114,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 108,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 35,
+          "newMaterial": 3,
+          "issued": 117,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 111,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 36,
+          "newMaterial": 3,
+          "issued": 120,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 114,
+          "lateReservationAvailable": false
+        }
+      ]
+    },
+    {
+      "policy": "fifo_reservation",
+      "earlyActorCount": 1,
+      "controlGroupsKnown": false,
+      "earlyReservationUsersOffline": false,
+      "reservationLeaseCycles": 2,
+      "lateFirstReservationCycle": 2,
+      "lateHasThreeUnitsReserved": true,
+      "lateActualWorldProjectVerified": false,
+      "expiredReservations": 0,
+      "final": {
+        "cycle": 2,
+        "newMaterial": 3,
+        "issued": 18,
+        "availableNaturalMaterial": 0,
+        "reservedNaturalMaterial": 3,
+        "earlyInventory": 6,
+        "embodied": 9,
+        "lateReservationAvailable": true
+      },
+      "conservedAtEveryCycle": true,
+      "trace": [
+        {
+          "cycle": 1,
+          "newMaterial": 3,
+          "issued": 15,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 9,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 2,
+          "newMaterial": 3,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 3,
+          "earlyInventory": 6,
+          "embodied": 9,
+          "lateReservationAvailable": true
+        }
+      ]
+    },
+    {
+      "policy": "fifo_reservation",
+      "earlyActorCount": 7,
+      "controlGroupsKnown": false,
+      "earlyReservationUsersOffline": false,
+      "reservationLeaseCycles": 2,
+      "lateFirstReservationCycle": 8,
+      "lateHasThreeUnitsReserved": true,
+      "lateActualWorldProjectVerified": false,
+      "expiredReservations": 0,
+      "final": {
+        "cycle": 8,
+        "newMaterial": 3,
+        "issued": 36,
+        "availableNaturalMaterial": 0,
+        "reservedNaturalMaterial": 3,
+        "earlyInventory": 6,
+        "embodied": 27,
+        "lateReservationAvailable": true
+      },
+      "conservedAtEveryCycle": true,
+      "trace": [
+        {
+          "cycle": 1,
+          "newMaterial": 3,
+          "issued": 15,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 9,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 2,
+          "newMaterial": 3,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 12,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 3,
+          "newMaterial": 3,
+          "issued": 21,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 15,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 4,
+          "newMaterial": 3,
+          "issued": 24,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 18,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 5,
+          "newMaterial": 3,
+          "issued": 27,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 21,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 6,
+          "newMaterial": 3,
+          "issued": 30,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 24,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 7,
+          "newMaterial": 3,
+          "issued": 33,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 27,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 8,
+          "newMaterial": 3,
+          "issued": 36,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 3,
+          "earlyInventory": 6,
+          "embodied": 27,
+          "lateReservationAvailable": true
+        }
+      ]
+    },
+    {
+      "policy": "fifo_reservation",
+      "earlyActorCount": 31,
+      "controlGroupsKnown": false,
+      "earlyReservationUsersOffline": false,
+      "reservationLeaseCycles": 2,
+      "lateFirstReservationCycle": 32,
+      "lateHasThreeUnitsReserved": true,
+      "lateActualWorldProjectVerified": false,
+      "expiredReservations": 0,
+      "final": {
+        "cycle": 32,
+        "newMaterial": 3,
+        "issued": 108,
+        "availableNaturalMaterial": 0,
+        "reservedNaturalMaterial": 3,
+        "earlyInventory": 6,
+        "embodied": 99,
+        "lateReservationAvailable": true
+      },
+      "conservedAtEveryCycle": true,
+      "trace": [
+        {
+          "cycle": 1,
+          "newMaterial": 3,
+          "issued": 15,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 9,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 2,
+          "newMaterial": 3,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 12,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 3,
+          "newMaterial": 3,
+          "issued": 21,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 15,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 4,
+          "newMaterial": 3,
+          "issued": 24,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 18,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 5,
+          "newMaterial": 3,
+          "issued": 27,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 21,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 6,
+          "newMaterial": 3,
+          "issued": 30,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 24,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 7,
+          "newMaterial": 3,
+          "issued": 33,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 27,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 8,
+          "newMaterial": 3,
+          "issued": 36,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 30,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 9,
+          "newMaterial": 3,
+          "issued": 39,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 33,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 10,
+          "newMaterial": 3,
+          "issued": 42,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 36,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 11,
+          "newMaterial": 3,
+          "issued": 45,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 39,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 12,
+          "newMaterial": 3,
+          "issued": 48,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 42,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 13,
+          "newMaterial": 3,
+          "issued": 51,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 45,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 14,
+          "newMaterial": 3,
+          "issued": 54,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 48,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 15,
+          "newMaterial": 3,
+          "issued": 57,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 51,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 16,
+          "newMaterial": 3,
+          "issued": 60,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 54,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 17,
+          "newMaterial": 3,
+          "issued": 63,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 57,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 18,
+          "newMaterial": 3,
+          "issued": 66,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 60,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 19,
+          "newMaterial": 3,
+          "issued": 69,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 63,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 20,
+          "newMaterial": 3,
+          "issued": 72,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 66,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 21,
+          "newMaterial": 3,
+          "issued": 75,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 69,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 22,
+          "newMaterial": 3,
+          "issued": 78,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 72,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 23,
+          "newMaterial": 3,
+          "issued": 81,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 75,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 24,
+          "newMaterial": 3,
+          "issued": 84,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 78,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 25,
+          "newMaterial": 3,
+          "issued": 87,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 81,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 26,
+          "newMaterial": 3,
+          "issued": 90,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 84,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 27,
+          "newMaterial": 3,
+          "issued": 93,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 87,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 28,
+          "newMaterial": 3,
+          "issued": 96,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 90,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 29,
+          "newMaterial": 3,
+          "issued": 99,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 93,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 30,
+          "newMaterial": 3,
+          "issued": 102,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 96,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 31,
+          "newMaterial": 3,
+          "issued": 105,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 99,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 32,
+          "newMaterial": 3,
+          "issued": 108,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 3,
+          "earlyInventory": 6,
+          "embodied": 99,
+          "lateReservationAvailable": true
+        }
+      ]
+    },
+    {
+      "policy": "fifo_reservation",
+      "earlyActorCount": 31,
+      "controlGroupsKnown": true,
+      "earlyReservationUsersOffline": false,
+      "reservationLeaseCycles": 2,
+      "lateFirstReservationCycle": 2,
+      "lateHasThreeUnitsReserved": true,
+      "lateActualWorldProjectVerified": false,
+      "expiredReservations": 0,
+      "final": {
+        "cycle": 2,
+        "newMaterial": 3,
+        "issued": 18,
+        "availableNaturalMaterial": 0,
+        "reservedNaturalMaterial": 3,
+        "earlyInventory": 6,
+        "embodied": 9,
+        "lateReservationAvailable": true
+      },
+      "conservedAtEveryCycle": true,
+      "trace": [
+        {
+          "cycle": 1,
+          "newMaterial": 3,
+          "issued": 15,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 0,
+          "earlyInventory": 6,
+          "embodied": 9,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 2,
+          "newMaterial": 3,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 3,
+          "earlyInventory": 6,
+          "embodied": 9,
+          "lateReservationAvailable": true
+        }
+      ]
+    },
+    {
+      "policy": "fifo_reservation",
+      "earlyActorCount": 2,
+      "controlGroupsKnown": false,
+      "earlyReservationUsersOffline": true,
+      "reservationLeaseCycles": null,
+      "lateFirstReservationCycle": null,
+      "lateHasThreeUnitsReserved": false,
+      "lateActualWorldProjectVerified": false,
+      "expiredReservations": 0,
+      "final": {
+        "cycle": 36,
+        "newMaterial": 0,
+        "issued": 18,
+        "availableNaturalMaterial": 0,
+        "reservedNaturalMaterial": 6,
+        "earlyInventory": 6,
+        "embodied": 6,
+        "lateReservationAvailable": false
+      },
+      "conservedAtEveryCycle": true,
+      "trace": [
+        {
+          "cycle": 1,
+          "newMaterial": 3,
+          "issued": 15,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 3,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 2,
+          "newMaterial": 3,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 3,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 4,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 5,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 6,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 7,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 8,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 9,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 10,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 11,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 12,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 13,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 14,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 15,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 16,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 17,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 18,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 19,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 20,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 21,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 22,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 23,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 24,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 25,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 26,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 27,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 28,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 29,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 30,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 31,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 32,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 33,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 34,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 35,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 36,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        }
+      ]
+    },
+    {
+      "policy": "fifo_reservation",
+      "earlyActorCount": 2,
+      "controlGroupsKnown": false,
+      "earlyReservationUsersOffline": true,
+      "reservationLeaseCycles": 2,
+      "lateFirstReservationCycle": 3,
+      "lateHasThreeUnitsReserved": true,
+      "lateActualWorldProjectVerified": false,
+      "expiredReservations": 1,
+      "final": {
+        "cycle": 3,
+        "newMaterial": 0,
+        "issued": 18,
+        "availableNaturalMaterial": 0,
+        "reservedNaturalMaterial": 6,
+        "earlyInventory": 6,
+        "embodied": 6,
+        "lateReservationAvailable": true
+      },
+      "conservedAtEveryCycle": true,
+      "trace": [
+        {
+          "cycle": 1,
+          "newMaterial": 3,
+          "issued": 15,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 3,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 2,
+          "newMaterial": 3,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": false
+        },
+        {
+          "cycle": 3,
+          "newMaterial": 0,
+          "issued": 18,
+          "availableNaturalMaterial": 0,
+          "reservedNaturalMaterial": 6,
+          "earlyInventory": 6,
+          "embodied": 6,
+          "lateReservationAvailable": true
+        }
+      ]
+    }
+  ]
+}

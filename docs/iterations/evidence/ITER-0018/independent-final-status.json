@@ -1,0 +1,80 @@
+{
+  "updatedAtUtc": "2026-10-26T02:54:31.910228+00:00",
+  "role": "independent virtual-world tester",
+  "currentVerifiedCandidate": ".local/build/mission-construction-final-20261026T024900Z.json",
+  "independentPassed": {
+    "rawInstanceHttp": 22,
+    "instanceGodotScenarios": 5,
+    "navigationScenarios": 5,
+    "recoveryUiScenarios": 4,
+    "crossProcessNoticeSettlement": true,
+    "twoResidentSqliteIdentityAndFinalPosition": true,
+    "legacyR8UpgradePreservesAllTables": true,
+    "missionAndConstructionCases": 18,
+    "constructionChromeCases": 8,
+    "originalCrossWorldMissionReproducer": true,
+    "actualLostBuildResponseAndRenewedToken": true,
+    "completedReportOfflineWithoutFileMutation": true
+  },
+  "openFindings": [],
+  "verifiedActivities": {
+    "pythonJourney": {
+      "a1Commands": 94,
+      "a2Commands": 80,
+      "bridgeCount": 1,
+      "a2MaterialSpent": 0,
+      "evidence": "journey-20261026T022250583094Z/results.json"
+    },
+    "godotNavigation": {
+      "a1Position": [
+        26,
+        9
+      ],
+      "a2Position": [
+        13,
+        7
+      ],
+      "a1Gathered": 6,
+      "a1Built": 1,
+      "a2Gathered": 0,
+      "a2Built": 0,
+      "evidence": "navigation-20261026T023724550237Z/results.json"
+    },
+    "cooperativeConstruction": {
+      "a1Bridge": {
+        "commands": 61,
+        "wood": 6,
+        "position": [
+          16.4,
+          8
+        ]
+      },
+      "a2Platform": {
+        "commands": 14,
+        "wood": 3,
+        "position": [
+          26.4,
+          14.5
+        ]
+      },
+      "a1VisitAndReturn": {
+        "commands": 82,
+        "wood": 0
+      },
+      "materialTotal": 12,
+      "wildWood": 3,
+      "embodiedWood": 9,
+      "evidence": "mission-suites-20261026T025042002656Z/construction/test_02_explicit_bridge_then_later_platform_and_free_visit/reports.json"
+    }
+  },
+  "mainBuilderSelfChecks": {
+    "http": 216,
+    "chrome": 134,
+    "independentlyRerunByThisTester": false
+  },
+  "externalModelCalls": 0,
+  "testerProductSourceChanges": false,
+  "testerStartedServicesRemaining": 0,
+  "next": "Continue on the next builder candidate; current reported defects are independently verified fixed",
+  "verifiedCommit": "941c97aa3bcddcb836090fcfe6eb329e3517861c"
+}

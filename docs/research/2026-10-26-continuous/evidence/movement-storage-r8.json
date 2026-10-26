@@ -1,0 +1,41 @@
+{
+  "recordedAtUtc": "2026-10-26T02:35:26.018389+00:00",
+  "kind": "isolated-r8-movement-storage-measurement",
+  "binarySource": ".local/research/movement-contention/20261026T022404Z-c4dd41/binary",
+  "assemblySha256": "5d0ca45b644374321fe523886bb516ba3bf15a932688e10540e7d6858cf8d5d7",
+  "actualModelCalls": 0,
+  "commands": 2000,
+  "acceleratedGenerationElapsedSeconds": 4.267890902003273,
+  "scope": "storage delta of successful movement commands in a stopped database; no long-duration or client UX claim",
+  "before": {
+    "fileBytes": 122880,
+    "pageSize": 4096,
+    "pages": 30,
+    "allocatedPageBytes": 122880,
+    "receipts": 0,
+    "events": 1,
+    "receiptJsonBytes": 0,
+    "eventJsonBytes": 132,
+    "integrity": "ok"
+  },
+  "after": {
+    "fileBytes": 1728512,
+    "pageSize": 4096,
+    "pages": 422,
+    "allocatedPageBytes": 1728512,
+    "receipts": 2000,
+    "events": 2001,
+    "receiptJsonBytes": 687641,
+    "eventJsonBytes": 323773,
+    "integrity": "ok"
+  },
+  "delta": {
+    "fileBytes": 1605632,
+    "allocatedPageBytes": 1605632,
+    "receiptJsonBytes": 687641,
+    "eventJsonBytes": 323641
+  },
+  "allocatedBytesPerCommandInThisSample": 802.816,
+  "payloadBytesPerCommandInThisSample": 505.641,
+  "allExperimentProcessesStopped": true
+}

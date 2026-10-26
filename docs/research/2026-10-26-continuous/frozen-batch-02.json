@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "frozen-research-batch",
+  "recordedAtUtc": "2026-10-26T02:47:12.230340+00:00",
+  "scope": "r8 material-entry actual HTTP counterexample only; all batch-01 files remain unchanged",
+  "status": "frozen for build-agent integration; no economic rule adopted",
+  "files": [
+    {
+      "path": "07-material-access-r8.md",
+      "bytes": 4402,
+      "sha256": "e61adef8c4841f78dac4f5238bd2cb0aeb860529ea9dbc64351feba84ea0ab19"
+    },
+    {
+      "path": "probes/resource-entry-r8.py",
+      "bytes": 9204,
+      "sha256": "16e420cb23bb6acb70440079e38ac326b0e35bec218aa668b4b7663a1328513f"
+    },
+    {
+      "path": "evidence/resource-entry-r8.json",
+      "bytes": 5316,
+      "sha256": "02d927737f2b375d9cf3132b8a767038ed804ce6239bdf6742082c55d165614e"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "recordedAtUtc": "2026-10-26T02:34:01.842041+00:00",
+  "suite": "browser",
+  "passed": true,
+  "actualModelCalls": 0,
+  "results": [
+    {
+      "name": "restore",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/restore.log",
+      "evidence": null
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/build.log",
+      "evidence": null
+    },
+    {
+      "name": "browser-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/browser-foundation.log",
+      "evidence": ".local/iter0001/browser/2026-10-26T02-34-03-271Z/results.json"
+    },
+    {
+      "name": "browser-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/browser-passage.log",
+      "evidence": ".local/iter0002/browser/2026-10-26T02-34-03-284Z/results.json"
+    },
+    {
+      "name": "browser-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/browser-resident.log",
+      "evidence": ".local/iter0003/browser/2026-10-26T02-34-03-269Z/results.json"
+    },
+    {
+      "name": "browser-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/browser-activities.log",
+      "evidence": ".local/iter0004/browser/2026-10-26T02-34-05-100Z/results.json"
+    },
+    {
+      "name": "browser-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/browser-postcards.log",
+      "evidence": ".local/iter0005/browser/2026-10-26T02-34-10-823Z/results.json"
+    },
+    {
+      "name": "browser-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/browser-mosaic.log",
+      "evidence": ".local/iter0006/browser/2026-10-26T02-34-12-026Z/results.json"
+    },
+    {
+      "name": "browser-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/browser-consent.log",
+      "evidence": ".local/iter0007/browser/2026-10-26T02-34-12-920Z/results.json"
+    },
+    {
+      "name": "browser-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/browser-inbox.log",
+      "evidence": ".local/iter0008/browser/2026-10-26T02-34-20-093Z/results.json"
+    },
+    {
+      "name": "browser-consent-experience",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/browser-consent-experience.log",
+      "evidence": ".local/consent-experience/browser/2026-10-26T02-34-23-489Z/results.json"
+    },
+    {
+      "name": "browser-entry",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/browser-entry.log",
+      "evidence": ".local/iter0009/browser/2026-10-26T02-34-28-116Z/results.json"
+    },
+    {
+      "name": "browser-wilderness",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/browser-wilderness.log",
+      "evidence": ".local/iter0010/browser/2026-10-26T02-34-32-718Z/results.json"
+    },
+    {
+      "name": "browser-wilderness-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/browser-wilderness-resident.log",
+      "evidence": ".local/iter0013/browser/2026-10-26T02-34-33-107Z/results.json"
+    },
+    {
+      "name": "browser-continuous-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T023401Z-33e3a6/browser-continuous-resident.log",
+      "evidence": ".local/iter0015/browser/2026-10-26T02-34-35-206Z/results.json"
+    }
+  ]
+}

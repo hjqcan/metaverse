@@ -1,0 +1,22 @@
+{
+  "recordedAtUtc": "2026-10-26T02:33:12.217373+00:00",
+  "kind": "read-only-existing-preview-observation",
+  "endpoint": "http://127.0.0.1:5089",
+  "httpStatus": 200,
+  "worldCommandsSent": 0,
+  "rulesVersion": "r8",
+  "stateVersion": 0,
+  "scenarioId": "wilderness-continuous-v1",
+  "worldInstanceIdPresent": false,
+  "commandBinding": null,
+  "resourceAudit": {
+    "issuedWood": 12,
+    "wildWood": 12,
+    "depotWood": 0,
+    "inventoryWood": 0,
+    "embodiedWood": 0,
+    "conserved": true
+  },
+  "residentCount": 2,
+  "entityCount": 0
+}

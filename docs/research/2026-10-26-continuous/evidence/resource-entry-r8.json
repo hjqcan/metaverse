@@ -1,0 +1,267 @@
+{
+  "recordedAtUtc": "2026-10-26T02:45:10.710465+00:00",
+  "kind": "actual-http-resource-entry-counterexample",
+  "scenario": "wilderness-continuous-v1",
+  "repositoryHeadAtRun": "b180c800b81fa426d4e0d63cbe00505543ad1214",
+  "assemblySha256": "1473453f8e35c7591b926926c7765bfbd239c1fcceaa356bebb9b65ada00d90f",
+  "sourceHashesAtStart": {
+    "scripts/continuous_navigation.py": "e158eff635fbaa0a67146b9ab00d6c3e48cb5f43a684335ffdca5216983db749",
+    "scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf"
+  },
+  "sourceFilesUnchangedDuringRun": true,
+  "actualModelCalls": 0,
+  "nativeClientExecuted": false,
+  "persistentMissionExecuted": false,
+  "protectedInstance": true,
+  "worldInstanceId": "w_a754e345b5bd41488380e1b80f101b7c",
+  "actualCommands": 121,
+  "gatheredWood": 12,
+  "aInventoryWoodAfterExhaustion": 6,
+  "bInventoryWoodAfterExhaustion": 0,
+  "resourceAudit": {
+    "issuedWood": 12,
+    "wildWood": 0,
+    "depotWood": 0,
+    "inventoryWood": 6,
+    "embodiedWood": 6,
+    "conserved": true
+  },
+  "bridgeReceipt": {
+    "schemaVersion": 1,
+    "rulesVersion": "r8",
+    "stateVersion": 35,
+    "commandId": "research_34c8e73a45024b528f17788218e799ac",
+    "identity": {
+      "operatorId": "local-operator",
+      "actorId": "a1",
+      "sessionId": "s19106d88cd1e4982a91427cfb1605c14"
+    },
+    "eventCursor": 36,
+    "error": null,
+    "status": "committed",
+    "result": {
+      "action": "build",
+      "entityId": "e6ca2c71d9ce648589e8474e3c6238bda",
+      "position": [
+        18,
+        12
+      ],
+      "inventoryWood": 0
+    }
+  },
+  "bPlatformRejected": {
+    "httpStatus": 422,
+    "code": "INSUFFICIENT_RESOURCE",
+    "stateUnchanged": true
+  },
+  "bPublicCrossing": {
+    "start": [
+      26,
+      17
+    ],
+    "westTarget": [
+      15.0,
+      12.0
+    ],
+    "end": [
+      26,
+      17
+    ],
+    "inventoryWood": 0,
+    "positions": [
+      [
+        26,
+        17
+      ],
+      [
+        25.512557329081393,
+        16.65014339713572
+      ],
+      [
+        25.025114658162785,
+        16.300286794271443
+      ],
+      [
+        24.537671987244178,
+        15.950430191407165
+      ],
+      [
+        24.05022931632557,
+        15.600573588542886
+      ],
+      [
+        23.562786645406963,
+        15.250716985678608
+      ],
+      [
+        23.075343974488355,
+        14.90086038281433
+      ],
+      [
+        22.587901303569748,
+        14.551003779950051
+      ],
+      [
+        22.10045863265114,
+        14.201147177085772
+      ],
+      [
+        21.613015961732533,
+        13.851290574221494
+      ],
+      [
+        21.125573290813925,
+        13.501433971357216
+      ],
+      [
+        20.638130619895318,
+        13.151577368492937
+      ],
+      [
+        20.15068794897671,
+        12.80172076562866
+      ],
+      [
+        19.730311215579178,
+        12.5
+      ],
+      [
+        19.13363521650803,
+        12.436930576881917
+      ],
+      [
+        18.53695921743688,
+        12.373861153763835
+      ],
+      [
+        17.94028321836573,
+        12.310791730645752
+      ],
+      [
+        17.343607219294583,
+        12.24772230752767
+      ],
+      [
+        16.746931220223434,
+        12.184652884409587
+      ],
+      [
+        16.150255221152285,
+        12.121583461291506
+      ],
+      [
+        15.553579222081138,
+        12.058514038173422
+      ],
+      [
+        15,
+        12
+      ],
+      [
+        15,
+        12
+      ],
+      [
+        15.596675999071147,
+        12.063069423118083
+      ],
+      [
+        16.193351998142294,
+        12.126138846236165
+      ],
+      [
+        16.790027997213443,
+        12.189208269354246
+      ],
+      [
+        17.38670399628459,
+        12.25227769247233
+      ],
+      [
+        17.98337999535574,
+        12.315347115590413
+      ],
+      [
+        18.58005599442689,
+        12.378416538708494
+      ],
+      [
+        19.176731993498038,
+        12.441485961826578
+      ],
+      [
+        19.730311215579178,
+        12.5
+      ],
+      [
+        20.217753886497785,
+        12.849856602864278
+      ],
+      [
+        20.705196557416393,
+        13.199713205728557
+      ],
+      [
+        21.192639228335,
+        13.549569808592835
+      ],
+      [
+        21.680081899253608,
+        13.899426411457114
+      ],
+      [
+        22.167524570172215,
+        14.249283014321392
+      ],
+      [
+        22.654967241090823,
+        14.59913961718567
+      ],
+      [
+        23.14240991200943,
+        14.948996220049949
+      ],
+      [
+        23.629852582928038,
+        15.298852822914228
+      ],
+      [
+        24.117295253846645,
+        15.648709425778506
+      ],
+      [
+        24.604737924765253,
+        15.998566028642784
+      ],
+      [
+        25.09218059568386,
+        16.348422631507063
+      ],
+      [
+        25.579623266602468,
+        16.69827923437134
+      ],
+      [
+        26,
+        17
+      ]
+    ],
+    "verified": true
+  },
+  "restartObservationUnchanged": true,
+  "counterexampleConfirmed": true,
+  "stoppedDatabaseAudit": {
+    "worldVersion": 120,
+    "wildWood": 0,
+    "inventoryByActor": {
+      "a1": 6,
+      "a2": 0
+    },
+    "entityMaterial": 6,
+    "entities": 1,
+    "gatherEvents": 12,
+    "integrity": "ok",
+    "foreignKeyErrors": 0
+  },
+  "allExperimentProcessesStopped": true
+}

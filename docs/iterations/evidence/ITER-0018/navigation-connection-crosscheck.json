@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "name": "first world starts at version zero",
+      "passed": true
+    },
+    {
+      "name": "old world has an active obstacle route",
+      "passed": true
+    },
+    {
+      "name": "one old-world step committed while route stays active",
+      "passed": true
+    },
+    {
+      "name": "replacement keeps actor and version",
+      "passed": true
+    },
+    {
+      "name": "replacement is a distinct persistent world",
+      "passed": true
+    },
+    {
+      "name": "connection generation invalidates old active route",
+      "passed": true
+    },
+    {
+      "name": "replacement clears route visuals",
+      "passed": true
+    },
+    {
+      "name": "same-version connection updates rendered authoritative position",
+      "passed": true
+    },
+    {
+      "name": "replacement receives no command from old route",
+      "passed": true
+    },
+    {
+      "name": "HTTP read active before queued click",
+      "passed": true
+    },
+    {
+      "name": "explicit reconnect returns to original world",
+      "passed": true
+    },
+    {
+      "name": "connection switch invalidates click waiting on HTTP",
+      "passed": true
+    },
+    {
+      "name": "return receives no stale queued command",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "scope": "headless runtime integration check, not rendered UI acceptance",
+  "sourceSha256": {
+    "clients/godot/main.gd": "bb5dc7bf36feea0fca2838ca832629a82fa5331e081e41de3d2bddc8050d3e8f",
+    "clients/godot/world_client.gd": "49e0ce433907ea3a8ec72788ef32719694c467916d7e8ba24217766a153b6f0a",
+    "clients/godot/pending_store.gd": "6746519f4ce68d863c30ddcc7db2ecc504d179516104b633755df44704669708",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "c05f772506740cd19d1ba4a23d150422b123037c42f560d17315f53b86d57490"
+  },
+  "databaseAudit": [
+    {
+      "world": "first",
+      "stateVersion": 1,
+      "receipts": 1,
+      "actorPosition": [
+        5.2,
+        7.0
+      ],
+      "inventory": 0
+    },
+    {
+      "world": "second",
+      "stateVersion": 1,
+      "receipts": 1,
+      "actorPosition": [
+        5.0,
+        6.8
+      ],
+      "inventory": 0
+    }
+  ],
+  "allSelfStartedServicesStopped": true,
+  "actualModelCalls": 0
+}

@@ -1,0 +1,54 @@
+{
+  "recordedAtUtc": "2026-10-26T02:15:49.781842+00:00",
+  "baseCommit": "0639ef331a1bfd44de0712a45daf8ca59c6d5692",
+  "kind": "research-counterexample",
+  "actualModelCalls": 0,
+  "assemblySha256": "fc3e4118740106a009a51c11b84aac5c4635073b9734e2db45a506258d926d65",
+  "condition": "fresh database later served at the same endpoint; explicitly authenticated with its own new token",
+  "scope": "actual HTTP proof plus existing Godot key derivation; not a native client execution",
+  "sameUrl": true,
+  "sameWorldId": true,
+  "sameActorId": true,
+  "sameRulesVersion": true,
+  "sameInitialStateVersion": true,
+  "differentSessionId": true,
+  "godotJournalKeyCollides": true,
+  "originalRequest": {
+    "schemaVersion": 1,
+    "rulesVersion": "r7",
+    "commandId": "old_pending_cd9b0c3e8baa48839665762028d5d663",
+    "expectedStateVersion": 0,
+    "action": {
+      "type": "gather",
+      "nodeId": "tree-west-north"
+    }
+  },
+  "lookupStatus": 404,
+  "lookupError": "COMMAND_NOT_FOUND",
+  "replayStatus": 200,
+  "replayResult": {
+    "action": "gather",
+    "nodeId": "tree-west-north",
+    "quantity": 1,
+    "position": [
+      0,
+      1
+    ],
+    "remainingWood": 2,
+    "inventoryWood": 1
+  },
+  "newWorldStateVersion": 1,
+  "newWorldInventoryWood": 1,
+  "counterexampleConfirmed": true,
+  "stoppedDatabaseInventory": {
+    "original-world": {
+      "a1": 0,
+      "a2": 0
+    },
+    "fresh-world": {
+      "a1": 1,
+      "a2": 0
+    }
+  },
+  "allExperimentProcessesStopped": true
+}

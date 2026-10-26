@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "display": {
+    "after": {
+      "busy": false,
+      "canAct": true,
+      "foreignPending": 0,
+      "healthy": true,
+      "statusText": "WASD 行走 · 点击地面前往 · 滚轮缩放 · Esc 取消"
+    },
+    "before": {
+      "busy": false,
+      "canAct": true,
+      "foreignPending": 1,
+      "healthy": true,
+      "statusText": "已进入荒野。走到树旁，采集木材，再搭建。 另一个世界的未确认动作已保留。"
+    }
+  },
+  "originalReceipt": {
+    "commandId": "godot_67a1ec6221a08fa9852033bea14fb244",
+    "error": null,
+    "eventCursor": 2,
+    "identity": {
+      "actorId": "a1",
+      "operatorId": "local-operator",
+      "sessionId": "s6ba0374df0c242b68c3dbb4186a25f07"
+    },
+    "result": {
+      "action": "gather",
+      "inventoryWood": 1,
+      "nodeId": "tree-west-north",
+      "position": [
+        6.2,
+        7.8
+      ],
+      "quantity": 1,
+      "remainingWood": 2
+    },
+    "rulesVersion": "r8",
+    "schemaVersion": 1,
+    "stateVersion": 1,
+    "status": "committed"
+  },
+  "postCount": 1,
+  "replacementStateVersion": 0,
+  "sourceBefore": {
+    "clients/godot/main.gd": "bb5dc7bf36feea0fca2838ca832629a82fa5331e081e41de3d2bddc8050d3e8f",
+    "clients/godot/world_client.gd": "49e0ce433907ea3a8ec72788ef32719694c467916d7e8ba24217766a153b6f0a",
+    "clients/godot/pending_store.gd": "6746519f4ce68d863c30ddcc7db2ecc504d179516104b633755df44704669708"
+  },
+  "sourceAfter": {
+    "clients/godot/main.gd": "bb5dc7bf36feea0fca2838ca832629a82fa5331e081e41de3d2bddc8050d3e8f",
+    "clients/godot/world_client.gd": "49e0ce433907ea3a8ec72788ef32719694c467916d7e8ba24217766a153b6f0a",
+    "clients/godot/pending_store.gd": "6746519f4ce68d863c30ddcc7db2ecc504d179516104b633755df44704669708"
+  },
+  "externalModelCalls": 0,
+  "sourceStable": true
+}

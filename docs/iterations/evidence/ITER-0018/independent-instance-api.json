@@ -1,0 +1,1061 @@
+{
+  "passed": true,
+  "sourceBefore": {
+    "src/World.Server/WorldInstance.cs": "f865654d13b63ac9659fa119353b5e32b303484eab49215bb7796a49a5b3fd1b",
+    "src/World.Server/WorldDatabase.cs": "3ac22bb981acb9972d8f0615be43c09b5c018e6f9fc62023826ed537090c2b97",
+    "src/World.Server/WorldService.cs": "0d6c2753978dfa82f57f0f8f4bffbff5baa04c96df78d89232f7ba81bf716d21",
+    "src/World.Server/Program.cs": "c05155aca119a7b059cee7665efb881a2c9c88c9172232af9ba69ee6d1848074",
+    "src/World.Server/Protocol.cs": "51f21e65b48224f2c3488ecf6fc83c52e1ebd6813ffac8f375f739d45c6d26ad",
+    "src/World.Server/ContinuousWorld.cs": "f179f61fe2e6331068e68567857a91a7bd194199cd39e9c6a76539cfe35b1b17"
+  },
+  "serverDllSha256": "bb9beb65ada000eb4f40f90766499ad5237b71e22153cbd7ef6fa828a2ff3b86",
+  "transport": "http.client raw requests; no implicit instance header",
+  "externalModelCalls": 0,
+  "checks": [
+    {
+      "name": "unique immutable identities and unchanged restart observation",
+      "passed": true,
+      "firstInstanceId": "w_2823f48ad3bf4f9eb76db76af3c1ccc3",
+      "secondInstanceId": "w_cfa73ab4860f4b2296fc134e39e4762b",
+      "legacyRules": "r7"
+    },
+    {
+      "name": "missing command",
+      "passed": true,
+      "reply": {
+        "status": 428,
+        "headers": [
+          [
+            "Content-Length",
+            "411"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "WORLD_INSTANCE_REQUIRED",
+            "message": "此世界要求实例绑定，请使用支持它的客户端",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"WORLD_INSTANCE_REQUIRED\",\"message\":\"\\u6B64\\u4E16\\u754C\\u8981\\u6C42\\u5B9E\\u4F8B\\u7ED1\\u5B9A\\uFF0C\\u8BF7\\u4F7F\\u7528\\u652F\\u6301\\u5B83\\u7684\\u5BA2\\u6237\\u7AEF\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "different command",
+      "passed": true,
+      "reply": {
+        "status": 412,
+        "headers": [
+          [
+            "Content-Length",
+            "423"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "WORLD_INSTANCE_MISMATCH",
+            "message": "连接已指向另一个世界，原动作仍须在原世界确认",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"WORLD_INSTANCE_MISMATCH\",\"message\":\"\\u8FDE\\u63A5\\u5DF2\\u6307\\u5411\\u53E6\\u4E00\\u4E2A\\u4E16\\u754C\\uFF0C\\u539F\\u52A8\\u4F5C\\u4ECD\\u987B\\u5728\\u539F\\u4E16\\u754C\\u786E\\u8BA4\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "malformed command",
+      "passed": true,
+      "reply": {
+        "status": 400,
+        "headers": [
+          [
+            "Content-Length",
+            "383"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "INVALID_WORLD_INSTANCE",
+            "message": "世界实例头必须是唯一有效的实例 ID",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_WORLD_INSTANCE\",\"message\":\"\\u4E16\\u754C\\u5B9E\\u4F8B\\u5934\\u5FC5\\u987B\\u662F\\u552F\\u4E00\\u6709\\u6548\\u7684\\u5B9E\\u4F8B ID\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "duplicate command",
+      "passed": true,
+      "reply": {
+        "status": 400,
+        "headers": [
+          [
+            "Content-Length",
+            "383"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "INVALID_WORLD_INSTANCE",
+            "message": "世界实例头必须是唯一有效的实例 ID",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_WORLD_INSTANCE\",\"message\":\"\\u4E16\\u754C\\u5B9E\\u4F8B\\u5934\\u5FC5\\u987B\\u662F\\u552F\\u4E00\\u6709\\u6548\\u7684\\u5B9E\\u4F8B ID\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "missing receipt",
+      "passed": true,
+      "reply": {
+        "status": 428,
+        "headers": [
+          [
+            "Content-Length",
+            "411"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "WORLD_INSTANCE_REQUIRED",
+            "message": "此世界要求实例绑定，请使用支持它的客户端",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"WORLD_INSTANCE_REQUIRED\",\"message\":\"\\u6B64\\u4E16\\u754C\\u8981\\u6C42\\u5B9E\\u4F8B\\u7ED1\\u5B9A\\uFF0C\\u8BF7\\u4F7F\\u7528\\u652F\\u6301\\u5B83\\u7684\\u5BA2\\u6237\\u7AEF\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "different receipt",
+      "passed": true,
+      "reply": {
+        "status": 412,
+        "headers": [
+          [
+            "Content-Length",
+            "423"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "WORLD_INSTANCE_MISMATCH",
+            "message": "连接已指向另一个世界，原动作仍须在原世界确认",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"WORLD_INSTANCE_MISMATCH\",\"message\":\"\\u8FDE\\u63A5\\u5DF2\\u6307\\u5411\\u53E6\\u4E00\\u4E2A\\u4E16\\u754C\\uFF0C\\u539F\\u52A8\\u4F5C\\u4ECD\\u987B\\u5728\\u539F\\u4E16\\u754C\\u786E\\u8BA4\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "malformed receipt",
+      "passed": true,
+      "reply": {
+        "status": 400,
+        "headers": [
+          [
+            "Content-Length",
+            "383"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "INVALID_WORLD_INSTANCE",
+            "message": "世界实例头必须是唯一有效的实例 ID",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_WORLD_INSTANCE\",\"message\":\"\\u4E16\\u754C\\u5B9E\\u4F8B\\u5934\\u5FC5\\u987B\\u662F\\u552F\\u4E00\\u6709\\u6548\\u7684\\u5B9E\\u4F8B ID\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "duplicate receipt",
+      "passed": true,
+      "reply": {
+        "status": 400,
+        "headers": [
+          [
+            "Content-Length",
+            "383"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "INVALID_WORLD_INSTANCE",
+            "message": "世界实例头必须是唯一有效的实例 ID",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_WORLD_INSTANCE\",\"message\":\"\\u4E16\\u754C\\u5B9E\\u4F8B\\u5934\\u5FC5\\u987B\\u662F\\u552F\\u4E00\\u6709\\u6548\\u7684\\u5B9E\\u4F8B ID\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "missing revoke",
+      "passed": true,
+      "reply": {
+        "status": 428,
+        "headers": [
+          [
+            "Content-Length",
+            "411"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "WORLD_INSTANCE_REQUIRED",
+            "message": "此世界要求实例绑定，请使用支持它的客户端",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"WORLD_INSTANCE_REQUIRED\",\"message\":\"\\u6B64\\u4E16\\u754C\\u8981\\u6C42\\u5B9E\\u4F8B\\u7ED1\\u5B9A\\uFF0C\\u8BF7\\u4F7F\\u7528\\u652F\\u6301\\u5B83\\u7684\\u5BA2\\u6237\\u7AEF\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "different revoke",
+      "passed": true,
+      "reply": {
+        "status": 412,
+        "headers": [
+          [
+            "Content-Length",
+            "423"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "WORLD_INSTANCE_MISMATCH",
+            "message": "连接已指向另一个世界，原动作仍须在原世界确认",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"WORLD_INSTANCE_MISMATCH\",\"message\":\"\\u8FDE\\u63A5\\u5DF2\\u6307\\u5411\\u53E6\\u4E00\\u4E2A\\u4E16\\u754C\\uFF0C\\u539F\\u52A8\\u4F5C\\u4ECD\\u987B\\u5728\\u539F\\u4E16\\u754C\\u786E\\u8BA4\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "malformed revoke",
+      "passed": true,
+      "reply": {
+        "status": 400,
+        "headers": [
+          [
+            "Content-Length",
+            "383"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "INVALID_WORLD_INSTANCE",
+            "message": "世界实例头必须是唯一有效的实例 ID",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_WORLD_INSTANCE\",\"message\":\"\\u4E16\\u754C\\u5B9E\\u4F8B\\u5934\\u5FC5\\u987B\\u662F\\u552F\\u4E00\\u6709\\u6548\\u7684\\u5B9E\\u4F8B ID\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "duplicate revoke",
+      "passed": true,
+      "reply": {
+        "status": 400,
+        "headers": [
+          [
+            "Content-Length",
+            "383"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "INVALID_WORLD_INSTANCE",
+            "message": "世界实例头必须是唯一有效的实例 ID",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_WORLD_INSTANCE\",\"message\":\"\\u4E16\\u754C\\u5B9E\\u4F8B\\u5934\\u5FC5\\u987B\\u662F\\u552F\\u4E00\\u6709\\u6548\\u7684\\u5B9E\\u4F8B ID\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "optional read still checks binding /v1/worlds/foundation-01/observation",
+      "passed": true,
+      "reply": {
+        "status": 412,
+        "headers": [
+          [
+            "Content-Length",
+            "423"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "WORLD_INSTANCE_MISMATCH",
+            "message": "连接已指向另一个世界，原动作仍须在原世界确认",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"WORLD_INSTANCE_MISMATCH\",\"message\":\"\\u8FDE\\u63A5\\u5DF2\\u6307\\u5411\\u53E6\\u4E00\\u4E2A\\u4E16\\u754C\\uFF0C\\u539F\\u52A8\\u4F5C\\u4ECD\\u987B\\u5728\\u539F\\u4E16\\u754C\\u786E\\u8BA4\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "optional read still checks binding /v1/worlds/foundation-01/events?after=0",
+      "passed": true,
+      "reply": {
+        "status": 412,
+        "headers": [
+          [
+            "Content-Length",
+            "423"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "WORLD_INSTANCE_MISMATCH",
+            "message": "连接已指向另一个世界，原动作仍须在原世界确认",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"WORLD_INSTANCE_MISMATCH\",\"message\":\"\\u8FDE\\u63A5\\u5DF2\\u6307\\u5411\\u53E6\\u4E00\\u4E2A\\u4E16\\u754C\\uFF0C\\u539F\\u52A8\\u4F5C\\u4ECD\\u987B\\u5728\\u539F\\u4E16\\u754C\\u786E\\u8BA4\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "authentication precedes malformed binding",
+      "passed": true,
+      "reply": {
+        "status": 401,
+        "headers": [
+          [
+            "Content-Length",
+            "262"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "WWW-Authenticate",
+            "Bearer"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": null,
+          "eventCursor": null,
+          "error": {
+            "code": "UNAUTHORIZED",
+            "message": "会话无效、已过期或已撤销",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":null,\"eventCursor\":null,\"error\":{\"code\":\"UNAUTHORIZED\",\"message\":\"\\u4F1A\\u8BDD\\u65E0\\u6548\\u3001\\u5DF2\\u8FC7\\u671F\\u6216\\u5DF2\\u64A4\\u9500\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "observation A followed by request to B",
+      "passed": true,
+      "reply": {
+        "status": 412,
+        "headers": [
+          [
+            "Content-Length",
+            "423"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:01 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_cfa73ab4860f4b2296fc134e39e4762b"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "sbc7dba8ccad94f9ba48e1592f67fa1ef"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "WORLD_INSTANCE_MISMATCH",
+            "message": "连接已指向另一个世界，原动作仍须在原世界确认",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"sbc7dba8ccad94f9ba48e1592f67fa1ef\"},\"eventCursor\":null,\"error\":{\"code\":\"WORLD_INSTANCE_MISMATCH\",\"message\":\"\\u8FDE\\u63A5\\u5DF2\\u6307\\u5411\\u53E6\\u4E00\\u4E2A\\u4E16\\u754C\\uFF0C\\u539F\\u52A8\\u4F5C\\u4ECD\\u987B\\u5728\\u539F\\u4E16\\u754C\\u786E\\u8BA4\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "protected client cannot downgrade to legacy",
+      "passed": true,
+      "reply": {
+        "status": 428,
+        "headers": [
+          [
+            "Content-Length",
+            "366"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r7",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s2c98423cc09a40b29fa8bb35951969fa"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "WORLD_INSTANCE_UNAVAILABLE",
+            "message": "当前世界没有实例绑定能力",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r7\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s2c98423cc09a40b29fa8bb35951969fa\"},\"eventCursor\":null,\"error\":{\"code\":\"WORLD_INSTANCE_UNAVAILABLE\",\"message\":\"\\u5F53\\u524D\\u4E16\\u754C\\u6CA1\\u6709\\u5B9E\\u4F8B\\u7ED1\\u5B9A\\u80FD\\u529B\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "binding precedes existing receipt lookup",
+      "passed": true,
+      "reply": {
+        "status": 412,
+        "headers": [
+          [
+            "Content-Length",
+            "423"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "WORLD_INSTANCE_MISMATCH",
+            "message": "连接已指向另一个世界，原动作仍须在原世界确认",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"WORLD_INSTANCE_MISMATCH\",\"message\":\"\\u8FDE\\u63A5\\u5DF2\\u6307\\u5411\\u53E6\\u4E00\\u4E2A\\u4E16\\u754C\\uFF0C\\u539F\\u52A8\\u4F5C\\u4ECD\\u987B\\u5728\\u539F\\u4E16\\u754C\\u786E\\u8BA4\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "binding precedes original command replay",
+      "passed": true,
+      "reply": {
+        "status": 412,
+        "headers": [
+          [
+            "Content-Length",
+            "423"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "WORLD_INSTANCE_MISMATCH",
+            "message": "连接已指向另一个世界，原动作仍须在原世界确认",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"WORLD_INSTANCE_MISMATCH\",\"message\":\"\\u8FDE\\u63A5\\u5DF2\\u6307\\u5411\\u53E6\\u4E00\\u4E2A\\u4E16\\u754C\\uFF0C\\u539F\\u52A8\\u4F5C\\u4ECD\\u987B\\u5728\\u539F\\u4E16\\u754C\\u786E\\u8BA4\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "binding precedes idempotency conflict",
+      "passed": true,
+      "reply": {
+        "status": 412,
+        "headers": [
+          [
+            "Content-Length",
+            "423"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": null,
+          "commandId": null,
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": null,
+          "error": {
+            "code": "WORLD_INSTANCE_MISMATCH",
+            "message": "连接已指向另一个世界，原动作仍须在原世界确认",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":null,\"error\":{\"code\":\"WORLD_INSTANCE_MISMATCH\",\"message\":\"\\u8FDE\\u63A5\\u5DF2\\u6307\\u5411\\u53E6\\u4E00\\u4E2A\\u4E16\\u754C\\uFF0C\\u539F\\u52A8\\u4F5C\\u4ECD\\u987B\\u5728\\u539F\\u4E16\\u754C\\u786E\\u8BA4\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "allDatabaseTablesUnchanged": true
+    },
+    {
+      "name": "same database new URL and renewed session preserves byte-exact original receipt",
+      "passed": true,
+      "receipt": {
+        "status": 200,
+        "headers": [
+          [
+            "Content-Length",
+            "365"
+          ],
+          [
+            "Content-Type",
+            "application/json; charset=utf-8"
+          ],
+          [
+            "Date",
+            "Mon, 26 Oct 2026 02:30:02 GMT"
+          ],
+          [
+            "Cache-Control",
+            "no-store"
+          ],
+          [
+            "World-Instance-Id",
+            "w_2823f48ad3bf4f9eb76db76af3c1ccc3"
+          ]
+        ],
+        "body": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 1,
+          "commandId": "raw-original",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "s42b2645a2e0c45b1ae141034173acfb0"
+          },
+          "eventCursor": 2,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "gather",
+            "nodeId": "tree-west-north",
+            "quantity": 1,
+            "position": [
+              6.2,
+              7.8
+            ],
+            "remainingWood": 2,
+            "inventoryWood": 1
+          }
+        },
+        "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":1,\"commandId\":\"raw-original\",\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s42b2645a2e0c45b1ae141034173acfb0\"},\"eventCursor\":2,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"gather\",\"nodeId\":\"tree-west-north\",\"quantity\":1,\"position\":[6.2,7.8],\"remainingWood\":2,\"inventoryWood\":1}}"
+      },
+      "currentSessionDiffersFromReceipt": true,
+      "postReplayWood": 1
+    }
+  ],
+  "sourceAfter": {
+    "src/World.Server/WorldInstance.cs": "f865654d13b63ac9659fa119353b5e32b303484eab49215bb7796a49a5b3fd1b",
+    "src/World.Server/WorldDatabase.cs": "3ac22bb981acb9972d8f0615be43c09b5c018e6f9fc62023826ed537090c2b97",
+    "src/World.Server/WorldService.cs": "0d6c2753978dfa82f57f0f8f4bffbff5baa04c96df78d89232f7ba81bf716d21",
+    "src/World.Server/Program.cs": "c05155aca119a7b059cee7665efb881a2c9c88c9172232af9ba69ee6d1848074",
+    "src/World.Server/Protocol.cs": "51f21e65b48224f2c3488ecf6fc83c52e1ebd6813ffac8f375f739d45c6d26ad",
+    "src/World.Server/ContinuousWorld.cs": "f179f61fe2e6331068e68567857a91a7bd194199cd39e9c6a76539cfe35b1b17"
+  },
+  "sourceStable": true
+}

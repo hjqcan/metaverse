@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "kind": "frozen-research-batch",
+  "recordedAtUtc": "2026-10-26T02:41:03.953845+00:00",
+  "integrationHeadAtFreeze": "e25814d286df7440e4131016f3d572fc60dbdbf1",
+  "scope": "00-06 research documents, five probes and six credential-free result files; future files are outside this batch",
+  "status": "frozen for build-agent integration; candidate economic parameters remain unadopted",
+  "files": [
+    {
+      "path": "00-baseline.md",
+      "bytes": 11932,
+      "sha256": "0d9ef4fa2c11b67927b9a012f021c8fb958507e3ece51ecfbf4f338afaf7ea3c"
+    },
+    {
+      "path": "01-material-access.md",
+      "bytes": 8184,
+      "sha256": "270020c5484c1ca074946d7170f753ee9932173a850706c4c4224a9299537e8c"
+    },
+    {
+      "path": "02-world-instance-binding.md",
+      "bytes": 5815,
+      "sha256": "2efc1e4e9613022ecd25385916b474f4e4faa8c48282a9225aec8bf1ab194dd5"
+    },
+    {
+      "path": "03-instance-binding-contract.md",
+      "bytes": 14060,
+      "sha256": "21453a06ac25e58bbb02c012a53ea180a877b9a450a6aaa432d599a3b7aaa624"
+    },
+    {
+      "path": "04-movement-contention.md",
+      "bytes": 3008,
+      "sha256": "436bc29075bfb04bf9e4c37896926d484a431787e645e3eafc43211687fd2ff9"
+    },
+    {
+      "path": "05-bounded-resource-reservations.md",
+      "bytes": 8676,
+      "sha256": "618b899a5d52646be60b5232c25dcf9b7b03b1274355837b9f9d2e0bf406a2f5"
+    },
+    {
+      "path": "06-movement-storage-and-receipts.md",
+      "bytes": 3775,
+      "sha256": "12beee891bcaaff7f072077e2e07385a0db2e5787f44171ff9627d5fddb4f8e7"
+    },
+    {
+      "path": "evidence/material-policies.json",
+      "bytes": 49450,
+      "sha256": "3196ef27cd0a2938fdb71a167ea6c897bb8fcd95a6e239fece595bdb0c5e2340"
+    },
+    {
+      "path": "evidence/movement-contention-r8.json",
+      "bytes": 2066,
+      "sha256": "1bf80b0a66c2f3676cf25ab1fe19f1031b962909ce2bcdf4c40a1f10a1c792dd"
+    },
+    {
+      "path": "evidence/movement-storage-r8.json",
+      "bytes": 1267,
+      "sha256": "b4dddee5bfb9af8e937d420b8fbaa743246c36e7a8eb2f2a0cb2baff923b314c"
+    },
+    {
+      "path": "evidence/preview-observation.json",
+      "bytes": 545,
+      "sha256": "44337012b9379fc65861fa8c2915773b068d791472a0809b5fae0e2b90d261cd"
+    },
+    {
+      "path": "evidence/resource-entry-r7.json",
+      "bytes": 8913,
+      "sha256": "10fb5c8258bb85a07a724c3f2d6ffaa1895c9fe0a48dee0a9ffb4341f9788056"
+    },
+    {
+      "path": "evidence/world-binding-r7.json",
+      "bytes": 1491,
+      "sha256": "4d45b131185024a9cd5547514a0e6ee5de6ffc383f872f1807792ca1f7ef23ee"
+    },
+    {
+      "path": "probes/material-policies.py",
+      "bytes": 6332,
+      "sha256": "a11c021f6f5066008cafb650eb8c48c20c0618321267353e9e09cf7b0e77f13a"
+    },
+    {
+      "path": "probes/movement-contention.py",
+      "bytes": 6173,
+      "sha256": "ecbb01235629e13e42c538b9af286f4ef40d076f42e006ee5045ff187cdff703"
+    },
+    {
+      "path": "probes/movement-storage.py",
+      "bytes": 4816,
+      "sha256": "569270e5c7e8ec3bff5dc7f8935448e300de49f8ddd468e0715eb74001908c42"
+    },
+    {
+      "path": "probes/resource-entry.py",
+      "bytes": 9177,
+      "sha256": "5475772babcf161b4b939e0895554a9a098f24ee069daa9b2e70202a9767e4fb"
+    },
+    {
+      "path": "probes/world-binding.py",
+      "bytes": 4792,
+      "sha256": "2432cf3a4f52ce95a6bb9fe88d59a13de5ce826b8cc7b29652e1929353f1f878"
+    }
+  ]
+}

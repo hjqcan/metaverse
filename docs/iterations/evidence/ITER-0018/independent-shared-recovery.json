@@ -1,0 +1,171 @@
+{
+  "testerChangedProductSource": false,
+  "externalModelCalls": 0,
+  "sourceHashes": {
+    "clients/godot/main.gd": "ab497bc0391e05ee5e2cdc227513b3abd6f0814d9a98ec4ff7d078da7c5a33e4",
+    "clients/godot/world_client.gd": "aa3c0a287806927b8a09e2a16f6e87b6642ddbff65e6be755b4bd7a1336db513",
+    "clients/godot/pending_store.gd": "6746519f4ce68d863c30ddcc7db2ecc504d179516104b633755df44704669708"
+  },
+  "endpointSwitch": {
+    "authenticated": true,
+    "beforePosition": [
+      5.25,
+      7.0
+    ],
+    "beforeVersion": 1,
+    "expected": "rendered position equals current server position after switching endpoint",
+    "inventoryLabel": "居民 a1   ·   木材 0",
+    "mode": "switch",
+    "passed": true,
+    "renderedPosition": [
+      5.0,
+      6.75
+    ],
+    "serverPosition": [
+      5,
+      6.75
+    ],
+    "serverVersion": 1,
+    "targetPosition": [
+      5.0,
+      6.75
+    ]
+  },
+  "sharedJournal": {
+    "expected": "second client preserves first actor unresolved command in shared recovery file",
+    "pendingBefore": {
+      "actorId": "a1",
+      "body": "{\"action\":{\"nodeId\":\"tree-west-north\",\"type\":\"gather\"},\"commandId\":\"godot_000fc403caf527ae09ceba0c3f2b141d\",\"expectedStateVersion\":0,\"rulesVersion\":\"r8\",\"schemaVersion\":1}",
+      "commandId": "godot_000fc403caf527ae09ceba0c3f2b141d",
+      "endpoint": "http://127.0.0.1:39923",
+      "instanceId": "w_de0412fab58242ea9512be3960dfeb23",
+      "recordVersion": 2,
+      "worldId": "foundation-01"
+    },
+    "journalAfter": {
+      "godot_000fc403caf527ae09ceba0c3f2b141d": {
+        "actorId": "a1",
+        "body": "{\"action\":{\"nodeId\":\"tree-west-north\",\"type\":\"gather\"},\"commandId\":\"godot_000fc403caf527ae09ceba0c3f2b141d\",\"expectedStateVersion\":0,\"rulesVersion\":\"r8\",\"schemaVersion\":1}",
+        "commandId": "godot_000fc403caf527ae09ceba0c3f2b141d",
+        "endpoint": "http://127.0.0.1:39923",
+        "instanceId": "w_de0412fab58242ea9512be3960dfeb23",
+        "recordVersion": 2,
+        "worldId": "foundation-01"
+      }
+    },
+    "afterRestart": {
+      "canAct": true,
+      "healthy": true,
+      "inventory": {
+        "wood": 1
+      },
+      "journalSize": 0,
+      "lastReceipt": {
+        "commandId": "godot_000fc403caf527ae09ceba0c3f2b141d",
+        "error": null,
+        "eventCursor": 2,
+        "identity": {
+          "actorId": "a1",
+          "operatorId": "local-operator",
+          "sessionId": "s75a545e0434c4fd282aca54305a53098"
+        },
+        "result": {
+          "action": "gather",
+          "inventoryWood": 1,
+          "nodeId": "tree-west-north",
+          "position": [
+            6.2,
+            7.8
+          ],
+          "quantity": 1,
+          "remainingWood": 2
+        },
+        "rulesVersion": "r8",
+        "schemaVersion": 1,
+        "stateVersion": 1,
+        "status": "committed"
+      },
+      "mode": "journal-restart",
+      "pending": {}
+    },
+    "originalReceiptStatus": 200,
+    "originalReceipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r8",
+      "stateVersion": 1,
+      "commandId": "godot_000fc403caf527ae09ceba0c3f2b141d",
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1",
+        "sessionId": "s75a545e0434c4fd282aca54305a53098"
+      },
+      "eventCursor": 2,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "gather",
+        "nodeId": "tree-west-north",
+        "quantity": 1,
+        "position": [
+          6.2,
+          7.8
+        ],
+        "remainingWood": 2,
+        "inventoryWood": 1
+      }
+    },
+    "requestCount": 2,
+    "passed": true
+  },
+  "legacyRecovery": {
+    "first": {
+      "canAct": true,
+      "healthy": true,
+      "inventory": {
+        "wood": 1
+      },
+      "journalSize": 0,
+      "lastReceipt": {
+        "commandId": "godot_000fc403caf527ae09ceba0c3f2b141d",
+        "error": null,
+        "eventCursor": 2,
+        "identity": {
+          "actorId": "a1",
+          "operatorId": "local-operator",
+          "sessionId": "s75a545e0434c4fd282aca54305a53098"
+        },
+        "result": {
+          "action": "gather",
+          "inventoryWood": 1,
+          "nodeId": "tree-west-north",
+          "position": [
+            6.2,
+            7.8
+          ],
+          "quantity": 1,
+          "remainingWood": 2
+        },
+        "rulesVersion": "r8",
+        "schemaVersion": 1,
+        "stateVersion": 1,
+        "status": "committed"
+      },
+      "mode": "legacy-first",
+      "pending": {}
+    },
+    "second": {
+      "canAct": true,
+      "healthy": true,
+      "inventory": {
+        "wood": 1
+      },
+      "journalSize": 0,
+      "lastReceipt": {},
+      "mode": "legacy-second",
+      "pending": {}
+    },
+    "aggregateUnchanged": true,
+    "requestCount": 2,
+    "passed": true
+  }
+}

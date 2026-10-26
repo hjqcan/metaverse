@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "legacy",
+      "passed": true,
+      "result": {
+        "canAct": false,
+        "clientMessage": "旧动作尚不能确认属于这个世界。记录已保留，先回原世界确认。",
+        "foreignPending": 0,
+        "healthy": true,
+        "legacyUnbound": true,
+        "pending": {},
+        "queryVisible": false,
+        "retryDisabled": false,
+        "retryVisible": false,
+        "statusText": "旧动作尚不能确认属于这个世界。记录已保留，先回原世界确认。",
+        "storageOk": true,
+        "targetText": "树木就在身旁，按 E 采集木材。"
+      }
+    },
+    {
+      "name": "corrupt",
+      "passed": true,
+      "result": {
+        "canAct": false,
+        "clientMessage": "恢复记录损坏或无法读取。原文件已保留，请修复后重启客户端。",
+        "foreignPending": 0,
+        "healthy": true,
+        "legacyUnbound": false,
+        "pending": {},
+        "queryVisible": false,
+        "retryDisabled": false,
+        "retryVisible": false,
+        "statusText": "恢复记录损坏或无法读取。原文件已保留，请修复后重启客户端。",
+        "storageOk": false,
+        "targetText": "树木就在身旁，按 E 采集木材。"
+      }
+    },
+    {
+      "name": "foreign",
+      "passed": true,
+      "result": {
+        "canAct": true,
+        "clientMessage": "已进入荒野。走到树旁，采集木材，再搭建。 另一个世界的未确认动作已保留。",
+        "foreignPending": 1,
+        "healthy": true,
+        "legacyUnbound": false,
+        "pending": {},
+        "queryVisible": false,
+        "retryDisabled": false,
+        "retryVisible": false,
+        "statusText": "已进入荒野。走到树旁，采集木材，再搭建。 另一个世界的未确认动作已保留。",
+        "storageOk": true,
+        "targetText": "树木就在身旁，按 E 采集木材。"
+      }
+    },
+    {
+      "name": "pending",
+      "passed": true,
+      "result": {
+        "canAct": false,
+        "clientMessage": "尚未确认原动作。新动作暂停；可查询或原样重试。",
+        "foreignPending": 0,
+        "healthy": false,
+        "legacyUnbound": false,
+        "pending": {
+          "actorId": "a1",
+          "body": "{\"schemaVersion\": 1, \"rulesVersion\": \"r8\", \"commandId\": \"qa-previous-unknown\", \"expectedStateVersion\": 0, \"action\": {\"type\": \"gather\", \"nodeId\": \"tree-west-north\"}}",
+          "commandId": "qa-previous-unknown",
+          "endpoint": "http://127.0.0.1:47015",
+          "instanceId": "w_da4e9453142c428796a0c1c11cfe4f04",
+          "recordVersion": 2.0,
+          "worldId": "foundation-01"
+        },
+        "queryVisible": true,
+        "retryDisabled": false,
+        "retryVisible": true,
+        "statusText": "尚未确认原动作。新动作暂停；可查询或原样重试。",
+        "storageOk": true,
+        "targetText": "树木就在身旁，按 E 采集木材。"
+      }
+    }
+  ],
+  "sourceBefore": {
+    "clients/godot/main.gd": "bb5dc7bf36feea0fca2838ca832629a82fa5331e081e41de3d2bddc8050d3e8f",
+    "clients/godot/world_client.gd": "49e0ce433907ea3a8ec72788ef32719694c467916d7e8ba24217766a153b6f0a",
+    "clients/godot/pending_store.gd": "6746519f4ce68d863c30ddcc7db2ecc504d179516104b633755df44704669708",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec"
+  },
+  "sourceAfter": {
+    "clients/godot/main.gd": "bb5dc7bf36feea0fca2838ca832629a82fa5331e081e41de3d2bddc8050d3e8f",
+    "clients/godot/world_client.gd": "49e0ce433907ea3a8ec72788ef32719694c467916d7e8ba24217766a153b6f0a",
+    "clients/godot/pending_store.gd": "6746519f4ce68d863c30ddcc7db2ecc504d179516104b633755df44704669708",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec"
+  },
+  "externalModelCalls": 0,
+  "sourceStable": true
+}

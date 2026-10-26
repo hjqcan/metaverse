@@ -1,0 +1,171 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "same URL new world cannot replay the original",
+      "passed": true,
+      "client": {
+        "canAct": true,
+        "foreignPending": 1,
+        "healthy": true,
+        "instanceId": "w_0cc6832bb7e3405f80b341f698f55fe3",
+        "inventory": {
+          "wood": 0
+        },
+        "journalSize": 0,
+        "lastReceipt": {},
+        "legacyUnbound": false,
+        "message": "已进入荒野。走到树旁，采集木材，再搭建。 另一个世界的未确认动作已保留。",
+        "mode": "foreign-retry",
+        "pending": {},
+        "storageOk": true
+      },
+      "newWorldWood": 0,
+      "postCount": 1,
+      "retainedOriginal": true
+    },
+    {
+      "name": "returning to original world resolves original receipt without a POST",
+      "passed": true,
+      "client": {
+        "canAct": true,
+        "foreignPending": 0,
+        "healthy": true,
+        "instanceId": "w_0de79e159a2a4a2799817514418a4c67",
+        "inventory": {
+          "wood": 1
+        },
+        "journalSize": 0,
+        "lastReceipt": {
+          "commandId": "godot_9af3a06e0a1dfbd21210d470408460b4",
+          "error": null,
+          "eventCursor": 2,
+          "identity": {
+            "actorId": "a1",
+            "operatorId": "local-operator",
+            "sessionId": "s7e0167f94cc7417d96419854a16a6110"
+          },
+          "result": {
+            "action": "gather",
+            "inventoryWood": 1,
+            "nodeId": "tree-west-north",
+            "position": [
+              6.2,
+              7.8
+            ],
+            "quantity": 1,
+            "remainingWood": 2
+          },
+          "rulesVersion": "r8",
+          "schemaVersion": 1,
+          "stateVersion": 1,
+          "status": "committed"
+        },
+        "legacyUnbound": false,
+        "message": "动作已完成。",
+        "mode": "original-retry",
+        "pending": {},
+        "storageOk": true
+      }
+    },
+    {
+      "name": "same database different URL and renewed token resolves original pending",
+      "passed": true,
+      "client": {
+        "canAct": true,
+        "foreignPending": 0,
+        "healthy": true,
+        "instanceId": "w_0de79e159a2a4a2799817514418a4c67",
+        "inventory": {
+          "wood": 2
+        },
+        "journalSize": 0,
+        "lastReceipt": {
+          "commandId": "godot_bd0be774736f2280c881e80acdf8e28e",
+          "error": null,
+          "eventCursor": 3,
+          "identity": {
+            "actorId": "a1",
+            "operatorId": "local-operator",
+            "sessionId": "s7e0167f94cc7417d96419854a16a6110"
+          },
+          "result": {
+            "action": "gather",
+            "inventoryWood": 2,
+            "nodeId": "tree-west-north",
+            "position": [
+              6.2,
+              7.8
+            ],
+            "quantity": 1,
+            "remainingWood": 1
+          },
+          "rulesVersion": "r8",
+          "schemaVersion": 1,
+          "stateVersion": 2,
+          "status": "committed"
+        },
+        "legacyUnbound": false,
+        "message": "动作已完成。",
+        "mode": "relocated-retry",
+        "pending": {},
+        "storageOk": true
+      }
+    },
+    {
+      "name": "unbound legacy pending is preserved and never adopted into a protected world",
+      "passed": true,
+      "client": {
+        "canAct": false,
+        "foreignPending": 0,
+        "healthy": true,
+        "instanceId": "w_0de79e159a2a4a2799817514418a4c67",
+        "inventory": {
+          "wood": 2
+        },
+        "journalSize": 0,
+        "lastReceipt": {},
+        "legacyUnbound": true,
+        "message": "旧动作尚不能确认属于这个世界。记录已保留，先回原世界确认。",
+        "mode": "legacy-blocked",
+        "pending": {},
+        "storageOk": true
+      }
+    },
+    {
+      "name": "v2 record without instance cannot downgrade to legacy",
+      "passed": true,
+      "client": {
+        "canAct": false,
+        "foreignPending": 0,
+        "healthy": true,
+        "instanceId": "w_0de79e159a2a4a2799817514418a4c67",
+        "inventory": {
+          "wood": 2
+        },
+        "journalSize": 0,
+        "lastReceipt": {},
+        "legacyUnbound": false,
+        "message": "恢复记录损坏或无法读取。原文件已保留，请修复后重启客户端。",
+        "mode": "malformed-blocked",
+        "pending": {},
+        "storageOk": false
+      }
+    }
+  ],
+  "sourceBefore": {
+    "clients/godot/main.gd": "ab497bc0391e05ee5e2cdc227513b3abd6f0814d9a98ec4ff7d078da7c5a33e4",
+    "clients/godot/world_client.gd": "aa3c0a287806927b8a09e2a16f6e87b6642ddbff65e6be755b4bd7a1336db513",
+    "clients/godot/pending_store.gd": "6746519f4ce68d863c30ddcc7db2ecc504d179516104b633755df44704669708",
+    "clients/godot/world_view.gd": "9d3eb5122567f51fed070debf1464b7ee284e2938a8d5775a174a96c30529490"
+  },
+  "externalModelCalls": 0,
+  "serverDllSha256": "bb9beb65ada000eb4f40f90766499ad5237b71e22153cbd7ef6fa828a2ff3b86",
+  "sourceAfter": {
+    "clients/godot/main.gd": "ab497bc0391e05ee5e2cdc227513b3abd6f0814d9a98ec4ff7d078da7c5a33e4",
+    "clients/godot/world_client.gd": "aa3c0a287806927b8a09e2a16f6e87b6642ddbff65e6be755b4bd7a1336db513",
+    "clients/godot/pending_store.gd": "6746519f4ce68d863c30ddcc7db2ecc504d179516104b633755df44704669708",
+    "clients/godot/world_view.gd": "9d3eb5122567f51fed070debf1464b7ee284e2938a8d5775a174a96c30529490"
+  },
+  "sourceStable": true
+}

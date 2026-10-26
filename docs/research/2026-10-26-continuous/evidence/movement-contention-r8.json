@@ -1,0 +1,82 @@
+{
+  "recordedAtUtc": "2026-10-26T02:24:05.127008+00:00",
+  "baseCommit": "b89d44a301621da4c32183f78b8f0879ff862ad9",
+  "assemblySha256": "5d0ca45b644374321fe523886bb516ba3bf15a932688e10540e7d6858cf8d5d7",
+  "kind": "research-liveness-counterexample",
+  "scenario": "wilderness-continuous-v1",
+  "actualModelCalls": 0,
+  "scope": "20 explicitly controlled HTTP interleavings, not a native-client or actual mission run",
+  "schedule": "B observes; A observes the same version and commits walk to its own position; B submits original walk",
+  "aCommittedZeroDistanceWalks": 20,
+  "bConfirmedStaleRejections": 20,
+  "aStartPosition": [
+    5,
+    7
+  ],
+  "aEndPositionDuringInterference": [
+    5,
+    7
+  ],
+  "bStartPosition": [
+    26,
+    17
+  ],
+  "bEndPositionDuringInterference": [
+    26,
+    17
+  ],
+  "worldVersionAfterInterference": 20,
+  "quietControl": {
+    "request": {
+      "schemaVersion": 1,
+      "rulesVersion": "r8",
+      "commandId": "2a250ff4df2f46b0bc6c5f7cf9b72d4e",
+      "expectedStateVersion": 20,
+      "action": {
+        "type": "walk",
+        "to": [
+          26.1,
+          17
+        ]
+      }
+    },
+    "status": 200,
+    "response": {
+      "schemaVersion": 1,
+      "rulesVersion": "r8",
+      "stateVersion": 21,
+      "commandId": "2a250ff4df2f46b0bc6c5f7cf9b72d4e",
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a2",
+        "sessionId": "sfbb9a9cf6d514f12b2ba6126b3341b92"
+      },
+      "eventCursor": 22,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "walk",
+        "position": [
+          26.1,
+          17
+        ],
+        "blocked": false
+      }
+    },
+    "distanceMoved": 0.10000000000000142
+  },
+  "counterexampleConfirmed": true,
+  "stoppedDatabaseAudit": {
+    "stateVersion": 21,
+    "events": 22,
+    "receiptsByStatus": {
+      "committed": 21,
+      "rejected": 20
+    },
+    "remainingWildWood": 12,
+    "residentInventoryWood": 0,
+    "integrity": "ok",
+    "foreignKeyErrors": 0
+  },
+  "allExperimentProcessesStopped": true
+}
