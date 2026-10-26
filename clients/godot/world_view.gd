@@ -19,6 +19,8 @@ var initialized = false
 var object_stamp = ""
 var marker: MeshInstance3D
 var ghost: MeshInstance3D
+var route_dots: MultiMeshInstance3D
+var bridges: Array = []
 var clock = 0.0
 var gather_effect = 0.0
 var foliage_materials: Array[StandardMaterial3D] = []
@@ -71,6 +73,18 @@ func _ready() -> void:
 	marker.mesh.bottom_radius = 0.18
 	marker.mesh.height = 0.025
 	marker.visible = false
+	route_dots = MultiMeshInstance3D.new()
+	route_dots.multimesh = MultiMesh.new()
+	route_dots.multimesh.transform_format = MultiMesh.TRANSFORM_3D
+	var dot := CylinderMesh.new()
+	dot.top_radius = 0.045
+	dot.bottom_radius = 0.045
+	dot.height = 0.015
+	route_dots.multimesh.mesh = dot
+	route_dots.multimesh.instance_count = 256
+	route_dots.multimesh.visible_instance_count = 0
+	route_dots.material_override = marker.material_override
+	scene.add_child(route_dots)
 	ghost = mesh(scene, BoxMesh.new(), Vector3.ZERO, material(Color(0.8, 0.9, 0.7, 0.55)))
 	ghost.visible = false
 	gui_input.connect(_pointer)
@@ -281,6 +295,7 @@ func _person(id: String) -> Node3D:
 
 func update_world(observation: Dictionary) -> void:
 	own_actor = observation.identity.actorId
+	bridges = observation.entities.filter(func(entity): return entity.definitionId == "bridge")
 	if not initialized:
 		_landscape(observation)
 		focus = Vector3(observation.self.position[0],0,observation.self.position[1])
@@ -324,8 +339,38 @@ func update_world(observation: Dictionary) -> void:
 		targets[resident.actorId] = p
 
 func show_destination(point: Vector2) -> void:
-	marker.position = Vector3(point.x,height_at(point.x,point.y)+0.035,point.y)
+	marker.position = _route_position(point)
 	marker.visible = true
+
+func _route_position(point: Vector2) -> Vector3:
+	var height := height_at(point.x, point.y) + 0.04
+	for bridge: Dictionary in bridges:
+		if absf(point.x - bridge.position[0]) < 2.4 and absf(point.y - bridge.position[1]) < 0.8:
+			height = 0.35
+	return Vector3(point.x, height, point.y)
+
+func show_route(points: PackedVector2Array) -> void:
+	show_destination(points[-1])
+	trim_route(points[0], points)
+
+func trim_route(start: Vector2, points: PackedVector2Array) -> void:
+	var previous := start
+	var remainder := 0.3
+	var count := 0
+	for point: Vector2 in points:
+		var length := previous.distance_to(point)
+		while remainder < length and count < 256:
+			var at := previous.lerp(point, remainder / length)
+			route_dots.multimesh.set_instance_transform(count, Transform3D(Basis.IDENTITY, _route_position(at)))
+			count += 1
+			remainder += 0.45
+		remainder -= length
+		previous = point
+	route_dots.multimesh.visible_instance_count = count
+
+func clear_route() -> void:
+	marker.visible = false
+	route_dots.multimesh.visible_instance_count = 0
 
 func show_build(point: Vector2, recipe: String, valid: bool) -> void:
 	ghost.visible = not recipe.is_empty()

@@ -1,0 +1,41 @@
+{
+  "iteration": "ITER-0016",
+  "verifiedAtUtc": "2026-10-26T02:32:41.617143+00:00",
+  "baseCommit": "b89d44a301621da4c32183f78b8f0879ff862ad9",
+  "modelCalls": 0,
+  "navigationRun": ".local/iter0016/20261026T022925Z-bc4ff1",
+  "regressionRun": ".local/iter0014/godot/20261026T023111Z-287836",
+  "navigationGroups": 5,
+  "navigationAssertions": 42,
+  "regressionGroups": 9,
+  "regressionAssertions": 56,
+  "initialResultLimitation": "Initial navigation bridge reuse test did not verify actor identity; its second-resident conclusion is withdrawn. See initial-identity-audit.json.",
+  "sourceSha256": {
+    "clients/godot/main.gd": "65673dff8073b5521fd1b92933cd46f7417f5a71759089e81a0628af68688e5d",
+    "clients/godot/world_view.gd": "c05f772506740cd19d1ba4a23d150422b123037c42f560d17315f53b86d57490",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_navigation.gd.uid": "d4ccd2ac77e3f4408df2a01e7c895f3add5e4523ac8d06c557b378f837c91bba",
+    "tests/godot/continuous.gd": "05c89e375536fe71a5555882cb140c57a8d3a9714ae6daaf4751fd806f9f5805",
+    "tests/godot/navigation.gd": "95710dfbe3a128abcd478b6ed5566c0851ab2dce90acd024c15a7dd61a9d1112",
+    "tests/godot_navigation.py": "77c4718c4cd66fda06a8812067bdb34cf714398d38f05a8f35155d436d9864eb",
+    "docs/proposals/ITER-0016-godot-navigation.md": "dce8a5f41e89ccafe7fc01e423518fc950ccc354365353c166dbe035e2113e08",
+    "docs/iterations/ITER-0016-results.md": "27a2d0313c4d6420e7d7ab2052c92b5cc384d8464cf78e8ad7e4b2e16c430250"
+  },
+  "evidenceSha256": {
+    "bridge-paths.json": "c25c75751e721ee791e06eb5905385b6d76a1eb2b6391cbfd77d6839c97d5a66",
+    "cancel-paths.json": "4ec8af8dca726a411272b138a71f145bce690e98b9f19d8447b5975a01d52960",
+    "crossed.png": "cb1456dea38cb5ed18d72a86838c5d98bac6ab10b251079b8fe3d545beb2499a",
+    "database-audit.json": "b32c55faf9b3dd529973a616154e48fc2abf0335645e8967aea88d9fcbd1b5a1",
+    "initial-identity-audit.json": "cf29ccde1eb9d277d21405a73d08c2841c0bdff85e7e9bdceb57794551399b3b",
+    "initial-navigation-results.json": "fd57ab30be4c63de2819da5b6f711f0903bc6221990d4b40bd57bc8825083b0b",
+    "initial-reuse-wrong-actor.png": "0f32b036a2c2169934fd636fbb7878761333e2282f3a1270651a4ff636693e80",
+    "navigation-results.json": "e169a7aa4b7cb0e615a80188df03c6e02d18246135438834652082793a251385",
+    "obstacles-paths.json": "12f213adc5f3f3c7d6fac4ec36f271065234a6878fb8aa672ce99d1eed769d22",
+    "regression-results.json": "ef2ca08c8798dd6a6563a150fcfa586834aaad45b293f02e6b5f686a2a148ab5",
+    "reused.png": "e324540e7dbde85c1256dc5c210b21159329b0c523dd06eaf119a069f206fa38",
+    "route-loss-paths.json": "60bbbff9b6218a65ff034834025dd82b21196eb228c059ed3c627d5636d28dda",
+    "route.png": "c73080d05774eabc8eb8a8c9c573c0dc03246f5c8c5c7da40e5527e8f53175d3",
+    "tree-change-paths.json": "d47f2633472004add5d1b35362a352188624eddaa4a621dddbb0f253fb0ced36",
+    "ui-refresh-results.json": "93b10bcc56ccd80d177524008cc38b680520112fd501c7978b6279a3194f688d"
+  }
+}

@@ -89,9 +89,10 @@ func run() -> void:
 				break
 		check(app.position_2d().x>20,"builder crosses actual bridge")
 		var access = JSON.parse_string(FileAccess.get_file_as_string(OS.get_environment("WORLD_ACCESS_FILE")))
-		await app.client.connect_world(app.client.endpoint,access.sessions.a2.token)
+		await app._connect(app.client.endpoint,access.sessions.a2.token)
 		await create_timer(0.6).timeout
 		await idle()
+		check(app.client.observation.identity.actorId=="a2","bridge reuse really switches to second resident")
 		await click(app.world_view.camera.unproject_position(Vector3(15.2,0.15,12)))
 		for i in 300:
 			await create_timer(0.04).timeout
