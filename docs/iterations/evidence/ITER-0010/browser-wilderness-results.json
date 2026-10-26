@@ -1,0 +1,67 @@
+{
+  "suite": "wilderness-real-chrome-v1",
+  "recordedAtUtc": "2026-10-26T01:31:17.115Z",
+  "browser": "152.0.7977.82",
+  "passed": true,
+  "tests": [
+    {
+      "name": "empty_hands_scattered_residents_trees_and_no_depot_or_ready_made_creative_services",
+      "passed": true,
+      "milliseconds": 530
+    },
+    {
+      "name": "selecting_tree_does_not_harvest_and_distance_gates_cutting",
+      "passed": true,
+      "milliseconds": 27
+    },
+    {
+      "name": "real_cut_reduces_tree_and_credits_only_current_resident",
+      "passed": true,
+      "milliseconds": 71
+    },
+    {
+      "name": "version_conflict_does_not_double_credit_and_new_cut_uses_new_command",
+      "passed": true,
+      "milliseconds": 178
+    },
+    {
+      "name": "collected_wood_builds_real_platform_on_cleared_tree_ground",
+      "passed": true,
+      "milliseconds": 264
+    },
+    {
+      "name": "other_scattered_identity_starts_empty_and_sees_previous_work",
+      "passed": true,
+      "milliseconds": 161
+    },
+    {
+      "name": "lost_committed_cut_response_reload_recovers_original_id_once",
+      "passed": true,
+      "milliseconds": 177
+    },
+    {
+      "name": "mismatched_cut_receipt_stays_unresolved_until_original_receipt_is_queried",
+      "passed": true,
+      "milliseconds": 210
+    },
+    {
+      "name": "observation_failure_keeps_known_materials_and_pauses_cutting",
+      "passed": true,
+      "milliseconds": 3011
+    },
+    {
+      "name": "restart_preserves_tree_stumps_materials_and_resident_positions",
+      "passed": true,
+      "milliseconds": 322
+    },
+    {
+      "name": "mobile_390px_tree_selection_cut_and_material_labels_are_usable",
+      "passed": true,
+      "milliseconds": 458
+    }
+  ],
+  "javascriptErrors": [],
+  "actualModelCalls": 0,
+  "decisionSource": "explicit-program-and-human-UI",
+  "dataRoot": ".local/iter0010/browser/2026-10-26T01-31-11-170Z"
+}

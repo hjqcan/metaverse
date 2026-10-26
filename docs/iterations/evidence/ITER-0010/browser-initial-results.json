@@ -1,0 +1,52 @@
+{
+  "suite": "wilderness-real-chrome-v1",
+  "recordedAtUtc": "2026-10-26T01:29:08.630Z",
+  "browser": "152.0.7977.82",
+  "passed": false,
+  "tests": [
+    {
+      "name": "empty_hands_scattered_residents_trees_and_no_depot_or_ready_made_creative_services",
+      "passed": true,
+      "milliseconds": 405
+    },
+    {
+      "name": "selecting_tree_does_not_harvest_and_distance_gates_cutting",
+      "passed": true,
+      "milliseconds": 22
+    },
+    {
+      "name": "real_cut_reduces_tree_and_credits_only_current_resident",
+      "passed": true,
+      "milliseconds": 74
+    },
+    {
+      "name": "version_conflict_does_not_double_credit_and_new_cut_uses_new_command",
+      "passed": true,
+      "milliseconds": 181
+    },
+    {
+      "name": "collected_wood_builds_real_platform_on_cleared_tree_ground",
+      "passed": true,
+      "milliseconds": 267
+    },
+    {
+      "name": "other_scattered_identity_starts_empty_and_sees_previous_work",
+      "passed": true,
+      "milliseconds": 160
+    },
+    {
+      "name": "lost_committed_cut_response_reload_recovers_original_id_once",
+      "passed": true,
+      "milliseconds": 162
+    },
+    {
+      "name": "uncaught",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 2\n\n    at file:///home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/browser/wilderness.mjs:133:10\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async check (file:///home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/browser/wilderness.mjs:28:29)\n    at async file:///home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/browser/wilderness.mjs:130:2"
+    }
+  ],
+  "javascriptErrors": [],
+  "actualModelCalls": 0,
+  "decisionSource": "explicit-program-and-human-UI",
+  "dataRoot": ".local/iter0010/browser/2026-10-26T01-29-06-878Z"
+}

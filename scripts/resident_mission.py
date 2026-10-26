@@ -138,6 +138,12 @@ def _public(observed, share_postcard=False, paint_mosaic=False, consent=False):
             "world": world, "depot": {key: deepcopy(observed["depot"][key]) for key in ("position", "wood")},
             "recipes": [{key: recipe[key] for key in ("id", "woodCost")} for recipe in observed.get("recipes", [])],
             "activities": activities}
+    if observed.get('gathering', {}).get('version') == 1:
+        public['gathering'] = {key: observed['gathering'][key] for key in ('version', 'quantityPerAction')}
+        public['resourceNodes'] = [{key: deepcopy(node[key]) for key in
+                                   ('nodeId', 'kind', 'position', 'initialWood', 'remainingWood')}
+                                  for node in observed.get('resourceNodes', [])]
+        public['depot']['available'] = observed['depot'].get('available', True)
     entry = public_entry_guide(observed)
     if entry is not None:
         public["entryGuide"] = entry
@@ -276,7 +282,7 @@ def _route_info(observed, target, allow_build):
     shortage = max(0, wood - observed["self"]["inventory"]["wood"])
     reason, detour = None, 0
     if shortage > observed["depot"]["wood"]:
-        reason = "insufficient_public_material"
+        reason = "natural_material_collection_required" if observed.get("gathering") else "insufficient_public_material"
     elif shortage and sum(abs(a-b) for a, b in zip(observed["self"]["position"], observed["depot"]["position"])) > 1:
         depot_route = plan(observed, observed["depot"]["position"], False)
         if depot_route is None:

@@ -1,0 +1,72 @@
+{
+  "suite": "mosaic-real-chrome-v1",
+  "recordedAtUtc": "2026-10-26T01:31:07.723Z",
+  "browser": "152.0.7977.82",
+  "passed": true,
+  "tests": [
+    {
+      "name": "draft_is_separate_keyboard_does_not_move_and_poll_keeps_colors",
+      "passed": true,
+      "milliseconds": 2076
+    },
+    {
+      "name": "human_visit_publishes_batch_with_author_and_clears_draft",
+      "passed": true,
+      "milliseconds": 461
+    },
+    {
+      "name": "second_human_reads_and_continues_actual_shared_picture",
+      "passed": true,
+      "milliseconds": 1509
+    },
+    {
+      "name": "eight_cell_limit_draft_reload_and_actor_isolation",
+      "passed": true,
+      "milliseconds": 640
+    },
+    {
+      "name": "concurrent_board_revision_keeps_old_draft_and_never_overwrites",
+      "passed": true,
+      "milliseconds": 1551
+    },
+    {
+      "name": "real_world_stale_rejection_preserves_unpublished_patch",
+      "passed": true,
+      "milliseconds": 251
+    },
+    {
+      "name": "lost_commit_response_reload_recovers_original_patch_once",
+      "passed": true,
+      "milliseconds": 302
+    },
+    {
+      "name": "server_restart_preserves_picture_and_edit_sources",
+      "passed": true,
+      "milliseconds": 2853
+    },
+    {
+      "name": "mobile_world_picture_editor_layout_390px",
+      "passed": true,
+      "milliseconds": 379
+    },
+    {
+      "name": "actual_model_reports_show_proposal_confirmed_edit_and_shared_picture",
+      "passed": true,
+      "milliseconds": 367
+    },
+    {
+      "name": "forged_patch_and_visit_only_cannot_claim_completed_and_old_reports_work",
+      "passed": true,
+      "milliseconds": 27
+    },
+    {
+      "name": "mobile_actual_report_layout_390px",
+      "passed": true,
+      "milliseconds": 246
+    }
+  ],
+  "javascriptErrors": [],
+  "reportWorldRequests": [],
+  "actualModelCallsDuringUiTest": 0,
+  "dataRoot": ".local/iter0006/browser/2026-10-26T01-30-56-539Z"
+}

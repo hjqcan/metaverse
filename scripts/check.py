@@ -10,8 +10,8 @@ import sys
 import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
-HTTP = ('foundation', 'passage', 'resident_mission', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'entry_guide')
-BROWSER = ('foundation', 'passage', 'resident', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'entry')
+HTTP = ('foundation', 'passage', 'resident_mission', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'entry_guide', 'wilderness')
+BROWSER = ('foundation', 'passage', 'resident', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'entry', 'wilderness')
 
 
 def evidence_path(lines):

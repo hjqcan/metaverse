@@ -30,7 +30,7 @@ class Candidate:
             sock.bind(("127.0.0.1", 0))
             self.port = sock.getsockname()[1]
         self.url = f"http://127.0.0.1:{self.port}"
-        self.env = {**os.environ, "WORLD_URL": self.url, "WORLD_DATA_DIR": str(self.data), "WORLD_ENABLE_FAULTS": "1" if faults else "0"}
+        self.env = {**os.environ, "WORLD_URL": self.url, "WORLD_DATA_DIR": str(self.data), "WORLD_SCENARIO": "foundation-v1", "WORLD_ENABLE_FAULTS": "1" if faults else "0"}
         self.process = None
         self.log = None
         self.start()

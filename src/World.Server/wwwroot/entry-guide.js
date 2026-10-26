@@ -9,6 +9,8 @@
       || !g.participation || g.participation.walkWoodCost !== 0
       || !['visitSupported','postcardSupported','mosaicSupported','foreignMosaicNeedsConsent'].every(k => typeof g.participation[k] === 'boolean')
       || !Array.isArray(g.sharedBridges) || !Array.isArray(g.places)) return false;
+    if (g.materials.depotAvailable === false && (o.depot.available !== false
+      || g.materials.wildWood !== o.resourceNodes?.reduce((sum,n)=>sum+n.remainingWood,0))) return false;
     const bridges = o.entities.filter(e => e.definitionId === 'bridge');
     if (bridges.length !== g.sharedBridges.length || g.sharedBridges.some(b => !bridges.some(e => e.entityId === b.entityId && e.ownerActorId === b.ownerActorId && same(e.position,b.position)))) return false;
     const places = o.activities.length ? o.activities : [{id:'goal',label:'目标地',position:o.world.goal}];
@@ -42,7 +44,8 @@
       }
       panel.dataset.version=String(g.stateVersion);panel.dataset.actor=g.actorId;
       elements.state.textContent=`居民 ${g.actorId} · 位置 ${coord(g.position)} · 世界版本 ${g.stateVersion}${fresh?' · 当前观察':' · 上次观察，等待同步'}`;
-      elements.materials.textContent=`公共木材 ${g.materials.publicWood} · 自己库存 ${g.materials.ownWood}。${g.materials.publicWood===0?'公共储备已空；木材不足时建造会受限。':'领取须到储备点或相邻格；显示余量不代表已为你预留。'}`;
+      document.getElementById("entry-title").textContent=g.materials.depotAvailable===false&&observation.entities.length===0 ? "从一片原野开始。" : "接着这里的故事，开始你的生活。";
+      elements.materials.textContent=g.materials.depotAvailable===false ? `树上还剩 ${g.materials.wildWood} 木材 · 自己库存 ${g.materials.ownWood}。这里没有现成的公共储备；走到树旁砍取，收集材料后再搭建。` : `公共木材 ${g.materials.publicWood} · 自己库存 ${g.materials.ownWood}。${g.materials.publicWood===0?'公共储备已空；木材不足时建造会受限。':'领取须到储备点或相邻格；显示余量不代表已为你预留。'}`;
       elements.bridges.textContent=g.sharedBridges.length ? `已有 ${g.sharedBridges.length} 段公共桥：${g.sharedBridges.map(b=>`居民 ${b.ownerActorId} 建于 ${coord(b.position)}`).join('；')}。通行不按建造者限制，也不要求你重建。` : '这里还没有已建桥段。能否到达各地点，以实际通路为准。';
       const p=g.participation;
       elements.participation.textContent='步行不消耗木材。'+(p.visitSupported?'到地点后可以记录到访。':'')+(p.postcardSupported?'本人到访后可写公开手记，不需木材。':'')+(p.mosaicSupported?`花园画布也不需木材，仍须本人到访${p.foreignMosaicNeedsConsent?'；修改他人格子需要对方同意':''}。`:'');
@@ -58,7 +61,7 @@
         }
         c.title.textContent=`${place.label} ${coord(place.position)}`;c.article.dataset.reachable=String(place.reachable);
         c.state.textContent=place.reachable ? `${place.walkingSteps===0?'你已在这里':`可步行到达 · ${place.walkingSteps} 步`} · 0 木材${place.bridgeEntityIds.length?` · 复用 ${place.bridgeEntityIds.length} 段桥`:''}` : '当前通路尚未连通，不能直接步行到达。';
-        c.route.textContent=place.reachable ? [g.position,...place.route].map(coord).join(' → ') : '未铺桥水面或墙阻断了当前路线。可以先参加其他可达地点的活动。';
+        c.route.textContent=place.reachable ? [g.position,...place.route].map(coord).join(' → ') : '未铺桥水面、岩壁或树木阻断了当前路线。可以先探索其他可达地点。';
         c.button.disabled=!fresh;c.button.textContent=place.activityId?'选作活动地点':'在地图上选择';
       }
     };

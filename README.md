@@ -4,19 +4,21 @@
 
 长期愿景是让这个世界承载越来越丰富的创作、关系、活动与生活体验。海洋、星空、外星球、天堂和地下世界都是可能的发展方向，不是当前已经实现的功能。
 
-**当前阶段：当代入驻导览。后来者能看见已有公共桥、真实可达地点和步行路线，直接复用前人建设。固定程序与实际 Chrome 验证零木材到访往返；138 项 HTTP、94 项 Chrome 检查通过，本轮真实模型调用 0。共享工坊、自动化与防垄断机制仍待实现。**
+**当前阶段：原始开局与采集。居民分散在河流两岸，空手出生，没有现成建筑或公共木材。木材先存在于树木中，砍取后进入个人库存，再用于搭建和造桥。已建成果会保留，后来者进入同一个持续世界。**
 
-最新成果：[ITER-0009 入驻导览](docs/iterations/ITER-0009-results.md) · [导览契约](docs/contracts/entry-guide-v1.md) · [ITER-0008 提议收件箱](docs/iterations/ITER-0008-results.md) · [收件箱契约](docs/contracts/mosaic-inbox-v1.md) · [ITER-0007 协商修改](docs/iterations/ITER-0007-results.md) · [协商契约](docs/contracts/mosaic-consent-v1.md) · [ITER-0006 共同画布](docs/iterations/ITER-0006-results.md) · [ITER-0005 共同手记](docs/iterations/ITER-0005-results.md) · [ITER-0004 活动对照](docs/iterations/ITER-0004-results.md) · [ITER-0003 模型居民](docs/iterations/ITER-0003-results.md) · [ITER-0002 两地通行](docs/iterations/ITER-0002-results.md) · [ITER-0001 基础世界](docs/iterations/ITER-0001-results.md) · [底层研究](docs/research/2026-10-25-foundation/00-report.md)。
+最新成果：[ITER-0010 原始开局](docs/iterations/ITER-0010-results.md) · [采集契约](docs/contracts/wilderness-v1.md) · [ITER-0009 入驻导览](docs/iterations/ITER-0009-results.md) · [导览契约](docs/contracts/entry-guide-v1.md) · [ITER-0008 提议收件箱](docs/iterations/ITER-0008-results.md) · [收件箱契约](docs/contracts/mosaic-inbox-v1.md) · [ITER-0007 协商修改](docs/iterations/ITER-0007-results.md) · [协商契约](docs/contracts/mosaic-consent-v1.md) · [ITER-0006 共同画布](docs/iterations/ITER-0006-results.md) · [ITER-0005 共同手记](docs/iterations/ITER-0005-results.md) · [ITER-0004 活动对照](docs/iterations/ITER-0004-results.md) · [ITER-0003 模型居民](docs/iterations/ITER-0003-results.md) · [ITER-0002 两地通行](docs/iterations/ITER-0002-results.md) · [ITER-0001 基础世界](docs/iterations/ITER-0001-results.md) · [底层研究](docs/research/2026-10-25-foundation/00-report.md)。
 
-最新世界：`bash scripts/run_entry.sh`，打开 `http://127.0.0.1:5087`，密钥位于 `.local/entry/access.json`。收件箱旧预览用 `run_inbox.sh` / `5086` / `.local/inbox`；旧协商用 `run_consent.sh` / `5085` / `.local/consent`；画布用 `run_mosaic.sh` / `5084` / `.local/mosaic`；手记用 `run_postcards.sh` / `5083` / `.local/postcards`；活动用 `run_activities.sh` / `5082` / `.local/activities`；基础用 `run_world.sh` / `5080` / `.local/world`；通行用 `run_passage.sh` / `5081` / `.local/passage`，脚本均在 `scripts/`。八个数据目录独立，旧世界不重启或迁移。
+当前入口：`npm start`（或 `bash scripts/run_wilderness.sh`），打开 `http://127.0.0.1:5088`，密钥位于 `.local/wilderness/access.json`。新世界默认 `wilderness-v1` / r7：选择树木、走到相邻一格、砍取木材，然后选择空地或水面搭建。初始 4 处树木、各 3 木材和 8×8 地图是本轮原型参数。
 
-居民报告：打开 `http://127.0.0.1:5087/resident.html?sample=inbox-review` 查看从收件箱找到旧提议后的实际审阅，可切换提议人。页面只读历史记录，新预览仍为空。初始河流和用于挤出最近列表的 51 条已处理记录是明确程序样本，不冒充模型作品。新任务与复现命令见 ITER-0008 报告；每个新模型任务调用一次绑定账号的 GPT-6。
+历史脚本对应 5080—5087，数据目录相互独立，不把旧世界重置成原始开局。旧 `run_world.sh` 显式选择 foundation 实验；服务读取已有数据库时始终沿用原场景。低层服务面对未指定场景的新数据库时，也默认采用原始开局。
+
+此前模型居民报告：打开 `http://127.0.0.1:5088/resident.html?sample=inbox-review` 查看从收件箱找到旧提议后的实际审阅，可切换提议人。页面只读历史记录，新预览仍为空。初始河流和用于挤出最近列表的 51 条已处理记录是明确程序样本，不冒充模型作品。新任务与复现命令见 ITER-0008 报告；每个新模型任务调用一次绑定账号的 GPT-6。
 
 ## 已确认的方向
 
 - 人类与 Agent 都可以成为参与者；创造、经营、探索和纯粹游玩都被允许，劳动不作为居住和游玩的前提。
 - 世界由参与者逐渐共建，初始规模可以很小；基本规则也能够发展和增加。
-- 文明最早可能是散落居民求生、逐渐形成部落；随着实际建设与自动化，后入者的生活可能变为城市活动乃至星际旅行，无须每人重复原始阶段。
+- 文明从独立散落的原始居民开始，玩家先自行砍木头等采集资源进行发展，再逐渐形成聚落；随着实际建设与自动化，后入者的生活可能变为城市活动乃至星际旅行，无须每人重复原始阶段。
 - 先行者主要获得早期体验与适度的时长优势，不能凭先发形成过大优势或垄断；后来者需要持续存在的参与和创造机会。
 - 物品不能随意增加，制造需要资源成本；经济希望逐渐、轻度扩张，具体衡量口径与调节方式尚未确定。
 - 以系统论、控制论、信息论、高等数学等为基础，结合 AI、概率、图论及相关知识边研究边构建。

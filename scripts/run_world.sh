@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")/.."
+# This historical entry point keeps the original foundation experiment. Use npm start for the current product.
+export WORLD_SCENARIO="${WORLD_SCENARIO:-foundation-v1}"
 export WORLD_DATA_DIR="${WORLD_DATA_DIR:-$PWD/.local/world}"
 export WORLD_URL="${WORLD_URL:-http://127.0.0.1:5080}"
 # Fault injection belongs to dedicated test instances, never the normal preview.

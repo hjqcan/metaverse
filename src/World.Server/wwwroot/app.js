@@ -30,18 +30,19 @@
     "activities-panel", "activity-catalog", "activity-select", "visit-button", "activity-hint", "visit-history",
     "postcards-panel", "postcard-location", "postcard-list", "postcard-feed-label", "postcard-text", "postcard-count", "postcard-button", "postcard-hint",
     "mosaic-panel", "mosaic-version", "mosaic-public", "mosaic-editor", "mosaic-palette", "mosaic-authors", "mosaic-draft-count", "mosaic-draft-note", "mosaic-publish", "mosaic-clear", "mosaic-hint", "mosaic-public-note", "proposal-compose", "proposal-text", "proposal-count", "consent-panel", "consent-list",
+    "gather-panel", "gather-node", "gather-hint", "gather-button", "claim-section", "resource-source-label", "tree-legend", "depot-legend", "goal-legend", "wall-label",
     "inbox-scope", "inbox-status", "inbox-counts", "inbox-message", "inbox-newest", "inbox-newer", "inbox-older", "inbox-visit", "inbox-location"
   ].map((id) => [id, $(id)]));
   const isInt = (n) => Number.isSafeInteger(n) && n >= 0;
   const isCell = (p) => Array.isArray(p) && p.length === 2 && p.every((n) => isInt(n) && n < 8);
   const sameCell = (a, b) => a && b && a[0] === b[0] && a[1] === b[1];
   const coord = (p) => `(${p[0]}, ${p[1]})`;
-  const supportedRules = new Set(["r1", "r2", "r3", "r4", "r5", "r6"]);
+  const supportedRules = new Set(["r1", "r2", "r3", "r4", "r5", "r6", "r7"]);
   const validPostcardText = (text) => typeof text === "string" && Array.from(text).length >= 1 && Array.from(text).length <= 160 && /[^\p{White_Space}]/u.test(text) && !/[\p{Cc}\p{Cs}]/u.test(text);
   const validPostcard = (p) => p && typeof p.activityId === "string" && typeof p.authorActorId === "string" && typeof p.commandId === "string" && typeof p.visitCommandId === "string" && validPostcardText(p.text) && isInt(p.stateVersion) && isCell(p.position) && Number.isFinite(Date.parse(p.sharedAtUtc));
   const recipeDefinitions = { "platform.v1": "platform", "bridge.v1": "bridge" };
   const entityName = (definitionId) => definitionId === "bridge" ? "桥" : definitionId === "platform" ? "平台" : "设施";
-  const knownRejections = new Set(["STALE_STATE", "RULES_VERSION_MISMATCH", "IDEMPOTENCY_CONFLICT", "CELL_OCCUPIED", "INSUFFICIENT_RESOURCE", "UNREACHABLE", "NOT_AT_ACTIVITY", "ACTIVITY_NOT_FOUND", "ACTIVITY_UNAVAILABLE", "POSTCARD_UNAVAILABLE", "VISIT_REQUIRED", "VISIT_ALREADY_SHARED", "MOSAIC_UNAVAILABLE", "MOSAIC_LOCATION_UNAVAILABLE", "VISIT_ALREADY_PAINTED", "MOSAIC_CHANGED", "MOSAIC_UNCHANGED", "MOSAIC_CONSENT_REQUIRED", "MOSAIC_CONSENT_UNAVAILABLE", "VISIT_ALREADY_PROPOSED", "MOSAIC_PROPOSAL_TARGET_INVALID", "MOSAIC_PROPOSAL_NOT_FOUND", "MOSAIC_REVIEW_FORBIDDEN", "MOSAIC_PROPOSAL_REVIEWED"]);
+  const knownRejections = new Set(["NO_PUBLIC_DEPOT", "GATHERING_UNAVAILABLE", "RESOURCE_NOT_FOUND", "RESOURCE_DEPLETED", "STALE_STATE", "RULES_VERSION_MISMATCH", "IDEMPOTENCY_CONFLICT", "CELL_OCCUPIED", "INSUFFICIENT_RESOURCE", "UNREACHABLE", "NOT_AT_ACTIVITY", "ACTIVITY_NOT_FOUND", "ACTIVITY_UNAVAILABLE", "POSTCARD_UNAVAILABLE", "VISIT_REQUIRED", "VISIT_ALREADY_SHARED", "MOSAIC_UNAVAILABLE", "MOSAIC_LOCATION_UNAVAILABLE", "VISIT_ALREADY_PAINTED", "MOSAIC_CHANGED", "MOSAIC_UNCHANGED", "MOSAIC_CONSENT_REQUIRED", "MOSAIC_CONSENT_UNAVAILABLE", "VISIT_ALREADY_PROPOSED", "MOSAIC_PROPOSAL_TARGET_INVALID", "MOSAIC_PROPOSAL_NOT_FOUND", "MOSAIC_REVIEW_FORBIDDEN", "MOSAIC_PROPOSAL_REVIEWED"]);
   const errorText = {
     STALE_STATE: "世界已更新，请等待重新观察后再次操作。",
     RULES_VERSION_MISMATCH: "世界规则版本已变化，请刷新页面后重试。",
@@ -110,7 +111,7 @@
       for (const [actorId, item] of Object.entries(saved)) {
         if (!item || item.worldId !== WORLD || item.actorId !== actorId || typeof item.body !== "string") throw new Error("Invalid pending record");
         const body = JSON.parse(item.body);
-        if (!/^[A-Za-z0-9_-]{1,128}$/.test(item.commandId) || body.commandId !== item.commandId || body.schemaVersion !== 1 || !supportedRules.has(body.rulesVersion) || !isInt(body.expectedStateVersion) || !["move", "claim", "build", "visit", "postcard", "mosaic", "mosaic_propose", "mosaic_review"].includes(body.action?.type)) throw new Error("Invalid pending body");
+        if (!/^[A-Za-z0-9_-]{1,128}$/.test(item.commandId) || body.commandId !== item.commandId || body.schemaVersion !== 1 || !supportedRules.has(body.rulesVersion) || !isInt(body.expectedStateVersion) || !["move", "claim", "gather", "build", "visit", "postcard", "mosaic", "mosaic_propose", "mosaic_review"].includes(body.action?.type)) throw new Error("Invalid pending body");
         if (body.action.type === "mosaic_review" && !consent.validProposal(item.proposal)) throw new Error("Missing original proposal");
         pendingByActor[actorId] = item;
       }
@@ -211,7 +212,7 @@
       && (d.world.scenarioId === undefined || typeof d.world.scenarioId === "string")
       && (d.recipes === undefined || (Array.isArray(d.recipes) && d.recipes.every((r) => r && typeof r.id === "string" && typeof r.definitionId === "string" && isInt(r.woodCost))))
       && (d.rulesVersion !== "r2" || (d.world.scenarioId === "passage-v1" && Array.isArray(d.world.water) && Array.isArray(d.recipes)))
-      && (!["r3", "r4", "r5", "r6"].includes(d.rulesVersion) || (d.world.scenarioId === ({r3: "activities-v1", r4: "postcards-v1", r5: "mosaic-v1", r6: "consent-v1"})[d.rulesVersion] && Array.isArray(d.world.water) && Array.isArray(d.recipes)
+      && (!["r3", "r4", "r5", "r6", "r7"].includes(d.rulesVersion) || (d.world.scenarioId === ({r3: "activities-v1", r4: "postcards-v1", r5: "mosaic-v1", r6: "consent-v1", r7: "wilderness-v1"})[d.rulesVersion] && Array.isArray(d.world.water) && Array.isArray(d.recipes)
         && Array.isArray(d.activities) && d.activities.every((a) => a && typeof a.id === "string" && typeof a.label === "string" && typeof a.description === "string" && isCell(a.position))
         && new Set(d.activities.map((a) => a.id)).size === d.activities.length
         && Array.isArray(d.self.visits) && d.self.visits.length <= 100 && d.self.visits.every((v) => v && typeof v.activityId === "string" && typeof v.commandId === "string" && isInt(v.stateVersion) && isCell(v.position) && Number.isFinite(Date.parse(v.visitedAtUtc)))))
@@ -223,6 +224,13 @@
       && (d.rulesVersion !== "r6" || (Array.isArray(d.mosaicProposals) && d.mosaicProposals.length <= 50 && d.mosaicProposals.every(consent.validProposal)
         && Array.isArray(d.self.mosaicProposals) && d.self.mosaicProposals.length <= 100 && d.self.mosaicProposals.every((p) => consent.validProposal(p) && p.authorActorId === d.self.actorId)
         && Array.isArray(d.self.mosaicReviews) && d.self.mosaicReviews.length <= 100 && d.self.mosaicReviews.every((r) => consent.validReview(r) && r.authorActorId === d.self.actorId)))
+      && (d.rulesVersion !== "r7" || (d.gathering?.version === 1 && d.gathering.quantityPerAction === 1
+        && d.depot?.available === false && d.depot.wood === 0 && Array.isArray(d.resourceNodes)
+        && d.resourceNodes.every(n => n && typeof n.nodeId === "string" && n.kind === "tree" && isCell(n.position)
+          && isInt(n.initialWood) && isInt(n.remainingWood) && n.remainingWood <= n.initialWood)
+        && new Set(d.resourceNodes.map(n => n.nodeId)).size === d.resourceNodes.length
+        && new Set(d.resourceNodes.map(n => n.position.join(','))).size === d.resourceNodes.length
+        && d.resourceNodes.filter(n => n.remainingWood > 0).every(n => d.world.blocked.some(p => sameCell(p,n.position)))))
       && isCell(d.depot?.position) && isInt(d.depot.wood)
       && Array.isArray(d.residents) && d.residents.every((r) => typeof r.actorId === "string" && isCell(r.position))
       && Array.isArray(d.entities) && d.entities.every((e) => typeof e.entityId === "string" && isCell(e.position));
@@ -232,17 +240,20 @@
     return observation?.rulesVersion === "r2" && observation.world.scenarioId === "passage-v1" || isActivities();
   }
 
+  function isWilderness() { return observation?.rulesVersion === "r7" && observation.world.scenarioId === "wilderness-v1"; }
+  function resourceNodes() { return isWilderness() ? observation.resourceNodes : []; }
+  function selectedTree() { return resourceNodes().find(n => sameCell(n.position, selected)); }
   function isConsent() { return observation?.rulesVersion === "r6" && observation.world.scenarioId === "consent-v1"; }
   function isMosaic() { return observation?.rulesVersion === "r5" && observation.world.scenarioId === "mosaic-v1" || isConsent(); }
   function isPostcards() { return observation?.rulesVersion === "r4" && observation.world.scenarioId === "postcards-v1" || isMosaic(); }
-  function isActivities() { return observation?.rulesVersion === "r3" && observation.world.scenarioId === "activities-v1" || isPostcards(); }
+  function isActivities() { return observation?.rulesVersion === "r3" && observation.world.scenarioId === "activities-v1" || isPostcards() || isWilderness(); }
   function activities() { return isActivities() ? observation.activities : []; }
   function activityName(id) { return activities().find((a) => a.id === id)?.label || id; }
   function selectedActivity() { return activities().find((a) => a.id === ui["activity-select"].value); }
 
   function waterCells() { return observation?.world.water || []; }
   function isWater(cell) { return waterCells().some((p) => sameCell(p, cell)); }
-  function wallCells() { return observation ? observation.world.blocked.filter((p) => !isWater(p)) : []; }
+  function wallCells() { return observation ? observation.world.blocked.filter((p) => !isWater(p) && !resourceNodes().some(n => n.remainingWood > 0 && sameCell(n.position, p))) : []; }
 
   function availableRecipes() {
     if (!observation) return [];
@@ -386,7 +397,7 @@
     if ((d.events.length === 0 && d.nextCursor !== after) || (d.events.length && d.nextCursor !== previous)) throw new ReadFailure("公共事件游标异常，已暂停新操作。");
     for (const event of d.events) {
       // Render only the frozen public event fields; never dump server objects or private receipts.
-      if (["worldSeeded", "moved", "claimed", "built", "visited", "postcard_shared", "mosaic_painted", "mosaic_proposed", "mosaic_reviewed"].includes(event.type)) {
+      if (["worldSeeded", "moved", "claimed", "gathered", "built", "visited", "postcard_shared", "mosaic_painted", "mosaic_proposed", "mosaic_reviewed"].includes(event.type)) {
         publicEvents.push({ seq: event.seq, stateVersion: event.stateVersion, actorId: event.actorId, type: event.type, position: isCell(event.position) ? event.position : null, quantity: isInt(event.quantity) ? event.quantity : null, definitionId: ["platform", "bridge"].includes(event.definitionId) ? event.definitionId : null, activityId: typeof event.activityId === "string" ? event.activityId : "", targetActorId: typeof event.targetActorId === "string" ? event.targetActorId : "", decision: ["accept", "reject"].includes(event.decision) ? event.decision : null });
       }
     }
@@ -404,6 +415,10 @@
   function settledReceipt(response, original) {
     const d = response.data;
     const action = JSON.parse(original.body).action;
+    if (response.status === 200 && action.type === "gather" && (d?.result?.action !== "gather"
+      || d.result.nodeId !== action.nodeId || d.result.quantity !== 1 || !isInt(d.result.remainingWood)
+      || !isInt(d.result.inventoryWood) || !isCell(d.result.position)
+      || d.stateVersion !== JSON.parse(original.body).expectedStateVersion + 1)) return false;
     if (response.status === 200 && action.type === "mosaic_propose" && (d?.result?.action !== action.type || !consent.proposalMatches(d.result, action, original.actorId, original.commandId, JSON.parse(original.body).expectedStateVersion))) return false;
     if (response.status === 200 && action.type === "mosaic_review" && (d?.result?.action !== action.type || !consent.reviewMatches(d.result, action, original.actorId, original.commandId, JSON.parse(original.body).expectedStateVersion, original.proposal))) return false;
     if (response.status === 200 && action.type === "mosaic" && (d?.result?.action !== "mosaic" || !mosaic.validEdit(d.result)
@@ -431,7 +446,7 @@
     observationFloor = Math.max(observationFloor, d.stateVersion);
     if (d.status === "committed") {
       const action = JSON.parse(original.body).action;
-      const result = action.type === "move" ? "移动已确认" : action.type === "claim" ? `领取 ${action.quantity} 单位木材已确认` : action.type === "visit" ? `到访${activityName(action.activityId)}已确认` : action.type === "postcard" ? `在${activityName(action.activityId)}分享手记已确认` : action.type === "mosaic_propose" ? "修改提议已发表，画布尚未改变" : action.type === "mosaic_review" ? action.decision === "accept" ? "已同意提议并确认改图" : "已拒绝提议，画布保持原样" : action.type === "mosaic" ? `花园画布的 ${action.patch.length} 格修改已确认` : `在 ${coord(action.at)} 建造${entityName(recipeDefinitions[action.recipeId])}已确认`;
+      const result = action.type === "move" ? "移动已确认" : action.type === "gather" ? "砍取 1 单位木材已确认" : action.type === "claim" ? `领取 ${action.quantity} 单位木材已确认` : action.type === "visit" ? `到访${activityName(action.activityId)}已确认` : action.type === "postcard" ? `在${activityName(action.activityId)}分享手记已确认` : action.type === "mosaic_propose" ? "修改提议已发表，画布尚未改变" : action.type === "mosaic_review" ? action.decision === "accept" ? "已同意提议并确认改图" : "已拒绝提议，画布保持原样" : action.type === "mosaic" ? `花园画布的 ${action.patch.length} 格修改已确认` : `在 ${coord(action.at)} 建造${entityName(recipeDefinitions[action.recipeId])}已确认`;
       if (action.type === "postcard") {
         const key = postcardDraftKey(original.actorId, action.activityId);
         storageSet(key, null);
@@ -623,18 +638,25 @@
     ui["snapshot-status"].dataset.fresh = String(fresh);
     ui["actor-position"].textContent = observation ? coord(observation.self.position) : "—";
     ui["inventory-wood"].textContent = observation ? observation.self.inventory.wood : "—";
-    ui["depot-wood"].textContent = observation ? observation.depot.wood : "—";
-    ui["depot-position"].textContent = observation ? `位于 ${coord(observation.depot.position)}` : "位置待确认";
+    ui["depot-wood"].textContent = observation ? isWilderness() ? resourceNodes().reduce((sum,n)=>sum+n.remainingWood,0) : observation.depot.wood : "—";
+    ui["resource-source-label"].textContent = isWilderness() ? "野生木材" : "公共储备";
+    ui["depot-position"].textContent = observation ? isWilderness() ? "到树旁采集，才成为库存" : `位于 ${coord(observation.depot.position)}` : "位置待确认";
     ui["state-version"].textContent = observation ? observation.stateVersion : "—";
     ui["resident-title"].textContent = identity ? `居民 ${identity.actorId}` : "等待入驻";
     ui["resident-avatar"].textContent = identity?.actorId || "?";
     ui["audit-status"].textContent = observation?.resourceAudit?.conserved === true ? "材料守恒" : observation ? "核算待确认" : "等待观察";
-    ui["rules-version"].textContent = observation ? `规则 ${observation.rulesVersion}${isConsent() ? " · 画布协商修改" : isMosaic() ? " · 花园共同画布" : isPostcards() ? " · 共同手记" : isActivities() ? " · 地点与旅程" : isPassage() ? " · 两地通行" : ""}` : "规则待确认";
-    ui["page-title"].textContent = isConsent() ? "一起画，也一起决定。" : isMosaic() ? "留一点颜色，等下一个人。" : isPostcards() ? "你来过，也留下一点什么。" : isActivities() ? "选一处风景，留下你的足迹。" : isPassage() ? "搭一座桥，去另一片土地。" : "走一走，也建一点什么。";
-    ui["scenario-copy"].textContent = isConsent() ? "添上自己的颜色，也尊重别人留下的笔触。想修改对方的格子，先写一份提议，等对方决定。" : isMosaic() ? "到花园，一起画一幅小画。读懂先来者留下的形状，添上你的颜色，让共同的作品慢慢生长。" : isPostcards() ? "走到花园、河岸或观景台，读读先到的人留下的话。记录到访后，也能把一句话留给后来者。" : isActivities() ? "花园、河岸步道与彼岸观景台。沿途走走，到现场记录一次到访；跨河的桥由居民共同建设。" : isPassage() ? "河道两格宽，逐段铺桥后就能往返两岸。桥向所有居民开放，探索不消耗木材。" : "两名居民，一片共享的陆地。探索不需要劳动；创造从有限的材料开始。";
-    ui["map-title"].textContent = isPassage() ? "两地之间" : "共同的土地";
+    ui["rules-version"].textContent = observation ? `规则 ${observation.rulesVersion}${isWilderness() ? " · 原始开局与采集" : isConsent() ? " · 画布协商修改" : isMosaic() ? " · 花园共同画布" : isPostcards() ? " · 共同手记" : isActivities() ? " · 地点与旅程" : isPassage() ? " · 两地通行" : ""}` : "规则待确认";
+    ui["page-title"].textContent = isWilderness() ? "空手入原野，亲手建起生活。" : isConsent() ? "一起画，也一起决定。" : isMosaic() ? "留一点颜色，等下一个人。" : isPostcards() ? "你来过，也留下一点什么。" : isActivities() ? "选一处风景，留下你的足迹。" : isPassage() ? "搭一座桥，去另一片土地。" : "走一走，也建一点什么。";
+    ui["scenario-copy"].textContent = isWilderness() ? "居民散落在河流两岸，最初没有现成库存或建筑。从身旁的树木采集材料，搭起第一座木台，或造桥走向彼此。" : isConsent() ? "添上自己的颜色，也尊重别人留下的笔触。想修改对方的格子，先写一份提议，等对方决定。" : isMosaic() ? "到花园，一起画一幅小画。读懂先来者留下的形状，添上你的颜色，让共同的作品慢慢生长。" : isPostcards() ? "走到花园、河岸或观景台，读读先到的人留下的话。记录到访后，也能把一句话留给后来者。" : isActivities() ? "花园、河岸步道与彼岸观景台。沿途走走，到现场记录一次到访；跨河的桥由居民共同建设。" : isPassage() ? "河道两格宽，逐段铺桥后就能往返两岸。桥向所有居民开放，探索不消耗木材。" : "两名居民，一片共享的陆地。探索不需要劳动；创造从有限的材料开始。";
+    $("map-description").textContent = isWilderness() ? "点选树木后在身旁采集，或选择空地搭建。坐标从左上角 (0, 0) 开始。" : "点击一格选择建造位置。坐标从左上角 (0, 0) 开始。";
+    ui["map-title"].textContent = isWilderness() ? "散落的原野" : isPassage() ? "两地之间" : "共同的土地";
     $("resident-report-link").href = isConsent() ? "resident.html?sample=consent-review" : isMosaic() ? "resident.html?sample=mosaic" : isPostcards() ? "resident.html?sample=postcards" : isActivities() ? "resident.html?sample=activities" : "resident.html";
     ui["water-legend"].hidden = ui["bridge-legend"].hidden = !isPassage();
+    ui["claim-section"].hidden = isWilderness();
+    ui["depot-legend"].hidden = ui["goal-legend"].hidden = !observation || isWilderness();
+    ui["tree-legend"].hidden = !isWilderness();
+    ui["wall-label"].textContent = isWilderness() ? "岩壁" : "墙";
+    renderGather();
     renderRecipes();
     renderActivities();
     renderPostcards();
@@ -655,6 +677,19 @@
     renderEvents();
     renderWorldDescription();
     drawWorld();
+  }
+
+  function renderGather() {
+    ui["gather-panel"].hidden = !isWilderness();
+    const nodes = resourceNodes(), selector = ui["gather-node"];
+    const options = [{value:"",text:"选择一处树木"}, ...nodes.map(n => ({value:n.nodeId,text:`树木 ${coord(n.position)} · ${n.remainingWood ? `余 ${n.remainingWood} 木材` : "已采空"}`}))];
+    if (JSON.stringify(options) !== selector.dataset.options) {
+      selector.replaceChildren(...options.map(o => new Option(o.text,o.value)));selector.dataset.options=JSON.stringify(options);
+    }
+    const tree = selectedTree();selector.value=tree?.nodeId || "";selector.disabled=!canAct();
+    const distance=tree ? Math.abs(tree.position[0]-observation.self.position[0])+Math.abs(tree.position[1]-observation.self.position[1]) : null;
+    ui["gather-button"].disabled=!canAct() || !tree || tree.remainingWood===0 || distance!==1;
+    ui["gather-hint"].textContent=!tree ? "选一棵树，走到上下左右相邻一格再砍取。" : tree.remainingWood===0 ? "这里已采空，树桩处现在可以通行或搭建。" : distance===1 ? `这棵树还可采 ${tree.remainingWood} 木材；每次确认后记入你的库存。` : `与你相距 ${distance} 格，请先走到树旁。`;
   }
 
   function renderRecipes() {
@@ -968,9 +1003,10 @@
     const labels = [];
     if (observation) {
       const blocked = observation.world.blocked.some((p) => sameCell(p, selected));
-      labels.push(isWater(selected) ? blocked ? "水面，尚不可通行" : "水面，服务已确认可通行" : blocked ? "墙体，无法通行或建造" : "可通行陆地");
-      if (sameCell(observation.depot.position, selected)) labels.push("公共储备点");
-      if (sameCell(observation.world.goal, selected)) labels.push("探索目标");
+      const tree=selectedTree();
+      labels.push(tree?.remainingWood > 0 ? `树木，尚余 ${tree.remainingWood} 木材` : isWater(selected) ? blocked ? "水面，尚不可通行" : "水面，服务已确认可通行" : blocked ? isWilderness() ? "岩壁，无法通行或建造" : "墙体，无法通行或建造" : "可通行陆地");
+      if (!isWilderness() && sameCell(observation.depot.position, selected)) labels.push("公共储备点");
+      if (!isWilderness() && sameCell(observation.world.goal, selected)) labels.push("探索目标");
       for (const activity of activities()) if (sameCell(activity.position, selected)) labels.push(activity.label);
       const entity = observation.entities.find((e) => sameCell(e.position, selected));
       if (entity) labels.push(`已有${entityName(entity.definitionId)}`);
@@ -999,8 +1035,9 @@
       text.className = "event-message";
       const who = event.actorId === identity?.actorId ? "你" : `居民 ${event.actorId || "—"}`;
       const definitionId = event.definitionId || observation?.entities.find((e) => sameCell(e.position, event.position))?.definitionId;
-      text.textContent = event.type === "worldSeeded" ? "小世界诞生，公共储备已就绪。"
+      text.textContent = event.type === "worldSeeded" ? isWilderness() ? "居民散落原野，木材仍在树上，尚无公共储备。" : "小世界诞生，公共储备已就绪。"
         : event.type === "moved" ? `${who} 移动到 ${event.position ? coord(event.position) : "新位置"}。`
+          : event.type === "gathered" ? `${who} 在 ${event.position ? coord(event.position) : "树木旁"} 砍取了 ${event.quantity} 单位木材。`
           : event.type === "claimed" ? `${who} 领取了${event.quantity === null ? "" : ` ${event.quantity} 单位`}木材。`
             : event.type === "visited" ? `${who} 到访了${activityName(event.activityId)}。`
             : event.type === "postcard_shared" ? `${who} 在${activityName(event.activityId)}留下了一篇手记。`
@@ -1023,7 +1060,7 @@
       return;
     }
     const d = observation;
-    const text = `8 × 8 ${isPassage() ? "两地通行世界" : "陆地"}。墙：${wallCells().map(coord).join("、") || "无"}。水面：${waterCells().map(coord).join("、") || "无"}。不可通行：${d.world.blocked.map(coord).join("、") || "无"}。储备：${coord(d.depot.position)}。目标：${coord(d.world.goal)}。居民：${d.residents.map((r) => `${r.actorId} ${coord(r.position)}`).join("；")}。设施：${d.entities.map((e) => `${entityName(e.definitionId)} ${coord(e.position)}`).join("、") || "无"}。`;
+    const text = `8 × 8 ${isWilderness() ? "原野" : isPassage() ? "两地通行世界" : "陆地"}。${isWilderness() ? "岩壁" : "墙"}：${wallCells().map(coord).join("、") || "无"}。水面：${waterCells().map(coord).join("、") || "无"}。不可通行：${d.world.blocked.map(coord).join("、") || "无"}。${isWilderness() ? `野生树木：${resourceNodes().map(n=>`${coord(n.position)} 余 ${n.remainingWood} 木材`).join("；")}。无公共储备` : `储备：${coord(d.depot.position)}。目标：${coord(d.world.goal)}`}。居民：${d.residents.map((r) => `${r.actorId} ${coord(r.position)}`).join("；")}。设施：${d.entities.map((e) => `${entityName(e.definitionId)} ${coord(e.position)}`).join("、") || "无"}。`;
     const activityText = isActivities() ? `活动地点：${activities().map((a) => `${a.label} ${coord(a.position)}`).join("、")}。` : "";
     ui["world-summary"].textContent = text + activityText;
     ui["world-canvas"].setAttribute("aria-label", `世界版本 ${d.stateVersion}。${text}${activityText}${selected ? `选择格 ${coord(selected)}。` : ""}`);
@@ -1100,6 +1137,10 @@
     const center = (p) => [margin + (p[0] + .5) * unit, margin + (p[1] + .5) * unit];
     for (const wall of wallCells()) {
       const [x, y] = center(wall);
+      if (isWilderness()) {
+        ctx.fillStyle="#657263";ctx.beginPath();ctx.moveTo(x-unit*.43,y+unit*.39);ctx.lineTo(x-unit*.45,y-unit*.12);ctx.lineTo(x-unit*.24,y-unit*.43);ctx.lineTo(x+unit*.24,y-unit*.4);ctx.lineTo(x+unit*.44,y+unit*.06);ctx.lineTo(x+unit*.3,y+unit*.43);ctx.closePath();ctx.fill();
+        ctx.fillStyle="#84907b";ctx.beginPath();ctx.moveTo(x-unit*.24,y-unit*.43);ctx.lineTo(x+unit*.24,y-unit*.4);ctx.lineTo(x+unit*.12,y-unit*.06);ctx.lineTo(x-unit*.16,y+unit*.05);ctx.closePath();ctx.fill();continue;
+      }
       ctx.fillStyle = "#51624e";
       ctx.fillRect(x - unit * .43, y - unit * .39, unit * .86, unit * .84);
       ctx.fillStyle = "#718169";
@@ -1110,6 +1151,15 @@
       ctx.moveTo(x - unit * .4, y - unit * .08); ctx.lineTo(x + unit * .4, y - unit * .08);
       ctx.moveTo(x, y - unit * .4); ctx.lineTo(x, y - unit * .08);
       ctx.stroke();
+    }
+    for (const tree of resourceNodes()) {
+      const [x,y]=center(tree.position);
+      ctx.fillStyle="#8b6844";ctx.fillRect(x-unit*.07,y-unit*.02,unit*.14,unit*.33);
+      if (tree.remainingWood > 0) {
+        ctx.fillStyle="#3b7252";ctx.beginPath();ctx.arc(x,y-unit*.12,unit*.29,0,Math.PI*2);ctx.fill();
+        ctx.fillStyle="#579064";ctx.beginPath();ctx.arc(x-unit*.09,y-unit*.2,unit*.16,0,Math.PI*2);ctx.fill();
+        ctx.fillStyle="#fffdf3";ctx.font=`600 ${Math.max(10,unit*.24)}px system-ui,sans-serif`;ctx.fillText(String(tree.remainingWood),x,y-unit*.08);
+      } else {ctx.fillStyle="#b68b58";ctx.beginPath();ctx.ellipse(x,y+unit*.13,unit*.16,unit*.08,0,0,Math.PI*2);ctx.fill();}
     }
     for (const entity of observation.entities) {
       const [x, y] = center(entity.position);
@@ -1136,7 +1186,7 @@
       ctx.fillStyle = "#876d4b";
       for (const dx of [-.3, .3]) for (const dy of [-.3, .24]) ctx.fillRect(x + unit * dx, y + unit * dy, 2, 2);
     }
-    {
+    if (!isWilderness()) {
       const [x, y] = center(observation.depot.position);
       ctx.fillStyle = "#a48350";
       ctx.fillRect(x - unit * .31, y - unit * .29, unit * .62, unit * .58);
@@ -1159,6 +1209,10 @@
     }
     for (const [index, activity] of activities().entries()) {
       const [x, y] = center(activity.position);
+      if (isWilderness()) {
+        ctx.strokeStyle="#9d8059";ctx.lineWidth=Math.max(1,unit*.025);ctx.setLineDash([unit*.07,unit*.06]);ctx.strokeRect(x-unit*.42,y-unit*.42,unit*.84,unit*.84);ctx.setLineDash([]);
+        ctx.fillStyle="#f7f3e6";ctx.beginPath();ctx.arc(x+unit*.3,y+unit*.3,unit*.13,0,Math.PI*2);ctx.fill();ctx.fillStyle="#755f41";ctx.font=`600 ${Math.max(9,unit*.19)}px system-ui,sans-serif`;ctx.fillText(String(index+1),x+unit*.3,y+unit*.3);continue;
+      }
       ctx.fillStyle = selectedActivity()?.id === activity.id ? "#b16d45" : "#9d8059";
       ctx.beginPath(); ctx.moveTo(x, y - unit * .34); ctx.lineTo(x + unit * .31, y); ctx.lineTo(x, y + unit * .34); ctx.lineTo(x - unit * .31, y); ctx.closePath(); ctx.fill();
       ctx.fillStyle = "#fffdf3"; ctx.font = `600 ${Math.max(10, unit * .24)}px system-ui,sans-serif`;
@@ -1218,6 +1272,13 @@
     event.preventDefault();
     const [dx, dy] = directions[name];
     submitAction({ type: "move", dx, dy });
+  });
+  ui["gather-node"].addEventListener("change", () => {
+    const node=resourceNodes().find(n=>n.nodeId===ui["gather-node"].value);
+    if(node)selectCell(node.position);
+  });
+  ui["gather-button"].addEventListener("click", () => {
+    const node=selectedTree();if(node&&!ui["gather-button"].disabled)submitAction({type:"gather",nodeId:node.nodeId});
   });
   ui["claim-button"].addEventListener("click", () => {
     const quantity = ui["claim-quantity"].valueAsNumber;

@@ -35,7 +35,7 @@ async function until(predicate, message, timeout = 12000) {
 }
 
 async function startService() {
-  service = spawn("dotnet", [dll], { cwd: root, env: { ...process.env, WORLD_URL: url, WORLD_DATA_DIR: data, WORLD_ENABLE_FAULTS: "0" }, stdio: ["ignore", logFd, logFd] });
+  service = spawn("dotnet", [dll], { cwd: root, env: { ...process.env, WORLD_URL: url, WORLD_DATA_DIR: data, WORLD_SCENARIO: "foundation-v1", WORLD_ENABLE_FAULTS: "0" }, stdio: ["ignore", logFd, logFd] });
   await until(async () => {
     if (service.exitCode !== null) throw new Error(`Candidate exited ${service.exitCode}`);
     try { return (await fetch(url + "/healthz")).ok; } catch { return false; }

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "python3 scripts/check.py",
     "test:http": "python3 scripts/check.py --suite http",
-    "test:browser": "python3 scripts/check.py --suite browser"
+    "test:browser": "python3 scripts/check.py --suite browser",
+    "start": "bash scripts/run_wilderness.sh"
   },
   "license": "MIT"
 }

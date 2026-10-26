@@ -46,12 +46,13 @@ internal sealed record WorldAction(string Type, long Dx = 0, long Dy = 0, long Q
     string? RecipeId = null, long X = 0, long Y = 0, string? ActivityId = null,
     string? VisitCommandId = null, string? Text = null, long ExpectedMosaicRevision = 0,
     MosaicPatchCell[]? Patch = null, string? ProposalActorId = null, string? ProposalCommandId = null,
-    string? Decision = null)
+    string? Decision = null, string? NodeId = null)
 {
     public object Canonical => Type switch
     {
         "move" => new { type = Type, dx = Dx, dy = Dy },
         "claim" => new { type = Type, quantity = Quantity },
+        "gather" => new { type = Type, nodeId = NodeId },
         "visit" => new { type = Type, activityId = ActivityId },
         "postcard" => new { type = Type, activityId = ActivityId, visitCommandId = VisitCommandId, text = Text },
         "mosaic" => new { type = Type, activityId = ActivityId, visitCommandId = VisitCommandId,
@@ -119,6 +120,12 @@ internal sealed record WorldCommand(int SchemaVersion, string RulesVersion, stri
                     var quantity = Integer(action.GetProperty("quantity"));
                     if (quantity is < 1 or > 12) Invalid("领取数量必须为 1 至 12 的整数");
                     parsed = new(type, Quantity: quantity);
+                    break;
+                case "gather":
+                    Fields(action, "type", "nodeId");
+                    var nodeId = String(action.GetProperty("nodeId"));
+                    if (!Protocol.ValidCommandId(nodeId)) Invalid("资源节点 ID 格式无效");
+                    parsed = new(type, NodeId: nodeId);
                     break;
                 case "build":
                     Fields(action, "type", "recipeId", "at");

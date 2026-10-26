@@ -6,10 +6,11 @@ internal sealed record EntryBridge(string EntityId, string OwnerActorId, long[] 
 internal static class EntryGuide
 {
     public static object Build(WorldScenario scenario, long version, string actorId, long x, long y,
-        long publicWood, long ownWood, IReadOnlyList<EntryBridge> bridges)
+        long publicWood, long ownWood, IReadOnlyList<EntryBridge> bridges, IReadOnlyList<WorldResourceNode> resources)
     {
         var start = (X: x, Y: y);
         var bridgeAt = bridges.ToDictionary(b => (X: b.Position[0], Y: b.Position[1]));
+        var liveTrees = resources.Where(n => n.RemainingWood > 0).Select(n => (n.Position[0], n.Position[1])).ToHashSet();
         var previous = new Dictionary<(long X, long Y), (long X, long Y)> { [start] = start };
         var queue = new Queue<(long X, long Y)>();
         queue.Enqueue(start);
@@ -18,7 +19,7 @@ internal static class EntryGuide
             foreach (var direction in directions)
             {
                 var next = (X: current.X + direction.X, Y: current.Y + direction.Y);
-                if (!WorldScenario.InBounds(next.X, next.Y) || WorldScenario.IsWall(next.X, next.Y)
+                if (!WorldScenario.InBounds(next.X, next.Y) || WorldScenario.IsWall(next.X, next.Y) || liveTrees.Contains(next)
                     || scenario.IsWater(next.X, next.Y) && !bridgeAt.ContainsKey(next) || previous.ContainsKey(next)) continue;
                 previous[next] = current;
                 queue.Enqueue(next);
@@ -46,7 +47,10 @@ internal static class EntryGuide
         {
             version = 1, stateVersion = version, actorId, position = new[] { x, y },
             sharedBridges = bridges, places,
-            materials = new { publicWood, ownWood, depotPosition = new[] { 1, 1 } },
+            materials = scenario.SupportsGathering
+                ? (object)new { publicWood, ownWood, depotPosition = new[] { 1, 1 }, depotAvailable = false,
+                    wildWood = resources.Sum(n => n.RemainingWood) }
+                : new { publicWood, ownWood, depotPosition = new[] { 1, 1 } },
             participation = new { walkWoodCost = 0, visitSupported = scenario.SupportsActivities,
                 postcardSupported = scenario.SupportsPostcards, mosaicSupported = scenario.SupportsMosaic,
                 foreignMosaicNeedsConsent = scenario.SupportsMosaicConsent }

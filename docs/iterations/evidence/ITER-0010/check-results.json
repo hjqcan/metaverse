@@ -1,0 +1,148 @@
+{
+  "recordedAtUtc": "2026-10-26T01:30:10.973587+00:00",
+  "suite": "all",
+  "passed": true,
+  "actualModelCalls": 0,
+  "results": [
+    {
+      "name": "restore",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/restore.log",
+      "evidence": null
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/build.log",
+      "evidence": null
+    },
+    {
+      "name": "http-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/http-foundation.log",
+      "evidence": ".local/iter0001/api/20261026T093013-ecdc54/results.json"
+    },
+    {
+      "name": "http-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/http-passage.log",
+      "evidence": ".local/iter0002/api/20261026T093013-a130dc/results.json"
+    },
+    {
+      "name": "http-resident_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/http-resident_mission.log",
+      "evidence": ".local/iter0003/api/20261026T093013-83ca90/results.json"
+    },
+    {
+      "name": "http-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/http-activities.log",
+      "evidence": ".local/iter0004/api/20261026T093022-783d62/results.json"
+    },
+    {
+      "name": "http-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/http-postcards.log",
+      "evidence": ".local/iter0005/api/20261026T093022-08e2bb/results.json"
+    },
+    {
+      "name": "http-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/http-mosaic.log",
+      "evidence": ".local/iter0006/api/20261026T093022-057b0c/results.json"
+    },
+    {
+      "name": "http-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/http-consent.log",
+      "evidence": ".local/iter0007/api/20261026T093029-9ef004/results.json"
+    },
+    {
+      "name": "http-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/http-inbox.log",
+      "evidence": ".local/iter0008/api/20261026T093031-453438/results.json"
+    },
+    {
+      "name": "http-entry_guide",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/http-entry_guide.log",
+      "evidence": ".local/iter0009/api/20261026T093032-db3519/results.json"
+    },
+    {
+      "name": "http-wilderness",
+      "exitCode": 0,
+      "log": ".local/agents/iter0010/wilderness-api-final.log",
+      "evidence": ".local/iter0010/api/20261026T093138-1c460d/results.json",
+      "supersededEvidence": ".local/iter0010/api/20261026T093038-06cdbe/results.json"
+    },
+    {
+      "name": "browser-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/browser-foundation.log",
+      "evidence": ".local/iter0001/browser/2026-10-26T01-30-47-108Z/results.json"
+    },
+    {
+      "name": "browser-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/browser-passage.log",
+      "evidence": ".local/iter0002/browser/2026-10-26T01-30-47-291Z/results.json"
+    },
+    {
+      "name": "browser-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/browser-resident.log",
+      "evidence": ".local/iter0003/browser/2026-10-26T01-30-51-865Z/results.json"
+    },
+    {
+      "name": "browser-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/browser-activities.log",
+      "evidence": ".local/iter0004/browser/2026-10-26T01-30-53-421Z/results.json"
+    },
+    {
+      "name": "browser-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/browser-postcards.log",
+      "evidence": ".local/iter0005/browser/2026-10-26T01-30-55-687Z/results.json"
+    },
+    {
+      "name": "browser-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/browser-mosaic.log",
+      "evidence": ".local/iter0006/browser/2026-10-26T01-30-56-539Z/results.json"
+    },
+    {
+      "name": "browser-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/browser-consent.log",
+      "evidence": ".local/iter0007/browser/2026-10-26T01-30-58-982Z/results.json"
+    },
+    {
+      "name": "browser-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/browser-inbox.log",
+      "evidence": ".local/iter0008/browser/2026-10-26T01-31-04-881Z/results.json"
+    },
+    {
+      "name": "browser-entry",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/browser-entry.log",
+      "evidence": ".local/iter0009/browser/2026-10-26T01-31-07-936Z/results.json"
+    },
+    {
+      "name": "browser-wilderness",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T013010Z-dd5366/browser-wilderness.log",
+      "evidence": ".local/iter0010/browser/2026-10-26T01-31-11-170Z/results.json"
+    }
+  ],
+  "kind": "full-regression-plus-targeted-recheck",
+  "initialRunPassed": false,
+  "correction": "Default-scenario test created a second candidate in its already-existing setUp directory; use a distinct candidate directory and rerun all 16 wilderness HTTP cases.",
+  "distinctCasesPassed": {
+    "http": 154,
+    "browser": 105
+  }
+}

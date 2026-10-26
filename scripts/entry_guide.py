@@ -16,6 +16,9 @@ def public_entry_guide(observed):
         result['sharedBridges'] = [pick(b, ('entityId', 'ownerActorId', 'position')) for b in guide['sharedBridges']]
         result['places'] = [pick(p, ('id', 'label', 'position', 'activityId', 'reachable', 'walkingSteps', 'route', 'bridgeEntityIds')) for p in guide['places']]
         result['materials'] = pick(guide['materials'], ('publicWood', 'ownWood', 'depotPosition'))
+        for key in ('depotAvailable', 'wildWood'):
+            if key in guide['materials']:
+                result['materials'][key] = deepcopy(guide['materials'][key])
         result['participation'] = pick(guide['participation'], ('walkWoodCost', 'visitSupported', 'postcardSupported', 'mosaicSupported', 'foreignMosaicNeedsConsent'))
         return result
     except (KeyError, TypeError):

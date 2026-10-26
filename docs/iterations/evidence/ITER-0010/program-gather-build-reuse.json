@@ -1,0 +1,67 @@
+{
+  "kind": "program-gather-build-and-reuse",
+  "actualModelCalls": 0,
+  "initialResidents": [
+    {
+      "actorId": "a1",
+      "position": [
+        1,
+        1
+      ]
+    },
+    {
+      "actorId": "a2",
+      "position": [
+        6,
+        6
+      ]
+    }
+  ],
+  "initialInventoryWood": 0,
+  "initialWildWood": 12,
+  "builderGatheredWood": 6,
+  "builderBridges": [
+    {
+      "entityId": "e194bb215695f484ebfc5078cc0180492",
+      "definitionId": "bridge",
+      "definitionVersion": 1,
+      "rulesVersion": "r7",
+      "ownerActorId": "a1",
+      "position": [
+        4,
+        3
+      ],
+      "embodiedWood": 3
+    },
+    {
+      "entityId": "e984bcf26b3bd4dcf81410e69c5805d69",
+      "definitionId": "bridge",
+      "definitionVersion": 1,
+      "rulesVersion": "r7",
+      "ownerActorId": "a1",
+      "position": [
+        5,
+        3
+      ],
+      "embodiedWood": 3
+    }
+  ],
+  "travelerOrigin": [
+    6,
+    6
+  ],
+  "travelerReached": [
+    1,
+    1
+  ],
+  "travelerReturned": true,
+  "travelerInventoryWood": 0,
+  "finalResourceAudit": {
+    "issuedWood": 12,
+    "wildWood": 6,
+    "depotWood": 0,
+    "inventoryWood": 0,
+    "embodiedWood": 6,
+    "conserved": true
+  }
+}

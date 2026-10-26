@@ -15,6 +15,7 @@ internal sealed record WorldScenario(string Id, string RulesVersion, int GoalX)
     public static readonly WorldScenario Postcards = new("postcards-v1", "r4", 6);
     public static readonly WorldScenario Mosaic = new("mosaic-v1", "r5", 6);
     public static readonly WorldScenario Consent = new("consent-v1", "r6", 6);
+    public static readonly WorldScenario Wilderness = new("wilderness-v1", "r7", 6);
 
     public static readonly IReadOnlyList<MosaicColor> MosaicPalette = Array.AsReadOnly<MosaicColor>([
         new("blank", "空白", "#F4F0E6"), new("leaf", "叶绿", "#42745B"),
@@ -28,11 +29,23 @@ internal sealed record WorldScenario(string Id, string RulesVersion, int GoalX)
         new("lookout", "彼岸观景台", 6, 1, "从彼岸看两岸全景，需要跨河；初始须建设两段桥。")
     ]);
 
+    private static readonly IReadOnlyList<WorldActivity> WildPlaces = Array.AsReadOnly<WorldActivity>([
+        new("garden", "林间空地", 1, 6, "树木之间的空地，没有现成建筑；可探索，也可在空地搭建。"),
+        new("riverwalk", "河岸", 2, 5, "自然河岸的一片林地，可在附近采集木材。"),
+        new("lookout", "对岸林地", 6, 1, "河对岸的原野；两岸居民可以采集木材，逐步造桥相见。")
+    ]);
+    public static readonly IReadOnlyList<WorldResourceNode> InitialTrees = Array.AsReadOnly<WorldResourceNode>([
+        new("tree-west-north", "tree", [0, 1], 3, 3), new("tree-west-south", "tree", [2, 5], 3, 3),
+        new("tree-east-north", "tree", [6, 2], 3, 3), new("tree-east-south", "tree", [7, 6], 3, 3)
+    ]);
+
+    public bool SupportsGathering => Id == Wilderness.Id;
+    public int StorageVersion => SupportsGathering ? 7 : SupportsMosaicConsent ? 6 : SupportsMosaic ? 5 : SupportsPostcards ? 4 : SupportsActivities ? 3 : 2;
     public bool SupportsMosaicConsent => Id == Consent.Id;
     public bool SupportsMosaic => Id == Mosaic.Id || SupportsMosaicConsent;
     public bool SupportsPostcards => Id == Postcards.Id || SupportsMosaic;
-    public bool SupportsActivities => Id == Activities.Id || SupportsPostcards;
-    public IReadOnlyList<WorldActivity> ActivityCatalog => SupportsActivities ? ActivityDefinitions : Array.Empty<WorldActivity>();
+    public bool SupportsActivities => Id == Activities.Id || SupportsPostcards || SupportsGathering;
+    public IReadOnlyList<WorldActivity> ActivityCatalog => SupportsGathering ? WildPlaces : SupportsActivities ? ActivityDefinitions : Array.Empty<WorldActivity>();
 
     public static WorldScenario FromId(string id) => id switch
     {
@@ -42,6 +55,7 @@ internal sealed record WorldScenario(string Id, string RulesVersion, int GoalX)
         "postcards-v1" => Postcards,
         "mosaic-v1" => Mosaic,
         "consent-v1" => Consent,
+        "wilderness-v1" => Wilderness,
         _ => throw new InvalidOperationException("不支持的 WORLD_SCENARIO 场景")
     };
 
@@ -53,3 +67,5 @@ internal sealed record WorldScenario(string Id, string RulesVersion, int GoalX)
 }
 
 internal sealed record MosaicColor(string Id, string Label, string Hex);
+
+internal sealed record WorldResourceNode(string NodeId, string Kind, long[] Position, long InitialWood, long RemainingWood);

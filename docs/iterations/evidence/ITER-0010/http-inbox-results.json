@@ -1,0 +1,97 @@
+{
+  "suite": "mosaic-inbox-http-v1",
+  "decisionSource": "explicit-test-double",
+  "actualModelCalls": 0,
+  "recordedAtUtc": "2026-10-26T01:30:51.687079+00:00",
+  "passed": true,
+  "testsRun": 17,
+  "tests": [
+    {
+      "test": "__main__.InboxAcceptance.test_01_oldest_pending_survives_recent_50_and_own_100_limits",
+      "passed": true,
+      "seconds": 6.239185421960428
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_02_scope_is_derived_from_authenticated_resident",
+      "passed": true,
+      "seconds": 0.5670764439855702
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_03_status_counts_and_cursor_are_independent",
+      "passed": true,
+      "seconds": 1.2290161200216971
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_04_get_and_errors_leave_complete_logical_database_unchanged",
+      "passed": true,
+      "seconds": 0.5018852039938793
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_05_strict_query_and_detail_path_validation",
+      "passed": true,
+      "seconds": 0.43059952795738354
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_06_new_insert_does_not_repeat_or_skip_older_page",
+      "passed": true,
+      "seconds": 0.8499999550404027
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_07_review_changes_filter_and_detail_but_not_proposal_order",
+      "passed": true,
+      "seconds": 0.5459656399907544
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_08_read_is_public_but_review_authority_and_authentication_remain",
+      "passed": true,
+      "seconds": 0.48459158395417035
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_09_populated_r6_is_read_without_migration_or_logical_changes",
+      "passed": true,
+      "seconds": 0.8008608060190454
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_10_old_scenarios_reject_new_reads_without_querying_absent_tables",
+      "passed": true,
+      "seconds": 1.6135223060264252
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_11_new_task_reads_original_older_proposal_before_single_choice",
+      "passed": true,
+      "seconds": 3.2034905020263977
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_12_lookup_failure_cannot_fallback_to_recent_list_or_call_model",
+      "passed": true,
+      "seconds": 0.4916698969900608
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_13_wrong_lookup_identity_reference_and_evidence_fail_before_choice",
+      "passed": true,
+      "seconds": 0.5026036790222861
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_14_newer_detail_refreshes_observation_without_replacing_original",
+      "passed": true,
+      "seconds": 0.5874974330072291
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_15_old_service_capability_absence_preserves_existing_review_path",
+      "passed": true,
+      "seconds": 0.5804430849966593
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_16_resume_and_completed_task_do_not_lookup_again",
+      "passed": true,
+      "seconds": 0.903951407992281
+    },
+    {
+      "test": "__main__.InboxAcceptance.test_17_malformed_capability_and_reference_do_not_start_task",
+      "passed": true,
+      "seconds": 0.45070077799027786
+    }
+  ],
+  "dataRoot": ".local/iter0008/api/20261026T093031-453438",
+  "failures": []
+}

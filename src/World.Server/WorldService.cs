@@ -44,13 +44,15 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
                     bridgeDetails.Add(new(reader.GetString(0), reader.GetString(4), [reader.GetInt64(5), reader.GetInt64(6)]));
                 }
             }
+        var resources = Scenario.SupportsGathering ? ReadResourceNodes(connection, transaction) : [];
+        var liveTrees = resources.Where(n => n.RemainingWood > 0).Select(n => (n.Position[0], n.Position[1])).ToHashSet();
         var blocked = new List<int[]>();
         var water = new List<int[]>();
         for (var x = 0; x < 8; x++)
             for (var y = 0; y < 8; y++)
             {
                 if (Scenario.IsWater(x, y)) water.Add([x, y]);
-                if (WorldScenario.IsWall(x, y) || Scenario.IsWater(x, y) && !bridges.Contains((x, y)))
+                if (WorldScenario.IsWall(x, y) || liveTrees.Contains((x, y)) || Scenario.IsWater(x, y) && !bridges.Contains((x, y)))
                     blocked.Add([x, y]);
             }
         var recipes = new List<object>();
@@ -75,12 +77,23 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
             mosaicProposals = Scenario.SupportsMosaicConsent ? ReadMosaicProposals(connection, transaction, identity.ActorId) : [],
             mosaicReviews = Scenario.SupportsMosaicConsent ? ReadMosaicReviews(connection, transaction, identity.ActorId) : [] };
         body["residents"] = residents;
-        body["depot"] = new { position = new[] { 1, 1 }, wood = state.DepotWood };
+        body["depot"] = Scenario.SupportsGathering
+            ? (object)new { position = new[] { 1, 1 }, wood = state.DepotWood, available = false }
+            : new { position = new[] { 1, 1 }, wood = state.DepotWood };
+        if (Scenario.SupportsGathering)
+        {
+            body["gathering"] = new { version = 1, quantityPerAction = 1 };
+            body["resourceNodes"] = resources;
+        }
         body["entities"] = entities;
         body["entryGuide"] = EntryGuide.Build(Scenario, state.Version, identity.ActorId, self.X, self.Y,
-            state.DepotWood, self.Wood, bridgeDetails);
-        body["resourceAudit"] = new { issuedWood = state.IssuedWood, depotWood = state.DepotWood, inventoryWood,
-            embodiedWood, conserved = checked(state.DepotWood + inventoryWood + embodiedWood) == state.IssuedWood };
+            state.DepotWood, self.Wood, bridgeDetails, resources);
+        var wildWood = resources.Sum(n => n.RemainingWood);
+        body["resourceAudit"] = Scenario.SupportsGathering
+            ? (object)new { issuedWood = state.IssuedWood, wildWood, depotWood = state.DepotWood, inventoryWood,
+                embodiedWood, conserved = checked(wildWood + state.DepotWood + inventoryWood + embodiedWood) == state.IssuedWood }
+            : new { issuedWood = state.IssuedWood, depotWood = state.DepotWood, inventoryWood,
+                embodiedWood, conserved = checked(state.DepotWood + inventoryWood + embodiedWood) == state.IssuedWood };
         return Protocol.Reply(200, body);
     }
 
@@ -217,7 +230,7 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
         var state = ReadState(connection, transaction);
         var actor = ReadActor(connection, transaction, identity.ActorId);
         var action = request.Action;
-        var fault = configuration.FaultsEnabled && action.Type is "claim" or "build" or "visit" or "postcard" or "mosaic" or "mosaic_propose" or "mosaic_review" ? requestedFault : null;
+        var fault = configuration.FaultsEnabled && action.Type is "claim" or "gather" or "build" or "visit" or "postcard" or "mosaic" or "mosaic_propose" or "mosaic_review" ? requestedFault : null;
         var rejection = Validate(connection, transaction, request, state, actor, identity.ActorId);
         if (rejection is not null)
         {
@@ -257,6 +270,23 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
                 source = "depot";
                 destination = "inventory:" + identity.ActorId;
                 quantity = action.Quantity;
+                break;
+            case "gather":
+                var node = ReadResourceNodes(connection, transaction).Single(n => n.NodeId == action.NodeId);
+                GuardedDebit(Run(connection, transaction, """
+                    UPDATE resource_nodes SET remaining_wood=remaining_wood-1
+                    WHERE world_id=$world AND node_id=$node AND remaining_wood>0
+                    """, ("$world", Protocol.WorldId), ("$node", action.NodeId)));
+                InjectAfterDebit(fault);
+                Run(connection, transaction, "UPDATE residents SET wood=wood+1 WHERE world_id=$world AND actor_id=$actor",
+                    ("$world", Protocol.WorldId), ("$actor", identity.ActorId));
+                result = new { action = "gather", nodeId = node.NodeId, quantity = 1,
+                    position = node.Position, remainingWood = node.RemainingWood - 1, inventoryWood = actor.Wood + 1 };
+                worldEvent = new { seq = cursor, stateVersion = version, commandId = request.CommandId, actorId = identity.ActorId,
+                    type = "gathered", nodeId = node.NodeId, quantity = 1, position = node.Position, remainingWood = node.RemainingWood - 1 };
+                source = "wild-wood";
+                destination = "inventory:" + identity.ActorId;
+                quantity = 1;
                 break;
             case "visit":
                 var visitedAtUtc = DateTimeOffset.UtcNow.ToString("O");
@@ -389,10 +419,22 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
         }
         else if (action.Type == "claim")
         {
+            if (Scenario.SupportsGathering)
+                return (422, new("NO_PUBLIC_DEPOT", "这里尚无公共储备，请到树旁采集木材"));
             if (Math.Abs(actor.X - 1) + Math.Abs(actor.Y - 1) > 1)
                 return (422, new("UNREACHABLE", "请移动到储备点或相邻格领取"));
             if (state.DepotWood < action.Quantity)
                 return (422, new("INSUFFICIENT_RESOURCE", "公共木材储备不足"));
+        }
+        else if (action.Type == "gather")
+        {
+            if (!Scenario.SupportsGathering)
+                return (422, new("GATHERING_UNAVAILABLE", "当前世界不支持自然资源采集"));
+            var node = ReadResourceNodes(connection, transaction).SingleOrDefault(n => n.NodeId == action.NodeId);
+            if (node is null) return (404, new("RESOURCE_NOT_FOUND", "资源节点不存在"));
+            if (node.RemainingWood == 0) return (422, new("RESOURCE_DEPLETED", "这里的木材已采空"));
+            if (Math.Abs(actor.X - node.Position[0]) + Math.Abs(actor.Y - node.Position[1]) != 1)
+                return (422, new("UNREACHABLE", "请移动到树木上下左右相邻的一格再采集"));
         }
         else if (action.Type == "visit")
         {
@@ -499,6 +541,10 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
             if (Scalar(connection, transaction, "SELECT count(*) FROM entities WHERE world_id=$world AND x=$x AND y=$y",
                     ("$world", Protocol.WorldId), ("$x", action.X), ("$y", action.Y)) != 0)
                 return (409, new("CELL_OCCUPIED", "目标格已有实体"));
+            if (Scenario.SupportsGathering && Scalar(connection, transaction,
+                    "SELECT count(*) FROM resource_nodes WHERE world_id=$world AND x=$x AND y=$y AND remaining_wood>0",
+                    ("$world", Protocol.WorldId), ("$x", action.X), ("$y", action.Y)) != 0)
+                return (409, new("CELL_OCCUPIED", "目标格还有树木，请先采集清理"));
             var cost = Scalar(connection, transaction, "SELECT wood_cost FROM recipes WHERE id=$recipe", ("$recipe", action.RecipeId));
             if (actor.Wood < cost) return (422, new("INSUFFICIENT_RESOURCE", "自身木材不足，建造需要 3 单位"));
         }
@@ -506,9 +552,24 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
     }
 
     private bool Walkable(SqliteConnection connection, SqliteTransaction transaction, long x, long y) =>
-        Scenario.IsLand(x, y) || Scenario.IsWater(x, y) && Scalar(connection, transaction,
+        (Scenario.IsLand(x, y) || Scenario.IsWater(x, y) && Scalar(connection, transaction,
             "SELECT count(*) FROM entities WHERE world_id=$world AND x=$x AND y=$y AND definition_id='bridge'",
-            ("$world", Protocol.WorldId), ("$x", x), ("$y", y)) == 1;
+            ("$world", Protocol.WorldId), ("$x", x), ("$y", y)) == 1)
+        && (!Scenario.SupportsGathering || Scalar(connection, transaction,
+            "SELECT count(*) FROM resource_nodes WHERE world_id=$world AND x=$x AND y=$y AND remaining_wood>0",
+            ("$world", Protocol.WorldId), ("$x", x), ("$y", y)) == 0);
+    private static List<WorldResourceNode> ReadResourceNodes(SqliteConnection connection, SqliteTransaction transaction)
+    {
+        var resources = new List<WorldResourceNode>();
+        using var command = Command(connection, transaction,
+            "SELECT node_id,kind,x,y,initial_wood,remaining_wood FROM resource_nodes WHERE world_id=$world ORDER BY node_id",
+            ("$world", Protocol.WorldId));
+        using var reader = command.ExecuteReader();
+        while (reader.Read()) resources.Add(new(reader.GetString(0), reader.GetString(1),
+            [reader.GetInt64(2), reader.GetInt64(3)], reader.GetInt64(4), reader.GetInt64(5)));
+        return resources;
+    }
+
     private static void GuardedDebit(int affected) { if (affected != 1) throw new InvalidOperationException("事务条件写入未命中唯一状态"); }
     private static void InjectAfterDebit(string? fault) { if (fault == "throw-after-debit") throw new InjectedFailure(); }
 

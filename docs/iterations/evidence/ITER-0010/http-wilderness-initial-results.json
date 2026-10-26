@@ -1,0 +1,97 @@
+{
+  "suite": "wilderness-http-v1",
+  "recordedAtUtc": "2026-10-26T01:30:47.111229+00:00",
+  "passed": false,
+  "testsRun": 16,
+  "tests": [
+    {
+      "test": "__main__.WildernessAcceptance.test_01_scattered_empty_hands_natural_sources_and_no_prefabricated_services",
+      "passed": true,
+      "seconds": 0.3161454249639064
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_02_public_claim_and_build_without_collected_wood_are_rejected",
+      "passed": true,
+      "seconds": 0.27058048301842064
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_03_gather_depletes_source_unblocks_land_and_build_spends_actual_inventory",
+      "passed": true,
+      "seconds": 0.3548282199772075
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_04_distance_unknown_node_strict_fields_and_identity",
+      "passed": true,
+      "seconds": 0.31948396598454565
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_05_original_command_replay_has_one_receipt_and_changed_node_conflicts",
+      "passed": true,
+      "seconds": 0.7807671320042573
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_06_failure_after_tree_debit_rolls_back_every_material_fact",
+      "passed": true,
+      "seconds": 0.27452273201197386
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_07_exit_before_commit_keeps_tree_and_inventory_atomic",
+      "passed": true,
+      "seconds": 0.5292569290031679
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_08_exit_after_commit_recovers_original_cut_once",
+      "passed": true,
+      "seconds": 0.5697936650249176
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_09_two_actors_compete_for_final_unit",
+      "passed": true,
+      "seconds": 0.6177490620175377
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_10_collection_builds_shared_bridge_and_other_resident_reuses_it",
+      "passed": true,
+      "seconds": 0.539113836013712
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_11_restart_never_refills_depleted_trees_or_resets_scattered_residents",
+      "passed": true,
+      "seconds": 0.5532459539826959
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_12_guide_routes_respect_live_trees_and_update_after_felling",
+      "passed": true,
+      "seconds": 0.31555866199778393
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_13_old_scenarios_and_populated_r6_are_not_migrated_or_given_trees",
+      "passed": true,
+      "seconds": 2.1741728740162216
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_14_public_context_has_natural_sources_without_claiming_automatic_collection",
+      "passed": true,
+      "seconds": 0.2503952740225941
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_15_completed_wood_sources_do_not_regenerate_and_unsupported_creative_services_stay_absent",
+      "passed": true,
+      "seconds": 0.7281219530268572
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_16_fresh_unspecified_world_defaults_to_wilderness",
+      "passed": false,
+      "seconds": 0.2674849649774842
+    }
+  ],
+  "actualModelCalls": 0,
+  "decisionSource": "explicit-fixed-program",
+  "dataRoot": ".local/iter0010/api/20261026T093038-06cdbe",
+  "failures": [
+    {
+      "test": "test_16_fresh_unspecified_world_defaults_to_wilderness (__main__.WildernessAcceptance.test_16_fresh_unspecified_world_defaults_to_wilderness)",
+      "detail": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/wilderness_api.py\", line 181, in test_16_fresh_unspecified_world_defaults_to_wilderness\n    other=ActivityCandidate(self._testMethodName,scenario=None)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/activities_api.py\", line 29, in __init__\n    self.data.mkdir(parents=True, mode=0o700)\n  File \"/usr/lib/python3.12/pathlib.py\", line 1313, in mkdir\n    os.mkdir(self, mode)\nFileExistsError: [Errno 17] File exists: '/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/.local/iter0010/api/20261026T093038-06cdbe/test_16_fresh_unspecified_world_defaults_to_wilderness'\n"
+    }
+  ]
+}
