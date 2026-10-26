@@ -1,0 +1,92 @@
+{
+  "suite": "wilderness-http-v1",
+  "recordedAtUtc": "2026-10-26T01:42:16.431519+00:00",
+  "passed": true,
+  "testsRun": 16,
+  "tests": [
+    {
+      "test": "__main__.WildernessAcceptance.test_01_scattered_empty_hands_natural_sources_and_no_prefabricated_services",
+      "passed": true,
+      "seconds": 0.25238311802968383
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_02_public_claim_and_build_without_collected_wood_are_rejected",
+      "passed": true,
+      "seconds": 0.31508661597035825
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_03_gather_depletes_source_unblocks_land_and_build_spends_actual_inventory",
+      "passed": true,
+      "seconds": 0.28970769699662924
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_04_distance_unknown_node_strict_fields_and_identity",
+      "passed": true,
+      "seconds": 0.2630243389867246
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_05_original_command_replay_has_one_receipt_and_changed_node_conflicts",
+      "passed": true,
+      "seconds": 0.7614733839873224
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_06_failure_after_tree_debit_rolls_back_every_material_fact",
+      "passed": true,
+      "seconds": 0.26147724298061803
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_07_exit_before_commit_keeps_tree_and_inventory_atomic",
+      "passed": true,
+      "seconds": 0.5130656489636749
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_08_exit_after_commit_recovers_original_cut_once",
+      "passed": true,
+      "seconds": 0.5056806189822964
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_09_two_actors_compete_for_final_unit",
+      "passed": true,
+      "seconds": 0.5334302689880133
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_10_collection_builds_shared_bridge_and_other_resident_reuses_it",
+      "passed": true,
+      "seconds": 0.4379307820345275
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_11_restart_never_refills_depleted_trees_or_resets_scattered_residents",
+      "passed": true,
+      "seconds": 0.5363822549697943
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_12_guide_routes_respect_live_trees_and_update_after_felling",
+      "passed": true,
+      "seconds": 0.33873706799931824
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_13_old_scenarios_and_populated_r6_are_not_migrated_or_given_trees",
+      "passed": true,
+      "seconds": 2.003767713031266
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_14_public_context_has_natural_sources_without_claiming_automatic_collection",
+      "passed": true,
+      "seconds": 0.23773569497279823
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_15_completed_wood_sources_do_not_regenerate_and_unsupported_creative_services_stay_absent",
+      "passed": true,
+      "seconds": 0.6527472919551656
+    },
+    {
+      "test": "__main__.WildernessAcceptance.test_16_fresh_unspecified_world_defaults_to_wilderness",
+      "passed": true,
+      "seconds": 0.7028975440189242
+    }
+  ],
+  "actualModelCalls": 0,
+  "decisionSource": "explicit-fixed-program",
+  "dataRoot": ".local/iter0010/api/20261026T094207-c34fa6",
+  "failures": []
+}

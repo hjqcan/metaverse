@@ -1,0 +1,380 @@
+{
+  "recordedAtUtc": "2026-10-26T01:43:06.140237+00:00",
+  "passed": true,
+  "actualModelCalls": 0,
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "results": [
+    {
+      "name": "basic",
+      "checks": [
+        {
+          "name": "authenticated real observation",
+          "passed": true
+        },
+        {
+          "name": "scattered empty-handed initial state",
+          "passed": true
+        },
+        {
+          "name": "rendered screenshot initial",
+          "passed": true
+        },
+        {
+          "name": "mouse selected cell (0, 1)",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 砍取木材  +1",
+          "passed": true
+        },
+        {
+          "name": "actual gather receipt and inventory 1",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 砍取木材  +1",
+          "passed": true
+        },
+        {
+          "name": "actual gather receipt and inventory 2",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 砍取木材  +1",
+          "passed": true
+        },
+        {
+          "name": "actual gather receipt and inventory 3",
+          "passed": true
+        },
+        {
+          "name": "depleted tree cannot be gathered",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 搭建平台  ·  3 木材",
+          "passed": true
+        },
+        {
+          "name": "construction spends harvested wood",
+          "passed": true
+        },
+        {
+          "name": "rendered screenshot built",
+          "passed": true
+        },
+        {
+          "name": "mouse selected cell (1, 5)",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 走到这里",
+          "passed": true
+        },
+        {
+          "name": "click to walk uses confirmed discrete moves",
+          "passed": true
+        },
+        {
+          "name": "keyboard movement",
+          "passed": true
+        },
+        {
+          "name": "invalid authentication cannot act",
+          "passed": true
+        },
+        {
+          "name": "second resident retains separate spawn",
+          "passed": true
+        },
+        {
+          "name": "second resident sees persistent shared construction",
+          "passed": true
+        },
+        {
+          "name": "rendered screenshot compact",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "bridge",
+      "checks": [
+        {
+          "name": "authenticated real observation",
+          "passed": true
+        },
+        {
+          "name": "mouse selected cell (0, 1)",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 砍取木材  +1",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 砍取木材  +1",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 砍取木材  +1",
+          "passed": true
+        },
+        {
+          "name": "mouse selected cell (1, 5)",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 走到这里",
+          "passed": true
+        },
+        {
+          "name": "walk reached (1, 5)",
+          "passed": true
+        },
+        {
+          "name": "mouse selected cell (2, 5)",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 砍取木材  +1",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 砍取木材  +1",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 砍取木材  +1",
+          "passed": true
+        },
+        {
+          "name": "mouse selected cell (3, 3)",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 走到这里",
+          "passed": true
+        },
+        {
+          "name": "walk reached (3, 3)",
+          "passed": true
+        },
+        {
+          "name": "mouse selected cell (4, 3)",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 铺设桥段  ·  3 木材",
+          "passed": true
+        },
+        {
+          "name": "mouse selected cell (4, 3)",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 走到这里",
+          "passed": true
+        },
+        {
+          "name": "walk reached (4, 3)",
+          "passed": true
+        },
+        {
+          "name": "mouse selected cell (5, 3)",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 铺设桥段  ·  3 木材",
+          "passed": true
+        },
+        {
+          "name": "two bridge segments cost six harvested wood",
+          "passed": true
+        },
+        {
+          "name": "mouse selected cell (1, 1)",
+          "passed": true
+        },
+        {
+          "name": "enabled button: 走到这里",
+          "passed": true
+        },
+        {
+          "name": "walk reached (1, 1)",
+          "passed": true
+        },
+        {
+          "name": "later resident crosses existing bridge without consuming wood",
+          "passed": true
+        },
+        {
+          "name": "rendered screenshot bridge",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "after",
+      "checks": [
+        {
+          "name": "authenticated real observation",
+          "passed": true
+        },
+        {
+          "name": "uncertain command retained and new actions paused",
+          "passed": true
+        },
+        {
+          "name": "other identity cannot inherit pending command",
+          "passed": true
+        },
+        {
+          "name": "other resident inventory unchanged",
+          "passed": true
+        },
+        {
+          "name": "authenticated real observation",
+          "passed": true
+        },
+        {
+          "name": "restart resolves original persisted command",
+          "passed": true
+        },
+        {
+          "name": "exactly one unit after lost response and restart",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "before",
+      "checks": [
+        {
+          "name": "authenticated real observation",
+          "passed": true
+        },
+        {
+          "name": "uncertain command retained and new actions paused",
+          "passed": true
+        },
+        {
+          "name": "other identity cannot inherit pending command",
+          "passed": true
+        },
+        {
+          "name": "other resident inventory unchanged",
+          "passed": true
+        },
+        {
+          "name": "authenticated real observation",
+          "passed": true
+        },
+        {
+          "name": "missing receipt does not discard original",
+          "passed": true
+        },
+        {
+          "name": "retry completes original once",
+          "passed": true
+        },
+        {
+          "name": "retry preserves original ID",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "stale",
+      "checks": [
+        {
+          "name": "authenticated real observation",
+          "passed": true
+        },
+        {
+          "name": "stale response settled as rejection",
+          "passed": true
+        },
+        {
+          "name": "stale action does not manufacture resources",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "wrong-receipt",
+      "checks": [
+        {
+          "name": "authenticated real observation",
+          "passed": true
+        },
+        {
+          "name": "uncertain command retained and new actions paused",
+          "passed": true
+        },
+        {
+          "name": "other identity cannot inherit pending command",
+          "passed": true
+        },
+        {
+          "name": "other resident inventory unchanged",
+          "passed": true
+        },
+        {
+          "name": "authenticated real observation",
+          "passed": true
+        },
+        {
+          "name": "restart resolves original persisted command",
+          "passed": true
+        },
+        {
+          "name": "exactly one unit after lost response and restart",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "offline",
+      "checks": [
+        {
+          "name": "authenticated real observation",
+          "passed": true
+        },
+        {
+          "name": "known completion retained before observation failure",
+          "passed": true
+        },
+        {
+          "name": "failed observation pauses new actions",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "corrupt-journal",
+      "checks": [
+        {
+          "name": "authenticated real observation",
+          "passed": true
+        },
+        {
+          "name": "invalid recovery record pauses actions",
+          "passed": true
+        },
+        {
+          "name": "invalid storage sends no new action",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

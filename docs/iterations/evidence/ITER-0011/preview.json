@@ -1,0 +1,20 @@
+{
+  "url": "http://127.0.0.1:5088",
+  "stateVersion": 1,
+  "scenario": "wilderness-v1",
+  "actor": "a1",
+  "position": [
+    1,
+    0
+  ],
+  "inventoryWood": 0,
+  "resourceAudit": {
+    "issuedWood": 12,
+    "wildWood": 12,
+    "depotWood": 0,
+    "inventoryWood": 0,
+    "embodiedWood": 0,
+    "conserved": true
+  },
+  "entities": 0
+}

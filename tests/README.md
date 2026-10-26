@@ -191,3 +191,9 @@ node tests/browser/wilderness.mjs
 16 项 HTTP／SQLite 验证分散零库存、无公共领料、有限树木与采空、距离与身份、原命令并发／回放、事务回滚与提交前后进程退出、最后一份木材竞争、采集后造桥及另一居民复用、重启不再生、导览障碍、公开输入、旧库兼容和无场景参数时的新世界默认值。每例停服后独立核对自然储量、库存、实体和材料账。11 项真实 Chrome 验证选树、砍取、材料变化、真实搭建、分散身份、丢响应刷新恢复、错误节点回执保留原命令、断线停止、重启与 390px。全部真实模型调用0。
 
 证据在 `.local/iter0010/`；初次 Chrome 异步断言过早读库存，完整运行新增默认场景用例曾复用同一测试目录，这两项测试问题保留原记录，修正后复验。当前汇总 154 项 HTTP、105 项 Chrome，详见 [ITER-0010 报告](../docs/iterations/ITER-0010-results.md)。历史 foundation 套件显式指定原场景；默认新服务和 `npm start` 采用原始开局，已有数据库仍按原场景读取。
+
+## Godot 原生客户端
+
+`dotnet build src/World.Server/World.Server.csproj --no-restore` 后，运行 `GODOT_BIN=/path/to/godot npm run test:godot`。需要 Godot 4.7.2 和 Linux `xvfb-run`，结果及截图保存在 `.local/iter0011/godot/`。此入口独立于不要求安装游戏引擎的 `npm test`，不能把普通 Chrome 回归写成 Godot 验收。
+
+真实 Godot OpenGL 渲染、实际场景鼠标／键盘输入、隔离 .NET / SQLite 服务及故障代理验证采集、搭建、跨岸复用、身份、状态冲突、错误回执、读失败、丢响应与客户端／服务重启。所有测试子进程和代理结束时停止，模型调用0；仅无头导入不算视觉验证。

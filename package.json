@@ -7,7 +7,9 @@
     "test": "python3 scripts/check.py",
     "test:http": "python3 scripts/check.py --suite http",
     "test:browser": "python3 scripts/check.py --suite browser",
-    "start": "bash scripts/run_wilderness.sh"
+    "start": "bash scripts/run_wilderness.sh",
+    "start:godot": "bash scripts/run_godot.sh",
+    "test:godot": "python3 tests/godot_client.py"
   },
   "license": "MIT"
 }
