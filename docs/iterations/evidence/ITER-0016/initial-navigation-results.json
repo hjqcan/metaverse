@@ -1,0 +1,197 @@
+{
+  "passed": true,
+  "groups": 5,
+  "assertions": 40,
+  "results": [
+    {
+      "name": "obstacles",
+      "checks": [
+        {
+          "name": "authenticated r8 navigation world",
+          "passed": true
+        },
+        {
+          "name": "authoritative arrival at (8.0, 9.0)",
+          "passed": true
+        },
+        {
+          "name": "mouse route detours around live tree",
+          "passed": true
+        },
+        {
+          "name": "authoritative arrival at (13.0, 8.5)",
+          "passed": true
+        },
+        {
+          "name": "mouse route detours around rock",
+          "passed": true
+        },
+        {
+          "name": "walking does not rebake geometry",
+          "passed": true
+        },
+        {
+          "name": "unreachable bank issues no walk",
+          "passed": true
+        },
+        {
+          "name": "unreachable location explains failure",
+          "passed": true
+        },
+        {
+          "name": "rendered route",
+          "passed": true
+        },
+        {
+          "name": "all navigation steps accepted without collision",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "tree-change",
+      "checks": [
+        {
+          "name": "authenticated r8 navigation world",
+          "passed": true
+        },
+        {
+          "name": "partially gathered tree keeps navigation",
+          "passed": true
+        },
+        {
+          "name": "partially gathered tree keeps navigation",
+          "passed": true
+        },
+        {
+          "name": "depleted tree rebuilds navigation once",
+          "passed": true
+        },
+        {
+          "name": "depleted trunk opens direct route",
+          "passed": true
+        },
+        {
+          "name": "authoritative arrival at (8.0, 9.0)",
+          "passed": true
+        },
+        {
+          "name": "authoritative arrival at (5.0, 7.0)",
+          "passed": true
+        },
+        {
+          "name": "all navigation steps accepted without collision",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "bridge",
+      "checks": [
+        {
+          "name": "authenticated r8 navigation world",
+          "passed": true
+        },
+        {
+          "name": "before building other bank is unreachable",
+          "passed": true
+        },
+        {
+          "name": "real gathered materials build one bridge",
+          "passed": true
+        },
+        {
+          "name": "authoritative arrival at (26.0, 9.0)",
+          "passed": true
+        },
+        {
+          "name": "distant destination routes through bridge",
+          "passed": true
+        },
+        {
+          "name": "rendered crossed",
+          "passed": true
+        },
+        {
+          "name": "authoritative arrival at (13.0, 7.0)",
+          "passed": true
+        },
+        {
+          "name": "second resident crosses existing bridge with zero wood",
+          "passed": true
+        },
+        {
+          "name": "rendered reused",
+          "passed": true
+        },
+        {
+          "name": "all navigation steps accepted without collision",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "cancel",
+      "checks": [
+        {
+          "name": "authenticated r8 navigation world",
+          "passed": true
+        },
+        {
+          "name": "escape cancels route after outstanding request",
+          "passed": true
+        },
+        {
+          "name": "WASD cancels automatic route",
+          "passed": true
+        },
+        {
+          "name": "newest queued click wins",
+          "passed": true
+        },
+        {
+          "name": "cancel invalidates click awaiting HTTP",
+          "passed": true
+        },
+        {
+          "name": "cancel clears destination and route dots",
+          "passed": true
+        },
+        {
+          "name": "all navigation steps accepted without collision",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "route-loss",
+      "checks": [
+        {
+          "name": "authenticated r8 navigation world",
+          "passed": true
+        },
+        {
+          "name": "lost step recovered by original receipt lookup",
+          "passed": true
+        },
+        {
+          "name": "recovery does not silently resume canceled route",
+          "passed": true
+        },
+        {
+          "name": "authoritative arrival at (8.0, 9.0)",
+          "passed": true
+        },
+        {
+          "name": "all navigation steps accepted without collision",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

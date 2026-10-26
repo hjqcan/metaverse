@@ -1,0 +1,55 @@
+{
+  "superseded": true,
+  "reason": "Initial navigation reuse assertion omitted actor identity; the observation screenshot and database reveal that a1 performed both trips. Do not use the initial pass result as evidence of second-resident reuse.",
+  "worlds": [
+    {
+      "run": "initial-navigation",
+      "residents": [
+        {
+          "actorId": "a1",
+          "position": [
+            13.0,
+            7.0
+          ],
+          "wood": 0
+        },
+        {
+          "actorId": "a2",
+          "position": [
+            26.0,
+            17.0
+          ],
+          "wood": 0
+        }
+      ],
+      "receiptsByActor": {
+        "a1": 123
+      }
+    },
+    {
+      "run": "initial-regression",
+      "residents": [
+        {
+          "actorId": "a1",
+          "position": [
+            20.4999980926514,
+            11.9999990463257
+          ],
+          "wood": 0
+        },
+        {
+          "actorId": "a2",
+          "position": [
+            15.1999998092651,
+            12.0
+          ],
+          "wood": 0
+        }
+      ],
+      "receiptsByActor": {
+        "a1": 83,
+        "a2": 63
+      }
+    }
+  ]
+}

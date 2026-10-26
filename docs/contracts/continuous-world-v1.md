@@ -25,4 +25,4 @@
 
 `resourceAudit`、已确认事件与回执仍为事实依据。新建 r8 库采用[世界实例绑定 v1](world-instance-v1.md)：命令及回执查询必须携带原 `World-Instance-Id`，已有库维持明确的 legacy 分支。断线/不明结果保留原 ID 与原请求；只有实例匹配的 `COMMAND_NOT_FOUND` 才允许原样重发。
 
-实现状态与验收结果见 [ITER-0014](../iterations/ITER-0014-results.md)。点击导航直走并在碰撞处停止；自动绕障碍不属于 Godot 本轮实现。
+实现状态与验收结果见 [ITER-0014](../iterations/ITER-0014-results.md)。[ITER-0016](../iterations/ITER-0016-results.md) 为 Godot 增加本地点击绕障建议与桥面通路；服务端仍逐次确认移动，碰撞与未知结果停止原路线。

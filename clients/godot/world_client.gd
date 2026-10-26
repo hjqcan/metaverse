@@ -99,7 +99,7 @@ func _load_pending() -> void:
 	for record in journal.values():
 		if record.actorId != identity.get("actorId") or record.get("instanceId", "") != instance_id:
 			pending_store.healthy = false
-	if scanned_connection != connection_generation:
+	if scanned_connection != connection_generation or foreign_pending > 0:
 		foreign_pending = pending_store.other_worlds(endpoint, str(identity.get("actorId", "")), instance_id)
 		scanned_connection = connection_generation
 	storage_ok = pending_store.healthy

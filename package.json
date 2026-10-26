@@ -9,7 +9,7 @@
     "test:browser": "python3 scripts/check.py --suite browser",
     "start": "bash scripts/run_continuous.sh",
     "start:godot": "bash scripts/run_godot.sh",
-    "test:godot": "python3 tests/godot_recovery.py && python3 tests/world_instance_godot.py && python3 tests/continuous_godot.py",
+    "test:godot": "python3 tests/godot_recovery.py && python3 tests/world_instance_godot.py && python3 tests/continuous_godot.py && python3 tests/godot_navigation.py",
     "start:wilderness": "bash scripts/run_wilderness.sh",
     "test:continuous": "python3 tests/continuous_api.py"
   },

@@ -2,7 +2,9 @@ extends Node3D
 
 const Client = preload("res://world_client.gd")
 const View = preload("res://world_view.gd")
+const Navigation = preload("res://world_navigation.gd")
 var client: Node
+var navigation: Node
 var world_view: SubViewportContainer
 var inventory_label: Label
 var status_label: Label
@@ -18,6 +20,10 @@ var connection_panel: PanelContainer
 var selected_node = ""
 var destination = Vector2.ZERO
 var walking = false
+var planning = false
+var route := PackedVector2Array()
+var route_index := 0
+var route_request := 0
 var build_recipe = ""
 var build_point = Vector2.ZERO
 var cooldown = 0.0
@@ -33,6 +39,8 @@ var message_until = 0.0
 func _ready() -> void:
 	client = Client.new()
 	add_child(client)
+	navigation = Navigation.new()
+	add_child(navigation)
 	_build_ui()
 	client.changed.connect(_render)
 	_render()
@@ -114,7 +122,7 @@ func _build_ui() -> void:
 	controls.offset_right = -24
 	root.add_child(controls)
 	_button(controls,"连接 / 切换居民",func():
-		walking = false
+		_stop_walk()
 		connection_panel.visible = not connection_panel.visible)
 	connection_panel = _panel(root,Control.PRESET_TOP_RIGHT,Vector2(-420,80))
 	connection_panel.custom_minimum_size.x = 396
@@ -129,11 +137,9 @@ func _build_ui() -> void:
 	token_input.placeholder_text = "居民令牌"
 	connection.add_child(token_input)
 	_button(connection,"进入",func():
-		walking = false
 		var token = token_input.text
 		token_input.clear()
-		await client.connect_world(url_input.text,token)
-		connection_panel.visible = not client.healthy)
+		_connect(url_input.text, token))
 	var bottom = PanelContainer.new()
 	bottom.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM)
 	bottom.offset_left = -326
@@ -158,6 +164,16 @@ func _build_ui() -> void:
 func position_2d() -> Vector2:
 	var p = client.observation.get("self",{}).get("position",[0,0])
 	return Vector2(p[0],p[1])
+
+func _connect(url: String, secret: String) -> void:
+	_stop_walk()
+	var request := route_request
+	while client.busy:
+		await client.changed
+	if request != route_request:
+		return
+	await client.connect_world(url, secret)
+	connection_panel.visible = not client.healthy
 
 func _node(id: String) -> Dictionary:
 	for tree in client.observation.get("resourceNodes",[]):
@@ -188,21 +204,32 @@ func _render() -> void:
 	if observation.is_empty():
 		status_label.text = client.message
 		return
-	if client.connection_generation != known_connection or observation.stateVersion != known_version or observation.identity.actorId != known_actor:
+	var connection_changed: bool = client.connection_generation != known_connection
+	if connection_changed or observation.stateVersion != known_version or observation.identity.actorId != known_actor:
 		known_connection = client.connection_generation
 		known_version = observation.stateVersion
-		if observation.identity.actorId != known_actor:
-			walking = false
+		if connection_changed or observation.identity.actorId != known_actor:
+			_stop_walk()
 			selected_node = ""
+			build_recipe = ""
+			world_view.ghost.visible = false
+			input_suspended = true
+		if connection_changed:
+			receipt_id = ""
+			status_label.text = client.message
+			message_until = Time.get_ticks_msec()/1000.0 + 3
 		known_actor = observation.identity.actorId
 		world_view.update_world(observation)
+		if navigation.update_geometry(observation) and walking:
+			_plan_walk(destination, selected_node)
 	inventory_label.text = "居民 %s   ·   木材 %d" % [observation.identity.actorId,observation.self.inventory.wood]
 	if not client.last_receipt.is_empty() and client.last_receipt.commandId != receipt_id:
 		receipt_id = client.last_receipt.commandId
 		if client.last_receipt.status == "committed" and client.last_receipt.result.action == "walk":
 			if client.last_receipt.result.get("blocked",false):
-				walking = false
-				world_view.marker.visible = false
+				_stop_walk()
+				status_label.text = "前路受阻，请重新选择目的地。"
+				message_until = Time.get_ticks_msec()/1000.0+3
 		elif client.last_receipt.status == "rejected":
 			status_label.text = client.message
 			message_until = Time.get_ticks_msec()/1000.0+3
@@ -211,12 +238,12 @@ func _render() -> void:
 				world_view.gather_feedback(client.last_receipt.result.nodeId)
 			status_label.text = "采集完成  +1 木材" if client.last_receipt.result.action == "gather" else "建造完成"
 			message_until = Time.get_ticks_msec()/1000.0+2
-	if not client.healthy and not client.busy:
+	if not ready and not client.busy:
 		input_suspended = true
-		walking = false
+		_stop_walk()
 		status_label.text = client.message
 	elif Time.get_ticks_msec()/1000.0 > message_until:
-		status_label.text = "WASD 行走 · 点击地面前往 · 滚轮缩放 · Esc 取消"
+		status_label.text = "另一个世界的未确认动作已保留；切回原世界查询。" if client.foreign_pending > 0 else "WASD 行走 · 点击地面前往 · 滚轮缩放 · Esc 取消"
 	if not build_recipe.is_empty():
 		target_label.text = "选择建造位置 · 左键确认 · Esc 取消"
 	elif not _nearest().is_empty():
@@ -225,9 +252,11 @@ func _render() -> void:
 		target_label.text = "探索河谷，寻找树木与合适的营地。"
 
 func _clicked(point: Vector2, node_id: String) -> void:
+	_stop_walk()
+	var request := route_request
 	while client.busy:
 		await client.changed
-	if not client.can_act():
+	if request != route_request or not client.can_act():
 		return
 	if not build_recipe.is_empty():
 		_hovered(point)
@@ -236,14 +265,49 @@ func _clicked(point: Vector2, node_id: String) -> void:
 			_cancel()
 			await client.send_action(action)
 		return
+	await _plan_walk(point, node_id)
+
+func _stop_walk() -> void:
+	route_request += 1
+	walking = false
+	planning = false
+	route.clear()
+	route_index = 0
+	if is_instance_valid(world_view):
+		world_view.clear_route()
+
+func _plan_walk(point: Vector2, node_id: String) -> void:
+	_stop_walk()
+	var request := route_request
+	planning = true
 	selected_node = node_id
-	if not node_id.is_empty():
-		var tree = _node(node_id)
-		destination = Vector2(tree.position[0],tree.position[1])
+	destination = point
+	for i in 120:
+		if request != route_request:
+			return
+		if navigation.is_ready() and not client.busy:
+			break
+		await get_tree().physics_frame
+	if request != route_request:
+		return
+	planning = false
+	if not client.can_act():
+		return
+	if node_id.is_empty():
+		route = navigation.path(position_2d(), point)
 	else:
-		destination = Vector2(clampf(point.x,0.28,31.72),clampf(point.y,0.28,23.72))
+		var tree := _node(node_id)
+		if not tree.is_empty() and tree.remainingWood > 0:
+			route = navigation.approach(position_2d(), Vector2(tree.position[0], tree.position[1]))
+	if route.is_empty():
+		status_label.text = "暂时无法到达那里，请选择可通行的位置。"
+		message_until = Time.get_ticks_msec()/1000.0+3
+		return
+	destination = route[-1]
 	walking = true
-	world_view.show_destination(destination)
+	world_view.show_route(route)
+	status_label.text = "沿路线前往 · WASD / Esc 停止"
+	message_until = Time.get_ticks_msec()/1000.0+2
 
 func _hovered(point: Vector2) -> void:
 	if build_recipe.is_empty():
@@ -276,17 +340,18 @@ func _placement_valid(point: Vector2, recipe: String) -> bool:
 	return true
 
 func _begin_build(recipe: String) -> void:
+	_stop_walk()
+	var request := route_request
 	while client.busy:
 		await client.changed
-	if not client.can_act():
+	if request != route_request or not client.can_act():
 		return
-	walking = false
 	build_recipe = recipe
 	_hovered(position_2d()+Vector2(0,-2))
 	_render()
 
 func _cancel() -> void:
-	walking = false
+	_stop_walk()
 	selected_node = ""
 	build_recipe = ""
 	world_view.ghost.visible = false
@@ -294,21 +359,22 @@ func _cancel() -> void:
 	_render()
 
 func _gather() -> void:
-	walking = false
+	_stop_walk()
+	var request := route_request
 	while client.busy:
 		await client.changed
-	if not client.can_act():
+	if request != route_request or not client.can_act():
 		return
 	var tree = _nearest()
 	if tree.is_empty():
 		return
-	walking = false
 	await client.send_action({"type":"gather","nodeId":tree.nodeId})
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo or get_viewport().gui_get_focus_owner() is LineEdit:
 		return
 	match event.physical_keycode:
+		KEY_W, KEY_A, KEY_S, KEY_D, KEY_UP, KEY_LEFT, KEY_DOWN, KEY_RIGHT: _stop_walk()
 		KEY_E: _gather()
 		KEY_1: _begin_build("platform.v1")
 		KEY_2: _begin_build("bridge.v1")
@@ -333,21 +399,22 @@ func _physics_process(delta: float) -> void:
 	elif input_suspended:
 		direction = Vector2.ZERO
 	if direction != Vector2.ZERO:
-		walking = false
-		world_view.marker.visible = false
+		if walking or planning:
+			_stop_walk()
 	elif walking:
-		var stop_distance = 1.3 if not selected_node.is_empty() else 0.06
-		if position_2d().distance_to(destination) <= stop_distance:
-			walking = false
-			world_view.marker.visible = false
+		while route_index < route.size() and position_2d().distance_to(route[route_index]) <= 0.025:
+			route_index += 1
+		if route_index >= route.size():
+			_stop_walk()
 		else:
-			direction = position_2d().direction_to(destination)
+			direction = position_2d().direction_to(route[route_index])
+			world_view.trim_route(position_2d(), route.slice(route_index))
 	if direction != Vector2.ZERO and cooldown <= 0:
 		cooldown = 0.08
 		poll_time = 0
 		var step_distance = clampf(motion_elapsed*3,0.01,0.6)
 		motion_elapsed = 0
-		var distance = minf(step_distance,position_2d().distance_to(destination)) if walking else step_distance
+		var distance = minf(step_distance,position_2d().distance_to(route[route_index])) if walking else step_distance
 		var to = position_2d()+direction*distance
 		await client.send_action({"type":"walk","to":[to.x,to.y]})
 	elif poll_time >= 0.6 and not client.busy:
@@ -356,5 +423,5 @@ func _physics_process(delta: float) -> void:
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_APPLICATION_FOCUS_OUT:
-		walking = false
+		_stop_walk()
 		input_suspended = true

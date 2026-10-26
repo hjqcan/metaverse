@@ -1,0 +1,191 @@
+{
+  "passed": true,
+  "worlds": [
+    {
+      "name": "bridge",
+      "wood": {
+        "wild": 6,
+        "inventory": 0,
+        "embodied": 6
+      },
+      "totalWood": 12,
+      "foreignKeyErrors": [],
+      "blockedWalks": 0,
+      "receipts": 123,
+      "receiptsByActor": {
+        "a1": 93,
+        "a2": 30
+      },
+      "residents": [
+        {
+          "actorId": "a1",
+          "position": [
+            26.0,
+            9.0
+          ],
+          "wood": 0
+        },
+        {
+          "actorId": "a2",
+          "position": [
+            13.0,
+            7.0
+          ],
+          "wood": 0
+        }
+      ],
+      "committedReceipts": 123,
+      "events": 124,
+      "seededEvents": 1,
+      "stateVersion": 123
+    },
+    {
+      "name": "cancel",
+      "wood": {
+        "wild": 12,
+        "inventory": 0,
+        "embodied": 0
+      },
+      "totalWood": 12,
+      "foreignKeyErrors": [],
+      "blockedWalks": 0,
+      "receipts": 6,
+      "receiptsByActor": {
+        "a1": 6
+      },
+      "residents": [
+        {
+          "actorId": "a1",
+          "position": [
+            4.0,
+            6.2
+          ],
+          "wood": 0
+        },
+        {
+          "actorId": "a2",
+          "position": [
+            26.0,
+            17.0
+          ],
+          "wood": 0
+        }
+      ],
+      "committedReceipts": 6,
+      "events": 7,
+      "seededEvents": 1,
+      "stateVersion": 6
+    },
+    {
+      "name": "obstacles",
+      "wood": {
+        "wild": 12,
+        "inventory": 0,
+        "embodied": 0
+      },
+      "totalWood": 12,
+      "foreignKeyErrors": [],
+      "blockedWalks": 0,
+      "receipts": 37,
+      "receiptsByActor": {
+        "a1": 37
+      },
+      "residents": [
+        {
+          "actorId": "a1",
+          "position": [
+            5.0,
+            7.0
+          ],
+          "wood": 0
+        },
+        {
+          "actorId": "a2",
+          "position": [
+            26.0,
+            17.0
+          ],
+          "wood": 0
+        }
+      ],
+      "committedReceipts": 37,
+      "events": 38,
+      "seededEvents": 1,
+      "stateVersion": 37
+    },
+    {
+      "name": "route-loss",
+      "wood": {
+        "wild": 12,
+        "inventory": 0,
+        "embodied": 0
+      },
+      "totalWood": 12,
+      "foreignKeyErrors": [],
+      "blockedWalks": 0,
+      "receipts": 9,
+      "receiptsByActor": {
+        "a1": 9
+      },
+      "residents": [
+        {
+          "actorId": "a1",
+          "position": [
+            7.99999952316284,
+            9.0
+          ],
+          "wood": 0
+        },
+        {
+          "actorId": "a2",
+          "position": [
+            26.0,
+            17.0
+          ],
+          "wood": 0
+        }
+      ],
+      "committedReceipts": 9,
+      "events": 10,
+      "seededEvents": 1,
+      "stateVersion": 9
+    },
+    {
+      "name": "tree-change",
+      "wood": {
+        "wild": 9,
+        "inventory": 3,
+        "embodied": 0
+      },
+      "totalWood": 12,
+      "foreignKeyErrors": [],
+      "blockedWalks": 0,
+      "receipts": 15,
+      "receiptsByActor": {
+        "a1": 15
+      },
+      "residents": [
+        {
+          "actorId": "a1",
+          "position": [
+            5.000000343088359,
+            6.999999751888521
+          ],
+          "wood": 3
+        },
+        {
+          "actorId": "a2",
+          "position": [
+            26.0,
+            17.0
+          ],
+          "wood": 0
+        }
+      ],
+      "committedReceipts": 15,
+      "events": 16,
+      "seededEvents": 1,
+      "stateVersion": 15
+    }
+  ]
+}
