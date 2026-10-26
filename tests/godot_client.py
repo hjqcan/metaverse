@@ -55,8 +55,12 @@ class Proxy:
                         self.close_connection = True
                         return
                 connection = http.client.HTTPConnection('127.0.0.1', world.port, timeout=10)
-                connection.request(self.command, self.path, body=body or None, headers={'Authorization': self.headers.get('Authorization', ''), 'Content-Type': 'application/json'})
+                headers = {'Authorization': self.headers.get('Authorization', ''), 'Content-Type': 'application/json'}
+                if 'World-Instance-Id' in self.headers:
+                    headers['World-Instance-Id'] = self.headers['World-Instance-Id']
+                connection.request(self.command, self.path, body=body or None, headers=headers)
                 reply = connection.getresponse(); data = reply.read(); status = reply.status
+                instance = reply.getheader('World-Instance-Id')
                 connection.close()
                 if is_post and owner.mode == 'after' and owner.drop:
                     owner.drop = False
@@ -70,6 +74,8 @@ class Proxy:
                     owner.drop = False
                 self.send_response(status)
                 self.send_header('Content-Type', 'application/json')
+                if instance:
+                    self.send_header('World-Instance-Id', instance)
                 self.send_header('Content-Length', str(len(data)))
                 self.end_headers(); self.wfile.write(data)
 

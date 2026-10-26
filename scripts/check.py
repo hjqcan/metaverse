@@ -10,7 +10,7 @@ import sys
 import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
-HTTP = ('foundation', 'passage', 'resident_mission', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'entry_guide', 'wilderness', 'wilderness_mission', 'continuous_mission')
+HTTP = ('foundation', 'passage', 'resident_mission', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'entry_guide', 'wilderness', 'wilderness_mission', 'continuous', 'continuous_mission', 'world_instance')
 BROWSER = ('foundation', 'passage', 'resident', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'consent-experience', 'entry', 'wilderness', 'wilderness-resident', 'continuous-resident')
 
 

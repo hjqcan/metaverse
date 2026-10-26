@@ -25,6 +25,7 @@ var poll_time = 0.0
 var motion_elapsed = 0.08
 var known_version = -1
 var known_actor = ""
+var known_connection = -1
 var receipt_id = ""
 var input_suspended = false
 var message_until = 0.0
@@ -187,7 +188,8 @@ func _render() -> void:
 	if observation.is_empty():
 		status_label.text = client.message
 		return
-	if observation.stateVersion != known_version or observation.identity.actorId != known_actor:
+	if client.connection_generation != known_connection or observation.stateVersion != known_version or observation.identity.actorId != known_actor:
+		known_connection = client.connection_generation
 		known_version = observation.stateVersion
 		if observation.identity.actorId != known_actor:
 			walking = false
