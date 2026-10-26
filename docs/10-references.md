@@ -1,6 +1,6 @@
 # 参考资料与证据边界
 
-整理与核对日期：2026-10-25（Asia/Shanghai）。
+首轮资料 R01—R13 核对：2026-10-25；新增 R14—R18 核对：2026-10-26（Asia/Shanghai）。
 
 本表汇集本次讨论实际查阅的官方文档、作者项目页与论文。资料支持其中明确描述的机制或实验结果；项目架构、经济规则和路线图仍是本仓库的设计建议。
 
@@ -167,6 +167,74 @@
 可支持：编程 Agent 修改自身应用代码，使用编程评测筛选变化，并保留多个候选演化分支。
 
 适用边界：特定评测中的改进不等于完整元宇宙研发已被解决；应用程序修改也不等于基础模型自行更新权重。
+
+## R14
+
+**One Hour One Life — 官方项目介绍**
+
+来源：作者 Jason Rohrer 的游戏官网；核对日期：2026-10-26。
+
+链接：<https://onehouronelife.com/>
+
+可支持：玩家使用和传承前代工具、建筑，后来角色在不同处境中生活；个人活动成为更长历史的一部分。
+
+适用边界：只使用作者对游戏的介绍，不采用主页玩家评论作为证据。不据此推导永久不清档、无限科技或本项目应采用一小时寿命与育儿机制。
+
+## R15
+
+**Eco — Developer Blog: Upgrade Modules**
+
+来源：Strange Loop Games 官方 Steam 公告，2020-04-28；核对日期：2026-10-26。
+
+文章：<https://store.steampowered.com/news/app/382310/view/2202766622556744200>
+
+可读取正文的官方公告归档：<https://store.steampowered.com/news/posts/?appids=382310&enddate=1588615714&feed=steam_community_announcements>
+
+可支持：该开发博客把效率加成放在工作台升级模块上，使用同一升级设备的不同居民可获得对应改善，包括新玩家。
+
+适用边界：历史开发说明，未核对现行版本全部数值。这里只借鉴收益沉淀在设备中的方式，不采纳其劳动制度，也不把文章列出的后续计划当作已实现能力。
+
+## R16
+
+**Factorio — Research、Blueprint 与 Friday Facts #376: Research and Technology**
+
+来源：Factorio 官方 Wiki 与开发者博客；博客发表于 2023-09-15，本轮核对日期：2026-10-26。
+
+研究：<https://wiki.factorio.com/Research>
+
+蓝图：<https://wiki.factorio.com/Blueprint>
+
+开发者说明：<https://factorio.com/blog/post/fff-376>
+
+可支持：团队具有共享研究状态；实验室研究消耗科技包；蓝图先表示布局，实际建设仍需物品；开发者介绍过基于采集、制造等行为触发技术的设计。
+
+适用边界：并非所有解锁都必须消耗科技包。可借鉴知识、投入和实践分离，不据此采用固定科技树、无限生产率提升或强制所有新人重演前期流程。博客是当时的设计说明，不把其中全部计划当成本项目已验证机制。
+
+## R17
+
+**Screeps — Understanding game loop, time and ticks；How does CPU limit work**
+
+来源：Screeps 官方文档；核对日期：2026-10-26。
+
+世界循环：<https://docs.screeps.com/game-loop.html>
+
+计算预算：<https://docs.screeps.com/cpu-limit.html>
+
+可支持：脚本在持续运行的世界中按 tick 观察、提交动作；规则处理冲突；服务器端执行受 CPU 额度约束，积累额度和单次使用都有上限。
+
+适用边界：借鉴世界执行和现实计算预算分开管理，不直接采用其调度架构、付费制度或具体数值，也不把计算量视为游戏资源和文明进度。
+
+## R18
+
+**Factorio Learning Environment**
+
+作者：Jack Hopkins、Mart Bakler、Akbir Khan；2025-03-06 提交；核对日期：2026-10-26。
+
+论文：<https://arxiv.org/abs/2503.09617v1>
+
+可支持：用 Factorio 中的任务研究长程规划、程序生成与资源优化，区分有限资源任务和开放工厂建设，并报告当时受测模型在复杂自动化上的局限。
+
+适用边界：结论受论文版本、模型与任务条件限制，不外推为 2026 年所有 Agent 的能力上限；也不证明本项目的共享文明、经济或新人体验已经成立。
 
 ## 维护方式
 

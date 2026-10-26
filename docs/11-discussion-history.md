@@ -1,6 +1,6 @@
 # 讨论沿革与成果覆盖
 
-日期：2026-10-25（Asia/Shanghai）。
+首次整理：2026-10-25；更新：2026-10-26（Asia/Shanghai）。
 
 本文件保留本轮讨论的意图演进、重要澄清及设计成果位置。它不是逐字聊天导出；重复论述已合并，最后明确的用户意图优先。未把与项目无关的个人资料纳入仓库。
 
@@ -43,18 +43,36 @@
 
 世界内自主提案保留为可选来源，不作为当前闭环的必要条件。没有要求研究 Agent 必须成为世界里的居民。
 
-## 5. 本次整理授权
+## 5. 首次整理授权：2026-10-25
 
 用户建立 `hjqcan/metaverse` 仓库，并要求把全部讨论成果合理整理为文档提交，方便后续使用。
 
 本次交付是文档基线、索引、决定与待决问题、参考资料及迭代模板。它不意味着已经开始实现游戏、启动常驻 Agent、部署服务或运行收费任务。
 
-## 6. 成果覆盖索引
+## 6. 新增方向：文明随玩家进度发展，2026-10-26
+
+用户进一步明确，虚拟元宇宙中的文明会发展，速度取决于玩家的进度。最早进入的玩家可能是散落的原始居民，需要砍木、求生，逐渐形成部落；后入玩家可能面对已有自动化、摩天大楼，甚至星际旅行，因而不再重复早期的全部活动。
+
+这次补充明确了共同世界的历史积累与跨批次参与体验，新增确认记录为 C13—C15。它延续人类与 Agent 共居、可以只游玩、资源有来源以及外部研发闭环等既有方向。
+
+本轮研究核对 One Hour One Life 的跨世代继承、Eco 的设备升级、Factorio 的研究与蓝图、Screeps 的持续运行，以及 Factorio Learning Environment 的 Agent 评测。机制依据和适用边界见 R14—R18。
+
+据此提出的能力分布、地区差异、当代入驻、知识与设施分离、维护及服务模型，均作为建议记录。用户没有在本轮确定公共福利制度、私有或公开知识政策、固定时代时长、文明衰退或清档机制。
+
+路线建议新增 `EXP-0002`“从手工建造到共享工坊”，直接检验同一世界中前人建设能否被后入者使用。原 `EXP-0001` 两地通行保留为可选基础机制实验；这是候选方案的演进，两个实验均未实施。
+
+用户本轮明确授权分析、研究、完善文档并推送 GitHub。本轮交付继续属于设计与研究成果，不代表已经构建游戏或运行文明实验。
+
+## 7. 成果覆盖索引
 
 | 讨论成果 | 归档位置 | 当前性质 |
 |---|---|---|
 | 长期愿景、渐进建设与参与自由 | [00](00-project-charter.md)、[03](03-human-and-agent-participation.md) | 用户确认方向 |
 | 小陆地到多种现实与奇幻世界 | [01](01-world-and-rules.md)、[07](07-roadmap-and-first-experiment.md) | 愿景确认，具体顺序未定 |
+| 文明由玩家进度推动，后来者进入当代 | [12](12-civilization-evolution.md)、[00](00-project-charter.md)、[09](09-decisions-and-open-questions.md) | 2026-10-26 新增确认 |
+| 知识、设施、服务、可达性与个人进度分开 | [12](12-civilization-evolution.md)、[05](05-architecture-options.md) | 建模建议，尚待实现 |
+| 自动化改变基础玩法和成本，晚入者使用文明成果 | [12](12-civilization-evolution.md)、[02](02-economy-and-resources.md)、[03](03-human-and-agent-participation.md) | 方向确认，机制与公共供给待定 |
+| 共享工坊、真实演化、晚入体验与停供对照 | [07](07-roadmap-and-first-experiment.md)、[06](06-validation-and-release.md) | 新增实验候选，未运行 |
 | 规则可发展、组合发明与新规律 | [01](01-world-and-rules.md) | 方向确认，权限与实现建议待验证 |
 | 元规则、规则、内容及地区边界 | [01](01-world-and-rules.md)、[05](05-architecture-options.md) | 设计建议 |
 | 蓝图、实例、许可、创造与运行成本 | [01](01-world-and-rules.md)、[02](02-economy-and-resources.md) | 设计建议 |
@@ -74,8 +92,9 @@
 | 数学、系统科学和 AI 的项目式学习 | [08](08-learning-and-research-map.md) | 学习与研究建议 |
 | Agent 技能、世界软件与研发系统的改进 | [04](04-agent-rnd-loop.md)、[08](08-learning-and-research-map.md) | 分层研究建议 |
 | Minecraft、Roblox、EVE 及 Agent 研究依据 | [10](10-references.md) | 外部资料，适用范围已注明 |
+| OHOL、Eco、Factorio、Screeps 与文明演进研究 | [10](10-references.md)、[12](12-civilization-evolution.md) | 一手机制参考，不外推为本项目验证结果 |
 
-## 7. 后续延续讨论时注意
+## 8. 后续延续讨论时注意
 
 先阅读[决定和待决问题](09-decisions-and-open-questions.md)。新增讨论应在已有基线上推进，而不是把早期被修正的解释重新当成项目目标。
 
