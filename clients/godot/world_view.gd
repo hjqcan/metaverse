@@ -8,9 +8,15 @@ var scene: Node3D
 var camera: Camera3D
 var terrain: Node3D
 var objects: Node3D
+var effects: Node3D
 var actors: Dictionary = {}
 var targets: Dictionary = {}
 var tree_nodes: Dictionary = {}
+var structure_labels: Dictionary = {}
+var caption_font: SystemFont
+var self_ring_material: StandardMaterial3D
+var resident_ring_material: StandardMaterial3D
+var world_instance := ""
 var own_actor = ""
 var centerline: Array = []
 var zoom = 18.0
@@ -65,6 +71,12 @@ func _ready() -> void:
 	scene.add_child(terrain)
 	objects = Node3D.new()
 	scene.add_child(objects)
+	effects = Node3D.new()
+	scene.add_child(effects)
+	caption_font = SystemFont.new()
+	caption_font.font_names = PackedStringArray(["Noto Sans CJK SC", "sans-serif"])
+	self_ring_material = material(Color("e2c270"))
+	resident_ring_material = material(Color("8fbbb8"))
 	for tint in ["4c713e", "638746", "7e984f", "3b633d"]:
 		foliage_materials.append(material(Color(tint)))
 	trunk_material = material(Color("795b3e"))
@@ -104,6 +116,61 @@ func mesh(parent: Node, shape: Mesh, at: Vector3, mat: Material) -> MeshInstance
 	item.position = at
 	parent.add_child(item)
 	return item
+
+func _caption(parent: Node, text: String, at: Vector3, color: Color) -> Label3D:
+	var label := Label3D.new()
+	label.text = text
+	label.font = caption_font
+	label.font_size = 36
+	label.pixel_size = 0.009
+	label.outline_size = 8
+	label.outline_modulate = Color("24362c")
+	label.modulate = color
+	label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+	label.no_depth_test = true
+	label.render_priority = 10
+	label.outline_render_priority = 9
+	label.position = at
+	parent.add_child(label)
+	return label
+
+func _clear_children(parent: Node) -> void:
+	for child: Node in parent.get_children():
+		parent.remove_child(child)
+		child.queue_free()
+
+func _reset_world() -> void:
+	# A new connection is a new visual baseline, even at the same actor/version.
+	_clear_children(terrain)
+	_clear_children(objects)
+	_clear_children(effects)
+	for actor: Node3D in actors.values():
+		scene.remove_child(actor)
+		actor.queue_free()
+	actors.clear()
+	targets.clear()
+	tree_nodes.clear()
+	structure_labels.clear()
+	object_stamp = ""
+	initialized = false
+	gather_effect = 0.0
+	clear_route()
+	ghost.visible = false
+
+func _resident_name(id: String) -> String:
+	return "你 · %s" % id if id == own_actor else "居民 %s" % id
+
+func _update_identity() -> void:
+	for id: String in actors:
+		var actor: Node3D = actors[id]
+		var ring: MeshInstance3D = actor.get_node("IdentityRing")
+		ring.material_override = self_ring_material if id == own_actor else resident_ring_material
+		var label: Label3D = actor.get_node("Nameplate")
+		label.text = _resident_name(id)
+		label.modulate = Color("ffe2a3") if id == own_actor else Color("cbe7e2")
+	for entry: Dictionary in structure_labels.values():
+		var owner: String = entry.owner
+		entry.label.text = "%s\n%s 建造" % [entry.title, _resident_name(owner)]
 
 func river_x(z: float) -> float:
 	if centerline.size() < 2:
@@ -290,10 +357,15 @@ func _person(id: String) -> Node3D:
 	ring.top_radius = 0.36
 	ring.bottom_radius = 0.36
 	ring.height = 0.018
-	mesh(root,ring,Vector3(0,0.025,0),material(Color("e2c270") if id == own_actor else Color("8fbbb8")))
+	mesh(root,ring,Vector3(0,0.025,0),resident_ring_material).name = "IdentityRing"
+	_caption(root, "", Vector3(0,1.9,0), Color.WHITE).name = "Nameplate"
 	return root
 
-func update_world(observation: Dictionary) -> void:
+func update_world(observation: Dictionary, connection_changed := false) -> void:
+	var instance: String = observation.world.get("instanceId", "")
+	if connection_changed or instance != world_instance:
+		_reset_world()
+	world_instance = instance
 	own_actor = observation.identity.actorId
 	bridges = observation.entities.filter(func(entity): return entity.definitionId == "bridge")
 	if not initialized:
@@ -302,10 +374,9 @@ func update_world(observation: Dictionary) -> void:
 	var stamp = JSON.stringify([observation.resourceNodes,observation.entities])
 	if stamp != object_stamp:
 		object_stamp = stamp
-		for child in objects.get_children():
-			objects.remove_child(child)
-			child.queue_free()
+		_clear_children(objects)
 		tree_nodes.clear()
+		structure_labels.clear()
 		for tree in observation.resourceNodes:
 			tree_nodes[tree.nodeId] = _tree(objects,Vector2(tree.position[0],tree.position[1]),tree.nodeId,tree.remainingWood)
 		for entity in observation.entities:
@@ -313,6 +384,10 @@ func update_world(observation: Dictionary) -> void:
 			var length = 4.8 if bridge else 2.0
 			var width = 1.6 if bridge else 2.0
 			var p = Vector3(entity.position[0],0.23 if bridge else height_at(entity.position[0],entity.position[1])+0.08,entity.position[1])
+			var label := _caption(objects, "", p + Vector3(0,1.15,0), Color("f0e2c0"))
+			label.font_size = 30
+			structure_labels[entity.entityId] = {"label":label, "owner":entity.ownerActorId,
+				"title":"木桥" if bridge else "平台"}
 			for i in int(length/0.2):
 				var plank = BoxMesh.new()
 				plank.size = Vector3(0.18,0.12,width)
@@ -326,7 +401,9 @@ func update_world(observation: Dictionary) -> void:
 						var post = BoxMesh.new()
 						post.size = Vector3(0.12,0.75,0.12)
 						mesh(objects,post,p+Vector3(x,0.25,side*width*0.5),trunk_material)
+	var observed_actors: Dictionary = {}
 	for resident in observation.residents:
+		observed_actors[resident.actorId] = true
 		var p = Vector3(resident.position[0],height_at(resident.position[0],resident.position[1]),resident.position[1])
 		for entity in observation.entities:
 			if entity.definitionId == "bridge" and absf(p.x-entity.position[0]) < 2.4 and absf(p.z-entity.position[1]) < 0.8:
@@ -337,6 +414,14 @@ func update_world(observation: Dictionary) -> void:
 			actors[resident.actorId] = _person(resident.actorId)
 			actors[resident.actorId].position = p
 		targets[resident.actorId] = p
+	for id: String in actors.keys():
+		if not observed_actors.has(id):
+			var actor: Node3D = actors[id]
+			scene.remove_child(actor)
+			actor.queue_free()
+			actors.erase(id)
+			targets.erase(id)
+	_update_identity()
 
 func show_destination(point: Vector2) -> void:
 	marker.position = _route_position(point)
@@ -389,15 +474,9 @@ func gather_feedback(node_id: String) -> void:
 		tween.tween_property(tree,"rotation:z",-0.04,0.1)
 		tween.tween_property(tree,"rotation:z",0.0,0.15)
 	if actors.has(own_actor):
-		var label = Label3D.new()
-		label.text = "+1 木材"
+		var label := _caption(effects, "+1 木材", actors[own_actor].position + Vector3(0,2.4,0), Color("f1d291"))
 		label.font_size = 44
 		label.pixel_size = 0.008
-		label.modulate = Color("f1d291")
-		label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-		label.no_depth_test = true
-		scene.add_child(label)
-		label.position = actors[own_actor].position + Vector3(0,2.0,0)
 		var tween = label.create_tween()
 		tween.tween_property(label,"position:y",label.position.y+0.7,0.8)
 		tween.parallel().tween_property(label,"modulate:a",0.0,0.8)

@@ -219,7 +219,7 @@ func _render() -> void:
 			status_label.text = client.message
 			message_until = Time.get_ticks_msec()/1000.0 + 3
 		known_actor = observation.identity.actorId
-		world_view.update_world(observation)
+		world_view.update_world(observation, connection_changed)
 		if navigation.update_geometry(observation) and walking:
 			_plan_walk(destination, selected_node)
 	inventory_label.text = "居民 %s   ·   木材 %d" % [observation.identity.actorId,observation.self.inventory.wood]

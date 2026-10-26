@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "rendered-resident-attribution-evidence",
+  "recordedAtUtc": "2026-10-26T03:06:23.905454+00:00",
+  "baselineCommit": "8aadf5310ff1323e6c071de592deb1904bcc6ae5",
+  "actualModelCalls": 0,
+  "previewRestarted": false,
+  "validationScope": "builder self-check: 27 final attribution assertions; 98 existing assertions before final two Label3D render-priority lines; independent acceptance not claimed",
+  "sourceSha256": {
+    "clients/godot/main.gd": "526bc9f0e94b04169b97d5414cd45d5aa6773949f5b6c224d05bf40caf16ec1a",
+    "clients/godot/world_view.gd": "da4041cefec6ad60eb85ef7aba0c46e484c376461134a5c077e182ffd3a5b9b9",
+    "tests/godot/attribution.gd": "54157ec38fb28a3d1c78ff346731a2d83f4b70ad231fe84e15d9ea0017e4def0",
+    "tests/godot_attribution.py": "9f34aad109cb1f67506c0c4d1559e2b738f7d769764492209cc8d3ea4408ddf5",
+    "docs/proposals/ITER-0021-resident-attribution.md": "8e002979651962a0532d4aed65c0b69d7dfec7176eed2e485b7cbaf9763b47c7",
+    "docs/iterations/ITER-0021-results.md": "35298a08632c212443e163f814b2ac54f5cdbd35d6b16597a5d59f17f420ffeb"
+  },
+  "artifactSha256": {
+    "docs/iterations/evidence/ITER-0021/attribution.json": "b233d5d09e1f47acfead173eb2eea5b542c3aca77c488763843d823cc32a9f6a",
+    "docs/iterations/evidence/ITER-0021/bridge-attribution.png": "ee8ad3b07e77431ca990cfbe9e43292aade1fc04ee926b05dbd6183ccb024dc8",
+    "docs/iterations/evidence/ITER-0021/continuous-regression.json": "ef2ca08c8798dd6a6563a150fcfa586834aaad45b293f02e6b5f686a2a148ab5",
+    "docs/iterations/evidence/ITER-0021/first-resident.png": "c57cfa6757bae45fd0fe63fd6ba2ab0a652f7b15e9d495d8af671d8ca5f1eafc",
+    "docs/iterations/evidence/ITER-0021/initial-probe-failure.json": "5936a61d2d9b5b162c64cd6d77034060c47b2d5137852ccf052c990f9ce3085d",
+    "docs/iterations/evidence/ITER-0021/navigation-regression.json": "e169a7aa4b7cb0e615a80188df03c6e02d18246135438834652082793a251385",
+    "docs/iterations/evidence/ITER-0021/replacement-world.png": "4f2f906097b3c82e412ef3df8ad9cad1b124b274862cd7fefefc33b3520ad607",
+    "docs/iterations/evidence/ITER-0021/second-resident.png": "38572c6d5b1d859ca8b20bca70c346d15427d87d09c6a73ea3da1269433cfb58"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "passed": false,
+  "actualModelCalls": 0,
+  "error": "attribution: exit 1\nGodot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nWARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.\n     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)\nWARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.\n     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:372)\nOpenGL API 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.2 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 20.1.2, 256 bits)\n\nERROR: second resident spends its own three gathered wood on a platform\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/godot/continuous.gd:11)\n       [1] run (/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/godot/attribution.gd:64)\n       [2] idle (/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/godot/continuous.gd:24)\n",
+  "databaseAudit": {
+    "original": {
+      "materialTotal": 12,
+      "entities": [
+        [
+          "ea897575193af41b9b21624f7731411ba",
+          "a1",
+          3
+        ]
+      ],
+      "receiptCount": 20,
+      "buildCount": 1
+    },
+    "replacement": {
+      "materialTotal": 12,
+      "entities": [],
+      "receiptCount": 0,
+      "buildCount": 0
+    }
+  },
+  "allSelfStartedServicesStopped": true,
+  "sourceBefore": {
+    "clients/godot/main.gd": "526bc9f0e94b04169b97d5414cd45d5aa6773949f5b6c224d05bf40caf16ec1a",
+    "clients/godot/world_view.gd": "83f340fe4cd8aaea9695bd3b3ca19ffd0a4714e3b9251c352a43d28e1f846ae9",
+    "clients/godot/world_client.gd": "49e0ce433907ea3a8ec72788ef32719694c467916d7e8ba24217766a153b6f0a",
+    "clients/godot/pending_store.gd": "6746519f4ce68d863c30ddcc7db2ecc504d179516104b633755df44704669708",
+    "tests/godot/attribution.gd": "5b10efc4ca8f5b2a12a11c8683c8daf503fc3a938e937a50dce176cb98279f27",
+    "tests/godot_attribution.py": "9f34aad109cb1f67506c0c4d1559e2b738f7d769764492209cc8d3ea4408ddf5"
+  },
+  "sourceAfter": {
+    "clients/godot/main.gd": "526bc9f0e94b04169b97d5414cd45d5aa6773949f5b6c224d05bf40caf16ec1a",
+    "clients/godot/world_view.gd": "83f340fe4cd8aaea9695bd3b3ca19ffd0a4714e3b9251c352a43d28e1f846ae9",
+    "clients/godot/world_client.gd": "49e0ce433907ea3a8ec72788ef32719694c467916d7e8ba24217766a153b6f0a",
+    "clients/godot/pending_store.gd": "6746519f4ce68d863c30ddcc7db2ecc504d179516104b633755df44704669708",
+    "tests/godot/attribution.gd": "5b10efc4ca8f5b2a12a11c8683c8daf503fc3a938e937a50dce176cb98279f27",
+    "tests/godot_attribution.py": "9f34aad109cb1f67506c0c4d1559e2b738f7d769764492209cc8d3ea4408ddf5"
+  },
+  "serverDllSha256": "1612aabb810bda829f806e36ef82e7ec2d466de90ac98b5720ec96b7222de8ae"
+}
