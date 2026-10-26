@@ -1,0 +1,95 @@
+{
+  "recordedAtUtc": "2026-10-26T08:05:55.885373+00:00",
+  "iteration": "ITER-0026",
+  "status": "independent-native-v1-passed",
+  "scope": "One actual Godot client run over a private read copy of the original two-edit world, plus explicitly labelled UI fixtures.",
+  "authoritativeRun": "canvas-history-native-20261026T075945944755Z",
+  "resultsSha256": "090705cb60798c2fdd655573ada1ea85cfdd4d682c0b8f450c3500ce74fe0209",
+  "nativeUiSha256": "c8802991e6e66961e92c8bfe653c85697ef0666b55a8737616a6bea21308c5c3",
+  "nativeManifestSha256": "c05d45e7f4dc1ef24b820f1e8f433aabbcf7d571fd6c1ba688cc85e6834fb73c",
+  "panelSha256": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+  "assertionsPassed": 157,
+  "assertionGroups": {
+    "startup": 5,
+    "actual_original_5_4_9": 28,
+    "actual_local_draft_preservation": 16,
+    "recorded_pending_and_zero_wood_ui_fixture": 14,
+    "explicit_later_edit_and_blank_ui_fixture": 26,
+    "explicit_recent_window_fixtures": 22,
+    "explicit_identity_and_capability_fixtures": 43,
+    "final_no_world_side_effects": 3
+  },
+  "actualOriginalHistory": {
+    "resident": "a3",
+    "isAuthor": false,
+    "wood": 3,
+    "distanceFromPlatform": 4.242640687,
+    "displayedFirstPatchCells": 5,
+    "displayedSecondPatchCells": 4,
+    "returnedCurrentCells": 9,
+    "currentWorldSurfaceRemainedNine": true,
+    "localDraftAndOriginalBasePreserved": true,
+    "actualClientPendingAndLastReceipt": "Both initially empty and preserved; recorded pending and receipt tested separately as UI-only fixtures."
+  },
+  "explicitUiFixtures": [
+    "Zero wood and can_act=false with recorded old record4 pending and unrelated original receipt; no new recovery protocol execution.",
+    "Later blank patch and stale local draft base; returning to current does not silently rebase.",
+    "Recent-window 50 to 51 to 52 shifts selection by stable identity and clears it when slid out; not actual new world edits.",
+    "Empty history, actor/generation/instance/target changes, and unknown capability clear history state."
+  ],
+  "traffic": {
+    "startupGetCount": 1,
+    "selectionHttpRequests": 0,
+    "postCount": 0
+  },
+  "businessSignals": 0,
+  "destinationSignals": 0,
+  "protectedTablesUnchanged": {
+    "entity_canvas": true,
+    "entity_canvas_cells": true,
+    "entity_canvas_edits": true,
+    "receipts": true,
+    "entities": true,
+    "entity_notes": true,
+    "residents": true,
+    "sessions": true
+  },
+  "allStartedProcessesExited": true,
+  "actualModelCalls": 0,
+  "productSourceWrites": false,
+  "visualReview": [
+    "actual-first-five",
+    "actual-second-four",
+    "actual-returned-nine",
+    "synthetic-blank-patch",
+    "synthetic-window-slide"
+  ],
+  "failedRunRetained": {
+    "path": "canvas-history-native-20261026T075731075782Z",
+    "reason": "QA driver used local popup coordinates with an API interpreting them as embedder coordinates; fixed to global-position Input.parse_input_event mouse events.",
+    "productDefectClaim": false,
+    "resultsSha256": "d2f5045fa02a42d97b9f2fadad658fdb5ea61b6778b46775affe8b2f59289de8",
+    "nativeUiSha256": "0ea673ddbb96297c145fdb25c606ca5361f434ffc04950021263200c34d66fef"
+  },
+  "preflightOnlyAttempt": {
+    "path": "canvas-history-native-20261026T075643976789Z",
+    "reason": "An archived ITER25 document changed; runner now reuses its frozen core snapshot and still verifies unchanged live backend source.",
+    "worldStarted": false
+  },
+  "cleanup": {
+    "path": "canvas-history-cleanup.json",
+    "sha256": "674b9ffa9e09d334e027de59dd5574545504129df6fc021c657082032644036b",
+    "deletedBytes": 2852752,
+    "originalNaturalHeadStagePreserved": true
+  },
+  "feedback": {
+    "to": "build coordinator",
+    "messageId": "msg_412e2d0e8f85",
+    "coordinatorPriorReviewMessageId": "msg_6dbdd1bd9cc4"
+  },
+  "limits": [
+    "Does not prove human enjoyment or long-term creation opportunities.",
+    "Recorded pending UI inputs do not constitute a fresh unresolved-command recovery test.",
+    "Original actual viewer had three wood; zero-wood viewing is explicitly a UI fixture."
+  ]
+}

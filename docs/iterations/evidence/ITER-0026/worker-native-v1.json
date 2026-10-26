@@ -1,0 +1,1659 @@
+{
+  "passed": true,
+  "validationLevel": "builder-fixture-driven-native-ui",
+  "actualModelCalls": 0,
+  "worldIoMode": "no-world-client-or-http",
+  "worldServicesStarted": 0,
+  "databasesCreated": 0,
+  "runtimeBinariesCopied": 0,
+  "fixture": "tests/fixtures/entity-canvas-observation.json",
+  "fixtureSha256": "575c2f6b9482621d3d74c82e80f2a1705c669fe754e69565228232d943fd4778",
+  "sourceHashesBefore": {
+    "clients/godot/entity_canvas_panel.gd": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/world_view.gd": "ee0733b03887b49a7f695cf2e8818233f76f667a97edb36dbd5a0f370911caba",
+    "clients/godot/river.gdshader": "b5de02167c429ce338fff61bb0ad180aa4d2d1b7c5c1e96f3cbce3f4ba88631b",
+    "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424",
+    "tests/entity_canvas_history_godot.py": "96574b941f3462068b3f9cdc2040b5b0d3cfd68135bd4c132c76e0427999014e",
+    "tests/godot/entity_canvas_history.gd": "7352ef897b42cee755b2499571cc62231237a590c12a9ef5cc12cb0fe8564699",
+    "tests/fixtures/entity-canvas-observation.json": "575c2f6b9482621d3d74c82e80f2a1705c669fe754e69565228232d943fd4778"
+  },
+  "processes": [
+    {
+      "log": "import.log",
+      "pid": 243919,
+      "exitCode": 0,
+      "timedOut": false,
+      "processGroupStopped": true
+    },
+    {
+      "log": "ui.log",
+      "pid": 244109,
+      "exitCode": 0,
+      "timedOut": false,
+      "processGroupStopped": true
+    }
+  ],
+  "scope": "Actual Godot mouse input on unchanged product controls and platform view; recorded original observation and labelled synthetic boundary fixtures. No live world acceptance.",
+  "godotVersion": "4.7.2.stable.official.ed1daf0bf",
+  "ui": {
+    "checks": [
+      {
+        "group": "original_two_creations",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "current original platform has 9 authored cells",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "two original creations in order, with no implicit initial selection",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "total and recent count are shown",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "mouse chooses history item 0",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "displayed 25 cells exactly match the selected original patch",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "selected author, revision and patch count are visible",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "first creation displays its original 5 cells",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "rendered screenshot original-first-five",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "mouse chooses history item 1",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "displayed 25 cells exactly match the selected original patch",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "selected author, revision and patch count are visible",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "second creation displays its original 4 cells",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "rendered screenshot original-second-four",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "selecting old creations leaves the 3D current surface unchanged",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "mouse returns to current-work editor",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "returning still displays the original 9-cell current platform",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "original observation is unchanged and viewing emitted no business signal",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "rendered screenshot original-current-nine",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "group completed all required interactions",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "real mouse creates one local unsubmitted draft cell",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "mouse chooses history item 0",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "clicking history cannot paint or rebase the draft",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "history hides submit, new-draft and travel actions",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "labelled synthetic later observation is structurally valid",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "new revision preserves selection by original edit identity",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "return keeps original patch and stale base, and stops old submission",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "stale draft is explained",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "closing and reopening preserves the original unsubmitted draft",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "draft/history interaction emits no business signal",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "group completed all required interactions",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "mouse chooses history item 0",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "displayed 25 cells exactly match the selected original patch",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "selected author, revision and patch count are visible",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "mouse chooses history item 1",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "displayed 25 cells exactly match the selected original patch",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "selected author, revision and patch count are visible",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "viewing preserves the exact pending body, previous receipt and observation inputs",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "another author's history never settles the viewer's pending command",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "non-author viewing does not retry, submit or travel",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "group completed all required interactions",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "mouse chooses history item 1",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "old creation keeps its original color after a later blank repaint",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "mouse chooses history item 2",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "blank is still one authored changed cell",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "untouched cell is a neutral mark, not blank paint",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "blank paint and untouched cells render in different colors",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "blank author and untouched meaning are available in cell descriptions",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "historic selection does not repaint the current platform",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "rendered screenshot synthetic-blank-versus-untouched",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "group completed all required interactions",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "zero creations have an honest empty state",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "51 revisions explicitly expose only the latest 50",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "mouse chooses history item 1",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "selected original edit survives its array index changing",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "mouse chooses history item 0",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "expired selection is cleared instead of silently selecting the same index",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "expired selection shows no replacement patch and explains the recent window",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "group completed all required interactions",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "mouse chooses history item 0",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "synthetic actor observation passes the existing validator",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "actor change clears the prior world's viewing state",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "actor change closes the old panel",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "mouse chooses history item 0",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "synthetic instance observation passes the existing validator",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "instance change clears the prior world's viewing state",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "instance change closes the old panel",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "mouse chooses history item 0",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "synthetic generation observation passes the existing validator",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "generation change clears the prior world's viewing state",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "generation change closes the old panel",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "mouse chooses history item 0",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "synthetic entity observation passes the existing validator",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "entity change clears the prior world's viewing state",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "group completed all required interactions",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "mouse chooses history item 0",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "invalid missing capability is rejected by the original validator",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "invalid missing capability removes the previous viewing state",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "invalid capability cannot reopen cached history",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "mouse chooses history item 0",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "invalid unknown-version capability is rejected by the original validator",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "invalid unknown-version capability removes the previous viewing state",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "invalid capability cannot reopen cached history",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "mouse chooses history item 0",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "invalid malformed-patch capability is rejected by the original validator",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "invalid malformed-patch capability removes the previous viewing state",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "invalid capability cannot reopen cached history",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "group completed all required interactions",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "current mode still allows a nearby zero-inventory draft",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "mouse chooses history item 0",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "viewing mode guards submit/new-draft without losing the original patch",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "real mouse emits the original current-mode submit action exactly once",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "viewing never emits a travel signal",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "group completed all required interactions",
+        "passed": true
+      }
+    ],
+    "dataSources": {
+      "original": "byte-identical ITER25 stage-both public observation",
+      "synthetic": "explicitly labelled in each boundary group and screenshot banner"
+    },
+    "groups": [
+      {
+        "assertions": 24,
+        "name": "original_two_creations",
+        "passed": true,
+        "source": "recorded original observation"
+      },
+      {
+        "assertions": 15,
+        "name": "draft_and_stale_revision",
+        "passed": true,
+        "source": "labelled synthetic UI boundary input"
+      },
+      {
+        "assertions": 15,
+        "name": "pending_and_non_author_viewer",
+        "passed": true,
+        "source": "labelled synthetic UI boundary input"
+      },
+      {
+        "assertions": 15,
+        "name": "blank_and_current_picture",
+        "passed": true,
+        "source": "labelled synthetic UI boundary input"
+      },
+      {
+        "assertions": 19,
+        "name": "recent_window",
+        "passed": true,
+        "source": "labelled synthetic UI boundary input"
+      },
+      {
+        "assertions": 32,
+        "name": "identity_changes",
+        "passed": true,
+        "source": "labelled synthetic UI boundary input"
+      },
+      {
+        "assertions": 25,
+        "name": "unknown_capability",
+        "passed": true,
+        "source": "labelled synthetic UI boundary input"
+      },
+      {
+        "assertions": 10,
+        "name": "current_editing_signals",
+        "passed": true,
+        "source": "labelled synthetic UI boundary input"
+      }
+    ],
+    "limitations": [
+      "No live world service or HTTP adapter was used.",
+      "Pending and receipt input dictionaries and action signals were checked; recovery-file I/O was not exercised."
+    ],
+    "mouseEvents": [
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "original_two_creations",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "original_two_creations",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "original_two_creations",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 0",
+        "coordinates": "root window",
+        "group": "original_two_creations",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          251.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "original_two_creations",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 1",
+        "coordinates": "root window",
+        "group": "original_two_creations",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          283.0
+        ]
+      },
+      {
+        "control": "return to current work",
+        "coordinates": "root window",
+        "group": "original_two_creations",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          886.0,
+          542.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "draft_and_stale_revision",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "local draft cell",
+        "coordinates": "root window",
+        "group": "draft_and_stale_revision",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1172.0,
+          370.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "draft_and_stale_revision",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "draft_and_stale_revision",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 0",
+        "coordinates": "root window",
+        "group": "draft_and_stale_revision",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          251.0
+        ]
+      },
+      {
+        "control": "readonly historical cell",
+        "coordinates": "root window",
+        "group": "draft_and_stale_revision",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          884.0,
+          404.0
+        ]
+      },
+      {
+        "control": "return with stale original draft",
+        "coordinates": "root window",
+        "group": "draft_and_stale_revision",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          886.0,
+          542.0
+        ]
+      },
+      {
+        "control": "reopen original draft",
+        "coordinates": "root window",
+        "group": "draft_and_stale_revision",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "pending_and_non_author_viewer",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "pending_and_non_author_viewer",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "pending_and_non_author_viewer",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 0",
+        "coordinates": "root window",
+        "group": "pending_and_non_author_viewer",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          251.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "pending_and_non_author_viewer",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 1",
+        "coordinates": "root window",
+        "group": "pending_and_non_author_viewer",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          283.0
+        ]
+      },
+      {
+        "control": "return while original command remains pending",
+        "coordinates": "root window",
+        "group": "pending_and_non_author_viewer",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          886.0,
+          542.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "blank_and_current_picture",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "blank_and_current_picture",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "blank_and_current_picture",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 1",
+        "coordinates": "root window",
+        "group": "blank_and_current_picture",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          281.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "blank_and_current_picture",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 2",
+        "coordinates": "root window",
+        "group": "blank_and_current_picture",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          311.666656494141
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "recent_window",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "recent_window",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "recent_window",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "recent_window",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "recent_window",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          245.0
+        ]
+      },
+      {
+        "control": "history item 1",
+        "coordinates": "root window",
+        "group": "recent_window",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          46.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "recent_window",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "recent_window",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "recent_window",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          245.0
+        ]
+      },
+      {
+        "control": "history item 0",
+        "coordinates": "root window",
+        "group": "recent_window",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          18.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 0",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          251.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 0",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          251.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 0",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          251.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 0",
+        "coordinates": "root window",
+        "group": "identity_changes",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          251.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "unknown_capability",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "unknown_capability",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "unknown_capability",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 0",
+        "coordinates": "root window",
+        "group": "unknown_capability",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          251.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "unknown_capability",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "unknown_capability",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "unknown_capability",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 0",
+        "coordinates": "root window",
+        "group": "unknown_capability",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          251.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "unknown_capability",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "unknown_capability",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "unknown_capability",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 0",
+        "coordinates": "root window",
+        "group": "unknown_capability",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          251.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "coordinates": "root window",
+        "group": "current_editing_signals",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "current-mode draft cell",
+        "coordinates": "root window",
+        "group": "current_editing_signals",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1172.0,
+          370.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "coordinates": "root window",
+        "group": "current_editing_signals",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "coordinates": "root window",
+        "group": "current_editing_signals",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "history item 0",
+        "coordinates": "root window",
+        "group": "current_editing_signals",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1048.0,
+          251.0
+        ]
+      },
+      {
+        "control": "readonly untouched historical cell",
+        "coordinates": "root window",
+        "group": "current_editing_signals",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          1172.0,
+          500.0
+        ]
+      },
+      {
+        "control": "return to editable current work",
+        "coordinates": "root window",
+        "group": "current_editing_signals",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          886.0,
+          542.0
+        ]
+      },
+      {
+        "control": "current-mode submit signal only",
+        "coordinates": "root window",
+        "group": "current_editing_signals",
+        "inputMethod": "Input.parse_input_event",
+        "point": [
+          886.0,
+          542.0
+        ]
+      }
+    ],
+    "passed": true,
+    "screenshots": [
+      "original-first-five.png",
+      "original-second-four.png",
+      "original-current-nine.png",
+      "synthetic-blank-versus-untouched.png"
+    ],
+    "travelSignals": [],
+    "unexecutedSubmitSignals": [
+      {
+        "capabilityVersion": 1,
+        "entityId": "e926486325c2c4e3e924610139ee26711",
+        "expectedCanvasRevision": 2,
+        "patch": [
+          {
+            "color": "river",
+            "x": 4,
+            "y": 4
+          }
+        ],
+        "type": "paint_entity_canvas"
+      }
+    ]
+  },
+  "sourceHashesAfter": {
+    "clients/godot/entity_canvas_panel.gd": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/world_view.gd": "ee0733b03887b49a7f695cf2e8818233f76f667a97edb36dbd5a0f370911caba",
+    "clients/godot/river.gdshader": "b5de02167c429ce338fff61bb0ad180aa4d2d1b7c5c1e96f3cbce3f4ba88631b",
+    "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424",
+    "tests/entity_canvas_history_godot.py": "96574b941f3462068b3f9cdc2040b5b0d3cfd68135bd4c132c76e0427999014e",
+    "tests/godot/entity_canvas_history.gd": "7352ef897b42cee755b2499571cc62231237a590c12a9ef5cc12cb0fe8564699",
+    "tests/fixtures/entity-canvas-observation.json": "575c2f6b9482621d3d74c82e80f2a1705c669fe754e69565228232d943fd4778"
+  },
+  "sourceUnchanged": true,
+  "allStartedProcessesStopped": true,
+  "temporaryBytesRemoved": 12195768,
+  "temporaryRemoved": true,
+  "groups": 8,
+  "assertions": 155
+}

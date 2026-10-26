@@ -1,0 +1,58 @@
+{
+  "passed": false,
+  "validationLevel": "builder-fixture-driven-native-ui",
+  "actualModelCalls": 0,
+  "worldIoMode": "no-world-client-or-http",
+  "worldServicesStarted": 0,
+  "databasesCreated": 0,
+  "runtimeBinariesCopied": 0,
+  "fixture": "tests/fixtures/entity-canvas-observation.json",
+  "fixtureSha256": "575c2f6b9482621d3d74c82e80f2a1705c669fe754e69565228232d943fd4778",
+  "sourceHashesBefore": {
+    "clients/godot/entity_canvas_panel.gd": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/world_view.gd": "ee0733b03887b49a7f695cf2e8818233f76f667a97edb36dbd5a0f370911caba",
+    "clients/godot/river.gdshader": "b5de02167c429ce338fff61bb0ad180aa4d2d1b7c5c1e96f3cbce3f4ba88631b",
+    "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424",
+    "tests/entity_canvas_history_godot.py": "f98fac59bf97906b3aeccd145bc91935414ad1987a7e1b6ad695c572282a1799",
+    "tests/godot/entity_canvas_history.gd": "e4ebb6d0c5e0c17d93832cc46c9cd2daae848ec8e5c10b60c636c1fe3b008936",
+    "tests/fixtures/entity-canvas-observation.json": "575c2f6b9482621d3d74c82e80f2a1705c669fe754e69565228232d943fd4778"
+  },
+  "processes": [
+    {
+      "log": "import.log",
+      "pid": 222056,
+      "exitCode": 0,
+      "timedOut": false,
+      "processGroupStopped": true
+    },
+    {
+      "log": "ui.log",
+      "pid": 222127,
+      "exitCode": 5,
+      "timedOut": false,
+      "processGroupStopped": true
+    }
+  ],
+  "scope": "Actual Godot mouse input on unchanged product controls and platform view; recorded original observation and labelled synthetic boundary fixtures. No live world acceptance.",
+  "godotVersion": "4.7.2.stable.official.ed1daf0bf",
+  "failure": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/entity_canvas_history_godot.py\", line 158, in main\n    run_process(['xvfb-run', '-a', '-s', '-screen 0 1280x900x24', binary,\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/entity_canvas_history_godot.py\", line 87, in run_process\n    raise RuntimeError(f'{path.name}: {record}\\n{output[-6000:]}')\nRuntimeError: ui.log: {'log': 'ui.log', 'pid': 222127, 'exitCode': 5, 'timedOut': False, 'processGroupStopped': True}\nGodot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nWARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.\n     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)\nWARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.\n     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:372)\nOpenGL API 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.2 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 20.1.2, 256 bits)\n\nSCRIPT ERROR: Parse Error: The member \"Panel\" shadows a native class.\n          at: GDScript::reload (res://test_runner.gd:4)\nSCRIPT ERROR: Parse Error: Value of type \"res://entity_canvas_panel.gd\" cannot be assigned to a variable of type \"Panel\".\n          at: GDScript::reload (res://test_runner.gd:452)\nERROR: Failed to load script \"res://test_runner.gd\" with error \"Parse error\".\n   at: load (modules/gdscript/gdscript_resource_format.cpp:46)\nxvfb-run: error: problem while cleaning up temporary directory\n\n",
+  "sourceHashesAfter": {
+    "clients/godot/entity_canvas_panel.gd": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/world_view.gd": "ee0733b03887b49a7f695cf2e8818233f76f667a97edb36dbd5a0f370911caba",
+    "clients/godot/river.gdshader": "b5de02167c429ce338fff61bb0ad180aa4d2d1b7c5c1e96f3cbce3f4ba88631b",
+    "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424",
+    "tests/entity_canvas_history_godot.py": "f98fac59bf97906b3aeccd145bc91935414ad1987a7e1b6ad695c572282a1799",
+    "tests/godot/entity_canvas_history.gd": "e4ebb6d0c5e0c17d93832cc46c9cd2daae848ec8e5c10b60c636c1fe3b008936",
+    "tests/fixtures/entity-canvas-observation.json": "575c2f6b9482621d3d74c82e80f2a1705c669fe754e69565228232d943fd4778"
+  },
+  "sourceUnchanged": true,
+  "allStartedProcessesStopped": true,
+  "temporaryBytesRemoved": 5789536,
+  "temporaryRemoved": true,
+  "groups": 0,
+  "assertions": 0
+}

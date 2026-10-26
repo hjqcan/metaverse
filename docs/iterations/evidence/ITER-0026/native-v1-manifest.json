@@ -1,0 +1,25 @@
+{
+  "recordedAtUtc": "2026-10-26T07:45:44.378184+00:00",
+  "baseCommit": "2948b683adbd925e18a304fe4547abdce6b332fd",
+  "sourceSha256": {
+    "clients/godot/command_evidence.gd": "3ab247823db24eff49c027098dec747cc689368e9239696dc3173715b0545594",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_canvas_panel.gd": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/entity_notes_panel.gd": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803",
+    "clients/godot/main.gd": "23bf58f280cba82a69bd7cf5422d057f5884926c9ef225a3c54c9324d3511bd4",
+    "clients/godot/material_panel.gd": "0ca9ce3e6eef38690d9bbc7e77b7e8d75f4bb654e1ab2495e7598aaa632a9798",
+    "clients/godot/pending_store.gd": "525a83101a6ec89726f3729a8e6ca813a684bc84d6cd5cead50544400e8bdcbb",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/world_client.gd": "76fe85a37d6283e5568d4a2591b5918d649df582c8ee27ff8e812fa4deb15975",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "ee0733b03887b49a7f695cf2e8818233f76f667a97edb36dbd5a0f370911caba",
+    "clients/godot/main.tscn": "58496e2c5357a2774f2a70f19d0dcb9a015167d8bf9849dc68f4f20a7841e6b1",
+    "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424"
+  },
+  "changedProductFiles": [
+    "clients/godot/entity_canvas_panel.gd"
+  ],
+  "backend": "ITER25 core-v2 unchanged; no new HTTP or world command",
+  "godotImport": "Passed import.log; this is syntax validation only, UI tests pending"
+}

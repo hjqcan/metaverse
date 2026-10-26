@@ -1,0 +1,85 @@
+{
+  "scope": "ITER26 retained evidence files, excluding this index",
+  "files": {
+    "coordinator-cleanup.json": {
+      "sha256": "53f337516ba6736b9f5b2d78215e18b3a7aae61bfe0d66d80ad88de3a4e23f84",
+      "bytes": 1975
+    },
+    "coordinator-native-v1.json": {
+      "sha256": "812304b1608e0ba6903265f85cb8da19f276487c38dc5ab5885a8cd6bd039dc7",
+      "bytes": 46604
+    },
+    "coverage.json": {
+      "sha256": "b3892231788608000e7e6b3cf5097fdb8c9527ec377b05a31c7e66a60d9f376c",
+      "bytes": 4665
+    },
+    "native-v1-manifest.json": {
+      "sha256": "c05d45e7f4dc1ef24b820f1e8f433aabbcf7d571fd6c1ba688cc85e6834fb73c",
+      "bytes": 1872
+    },
+    "qa-cleanup.json": {
+      "sha256": "674b9ffa9e09d334e027de59dd5574545504129df6fc021c657082032644036b",
+      "bytes": 18804
+    },
+    "qa-current-nine.png": {
+      "sha256": "c1cabab3f83775085fcf69f309a62ad72408711d01bb589b80f12cfc0df74304",
+      "bytes": 299875
+    },
+    "qa-first-five.png": {
+      "sha256": "fc7657a21713bb6cffaef9c126f59c5bf279d589f5558cfac34021771bef5dac",
+      "bytes": 316947
+    },
+    "qa-initial-input-failure.json": {
+      "sha256": "d2f5045fa02a42d97b9f2fadad658fdb5ea61b6778b46775affe8b2f59289de8",
+      "bytes": 32685
+    },
+    "qa-native-v1.json": {
+      "sha256": "eea558164aab69d61d51cc863449dbeb439176f4c315b35f861dcf9dd744d17a",
+      "bytes": 58845
+    },
+    "qa-second-four.png": {
+      "sha256": "0a47306d6f28d2ee1f62dcb31f1d2dc80940f74969ef545526b4e56ea8737489",
+      "bytes": 316723
+    },
+    "qa-status.json": {
+      "sha256": "d558fa6fb8f3863bbb489f000568e25204c1a3bfa83a3e59380954653d6b039d",
+      "bytes": 4094
+    },
+    "qa-synthetic-blank.png": {
+      "sha256": "9fd296223d16f3d3980371c7d4c6ad54daa1af7ec2f7484b5079294908f21d6c",
+      "bytes": 317549
+    },
+    "qa-synthetic-window.png": {
+      "sha256": "0129844d600b9403c4c6ed50b44a5811053413ce4b6d15c129f3093143764d68",
+      "bytes": 323949
+    },
+    "qa-ui-driver.gd": {
+      "sha256": "328024db086e78097b3ee79d9c9201280cae46150ab29e8c1417e51ba288d8f0",
+      "bytes": 18135
+    },
+    "qa2-review.json": {
+      "sha256": "22f386d3c8bf5229ee34f695561b9e3df213eff963f3377e17356849d44eaf36",
+      "bytes": 7532
+    },
+    "worker-before-camera.json": {
+      "sha256": "25f06ea259343334a41dcfeaa054e9dd68cf59c5d03e8c5655888d5147c07e0c",
+      "bytes": 46604
+    },
+    "worker-initial-input-failure.json": {
+      "sha256": "3e4e6a436fc83065c780b3d34364cba304c1f8a629b3ed104bd8d145b09ebc1b",
+      "bytes": 24534
+    },
+    "worker-initial-parse-failure.json": {
+      "sha256": "31923ae3aae5ce2d5172e667a8b6ee5cb29b773aaa40e7c8698593e464f6c9d4",
+      "bytes": 4760
+    },
+    "worker-native-v1.json": {
+      "sha256": "9cfd6a1ca795882789518823f9baf545d92ac9bfa7fcdb4fe84d41505e23fc76",
+      "bytes": 46604
+    },
+    "worker-second-input-failure.json": {
+      "sha256": "b0280251db6afd21e616b88d5ca2d16accd25a58b34eae54aaf2e56e4b360aac",
+      "bytes": 25650
+    }
+  }
+}

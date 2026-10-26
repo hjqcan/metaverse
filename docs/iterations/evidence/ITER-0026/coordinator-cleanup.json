@@ -1,0 +1,54 @@
+{
+  "recordedAtUtc": "2026-10-26T08:05:14.682138+00:00",
+  "scope": "Coordinator-owned completed syntax/preview cache and superseded programmatic preview PNGs only. Independent actual-mouse screenshots retained in archive.",
+  "activeGodotProcessesUsingTargets": [],
+  "removed": [
+    {
+      "path": "clients/godot/.godot/uid_cache.bin",
+      "bytes": 466,
+      "sha256": "09c9feebd8c90301b669b0a68841e98dad7bc162ea62f8771cca04191f3792a0"
+    },
+    {
+      "path": "clients/godot/.godot/global_script_class_cache.cfg",
+      "bytes": 8,
+      "sha256": "f61aa7ad3097022d6a9d110ca3f73fa7bb348ec2cf9a6e7c9523574dc75f5a16"
+    },
+    {
+      "path": "clients/godot/.godot/.gdignore",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "clients/godot/.godot/editor/main.tscn-folding-3070c538c03ee49b7677ff960a3f5195.cfg",
+      "bytes": 136,
+      "sha256": "9b34a7fc95b0f9cd640941851bbb0ebc8777e0666f5560e828143047b26c7c93"
+    },
+    {
+      "path": "clients/godot/.godot/editor/filesystem_cache10",
+      "bytes": 1459,
+      "sha256": "d4d207e1448399278adcc38270ec749ecb428b4dd678e7bea78cd5c6d6e5b4b9"
+    },
+    {
+      "path": "clients/godot/.godot/editor/project_metadata.cfg",
+      "bytes": 206,
+      "sha256": "a6777417a6b589ceb376474fdff754ffe24c49c0423c083f5e875ee3878fcada"
+    },
+    {
+      "path": ".local/iter0026/root-preview/view--1.png",
+      "bytes": 306105,
+      "sha256": "70d2fab3a7b67fabd584d6df2b40c710d48a5e8ec449bf26868e6500a4e29b1c"
+    },
+    {
+      "path": ".local/iter0026/root-preview/view-0.png",
+      "bytes": 316230,
+      "sha256": "e0e2f55784978d577d4671a25016f87e0a86c68ea89b16177f7440140fde0988"
+    },
+    {
+      "path": ".local/iter0026/root-preview/view-1.png",
+      "bytes": 316178,
+      "sha256": "36b9d778af5aba76ee5aaf1e30fcad9c0a00f6a84de66e77aa77b9542349524b"
+    }
+  ],
+  "bytesRemoved": 940789,
+  "sourceAndNaturalStateUntouched": true
+}

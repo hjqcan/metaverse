@@ -1,0 +1,128 @@
+{
+  "recordedAtUtc": "2026-10-26T08:09:41.621362+00:00",
+  "iteration": "ITER-0026",
+  "status": "accepted",
+  "productVersion": "native-v1",
+  "baseCommit": "2948b683adbd925e18a304fe4547abdce6b332fd",
+  "changedProductFiles": [
+    "clients/godot/entity_canvas_panel.gd"
+  ],
+  "panelSha256": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+  "finalTestSourceSha256": {
+    "tests/entity_canvas_history_godot.py": "96574b941f3462068b3f9cdc2040b5b0d3cfd68135bd4c132c76e0427999014e",
+    "tests/godot/entity_canvas_history.gd": "7352ef897b42cee755b2499571cc62231237a590c12a9ef5cc12cb0fe8564699",
+    "tests/fixtures/entity-canvas-observation.json": "575c2f6b9482621d3d74c82e80f2a1705c669fe754e69565228232d943fd4778"
+  },
+  "builder": {
+    "report": "worker-native-v1.json",
+    "groups": 8,
+    "assertions": 155,
+    "mouseInteractions": 74,
+    "passed": true
+  },
+  "coordinator": {
+    "command": "ENTITY_CANVAS_PANEL_SHA=2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e npm run test:entity-canvas-history",
+    "report": "coordinator-native-v1.json",
+    "groups": 8,
+    "assertions": 155,
+    "passed": true,
+    "sameFinalTestAndProductSourcesAsBuilder": true
+  },
+  "independentQa": {
+    "report": "qa-native-v1.json",
+    "assertions": 157,
+    "mouseInteractions": 46,
+    "passed": true,
+    "actualInitialGet": 1,
+    "selectionRequests": 0,
+    "post": 0,
+    "viewer": {
+      "actor": "a3",
+      "wood": 3,
+      "position": [
+        27,
+        10
+      ]
+    },
+    "zeroWoodPendingIdentityWindowChanges": "explicit UI fixtures, not newly executed world history"
+  },
+  "independentEvidenceReview": {
+    "report": "qa2-review.json",
+    "verdict": "pass_with_explicit_evidence_boundaries",
+    "newTestsRun": 0
+  },
+  "actualModelCalls": 0,
+  "backendPythonWebRegression": "Not rerun for this panel-only change; ITER25 results remain historical evidence.",
+  "originalNaturalState": "Preserved; no new painting trip or adoption. QA used small private cold copies for authenticated reads.",
+  "historyScope": "Most recent 50 single-edit patches, not full historical frames or pagination.",
+  "limitations": [
+    "No new disk-recovery or unresolved-command transport test.",
+    "No live polling race test; QA freezes polling after first real observation.",
+    "No human enjoyment or long-term capacity evidence."
+  ],
+  "targetedRunsAndCleanup": [
+    {
+      "path": ".local/iter0026/worker-20261026T075600Z-b4467d/results.json",
+      "sha256": "31923ae3aae5ce2d5172e667a8b6ee5cb29b773aaa40e7c8698593e464f6c9d4",
+      "passed": false,
+      "groups": 0,
+      "assertions": 0,
+      "temporaryBytesRemoved": 5789536,
+      "allStartedProcessesStopped": true,
+      "temporaryRemoved": true
+    },
+    {
+      "path": ".local/iter0026/worker-20261026T075658Z-a5a67e/results.json",
+      "sha256": "3e4e6a436fc83065c780b3d34364cba304c1f8a629b3ed104bd8d145b09ebc1b",
+      "passed": false,
+      "groups": 8,
+      "assertions": 58,
+      "temporaryBytesRemoved": 12200981,
+      "allStartedProcessesStopped": true,
+      "temporaryRemoved": true
+    },
+    {
+      "path": ".local/iter0026/worker-20261026T080020Z-15baea/results.json",
+      "sha256": "b0280251db6afd21e616b88d5ca2d16accd25a58b34eae54aaf2e56e4b360aac",
+      "passed": false,
+      "groups": 8,
+      "assertions": 58,
+      "temporaryBytesRemoved": 12201337,
+      "allStartedProcessesStopped": true,
+      "temporaryRemoved": true
+    },
+    {
+      "path": ".local/iter0026/worker-20261026T080510Z-aa27e4/results.json",
+      "sha256": "25f06ea259343334a41dcfeaa054e9dd68cf59c5d03e8c5655888d5147c07e0c",
+      "passed": true,
+      "groups": 8,
+      "assertions": 155,
+      "temporaryBytesRemoved": 12195423,
+      "allStartedProcessesStopped": true,
+      "temporaryRemoved": true
+    },
+    {
+      "path": ".local/iter0026/worker-20261026T080624Z-30c29e/results.json",
+      "sha256": "9cfd6a1ca795882789518823f9baf545d92ac9bfa7fcdb4fe84d41505e23fc76",
+      "passed": true,
+      "groups": 8,
+      "assertions": 155,
+      "temporaryBytesRemoved": 12195768,
+      "allStartedProcessesStopped": true,
+      "temporaryRemoved": true
+    },
+    {
+      "path": ".local/iter0026/worker-20261026T080629Z-37ad58/results.json",
+      "sha256": "812304b1608e0ba6903265f85cb8da19f276487c38dc5ab5885a8cd6bd039dc7",
+      "passed": true,
+      "groups": 8,
+      "assertions": 155,
+      "temporaryBytesRemoved": 12195741,
+      "allStartedProcessesStopped": true,
+      "temporaryRemoved": true
+    }
+  ],
+  "targetedTemporaryBytesRemoved": 66778786,
+  "qaCleanup": "qa-cleanup.json",
+  "coordinatorCleanup": "coordinator-cleanup.json"
+}

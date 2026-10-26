@@ -1,0 +1,640 @@
+{
+  "passed": false,
+  "validationLevel": "builder-fixture-driven-native-ui",
+  "actualModelCalls": 0,
+  "worldIoMode": "no-world-client-or-http",
+  "worldServicesStarted": 0,
+  "databasesCreated": 0,
+  "runtimeBinariesCopied": 0,
+  "fixture": "tests/fixtures/entity-canvas-observation.json",
+  "fixtureSha256": "575c2f6b9482621d3d74c82e80f2a1705c669fe754e69565228232d943fd4778",
+  "sourceHashesBefore": {
+    "clients/godot/entity_canvas_panel.gd": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/world_view.gd": "ee0733b03887b49a7f695cf2e8818233f76f667a97edb36dbd5a0f370911caba",
+    "clients/godot/river.gdshader": "b5de02167c429ce338fff61bb0ad180aa4d2d1b7c5c1e96f3cbce3f4ba88631b",
+    "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424",
+    "tests/entity_canvas_history_godot.py": "f98fac59bf97906b3aeccd145bc91935414ad1987a7e1b6ad695c572282a1799",
+    "tests/godot/entity_canvas_history.gd": "c119d23d0069f33ff37d1868fb62cb16ccaca26c8394cbe0e9cc543ea932da4c",
+    "tests/fixtures/entity-canvas-observation.json": "575c2f6b9482621d3d74c82e80f2a1705c669fe754e69565228232d943fd4778"
+  },
+  "processes": [
+    {
+      "log": "import.log",
+      "pid": 224438,
+      "exitCode": 0,
+      "timedOut": false,
+      "processGroupStopped": true
+    },
+    {
+      "log": "ui.log",
+      "pid": 224619,
+      "exitCode": 1,
+      "timedOut": false,
+      "processGroupStopped": true
+    }
+  ],
+  "scope": "Actual Godot mouse input on unchanged product controls and platform view; recorded original observation and labelled synthetic boundary fixtures. No live world acceptance.",
+  "godotVersion": "4.7.2.stable.official.ed1daf0bf",
+  "failure": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/entity_canvas_history_godot.py\", line 158, in main\n    run_process(['xvfb-run', '-a', '-s', '-screen 0 1280x900x24', binary,\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/entity_canvas_history_godot.py\", line 87, in run_process\n    raise RuntimeError(f'{path.name}: {record}\\n{output[-6000:]}')\nRuntimeError: ui.log: {'log': 'ui.log', 'pid': 224619, 'exitCode': 1, 'timedOut': False, 'processGroupStopped': True}\npp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] choose (res://test_runner.gd:98)\n       [2] move_mouse (res://test_runner.gd:46)\nERROR: original_two_creations: group completed without a script error\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] run (res://test_runner.gd:476)\n       [2] test_original_two_creations (res://test_runner.gd:196)\n       [3] choose (res://test_runner.gd:100)\n       [4] move_mouse (res://test_runner.gd:46)\noriginal_two_creations: FAIL\nERROR: draft_and_stale_revision: requested history row was reachable by mouse: 0\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] choose (res://test_runner.gd:98)\n       [2] move_mouse (res://test_runner.gd:46)\nERROR: draft_and_stale_revision: group completed without a script error\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] run (res://test_runner.gd:476)\n       [2] test_draft_and_stale_revision (res://test_runner.gd:221)\n       [3] choose (res://test_runner.gd:100)\n       [4] move_mouse (res://test_runner.gd:46)\ndraft_and_stale_revision: FAIL\nERROR: pending_and_non_author_viewer: requested history row was reachable by mouse: 0\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] choose (res://test_runner.gd:98)\n       [2] move_mouse (res://test_runner.gd:46)\nERROR: pending_and_non_author_viewer: group completed without a script error\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] run (res://test_runner.gd:476)\n       [2] test_pending_and_non_author_viewer (res://test_runner.gd:255)\n       [3] choose (res://test_runner.gd:100)\n       [4] move_mouse (res://test_runner.gd:46)\npending_and_non_author_viewer: FAIL\nERROR: blank_and_current_picture: requested history row was reachable by mouse: 1\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] choose (res://test_runner.gd:98)\n       [2] move_mouse (res://test_runner.gd:46)\nERROR: blank_and_current_picture: group completed without a script error\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] run (res://test_runner.gd:476)\n       [2] test_blank_and_current_picture (res://test_runner.gd:271)\n       [3] choose (res://test_runner.gd:100)\n       [4] move_mouse (res://test_runner.gd:46)\nblank_and_current_picture: FAIL\nERROR: recent_window: requested history row was reachable by mouse: 1\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] choose (res://test_runner.gd:98)\n       [2] move_mouse (res://test_runner.gd:46)\nERROR: recent_window: group completed without a script error\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] run (res://test_runner.gd:476)\n       [2] test_recent_window (res://test_runner.gd:308)\n       [3] choose (res://test_runner.gd:100)\n       [4] move_mouse (res://test_runner.gd:46)\nrecent_window: FAIL\nERROR: identity_changes: requested history row was reachable by mouse: 0\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] choose (res://test_runner.gd:98)\n       [2] move_mouse (res://test_runner.gd:46)\nERROR: identity_changes: group completed without a script error\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] run (res://test_runner.gd:476)\n       [2] test_identity_changes (res://test_runner.gd:330)\n       [3] choose (res://test_runner.gd:100)\n       [4] move_mouse (res://test_runner.gd:46)\nidentity_changes: FAIL\nERROR: unknown_capability: requested history row was reachable by mouse: 0\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] choose (res://test_runner.gd:98)\n       [2] move_mouse (res://test_runner.gd:46)\nERROR: unknown_capability: group completed without a script error\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] run (res://test_runner.gd:476)\n       [2] test_unknown_capability (res://test_runner.gd:361)\n       [3] choose (res://test_runner.gd:100)\n       [4] move_mouse (res://test_runner.gd:46)\nunknown_capability: FAIL\nERROR: current_editing_signals: requested history row was reachable by mouse: 0\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] choose (res://test_runner.gd:98)\n       [2] move_mouse (res://test_runner.gd:46)\nERROR: current_editing_signals: group completed without a script error\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (res://test_runner.gd:34)\n       [1] run (res://test_runner.gd:476)\n       [2] test_current_editing_signals (res://test_runner.gd:384)\n       [3] choose (res://test_runner.gd:100)\n       [4] move_mouse (res://test_runner.gd:46)\ncurrent_editing_signals: FAIL\n\n",
+  "ui": {
+    "checks": [
+      {
+        "group": "original_two_creations",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "current original platform has 9 authored cells",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "two original creations in order, with no implicit initial selection",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "total and recent count are shown",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "original_two_creations",
+        "name": "requested history row was reachable by mouse: 0",
+        "passed": false
+      },
+      {
+        "group": "original_two_creations",
+        "name": "group completed without a script error",
+        "passed": false
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "real mouse creates one local unsubmitted draft cell",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "requested history row was reachable by mouse: 0",
+        "passed": false
+      },
+      {
+        "group": "draft_and_stale_revision",
+        "name": "group completed without a script error",
+        "passed": false
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "requested history row was reachable by mouse: 0",
+        "passed": false
+      },
+      {
+        "group": "pending_and_non_author_viewer",
+        "name": "group completed without a script error",
+        "passed": false
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "requested history row was reachable by mouse: 1",
+        "passed": false
+      },
+      {
+        "group": "blank_and_current_picture",
+        "name": "group completed without a script error",
+        "passed": false
+      },
+      {
+        "group": "recent_window",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "zero creations have an honest empty state",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "51 revisions explicitly expose only the latest 50",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "recent_window",
+        "name": "requested history row was reachable by mouse: 1",
+        "passed": false
+      },
+      {
+        "group": "recent_window",
+        "name": "group completed without a script error",
+        "passed": false
+      },
+      {
+        "group": "identity_changes",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "identity_changes",
+        "name": "requested history row was reachable by mouse: 0",
+        "passed": false
+      },
+      {
+        "group": "identity_changes",
+        "name": "group completed without a script error",
+        "passed": false
+      },
+      {
+        "group": "unknown_capability",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "unknown_capability",
+        "name": "requested history row was reachable by mouse: 0",
+        "passed": false
+      },
+      {
+        "group": "unknown_capability",
+        "name": "group completed without a script error",
+        "passed": false
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "input passes the unchanged product capability validator",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "panel opens in current-work mode",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "current mode still allows a nearby zero-inventory draft",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "mouse enters history viewing",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "mouse opens the actual history popup",
+        "passed": true
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "requested history row was reachable by mouse: 0",
+        "passed": false
+      },
+      {
+        "group": "current_editing_signals",
+        "name": "group completed without a script error",
+        "passed": false
+      }
+    ],
+    "dataSources": {
+      "original": "byte-identical ITER25 stage-both public observation",
+      "synthetic": "explicitly labelled in each boundary group and screenshot banner"
+    },
+    "groups": [
+      {
+        "assertions": 9,
+        "name": "original_two_creations",
+        "passed": false,
+        "source": "recorded original observation"
+      },
+      {
+        "assertions": 7,
+        "name": "draft_and_stale_revision",
+        "passed": false,
+        "source": "labelled synthetic UI boundary input"
+      },
+      {
+        "assertions": 6,
+        "name": "pending_and_non_author_viewer",
+        "passed": false,
+        "source": "labelled synthetic UI boundary input"
+      },
+      {
+        "assertions": 6,
+        "name": "blank_and_current_picture",
+        "passed": false,
+        "source": "labelled synthetic UI boundary input"
+      },
+      {
+        "assertions": 11,
+        "name": "recent_window",
+        "passed": false,
+        "source": "labelled synthetic UI boundary input"
+      },
+      {
+        "assertions": 6,
+        "name": "identity_changes",
+        "passed": false,
+        "source": "labelled synthetic UI boundary input"
+      },
+      {
+        "assertions": 6,
+        "name": "unknown_capability",
+        "passed": false,
+        "source": "labelled synthetic UI boundary input"
+      },
+      {
+        "assertions": 7,
+        "name": "current_editing_signals",
+        "passed": false,
+        "source": "labelled synthetic UI boundary input"
+      }
+    ],
+    "limitations": [
+      "No live world service or HTTP adapter was used.",
+      "Pending and receipt input dictionaries and action signals were checked; recovery-file I/O was not exercised."
+    ],
+    "mouseEvents": [
+      {
+        "control": "open original product panel",
+        "group": "original_two_creations",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "group": "original_two_creations",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "group": "original_two_creations",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "group": "draft_and_stale_revision",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "local draft cell",
+        "group": "draft_and_stale_revision",
+        "point": [
+          1172.0,
+          370.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "group": "draft_and_stale_revision",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "group": "draft_and_stale_revision",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "group": "pending_and_non_author_viewer",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "group": "pending_and_non_author_viewer",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "group": "pending_and_non_author_viewer",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "group": "blank_and_current_picture",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "group": "blank_and_current_picture",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "group": "blank_and_current_picture",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "group": "recent_window",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "group": "recent_window",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "group": "recent_window",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "group": "recent_window",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "group": "recent_window",
+        "point": [
+          1048.0,
+          245.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "group": "identity_changes",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "group": "identity_changes",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "group": "identity_changes",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "group": "unknown_capability",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "group": "unknown_capability",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "group": "unknown_capability",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      },
+      {
+        "control": "open original product panel",
+        "group": "current_editing_signals",
+        "point": [
+          95.0,
+          84.0
+        ]
+      },
+      {
+        "control": "current-mode draft cell",
+        "group": "current_editing_signals",
+        "point": [
+          1172.0,
+          370.0
+        ]
+      },
+      {
+        "control": "recent creations",
+        "group": "current_editing_signals",
+        "point": [
+          1038.0,
+          542.0
+        ]
+      },
+      {
+        "control": "history dropdown",
+        "group": "current_editing_signals",
+        "point": [
+          1048.0,
+          218.0
+        ]
+      }
+    ],
+    "passed": false,
+    "screenshots": [],
+    "travelSignals": [],
+    "unexecutedSubmitSignals": []
+  },
+  "sourceHashesAfter": {
+    "clients/godot/entity_canvas_panel.gd": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/world_view.gd": "ee0733b03887b49a7f695cf2e8818233f76f667a97edb36dbd5a0f370911caba",
+    "clients/godot/river.gdshader": "b5de02167c429ce338fff61bb0ad180aa4d2d1b7c5c1e96f3cbce3f4ba88631b",
+    "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424",
+    "tests/entity_canvas_history_godot.py": "f98fac59bf97906b3aeccd145bc91935414ad1987a7e1b6ad695c572282a1799",
+    "tests/godot/entity_canvas_history.gd": "c119d23d0069f33ff37d1868fb62cb16ccaca26c8394cbe0e9cc543ea932da4c",
+    "tests/fixtures/entity-canvas-observation.json": "575c2f6b9482621d3d74c82e80f2a1705c669fe754e69565228232d943fd4778"
+  },
+  "sourceUnchanged": true,
+  "allStartedProcessesStopped": true,
+  "temporaryBytesRemoved": 12200981,
+  "temporaryRemoved": true,
+  "groups": 8,
+  "assertions": 58
+}

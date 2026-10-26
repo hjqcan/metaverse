@@ -1,0 +1,1593 @@
+{
+  "passed": true,
+  "scope": "ITER26 independently executed actual native selection over original two-edit history; labelled UI fixtures",
+  "binarySha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+  "manifestSha256": "e4420d251edf46268741ef323b55c3b18e085e366cdac7cb49b3901df8f73523",
+  "seed": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T061604041742Z/continued-natural-v2",
+  "seedFilesBefore": {
+    "access.json": {
+      "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+      "bytes": 790,
+      "mtimeNs": 1792988757982573799
+    },
+    "server.log": {
+      "sha256": "8879131f4030c337cf83d1253b77d5c46fb201756acfd5c28f9994a51a0d48b8",
+      "bytes": 55446,
+      "mtimeNs": 1792995379633570681
+    },
+    "final-snapshot.json": {
+      "sha256": "9ab2a9c180995c7ba88e4b0692158a2300d4783acb07a1069d1a1654c1fe0c69",
+      "bytes": 879627,
+      "mtimeNs": 1792995379676572562
+    },
+    "milestones.json": {
+      "sha256": "8ff879c26290bdd978f3ee907955600320d21e5b5a3067715240b128db8a91ad",
+      "bytes": 870,
+      "mtimeNs": 1792995399868921158
+    },
+    "world.db-wal": {
+      "sha256": "bede4dc2ce0aad0459ec9d596fc4f465606cd281077a981fe8db6b27668e79f9",
+      "bytes": 4120032,
+      "mtimeNs": 1792995379485564206
+    },
+    "world.db": {
+      "sha256": "8fe126cafea5df222af4f8fb2cdac97504f44af4eb710f908266969670e85d1c",
+      "bytes": 868352,
+      "mtimeNs": 1792994328681062137
+    },
+    "trace.json": {
+      "sha256": "444ba1148cccc09145a934f7e8fe60d3287a612df27a478f10511c5b51de1f4c",
+      "bytes": 8864,
+      "mtimeNs": 1792995399868856084
+    },
+    "world.db-shm": {
+      "sha256": "f404251b86a3938cffbbd9c0d6cd23e133811a6b13528d4f087d444fe4b72df2",
+      "bytes": 32768,
+      "mtimeNs": 1792996666230907651
+    },
+    "world.db.material-clock.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtimeNs": 1792995372414254903
+    }
+  },
+  "cases": {
+    "actual_and_boundaries": {
+      "passed": true,
+      "ui": {
+        "actualModelCalls": 0,
+        "businessSignals": 0,
+        "checks": [
+          {
+            "group": "startup",
+            "name": "actual authenticated non-author observation",
+            "passed": true
+          },
+          {
+            "group": "startup",
+            "name": "actual original revision two",
+            "passed": true
+          },
+          {
+            "group": "startup",
+            "name": "viewer outside submit distance",
+            "passed": true
+          },
+          {
+            "group": "startup",
+            "name": "viewer owns none of the current cells",
+            "passed": true
+          },
+          {
+            "group": "startup",
+            "name": "actual current platform has 25 cells",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "open original canvas as a3 visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "saved actual-current-nine",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "open recent creations visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "two original records offered",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "open recent creation selector visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "native history popup is visible",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "actual mouse selection uses original two or labelled three-item menu",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "native mouse selects intended record 0",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "first original five cells exact patch colors, author and neutral unchanged cells",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "first original five cells original author and ordinal",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "first original five cells original command identity",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "first original five cells editing and travel actions hidden",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "first history view leaves 3D current nine-cell picture unchanged",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "saved actual-first-five",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "open recent creation selector visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "native history popup is visible",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "actual mouse selection uses original two or labelled three-item menu",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "native mouse selects intended record 1",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "second original four cells exact patch colors, author and neutral unchanged cells",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "second original four cells original author and ordinal",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "second original four cells original command identity",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "second original four cells editing and travel actions hidden",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "second history view leaves 3D current picture unchanged",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "saved actual-second-four",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "return to current work visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "returns to actual current editor",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "view selection does not mutate actual observation or scene",
+            "passed": true
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "name": "saved actual-returned-nine",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "draft on one unowned cell without sending visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "actual local mouse draft uses original revision",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "browse with an existing draft visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "open recent creation selector visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "native history popup is visible",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "actual mouse selection uses original two or labelled three-item menu",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "native mouse selects intended record 0",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "inspect historical cell only visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "open recent creation selector visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "native history popup is visible",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "actual mouse selection uses original two or labelled three-item menu",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "native mouse selects intended record 1",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "history selection preserves draft and original base",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "close history panel visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "reopen canvas visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "name": "closing opens current work and preserves draft",
+            "passed": true
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "name": "explicit_zero_wood_pending_view passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "name": "history while business actions unavailable visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "name": "open recent creation selector visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "name": "native history popup is visible",
+            "passed": true
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "name": "actual mouse selection uses original two or labelled three-item menu",
+            "passed": true
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "name": "native mouse selects intended record 0",
+            "passed": true
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "name": "zero wood pending viewer original five exact patch colors, author and neutral unchanged cells",
+            "passed": true
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "name": "zero wood pending viewer original five original author and ordinal",
+            "passed": true
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "name": "zero wood pending viewer original five original command identity",
+            "passed": true
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "name": "zero wood pending viewer original five editing and travel actions hidden",
+            "passed": true
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "name": "return with pending preserved visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "name": "recorded pending and unrelated receipt inputs untouched",
+            "passed": true
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "name": "pending viewing retains original local draft",
+            "passed": true
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "name": "pending current editor remains unable to act",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "explicit_later_same_author_blank passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "later revision retains stale draft and prevents old submit",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "browse original after later repaint visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "open recent creation selector visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "native history popup is visible",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "actual mouse selection uses original two or labelled three-item menu",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "native mouse selects intended record 1",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "older leaf remains in original edit exact patch colors, author and neutral unchanged cells",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "older leaf remains in original edit original author and ordinal",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "older leaf remains in original edit original command identity",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "older leaf remains in original edit editing and travel actions hidden",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "open recent creation selector visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "native history popup is visible",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "actual mouse selection uses original two or labelled three-item menu",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "native mouse selects intended record 2",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "later blank is one changed cell exact patch colors, author and neutral unchanged cells",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "later blank is one changed cell original author and ordinal",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "later blank is one changed cell original command identity",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "later blank is one changed cell editing and travel actions hidden",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "painted blank differs visibly from unchanged neutral cell",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "saved synthetic-blank-patch",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "current synthetic later blank visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "current fixture shows later blank while old entry kept original leaf",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "return did not silently rebase stale draft",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "explicitly choose a new draft after stale warning visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "name": "only explicit new draft adopts current revision",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "recorded_two_edits_new_connection_fixture passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "choose stable original before window changes visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "open recent creation selector visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "native history popup is visible",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "actual mouse selection uses original two or labelled three-item menu",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "native mouse selects intended record 1",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "explicit_fifty_edits passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "fifty records keep same original selected",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "explicit_fifty_one_edits passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "window shift preserves command identity at its new index",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "same original after index moved exact patch colors, author and neutral unchanged cells",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "same original after index moved original author and ordinal",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "same original after index moved original command identity",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "same original after index moved editing and travel actions hidden",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "total and truncated recent range explicit",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "explicit_selected_edit_outside_window passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "slid-out original selection cleared without picking replacement",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "slid-out notice and unselected neutral grid",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "saved synthetic-window-slide",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "explicit_no_edits passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "open explicitly empty history visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "name": "empty history has explicit disabled choice",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "before_actor passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "open prior selection before actor visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "open recent creation selector visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "native history popup is visible",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "actual mouse selection uses original two or labelled three-item menu",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "native mouse selects intended record 0",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "changed_actor passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "actor clears old selection",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "actor closes old view",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "before_generation passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "open prior selection before generation visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "open recent creation selector visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "native history popup is visible",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "actual mouse selection uses original two or labelled three-item menu",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "native mouse selects intended record 0",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "changed_generation passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "generation clears old selection",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "generation closes old view",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "before_instance passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "open prior selection before instance visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "open recent creation selector visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "native history popup is visible",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "actual mouse selection uses original two or labelled three-item menu",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "native mouse selects intended record 0",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "changed_instance passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "instance clears old selection",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "instance closes old view",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "before_target passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "open prior selection before target visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "open recent creation selector visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "native history popup is visible",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "actual mouse selection uses original two or labelled three-item menu",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "native mouse selects intended record 0",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "changed_target passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "target clears old selection",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "before_unknown passes existing capability validation",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "open prior selection before unknown visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "open recent creation selector visible to mouse",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "native history popup is visible",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "actual mouse selection uses original two or labelled three-item menu",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "native mouse selects intended record 0",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "unknown clears old selection",
+            "passed": true
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "name": "unknown closes old view",
+            "passed": true
+          },
+          {
+            "group": "final_no_world_side_effects",
+            "name": "all viewing and fixture interactions emitted zero business or travel signals",
+            "passed": true
+          },
+          {
+            "group": "final_no_world_side_effects",
+            "name": "original real observation and 3D cells remain untouched",
+            "passed": true
+          },
+          {
+            "group": "final_no_world_side_effects",
+            "name": "actual client original pending and receipt untouched",
+            "passed": true
+          }
+        ],
+        "destinationSignals": 0,
+        "frames": [
+          {
+            "detail": "选择一条创作查看。",
+            "historyMode": false,
+            "kind": "actual original observation",
+            "name": "actual-current-nine",
+            "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-history-native-20261026T075945944755Z/native-ui-actual-current-nine.png",
+            "selectedOriginal": "",
+            "summary": "共2次，显示最近2次"
+          },
+          {
+            "detail": "a1_alias · 第1次创作 · 5格\n2026-10-26T06:50:24.2201514+00:00",
+            "historyMode": true,
+            "kind": "actual original observation",
+            "name": "actual-first-five",
+            "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-history-native-20261026T075945944755Z/native-ui-actual-first-five.png",
+            "selectedOriginal": "[\"w_15ced6889f624d8da8a3d2129ba26874\",\"e926486325c2c4e3e924610139ee26711\",\"a1_alias\",\"ee3c85a5d0f74313bf703a35301faa0e\"]",
+            "summary": "共2次，显示最近2次"
+          },
+          {
+            "detail": "a2 · 第2次创作 · 4格\n2026-10-26T06:50:37.5393568+00:00",
+            "historyMode": true,
+            "kind": "actual original observation",
+            "name": "actual-second-four",
+            "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-history-native-20261026T075945944755Z/native-ui-actual-second-four.png",
+            "selectedOriginal": "[\"w_15ced6889f624d8da8a3d2129ba26874\",\"e926486325c2c4e3e924610139ee26711\",\"a2\",\"7590f71def004084ad8f7685fe496a77\"]",
+            "summary": "共2次，显示最近2次"
+          },
+          {
+            "detail": "a2 · 第2次创作 · 4格\n2026-10-26T06:50:37.5393568+00:00",
+            "historyMode": false,
+            "kind": "actual original observation",
+            "name": "actual-returned-nine",
+            "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-history-native-20261026T075945944755Z/native-ui-actual-returned-nine.png",
+            "selectedOriginal": "[\"w_15ced6889f624d8da8a3d2129ba26874\",\"e926486325c2c4e3e924610139ee26711\",\"a2\",\"7590f71def004084ad8f7685fe496a77\"]",
+            "summary": "共2次，显示最近2次"
+          },
+          {
+            "detail": "a2 · 第3次创作 · 1格\n2026-10-26T06:50:37.5393568+00:00",
+            "historyMode": true,
+            "kind": "explicit synthetic observation; no new world edit",
+            "name": "synthetic-blank-patch",
+            "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-history-native-20261026T075945944755Z/native-ui-synthetic-blank-patch.png",
+            "selectedOriginal": "[\"w_15ced6889f624d8da8a3d2129ba26874\",\"e926486325c2c4e3e924610139ee26711\",\"a2\",\"explicit-synthetic-creation-3\"]",
+            "summary": "共3次，显示最近3次"
+          },
+          {
+            "detail": "选择一条创作查看。",
+            "historyMode": true,
+            "kind": "explicit synthetic fifty-two-edit observation",
+            "name": "synthetic-window-slide",
+            "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-history-native-20261026T075945944755Z/native-ui-synthetic-window-slide.png",
+            "selectedOriginal": "",
+            "summary": "共52次，显示最近50次\n这里仅显示最近50次，更早记录仍保留。\n所选创作已超出最近50次，可重新选择。"
+          }
+        ],
+        "inputEvents": [
+          {
+            "group": "actual_original_5_4_9",
+            "kind": "mouse_click",
+            "label": "open original canvas as a3",
+            "point": [
+              1173.0,
+              186.5
+            ]
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "kind": "mouse_click",
+            "label": "open recent creations",
+            "point": [
+              1094.0,
+              670.5
+            ]
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "kind": "mouse_click",
+            "label": "open recent creation selector",
+            "point": [
+              1048.0,
+              346.5
+            ]
+          },
+          {
+            "globalPoint": [
+              1048.0,
+              383.5
+            ],
+            "group": "actual_original_5_4_9",
+            "index": 0,
+            "inputMethod": "Input.parse_input_event",
+            "kind": "native_popup_mouse_click",
+            "localPoint": [
+              192.0,
+              15.5
+            ]
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "kind": "mouse_click",
+            "label": "open recent creation selector",
+            "point": [
+              1048.0,
+              346.5
+            ]
+          },
+          {
+            "globalPoint": [
+              1048.0,
+              414.5
+            ],
+            "group": "actual_original_5_4_9",
+            "index": 1,
+            "inputMethod": "Input.parse_input_event",
+            "kind": "native_popup_mouse_click",
+            "localPoint": [
+              192.0,
+              46.5
+            ]
+          },
+          {
+            "group": "actual_original_5_4_9",
+            "kind": "mouse_click",
+            "label": "return to current work",
+            "point": [
+              902.0,
+              670.5
+            ]
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "kind": "mouse_click",
+            "label": "draft on one unowned cell without sending",
+            "point": [
+              962.0,
+              342.0
+            ]
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "kind": "mouse_click",
+            "label": "browse with an existing draft",
+            "point": [
+              1094.0,
+              670.5
+            ]
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "kind": "mouse_click",
+            "label": "open recent creation selector",
+            "point": [
+              1048.0,
+              346.5
+            ]
+          },
+          {
+            "globalPoint": [
+              1048.0,
+              383.5
+            ],
+            "group": "actual_local_draft_preservation",
+            "index": 0,
+            "inputMethod": "Input.parse_input_event",
+            "kind": "native_popup_mouse_click",
+            "localPoint": [
+              192.0,
+              15.5
+            ]
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "kind": "mouse_click",
+            "label": "inspect historical cell only",
+            "point": [
+              890.0,
+              533.0
+            ]
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "kind": "mouse_click",
+            "label": "open recent creation selector",
+            "point": [
+              1048.0,
+              346.5
+            ]
+          },
+          {
+            "globalPoint": [
+              1048.0,
+              414.5
+            ],
+            "group": "actual_local_draft_preservation",
+            "index": 1,
+            "inputMethod": "Input.parse_input_event",
+            "kind": "native_popup_mouse_click",
+            "localPoint": [
+              192.0,
+              46.5
+            ]
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "kind": "mouse_click",
+            "label": "close history panel",
+            "point": [
+              983.0,
+              670.5
+            ]
+          },
+          {
+            "group": "actual_local_draft_preservation",
+            "kind": "mouse_click",
+            "label": "reopen canvas",
+            "point": [
+              1173.0,
+              186.5
+            ]
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "kind": "mouse_click",
+            "label": "history while business actions unavailable",
+            "point": [
+              1094.0,
+              670.5
+            ]
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "kind": "mouse_click",
+            "label": "open recent creation selector",
+            "point": [
+              1048.0,
+              346.5
+            ]
+          },
+          {
+            "globalPoint": [
+              1048.0,
+              383.5
+            ],
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "index": 0,
+            "inputMethod": "Input.parse_input_event",
+            "kind": "native_popup_mouse_click",
+            "localPoint": [
+              192.0,
+              15.5
+            ]
+          },
+          {
+            "group": "recorded_pending_and_zero_wood_ui_fixture",
+            "kind": "mouse_click",
+            "label": "return with pending preserved",
+            "point": [
+              902.0,
+              670.5
+            ]
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "kind": "mouse_click",
+            "label": "browse original after later repaint",
+            "point": [
+              1094.0,
+              670.5
+            ]
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "kind": "mouse_click",
+            "label": "open recent creation selector",
+            "point": [
+              1048.0,
+              346.5
+            ]
+          },
+          {
+            "globalPoint": [
+              1048.0,
+              412.5
+            ],
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "index": 1,
+            "inputMethod": "Input.parse_input_event",
+            "kind": "native_popup_mouse_click",
+            "localPoint": [
+              192.0,
+              44.5
+            ]
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "kind": "mouse_click",
+            "label": "open recent creation selector",
+            "point": [
+              1048.0,
+              346.5
+            ]
+          },
+          {
+            "globalPoint": [
+              1048.0,
+              442.166656494141
+            ],
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "index": 2,
+            "inputMethod": "Input.parse_input_event",
+            "kind": "native_popup_mouse_click",
+            "localPoint": [
+              192.0,
+              74.1666641235352
+            ]
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "kind": "mouse_click",
+            "label": "current synthetic later blank",
+            "point": [
+              902.0,
+              670.5
+            ]
+          },
+          {
+            "group": "explicit_later_edit_and_blank_ui_fixture",
+            "kind": "mouse_click",
+            "label": "explicitly choose a new draft after stale warning",
+            "point": [
+              1048.0,
+              717.5
+            ]
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "kind": "mouse_click",
+            "label": "choose stable original before window changes",
+            "point": [
+              1094.0,
+              670.5
+            ]
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "kind": "mouse_click",
+            "label": "open recent creation selector",
+            "point": [
+              1048.0,
+              346.5
+            ]
+          },
+          {
+            "globalPoint": [
+              1048.0,
+              414.5
+            ],
+            "group": "explicit_recent_window_fixtures",
+            "index": 1,
+            "inputMethod": "Input.parse_input_event",
+            "kind": "native_popup_mouse_click",
+            "localPoint": [
+              192.0,
+              46.5
+            ]
+          },
+          {
+            "group": "explicit_recent_window_fixtures",
+            "kind": "mouse_click",
+            "label": "open explicitly empty history",
+            "point": [
+              1094.0,
+              670.5
+            ]
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "kind": "mouse_click",
+            "label": "open prior selection before actor",
+            "point": [
+              1094.0,
+              670.5
+            ]
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "kind": "mouse_click",
+            "label": "open recent creation selector",
+            "point": [
+              1048.0,
+              346.5
+            ]
+          },
+          {
+            "globalPoint": [
+              1048.0,
+              383.5
+            ],
+            "group": "explicit_identity_and_capability_fixtures",
+            "index": 0,
+            "inputMethod": "Input.parse_input_event",
+            "kind": "native_popup_mouse_click",
+            "localPoint": [
+              192.0,
+              15.5
+            ]
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "kind": "mouse_click",
+            "label": "open prior selection before generation",
+            "point": [
+              1094.0,
+              670.5
+            ]
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "kind": "mouse_click",
+            "label": "open recent creation selector",
+            "point": [
+              1048.0,
+              346.5
+            ]
+          },
+          {
+            "globalPoint": [
+              1048.0,
+              383.5
+            ],
+            "group": "explicit_identity_and_capability_fixtures",
+            "index": 0,
+            "inputMethod": "Input.parse_input_event",
+            "kind": "native_popup_mouse_click",
+            "localPoint": [
+              192.0,
+              15.5
+            ]
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "kind": "mouse_click",
+            "label": "open prior selection before instance",
+            "point": [
+              1094.0,
+              670.5
+            ]
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "kind": "mouse_click",
+            "label": "open recent creation selector",
+            "point": [
+              1048.0,
+              346.5
+            ]
+          },
+          {
+            "globalPoint": [
+              1048.0,
+              383.5
+            ],
+            "group": "explicit_identity_and_capability_fixtures",
+            "index": 0,
+            "inputMethod": "Input.parse_input_event",
+            "kind": "native_popup_mouse_click",
+            "localPoint": [
+              192.0,
+              15.5
+            ]
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "kind": "mouse_click",
+            "label": "open prior selection before target",
+            "point": [
+              1094.0,
+              670.5
+            ]
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "kind": "mouse_click",
+            "label": "open recent creation selector",
+            "point": [
+              1048.0,
+              346.5
+            ]
+          },
+          {
+            "globalPoint": [
+              1048.0,
+              383.5
+            ],
+            "group": "explicit_identity_and_capability_fixtures",
+            "index": 0,
+            "inputMethod": "Input.parse_input_event",
+            "kind": "native_popup_mouse_click",
+            "localPoint": [
+              192.0,
+              15.5
+            ]
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "kind": "mouse_click",
+            "label": "open prior selection before unknown",
+            "point": [
+              1094.0,
+              670.5
+            ]
+          },
+          {
+            "group": "explicit_identity_and_capability_fixtures",
+            "kind": "mouse_click",
+            "label": "open recent creation selector",
+            "point": [
+              1048.0,
+              346.5
+            ]
+          },
+          {
+            "globalPoint": [
+              1048.0,
+              383.5
+            ],
+            "group": "explicit_identity_and_capability_fixtures",
+            "index": 0,
+            "inputMethod": "Input.parse_input_event",
+            "kind": "native_popup_mouse_click",
+            "localPoint": [
+              192.0,
+              15.5
+            ]
+          }
+        ],
+        "passed": true,
+        "actualObservationSummary": {
+          "stateVersion": 1054,
+          "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+          "self": {
+            "actorId": "a3",
+            "inventory": {
+              "wood": 3
+            },
+            "position": [
+              27,
+              10
+            ]
+          },
+          "revision": 2,
+          "editCount": 2,
+          "canonicalSha256": "124405033ddc429b6db004a8e62b21d348acf63fb8e16c4e3e3a220c3a22a999",
+          "canvasCanonicalSha256": "269d2d2e1b3ddb5a718065aba7d5ea27385eb665ee0e33437753d83398a4d802"
+        },
+        "syntheticFixtureHashes": {
+          "before_actor": "124405033ddc429b6db004a8e62b21d348acf63fb8e16c4e3e3a220c3a22a999",
+          "before_generation": "124405033ddc429b6db004a8e62b21d348acf63fb8e16c4e3e3a220c3a22a999",
+          "before_instance": "124405033ddc429b6db004a8e62b21d348acf63fb8e16c4e3e3a220c3a22a999",
+          "before_target": "124405033ddc429b6db004a8e62b21d348acf63fb8e16c4e3e3a220c3a22a999",
+          "before_unknown": "124405033ddc429b6db004a8e62b21d348acf63fb8e16c4e3e3a220c3a22a999",
+          "changed_actor": "2396cffada5118b21bfd3670a6e0676cb26104764c5ffde268af089f30285d15",
+          "changed_generation": "124405033ddc429b6db004a8e62b21d348acf63fb8e16c4e3e3a220c3a22a999",
+          "changed_instance": "60422c150d4eff833418812e8f3e936f1f2a6f6e48301b8322247ff3e3e589c0",
+          "changed_target": "5c81e008dd8e26238077f9aa1a4e4db047344adaae9008c9249cd6a72243dc0e",
+          "explicit_fifty_edits": "ec502b85ed22bbc2e579060a211e987a45f68de91d41ce282f4ceaff70ddd424",
+          "explicit_fifty_one_edits": "928cb0fa1204f5ecf59c9ea7287dce7a89cc87547f881dd5ca3e9cad689bf249",
+          "explicit_later_same_author_blank": "e519c67f2821ab0c6dcf388a943c2bc4cf9b66e35868d2aefa2168c2438aecbe",
+          "explicit_no_edits": "ff65fe54069d116112376b5000649715b0b53bc121ba5b7b648969ba4eccb531",
+          "explicit_selected_edit_outside_window": "8c8a9b6c7ff182b4b42cda3b73dcb4d13741d097bd6ec7d3f3e7b3838100b3b0",
+          "explicit_zero_wood_pending_view": "cda142669eb0236f575ad9f57ca0ed12bc9c6d46ca3d6d6b3bac3366c26467f7",
+          "recorded_two_edits_new_connection_fixture": "124405033ddc429b6db004a8e62b21d348acf63fb8e16c4e3e3a220c3a22a999",
+          "unknown": "db0c443c63353c662eb3e21c3c2e84f3a48b5124d470db93e6e99d38219a6088"
+        },
+        "canonicalHashEncoding": "UTF-8 json.dumps(ensure_ascii=False,sort_keys=True,separators=(comma,colon))",
+        "assertions": 157,
+        "groups": {
+          "startup": 5,
+          "actual_original_5_4_9": 28,
+          "actual_local_draft_preservation": 16,
+          "recorded_pending_and_zero_wood_ui_fixture": 14,
+          "explicit_later_edit_and_blank_ui_fixture": 26,
+          "explicit_recent_window_fixtures": 22,
+          "explicit_identity_and_capability_fixtures": 43,
+          "final_no_world_side_effects": 3
+        }
+      },
+      "driverSha256": "328024db086e78097b3ee79d9c9201280cae46150ab29e8c1417e51ba288d8f0",
+      "originalProtectedTablesUnchanged": {
+        "entity_canvas": true,
+        "entity_canvas_cells": true,
+        "entity_canvas_edits": true,
+        "receipts": true,
+        "entities": true,
+        "entity_notes": true,
+        "residents": true,
+        "sessions": true
+      },
+      "postCount": 0,
+      "selectionHttpRequests": 0,
+      "startupGetCount": 1,
+      "audit": {
+        "schemaVersion": 12,
+        "source": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 177670,
+          "enabled_at_ms": 21047,
+          "next_production_ms": 181047,
+          "production_period": 15,
+          "generated_wood": 33,
+          "stock_wood": 6
+        },
+        "issuedWood": 45,
+        "inventoryWood": 18,
+        "embodiedWood": 21,
+        "sourceWood": 6,
+        "wildWood": 0,
+        "stateVersion": 1054,
+        "receipts": 1034,
+        "originalReceiptsPreserved": 1034,
+        "originalEventsPreserved": 1055,
+        "notes": 2,
+        "entities": 6,
+        "requests": 0,
+        "processStopped": {
+          "pid": 231919,
+          "exitCode": 0
+        },
+        "allStartedProcessesExited": true
+      }
+    }
+  },
+  "worlds": [
+    {
+      "name": "original-read-copy",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-history-native-20261026T075945944755Z/original-read-copy",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065014010983Z/natural/stage-both",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    }
+  ],
+  "actualModelCalls": 0,
+  "naturalDirectSqlEdits": false,
+  "naturalClockControlled": false,
+  "runtimeReuse": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/core-v2/bin/World.Server.dll",
+    "sha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+    "readOnlySharedFrozenBinary": true,
+    "perRunRuntimeCopy": false
+  },
+  "nativeManifest": {
+    "recordedAtUtc": "2026-10-26T07:45:44.378184+00:00",
+    "baseCommit": "2948b683adbd925e18a304fe4547abdce6b332fd",
+    "sourceSha256": {
+      "clients/godot/command_evidence.gd": "3ab247823db24eff49c027098dec747cc689368e9239696dc3173715b0545594",
+      "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+      "clients/godot/entity_canvas_panel.gd": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+      "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+      "clients/godot/entity_notes_panel.gd": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803",
+      "clients/godot/main.gd": "23bf58f280cba82a69bd7cf5422d057f5884926c9ef225a3c54c9324d3511bd4",
+      "clients/godot/material_panel.gd": "0ca9ce3e6eef38690d9bbc7e77b7e8d75f4bb654e1ab2495e7598aaa632a9798",
+      "clients/godot/pending_store.gd": "525a83101a6ec89726f3729a8e6ca813a684bc84d6cd5cead50544400e8bdcbb",
+      "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+      "clients/godot/world_client.gd": "76fe85a37d6283e5568d4a2591b5918d649df582c8ee27ff8e812fa4deb15975",
+      "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+      "clients/godot/world_view.gd": "ee0733b03887b49a7f695cf2e8818233f76f667a97edb36dbd5a0f370911caba",
+      "clients/godot/main.tscn": "58496e2c5357a2774f2a70f19d0dcb9a015167d8bf9849dc68f4f20a7841e6b1",
+      "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424"
+    },
+    "changedProductFiles": [
+      "clients/godot/entity_canvas_panel.gd"
+    ],
+    "backend": "ITER25 core-v2 unchanged; no new HTTP or world command",
+    "godotImport": "Passed import.log; this is syntax validation only, UI tests pending"
+  },
+  "nativeManifestSha256": "c05d45e7f4dc1ef24b820f1e8f433aabbcf7d571fd6c1ba688cc85e6834fb73c",
+  "originalStage": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065014010983Z/natural/stage-both",
+  "originalStageBefore": {
+    "observation.json": {
+      "sha256": "575c2f6b9482621d3d74c82e80f2a1705c669fe754e69565228232d943fd4778",
+      "bytes": 26212,
+      "mtimeNs": 1792997441295495748
+    },
+    "access.json": {
+      "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+      "bytes": 790,
+      "mtimeNs": 1792988757982573799
+    },
+    "world.db": {
+      "sha256": "cfc835a6f7ca3270305a1111192be289a0b3498bb0a448c2681a49a8967e8628",
+      "bytes": 1232896,
+      "mtimeNs": 1792997441294328879
+    }
+  },
+  "sourceWrites": false,
+  "recoveryUiFixtureInputs": {
+    "pendingSource": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-godot-20261026T071550422974Z/old-record4-before-client/submit.json",
+    "pendingSourceSha256": "5ef65163a61d4fb996c9a5aa0744d265a5923765da3e1765bd71cb19115163c4",
+    "receiptSource": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065014010983Z/natural/trace.json",
+    "receiptSourceSha256": "4106a0caab0e211cd7804d62029562175e6759244df88a10441e922892209180",
+    "scope": "Recorded real records supplied as UI-only boundary inputs; not new pending-world activity or protocol re-execution."
+  },
+  "originalSeedFilesUnchanged": true,
+  "originalStageFilesUnchanged": true,
+  "allStartedProcessesExited": true,
+  "cleanedRegenerableCaches": [
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-history-native-20261026T075945944755Z/clients/godot/.godot"
+  ],
+  "frozenCopiesUnchanged": true,
+  "sourceReport": {
+    "path": ".local/qa/20261026-test-agent/canvas-history-native-20261026T075945944755Z/results.json",
+    "sha256": "090705cb60798c2fdd655573ada1ea85cfdd4d682c0b8f450c3500ce74fe0209",
+    "bytes": 894887,
+    "compression": "Repeated full UI observations replaced by canonical JSON hashes; checks and input events retained. Source report remains local."
+  },
+  "archivedScreenshots": {
+    "qa-first-five.png": {
+      "sha256": "fc7657a21713bb6cffaef9c126f59c5bf279d589f5558cfac34021771bef5dac",
+      "source": ".local/qa/20261026-test-agent/canvas-history-native-20261026T075945944755Z/native-ui-actual-first-five.png"
+    },
+    "qa-second-four.png": {
+      "sha256": "0a47306d6f28d2ee1f62dcb31f1d2dc80940f74969ef545526b4e56ea8737489",
+      "source": ".local/qa/20261026-test-agent/canvas-history-native-20261026T075945944755Z/native-ui-actual-second-four.png"
+    },
+    "qa-current-nine.png": {
+      "sha256": "c1cabab3f83775085fcf69f309a62ad72408711d01bb589b80f12cfc0df74304",
+      "source": ".local/qa/20261026-test-agent/canvas-history-native-20261026T075945944755Z/native-ui-actual-returned-nine.png"
+    },
+    "qa-synthetic-blank.png": {
+      "sha256": "9fd296223d16f3d3980371c7d4c6ad54daa1af7ec2f7484b5079294908f21d6c",
+      "source": ".local/qa/20261026-test-agent/canvas-history-native-20261026T075945944755Z/native-ui-synthetic-blank-patch.png"
+    },
+    "qa-synthetic-window.png": {
+      "sha256": "0129844d600b9403c4c6ed50b44a5811053413ce4b6d15c129f3093143764d68",
+      "source": ".local/qa/20261026-test-agent/canvas-history-native-20261026T075945944755Z/native-ui-synthetic-window-slide.png"
+    }
+  },
+  "coordinatorVisualReview": {
+    "actualFirstFive": true,
+    "actualSecondFour": true,
+    "actualReturnedNine": true,
+    "scope": "Visual QA of rendered outputs; independent worker supplied mouse events, not coordinator manual input."
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "reviewer": "test-agent2",
+  "recordedAtUtc": "2026-10-26T08:06:24.868950+00:00",
+  "verdict": "pass_with_explicit_evidence_boundaries",
+  "iterationComplete": false,
+  "scope": "Read-only evidence/source/screenshot audit requested by coordinator; no tests, services, world mutations, model calls or large data copies in this review",
+  "inputSha256": {
+    "docs/iterations/ITER-0026-proposal.md": "bef63c715e4c367d19c2cd49d35d755d8df95839b109c6380c776c4f6d25bd2a",
+    "clients/godot/entity_canvas_panel.gd": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+    "docs/iterations/evidence/ITER-0026/qa-native-v1.json": "eea558164aab69d61d51cc863449dbeb439176f4c315b35f861dcf9dd744d17a",
+    "docs/iterations/evidence/ITER-0026/qa-ui-driver.gd": "328024db086e78097b3ee79d9c9201280cae46150ab29e8c1417e51ba288d8f0",
+    "docs/iterations/evidence/ITER-0026/native-v1-manifest.json": "c05d45e7f4dc1ef24b820f1e8f433aabbcf7d571fd6c1ba688cc85e6834fb73c"
+  },
+  "integrity": {
+    "driverHashMatches": true,
+    "nativeManifestHashMatches": true,
+    "all14ProductSourceHashesMatch": true,
+    "all5ArchivedScreenshotHashesMatch": true,
+    "fullSourceReportHashMatches": true,
+    "recordedAssertions": 157,
+    "allChecksPassed": true,
+    "groupCountsMatch": true,
+    "reviewedScreenshots": [
+      "qa-first-five.png",
+      "qa-second-four.png",
+      "qa-current-nine.png"
+    ]
+  },
+  "claims": [
+    {
+      "claim": "原两条创作5格/4格，返回当前9格；平台表面始终显示当前图",
+      "verdict": "supported",
+      "evidence": [
+        "qa-ui-driver.gd:62-108 native popup mouse event route and exact patch/style/author checks",
+        "qa-ui-driver.gd:151-180 authenticated observation and actual selection sequence",
+        "qa-native-v1.json:128-213 first/second patch and scene invariants",
+        "qa-first-five.png / qa-second-four.png / qa-current-nine.png visual review"
+      ],
+      "actualFacts": {
+        "patchCounts": [
+          5,
+          4
+        ],
+        "assignedCells": 9,
+        "authors": [
+          "a1_alias",
+          "a2"
+        ],
+        "commandIds": [
+          "ee3c85a5d0f74313bf703a35301faa0e",
+          "7590f71def004084ad8f7685fe496a77"
+        ]
+      }
+    },
+    {
+      "claim": "非作者可远距观看",
+      "verdict": "supported_by_real_HTTP_observation_and_native_mouse_events",
+      "evidence": [
+        "qa-ui-driver.gd:152-155 authenticated actor/distance/non-authorship",
+        "qa-native-v1.json:1386-1407 observation summary",
+        "qa-native-v1.json:1447-1449 zero POST/selection HTTP, one startup GET"
+      ],
+      "actualFacts": {
+        "actorId": "a3",
+        "wood": 3,
+        "position": [
+          27,
+          10
+        ],
+        "targetPosition": [
+          24,
+          7
+        ],
+        "distance": 4.242640687119285
+      },
+      "limit": "a3 actually holds 3 wood. Zero-wood viewing is separately tested via synthetic UI input; camera reframing is not resident movement."
+    },
+    {
+      "claim": "原草图与base_revision保持；新revision后不自动追新",
+      "verdict": "supported_actual_draft_plus_synthetic_revision_update",
+      "evidence": [
+        "qa-ui-driver.gd:182-195 actual mouse draft and viewing/closing preservation",
+        "qa-ui-driver.gd:213-226 synthetic later edit; stale submit stops, explicit new draft required",
+        "entity_canvas_panel.gd:237-251 view switch changes visibility only",
+        "entity_canvas_panel.gd:327-345 stale draft gating"
+      ]
+    },
+    {
+      "claim": "pending/last_receipt保持，观看不产生业务或行走信号",
+      "verdict": "supported_at_UI_input_and_live_client_snapshot_level",
+      "evidence": [
+        "qa-ui-driver.gd:158-161 real-client snapshots and signal counters",
+        "qa-ui-driver.gd:197-211 recorded nonempty pending/receipt provided as UI-only inputs with synthetic zero inventory",
+        "qa-ui-driver.gd:274-277 final signal/dictionary equality checks",
+        "qa-native-v1.json:1545-1551 recorded recovery-input provenance"
+      ],
+      "limit": "This does not replay a live nonempty pending command or prove transport recovery. The driver does not explicitly hash client recovery files before/after viewing; product panel has no recovery file I/O. Avoid calling this a new disk-recovery acceptance run."
+    },
+    {
+      "claim": "0/50/51/52记录、原选择换下标保持、滑出窗口清除",
+      "verdict": "supported_by_explicit_synthetic_observations",
+      "evidence": [
+        "qa-ui-driver.gd:118-141 fixture construction/application",
+        "qa-ui-driver.gd:228-247 stable selection and expired-window checks",
+        "entity_canvas_panel.gd:253-287 keyed selection/window handling",
+        "qa-native-v1.json:553-613 checks and screenshot record"
+      ],
+      "limit": "Menu mouse choices are tested on real two-item or synthetic three-item menus; fifty-item window behavior uses observation updates, not mouse scrolling through all 50 entries."
+    },
+    {
+      "claim": "居民/实例/连接代际/目标变化隔离，未知能力关闭",
+      "verdict": "supported_by_explicit_synthetic_observations",
+      "evidence": [
+        "qa-ui-driver.gd:249-272 actor/generation/instance/target/unknown fixtures",
+        "entity_canvas_panel.gd:180-202 identity reset and capability guard",
+        "entity_canvas_panel.gd:222-223 stable instance/entity/author/command key",
+        "qa-native-v1.json:653-828 per-boundary checks"
+      ],
+      "limit": "Identity switches are direct valid UI input updates, not real authentication/session-switch journeys; target change clears view selection but is not asserted to hide the whole panel."
+    },
+    {
+      "claim": "原世界历史保持，观看不写世界",
+      "verdict": "supported_by_recorded_QA_audits_and_static_panel_scope",
+      "evidence": [
+        "qa-native-v1.json:1437-1478 protected-table checks, request counts, audit",
+        "qa-native-v1.json:1552-1558 original files/frozen copies/process exit statements"
+      ],
+      "limit": "A cold read copy of the existing stage is the test world, not a new natural painting history. Production clock remains normal and its audit is separate."
+    }
+  ],
+  "evidenceBoundaries": {
+    "real": "One authenticated HTTP observation from cold copy of original r10 stage; Godot renders it and consumes injected mouse events via Input.parse_input_event. Real local draft created via mouse. No direct history selection method call used to claim the input acceptance.",
+    "synthetic": "Zero wood plus recorded pending/receipt; later recolor/blank; 0/50/51/52 history; actor/generation/instance/target/capability changes. They prove UI behavior only.",
+    "noLivePollingClaim": "qa-ui-driver.gd:148 disables periodic refresh; synthetic update_world tests updates, not a concurrent live polling race.",
+    "noWholeIterationAcceptance": "BUILD2 targeted suite status is separate; this review does not settle whole ITER-0026."
+  },
+  "blockingProductFindings": [],
+  "reportingCaveats": [
+    "Do not call actual a3 viewer zero-inventory",
+    "Do not describe synthetic later edits as additional resident-created natural history",
+    "Do not claim new disk or end-to-end pending recovery acceptance from dictionary preservation",
+    "Do not infer entire iteration completion from the independent UI report or this audit"
+  ],
+  "sourceOrSharedFileWrites": [],
+  "onlyWrittenPath": ".local/test-agent2/iter26-review.json"
+}
