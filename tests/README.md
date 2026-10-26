@@ -4,13 +4,19 @@
 
 完整普通回归（构建一次，并行执行隔离的 HTTP／Chrome 套件，**不会调用真实模型**）：
 
+当前组合通过 **216 项 HTTP／SQLite、134 项 Chrome**，包括指定设施建设和世界实例任务恢复；结果见 [ITER-0017](../docs/iterations/ITER-0017-results.md)。Godot 专项单独运行，不计入这个总数。
+
 ```bash
 npm ci --prefix tests/browser --ignore-scripts
 npm test
 # 只跑一类：npm run test:http 或 npm run test:browser
 ```
 
-统一检查也包含原始采集任务、连续居民任务和对应报告页面。当前 178 项 HTTP／SQLite 与 126 项 Chrome 通过；连续任务单独运行 `python3 tests/continuous_mission_api.py`，报告单独运行 `node tests/browser/continuous-resident.mjs`，两者实际模型调用均为 0。证据和测试替身边界见 [ITER-0015](../docs/iterations/ITER-0015-results.md)。
+统一检查也包含原始采集任务、连续居民任务和对应报告页面。ITER-0015 基线的 178 项 HTTP／SQLite 与 126 项 Chrome 通过；连续任务单独运行 `python3 tests/continuous_mission_api.py`，报告单独运行 `node tests/browser/continuous-resident.mjs`，两者实际模型调用均为 0。证据和测试替身边界见 [ITER-0015](../docs/iterations/ITER-0015-results.md)。
+
+指定建设任务另加入 `python3 tests/construction_mission_api.py`（13 项真实 HTTP／SQLite）和 `node tests/browser/construction-resident.mjs`（8 项 Chrome）。覆盖平台、指定桥梁、后来者复用、原建造中断恢复与错误回执、权限/占地/预算、冻结目标、建成后到访及只读报告；固定策略或明确测试替身，模型调用 0。
+
+实例任务恢复运行 `python3 tests/instance_mission_api.py`（5 项真实 HTTP／SQLite）：同地址换库不重放、同库迁址原请求恢复、legacy 任务不得收养新实例、损坏绑定不降级、已完成报告不联网。统一入口同时运行服务端的 `continuous_api.py` 和 `world_instance_api.py`；现有预览库不参与这些隔离检查。
 
 需要 .NET 10 SDK、Python 3、Node.js 和本机 Chrome。统一结果与各套件日志保存在 `.local/checks/`；每个套件继续保留自身原始证据和独立服务目录。依赖安装不会自动下载浏览器，`CHROME_PATH` 可指定现有 Chrome。下列单套命令仍可独立运行。
 

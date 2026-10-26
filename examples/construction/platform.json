@@ -1,0 +1,23 @@
+{
+  "missionId": "platform-west",
+  "objective": "在西岸指定地点建成公共平台，走到平台中心后返回起点。",
+  "goals": [
+    {
+      "id": "platform",
+      "label": "西岸公共平台",
+      "target": [
+        8.2,
+        10.4
+      ],
+      "buildRecipeId": "platform.v1"
+    }
+  ],
+  "allowBuild": true,
+  "allowGather": true,
+  "budgets": {
+    "commands": 250,
+    "wood": 3,
+    "seconds": 600,
+    "modelCalls": 1
+  }
+}

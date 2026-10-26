@@ -14,6 +14,7 @@
     decision_failed: ["目标选择失败", "error"],
   };
   const providers = { "codex-exec": "模型决策", "fixed-reference": "固定策略基线", "test-double": "测试替身 · 非真实模型" };
+  const structures = { "platform.v1": { label: "平台", definition: "platform", wood: 3 }, "bridge.v1": { label: "木桥", definition: "bridge", wood: 6 } };
   const actionNames = { walk: "行走", move: "移动", claim: "领取木材", gather: "采集木材", build: "建造", visit: "到访", postcard: "分享手记", mosaic: "绘制画布", mosaic_propose: "提出修改建议", mosaic_review: "审阅修改建议", observe: "观察", wait: "等待" };
   const stepStatuses = { committed: "已提交", rejected: "已拒绝", unknown: "结果未知", pending: "待确认", failed: "失败" };
   const reasonNames = { round_trip_verified: "已核验到达目标并返回原起点", max_steps: "本次分段步数已到，等待恢复" };
@@ -56,8 +57,10 @@
     require(cell(m.origin), "任务起点不是有效图内坐标。");
     require(m.goal === null || (object(m.goal) && string(m.goal.id) && string(m.goal.label) && cell(m.goal.target)), "任务目标格式不正确；未选择目标时应为 null。");
     require(m.goal?.activityId === undefined || string(m.goal.activityId), "活动目标编号格式不正确。");
+    require(m.goal?.buildRecipeId === undefined || free && Object.hasOwn(structures, m.goal.buildRecipeId) && !m.goal.activityId, "建设目标需要连续世界的有效配方。");
     require(m.sharePostcard === undefined || typeof m.sharePostcard === "boolean", "任务分享要求应为布尔值。");
     require(m.allowGather === undefined || typeof m.allowGather === "boolean", "采集权限应为布尔值。");
+    require(m.allowBuild === undefined || typeof m.allowBuild === "boolean", "建造权限应为布尔值。");
     require(m.paintMosaic === undefined || typeof m.paintMosaic === "boolean", "画布创作要求应为布尔值。");
     require(m.proposeMosaic === undefined || typeof m.proposeMosaic === "boolean", "提议要求应为布尔值。");
     require(m.reviewMosaicProposal === undefined || m.reviewMosaicProposal === null || (object(m.reviewMosaicProposal) && string(m.reviewMosaicProposal.proposalActorId) && string(m.reviewMosaicProposal.proposalCommandId)), "审阅提议引用不完整。");
@@ -77,6 +80,12 @@
     require(b.limits.commands >= 1 && b.limits.commands <= maxCommands && b.limits.wood <= 12 && b.limits.modelCalls === 1 && integer(b.limits.seconds) && b.limits.seconds >= 1 && b.limits.seconds <= 600, `任务预算上限不符合契约（命令 1—${maxCommands}、木材 0—12、时间 1—600 秒、目标选择 1 次）。`);
     require(typeof f.goalReached === "boolean" && typeof f.returned === "boolean" && integer(f.woodClaimed), "到达、返回或领取木材事实的类型不正确。");
     require(f.woodGathered === undefined || integer(f.woodGathered), "采集木材事实须为非负整数。");
+    require(f.constructionBuilt === undefined || typeof f.constructionBuilt === "boolean", "设施建造事实应为布尔值。");
+    require(f.construction === undefined || f.construction === null || object(f.construction)
+      && [f.construction.commandId, f.construction.entityId, f.construction.ownerActorId].every(v => string(v) && v.length > 0)
+      && Object.hasOwn(structures, f.construction.recipeId) && f.construction.definitionId === structures[f.construction.recipeId].definition
+      && cell(f.construction.position) && f.construction.woodSpent === structures[f.construction.recipeId].wood
+      && integer(f.construction.stateVersion), "设施建造记录不完整。");
     require(f.activityCompleted === undefined || typeof f.activityCompleted === "boolean", "到访完成事实应为布尔值。");
     require(f.activityVisit === undefined || f.activityVisit === null || (object(f.activityVisit) && string(f.activityVisit.activityId) && string(f.activityVisit.commandId) && integer(f.activityVisit.stateVersion) && cell(f.activityVisit.position) && string(f.activityVisit.visitedAtUtc) && Number.isFinite(Date.parse(f.activityVisit.visitedAtUtc))), "到访回执记录不完整。");
     require(f.postcardShared === undefined || typeof f.postcardShared === "boolean", "手记分享事实应为布尔值。");
@@ -115,6 +124,7 @@
       if (step.action.recipeId !== undefined) require(string(step.action.recipeId), `${prefix}的配方格式不正确。`);
       if (step.action.activityId !== undefined) require(string(step.action.activityId), `${prefix}的活动编号格式不正确。`);
       if (step.action.type === "gather") require(string(step.action.nodeId) && step.action.nodeId.length > 0, `${prefix}缺少采集来源。`);
+      if (step.entityId !== undefined) require(string(step.entityId) && step.entityId.length > 0, `${prefix}的设施编号格式不正确。`);
       if (step.action.type === "postcard") require(string(step.action.visitCommandId) && postcardText(step.action.text), `${prefix}的手记或到访关联格式不正确。`);
       if (["mosaic", "mosaic_propose"].includes(step.action.type)) require(string(step.action.visitCommandId) && integer(step.action.expectedMosaicRevision) && mosaic.validPatch(step.action.patch), `${prefix}的画布修改格式不正确。`);
       if (step.action.type === "mosaic_propose") require(consent.text(step.action.text), `${prefix}的提议理由格式不正确。`);
@@ -196,7 +206,7 @@
     put("mission-objective", m.objective);
     put("actor-id", m.actorId);
     put("world-identity", `${m.worldId} / ${m.rulesVersion}`);
-    put("goal-route", m.goal ? `${coord(m.origin)} → ${m.goal.label} ${coord(m.goal.target)} → 起点` : `${coord(m.origin)} · 尚未选择目标`);
+    put("goal-route", m.goal ? `${coord(m.origin)} → ${m.goal.buildRecipeId ? `建造${structures[m.goal.buildRecipeId].label} · ` : ""}${m.goal.label} ${coord(m.goal.target)} → 起点` : `${coord(m.origin)} · 尚未选择目标`);
     put("report-status", statuses[m.status][0]);
     $("report-status").dataset.tone = statuses[m.status][1];
     put("mission-reason", `执行器状态原因：${reasonNames[m.reason] || m.reason || "未提供"}`);
@@ -257,6 +267,19 @@
       put("mosaic-final-note", data.world.mosaic ? `当前格子的最后作者：${[...new Set(data.world.mosaic.cells.filter((c) => c.authorActorId).map((c) => c.authorActorId))].join("、") || "无人"}。` : "报告没有保存结束画布。");
     }
     const consentVerified = renderConsentReport(data, activityVerified);
+    const requiresConstruction = Boolean(m.goal?.buildRecipeId), built = f.construction;
+    const constructionVerified = Boolean(requiresConstruction && m.allowBuild === true && f.constructionBuilt === true && built
+      && built.recipeId === m.goal.buildRecipeId && built.ownerActorId === m.actorId && same(built.position, m.goal.target)
+      && f.createdEntityIds.includes(built.entityId) && b.used.wood >= built.woodSpent
+      && data.steps.some(s => s.status === "committed" && s.commandId === built.commandId && s.entityId === built.entityId
+        && s.stateVersion === built.stateVersion && s.action.type === "build" && s.action.recipeId === built.recipeId && Array.isArray(s.action.at) && same(s.action.at, built.position))
+      && data.world.entities.some(e => e.entityId === built.entityId && e.definitionId === built.definitionId
+        && e.definitionVersion === 1 && e.ownerActorId === m.actorId && e.rulesVersion === "r8" && e.embodiedWood === built.woodSpent && same(e.position, built.position)));
+    $("construction-fact").hidden = !requiresConstruction;
+    $("construction-fact").dataset.verified = String(constructionVerified);
+    put("construction-fact", requiresConstruction ? constructionVerified
+      ? `建造已核实：${structures[built.recipeId].label} ${coord(built.position)} 米 · 消耗 ${built.woodSpent} 木材 · v${built.stateVersion} · ${built.entityId}`
+      : "尚未核实本次设施建成；到达地点或看到已有设施不能代替原建造记录。" : "");
     if (d?.provider.kind === "fixed-reference") put("decision-boundary", "目标由固定策略选择，路径与行动由确定性执行器处理；完成事实以记录中的世界响应为准。");
     put("model-budget-label", d?.provider.kind === "fixed-reference" ? "目标选择次数" : "模型调用");
     put("model-budget-note", d?.provider.kind === "fixed-reference" ? "固定策略 · 外部模型 0 次" : "高层目标选择");
@@ -270,13 +293,17 @@
     const gatheringConsistent = (f.woodGathered ?? 0) === cuts && (cuts === 0 || m.allowGather === true && ["r7", "r8"].includes(m.rulesVersion));
     const committedPositions = data.steps.filter(s => s.status === "committed" && s.position).map(s => s.position);
     const near = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]) <= .06;
+    const constructionVisited = !requiresConstruction || constructionVerified
+      && data.steps.slice(data.steps.findIndex(s => s.commandId === built.commandId))
+        .some(s => s.status === "committed" && s.position && near(s.position, m.goal.target));
     const walkConsistent = !continuous(data.world) || m.goal && [m.origin, ...committedPositions].some(p => near(p, m.goal.target)) && near(committedPositions.at(-1) || m.origin, m.origin) && !data.steps.some(s => s.status === "committed" && s.blocked === true);
-    const incomplete = !walkConsistent || !gatheringConsistent || !f.goalReached || !f.returned || !m.goal || requiresActivity && !activityVerified || requiresPostcard && !postcardVerified || requiresMosaic && !mosaicVerified || (m.proposeMosaic || m.reviewMosaicProposal) && !consentVerified;
+    const incomplete = !walkConsistent || !constructionVisited || !gatheringConsistent || !f.goalReached || !f.returned || !m.goal || requiresConstruction && !constructionVerified || requiresActivity && !activityVerified || requiresPostcard && !postcardVerified || requiresMosaic && !mosaicVerified || (m.proposeMosaic || m.reviewMosaicProposal) && !consentVerified;
     if (m.status === "completed" && incomplete) warnings.push("报告标记为已完成，但到达、返回、目标、到访或本次创作事实不完整，不能据此认定任务成功。");
     if (d && m.goal && d.goalId !== m.goal.id) warnings.push("模型选择与执行目标编号不一致，请复核原始报告。");
     if (d?.provider.kind === "test-double") warnings.push("这份报告使用测试替身，不是一次真实模型运行；仅供客户端或执行器测试。");
     if (!gatheringConsistent) warnings.push("采集汇总与原采集步骤或任务权限不一致，请复核原始记录。");
     if (m.status === "completed" && !walkConsistent) warnings.push("连续行走记录未支持在 0.06 米内到达并返回，或包含碰撞截停。");
+    if (m.status === "completed" && constructionVerified && !constructionVisited) warnings.push("建设完成后的记录未支持到达设施中心。");
     for (const [key, prefix] of [["commands", "command"], ["wood", "wood"], ["modelCalls", "model"], ["seconds", "seconds"]]) {
       put(`${prefix}-budget`, `${formatNumber(b.used[key])} / ${formatNumber(b.limits[key])}`);
       const progress = $(`${prefix}-progress`);

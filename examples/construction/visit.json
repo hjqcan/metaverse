@@ -1,0 +1,22 @@
+{
+  "missionId": "visit-shared-platform",
+  "objective": "沿已有木桥到访东岸公共平台，再返回起点。",
+  "goals": [
+    {
+      "id": "platform",
+      "label": "东岸公共平台",
+      "target": [
+        26.4,
+        14.5
+      ]
+    }
+  ],
+  "allowBuild": false,
+  "allowGather": false,
+  "budgets": {
+    "commands": 250,
+    "wood": 0,
+    "seconds": 600,
+    "modelCalls": 1
+  }
+}

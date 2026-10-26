@@ -1,0 +1,32 @@
+{
+  "recordedAtUtc": "2026-10-26T02:47:35.463113+00:00",
+  "stage": "final-integrated",
+  "passed": true,
+  "baseCommit": "b180c800b81fa426d4e0d63cbe00505543ad1214",
+  "actualModelCalls": 0,
+  "regression": {
+    "httpTests": 216,
+    "browserTests": 134,
+    "passed": true,
+    "source": ".local/checks/20261026T024317Z-1d2920/results.json"
+  },
+  "construction": {
+    "httpTests": 13,
+    "browserTests": 8,
+    "apiSource": ".local/iter0017/api/20261026T024409Z-5ef30e/results.json",
+    "browserSource": ".local/iter0017/browser/2026-10-26T02-46-19-543Z/results.json"
+  },
+  "instanceMission": {
+    "httpTests": 5,
+    "source": ".local/instance-mission/api/20261026T024422Z-4cf696/results.json"
+  },
+  "priorEvidence": {
+    "constructionBaseline": ".local/checks/20261026T022920Z-f9df5b/results.json",
+    "pinnedCoreCandidate": ".local/instance-mission/api/20261026T023613Z-4f061d/results.json"
+  },
+  "limitations": [
+    "Fixed policy or explicit selection doubles; no new model calls or human acceptance.",
+    "Only disposable local worlds were used; existing preview databases were not migrated or restarted.",
+    "Godot navigation/client acceptance is maintained by its owning sessions."
+  ]
+}

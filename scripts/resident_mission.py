@@ -25,6 +25,7 @@ from mosaic_inbox import review_input
 from entry_guide import public_entry_guide
 from wilderness_materials import collection_plan, valid_gather_receipt
 import continuous_navigation as continuous
+import resident_construction as construction
 
 
 def _utc():
@@ -66,9 +67,13 @@ def _spec(value):
         raise ValueError("Expected 1 to 8 goals")
     ids = set()
     for goal in goals:
-        if not isinstance(goal, dict) or set(goal) not in (
-                {"id", "label", "target"}, {"id", "label", "target", "activityId"}):
+        if (not isinstance(goal, dict) or not {'id', 'label', 'target'} <= set(goal)
+                or set(goal) - {'id', 'label', 'target', 'activityId', 'buildRecipeId'}):
             raise ValueError("Invalid goal fields")
+        if 'buildRecipeId' in goal:
+            if (not isinstance(goal['buildRecipeId'], str) or goal['buildRecipeId'] not in construction.RECIPES or not value['allowBuild']
+                    or 'activityId' in goal):
+                raise ValueError('Construction goals require an allowed recipe, build permission and no activityId')
         if "activityId" in goal and (not isinstance(goal["activityId"], str) or not goal["activityId"]):
             raise ValueError("activityId must be a nonempty string")
         if value.get("sharePostcard") and "activityId" not in goal:
@@ -128,7 +133,7 @@ def _save(path, state):
 def _public(observed, share_postcard=False, paint_mosaic=False, consent=False):
     """No session identity, credentials, private peer inventory or client fields."""
     world = {key: deepcopy(observed["world"][key])
-             for key in ("id", "width", "height", "blocked", "water", "goal", "coordinateSystem", "bounds") if key in observed["world"]}
+             for key in ("id", "instanceId", "width", "height", "blocked", "water", "goal", "coordinateSystem", "bounds") if key in observed["world"]}
     world["entities"] = [{key: deepcopy(entity[key]) for key in (
         "entityId", "definitionId", "definitionVersion", "rulesVersion", "ownerActorId", "position", "embodiedWood")
         if key in entity} for entity in observed.get("entities", [])]
@@ -187,6 +192,8 @@ def _validate_goals(spec, observed):
                 or any(not isinstance(observed["self"].get(k), list) for k in ("mosaicProposals", "mosaicReviews"))):
             raise ValueError("invalid_mosaic_consent_capability")
     for goal in spec["goals"]:
+        if 'buildRecipeId' in goal and not free_movement:
+            raise ValueError('Explicit construction goals require the continuous r8 world')
         if any(n >= bound for n, bound in zip(goal["target"], (observed["world"]["width"], observed["world"]["height"]))):
             raise ValueError("Goal target outside world")
         if "activityId" in goal:
@@ -329,7 +336,8 @@ def _route_info(observed, target, allow_build, allow_gather=False):
 def _context(spec, observed):
     candidates = []
     for goal in spec["goals"]:
-        info = _route_info(observed, goal["target"], spec["allowBuild"], spec.get("allowGather", False))
+        info = (construction.plan(observed, goal, spec.get('allowGather', False)) if 'buildRecipeId' in goal
+                else _route_info(observed, goal["target"], spec["allowBuild"], spec.get("allowGather", False)))
         activity = next((a for a in observed.get("activities", []) if a["id"] == goal.get("activityId")), None)
         if activity is not None and info["commands"] is not None:
             info["commands"] += 1
@@ -405,6 +413,23 @@ def _decision(value, spec, initial=None):
     return decision
 
 
+def _saved_instance(state):
+    """An old unbound task may never adopt whichever database is now at its URL."""
+    binding = state['_state']['binding']
+    version, instance = binding.get('bindingVersion'), binding.get('instanceId')
+    if version == 1 and type(version) is int:
+        if not isinstance(instance, str) or not re.fullmatch(r'w_[0-9a-f]{32}', instance):
+            raise ValueError('Protected mission is missing its valid original world instance')
+    elif version is None or type(version) is int and version == 0:
+        if instance is not None or state['mission'].get('worldInstanceId') is not None:
+            raise ValueError('World instance binding cannot be downgraded to legacy')
+    else:
+        raise ValueError('Unknown world instance binding version')
+    if state['mission'].get('worldInstanceId', instance) != instance:
+        raise ValueError('Mission and persisted world instance disagree')
+    return instance
+
+
 def run_mission(client, spec, state_path, choose, *, max_steps=None):
     """Run/resume one task; return the contract report, excluding internal state.
 
@@ -423,14 +448,15 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
         endpoint = {"url": client.url.rstrip("/"), "prefix": client.prefix}
         if state is not None:
             saved = state["_state"]
-            if saved["spec"] != spec or any(saved["binding"][k] != v for k, v in endpoint.items()):
-                raise ValueError("State belongs to a different endpoint or mission spec")
+            if saved["spec"] != spec:
+                raise ValueError("State belongs to a different mission spec")
 
         def report():
             result = deepcopy({k: v for k, v in state.items() if k != "_state"})
             # Historical terminal files remain untouched, including their timestamps.
             result["mission"].setdefault("sharePostcard", spec.get("sharePostcard", False))
             result["mission"].setdefault("allowGather", spec.get("allowGather", False))
+            result['mission'].setdefault('allowBuild', spec['allowBuild'])
             result["facts"].setdefault("woodGathered", 0)
             result["mission"].setdefault("paintMosaic", spec.get("paintMosaic", False))
             result["mission"].setdefault("proposeMosaic", spec.get("proposeMosaic", False))
@@ -465,6 +491,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             if state["facts"].get("mosaicReviewed"):
                 summary = ("已核验活动到访、接受提议、实际改图与返回" if state["facts"].get("mosaicPainted")
                            else "已核验活动到访、拒绝提议与返回；未改图")
+            if state['facts'].get('constructionBuilt'):
+                summary = '已核验指定设施建成、到达与返回'
             state["feedback"] = {"summary": summary if status == "completed" else reason,
                                  "issues": [] if status in ("completed", "paused") else [reason], "suggestions": []}
             save()
@@ -472,12 +500,18 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
 
         def bind(observed):
             return {**endpoint, "worldId": observed["world"]["id"], "actorId": observed["self"]["actorId"],
-                    "rulesVersion": observed["rulesVersion"]}
+                    "rulesVersion": observed["rulesVersion"], "instanceId": observed['world'].get('instanceId'),
+                    "bindingVersion": 1 if observed['world'].get('instanceId') is not None else 0}
 
         def observe():
             observed = client.observe()
-            if bind(observed) != state["_state"]["binding"]:
+            actual, original = bind(observed), state['_state']['binding']
+            if any(actual[k] != original.get(k) for k in ('worldId', 'actorId', 'rulesVersion', 'instanceId')):
                 raise ValueError("State belongs to a different world, actor or rules version")
+            # A user-supplied new endpoint is accepted only after the original
+            # persistent instance and actor have been authenticated there.
+            if original.get('instanceId') is not None:
+                original.update(endpoint)
             return observed
 
         # Terminal reports are historical reads. In particular a canvas conflict
@@ -489,7 +523,14 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                                                and state["mission"]["reason"].startswith("command_rejected:"))))):
             return report()
 
+        if state is not None:
+            instance = _saved_instance(state)
+            if instance is None and any(state['_state']['binding'][k] != v for k, v in endpoint.items()):
+                raise ValueError('Legacy mission belongs to a different endpoint')
+
         try:
+            if state is not None:
+                client.bind_instance(instance)
             observed = observe() if state else client.observe()
         except (OSError, RuntimeError) as error:
             if state is None:
@@ -509,6 +550,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 public["mosaicProposal"] = proposal
             state = {"schemaVersion": 1, "kind": "resident-mission-report",
                      "mission": {"id": spec["missionId"], "objective": spec["objective"],
+                                 "allowBuild": spec['allowBuild'],
                                  "allowGather": spec.get("allowGather", False),
                                  "arrivalTolerance": continuous.ARRIVAL_TOLERANCE if continuous.continuous(observed) else 0,
                                  "sharePostcard": spec.get("sharePostcard", False),
@@ -516,6 +558,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                                  "proposeMosaic": spec.get("proposeMosaic", False),
                                  "reviewMosaicProposal": deepcopy(spec.get("reviewMosaicProposal")),
                                  "actorId": observed["self"]["actorId"], "worldId": observed["world"]["id"],
+                                 "worldInstanceId": observed['world'].get('instanceId'),
                                  "rulesVersion": observed["rulesVersion"], "origin": deepcopy(observed["self"]["position"]),
                                  "goal": None, "status": "running", "reason": "awaiting_decision"},
                      "decision": None, "budget": {"limits": deepcopy(spec["budgets"]),
@@ -538,6 +581,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
 
         used, limits, facts = state["budget"]["used"], state["budget"]["limits"], state["facts"]
         facts.setdefault("woodGathered", 0)
+        facts.setdefault('constructionBuilt', False)
+        facts.setdefault('construction', None)
         facts.setdefault("activityCompleted", False)
         facts.setdefault("activityVisit", None)
         facts.setdefault("postcardShared", False)
@@ -603,8 +648,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             needs_mosaic = spec.get("paintMosaic", False) and not facts["mosaicPainted"]
             needs_proposal = spec.get("proposeMosaic", False) and not facts["mosaicProposed"]
             needs_review = bool(spec.get("reviewMosaicProposal")) and not facts["mosaicReviewed"]
+            needs_construction = 'buildRecipeId' in goal and not facts['constructionBuilt']
             ready_to_return = (facts["goalReached"] and not any((needs_visit, needs_postcard, needs_mosaic,
-                                                               needs_proposal, needs_review)))
+                                                               needs_proposal, needs_review, needs_construction)))
             if pending is None:
                 if ready_to_return and facts["returned"]:
                     return finish("completed", "round_trip_verified")
@@ -620,7 +666,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                     return finish("budget_exhausted", "commands")
                 returning = ready_to_return
                 target = state["mission"]["origin"] if returning else goal["target"]
-                info = _route_info(observed, target, spec["allowBuild"], spec.get("allowGather", False))
+                info = (construction.plan(observed, goal, spec.get('allowGather', False)) if needs_construction
+                        else _route_info(observed, target, spec['allowBuild'] and 'buildRecipeId' not in goal,
+                                         spec.get('allowGather', False)))
                 if continuous.continuous(observed):
                     save()  # Geometric planning is part of the wall-time budget.
                     if used['seconds'] >= limits['seconds']:
@@ -691,6 +739,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 intent = {"schemaVersion": 1, "rulesVersion": observed["rulesVersion"], "commandId": uuid.uuid4().hex,
                           "expectedStateVersion": observed["stateVersion"], "action": action}
                 pending = {"request": intent, "woodCost": cost}
+                if needs_construction and action['type'] == 'build':
+                    pending['constructionBefore'] = {'inventoryWood': observed['self']['inventory']['wood']}
                 if action['type'] == 'walk':
                     pending['walkBefore'] = {'position': deepcopy(position), 'maxStepDistance': observed['movement']['maxStepDistance']}
                 if action["type"] == "gather":
@@ -807,7 +857,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             committed = (status == 200 and isinstance(result, dict) and result.get("status") == "committed"
                          and result.get("commandId") == intent["commandId"] and not error)
             rejected = (400 <= status < 500 and isinstance(error, dict) and error.get("mutated") is False
-                        and status != 404 and error.get("code") != "IDEMPOTENCY_CONFLICT"
+                        and status not in (404, 412, 428)
+                        and error.get("code") not in ("IDEMPOTENCY_CONFLICT", "INVALID_WORLD_INSTANCE",
+                                                     "WORLD_INSTANCE_REQUIRED", "WORLD_INSTANCE_MISMATCH", "WORLD_INSTANCE_UNAVAILABLE")
                         and (not receipt_query or (result.get("status") == "rejected"
                                                    and result.get("commandId") == intent["commandId"])))
             if consent_validator and isinstance(error, dict) and error.get("code") == "STALE_STATE":
@@ -815,7 +867,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 # A proxy/query error that resembles STALE_STATE cannot settle it.
                 rejected = (rejected and result.get("status") == "rejected"
                             and result.get("commandId") == intent["commandId"])
-            if intent["action"]["type"] in ("gather", "walk") and rejected:
+            if (intent["action"]["type"] in ("gather", "walk") or 'constructionBefore' in pending) and rejected:
                 rejected = (result.get("status") == "rejected" and result.get("commandId") == intent["commandId"]
                             and isinstance(result.get("identity"), dict)
                             and result["identity"].get("actorId") == state["mission"]["actorId"]
@@ -841,6 +893,24 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                         return finish("unknown", "unconfirmed_gather_receipt")
                     facts["woodGathered"] += 1
                     step["evidenceSource"] = "command_receipt"
+                elif 'constructionBefore' in pending:
+                    try:
+                        after_build = observe()
+                    except (OSError, RuntimeError, ValueError):
+                        step['status'] = 'unknown'
+                        return finish('unknown', 'construction_observation_unavailable')
+                    built = construction.evidence(result, intent, state['mission']['actorId'],
+                                                  pending['constructionBefore'], after_build)
+                    if built is None:
+                        step['status'] = 'unknown'
+                        return finish('unknown', 'unconfirmed_construction_receipt')
+                    record_observation(after_build)
+                    # A visit before construction cannot replace visiting the
+                    # completed facility. The actor may already be at its center.
+                    facts.update(constructionBuilt=True, construction=built,
+                                 goalReached=continuous.near(after_build['self']['position'], goal['target']))
+                    step['entityId'] = built['entityId']
+                    step['evidenceSource'] = 'command_receipt_and_entity'
                 elif intent["action"]["type"] == "visit":
                     visit = _activity_visit({**result_action, "commandId": result["commandId"],
                                              "stateVersion": result.get("stateVersion")}, intent, goal)

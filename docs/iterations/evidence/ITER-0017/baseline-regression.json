@@ -1,0 +1,182 @@
+{
+  "recordedAtUtc": "2026-10-26T02:29:20.358797+00:00",
+  "suite": "all",
+  "passed": true,
+  "actualModelCalls": 0,
+  "results": [
+    {
+      "name": "restore",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/restore.log",
+      "evidence": null
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/build.log",
+      "evidence": null
+    },
+    {
+      "name": "http-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/http-foundation.log",
+      "evidence": ".local/iter0001/api/20261026T102921-f4fdfd/results.json"
+    },
+    {
+      "name": "http-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/http-passage.log",
+      "evidence": ".local/iter0002/api/20261026T102921-a9c1a0/results.json"
+    },
+    {
+      "name": "http-resident_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/http-resident_mission.log",
+      "evidence": ".local/iter0003/api/20261026T102921-dc708e/results.json"
+    },
+    {
+      "name": "http-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/http-activities.log",
+      "evidence": ".local/iter0004/api/20261026T102931-bd841a/results.json"
+    },
+    {
+      "name": "http-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/http-postcards.log",
+      "evidence": ".local/iter0005/api/20261026T102931-5eb762/results.json"
+    },
+    {
+      "name": "http-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/http-mosaic.log",
+      "evidence": ".local/iter0006/api/20261026T102932-6a454c/results.json"
+    },
+    {
+      "name": "http-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/http-consent.log",
+      "evidence": ".local/iter0007/api/20261026T102940-65862c/results.json"
+    },
+    {
+      "name": "http-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/http-inbox.log",
+      "evidence": ".local/iter0008/api/20261026T102944-84a5a7/results.json"
+    },
+    {
+      "name": "http-entry_guide",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/http-entry_guide.log",
+      "evidence": ".local/iter0009/api/20261026T102945-124928/results.json"
+    },
+    {
+      "name": "http-wilderness",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/http-wilderness.log",
+      "evidence": ".local/iter0010/api/20261026T102953-be33b3/results.json"
+    },
+    {
+      "name": "http-wilderness_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/http-wilderness_mission.log",
+      "evidence": ".local/iter0013/api/20261026T023004Z-0b3351/results.json"
+    },
+    {
+      "name": "http-continuous_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/http-continuous_mission.log",
+      "evidence": ".local/iter0015/api/20261026T023005Z-babbab/results.json"
+    },
+    {
+      "name": "http-construction_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/http-construction_mission.log",
+      "evidence": ".local/iter0017/api/20261026T023012Z-960683/results.json"
+    },
+    {
+      "name": "browser-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/browser-foundation.log",
+      "evidence": ".local/iter0001/browser/2026-10-26T02-30-16-162Z/results.json"
+    },
+    {
+      "name": "browser-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/browser-passage.log",
+      "evidence": ".local/iter0002/browser/2026-10-26T02-30-26-753Z/results.json"
+    },
+    {
+      "name": "browser-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/browser-resident.log",
+      "evidence": ".local/iter0003/browser/2026-10-26T02-30-36-993Z/results.json"
+    },
+    {
+      "name": "browser-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/browser-activities.log",
+      "evidence": ".local/iter0004/browser/2026-10-26T02-30-39-507Z/results.json"
+    },
+    {
+      "name": "browser-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/browser-postcards.log",
+      "evidence": ".local/iter0005/browser/2026-10-26T02-30-46-022Z/results.json"
+    },
+    {
+      "name": "browser-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/browser-mosaic.log",
+      "evidence": ".local/iter0006/browser/2026-10-26T02-30-55-837Z/results.json"
+    },
+    {
+      "name": "browser-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/browser-consent.log",
+      "evidence": ".local/iter0007/browser/2026-10-26T02-31-07-642Z/results.json"
+    },
+    {
+      "name": "browser-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/browser-inbox.log",
+      "evidence": ".local/iter0008/browser/2026-10-26T02-31-23-169Z/results.json"
+    },
+    {
+      "name": "browser-consent-experience",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/browser-consent-experience.log",
+      "evidence": ".local/consent-experience/browser/2026-10-26T02-31-36-623Z/results.json"
+    },
+    {
+      "name": "browser-entry",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/browser-entry.log",
+      "evidence": ".local/iter0009/browser/2026-10-26T02-31-46-884Z/results.json"
+    },
+    {
+      "name": "browser-wilderness",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/browser-wilderness.log",
+      "evidence": ".local/iter0010/browser/2026-10-26T02-32-02-539Z/results.json"
+    },
+    {
+      "name": "browser-wilderness-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/browser-wilderness-resident.log",
+      "evidence": ".local/iter0013/browser/2026-10-26T02-32-08-664Z/results.json"
+    },
+    {
+      "name": "browser-continuous-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/browser-continuous-resident.log",
+      "evidence": ".local/iter0015/browser/2026-10-26T02-32-10-556Z/results.json"
+    },
+    {
+      "name": "browser-construction-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T022920Z-f9df5b/browser-construction-resident.log",
+      "evidence": ".local/iter0017/browser/2026-10-26T02-32-22-059Z/results.json"
+    }
+  ]
+}

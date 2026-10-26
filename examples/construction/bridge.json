@@ -1,0 +1,23 @@
+{
+  "missionId": "shared-river-bridge",
+  "objective": "在指定河段建成公共木桥，走到桥中心后返回起点。",
+  "goals": [
+    {
+      "id": "bridge",
+      "label": "公共跨河木桥",
+      "target": [
+        16.4,
+        8
+      ],
+      "buildRecipeId": "bridge.v1"
+    }
+  ],
+  "allowBuild": true,
+  "allowGather": true,
+  "budgets": {
+    "commands": 250,
+    "wood": 6,
+    "seconds": 600,
+    "modelCalls": 1
+  }
+}
