@@ -1,0 +1,91 @@
+{
+  "actualModelCalls": 0,
+  "actualWorldCommands": 0,
+  "checks": [
+    {
+      "actual": true,
+      "appliedOnStateVersion": 43,
+      "committed": false,
+      "errorCode": "RESOURCE_DEPLETED",
+      "expected": true,
+      "name": "ordinary rejection at current transaction version",
+      "observedStateVersion": 42,
+      "passed": true,
+      "stateVersion": 43,
+      "wireNumberIsFloat": true
+    },
+    {
+      "actual": true,
+      "appliedOnStateVersion": 0,
+      "committed": false,
+      "errorCode": "STATE_VERSION_AHEAD",
+      "expected": true,
+      "name": "future observation rejected with the dedicated code",
+      "observedStateVersion": 42,
+      "passed": true,
+      "stateVersion": 0,
+      "wireNumberIsFloat": true
+    },
+    {
+      "actual": false,
+      "appliedOnStateVersion": 0,
+      "committed": false,
+      "errorCode": "RESOURCE_DEPLETED",
+      "expected": false,
+      "name": "future observation cannot confirm unrelated rejection",
+      "observedStateVersion": 42,
+      "passed": true,
+      "stateVersion": 0,
+      "wireNumberIsFloat": true
+    },
+    {
+      "actual": true,
+      "appliedOnStateVersion": 43,
+      "committed": true,
+      "errorCode": "",
+      "expected": true,
+      "name": "valid concurrent commit uses applied version plus one",
+      "observedStateVersion": 42,
+      "passed": true,
+      "stateVersion": 44,
+      "wireNumberIsFloat": true
+    },
+    {
+      "actual": false,
+      "appliedOnStateVersion": 43,
+      "committed": true,
+      "errorCode": "",
+      "expected": false,
+      "name": "incorrect commit version stays unconfirmed",
+      "observedStateVersion": 42,
+      "passed": true,
+      "stateVersion": 45,
+      "wireNumberIsFloat": true
+    },
+    {
+      "actual": false,
+      "appliedOnStateVersion": 43,
+      "committed": true,
+      "errorCode": "",
+      "expected": false,
+      "name": "different original observation stays unconfirmed",
+      "observedStateVersion": 41,
+      "passed": true,
+      "stateVersion": 44,
+      "wireNumberIsFloat": true
+    }
+  ],
+  "failures": 0,
+  "fullClientExecuted": false,
+  "kind": "actual-godot-headless-pure-validator-recheck",
+  "passed": true,
+  "serverExecuted": false,
+  "visualUiExecuted": false,
+  "recordedAtUtc": "2026-10-26T03:12:55.714179+00:00",
+  "godotVersion": "4.7.2.stable.official.ed1daf0bf",
+  "sourceFile": "clients/godot/command_evidence.gd",
+  "sourceSha256": "c9af838ed90f05b7870a5da2a6b35986fa5149a2b448794e44b7697f01ffcdd3",
+  "sourceUnchangedDuringRun": true,
+  "nativeExitCode": 0,
+  "allExperimentProcessesStopped": true
+}

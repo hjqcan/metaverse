@@ -32,4 +32,4 @@
 
 基线为 `8aadf53`。本轮产品改动仅 `world_view.gd` 和 `main.gd` 的一次视图更新调用；[清单](evidence/ITER-0021/manifest.json)记录最终源码及证据摘要。现有预览未重启，正在并行研发的 ITER-0019 并发条件和 ITER-0020 材料转让草案不属于本轮已验收能力。
 
-复现：`python3 tests/godot_attribution.py`。Godot 位置可通过 `GODOT_BIN` 指定；新测试尚未由本分支修改共享 `package.json` 入口，集成时由该文件维护者接入。
+复现：`python3 tests/godot_attribution.py`。Godot 位置可通过 `GODOT_BIN` 指定；新测试现已由集成方接入共享 `npm run test:godot`，并在 ITER-0019 组合中重跑全部27项；[组合结果](evidence/ITER-0019/godot-regression.json)同时保留原连续输入与导航回归。

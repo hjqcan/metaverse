@@ -1,0 +1,154 @@
+{
+  "passed": false,
+  "actualModelCalls": 0,
+  "groups": 6,
+  "assertions": 28,
+  "results": [
+    {
+      "name": "unrelated",
+      "checks": [
+        {
+          "name": "authenticated observation",
+          "passed": true
+        },
+        {
+          "name": "unrelated real walk permits original gather",
+          "passed": true
+        },
+        {
+          "name": "actual application exceeds frozen anchor",
+          "passed": true
+        },
+        {
+          "name": "impossible past business rejection is not evidence",
+          "passed": true
+        },
+        {
+          "name": "genuine future anchor rejection remains valid",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "held",
+      "passed": false,
+      "error": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+    },
+    {
+      "name": "route",
+      "passed": false,
+      "error": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+    },
+    {
+      "name": "missing-execution",
+      "checks": [
+        {
+          "name": "authenticated observation",
+          "passed": true
+        },
+        {
+          "name": "forged receipt retains v3 original",
+          "passed": true
+        },
+        {
+          "name": "damaged before facts rejected before network",
+          "passed": true
+        },
+        {
+          "name": "valid lookup settles original exactly once",
+          "passed": true
+        },
+        {
+          "name": "recovered original ID",
+          "passed": true
+        },
+        {
+          "name": "impossible past business rejection is not evidence",
+          "passed": true
+        },
+        {
+          "name": "genuine future anchor rejection remains valid",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "bad-quantity",
+      "checks": [
+        {
+          "name": "authenticated observation",
+          "passed": true
+        },
+        {
+          "name": "forged receipt retains v3 original",
+          "passed": true
+        },
+        {
+          "name": "damaged before facts rejected before network",
+          "passed": true
+        },
+        {
+          "name": "valid lookup settles original exactly once",
+          "passed": true
+        },
+        {
+          "name": "recovered original ID",
+          "passed": true
+        },
+        {
+          "name": "impossible past business rejection is not evidence",
+          "passed": true
+        },
+        {
+          "name": "genuine future anchor rejection remains valid",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "strict-save",
+      "checks": [
+        {
+          "name": "authenticated observation",
+          "passed": true
+        },
+        {
+          "name": "old server capability creates strict v2",
+          "passed": true
+        },
+        {
+          "name": "impossible past business rejection is not evidence",
+          "passed": true
+        },
+        {
+          "name": "genuine future anchor rejection remains valid",
+          "passed": true
+        },
+        {
+          "name": "old strict v2 preserved despite new capability",
+          "passed": true
+        },
+        {
+          "name": "saved strict body not upgraded",
+          "passed": true
+        },
+        {
+          "name": "original strict retry commits once",
+          "passed": true
+        },
+        {
+          "name": "impossible past business rejection is not evidence",
+          "passed": true
+        },
+        {
+          "name": "genuine future anchor rejection remains valid",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

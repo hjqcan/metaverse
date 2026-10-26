@@ -1,0 +1,9 @@
+{
+  "remainingTesterServices": [],
+  "csharpSnapshotMatchesCurrent": true,
+  "pythonSixScriptsAndReportMatchesFinal": true,
+  "godotFourScriptsMatchFinal": true,
+  "newIntegratedDllSha256": "a38e8baf0e2f3a62cc18956558f113c6402b752a0810843413128c3e360da5cb",
+  "independentTestedDllSha256": "de5364860d1b2b8805f3f6ec836008aa4e09ddbb1f7dfa522a8faf355b1dca08",
+  "newDllNotIndependentlyExecuted": true
+}

@@ -1,0 +1,40 @@
+{
+  "suite": "instance-mission-http",
+  "actualModelCalls": 0,
+  "decisionSource": "test-double",
+  "passed": false,
+  "testsRun": 5,
+  "tests": [
+    {
+      "test": "__main__.InstanceMissionAcceptance.test_01_same_url_new_database_never_replays_old_pending",
+      "passed": true,
+      "seconds": 11.130718483007513
+    },
+    {
+      "test": "__main__.InstanceMissionAcceptance.test_02_same_instance_new_endpoint_recovers_original_request",
+      "passed": true,
+      "seconds": 3.862232083978597
+    },
+    {
+      "test": "__main__.InstanceMissionAcceptance.test_03_legacy_unbound_task_cannot_adopt_current_instance",
+      "passed": false,
+      "seconds": 0.7570271239965223
+    },
+    {
+      "test": "__main__.InstanceMissionAcceptance.test_04_missing_or_invalid_protected_identity_never_downgrades",
+      "passed": true,
+      "seconds": 0.7877004619804211
+    },
+    {
+      "test": "__main__.InstanceMissionAcceptance.test_05_completed_report_is_historical_without_contacting_new_world",
+      "passed": true,
+      "seconds": 3.4910621250164695
+    }
+  ],
+  "failures": [
+    {
+      "test": "test_03_legacy_unbound_task_cannot_adopt_current_instance (__main__.InstanceMissionAcceptance.test_03_legacy_unbound_task_cannot_adopt_current_instance)",
+      "detail": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/instance_mission_api.py\", line 109, in test_03_legacy_unbound_task_cannot_adopt_current_instance\n    report=self.task(self.counted(self.world))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/instance_mission_api.py\", line 38, in task\n    report = run_mission(client or self.a, mission(), self.state, self.choose, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/resident_mission.py\", line 454, in run_mission\n    mode = preconditions.saved_mode(state) if state is not None else None\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/command_preconditions.py\", line 47, in saved_mode\n    raise ValueError('Actor-state commands require the original protected r8 world')\nValueError: Actor-state commands require the original protected r8 world\n"
+    }
+  ]
+}

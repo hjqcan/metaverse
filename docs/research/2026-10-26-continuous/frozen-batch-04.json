@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "kind": "frozen-research-batch",
+  "recordedAtUtc": "2026-10-26T03:15:48.993034+00:00",
+  "scope": "Research 09-12: isolated SQL cost, transfer draft review, same-actor stop policy, and implementation review with pure-function evidence. No product source changes.",
+  "status": "Frozen for explicit coordinator integration. Transfer remains a draft; author tests, independent tests, and researcher checks retain distinct evidence scopes.",
+  "files": [
+    {
+      "path": "09-event-query-cost.md",
+      "bytes": 6365,
+      "sha256": "5986c43baf99c28fe07dfcf70b95ee4991126f69d29a620708e10d4d1073500a"
+    },
+    {
+      "path": "10-transfer-and-recipient-progress.md",
+      "bytes": 6359,
+      "sha256": "1f3865cc089d0b20581ccffe22294be37d2cd1a88516b13072f8aed3b6a6b3f7"
+    },
+    {
+      "path": "11-same-actor-continuation.md",
+      "bytes": 6667,
+      "sha256": "3ca57bce909d1a817fe4333528201cbcea71fc4e0ec1c4cca359224f67a418c1"
+    },
+    {
+      "path": "12-iter0019-implementation-review.md",
+      "bytes": 9109,
+      "sha256": "1872eb7ed8224315dfd9e91fd936fded913af7cf73c927d1e09798761ef037e4"
+    },
+    {
+      "path": "probes/event-query-cost.py",
+      "bytes": 8444,
+      "sha256": "508fae735cc02917722df24900e49c82673f5f38218a8b72c7c4fb42e13acf26"
+    },
+    {
+      "path": "probes/godot-execution-evidence.gd",
+      "bytes": 2720,
+      "sha256": "4d69cadd9996b6d3fe1d5e8073562a6a2d54700a36feeeee89345656ccc5c524"
+    },
+    {
+      "path": "probes/godot-execution-evidence.py",
+      "bytes": 2858,
+      "sha256": "1da4b6a4636a48a501e33073e47108564d4666d6d16e1c013b07becca3f0cbc3"
+    },
+    {
+      "path": "evidence/event-query-cost.json",
+      "bytes": 10668,
+      "sha256": "5a2d746b896e6ac0064cf078c9e6ceba70bcc62fe418b99b371b4dca6319fbb2"
+    },
+    {
+      "path": "evidence/before-facts-recheck.json",
+      "bytes": 936,
+      "sha256": "99e5f9be962f1cc25d1c88bf1bedd49e4ab52cdfac560e0db220e187e4da3920"
+    },
+    {
+      "path": "evidence/godot-execution-recheck.json",
+      "bytes": 2599,
+      "sha256": "334f2a5edb465df495a4c6093c3456881efbef3a1219f1637f03727b544f4fd7"
+    }
+  ]
+}

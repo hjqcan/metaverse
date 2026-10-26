@@ -1,0 +1,340 @@
+{
+  "passed": true,
+  "binarySha256": "de5364860d1b2b8805f3f6ec836008aa4e09ddbb1f7dfa522a8faf355b1dca08",
+  "cases": {
+    "protocol": {
+      "passed": true,
+      "remoteInterferencesCommitted": 20,
+      "strictPreserved": true,
+      "abaRejected": true,
+      "rejectionDoesNotConsumeActorState": true,
+      "originalBytesPreserved": true,
+      "invalidModeBodiesRejected": 7,
+      "speedBudgetVerified": true,
+      "audit": {
+        "materialTotal": 12,
+        "stateVersion": 105,
+        "requests": 109,
+        "processStopped": true
+      }
+    },
+    "recovery": {
+      "passed": true,
+      "recoveries": [
+        {
+          "fault": "before-commit",
+          "exit": 81,
+          "originalCommandId": "9a2453eab9724142b8f439edc407c84b",
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r8",
+            "stateVersion": 2,
+            "commandId": "9a2453eab9724142b8f439edc407c84b",
+            "identity": {
+              "operatorId": "local-operator",
+              "actorId": "a1",
+              "sessionId": "s1f5b3f5530074b9c876aaacd7a4b4052"
+            },
+            "eventCursor": 3,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "gather",
+              "nodeId": "tree-west-north",
+              "quantity": 1,
+              "position": [
+                6.2,
+                7.8
+              ],
+              "remainingWoodBefore": 3,
+              "remainingWood": 2,
+              "inventoryWood": 1
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 0,
+              "appliedOnStateVersion": 1
+            }
+          }
+        },
+        {
+          "fault": "after-commit",
+          "exit": 82,
+          "originalCommandId": "1a9725e29f104cc9bd01cbf9e43da06e",
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r8",
+            "stateVersion": 4,
+            "commandId": "1a9725e29f104cc9bd01cbf9e43da06e",
+            "identity": {
+              "operatorId": "local-operator",
+              "actorId": "a1",
+              "sessionId": "s1f5b3f5530074b9c876aaacd7a4b4052"
+            },
+            "eventCursor": 5,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "gather",
+              "nodeId": "tree-west-north",
+              "quantity": 1,
+              "position": [
+                6.2,
+                7.8
+              ],
+              "remainingWoodBefore": 2,
+              "remainingWood": 1,
+              "inventoryWood": 2
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 2,
+              "appliedOnStateVersion": 3
+            }
+          }
+        }
+      ],
+      "audit": {
+        "materialTotal": 12,
+        "stateVersion": 4,
+        "requests": 4,
+        "processStopped": true
+      }
+    },
+    "upgrade": {
+      "passed": true,
+      "databaseDumpUnchangedOnUpgrade": true,
+      "strictReceiptRawBytesUnchanged": true,
+      "originalReceipts": [
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r8",
+            "commandId": "02e08d3942f940dfb093caa836e60d20",
+            "expectedStateVersion": 0,
+            "action": {
+              "type": "gather",
+              "nodeId": "tree-west-north"
+            }
+          },
+          "status": 200,
+          "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":1,\"commandId\":\"02e08d3942f940dfb093caa836e60d20\",\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"sa1250c367e8848f9b1710d6f9fd69698\"},\"eventCursor\":2,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"gather\",\"nodeId\":\"tree-west-north\",\"quantity\":1,\"position\":[6.2,7.8],\"remainingWood\":2,\"inventoryWood\":1}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r8",
+            "commandId": "e84d546014ff4603a7f7ab49444b3122",
+            "expectedStateVersion": 1,
+            "action": {
+              "type": "gather",
+              "nodeId": "tree-east-north"
+            }
+          },
+          "status": 422,
+          "raw": "{\"schemaVersion\":1,\"rulesVersion\":\"r8\",\"stateVersion\":1,\"commandId\":\"e84d546014ff4603a7f7ab49444b3122\",\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"sa1250c367e8848f9b1710d6f9fd69698\"},\"eventCursor\":2,\"error\":{\"code\":\"UNREACHABLE\",\"message\":\"\\u8BF7\\u8D70\\u5230\\u6811\\u65C1 1.6 \\u7C73\\u5185\",\"retryable\":false,\"mutated\":false},\"status\":\"rejected\"}"
+        }
+      ],
+      "audit": {
+        "materialTotal": 12,
+        "stateVersion": 4,
+        "requests": 5,
+        "processStopped": true
+      }
+    },
+    "materials": {
+      "passed": true,
+      "lastWoodReplies": [
+        {
+          "actor": "a1",
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r8",
+            "commandId": "16c5290799824e86945df31d4351828d",
+            "expectedStateVersion": 150,
+            "action": {
+              "type": "gather",
+              "nodeId": "tree-east-south"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "status": 200,
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r8",
+            "stateVersion": 151,
+            "commandId": "16c5290799824e86945df31d4351828d",
+            "identity": {
+              "operatorId": "local-operator",
+              "actorId": "a1",
+              "sessionId": "sadf3efb7337144338064a2ccae6df6cd"
+            },
+            "eventCursor": 152,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "gather",
+              "nodeId": "tree-east-south",
+              "quantity": 1,
+              "position": [
+                25.7,
+                18.2
+              ],
+              "remainingWoodBefore": 1,
+              "remainingWood": 0,
+              "inventoryWood": 2
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 150,
+              "appliedOnStateVersion": 150
+            }
+          }
+        },
+        {
+          "actor": "a2",
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r8",
+            "commandId": "caba2c650b584d559ac58dcec910852e",
+            "expectedStateVersion": 150,
+            "action": {
+              "type": "gather",
+              "nodeId": "tree-east-south"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "status": 422,
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r8",
+            "stateVersion": 151,
+            "commandId": "caba2c650b584d559ac58dcec910852e",
+            "identity": {
+              "operatorId": "local-operator",
+              "actorId": "a2",
+              "sessionId": "s69949ec4e9224793899e718669b1aaa2"
+            },
+            "eventCursor": 152,
+            "error": {
+              "code": "RESOURCE_DEPLETED",
+              "message": "\u6728\u6750\u5df2\u91c7\u7a7a",
+              "retryable": false,
+              "mutated": false
+            },
+            "status": "rejected",
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 150,
+              "appliedOnStateVersion": 151
+            }
+          }
+        }
+      ],
+      "naturalBridgeSetup": true,
+      "remainingWood": 0,
+      "audit": {
+        "materialTotal": 12,
+        "stateVersion": 151,
+        "requests": 152,
+        "processStopped": true
+      }
+    },
+    "occupancy": {
+      "passed": true,
+      "naturalBridgeSetup": true,
+      "buildReplies": [
+        {
+          "actor": "a1",
+          "status": 200,
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r8",
+            "stateVersion": 242,
+            "commandId": "c7c9ca03efa349fea551b3db7c23e850",
+            "identity": {
+              "operatorId": "local-operator",
+              "actorId": "a1",
+              "sessionId": "s5a570cc6a22f4af08122bd7270556878"
+            },
+            "eventCursor": 243,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "build",
+              "entityId": "ec5af1c511a614ca582d93f59901d5e58",
+              "position": [
+                27,
+                18
+              ],
+              "inventoryWood": 0
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 241,
+              "appliedOnStateVersion": 241
+            }
+          }
+        },
+        {
+          "actor": "a2",
+          "status": 409,
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r8",
+            "stateVersion": 242,
+            "commandId": "37a87b44ca9f4115b886e3d7a77c53fb",
+            "identity": {
+              "operatorId": "local-operator",
+              "actorId": "a2",
+              "sessionId": "s2ea8dfc529134d81a0eb12ca0e746ccb"
+            },
+            "eventCursor": 243,
+            "error": {
+              "code": "AREA_OCCUPIED",
+              "message": "\u5360\u5730\u4e0e\u65e2\u6709\u5efa\u7b51\u91cd\u53e0",
+              "retryable": false,
+              "mutated": false
+            },
+            "status": "rejected",
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 241,
+              "appliedOnStateVersion": 242
+            }
+          }
+        }
+      ],
+      "entityCount": 2,
+      "embodiedWood": 9,
+      "audit": {
+        "materialTotal": 12,
+        "stateVersion": 242,
+        "requests": 243,
+        "processStopped": true
+      }
+    }
+  },
+  "worlds": [
+    {
+      "name": "protocol",
+      "instance": "w_03a4d7bd5f2446b9a7257a577f9fb6c4"
+    },
+    {
+      "name": "recovery",
+      "instance": "w_a8c55373a0b8490cb1c58ba1d16588b7"
+    },
+    {
+      "name": "upgrade",
+      "instance": "w_f75ccc07e11a4717b83549823aed2a9c"
+    },
+    {
+      "name": "materials",
+      "instance": "w_aee939c90d664972ba69909fff543c93"
+    },
+    {
+      "name": "occupancy",
+      "instance": "w_061b5e8f24c74bab9f8ac1f13ba970a0"
+    }
+  ]
+}

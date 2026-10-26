@@ -1,0 +1,65 @@
+{
+  "suite": "actor-state-http-v1",
+  "recordedAtUtc": "2026-10-26T03:12:45.162961+00:00",
+  "passed": true,
+  "testsRun": 10,
+  "tests": [
+    {
+      "test": "__main__.ActorStateAcceptance.test_01_capability_legacy_and_existing_strict_receipt",
+      "passed": true,
+      "seconds": 1.1353685130015947
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_02_twenty_unrelated_moves_allow_actual_progress",
+      "passed": true,
+      "seconds": 0.8987956880009733
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_03_unrelated_walk_does_not_block_gather_or_build",
+      "passed": true,
+      "seconds": 0.34814589499728754
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_04_same_actor_concurrency_and_ABA_remain_rejected",
+      "passed": true,
+      "seconds": 0.4777663639979437
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_05_partial_and_final_resource_competition",
+      "passed": true,
+      "seconds": 31.323176777979825
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_06_same_build_space_is_revalidated_without_double_debit",
+      "passed": true,
+      "seconds": 15.80020014801994
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_07_walk_rechecks_new_bridge_and_keeps_speed_limit",
+      "passed": true,
+      "seconds": 34.77969075599685
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_08_same_id_mode_changes_conflict_and_replays_keep_original_execution",
+      "passed": true,
+      "seconds": 0.8067242929828353
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_09_invalid_modes_future_anchor_and_instance_errors_do_not_execute",
+      "passed": true,
+      "seconds": 0.3577215860132128
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_10_before_and_after_commit_crashes_recover_original_mode",
+      "passed": true,
+      "seconds": 1.2395440749824047
+    }
+  ],
+  "actualModelCalls": 0,
+  "sourceSha256": {
+    "src/World.Server/Protocol.cs": "431252265877f853ce00994151409441db58f3233f781da91b8bc3ead2549c02",
+    "src/World.Server/WorldService.cs": "d909bbe192eb468d587f597ce36d89fb3ec8b485bad795228f212bd86699ddd5",
+    "tests/actor_state_api.py": "41f93c2bff865302cd6b009165883fd557e9a2d43d09d47ebf2632a3562f664e"
+  },
+  "failureDetails": []
+}

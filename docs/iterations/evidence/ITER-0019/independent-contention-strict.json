@@ -1,0 +1,6020 @@
+{
+  "passed": true,
+  "expectedProtocol": "strict",
+  "externalModelCalls": 0,
+  "sourceSnapshot": {
+    "activity_choice.py": "84bd020783870725947663eb41500977096c86e366099b4fb8607c9d1c049b5a",
+    "agent_accounts.py": "f1844d9db668e864ab215d0d811b884b6301500bfe260bb9bf9d9cfdbc481f10",
+    "check.py": "b40316efbe1f4dcd1d7ec04b900b7d16f23f7f4db230b7e138078af85b13aab6",
+    "codex_goal_selector.py": "3a455c2906aaa3764c85794cb581300979f57cb3f24b46fe437fbd287a8b6936",
+    "continuous_navigation.py": "e158eff635fbaa0a67146b9ab00d6c3e48cb5f43a684335ffdca5216983db749",
+    "entry_guide.py": "9b768237d39f2e4b4820e0178508c132408215aa6653c996eaf9b6e913d79dbb",
+    "foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+    "mosaic_consent.py": "cb3acc34abe43c6988359bc307755ad6d2743ac5e850bccaf165f14ae561eae9",
+    "mosaic_inbox.py": "a9c0772e5946af581c3b423c8e5986b05413348a3e528c8d5a0b18401367aa59",
+    "mosaic_patch.py": "4abdb035967733e4aacbe175a37f8b32686de6182ded2fee888203726b0461a6",
+    "passage_agent.py": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e",
+    "postcard_text.py": "db3429983b8ee2062ab70f4c7e46b763c5839934f65a2a6776638f8c0a280a4c",
+    "resident_construction.py": "53e23c254909b93378a7d8d89f750f2a87fa01d9971ceb6de30905ff428e1738",
+    "resident_mission.py": "482c4669c20c30e570368622cbe1b8269d9a1a036593b3c188be63420d74daa7",
+    "run_resident.py": "735e383aa13aa68a79ecb9e94f434de280485fe4636a4ed03dbf0ee7422c30aa",
+    "test_agent_accounts.py": "07c9e2e66bcfec99a9d57ed7b9ba3497769d06bee5b838ca6c24a0264647df5c",
+    "wilderness_materials.py": "f9e231ef1eb30dddd7efddee06bd7c8a98dbbe1fe0b8b01a172e503573361ec4"
+  },
+  "binarySha256": "1473453f8e35c7591b926926c7765bfbd239c1fcceaa356bebb9b65ada00d90f",
+  "phaseOne": {
+    "mission": {
+      "schemaVersion": 1,
+      "kind": "resident-mission-report",
+      "mission": {
+        "id": "qa-twenty-remote-interferences",
+        "objective": "走到西岸远处后返回，记录其他居民动作对任务的影响。",
+        "allowBuild": false,
+        "allowGather": false,
+        "arrivalTolerance": 0.06,
+        "sharePostcard": false,
+        "paintMosaic": false,
+        "proposeMosaic": false,
+        "reviewMosaicProposal": null,
+        "actorId": "a1",
+        "worldId": "foundation-01",
+        "worldInstanceId": "w_6947aa3995794f5d91a6de16147d7b1a",
+        "rulesVersion": "r8",
+        "origin": [
+          5,
+          7
+        ],
+        "goal": {
+          "id": "destination",
+          "label": "西岸远处",
+          "target": [
+            13,
+            7
+          ]
+        },
+        "status": "paused",
+        "reason": "max_steps"
+      },
+      "decision": {
+        "goalId": "destination",
+        "reason": "固定成本参考：按木材、预计命令数、目标 ID 升序选择可行目标。",
+        "provider": {
+          "kind": "fixed-reference",
+          "model": "least-cost-v1",
+          "usage": {}
+        }
+      },
+      "budget": {
+        "limits": {
+          "commands": 200,
+          "wood": 0,
+          "seconds": 600,
+          "modelCalls": 1
+        },
+        "used": {
+          "commands": 20,
+          "wood": 0,
+          "modelCalls": 1,
+          "seconds": 4.5152599811553955
+        }
+      },
+      "facts": {
+        "goalReached": false,
+        "returned": true,
+        "activityCompleted": false,
+        "activityVisit": null,
+        "postcardShared": false,
+        "postcard": null,
+        "mosaicPainted": false,
+        "mosaicEdit": null,
+        "mosaicProposed": false,
+        "mosaicProposal": null,
+        "mosaicReviewed": false,
+        "mosaicReview": null,
+        "startStateVersion": 0,
+        "endStateVersion": 20,
+        "woodClaimed": 0,
+        "createdEntityIds": [],
+        "verifiedAtUtc": "2026-10-26T03:00:41.452428+00:00",
+        "woodGathered": 0,
+        "constructionBuilt": false,
+        "construction": null
+      },
+      "steps": [
+        {
+          "index": 1,
+          "commandId": "0680b5fbc3ae494ca8e1b60aaa0725fc",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 0,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 2,
+          "commandId": "62f80145805047d4808a238cc1e1e529",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 1,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 3,
+          "commandId": "f960b61b2a0f47b2b6d88457905c6f7a",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 2,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 4,
+          "commandId": "a7ef2f0f447f44959624c3604c606b17",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 3,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 5,
+          "commandId": "3a66f86827b3400ca551ce631b20a22b",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 4,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 6,
+          "commandId": "8ba856c73ac04186a393b158be092d1f",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 5,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 7,
+          "commandId": "392e2d3e778648e6bad3d2ff687d9c29",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 6,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 8,
+          "commandId": "d960f1a5b13a4f11862b738e33edb40d",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 7,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 9,
+          "commandId": "80c264d5e8964f2ebc0a569a5ef0a0a4",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 8,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 10,
+          "commandId": "cd3ba1917ee643f09f94f2f6b9b0e676",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 9,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 11,
+          "commandId": "e88f1a6f179e4c1e914bcbabd913bf7b",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 10,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 12,
+          "commandId": "394f19d0d05047f8bceced293522aa54",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 11,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 13,
+          "commandId": "d352c4b6cebb47d6bccf51445867c48f",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 12,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 14,
+          "commandId": "f54cb2808fd24e2cb05905c6faa2ea7d",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 13,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 15,
+          "commandId": "02b7a0b924ce4e1483a15b15790516b7",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 14,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 16,
+          "commandId": "ed221715667a4074ae3ba9f74bcde7bd",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 15,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 17,
+          "commandId": "6958fe3f28ba448e8b25fdf6813ccdf8",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 16,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 18,
+          "commandId": "9341696aee3849e7acd4f2e6709e7878",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 17,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 19,
+          "commandId": "7854d8dea61b41f8adce6e65f7e38f62",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 18,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        },
+        {
+          "index": 20,
+          "commandId": "4dadaa1cc33f4e0bbc15669704306722",
+          "action": {
+            "type": "walk",
+            "to": [
+              13,
+              7
+            ]
+          },
+          "reason": "沿连续地形前往当前目标",
+          "status": "rejected",
+          "stateVersion": 19,
+          "position": [
+            5,
+            7
+          ],
+          "inventoryWood": 0,
+          "httpStatus": 409,
+          "errorCode": "STALE_STATE"
+        }
+      ],
+      "feedback": {
+        "summary": "max_steps",
+        "issues": [],
+        "suggestions": []
+      },
+      "world": {
+        "id": "foundation-01",
+        "instanceId": "w_6947aa3995794f5d91a6de16147d7b1a",
+        "width": 32,
+        "height": 24,
+        "coordinateSystem": "continuous-xz",
+        "bounds": [
+          0,
+          0,
+          32,
+          24
+        ],
+        "entities": [],
+        "terrain": {
+          "version": 1,
+          "river": {
+            "polygon": [
+              [
+                14.6,
+                0
+              ],
+              [
+                14.506445312499999,
+                0.5
+              ],
+              [
+                14.364062500000001,
+                1
+              ],
+              [
+                14.1927734375,
+                1.5
+              ],
+              [
+                14.0125,
+                2
+              ],
+              [
+                13.8431640625,
+                2.5
+              ],
+              [
+                13.7046875,
+                3
+              ],
+              [
+                13.6169921875,
+                3.5
+              ],
+              [
+                13.6,
+                4
+              ],
+              [
+                13.658789062499999,
+                4.5
+              ],
+              [
+                13.7765625,
+                5
+              ],
+              [
+                13.940429687499998,
+                5.5
+              ],
+              [
+                14.1375,
+                6
+              ],
+              [
+                14.3548828125,
+                6.5
+              ],
+              [
+                14.579687499999999,
+                7
+              ],
+              [
+                14.799023437499999,
+                7.5
+              ],
+              [
+                14.999999999999998,
+                8
+              ],
+              [
+                15.208203124999999,
+                8.5
+              ],
+              [
+                15.446874999999997,
+                9
+              ],
+              [
+                15.699609375,
+                9.5
+              ],
+              [
+                15.949999999999998,
+                10
+              ],
+              [
+                16.181640625,
+                10.5
+              ],
+              [
+                16.378125,
+                11
+              ],
+              [
+                16.523046875,
+                11.5
+              ],
+              [
+                16.6,
+                12
+              ],
+              [
+                16.604199218750004,
+                12.5
+              ],
+              [
+                16.54921875,
+                13
+              ],
+              [
+                16.44619140625,
+                13.5
+              ],
+              [
+                16.30625,
+                14
+              ],
+              [
+                16.14052734375,
+                14.5
+              ],
+              [
+                15.960156250000002,
+                15
+              ],
+              [
+                15.77626953125,
+                15.5
+              ],
+              [
+                15.6,
+                16
+              ],
+              [
+                15.411425781249998,
+                16.5
+              ],
+              [
+                15.191406250000002,
+                17
+              ],
+              [
+                14.95224609375,
+                17.5
+              ],
+              [
+                14.706249999999999,
+                18
+              ],
+              [
+                14.46572265625,
+                18.5
+              ],
+              [
+                14.24296875,
+                19
+              ],
+              [
+                14.050292968749998,
+                19.5
+              ],
+              [
+                13.9,
+                20
+              ],
+              [
+                13.79345703125,
+                20.5
+              ],
+              [
+                13.719531250000001,
+                21
+              ],
+              [
+                13.67177734375,
+                21.5
+              ],
+              [
+                13.64375,
+                22
+              ],
+              [
+                13.62900390625,
+                22.5
+              ],
+              [
+                13.621093750000002,
+                23
+              ],
+              [
+                13.613574218750003,
+                23.5
+              ],
+              [
+                13.600000000000003,
+                24
+              ],
+              [
+                16.400000000000002,
+                24
+              ],
+              [
+                16.413574218750004,
+                23.5
+              ],
+              [
+                16.42109375,
+                23
+              ],
+              [
+                16.42900390625,
+                22.5
+              ],
+              [
+                16.44375,
+                22
+              ],
+              [
+                16.47177734375,
+                21.5
+              ],
+              [
+                16.51953125,
+                21
+              ],
+              [
+                16.59345703125,
+                20.5
+              ],
+              [
+                16.7,
+                20
+              ],
+              [
+                16.850292968749997,
+                19.5
+              ],
+              [
+                17.04296875,
+                19
+              ],
+              [
+                17.26572265625,
+                18.5
+              ],
+              [
+                17.506249999999998,
+                18
+              ],
+              [
+                17.75224609375,
+                17.5
+              ],
+              [
+                17.99140625,
+                17
+              ],
+              [
+                18.211425781249996,
+                16.5
+              ],
+              [
+                18.4,
+                16
+              ],
+              [
+                18.57626953125,
+                15.5
+              ],
+              [
+                18.76015625,
+                15
+              ],
+              [
+                18.94052734375,
+                14.5
+              ],
+              [
+                19.106249999999996,
+                14
+              ],
+              [
+                19.24619140625,
+                13.5
+              ],
+              [
+                19.34921875,
+                13
+              ],
+              [
+                19.40419921875,
+                12.5
+              ],
+              [
+                19.4,
+                12
+              ],
+              [
+                19.323046874999996,
+                11.5
+              ],
+              [
+                19.178124999999998,
+                11
+              ],
+              [
+                18.981640624999997,
+                10.5
+              ],
+              [
+                18.749999999999996,
+                10
+              ],
+              [
+                18.499609375,
+                9.5
+              ],
+              [
+                18.246874999999996,
+                9
+              ],
+              [
+                18.008203124999998,
+                8.5
+              ],
+              [
+                17.799999999999997,
+                8
+              ],
+              [
+                17.599023437499998,
+                7.5
+              ],
+              [
+                17.3796875,
+                7
+              ],
+              [
+                17.1548828125,
+                6.5
+              ],
+              [
+                16.9375,
+                6
+              ],
+              [
+                16.740429687499997,
+                5.5
+              ],
+              [
+                16.5765625,
+                5
+              ],
+              [
+                16.4587890625,
+                4.5
+              ],
+              [
+                16.4,
+                4
+              ],
+              [
+                16.4169921875,
+                3.5
+              ],
+              [
+                16.5046875,
+                3
+              ],
+              [
+                16.6431640625,
+                2.5
+              ],
+              [
+                16.8125,
+                2
+              ],
+              [
+                16.9927734375,
+                1.5
+              ],
+              [
+                17.1640625,
+                1
+              ],
+              [
+                17.3064453125,
+                0.5
+              ],
+              [
+                17.4,
+                0
+              ]
+            ],
+            "centerline": [
+              [
+                16,
+                0
+              ],
+              [
+                15.906445312499999,
+                0.5
+              ],
+              [
+                15.764062500000001,
+                1
+              ],
+              [
+                15.5927734375,
+                1.5
+              ],
+              [
+                15.4125,
+                2
+              ],
+              [
+                15.2431640625,
+                2.5
+              ],
+              [
+                15.1046875,
+                3
+              ],
+              [
+                15.0169921875,
+                3.5
+              ],
+              [
+                15,
+                4
+              ],
+              [
+                15.058789062499999,
+                4.5
+              ],
+              [
+                15.176562500000001,
+                5
+              ],
+              [
+                15.340429687499999,
+                5.5
+              ],
+              [
+                15.5375,
+                6
+              ],
+              [
+                15.7548828125,
+                6.5
+              ],
+              [
+                15.979687499999999,
+                7
+              ],
+              [
+                16.1990234375,
+                7.5
+              ],
+              [
+                16.4,
+                8
+              ],
+              [
+                16.608203125,
+                8.5
+              ],
+              [
+                16.846874999999997,
+                9
+              ],
+              [
+                17.099609375,
+                9.5
+              ],
+              [
+                17.349999999999998,
+                10
+              ],
+              [
+                17.581640625,
+                10.5
+              ],
+              [
+                17.778125,
+                11
+              ],
+              [
+                17.923046874999997,
+                11.5
+              ],
+              [
+                18,
+                12
+              ],
+              [
+                18.004199218750003,
+                12.5
+              ],
+              [
+                17.94921875,
+                13
+              ],
+              [
+                17.84619140625,
+                13.5
+              ],
+              [
+                17.706249999999997,
+                14
+              ],
+              [
+                17.54052734375,
+                14.5
+              ],
+              [
+                17.360156250000003,
+                15
+              ],
+              [
+                17.17626953125,
+                15.5
+              ],
+              [
+                17,
+                16
+              ],
+              [
+                16.811425781249998,
+                16.5
+              ],
+              [
+                16.591406250000002,
+                17
+              ],
+              [
+                16.35224609375,
+                17.5
+              ],
+              [
+                16.10625,
+                18
+              ],
+              [
+                15.86572265625,
+                18.5
+              ],
+              [
+                15.64296875,
+                19
+              ],
+              [
+                15.450292968749999,
+                19.5
+              ],
+              [
+                15.3,
+                20
+              ],
+              [
+                15.19345703125,
+                20.5
+              ],
+              [
+                15.119531250000001,
+                21
+              ],
+              [
+                15.07177734375,
+                21.5
+              ],
+              [
+                15.043750000000001,
+                22
+              ],
+              [
+                15.02900390625,
+                22.5
+              ],
+              [
+                15.021093750000002,
+                23
+              ],
+              [
+                15.013574218750003,
+                23.5
+              ],
+              [
+                15.000000000000004,
+                24
+              ]
+            ],
+            "halfWidth": 1.4
+          },
+          "obstacles": [
+            {
+              "id": "rock-west",
+              "kind": "rock",
+              "position": [
+                10.5,
+                8.5
+              ],
+              "radius": 1.05
+            },
+            {
+              "id": "rock-south",
+              "kind": "rock",
+              "position": [
+                5.6,
+                19.7
+              ],
+              "radius": 0.8
+            },
+            {
+              "id": "rock-east",
+              "kind": "rock",
+              "position": [
+                23,
+                12.5
+              ],
+              "radius": 1.2
+            },
+            {
+              "id": "rock-north",
+              "kind": "rock",
+              "position": [
+                21.8,
+                3.2
+              ],
+              "radius": 0.75
+            }
+          ]
+        },
+        "resourceNodes": [
+          {
+            "nodeId": "tree-east-north",
+            "kind": "tree",
+            "position": [
+              25.4,
+              5.8
+            ],
+            "initialWood": 3,
+            "remainingWood": 3
+          },
+          {
+            "nodeId": "tree-east-south",
+            "kind": "tree",
+            "position": [
+              25.7,
+              18.2
+            ],
+            "initialWood": 3,
+            "remainingWood": 3
+          },
+          {
+            "nodeId": "tree-west-north",
+            "kind": "tree",
+            "position": [
+              6.2,
+              7.8
+            ],
+            "initialWood": 3,
+            "remainingWood": 3
+          },
+          {
+            "nodeId": "tree-west-south",
+            "kind": "tree",
+            "position": [
+              9.2,
+              16.3
+            ],
+            "initialWood": 3,
+            "remainingWood": 3
+          }
+        ],
+        "mosaic": null,
+        "mosaicProposals": []
+      }
+    },
+    "observation": {
+      "schemaVersion": 1,
+      "rulesVersion": "r8",
+      "stateVersion": 20,
+      "commandId": null,
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1",
+        "sessionId": "sbff8e4f447394b4aba8e092440149539"
+      },
+      "eventCursor": 21,
+      "error": null,
+      "world": {
+        "id": "foundation-01",
+        "scenarioId": "wilderness-continuous-v1",
+        "width": 32,
+        "height": 24,
+        "coordinateSystem": "continuous-xz",
+        "bounds": [
+          0,
+          0,
+          32,
+          24
+        ],
+        "instanceId": "w_6947aa3995794f5d91a6de16147d7b1a"
+      },
+      "movement": {
+        "version": 1,
+        "kind": "continuous",
+        "speed": 3,
+        "radius": 0.28,
+        "maxStepDistance": 0.6,
+        "gatherReach": 1.6,
+        "buildReach": 3.2
+      },
+      "terrain": {
+        "version": 1,
+        "river": {
+          "polygon": [
+            [
+              14.6,
+              0
+            ],
+            [
+              14.506445312499999,
+              0.5
+            ],
+            [
+              14.364062500000001,
+              1
+            ],
+            [
+              14.1927734375,
+              1.5
+            ],
+            [
+              14.0125,
+              2
+            ],
+            [
+              13.8431640625,
+              2.5
+            ],
+            [
+              13.7046875,
+              3
+            ],
+            [
+              13.6169921875,
+              3.5
+            ],
+            [
+              13.6,
+              4
+            ],
+            [
+              13.658789062499999,
+              4.5
+            ],
+            [
+              13.7765625,
+              5
+            ],
+            [
+              13.940429687499998,
+              5.5
+            ],
+            [
+              14.1375,
+              6
+            ],
+            [
+              14.3548828125,
+              6.5
+            ],
+            [
+              14.579687499999999,
+              7
+            ],
+            [
+              14.799023437499999,
+              7.5
+            ],
+            [
+              14.999999999999998,
+              8
+            ],
+            [
+              15.208203124999999,
+              8.5
+            ],
+            [
+              15.446874999999997,
+              9
+            ],
+            [
+              15.699609375,
+              9.5
+            ],
+            [
+              15.949999999999998,
+              10
+            ],
+            [
+              16.181640625,
+              10.5
+            ],
+            [
+              16.378125,
+              11
+            ],
+            [
+              16.523046875,
+              11.5
+            ],
+            [
+              16.6,
+              12
+            ],
+            [
+              16.604199218750004,
+              12.5
+            ],
+            [
+              16.54921875,
+              13
+            ],
+            [
+              16.44619140625,
+              13.5
+            ],
+            [
+              16.30625,
+              14
+            ],
+            [
+              16.14052734375,
+              14.5
+            ],
+            [
+              15.960156250000002,
+              15
+            ],
+            [
+              15.77626953125,
+              15.5
+            ],
+            [
+              15.6,
+              16
+            ],
+            [
+              15.411425781249998,
+              16.5
+            ],
+            [
+              15.191406250000002,
+              17
+            ],
+            [
+              14.95224609375,
+              17.5
+            ],
+            [
+              14.706249999999999,
+              18
+            ],
+            [
+              14.46572265625,
+              18.5
+            ],
+            [
+              14.24296875,
+              19
+            ],
+            [
+              14.050292968749998,
+              19.5
+            ],
+            [
+              13.9,
+              20
+            ],
+            [
+              13.79345703125,
+              20.5
+            ],
+            [
+              13.719531250000001,
+              21
+            ],
+            [
+              13.67177734375,
+              21.5
+            ],
+            [
+              13.64375,
+              22
+            ],
+            [
+              13.62900390625,
+              22.5
+            ],
+            [
+              13.621093750000002,
+              23
+            ],
+            [
+              13.613574218750003,
+              23.5
+            ],
+            [
+              13.600000000000003,
+              24
+            ],
+            [
+              16.400000000000002,
+              24
+            ],
+            [
+              16.413574218750004,
+              23.5
+            ],
+            [
+              16.42109375,
+              23
+            ],
+            [
+              16.42900390625,
+              22.5
+            ],
+            [
+              16.44375,
+              22
+            ],
+            [
+              16.47177734375,
+              21.5
+            ],
+            [
+              16.51953125,
+              21
+            ],
+            [
+              16.59345703125,
+              20.5
+            ],
+            [
+              16.7,
+              20
+            ],
+            [
+              16.850292968749997,
+              19.5
+            ],
+            [
+              17.04296875,
+              19
+            ],
+            [
+              17.26572265625,
+              18.5
+            ],
+            [
+              17.506249999999998,
+              18
+            ],
+            [
+              17.75224609375,
+              17.5
+            ],
+            [
+              17.99140625,
+              17
+            ],
+            [
+              18.211425781249996,
+              16.5
+            ],
+            [
+              18.4,
+              16
+            ],
+            [
+              18.57626953125,
+              15.5
+            ],
+            [
+              18.76015625,
+              15
+            ],
+            [
+              18.94052734375,
+              14.5
+            ],
+            [
+              19.106249999999996,
+              14
+            ],
+            [
+              19.24619140625,
+              13.5
+            ],
+            [
+              19.34921875,
+              13
+            ],
+            [
+              19.40419921875,
+              12.5
+            ],
+            [
+              19.4,
+              12
+            ],
+            [
+              19.323046874999996,
+              11.5
+            ],
+            [
+              19.178124999999998,
+              11
+            ],
+            [
+              18.981640624999997,
+              10.5
+            ],
+            [
+              18.749999999999996,
+              10
+            ],
+            [
+              18.499609375,
+              9.5
+            ],
+            [
+              18.246874999999996,
+              9
+            ],
+            [
+              18.008203124999998,
+              8.5
+            ],
+            [
+              17.799999999999997,
+              8
+            ],
+            [
+              17.599023437499998,
+              7.5
+            ],
+            [
+              17.3796875,
+              7
+            ],
+            [
+              17.1548828125,
+              6.5
+            ],
+            [
+              16.9375,
+              6
+            ],
+            [
+              16.740429687499997,
+              5.5
+            ],
+            [
+              16.5765625,
+              5
+            ],
+            [
+              16.4587890625,
+              4.5
+            ],
+            [
+              16.4,
+              4
+            ],
+            [
+              16.4169921875,
+              3.5
+            ],
+            [
+              16.5046875,
+              3
+            ],
+            [
+              16.6431640625,
+              2.5
+            ],
+            [
+              16.8125,
+              2
+            ],
+            [
+              16.9927734375,
+              1.5
+            ],
+            [
+              17.1640625,
+              1
+            ],
+            [
+              17.3064453125,
+              0.5
+            ],
+            [
+              17.4,
+              0
+            ]
+          ],
+          "centerline": [
+            [
+              16,
+              0
+            ],
+            [
+              15.906445312499999,
+              0.5
+            ],
+            [
+              15.764062500000001,
+              1
+            ],
+            [
+              15.5927734375,
+              1.5
+            ],
+            [
+              15.4125,
+              2
+            ],
+            [
+              15.2431640625,
+              2.5
+            ],
+            [
+              15.1046875,
+              3
+            ],
+            [
+              15.0169921875,
+              3.5
+            ],
+            [
+              15,
+              4
+            ],
+            [
+              15.058789062499999,
+              4.5
+            ],
+            [
+              15.176562500000001,
+              5
+            ],
+            [
+              15.340429687499999,
+              5.5
+            ],
+            [
+              15.5375,
+              6
+            ],
+            [
+              15.7548828125,
+              6.5
+            ],
+            [
+              15.979687499999999,
+              7
+            ],
+            [
+              16.1990234375,
+              7.5
+            ],
+            [
+              16.4,
+              8
+            ],
+            [
+              16.608203125,
+              8.5
+            ],
+            [
+              16.846874999999997,
+              9
+            ],
+            [
+              17.099609375,
+              9.5
+            ],
+            [
+              17.349999999999998,
+              10
+            ],
+            [
+              17.581640625,
+              10.5
+            ],
+            [
+              17.778125,
+              11
+            ],
+            [
+              17.923046874999997,
+              11.5
+            ],
+            [
+              18,
+              12
+            ],
+            [
+              18.004199218750003,
+              12.5
+            ],
+            [
+              17.94921875,
+              13
+            ],
+            [
+              17.84619140625,
+              13.5
+            ],
+            [
+              17.706249999999997,
+              14
+            ],
+            [
+              17.54052734375,
+              14.5
+            ],
+            [
+              17.360156250000003,
+              15
+            ],
+            [
+              17.17626953125,
+              15.5
+            ],
+            [
+              17,
+              16
+            ],
+            [
+              16.811425781249998,
+              16.5
+            ],
+            [
+              16.591406250000002,
+              17
+            ],
+            [
+              16.35224609375,
+              17.5
+            ],
+            [
+              16.10625,
+              18
+            ],
+            [
+              15.86572265625,
+              18.5
+            ],
+            [
+              15.64296875,
+              19
+            ],
+            [
+              15.450292968749999,
+              19.5
+            ],
+            [
+              15.3,
+              20
+            ],
+            [
+              15.19345703125,
+              20.5
+            ],
+            [
+              15.119531250000001,
+              21
+            ],
+            [
+              15.07177734375,
+              21.5
+            ],
+            [
+              15.043750000000001,
+              22
+            ],
+            [
+              15.02900390625,
+              22.5
+            ],
+            [
+              15.021093750000002,
+              23
+            ],
+            [
+              15.013574218750003,
+              23.5
+            ],
+            [
+              15.000000000000004,
+              24
+            ]
+          ],
+          "halfWidth": 1.4
+        },
+        "obstacles": [
+          {
+            "id": "rock-west",
+            "kind": "rock",
+            "position": [
+              10.5,
+              8.5
+            ],
+            "radius": 1.05
+          },
+          {
+            "id": "rock-south",
+            "kind": "rock",
+            "position": [
+              5.6,
+              19.7
+            ],
+            "radius": 0.8
+          },
+          {
+            "id": "rock-east",
+            "kind": "rock",
+            "position": [
+              23,
+              12.5
+            ],
+            "radius": 1.2
+          },
+          {
+            "id": "rock-north",
+            "kind": "rock",
+            "position": [
+              21.8,
+              3.2
+            ],
+            "radius": 0.75
+          }
+        ]
+      },
+      "self": {
+        "actorId": "a1",
+        "position": [
+          5,
+          7
+        ],
+        "inventory": {
+          "wood": 0
+        }
+      },
+      "residents": [
+        {
+          "actorId": "a1",
+          "position": [
+            5,
+            7
+          ]
+        },
+        {
+          "actorId": "a2",
+          "position": [
+            26,
+            17
+          ]
+        }
+      ],
+      "resourceNodes": [
+        {
+          "nodeId": "tree-east-north",
+          "kind": "tree",
+          "position": [
+            25.4,
+            5.8
+          ],
+          "initialWood": 3,
+          "remainingWood": 3
+        },
+        {
+          "nodeId": "tree-east-south",
+          "kind": "tree",
+          "position": [
+            25.7,
+            18.2
+          ],
+          "initialWood": 3,
+          "remainingWood": 3
+        },
+        {
+          "nodeId": "tree-west-north",
+          "kind": "tree",
+          "position": [
+            6.2,
+            7.8
+          ],
+          "initialWood": 3,
+          "remainingWood": 3
+        },
+        {
+          "nodeId": "tree-west-south",
+          "kind": "tree",
+          "position": [
+            9.2,
+            16.3
+          ],
+          "initialWood": 3,
+          "remainingWood": 3
+        }
+      ],
+      "entities": [],
+      "recipes": [
+        {
+          "id": "platform.v1",
+          "definitionId": "platform",
+          "woodCost": 3
+        },
+        {
+          "id": "bridge.v1",
+          "definitionId": "bridge",
+          "woodCost": 6
+        }
+      ],
+      "gathering": {
+        "version": 1,
+        "quantityPerAction": 1
+      },
+      "depot": {
+        "wood": 0,
+        "available": false
+      },
+      "resourceAudit": {
+        "issuedWood": 12,
+        "wildWood": 12,
+        "depotWood": 0,
+        "inventoryWood": 0,
+        "embodiedWood": 0,
+        "conserved": true
+      },
+      "commandBinding": {
+        "version": 1,
+        "required": true,
+        "header": "World-Instance-Id"
+      }
+    },
+    "requests": [
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "0680b5fbc3ae494ca8e1b60aaa0725fc",
+        "expectedStateVersion": 0,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "62f80145805047d4808a238cc1e1e529",
+        "expectedStateVersion": 1,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "f960b61b2a0f47b2b6d88457905c6f7a",
+        "expectedStateVersion": 2,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "a7ef2f0f447f44959624c3604c606b17",
+        "expectedStateVersion": 3,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "3a66f86827b3400ca551ce631b20a22b",
+        "expectedStateVersion": 4,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "8ba856c73ac04186a393b158be092d1f",
+        "expectedStateVersion": 5,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "392e2d3e778648e6bad3d2ff687d9c29",
+        "expectedStateVersion": 6,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "d960f1a5b13a4f11862b738e33edb40d",
+        "expectedStateVersion": 7,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "80c264d5e8964f2ebc0a569a5ef0a0a4",
+        "expectedStateVersion": 8,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "cd3ba1917ee643f09f94f2f6b9b0e676",
+        "expectedStateVersion": 9,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "e88f1a6f179e4c1e914bcbabd913bf7b",
+        "expectedStateVersion": 10,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "394f19d0d05047f8bceced293522aa54",
+        "expectedStateVersion": 11,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "d352c4b6cebb47d6bccf51445867c48f",
+        "expectedStateVersion": 12,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "f54cb2808fd24e2cb05905c6faa2ea7d",
+        "expectedStateVersion": 13,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "02b7a0b924ce4e1483a15b15790516b7",
+        "expectedStateVersion": 14,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "ed221715667a4074ae3ba9f74bcde7bd",
+        "expectedStateVersion": 15,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "6958fe3f28ba448e8b25fdf6813ccdf8",
+        "expectedStateVersion": 16,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "9341696aee3849e7acd4f2e6709e7878",
+        "expectedStateVersion": 17,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "7854d8dea61b41f8adce6e65f7e38f62",
+        "expectedStateVersion": 18,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "4dadaa1cc33f4e0bbc15669704306722",
+        "expectedStateVersion": 19,
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        }
+      }
+    ],
+    "receipts": [
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 1,
+        "commandId": "0680b5fbc3ae494ca8e1b60aaa0725fc",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 2,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 2,
+        "commandId": "62f80145805047d4808a238cc1e1e529",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 3,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 3,
+        "commandId": "f960b61b2a0f47b2b6d88457905c6f7a",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 4,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 4,
+        "commandId": "a7ef2f0f447f44959624c3604c606b17",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 5,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 5,
+        "commandId": "3a66f86827b3400ca551ce631b20a22b",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 6,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 6,
+        "commandId": "8ba856c73ac04186a393b158be092d1f",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 7,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 7,
+        "commandId": "392e2d3e778648e6bad3d2ff687d9c29",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 8,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 8,
+        "commandId": "d960f1a5b13a4f11862b738e33edb40d",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 9,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 9,
+        "commandId": "80c264d5e8964f2ebc0a569a5ef0a0a4",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 10,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 10,
+        "commandId": "cd3ba1917ee643f09f94f2f6b9b0e676",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 11,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 11,
+        "commandId": "e88f1a6f179e4c1e914bcbabd913bf7b",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 12,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 12,
+        "commandId": "394f19d0d05047f8bceced293522aa54",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 13,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 13,
+        "commandId": "d352c4b6cebb47d6bccf51445867c48f",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 14,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 14,
+        "commandId": "f54cb2808fd24e2cb05905c6faa2ea7d",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 15,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 15,
+        "commandId": "02b7a0b924ce4e1483a15b15790516b7",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 16,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 16,
+        "commandId": "ed221715667a4074ae3ba9f74bcde7bd",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 17,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 17,
+        "commandId": "6958fe3f28ba448e8b25fdf6813ccdf8",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 18,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 18,
+        "commandId": "9341696aee3849e7acd4f2e6709e7878",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 19,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 19,
+        "commandId": "7854d8dea61b41f8adce6e65f7e38f62",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 20,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 20,
+        "commandId": "4dadaa1cc33f4e0bbc15669704306722",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sbff8e4f447394b4aba8e092440149539"
+        },
+        "eventCursor": 21,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      }
+    ],
+    "remoteInterferences": [
+      {
+        "subjectCommandId": "0680b5fbc3ae494ca8e1b60aaa0725fc",
+        "subjectAnchor": 0,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-00",
+          "expectedStateVersion": 0,
+          "action": {
+            "type": "walk",
+            "to": [
+              26.02,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 1,
+          "commandId": "qa-remote-00",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 2,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26.02,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "62f80145805047d4808a238cc1e1e529",
+        "subjectAnchor": 1,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-01",
+          "expectedStateVersion": 1,
+          "action": {
+            "type": "walk",
+            "to": [
+              26,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 2,
+          "commandId": "qa-remote-01",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 3,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "f960b61b2a0f47b2b6d88457905c6f7a",
+        "subjectAnchor": 2,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-02",
+          "expectedStateVersion": 2,
+          "action": {
+            "type": "walk",
+            "to": [
+              26.02,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 3,
+          "commandId": "qa-remote-02",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 4,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26.02,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "a7ef2f0f447f44959624c3604c606b17",
+        "subjectAnchor": 3,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-03",
+          "expectedStateVersion": 3,
+          "action": {
+            "type": "walk",
+            "to": [
+              26,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 4,
+          "commandId": "qa-remote-03",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 5,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "3a66f86827b3400ca551ce631b20a22b",
+        "subjectAnchor": 4,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-04",
+          "expectedStateVersion": 4,
+          "action": {
+            "type": "walk",
+            "to": [
+              26.02,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 5,
+          "commandId": "qa-remote-04",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 6,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26.02,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "8ba856c73ac04186a393b158be092d1f",
+        "subjectAnchor": 5,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-05",
+          "expectedStateVersion": 5,
+          "action": {
+            "type": "walk",
+            "to": [
+              26,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 6,
+          "commandId": "qa-remote-05",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 7,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "392e2d3e778648e6bad3d2ff687d9c29",
+        "subjectAnchor": 6,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-06",
+          "expectedStateVersion": 6,
+          "action": {
+            "type": "walk",
+            "to": [
+              26.02,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 7,
+          "commandId": "qa-remote-06",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 8,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26.02,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "d960f1a5b13a4f11862b738e33edb40d",
+        "subjectAnchor": 7,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-07",
+          "expectedStateVersion": 7,
+          "action": {
+            "type": "walk",
+            "to": [
+              26,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 8,
+          "commandId": "qa-remote-07",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 9,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "80c264d5e8964f2ebc0a569a5ef0a0a4",
+        "subjectAnchor": 8,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-08",
+          "expectedStateVersion": 8,
+          "action": {
+            "type": "walk",
+            "to": [
+              26.02,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 9,
+          "commandId": "qa-remote-08",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 10,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26.02,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "cd3ba1917ee643f09f94f2f6b9b0e676",
+        "subjectAnchor": 9,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-09",
+          "expectedStateVersion": 9,
+          "action": {
+            "type": "walk",
+            "to": [
+              26,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 10,
+          "commandId": "qa-remote-09",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 11,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "e88f1a6f179e4c1e914bcbabd913bf7b",
+        "subjectAnchor": 10,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-10",
+          "expectedStateVersion": 10,
+          "action": {
+            "type": "walk",
+            "to": [
+              26.02,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 11,
+          "commandId": "qa-remote-10",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 12,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26.02,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "394f19d0d05047f8bceced293522aa54",
+        "subjectAnchor": 11,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-11",
+          "expectedStateVersion": 11,
+          "action": {
+            "type": "walk",
+            "to": [
+              26,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 12,
+          "commandId": "qa-remote-11",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 13,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "d352c4b6cebb47d6bccf51445867c48f",
+        "subjectAnchor": 12,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-12",
+          "expectedStateVersion": 12,
+          "action": {
+            "type": "walk",
+            "to": [
+              26.02,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 13,
+          "commandId": "qa-remote-12",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 14,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26.02,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "f54cb2808fd24e2cb05905c6faa2ea7d",
+        "subjectAnchor": 13,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-13",
+          "expectedStateVersion": 13,
+          "action": {
+            "type": "walk",
+            "to": [
+              26,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 14,
+          "commandId": "qa-remote-13",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 15,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "02b7a0b924ce4e1483a15b15790516b7",
+        "subjectAnchor": 14,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-14",
+          "expectedStateVersion": 14,
+          "action": {
+            "type": "walk",
+            "to": [
+              26.02,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 15,
+          "commandId": "qa-remote-14",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 16,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26.02,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "ed221715667a4074ae3ba9f74bcde7bd",
+        "subjectAnchor": 15,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-15",
+          "expectedStateVersion": 15,
+          "action": {
+            "type": "walk",
+            "to": [
+              26,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 16,
+          "commandId": "qa-remote-15",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 17,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "6958fe3f28ba448e8b25fdf6813ccdf8",
+        "subjectAnchor": 16,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-16",
+          "expectedStateVersion": 16,
+          "action": {
+            "type": "walk",
+            "to": [
+              26.02,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 17,
+          "commandId": "qa-remote-16",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 18,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26.02,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "9341696aee3849e7acd4f2e6709e7878",
+        "subjectAnchor": 17,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-17",
+          "expectedStateVersion": 17,
+          "action": {
+            "type": "walk",
+            "to": [
+              26,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 18,
+          "commandId": "qa-remote-17",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 19,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "7854d8dea61b41f8adce6e65f7e38f62",
+        "subjectAnchor": 18,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-18",
+          "expectedStateVersion": 18,
+          "action": {
+            "type": "walk",
+            "to": [
+              26.02,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 19,
+          "commandId": "qa-remote-18",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 20,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26.02,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      },
+      {
+        "subjectCommandId": "4dadaa1cc33f4e0bbc15669704306722",
+        "subjectAnchor": 19,
+        "remoteRequest": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "commandId": "qa-remote-19",
+          "expectedStateVersion": 19,
+          "action": {
+            "type": "walk",
+            "to": [
+              26,
+              17
+            ]
+          }
+        },
+        "remoteReceipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r8",
+          "stateVersion": 20,
+          "commandId": "qa-remote-19",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a2",
+            "sessionId": "sa637946893d54a2c9b60799b103b90b6"
+          },
+          "eventCursor": 21,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "action": "walk",
+            "position": [
+              26,
+              17
+            ],
+            "blocked": false
+          }
+        }
+      }
+    ],
+    "committed": 0,
+    "rejected": 20
+  },
+  "completed": {
+    "schemaVersion": 1,
+    "kind": "resident-mission-report",
+    "mission": {
+      "id": "qa-twenty-remote-interferences",
+      "objective": "走到西岸远处后返回，记录其他居民动作对任务的影响。",
+      "allowBuild": false,
+      "allowGather": false,
+      "arrivalTolerance": 0.06,
+      "sharePostcard": false,
+      "paintMosaic": false,
+      "proposeMosaic": false,
+      "reviewMosaicProposal": null,
+      "actorId": "a1",
+      "worldId": "foundation-01",
+      "worldInstanceId": "w_6947aa3995794f5d91a6de16147d7b1a",
+      "rulesVersion": "r8",
+      "origin": [
+        5,
+        7
+      ],
+      "goal": {
+        "id": "destination",
+        "label": "西岸远处",
+        "target": [
+          13,
+          7
+        ]
+      },
+      "status": "completed",
+      "reason": "round_trip_verified"
+    },
+    "decision": {
+      "goalId": "destination",
+      "reason": "固定成本参考：按木材、预计命令数、目标 ID 升序选择可行目标。",
+      "provider": {
+        "kind": "fixed-reference",
+        "model": "least-cost-v1",
+        "usage": {}
+      }
+    },
+    "budget": {
+      "limits": {
+        "commands": 200,
+        "wood": 0,
+        "seconds": 600,
+        "modelCalls": 1
+      },
+      "used": {
+        "commands": 48,
+        "wood": 0,
+        "modelCalls": 1,
+        "seconds": 10.912201166152954
+      }
+    },
+    "facts": {
+      "goalReached": true,
+      "returned": true,
+      "activityCompleted": false,
+      "activityVisit": null,
+      "postcardShared": false,
+      "postcard": null,
+      "mosaicPainted": false,
+      "mosaicEdit": null,
+      "mosaicProposed": false,
+      "mosaicProposal": null,
+      "mosaicReviewed": false,
+      "mosaicReview": null,
+      "startStateVersion": 0,
+      "endStateVersion": 48,
+      "woodClaimed": 0,
+      "createdEntityIds": [],
+      "verifiedAtUtc": "2026-10-26T03:00:47.848933+00:00",
+      "woodGathered": 0,
+      "constructionBuilt": false,
+      "construction": null
+    },
+    "steps": [
+      {
+        "index": 1,
+        "commandId": "0680b5fbc3ae494ca8e1b60aaa0725fc",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 0,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 2,
+        "commandId": "62f80145805047d4808a238cc1e1e529",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 1,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 3,
+        "commandId": "f960b61b2a0f47b2b6d88457905c6f7a",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 2,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 4,
+        "commandId": "a7ef2f0f447f44959624c3604c606b17",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 3,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 5,
+        "commandId": "3a66f86827b3400ca551ce631b20a22b",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 4,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 6,
+        "commandId": "8ba856c73ac04186a393b158be092d1f",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 5,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 7,
+        "commandId": "392e2d3e778648e6bad3d2ff687d9c29",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 6,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 8,
+        "commandId": "d960f1a5b13a4f11862b738e33edb40d",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 7,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 9,
+        "commandId": "80c264d5e8964f2ebc0a569a5ef0a0a4",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 8,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 10,
+        "commandId": "cd3ba1917ee643f09f94f2f6b9b0e676",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 9,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 11,
+        "commandId": "e88f1a6f179e4c1e914bcbabd913bf7b",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 10,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 12,
+        "commandId": "394f19d0d05047f8bceced293522aa54",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 11,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 13,
+        "commandId": "d352c4b6cebb47d6bccf51445867c48f",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 12,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 14,
+        "commandId": "f54cb2808fd24e2cb05905c6faa2ea7d",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 13,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 15,
+        "commandId": "02b7a0b924ce4e1483a15b15790516b7",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 14,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 16,
+        "commandId": "ed221715667a4074ae3ba9f74bcde7bd",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 15,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 17,
+        "commandId": "6958fe3f28ba448e8b25fdf6813ccdf8",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 16,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 18,
+        "commandId": "9341696aee3849e7acd4f2e6709e7878",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 17,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 19,
+        "commandId": "7854d8dea61b41f8adce6e65f7e38f62",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 18,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 20,
+        "commandId": "4dadaa1cc33f4e0bbc15669704306722",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "rejected",
+        "stateVersion": 19,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 409,
+        "errorCode": "STALE_STATE"
+      },
+      {
+        "index": 21,
+        "commandId": "5a10883afcf64c0abc2018a202e64bd0",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 21,
+        "position": [
+          5.6,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 22,
+        "commandId": "e92aea6fe5b3415f956378992baede5c",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 22,
+        "position": [
+          6.199999999999999,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 23,
+        "commandId": "bd7a803ee08942b394912322af7f1dfc",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 23,
+        "position": [
+          6.799999999999999,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 24,
+        "commandId": "4eab57c382234bafa43bee941507f8ce",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 24,
+        "position": [
+          7.399999999999999,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 25,
+        "commandId": "933963393f38404e95a4364ad7cb2f80",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 25,
+        "position": [
+          7.999999999999998,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 26,
+        "commandId": "feca914bfc3847e3be3609b8901f862b",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 26,
+        "position": [
+          8.599999999999998,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 27,
+        "commandId": "af5a82ef06e14871bf4116fe3c450bcc",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 27,
+        "position": [
+          9.199999999999998,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 28,
+        "commandId": "00f764b1715c436c8b4e2d381a3a2955",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 28,
+        "position": [
+          9.799999999999997,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 29,
+        "commandId": "976996e141a940fe8d07ceff49ace464",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 29,
+        "position": [
+          10.399999999999997,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 30,
+        "commandId": "fac318d787504cf9ab7c23ff96020a93",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 30,
+        "position": [
+          10.999999999999996,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 31,
+        "commandId": "6d23694bdb5b42fea29fdf907159fb61",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 31,
+        "position": [
+          11.599999999999996,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 32,
+        "commandId": "6e1cc8e2878747d58bd3e9748d4b0f97",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 32,
+        "position": [
+          12.199999999999996,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 33,
+        "commandId": "f5580e7a4942412bb00aac311e0a1a70",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 33,
+        "position": [
+          12.799999999999995,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 34,
+        "commandId": "8bd24c2d64e84ba8ac1b7fee480b1b49",
+        "action": {
+          "type": "walk",
+          "to": [
+            13,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 34,
+        "position": [
+          13,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 35,
+        "commandId": "f2088307b0584c2c86e3ab6fd0b12f35",
+        "action": {
+          "type": "walk",
+          "to": [
+            5,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 35,
+        "position": [
+          12.4,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 36,
+        "commandId": "9091fa35774e4bdf8a60b6408625af3e",
+        "action": {
+          "type": "walk",
+          "to": [
+            5,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 36,
+        "position": [
+          11.8,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 37,
+        "commandId": "6e910bed7c1646a18bf926ebc124ade2",
+        "action": {
+          "type": "walk",
+          "to": [
+            5,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 37,
+        "position": [
+          11.200000000000001,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 38,
+        "commandId": "e177d0d5476f473eb2c8072087ab408b",
+        "action": {
+          "type": "walk",
+          "to": [
+            5,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 38,
+        "position": [
+          10.600000000000001,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 39,
+        "commandId": "fe19033e045e48b69685419d7453b3c8",
+        "action": {
+          "type": "walk",
+          "to": [
+            5,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 39,
+        "position": [
+          10.000000000000002,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 40,
+        "commandId": "154f8b8972124da2b13d6ff18a4db162",
+        "action": {
+          "type": "walk",
+          "to": [
+            5,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 40,
+        "position": [
+          9.400000000000002,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 41,
+        "commandId": "de4d11082e4246e88070062a96cc14c7",
+        "action": {
+          "type": "walk",
+          "to": [
+            5,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 41,
+        "position": [
+          8.800000000000002,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 42,
+        "commandId": "2d342c69bae54556ab3ca3f89f10f87c",
+        "action": {
+          "type": "walk",
+          "to": [
+            5,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 42,
+        "position": [
+          8.200000000000003,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 43,
+        "commandId": "93bdfa0e16314434946894f48074b0c0",
+        "action": {
+          "type": "walk",
+          "to": [
+            5,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 43,
+        "position": [
+          7.600000000000003,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 44,
+        "commandId": "f366c710a7674ad1a1852941c6b5487e",
+        "action": {
+          "type": "walk",
+          "to": [
+            5,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 44,
+        "position": [
+          7.0000000000000036,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 45,
+        "commandId": "479b65db062e4680b2a06aa72c3be61c",
+        "action": {
+          "type": "walk",
+          "to": [
+            5,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 45,
+        "position": [
+          6.400000000000004,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 46,
+        "commandId": "a5d7136735724a1a8be2689e57aa1f59",
+        "action": {
+          "type": "walk",
+          "to": [
+            5,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 46,
+        "position": [
+          5.800000000000004,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 47,
+        "commandId": "d3e0d5b686f24039b485cc151cd88769",
+        "action": {
+          "type": "walk",
+          "to": [
+            5,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 47,
+        "position": [
+          5.200000000000005,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      },
+      {
+        "index": 48,
+        "commandId": "be7f80f5f27849778e91d1787a3e2e5e",
+        "action": {
+          "type": "walk",
+          "to": [
+            5,
+            7
+          ]
+        },
+        "reason": "沿连续地形前往当前目标",
+        "status": "committed",
+        "stateVersion": 48,
+        "position": [
+          5,
+          7
+        ],
+        "inventoryWood": 0,
+        "httpStatus": 200,
+        "blocked": false,
+        "evidenceSource": "command_receipt"
+      }
+    ],
+    "feedback": {
+      "summary": "已核验到达与返回",
+      "issues": [],
+      "suggestions": []
+    },
+    "world": {
+      "id": "foundation-01",
+      "instanceId": "w_6947aa3995794f5d91a6de16147d7b1a",
+      "width": 32,
+      "height": 24,
+      "coordinateSystem": "continuous-xz",
+      "bounds": [
+        0,
+        0,
+        32,
+        24
+      ],
+      "entities": [],
+      "terrain": {
+        "version": 1,
+        "river": {
+          "polygon": [
+            [
+              14.6,
+              0
+            ],
+            [
+              14.506445312499999,
+              0.5
+            ],
+            [
+              14.364062500000001,
+              1
+            ],
+            [
+              14.1927734375,
+              1.5
+            ],
+            [
+              14.0125,
+              2
+            ],
+            [
+              13.8431640625,
+              2.5
+            ],
+            [
+              13.7046875,
+              3
+            ],
+            [
+              13.6169921875,
+              3.5
+            ],
+            [
+              13.6,
+              4
+            ],
+            [
+              13.658789062499999,
+              4.5
+            ],
+            [
+              13.7765625,
+              5
+            ],
+            [
+              13.940429687499998,
+              5.5
+            ],
+            [
+              14.1375,
+              6
+            ],
+            [
+              14.3548828125,
+              6.5
+            ],
+            [
+              14.579687499999999,
+              7
+            ],
+            [
+              14.799023437499999,
+              7.5
+            ],
+            [
+              14.999999999999998,
+              8
+            ],
+            [
+              15.208203124999999,
+              8.5
+            ],
+            [
+              15.446874999999997,
+              9
+            ],
+            [
+              15.699609375,
+              9.5
+            ],
+            [
+              15.949999999999998,
+              10
+            ],
+            [
+              16.181640625,
+              10.5
+            ],
+            [
+              16.378125,
+              11
+            ],
+            [
+              16.523046875,
+              11.5
+            ],
+            [
+              16.6,
+              12
+            ],
+            [
+              16.604199218750004,
+              12.5
+            ],
+            [
+              16.54921875,
+              13
+            ],
+            [
+              16.44619140625,
+              13.5
+            ],
+            [
+              16.30625,
+              14
+            ],
+            [
+              16.14052734375,
+              14.5
+            ],
+            [
+              15.960156250000002,
+              15
+            ],
+            [
+              15.77626953125,
+              15.5
+            ],
+            [
+              15.6,
+              16
+            ],
+            [
+              15.411425781249998,
+              16.5
+            ],
+            [
+              15.191406250000002,
+              17
+            ],
+            [
+              14.95224609375,
+              17.5
+            ],
+            [
+              14.706249999999999,
+              18
+            ],
+            [
+              14.46572265625,
+              18.5
+            ],
+            [
+              14.24296875,
+              19
+            ],
+            [
+              14.050292968749998,
+              19.5
+            ],
+            [
+              13.9,
+              20
+            ],
+            [
+              13.79345703125,
+              20.5
+            ],
+            [
+              13.719531250000001,
+              21
+            ],
+            [
+              13.67177734375,
+              21.5
+            ],
+            [
+              13.64375,
+              22
+            ],
+            [
+              13.62900390625,
+              22.5
+            ],
+            [
+              13.621093750000002,
+              23
+            ],
+            [
+              13.613574218750003,
+              23.5
+            ],
+            [
+              13.600000000000003,
+              24
+            ],
+            [
+              16.400000000000002,
+              24
+            ],
+            [
+              16.413574218750004,
+              23.5
+            ],
+            [
+              16.42109375,
+              23
+            ],
+            [
+              16.42900390625,
+              22.5
+            ],
+            [
+              16.44375,
+              22
+            ],
+            [
+              16.47177734375,
+              21.5
+            ],
+            [
+              16.51953125,
+              21
+            ],
+            [
+              16.59345703125,
+              20.5
+            ],
+            [
+              16.7,
+              20
+            ],
+            [
+              16.850292968749997,
+              19.5
+            ],
+            [
+              17.04296875,
+              19
+            ],
+            [
+              17.26572265625,
+              18.5
+            ],
+            [
+              17.506249999999998,
+              18
+            ],
+            [
+              17.75224609375,
+              17.5
+            ],
+            [
+              17.99140625,
+              17
+            ],
+            [
+              18.211425781249996,
+              16.5
+            ],
+            [
+              18.4,
+              16
+            ],
+            [
+              18.57626953125,
+              15.5
+            ],
+            [
+              18.76015625,
+              15
+            ],
+            [
+              18.94052734375,
+              14.5
+            ],
+            [
+              19.106249999999996,
+              14
+            ],
+            [
+              19.24619140625,
+              13.5
+            ],
+            [
+              19.34921875,
+              13
+            ],
+            [
+              19.40419921875,
+              12.5
+            ],
+            [
+              19.4,
+              12
+            ],
+            [
+              19.323046874999996,
+              11.5
+            ],
+            [
+              19.178124999999998,
+              11
+            ],
+            [
+              18.981640624999997,
+              10.5
+            ],
+            [
+              18.749999999999996,
+              10
+            ],
+            [
+              18.499609375,
+              9.5
+            ],
+            [
+              18.246874999999996,
+              9
+            ],
+            [
+              18.008203124999998,
+              8.5
+            ],
+            [
+              17.799999999999997,
+              8
+            ],
+            [
+              17.599023437499998,
+              7.5
+            ],
+            [
+              17.3796875,
+              7
+            ],
+            [
+              17.1548828125,
+              6.5
+            ],
+            [
+              16.9375,
+              6
+            ],
+            [
+              16.740429687499997,
+              5.5
+            ],
+            [
+              16.5765625,
+              5
+            ],
+            [
+              16.4587890625,
+              4.5
+            ],
+            [
+              16.4,
+              4
+            ],
+            [
+              16.4169921875,
+              3.5
+            ],
+            [
+              16.5046875,
+              3
+            ],
+            [
+              16.6431640625,
+              2.5
+            ],
+            [
+              16.8125,
+              2
+            ],
+            [
+              16.9927734375,
+              1.5
+            ],
+            [
+              17.1640625,
+              1
+            ],
+            [
+              17.3064453125,
+              0.5
+            ],
+            [
+              17.4,
+              0
+            ]
+          ],
+          "centerline": [
+            [
+              16,
+              0
+            ],
+            [
+              15.906445312499999,
+              0.5
+            ],
+            [
+              15.764062500000001,
+              1
+            ],
+            [
+              15.5927734375,
+              1.5
+            ],
+            [
+              15.4125,
+              2
+            ],
+            [
+              15.2431640625,
+              2.5
+            ],
+            [
+              15.1046875,
+              3
+            ],
+            [
+              15.0169921875,
+              3.5
+            ],
+            [
+              15,
+              4
+            ],
+            [
+              15.058789062499999,
+              4.5
+            ],
+            [
+              15.176562500000001,
+              5
+            ],
+            [
+              15.340429687499999,
+              5.5
+            ],
+            [
+              15.5375,
+              6
+            ],
+            [
+              15.7548828125,
+              6.5
+            ],
+            [
+              15.979687499999999,
+              7
+            ],
+            [
+              16.1990234375,
+              7.5
+            ],
+            [
+              16.4,
+              8
+            ],
+            [
+              16.608203125,
+              8.5
+            ],
+            [
+              16.846874999999997,
+              9
+            ],
+            [
+              17.099609375,
+              9.5
+            ],
+            [
+              17.349999999999998,
+              10
+            ],
+            [
+              17.581640625,
+              10.5
+            ],
+            [
+              17.778125,
+              11
+            ],
+            [
+              17.923046874999997,
+              11.5
+            ],
+            [
+              18,
+              12
+            ],
+            [
+              18.004199218750003,
+              12.5
+            ],
+            [
+              17.94921875,
+              13
+            ],
+            [
+              17.84619140625,
+              13.5
+            ],
+            [
+              17.706249999999997,
+              14
+            ],
+            [
+              17.54052734375,
+              14.5
+            ],
+            [
+              17.360156250000003,
+              15
+            ],
+            [
+              17.17626953125,
+              15.5
+            ],
+            [
+              17,
+              16
+            ],
+            [
+              16.811425781249998,
+              16.5
+            ],
+            [
+              16.591406250000002,
+              17
+            ],
+            [
+              16.35224609375,
+              17.5
+            ],
+            [
+              16.10625,
+              18
+            ],
+            [
+              15.86572265625,
+              18.5
+            ],
+            [
+              15.64296875,
+              19
+            ],
+            [
+              15.450292968749999,
+              19.5
+            ],
+            [
+              15.3,
+              20
+            ],
+            [
+              15.19345703125,
+              20.5
+            ],
+            [
+              15.119531250000001,
+              21
+            ],
+            [
+              15.07177734375,
+              21.5
+            ],
+            [
+              15.043750000000001,
+              22
+            ],
+            [
+              15.02900390625,
+              22.5
+            ],
+            [
+              15.021093750000002,
+              23
+            ],
+            [
+              15.013574218750003,
+              23.5
+            ],
+            [
+              15.000000000000004,
+              24
+            ]
+          ],
+          "halfWidth": 1.4
+        },
+        "obstacles": [
+          {
+            "id": "rock-west",
+            "kind": "rock",
+            "position": [
+              10.5,
+              8.5
+            ],
+            "radius": 1.05
+          },
+          {
+            "id": "rock-south",
+            "kind": "rock",
+            "position": [
+              5.6,
+              19.7
+            ],
+            "radius": 0.8
+          },
+          {
+            "id": "rock-east",
+            "kind": "rock",
+            "position": [
+              23,
+              12.5
+            ],
+            "radius": 1.2
+          },
+          {
+            "id": "rock-north",
+            "kind": "rock",
+            "position": [
+              21.8,
+              3.2
+            ],
+            "radius": 0.75
+          }
+        ]
+      },
+      "resourceNodes": [
+        {
+          "nodeId": "tree-east-north",
+          "kind": "tree",
+          "position": [
+            25.4,
+            5.8
+          ],
+          "initialWood": 3,
+          "remainingWood": 3
+        },
+        {
+          "nodeId": "tree-east-south",
+          "kind": "tree",
+          "position": [
+            25.7,
+            18.2
+          ],
+          "initialWood": 3,
+          "remainingWood": 3
+        },
+        {
+          "nodeId": "tree-west-north",
+          "kind": "tree",
+          "position": [
+            6.2,
+            7.8
+          ],
+          "initialWood": 3,
+          "remainingWood": 3
+        },
+        {
+          "nodeId": "tree-west-south",
+          "kind": "tree",
+          "position": [
+            9.2,
+            16.3
+          ],
+          "initialWood": 3,
+          "remainingWood": 3
+        }
+      ],
+      "mosaic": null,
+      "mosaicProposals": []
+    }
+  },
+  "finalObservation": {
+    "schemaVersion": 1,
+    "rulesVersion": "r8",
+    "stateVersion": 48,
+    "commandId": null,
+    "identity": {
+      "operatorId": "local-operator",
+      "actorId": "a1",
+      "sessionId": "sbff8e4f447394b4aba8e092440149539"
+    },
+    "eventCursor": 49,
+    "error": null,
+    "world": {
+      "id": "foundation-01",
+      "scenarioId": "wilderness-continuous-v1",
+      "width": 32,
+      "height": 24,
+      "coordinateSystem": "continuous-xz",
+      "bounds": [
+        0,
+        0,
+        32,
+        24
+      ],
+      "instanceId": "w_6947aa3995794f5d91a6de16147d7b1a"
+    },
+    "movement": {
+      "version": 1,
+      "kind": "continuous",
+      "speed": 3,
+      "radius": 0.28,
+      "maxStepDistance": 0.6,
+      "gatherReach": 1.6,
+      "buildReach": 3.2
+    },
+    "terrain": {
+      "version": 1,
+      "river": {
+        "polygon": [
+          [
+            14.6,
+            0
+          ],
+          [
+            14.506445312499999,
+            0.5
+          ],
+          [
+            14.364062500000001,
+            1
+          ],
+          [
+            14.1927734375,
+            1.5
+          ],
+          [
+            14.0125,
+            2
+          ],
+          [
+            13.8431640625,
+            2.5
+          ],
+          [
+            13.7046875,
+            3
+          ],
+          [
+            13.6169921875,
+            3.5
+          ],
+          [
+            13.6,
+            4
+          ],
+          [
+            13.658789062499999,
+            4.5
+          ],
+          [
+            13.7765625,
+            5
+          ],
+          [
+            13.940429687499998,
+            5.5
+          ],
+          [
+            14.1375,
+            6
+          ],
+          [
+            14.3548828125,
+            6.5
+          ],
+          [
+            14.579687499999999,
+            7
+          ],
+          [
+            14.799023437499999,
+            7.5
+          ],
+          [
+            14.999999999999998,
+            8
+          ],
+          [
+            15.208203124999999,
+            8.5
+          ],
+          [
+            15.446874999999997,
+            9
+          ],
+          [
+            15.699609375,
+            9.5
+          ],
+          [
+            15.949999999999998,
+            10
+          ],
+          [
+            16.181640625,
+            10.5
+          ],
+          [
+            16.378125,
+            11
+          ],
+          [
+            16.523046875,
+            11.5
+          ],
+          [
+            16.6,
+            12
+          ],
+          [
+            16.604199218750004,
+            12.5
+          ],
+          [
+            16.54921875,
+            13
+          ],
+          [
+            16.44619140625,
+            13.5
+          ],
+          [
+            16.30625,
+            14
+          ],
+          [
+            16.14052734375,
+            14.5
+          ],
+          [
+            15.960156250000002,
+            15
+          ],
+          [
+            15.77626953125,
+            15.5
+          ],
+          [
+            15.6,
+            16
+          ],
+          [
+            15.411425781249998,
+            16.5
+          ],
+          [
+            15.191406250000002,
+            17
+          ],
+          [
+            14.95224609375,
+            17.5
+          ],
+          [
+            14.706249999999999,
+            18
+          ],
+          [
+            14.46572265625,
+            18.5
+          ],
+          [
+            14.24296875,
+            19
+          ],
+          [
+            14.050292968749998,
+            19.5
+          ],
+          [
+            13.9,
+            20
+          ],
+          [
+            13.79345703125,
+            20.5
+          ],
+          [
+            13.719531250000001,
+            21
+          ],
+          [
+            13.67177734375,
+            21.5
+          ],
+          [
+            13.64375,
+            22
+          ],
+          [
+            13.62900390625,
+            22.5
+          ],
+          [
+            13.621093750000002,
+            23
+          ],
+          [
+            13.613574218750003,
+            23.5
+          ],
+          [
+            13.600000000000003,
+            24
+          ],
+          [
+            16.400000000000002,
+            24
+          ],
+          [
+            16.413574218750004,
+            23.5
+          ],
+          [
+            16.42109375,
+            23
+          ],
+          [
+            16.42900390625,
+            22.5
+          ],
+          [
+            16.44375,
+            22
+          ],
+          [
+            16.47177734375,
+            21.5
+          ],
+          [
+            16.51953125,
+            21
+          ],
+          [
+            16.59345703125,
+            20.5
+          ],
+          [
+            16.7,
+            20
+          ],
+          [
+            16.850292968749997,
+            19.5
+          ],
+          [
+            17.04296875,
+            19
+          ],
+          [
+            17.26572265625,
+            18.5
+          ],
+          [
+            17.506249999999998,
+            18
+          ],
+          [
+            17.75224609375,
+            17.5
+          ],
+          [
+            17.99140625,
+            17
+          ],
+          [
+            18.211425781249996,
+            16.5
+          ],
+          [
+            18.4,
+            16
+          ],
+          [
+            18.57626953125,
+            15.5
+          ],
+          [
+            18.76015625,
+            15
+          ],
+          [
+            18.94052734375,
+            14.5
+          ],
+          [
+            19.106249999999996,
+            14
+          ],
+          [
+            19.24619140625,
+            13.5
+          ],
+          [
+            19.34921875,
+            13
+          ],
+          [
+            19.40419921875,
+            12.5
+          ],
+          [
+            19.4,
+            12
+          ],
+          [
+            19.323046874999996,
+            11.5
+          ],
+          [
+            19.178124999999998,
+            11
+          ],
+          [
+            18.981640624999997,
+            10.5
+          ],
+          [
+            18.749999999999996,
+            10
+          ],
+          [
+            18.499609375,
+            9.5
+          ],
+          [
+            18.246874999999996,
+            9
+          ],
+          [
+            18.008203124999998,
+            8.5
+          ],
+          [
+            17.799999999999997,
+            8
+          ],
+          [
+            17.599023437499998,
+            7.5
+          ],
+          [
+            17.3796875,
+            7
+          ],
+          [
+            17.1548828125,
+            6.5
+          ],
+          [
+            16.9375,
+            6
+          ],
+          [
+            16.740429687499997,
+            5.5
+          ],
+          [
+            16.5765625,
+            5
+          ],
+          [
+            16.4587890625,
+            4.5
+          ],
+          [
+            16.4,
+            4
+          ],
+          [
+            16.4169921875,
+            3.5
+          ],
+          [
+            16.5046875,
+            3
+          ],
+          [
+            16.6431640625,
+            2.5
+          ],
+          [
+            16.8125,
+            2
+          ],
+          [
+            16.9927734375,
+            1.5
+          ],
+          [
+            17.1640625,
+            1
+          ],
+          [
+            17.3064453125,
+            0.5
+          ],
+          [
+            17.4,
+            0
+          ]
+        ],
+        "centerline": [
+          [
+            16,
+            0
+          ],
+          [
+            15.906445312499999,
+            0.5
+          ],
+          [
+            15.764062500000001,
+            1
+          ],
+          [
+            15.5927734375,
+            1.5
+          ],
+          [
+            15.4125,
+            2
+          ],
+          [
+            15.2431640625,
+            2.5
+          ],
+          [
+            15.1046875,
+            3
+          ],
+          [
+            15.0169921875,
+            3.5
+          ],
+          [
+            15,
+            4
+          ],
+          [
+            15.058789062499999,
+            4.5
+          ],
+          [
+            15.176562500000001,
+            5
+          ],
+          [
+            15.340429687499999,
+            5.5
+          ],
+          [
+            15.5375,
+            6
+          ],
+          [
+            15.7548828125,
+            6.5
+          ],
+          [
+            15.979687499999999,
+            7
+          ],
+          [
+            16.1990234375,
+            7.5
+          ],
+          [
+            16.4,
+            8
+          ],
+          [
+            16.608203125,
+            8.5
+          ],
+          [
+            16.846874999999997,
+            9
+          ],
+          [
+            17.099609375,
+            9.5
+          ],
+          [
+            17.349999999999998,
+            10
+          ],
+          [
+            17.581640625,
+            10.5
+          ],
+          [
+            17.778125,
+            11
+          ],
+          [
+            17.923046874999997,
+            11.5
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            18.004199218750003,
+            12.5
+          ],
+          [
+            17.94921875,
+            13
+          ],
+          [
+            17.84619140625,
+            13.5
+          ],
+          [
+            17.706249999999997,
+            14
+          ],
+          [
+            17.54052734375,
+            14.5
+          ],
+          [
+            17.360156250000003,
+            15
+          ],
+          [
+            17.17626953125,
+            15.5
+          ],
+          [
+            17,
+            16
+          ],
+          [
+            16.811425781249998,
+            16.5
+          ],
+          [
+            16.591406250000002,
+            17
+          ],
+          [
+            16.35224609375,
+            17.5
+          ],
+          [
+            16.10625,
+            18
+          ],
+          [
+            15.86572265625,
+            18.5
+          ],
+          [
+            15.64296875,
+            19
+          ],
+          [
+            15.450292968749999,
+            19.5
+          ],
+          [
+            15.3,
+            20
+          ],
+          [
+            15.19345703125,
+            20.5
+          ],
+          [
+            15.119531250000001,
+            21
+          ],
+          [
+            15.07177734375,
+            21.5
+          ],
+          [
+            15.043750000000001,
+            22
+          ],
+          [
+            15.02900390625,
+            22.5
+          ],
+          [
+            15.021093750000002,
+            23
+          ],
+          [
+            15.013574218750003,
+            23.5
+          ],
+          [
+            15.000000000000004,
+            24
+          ]
+        ],
+        "halfWidth": 1.4
+      },
+      "obstacles": [
+        {
+          "id": "rock-west",
+          "kind": "rock",
+          "position": [
+            10.5,
+            8.5
+          ],
+          "radius": 1.05
+        },
+        {
+          "id": "rock-south",
+          "kind": "rock",
+          "position": [
+            5.6,
+            19.7
+          ],
+          "radius": 0.8
+        },
+        {
+          "id": "rock-east",
+          "kind": "rock",
+          "position": [
+            23,
+            12.5
+          ],
+          "radius": 1.2
+        },
+        {
+          "id": "rock-north",
+          "kind": "rock",
+          "position": [
+            21.8,
+            3.2
+          ],
+          "radius": 0.75
+        }
+      ]
+    },
+    "self": {
+      "actorId": "a1",
+      "position": [
+        5,
+        7
+      ],
+      "inventory": {
+        "wood": 0
+      }
+    },
+    "residents": [
+      {
+        "actorId": "a1",
+        "position": [
+          5,
+          7
+        ]
+      },
+      {
+        "actorId": "a2",
+        "position": [
+          26,
+          17
+        ]
+      }
+    ],
+    "resourceNodes": [
+      {
+        "nodeId": "tree-east-north",
+        "kind": "tree",
+        "position": [
+          25.4,
+          5.8
+        ],
+        "initialWood": 3,
+        "remainingWood": 3
+      },
+      {
+        "nodeId": "tree-east-south",
+        "kind": "tree",
+        "position": [
+          25.7,
+          18.2
+        ],
+        "initialWood": 3,
+        "remainingWood": 3
+      },
+      {
+        "nodeId": "tree-west-north",
+        "kind": "tree",
+        "position": [
+          6.2,
+          7.8
+        ],
+        "initialWood": 3,
+        "remainingWood": 3
+      },
+      {
+        "nodeId": "tree-west-south",
+        "kind": "tree",
+        "position": [
+          9.2,
+          16.3
+        ],
+        "initialWood": 3,
+        "remainingWood": 3
+      }
+    ],
+    "entities": [],
+    "recipes": [
+      {
+        "id": "platform.v1",
+        "definitionId": "platform",
+        "woodCost": 3
+      },
+      {
+        "id": "bridge.v1",
+        "definitionId": "bridge",
+        "woodCost": 6
+      }
+    ],
+    "gathering": {
+      "version": 1,
+      "quantityPerAction": 1
+    },
+    "depot": {
+      "wood": 0,
+      "available": false
+    },
+    "resourceAudit": {
+      "issuedWood": 12,
+      "wildWood": 12,
+      "depotWood": 0,
+      "inventoryWood": 0,
+      "embodiedWood": 0,
+      "conserved": true
+    },
+    "commandBinding": {
+      "version": 1,
+      "required": true,
+      "header": "World-Instance-Id"
+    }
+  },
+  "totalPosts": 48,
+  "materialTotal": 12,
+  "snapshotStillIdentical": true
+}

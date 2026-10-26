@@ -4,7 +4,7 @@
 
 完整普通回归（构建一次，并行执行隔离的 HTTP／Chrome 套件，**不会调用真实模型**）：
 
-当前组合通过 **216 项 HTTP／SQLite、134 项 Chrome**，包括指定设施建设和世界实例任务恢复；结果见 [ITER-0017](../docs/iterations/ITER-0017-results.md)。Godot 专项单独运行，不计入这个总数。
+当前组合覆盖 **238 项 HTTP／SQLite、143 项 Chrome**，最终通过；包含完整运行及两处旧测试夹具修正后的专项复验，原始失败保留。结果见 [ITER-0019](../docs/iterations/ITER-0019-results.md)。Godot 专项单独运行，不计入这个总数。
 
 ```bash
 npm ci --prefix tests/browser --ignore-scripts
@@ -211,8 +211,15 @@ node tests/browser/wilderness.mjs
 
 ## ITER-0018 实例与原命令恢复
 
-`python3 tests/world_instance_api.py` 为8项实际 HTTP / SQLite 检查；`python3 tests/instance_mission_api.py` 为5项任务持久绑定检查，两者已加入 `npm test` 的普通回归。当前完整组合为216项 HTTP、134项 Chrome，全部外部模型调用0。作者自测、独立反例复验与已有预览状态见 [ITER-0018 报告](../docs/iterations/ITER-0018-results.md)。
+`python3 tests/world_instance_api.py` 为8项实际 HTTP / SQLite 检查；`python3 tests/instance_mission_api.py` 为5项任务持久绑定检查，两者已加入 `npm test` 的普通回归。该轮完整组合为216项 HTTP、134项 Chrome，全部外部模型调用0。作者自测、独立反例复验与已有预览状态见 [ITER-0018 报告](../docs/iterations/ITER-0018-results.md)。
 
-`npm run test:godot` 依次执行共享记录（6场景、400断言）、实例恢复（9组、27断言）、连续场景（9组、56断言）与导航（5组、42断言）。前两套使用真实无头 Godot 进程；后两套使用真实 OpenGL 渲染和鼠标／键盘输入。服务均在隔离目录和随机端口运行；实际身份及数据库核对是过桥验收的一部分，不能只根据画面位置判定另一居民完成。
+ITER-0018 时的 `npm run test:godot` 执行共享记录（6场景、400断言）、实例恢复（9组、27断言）、连续场景（9组、56断言）与导航（5组、42断言）。前两套使用真实无头 Godot 进程；后两套使用真实 OpenGL 渲染和鼠标／键盘输入。服务均在隔离目录和随机端口运行；实际身份及数据库核对是过桥验收的一部分，不能只根据画面位置判定另一居民完成。
 
 实例用例包含同地址换库、原世界迁址与会话轮换、旧格式和损坏记录、不制造业务回执的前置条件失败；任务用例还保留原起点、目标与累计预算。未更改已有预览数据库，旧库升级试验使用独立的旧程序建库。
+
+
+## ITER-0019 动作前置条件与 ITER-0021 身份署名
+
+普通回归新增 `python3 tests/actor_state_api.py`（10项）、`python3 tests/actor_mission_api.py`（12项）和 `node tests/browser/actor-resident.mjs`（9项）。验证无关居民干扰下的实际进展、同角色冲突停止、材料／占地争抢、原模式／原命令恢复和报告执行依据。全部使用实际服务，选择器为固定策略或明确测试替身，真实模型调用0。
+
+Godot入口另含 `python3 tests/actor_state_godot.py`（6组、43断言）和 `python3 tests/godot_attribution.py`（1组、27断言），均使用真实渲染进程；最终6套合计36组、595断言通过。独立测试者对原回执、损坏恢复记录、真实持键／路线停止及报告页面的验收，与作者回归分别列于[结果报告](../docs/iterations/ITER-0019-results.md)。

@@ -1,0 +1,35 @@
+{
+  "recordedAtUtc": "2026-10-26T03:09:36.699769+00:00",
+  "kind": "pure-saved-mode-function-recheck",
+  "scope": "No HTTP, World.Server, Godot or mission executed",
+  "actualWorldCommands": 0,
+  "sourceFile": "scripts/command_preconditions.py",
+  "sourceCheckout": "Orca metaverse checkout",
+  "sourceSha256": "0bb5d62201bf2eba44a973685b9cc1f8f05a771500e523d88c9aae8206167f55",
+  "sourceUnchangedDuringCall": true,
+  "cases": [
+    {
+      "rejected": true,
+      "reason": "Original pending command has invalid before facts",
+      "name": "null-before",
+      "inputUnchanged": true,
+      "before": {
+        "position": null,
+        "maxStepDistance": null
+      }
+    },
+    {
+      "returnedMode": "actor-state-v1",
+      "rejected": false,
+      "name": "valid-before",
+      "inputUnchanged": true,
+      "before": {
+        "position": [
+          5,
+          7
+        ],
+        "maxStepDistance": 0.6
+      }
+    }
+  ]
+}

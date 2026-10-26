@@ -1,0 +1,364 @@
+{
+  "recordedAtUtc": "2026-10-26T02:56:24.123253+00:00",
+  "kind": "synthetic-sql-read-query-microbenchmark",
+  "actualWorldCommands": 0,
+  "actualModelCalls": 0,
+  "serverExecuted": false,
+  "candidateRuleExecuted": false,
+  "fixtureRows": 200000,
+  "dataset": "Every synthetic event belongs to a1; a2 has no commits after the observation anchor.",
+  "measuredNativeSqliteVersion": "3.53.4",
+  "nativeLibrarySha256": "eddcd4aa561d5b8f252db77e8272e7d1aed96bcab9fda3f177ca542f916290bf",
+  "sourceLibrary": "src/World.Server/bin/Debug/net10.0/runtimes/linux-x64/native/libe_sqlite3.so",
+  "fixtureWriterPythonSqliteVersion": "3.45.1",
+  "timingScope": "prepared SELECT only, one warm-up and seven repetitions, read-only native connections; not HTTP/transaction/lock-wait or cold-cache performance",
+  "indexExtraBytes": 5795840,
+  "modes": [
+    {
+      "mode": "existing-world-version-index",
+      "databaseBytes": 38113280,
+      "cases": [
+        {
+          "eventsAfterAnchor": 0,
+          "queriedActor": "a2",
+          "sql": "SELECT EXISTS(SELECT 1 FROM events WHERE world_id='foundation-01' AND state_version>200000 AND json_extract(event_json,'$.actorId')='a2')",
+          "result": 0,
+          "samplesMs": [
+            0.003605,
+            0.003062,
+            0.00288,
+            0.002912,
+            0.002887,
+            0.002813,
+            0.002821
+          ],
+          "medianMs": 0.002887,
+          "minMs": 0.002813,
+          "maxMs": 0.003605,
+          "vmSteps": [
+            18,
+            18,
+            18,
+            18,
+            18,
+            18,
+            18
+          ],
+          "queryPlan": [
+            "SCAN CONSTANT ROW",
+            "SCALAR SUBQUERY 1",
+            "SEARCH events USING INDEX sqlite_autoindex_events_1 (world_id=? AND state_version>?)"
+          ]
+        },
+        {
+          "eventsAfterAnchor": 20,
+          "queriedActor": "a2",
+          "sql": "SELECT EXISTS(SELECT 1 FROM events WHERE world_id='foundation-01' AND state_version>199980 AND json_extract(event_json,'$.actorId')='a2')",
+          "result": 0,
+          "samplesMs": [
+            0.010235,
+            0.009624,
+            0.009577,
+            0.009464,
+            0.009472,
+            0.009462,
+            0.009493
+          ],
+          "medianMs": 0.009493,
+          "minMs": 0.009462,
+          "maxMs": 0.010235,
+          "vmSteps": [
+            138,
+            138,
+            138,
+            138,
+            138,
+            138,
+            138
+          ],
+          "queryPlan": [
+            "SCAN CONSTANT ROW",
+            "SCALAR SUBQUERY 1",
+            "SEARCH events USING INDEX sqlite_autoindex_events_1 (world_id=? AND state_version>?)"
+          ]
+        },
+        {
+          "eventsAfterAnchor": 2000,
+          "queriedActor": "a2",
+          "sql": "SELECT EXISTS(SELECT 1 FROM events WHERE world_id='foundation-01' AND state_version>198000 AND json_extract(event_json,'$.actorId')='a2')",
+          "result": 0,
+          "samplesMs": [
+            0.644244,
+            0.676966,
+            0.688745,
+            0.634795,
+            0.614648,
+            0.613971,
+            0.632867
+          ],
+          "medianMs": 0.634795,
+          "minMs": 0.613971,
+          "maxMs": 0.688745,
+          "vmSteps": [
+            12018,
+            12018,
+            12018,
+            12018,
+            12018,
+            12018,
+            12018
+          ],
+          "queryPlan": [
+            "SCAN CONSTANT ROW",
+            "SCALAR SUBQUERY 1",
+            "SEARCH events USING INDEX sqlite_autoindex_events_1 (world_id=? AND state_version>?)"
+          ]
+        },
+        {
+          "eventsAfterAnchor": 200000,
+          "queriedActor": "a2",
+          "sql": "SELECT EXISTS(SELECT 1 FROM events WHERE world_id='foundation-01' AND state_version>0 AND json_extract(event_json,'$.actorId')='a2')",
+          "result": 0,
+          "samplesMs": [
+            68.519705,
+            69.129269,
+            69.703791,
+            69.100945,
+            69.604775,
+            68.596509,
+            68.846143
+          ],
+          "medianMs": 69.100945,
+          "minMs": 68.519705,
+          "maxMs": 69.703791,
+          "vmSteps": [
+            1200018,
+            1200018,
+            1200018,
+            1200018,
+            1200018,
+            1200018,
+            1200018
+          ],
+          "queryPlan": [
+            "SCAN CONSTANT ROW",
+            "SCALAR SUBQUERY 1",
+            "SEARCH events USING INDEX sqlite_autoindex_events_1 (world_id=? AND state_version>?)"
+          ]
+        },
+        {
+          "eventsAfterAnchor": 200000,
+          "queriedActor": "a1",
+          "sql": "SELECT EXISTS(SELECT 1 FROM events WHERE world_id='foundation-01' AND state_version>0 AND json_extract(event_json,'$.actorId')='a1')",
+          "result": 1,
+          "samplesMs": [
+            0.003798,
+            0.003325,
+            0.003179,
+            0.003127,
+            0.003088,
+            0.003104,
+            0.003138
+          ],
+          "medianMs": 0.003138,
+          "minMs": 0.003088,
+          "maxMs": 0.003798,
+          "vmSteps": [
+            25,
+            25,
+            25,
+            25,
+            25,
+            25,
+            25
+          ],
+          "queryPlan": [
+            "SCAN CONSTANT ROW",
+            "SCALAR SUBQUERY 1",
+            "SEARCH events USING INDEX sqlite_autoindex_events_1 (world_id=? AND state_version>?)"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "candidate-actor-expression-index",
+      "databaseBytes": 43909120,
+      "cases": [
+        {
+          "eventsAfterAnchor": 0,
+          "queriedActor": "a2",
+          "sql": "SELECT EXISTS(SELECT 1 FROM events WHERE world_id='foundation-01' AND state_version>200000 AND json_extract(event_json,'$.actorId')='a2')",
+          "result": 0,
+          "samplesMs": [
+            0.003113,
+            0.002715,
+            0.002712,
+            0.002743,
+            0.002719,
+            0.002668,
+            0.002723
+          ],
+          "medianMs": 0.002719,
+          "minMs": 0.002668,
+          "maxMs": 0.003113,
+          "vmSteps": [
+            17,
+            17,
+            17,
+            17,
+            17,
+            17,
+            17
+          ],
+          "queryPlan": [
+            "SCAN CONSTANT ROW",
+            "SCALAR SUBQUERY 1",
+            "SEARCH events USING COVERING INDEX research_events_actor_version (world_id=? AND <expr>=? AND state_version>?)"
+          ]
+        },
+        {
+          "eventsAfterAnchor": 20,
+          "queriedActor": "a2",
+          "sql": "SELECT EXISTS(SELECT 1 FROM events WHERE world_id='foundation-01' AND state_version>199980 AND json_extract(event_json,'$.actorId')='a2')",
+          "result": 0,
+          "samplesMs": [
+            0.002685,
+            0.002706,
+            0.008267,
+            0.002769,
+            0.002663,
+            0.002685,
+            0.00269
+          ],
+          "medianMs": 0.00269,
+          "minMs": 0.002663,
+          "maxMs": 0.008267,
+          "vmSteps": [
+            17,
+            17,
+            17,
+            17,
+            17,
+            17,
+            17
+          ],
+          "queryPlan": [
+            "SCAN CONSTANT ROW",
+            "SCALAR SUBQUERY 1",
+            "SEARCH events USING COVERING INDEX research_events_actor_version (world_id=? AND <expr>=? AND state_version>?)"
+          ]
+        },
+        {
+          "eventsAfterAnchor": 2000,
+          "queriedActor": "a2",
+          "sql": "SELECT EXISTS(SELECT 1 FROM events WHERE world_id='foundation-01' AND state_version>198000 AND json_extract(event_json,'$.actorId')='a2')",
+          "result": 0,
+          "samplesMs": [
+            0.002784,
+            0.002688,
+            0.002699,
+            0.00268,
+            0.002646,
+            0.002684,
+            0.002754
+          ],
+          "medianMs": 0.002688,
+          "minMs": 0.002646,
+          "maxMs": 0.002784,
+          "vmSteps": [
+            17,
+            17,
+            17,
+            17,
+            17,
+            17,
+            17
+          ],
+          "queryPlan": [
+            "SCAN CONSTANT ROW",
+            "SCALAR SUBQUERY 1",
+            "SEARCH events USING COVERING INDEX research_events_actor_version (world_id=? AND <expr>=? AND state_version>?)"
+          ]
+        },
+        {
+          "eventsAfterAnchor": 200000,
+          "queriedActor": "a2",
+          "sql": "SELECT EXISTS(SELECT 1 FROM events WHERE world_id='foundation-01' AND state_version>0 AND json_extract(event_json,'$.actorId')='a2')",
+          "result": 0,
+          "samplesMs": [
+            0.002712,
+            0.002709,
+            0.002652,
+            0.002676,
+            0.002643,
+            0.002631,
+            0.002687
+          ],
+          "medianMs": 0.002676,
+          "minMs": 0.002631,
+          "maxMs": 0.002712,
+          "vmSteps": [
+            17,
+            17,
+            17,
+            17,
+            17,
+            17,
+            17
+          ],
+          "queryPlan": [
+            "SCAN CONSTANT ROW",
+            "SCALAR SUBQUERY 1",
+            "SEARCH events USING COVERING INDEX research_events_actor_version (world_id=? AND <expr>=? AND state_version>?)"
+          ]
+        },
+        {
+          "eventsAfterAnchor": 200000,
+          "queriedActor": "a1",
+          "sql": "SELECT EXISTS(SELECT 1 FROM events WHERE world_id='foundation-01' AND state_version>0 AND json_extract(event_json,'$.actorId')='a1')",
+          "result": 1,
+          "samplesMs": [
+            0.00295,
+            0.002793,
+            0.002763,
+            0.002727,
+            0.002748,
+            0.002723,
+            0.002764
+          ],
+          "medianMs": 0.002763,
+          "minMs": 0.002723,
+          "maxMs": 0.00295,
+          "vmSteps": [
+            21,
+            21,
+            21,
+            21,
+            21,
+            21,
+            21
+          ],
+          "queryPlan": [
+            "SCAN CONSTANT ROW",
+            "SCALAR SUBQUERY 1",
+            "SEARCH events USING COVERING INDEX research_events_actor_version (world_id=? AND <expr>=? AND state_version>?)"
+          ]
+        }
+      ]
+    }
+  ],
+  "audits": [
+    {
+      "file": "range-index.db",
+      "eventRows": 200000,
+      "eventContentSha256": "4823904625c46084f1b77bbeafa30782e691a206c0785ea4796ca154326f3f02",
+      "integrity": "ok"
+    },
+    {
+      "file": "actor-index.db",
+      "eventRows": 200000,
+      "eventContentSha256": "4823904625c46084f1b77bbeafa30782e691a206c0785ea4796ca154326f3f02",
+      "integrity": "ok"
+    }
+  ]
+}
