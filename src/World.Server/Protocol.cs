@@ -8,15 +8,22 @@ namespace World.Server;
 
 internal sealed record Identity(string OperatorId, string ActorId, string SessionId);
 internal sealed record ApiError(string Code, string Message, bool Retryable = false, bool? Mutated = false);
-internal sealed record ApiReply(int StatusCode, string Json)
+internal sealed record ApiReply(int StatusCode, string Json, string? InstanceId = null) : IResult
 {
-    public IResult ToResult() => Results.Content(Json, "application/json; charset=utf-8", statusCode: StatusCode);
+    public ApiReply WithInstance(string? instanceId) => this with { InstanceId = instanceId };
+    public IResult ToResult() => this;
+    public async Task ExecuteAsync(HttpContext context)
+    {
+        if (InstanceId is not null) context.Response.Headers[WorldInstance.Header] = InstanceId;
+        await Results.Content(Json, "application/json; charset=utf-8", statusCode: StatusCode).ExecuteAsync(context);
+    }
 }
 
-internal sealed class RequestFailure(int statusCode, string code, string message) : Exception(message)
+internal sealed class RequestFailure(int statusCode, string code, string message, string? instanceId = null) : Exception(message)
 {
     public int StatusCode { get; } = statusCode;
     public string Code { get; } = code;
+    public string? InstanceId { get; } = instanceId;
 }
 
 internal static class Protocol

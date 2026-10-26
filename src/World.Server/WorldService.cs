@@ -11,12 +11,13 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
 {
     private WorldScenario Scenario => database.Scenario;
 
-    public ApiReply Observe(string tokenHash)
+    public ApiReply Observe(string tokenHash, string? expectedInstance = null)
     {
-        if (Scenario.SupportsContinuous) return ObserveContinuous(tokenHash);
+        if (Scenario.SupportsContinuous) return ObserveContinuous(tokenHash, expectedInstance);
         using var connection = database.Open();
         using var transaction = connection.BeginTransaction(deferred: true);
         var identity = database.Authenticate(tokenHash, connection, transaction);
+        var instance = WorldInstance.Require(connection, transaction, expectedInstance);
         var state = ReadState(connection, transaction);
         var self = ReadActor(connection, transaction, identity.ActorId);
         var residents = new List<object>();
@@ -95,18 +96,20 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
                 embodiedWood, conserved = checked(wildWood + state.DepotWood + inventoryWood + embodiedWood) == state.IssuedWood }
             : new { issuedWood = state.IssuedWood, depotWood = state.DepotWood, inventoryWood,
                 embodiedWood, conserved = checked(state.DepotWood + inventoryWood + embodiedWood) == state.IssuedWood };
-        return Protocol.Reply(200, body);
+        BindObservation(body, instance);
+        return Protocol.Reply(200, body).WithInstance(instance);
     }
 
-    public ApiReply MosaicProposalInbox(string tokenHash, MosaicInboxQuery query)
+    public ApiReply MosaicProposalInbox(string tokenHash, MosaicInboxQuery query, string? expectedInstance = null)
     {
         using var connection = database.Open();
         using var transaction = connection.BeginTransaction(deferred: true);
         var identity = database.Authenticate(tokenHash, connection, transaction);
+        var instance = WorldInstance.Require(connection, transaction, expectedInstance);
         var state = ReadState(connection, transaction);
         if (!Scenario.SupportsMosaicConsent)
             return Protocol.Error(Scenario.RulesVersion, 422, "MOSAIC_CONSENT_UNAVAILABLE", "当前世界不支持画布协商",
-                identity, state.Version, state.Cursor);
+                identity, state.Version, state.Cursor).WithInstance(instance);
 
         const string scopeFilter = """
             p.world_id=$world AND ($scope='all' OR ($scope='received' AND p.target_actor_id=$actor)
@@ -146,36 +149,38 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         body["items"] = proposals.Select(proposal => WithFields(proposal, ("review",
             ReadMosaicReviews(connection, transaction, proposalActor: proposal.AuthorActorId, proposalCommand: proposal.CommandId).SingleOrDefault()))).ToArray();
         body["nextBefore"] = hasOlder ? proposals[^1].StateVersion : (long?)null;
-        return Protocol.Reply(200, body);
+        return Protocol.Reply(200, body).WithInstance(instance);
     }
 
-    public ApiReply MosaicProposalDetail(string tokenHash, string proposalActorId, string proposalCommandId)
+    public ApiReply MosaicProposalDetail(string tokenHash, string proposalActorId, string proposalCommandId, string? expectedInstance = null)
     {
         using var connection = database.Open();
         using var transaction = connection.BeginTransaction(deferred: true);
         var identity = database.Authenticate(tokenHash, connection, transaction);
+        var instance = WorldInstance.Require(connection, transaction, expectedInstance);
         var state = ReadState(connection, transaction);
         if (!Scenario.SupportsMosaicConsent)
             return Protocol.Error(Scenario.RulesVersion, 422, "MOSAIC_CONSENT_UNAVAILABLE", "当前世界不支持画布协商",
-                identity, state.Version, state.Cursor);
+                identity, state.Version, state.Cursor).WithInstance(instance);
         var proposal = FindMosaicProposal(connection, transaction, proposalActorId, proposalCommandId);
         if (proposal is null)
             return Protocol.Error(Scenario.RulesVersion, 404, "MOSAIC_PROPOSAL_NOT_FOUND", "提议不存在",
-                identity, state.Version, state.Cursor);
+                identity, state.Version, state.Cursor).WithInstance(instance);
         var body = Protocol.Envelope(Scenario.RulesVersion, identity, state.Version, state.Cursor);
         body["proposal"] = WithFields(proposal, ("review",
             ReadMosaicReviews(connection, transaction, proposalActor: proposalActorId, proposalCommand: proposalCommandId).SingleOrDefault()));
-        return Protocol.Reply(200, body);
+        return Protocol.Reply(200, body).WithInstance(instance);
     }
 
-    public ApiReply Events(string tokenHash, long after)
+    public ApiReply Events(string tokenHash, long after, string? expectedInstance = null)
     {
         using var connection = database.Open();
         using var transaction = connection.BeginTransaction(deferred: true);
         var identity = database.Authenticate(tokenHash, connection, transaction);
+        var instance = WorldInstance.Require(connection, transaction, expectedInstance);
         var state = ReadState(connection, transaction);
         if (after > state.Cursor)
-            return Protocol.Error(Scenario.RulesVersion, 409, "CURSOR_AHEAD", "事件游标超过当前世界，请重新观察", identity, state.Version, state.Cursor);
+            return Protocol.Error(Scenario.RulesVersion, 409, "CURSOR_AHEAD", "事件游标超过当前世界，请重新观察", identity, state.Version, state.Cursor).WithInstance(instance);
         var events = new List<JsonElement>();
         var nextCursor = after;
         using (var command = Command(connection, transaction,
@@ -191,42 +196,46 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         var body = Protocol.Envelope(Scenario.RulesVersion, identity, state.Version, state.Cursor);
         body["events"] = events;
         body["nextCursor"] = nextCursor;
-        return Protocol.Reply(200, body);
+        return Protocol.Reply(200, body).WithInstance(instance);
     }
 
-    public ApiReply Receipt(string tokenHash, string id)
+    public ApiReply Receipt(string tokenHash, string id, string? expectedInstance = null)
     {
         using var connection = database.Open();
         using var transaction = connection.BeginTransaction(deferred: true);
         var identity = database.Authenticate(tokenHash, connection, transaction);
+        var instance = WorldInstance.Require(connection, transaction, expectedInstance, required: true);
         var receipt = FindReceipt(connection, transaction, identity.ActorId, id);
-        if (receipt is not null) return receipt.Value.Reply;
+        if (receipt is not null) return receipt.Value.Reply.WithInstance(instance);
         var state = ReadState(connection, transaction);
-        return Protocol.Error(Scenario.RulesVersion, 404, "COMMAND_NOT_FOUND", "未找到当前居民的命令回执", identity, state.Version, state.Cursor, id);
+        return Protocol.Error(Scenario.RulesVersion, 404, "COMMAND_NOT_FOUND", "未找到当前居民的命令回执", identity, state.Version, state.Cursor, id).WithInstance(instance);
     }
 
-    public void Revoke(string tokenHash)
+    public string? Revoke(string tokenHash, string? expectedInstance = null)
     {
         using var connection = database.Open();
         using var transaction = connection.BeginTransaction(deferred: false);
         var identity = database.Authenticate(tokenHash, connection, transaction);
+        var instance = WorldInstance.Require(connection, transaction, expectedInstance, required: true);
         Run(connection, transaction, "UPDATE sessions SET revoked=1 WHERE session_id=$session", ("$session", identity.SessionId));
         transaction.Commit();
+        return instance;
     }
 
-    public ApiReply Execute(string tokenHash, WorldCommand request, string? requestedFault)
+    public ApiReply Execute(string tokenHash, WorldCommand request, string? requestedFault, string? expectedInstance = null)
     {
         var requestHash = request.RequestHash;
         using var connection = database.Open();
         // BEGIN IMMEDIATE serializes the complete read/check/write decision against other writers.
         using var transaction = connection.BeginTransaction(deferred: false);
         var identity = database.Authenticate(tokenHash, connection, transaction);
+        var instance = WorldInstance.Require(connection, transaction, expectedInstance, required: true);
         var previous = FindReceipt(connection, transaction, identity.ActorId, request.CommandId);
         if (previous is not null)
         {
-            if (previous.Value.Hash == requestHash) return previous.Value.Reply;
+            if (previous.Value.Hash == requestHash) return previous.Value.Reply.WithInstance(instance);
             var current = ReadState(connection, transaction);
-            return Protocol.Error(Scenario.RulesVersion, 409, "IDEMPOTENCY_CONFLICT", "命令 ID 已用于不同参数", identity, current.Version, current.Cursor, request.CommandId);
+            return Protocol.Error(Scenario.RulesVersion, 409, "IDEMPOTENCY_CONFLICT", "命令 ID 已用于不同参数", identity, current.Version, current.Cursor, request.CommandId).WithInstance(instance);
         }
         var state = ReadState(connection, transaction);
         var actor = ReadActor(connection, transaction, identity.ActorId);
@@ -241,7 +250,7 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
             SaveReceipt(connection, transaction, identity.ActorId, request.CommandId, requestHash, denied);
             database.Authenticate(tokenHash, connection, transaction);
             transaction.Commit();
-            return denied;
+            return denied.WithInstance(instance);
         }
 
         var version = checked(state.Version + 1);
@@ -407,7 +416,7 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         if (fault == "before-commit") Environment.Exit(81);
         transaction.Commit();
         if (fault == "after-commit") Environment.Exit(82);
-        return reply;
+        return reply.WithInstance(instance);
     }
 
     private (int Status, ApiError Error)? Validate(SqliteConnection connection, SqliteTransaction transaction,
@@ -621,6 +630,13 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
             SELECT author_actor_id FROM mosaic_cells WHERE world_id=$world AND activity_id='garden' AND x=$x AND y=$y
             """, ("$world", Protocol.WorldId), ("$x", cell.X), ("$y", cell.Y));
         return command.ExecuteScalar() as string;
+    }
+
+    private static void BindObservation(Dictionary<string, object?> body, string? instance)
+    {
+        if (instance is null) return;
+        body["world"] = WithFields(body["world"]!, ("instanceId", instance));
+        body["commandBinding"] = new { version = 1, required = true, header = WorldInstance.Header };
     }
 
     private static Dictionary<string, object?> WithFields(object record, params (string Name, object? Value)[] fields)

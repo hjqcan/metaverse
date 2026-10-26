@@ -23,6 +23,6 @@
 3. `build`: `{type:"build",recipeId,at:[x,z]}`。平台 `platform.v1` 花 3 木材；中心距离 ≤3.2 m，占地须完整处于陆地且不碰树、岩石、既有建筑。桥 `bridge.v1` 花 6 木材，中心 X 须落在 `centerline` 按 Z 线性插值位置（误差 ≤0.08 m）；中心距离 ≤3.2 m，桥面完整跨过河道，无既有建筑重叠。建成后双方可走桥。水面不允许直接行走。
 4. r8 的 `move` 被拒绝；不存在隐藏的格子回退。`claim` 仍不可用。
 
-`resourceAudit`、已确认事件与回执仍为事实依据。断线/不明结果保留原 ID 与原请求；先查询回执，404 才重发原请求。
+`resourceAudit`、已确认事件与回执仍为事实依据。新建 r8 库采用[世界实例绑定 v1](world-instance-v1.md)：命令及回执查询必须携带原 `World-Instance-Id`，已有库维持明确的 legacy 分支。断线/不明结果保留原 ID 与原请求；只有实例匹配的 `COMMAND_NOT_FOUND` 才允许原样重发。
 
 实现状态与验收结果见 [ITER-0014](../iterations/ITER-0014-results.md)。点击导航直走并在碰撞处停止；自动绕障碍不属于 Godot 本轮实现。

@@ -112,10 +112,11 @@ internal sealed partial class WorldService
         while (r.Read()) list.Add(new(r.GetString(0), r.GetString(1), r.GetInt64(2), r.GetString(3), r.GetString(4), [r.GetDouble(5), r.GetDouble(6)], r.GetInt64(7)));
         return list;
     }
-    private ApiReply ObserveContinuous(string tokenHash)
+    private ApiReply ObserveContinuous(string tokenHash, string? expectedInstance)
     {
         using var c = database.Open(); using var t = c.BeginTransaction(deferred: true);
         var identity = database.Authenticate(tokenHash, c, t); var state = ReadState(c, t); var actor = ReadActor(c, t, identity.ActorId);
+        var instance = WorldInstance.Require(c, t, expectedInstance);
         var trees = ReadResourceNodes(c, t); var entities = ReadStructures(c, t); var residents = new List<object>();
         using (var command = Command(c, t, "SELECT actor_id,x,y FROM residents WHERE world_id=$world ORDER BY actor_id", ("$world", Protocol.WorldId)))
         using (var r = command.ExecuteReader()) while (r.Read()) residents.Add(new { actorId = r.GetString(0), position = new[] { r.GetDouble(1), r.GetDouble(2) } });
@@ -129,7 +130,8 @@ internal sealed partial class WorldService
         body["recipes"] = new[] { new { id = "platform.v1", definitionId = "platform", woodCost = 3 }, new { id = "bridge.v1", definitionId = "bridge", woodCost = 6 } };
         body["gathering"] = new { version = 1, quantityPerAction = 1 }; body["depot"] = new { wood = 0, available = false };
         body["resourceAudit"] = new { issuedWood = state.IssuedWood, wildWood, depotWood = 0, inventoryWood, embodiedWood, conserved = wildWood + inventoryWood + embodiedWood == state.IssuedWood };
-        return Protocol.Reply(200, body);
+        BindObservation(body, instance);
+        return Protocol.Reply(200, body).WithInstance(instance);
     }
     private (int Status, ApiError Error)? ValidateContinuous(SqliteConnection c, SqliteTransaction t, WorldAction action, Actor actor)
     {

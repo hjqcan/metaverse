@@ -6,10 +6,27 @@ from collections import deque
 from datetime import datetime, timezone
 import json
 from pathlib import Path
+import re
 import time
 import urllib.error
 import urllib.request
 import uuid
+
+
+INSTANCE_HEADER = "World-Instance-Id"
+
+
+def valid_world_instance(value):
+    return isinstance(value, str) and re.fullmatch(r"w_[0-9a-f]{32}", value) is not None
+
+
+class WorldBindingError(RuntimeError):
+    """No conclusion about the original command may be drawn from this response."""
+
+
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
 
 
 class WorldClient:
@@ -17,18 +34,50 @@ class WorldClient:
         self.url = url.rstrip("/")
         self.token = token
         self.prefix = f"/v1/worlds/{world}"
+        self.world_instance_id = None
+        self.binding_observed = False
+        self.response_instance_id = None
+        self._opener = urllib.request.build_opener(_NoRedirect())
+
+    def bind_instance(self, instance_id):
+        """Pin a saved mission's identity before observing or recovering it.
+
+        None means an explicitly unbound legacy mission, not permission to adopt
+        whatever instance currently occupies its previous URL.
+        """
+        if instance_id is not None and not valid_world_instance(instance_id):
+            raise WorldBindingError("Invalid persisted world instance")
+        if self.binding_observed and self.world_instance_id != instance_id:
+            raise WorldBindingError("Client is already bound to another world")
+        self.world_instance_id = instance_id
+        self.binding_observed = True
 
     def request(self, method, path, payload=None, headers=None):
         body = json.dumps(payload).encode() if payload is not None else None
+        world_request = path.startswith("/v1/")
+        request_headers = {"Authorization": "Bearer " + self.token, "Content-Type": "application/json"}
+        if world_request and self.world_instance_id is not None:
+            request_headers[INSTANCE_HEADER] = self.world_instance_id
+        for key, value in (headers or {}).items():
+            if key.lower() == INSTANCE_HEADER.lower() and self.binding_observed and value != self.world_instance_id:
+                raise WorldBindingError("Cannot override the pinned world instance")
+            request_headers[key] = value
         request = urllib.request.Request(
             self.url + path, data=body, method=method,
-            headers={"Authorization": "Bearer " + self.token, "Content-Type": "application/json", **(headers or {})},
+            headers=request_headers,
         )
         try:
-            response = urllib.request.urlopen(request, timeout=10)
+            response = self._opener.open(request, timeout=10)
         except urllib.error.HTTPError as error:
             response = error
         with response:
+            values = response.headers.get_all(INSTANCE_HEADER, [])
+            self.response_instance_id = values[0] if len(values) == 1 and valid_world_instance(values[0]) else None
+            if values and self.response_instance_id is None:
+                raise WorldBindingError("Malformed world instance response")
+            if world_request and self.world_instance_id is not None and response.status != 401 and response.status < 500:
+                if self.response_instance_id != self.world_instance_id or response.status in (412, 428):
+                    raise WorldBindingError("World instance response does not match the original world")
             raw = response.read()
             return response.status, json.loads(raw) if raw else None
 
@@ -36,6 +85,15 @@ class WorldClient:
         status, result = self.request("GET", self.prefix + "/observation")
         if status != 200:
             raise RuntimeError(f"Observation failed: HTTP {status}, {result.get('error', {}).get('code')}")
+        instance = result.get("world", {}).get("instanceId")
+        capability = result.get("commandBinding")
+        if instance is not None or capability is not None or self.response_instance_id is not None:
+            if (not valid_world_instance(instance) or self.response_instance_id != instance
+                    or capability != {"version": 1, "required": True, "header": INSTANCE_HEADER}):
+                raise WorldBindingError("Observation has inconsistent world instance binding")
+        if self.binding_observed and self.world_instance_id != instance:
+            raise WorldBindingError("Observation belongs to a different world")
+        self.bind_instance(instance)
         return result
 
     def command(self, intent):
@@ -48,7 +106,7 @@ class WorldClient:
             try:
                 if attempt:
                     status, result = self.request("GET", self.prefix + "/commands/" + intent["commandId"])
-                    if status != 404:
+                    if status != 404 or not isinstance(result, dict) or (result.get("error") or {}).get("code") != "COMMAND_NOT_FOUND":
                         return status, result
                 return self.command(intent)
             except (OSError, urllib.error.URLError) as error:

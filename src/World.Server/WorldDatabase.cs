@@ -10,6 +10,7 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
 {
     public string Path { get; } = System.IO.Path.Combine(configuration.DataDirectory, "world.db");
     public WorldScenario Scenario { get; private set; } = null!;
+    public string? InstanceId { get; private set; }
 
     public SqliteConnection Open(bool existingOnly = true)
     {
@@ -44,12 +45,15 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
         if (schemaVersion != 0)
         {
             Scenario = ReadScenario(connection, transaction, schemaVersion);
+            InstanceId = WorldInstance.Read(connection, transaction);
             transaction.Commit();
             return;
         }
 
         Scenario = configuration.RequestedScenario ?? WorldScenario.Wilderness;
         Run(connection, transaction, Scenario.SupportsContinuous ? SchemaV8 : Scenario.SupportsGathering ? SchemaV7 : Scenario.SupportsMosaicConsent ? SchemaV6 : Scenario.SupportsMosaic ? SchemaV5 : Scenario.SupportsPostcards ? SchemaV4 : Scenario.SupportsActivities ? SchemaV3 : SchemaV2);
+        if (Scenario.SupportsContinuous) WorldInstance.Create(connection, transaction);
+        InstanceId = WorldInstance.Read(connection, transaction);
         Run(connection, transaction, """
             INSERT INTO worlds(id,scenario_id,rules_version,state_version,issued_wood,depot_wood) VALUES($world,$scenario,$rules,0,12,$depot);
             INSERT INTO residents(world_id,actor_id,operator_id,x,y,wood) VALUES($world,'a1','local-operator',$a1x,$a1y,0),($world,'a2','local-operator',$a2x,$a2y,0);
@@ -164,6 +168,7 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
             using var connection = Open();
             using var transaction = connection.BeginTransaction(deferred: false);
             Scenario = ReadScenario(connection, transaction, Scalar(connection, transaction, "PRAGMA user_version"));
+            _ = WorldInstance.Read(connection, transaction);
             Run(connection, transaction, "UPDATE sessions SET revoked=1 WHERE world_id=$world AND actor_id=$actor AND revoked=0",
                 ("$world", Protocol.WorldId), ("$actor", actor));
             var session = NewSession(connection, transaction, actor, ttlSeconds);

@@ -67,6 +67,9 @@ app.Use(async (context, next) =>
             var hash = Protocol.Hash(token);
             context.Items["tokenHash"] = hash;
             context.Items["identity"] = database.Authenticate(hash);
+            // Covers authenticated parse errors too. World operations replace this
+            // with the identity read in their own transaction before returning.
+            if (database.InstanceId is not null) context.Response.Headers[WorldInstance.Header] = database.InstanceId;
         }
         await next(context);
     }
@@ -74,7 +77,7 @@ app.Use(async (context, next) =>
     {
         if (failure.StatusCode == 401) context.Response.Headers.WWWAuthenticate = "Bearer";
         await Protocol.Error(database.Scenario.RulesVersion, failure.StatusCode, failure.Code, failure.Message,
-            failure.StatusCode == 401 ? null : context.Items["identity"] as Identity).ToResult().ExecuteAsync(context);
+            failure.StatusCode == 401 ? null : context.Items["identity"] as Identity).WithInstance(failure.InstanceId).ToResult().ExecuteAsync(context);
     }
     catch (BadHttpRequestException)
     {
@@ -116,18 +119,19 @@ app.UseRouting();
 app.MapGet("/healthz", () => Results.Json(new { status = "ok", worldId = Protocol.WorldId, sqliteVersion = database.SqliteVersion() }, Protocol.Json));
 app.MapDelete("/v1/session", (HttpContext context) =>
 {
-    service.Revoke(TokenHash(context));
+    var instance = service.Revoke(TokenHash(context), WorldInstance.ReadHeader(context.Request));
+    if (instance is not null) context.Response.Headers[WorldInstance.Header] = instance;
     return Results.NoContent();
 });
 app.MapGet("/v1/worlds/{worldId}/observation", (string worldId, HttpContext context) =>
 {
     RequireWorld(worldId);
-    return service.Observe(TokenHash(context)).ToResult();
+    return service.Observe(TokenHash(context), WorldInstance.ReadHeader(context.Request)).ToResult();
 });
 app.MapGet("/v1/worlds/{worldId}/mosaic-proposals", (string worldId, HttpContext context) =>
 {
     RequireWorld(worldId);
-    return service.MosaicProposalInbox(TokenHash(context), ReadMosaicInboxQuery(context.Request.Query)).ToResult();
+    return service.MosaicProposalInbox(TokenHash(context), ReadMosaicInboxQuery(context.Request.Query), WorldInstance.ReadHeader(context.Request)).ToResult();
 });
 app.MapGet("/v1/worlds/{worldId}/mosaic-proposals/{proposalActorId}/{proposalCommandId}",
     (string worldId, string proposalActorId, string proposalCommandId, HttpContext context) =>
@@ -135,7 +139,7 @@ app.MapGet("/v1/worlds/{worldId}/mosaic-proposals/{proposalActorId}/{proposalCom
     RequireWorld(worldId);
     if (context.Request.Query.Count != 0 || !Protocol.ValidCommandId(proposalActorId) || !Protocol.ValidCommandId(proposalCommandId))
         throw new RequestFailure(400, "INVALID_REQUEST", "提议定位字段无效或含有查询参数");
-    return service.MosaicProposalDetail(TokenHash(context), proposalActorId, proposalCommandId).ToResult();
+    return service.MosaicProposalDetail(TokenHash(context), proposalActorId, proposalCommandId, WorldInstance.ReadHeader(context.Request)).ToResult();
 });
 app.MapGet("/v1/worlds/{worldId}/events", (string worldId, HttpContext context) =>
 {
@@ -145,19 +149,19 @@ app.MapGet("/v1/worlds/{worldId}/events", (string worldId, HttpContext context) 
         string.IsNullOrEmpty(values[0]) || !values[0]!.All(c => c is >= '0' and <= '9') ||
         !long.TryParse(values[0], NumberStyles.None, CultureInfo.InvariantCulture, out var after))
         throw new RequestFailure(400, "INVALID_REQUEST", "after 必须为非负整数游标");
-    return service.Events(TokenHash(context), after).ToResult();
+    return service.Events(TokenHash(context), after, WorldInstance.ReadHeader(context.Request)).ToResult();
 });
 app.MapGet("/v1/worlds/{worldId}/commands/{id}", (string worldId, string id, HttpContext context) =>
 {
     RequireWorld(worldId);
     if (!Protocol.ValidCommandId(id)) throw new RequestFailure(400, "INVALID_REQUEST", "命令 ID 格式无效");
-    return service.Receipt(TokenHash(context), id).ToResult();
+    return service.Receipt(TokenHash(context), id, WorldInstance.ReadHeader(context.Request)).ToResult();
 });
 app.MapPost("/v1/worlds/{worldId}/commands", async (string worldId, HttpContext context) =>
 {
     RequireWorld(worldId);
     var request = await WorldCommand.Read(context.Request, database.Scenario);
-    return service.Execute(TokenHash(context), request, context.Request.Headers["X-Test-Fault"].ToString()).ToResult();
+    return service.Execute(TokenHash(context), request, context.Request.Headers["X-Test-Fault"].ToString(), WorldInstance.ReadHeader(context.Request)).ToResult();
 });
 app.MapFallback((HttpContext context) => Protocol.Error(database.Scenario.RulesVersion, 404, "INVALID_REQUEST", "接口不存在", context.Items["identity"] as Identity).ToResult());
 await app.RunAsync();
