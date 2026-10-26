@@ -23,7 +23,7 @@ func run() -> void:
 		check(client.can_act() and not client.instance_id.is_empty(), "new world establishes instance binding")
 		await client.send_action({"type": "gather", "nodeId": "tree-west-north"})
 		check(not client.pending.is_empty() and not client.can_act(), "lost response retains original protected record")
-		check(client.pending.get("recordVersion") == 2 and client.pending.get("instanceId") == client.instance_id, "original freezes persistent world identity")
+		check(client.pending.get("recordVersion") == 3 and client.pending.get("instanceId") == client.instance_id, "original freezes persistent world identity")
 		var saved = FileAccess.open(OS.get_environment("INSTANCE_TEST_ORIGINAL"), FileAccess.WRITE)
 		saved.store_string(JSON.stringify(client.pending))
 		saved.close()

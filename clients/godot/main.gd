@@ -231,6 +231,9 @@ func _render() -> void:
 				status_label.text = "前路受阻，请重新选择目的地。"
 				message_until = Time.get_ticks_msec()/1000.0+3
 		elif client.last_receipt.status == "rejected":
+			if client.last_receipt.get("error", {}).get("code") == "STALE_ACTOR_STATE":
+				_stop_walk()
+				input_suspended = true
 			status_label.text = client.message
 			message_until = Time.get_ticks_msec()/1000.0+3
 		else:

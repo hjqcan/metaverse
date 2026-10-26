@@ -4,6 +4,7 @@ signal changed
 
 const API = "/v1/worlds/foundation-01"
 const PendingStore = preload("res://pending_store.gd")
+const Evidence = preload("res://command_evidence.gd")
 const INSTANCE_HEADER = "World-Instance-Id"
 var endpoint = "http://127.0.0.1:5089"
 var token = ""
@@ -38,7 +39,7 @@ func _valid_record(record: Variant) -> bool:
 	if not record is Dictionary or not record.get("body") is String or not record.get("actorId") is String or not record.get("commandId") is String:
 		return false
 	if record.has("recordVersion"):
-		if record.recordVersion != 2 or not _valid_instance(record.get("instanceId")) \
+		if (record.recordVersion != 2 and record.recordVersion != 3) or not _valid_instance(record.get("instanceId")) \
 			or record.get("worldId") != "foundation-01" or not record.get("endpoint") is String:
 			return false
 	elif record.has("instanceId"):
@@ -47,9 +48,16 @@ func _valid_record(record: Variant) -> bool:
 	if parser.parse(record.body) != OK or not parser.data is Dictionary:
 		return false
 	var command: Dictionary = parser.data
+	if record.get("recordVersion") == 3:
+		if command.get("preconditionMode") != Evidence.MODE or not record.get("before") is String:
+			return false
+		var before = JSON.parse_string(record.before)
+		if not command.get("action") is Dictionary or not Evidence.valid_before(command.action, before):
+			return false
+	elif command.has("preconditionMode"):
+		return false
 	return command.get("commandId") == record.commandId and command.get("schemaVersion") == 1 \
-		and command.get("rulesVersion") == "r8" and typeof(command.get("expectedStateVersion")) in [TYPE_INT, TYPE_FLOAT] \
-		and command.expectedStateVersion >= 0 and command.expectedStateVersion <= 9007199254740991 \
+		and command.get("rulesVersion") == "r8" and Evidence.whole(command.get("expectedStateVersion")) \
 		and command.get("action") is Dictionary and command.action.get("type") in ["walk", "gather", "build"]
 
 func can_act() -> bool:
@@ -221,9 +229,22 @@ func send_action(action: Dictionary) -> void:
 	var command_id = "godot_" + Crypto.new().generate_random_bytes(16).hex_encode()
 	var command = {"schemaVersion": 1, "rulesVersion": observation.rulesVersion,
 		"commandId": command_id, "expectedStateVersion": int(observation.stateVersion), "action": action}
+	var before: Dictionary = {}
+	var actor_mode = Evidence.supported(observation)
+	if actor_mode:
+		before = Evidence.capture(observation, action)
+		if before.is_empty():
+			healthy = false
+			message = "当前动作依据不完整，请重新观察。"
+			changed.emit()
+			return
+		command.preconditionMode = Evidence.MODE
 	pending = {"actorId": identity.actorId, "commandId": command_id, "body": JSON.stringify(command)}
 	if not instance_id.is_empty():
-		pending.merge({"recordVersion": 2, "instanceId": instance_id, "worldId": "foundation-01", "endpoint": endpoint})
+		pending.merge({"recordVersion": 3 if actor_mode else 2, "instanceId": instance_id, "worldId": "foundation-01", "endpoint": endpoint})
+		if actor_mode:
+			# Keep records flat so disk JSON number coercion cannot change equality.
+			pending.before = JSON.stringify(before)
 	if not pending_store.put(_key(), pending):
 		storage_ok = false
 		message = "无法保存动作恢复记录，尚未发送。检查本地存储后重新连接。"
@@ -247,14 +268,26 @@ func _settle(reply: Dictionary) -> bool:
 	var command = JSON.parse_string(pending.body)
 	var committed = reply.code == 200 and data.get("status") == "committed" and data.get("error") == null
 	var rejected = reply.code in [403, 404, 409, 422] and data.get("status") == "rejected" and data.get("error") is Dictionary and data.error.get("mutated") == false
+	var actor_mode = command.get("preconditionMode") == Evidence.MODE
+	if actor_mode and not Evidence.execution(data, command, committed):
+		return false
 	if committed and not data.get("result") is Dictionary:
 		return false
-	if committed and (data.get("result", {}).get("action") != command.action.type or data.stateVersion != command.expectedStateVersion + 1):
+	if committed and (data.get("result", {}).get("action") != command.action.type or (not actor_mode and data.stateVersion != command.expectedStateVersion + 1)):
 		return false
 	if committed and command.action.type == "gather" and (data.result.get("nodeId") != command.action.nodeId or data.result.get("quantity") != 1):
 		return false
 	if not committed and not rejected:
 		return false
+	var observed_build = false
+	if actor_mode and committed:
+		var before: Dictionary = JSON.parse_string(pending.before)
+		if not Evidence.result(data, command, before):
+			return false
+		if command.action.type == "build":
+			if not await _observe() or not Evidence.built_entity(observation, data, command, before, pending.actorId):
+				return false
+			observed_build = true
 	last_receipt = data
 	floor_version = maxi(floor_version, int(data.stateVersion))
 	if not pending_store.settle(_key(), pending):
@@ -265,7 +298,10 @@ func _settle(reply: Dictionary) -> bool:
 	pending = {}
 	healthy = false
 	message = "动作已完成。" if committed else "操作未完成：" + str(data.error.get("message", "请求被拒绝"))
-	await _observe()
+	if not observed_build:
+		await _observe()
+	else:
+		healthy = true
 	return true
 
 func _submit() -> void:

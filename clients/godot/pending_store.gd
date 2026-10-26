@@ -105,7 +105,7 @@ func other_worlds(endpoint: String, actor: String, instance: String) -> int:
 	var count = 0
 	for binding in directory.get_directories():
 		for record in read(binding).values():
-			if record.get("recordVersion") == 2 and record.get("endpoint") == endpoint \
+			if (record.get("recordVersion") == 2 or record.get("recordVersion") == 3) and record.get("endpoint") == endpoint \
 				and record.actorId == actor and record.instanceId != instance:
 				count += 1
 	return count

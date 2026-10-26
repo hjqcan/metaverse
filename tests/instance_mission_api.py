@@ -39,8 +39,13 @@ class InstanceMissionAcceptance(unittest.TestCase):
         self.reports.append(report)
         return report
 
-    def dropped(self):
+    def dropped(self, strict=False):
         class Drop(WorldClient):
+            def observe(inner):
+                observed = super().observe()
+                if strict: observed.pop('commandConcurrency', None)
+                return observed
+
             def request(inner, method, path, payload=None, headers=None):
                 result = super().request(method, path, payload, headers)
                 if method == 'POST': raise OSError('lost committed reply')
@@ -101,9 +106,10 @@ class InstanceMissionAcceptance(unittest.TestCase):
         self.assertEqual(1,self.choose.calls)
 
     def test_03_legacy_unbound_task_cannot_adopt_current_instance(self):
-        before=self.dropped()
-        for key in ('instanceId','bindingVersion'): before['_state']['binding'].pop(key)
-        before['mission'].pop('worldInstanceId',None)
+        before=self.dropped(strict=True)
+        for key in ('instanceId','bindingVersion','preconditionBindingVersion','preconditionMode'):
+            before['_state']['binding'].pop(key)
+        for key in ('worldInstanceId','preconditionMode'): before['mission'].pop(key,None)
         before['world'].pop('instanceId',None); before['_state']['initial']['world'].pop('instanceId',None)
         self.state.write_text(json.dumps(before)); self.trace=[]
         report=self.task(self.counted(self.world))

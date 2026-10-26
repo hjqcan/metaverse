@@ -62,6 +62,10 @@ class Proxy:
                 reply = connection.getresponse(); data = reply.read(); status = reply.status
                 instance = reply.getheader('World-Instance-Id')
                 connection.close()
+                if owner.mode == 'stale' and self.path.endswith('/observation') and status == 200:
+                    legacy = json.loads(data)
+                    legacy.pop('commandConcurrency', None)
+                    data = json.dumps(legacy).encode()
                 if is_post and owner.mode == 'after' and owner.drop:
                     owner.drop = False
                     self.close_connection = True

@@ -25,13 +25,18 @@ WORLD_ACTOR=a2 npm run start:godot
 
 接入失败或结果未知时暂停新动作，保留上次确认状态。原 ID、原请求和居民关联逐条保存到 `user://continuous-pending.json.d/` 的独立命令文件，不保存令牌。新建 r8 世界使用[持久世界实例绑定](../../docs/contracts/world-instance-v1.md)：记录按实例／居民分组，查询与重试携带原实例前置条件，同地址换新库不会重放旧动作；同实例换地址、换会话仍可找回原记录。一次重试只针对点击时的原命令，同居民多条未决逐项确认。`WORLD_CLIENT_STATE` 指定恢复路径前缀。每次重新连接都会刷新场景，即使居民与版本号相同。
 
-已有 r8 数据库保持 legacy 模式，不自动迁移或新增实例标识，仍按原地址／居民恢复。旧 `continuous-pending.json` 只读兼容，确认后写入匹配原请求的完成标记，不整表回写；缺少实例来源的旧记录遇已标识新世界时保留并暂停替代动作。新格式 `recordVersion=2` 缺少实例 ID 属于损坏，不能降级。多进程保护适用于新版客户端；这里验证进程退出和重启恢复，未验证断电持久性。
+已有 r8 数据库保持 legacy 模式，不自动迁移或新增实例标识，仍按原地址／居民恢复。旧 `continuous-pending.json` 只读兼容，确认后写入匹配原请求的完成标记，不整表回写；缺少实例来源的旧记录遇已标识新世界时保留并暂停替代动作。实例格式 `recordVersion=2` 和 `3` 缺少实例 ID 属于损坏，不能降级。多进程保护适用于新版客户端；这里验证进程退出和重启恢复，未验证断电持久性。
+
+服务公布[按居民状态校验能力](../../docs/contracts/actor-state-v1.md)时，新动作保存 v3 记录及提交前事实，无关居民动作不再使它过期。同角色已有后续成功动作时停止原路线和当前持键，须重新点击或松开方向键后再按下。旧 v2 记录保持严格模式；v3 的模式、锚点或原事实损坏时先暂停恢复，不从当前观察补齐。
+
+居民头顶显示“你”或居民 ID，平台和桥显示实际建造者；切换身份会同步更新圆环与署名，参见[身份与作品标记](../../docs/iterations/ITER-0021-results.md)。
 
 ## 协议与引擎边界
 
 [`continuous-world-v1.md`](../../docs/contracts/continuous-world-v1.md) 是 Godot 与 Python Agent 共用的 r8 契约。`[x,z]` 是米制实数，不再是格子编号。
 
 - `world_client.gd`：HTTP / JSON、认证观察、命令回执和恢复。
+- `command_evidence.gd`：新模式提交前事实与原回执的一致性校验。
 - `pending_store.gd`：逐命令持久记录、多实例隔离及旧格式读取。
 - `main.gd`：键鼠输入、交互、建造预览和 HUD。
 - `world_navigation.gd`：根据已确认地形生成导航网格与点击路线；服务端继续确认每次移动。
@@ -51,6 +56,8 @@ npm run test:godot
 HTTP 验证和真实 Godot / OpenGL 输入测试使用隔离数据库和随机本机端口；故障代理测试断线、丢回包、原请求恢复和身份隔离。结果与截图写入 `.local/iter0014/`；新增导航和真实双居民身份复验写入 `.local/iter0016/`。Linux 需要 `xvfb-run`；模型调用0。
 
 `test:godot` 还先运行双进程恢复存储回归：同居民并发发布、分别结算、重启保留全部未决，以及旧格式兼容、同ID异载荷和损坏记录。该部分使用真实 Godot 无画面进程，证据在 `.local/godot-recovery/`。随后运行同地址换库、同库搬地址与换会话、旧格式屏障和损坏保护记录回归，证据在 `.local/world-instance/godot/`；它们与实际渲染验收分别计数。
+
+入口还包括 `.local/iter0019/godot/` 的并发、停止与新旧记录恢复，以及 `.local/iter0021/` 的身份和作品署名渲染验收。最终组合36组595断言，见[ITER-0019报告](../../docs/iterations/ITER-0019-results.md)。
 
 本轮按用户提供的 [游戏开发技能库](https://github.com/gamedev-skills/awesome-gamedev-agent-skills) 使用 `godot-3d-essentials`、`godot-physics`、`camera-systems`。参考 [Sac 的 3D 游戏工作流](https://x.com/Saccc_c/status/2110694725640474759) 的统一风格、场景与角色分工、多角度实机检查；没有使用该游戏的模型、付费服务或改换引擎。
 

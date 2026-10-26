@@ -77,7 +77,7 @@ try {
     const unknown = structuredClone(report);
     unknown.mission.status="unknown"; unknown.mission.reason="pending_command_retained";
     unknown.facts.goalReached=false; unknown.facts.returned=true;
-    unknown.steps=[unknown.steps[0]]; unknown.steps[0].status="unknown"; unknown.steps[0].position=[5,7];
+    unknown.steps=[unknown.steps[0]]; unknown.steps[0].status="unknown"; if ("execution" in unknown.steps[0]) unknown.steps[0].execution = null; unknown.steps[0].position=[5,7];
     await imported(unknown,"unknown-walk.json");
     assert.match(await page.locator("#replay-description").textContent(), /记录位置 \(5, 7\).*动作结果未确认/);
     assert.equal(await page.locator("#report-status").textContent(),"结果未知");
