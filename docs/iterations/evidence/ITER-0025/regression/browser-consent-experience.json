@@ -1,0 +1,52 @@
+{
+  "suite": "consent-experience-real-chrome",
+  "passed": true,
+  "recordedAtUtc": "2026-10-26T07:19:23.476Z",
+  "browser": "152.0.7977.82",
+  "tests": [
+    {
+      "name": "fresh_proposal_compares_live_picture_and_exact_change_without_mutation",
+      "passed": true,
+      "milliseconds": 193
+    },
+    {
+      "name": "reason_errors_explain_disabled_submission_and_preserve_unicode_count",
+      "passed": true,
+      "milliseconds": 123
+    },
+    {
+      "name": "comparison_refresh_preserves_review_focus_selection_and_draft",
+      "passed": true,
+      "milliseconds": 1273
+    },
+    {
+      "name": "accepted_picture_is_confirmed_history_without_unpublished_markers",
+      "passed": true,
+      "milliseconds": 1798
+    },
+    {
+      "name": "expired_state_is_visible_offsite_to_both_authors_and_never_auto_rejects",
+      "passed": true,
+      "milliseconds": 1651
+    },
+    {
+      "name": "rejected_proposal_labels_unapplied_colors_and_preserves_picture",
+      "passed": true,
+      "milliseconds": 1491
+    },
+    {
+      "name": "later_changes_do_not_rewrite_confirmed_edit_or_confuse_current_picture",
+      "passed": true,
+      "milliseconds": 1556
+    },
+    {
+      "name": "mobile_comparison_has_readable_labels_and_no_horizontal_overflow",
+      "passed": true,
+      "milliseconds": 82
+    }
+  ],
+  "javascriptErrors": [],
+  "actualModelCalls": 0,
+  "serviceStopped": true,
+  "dataRoot": ".local/consent-experience/browser/2026-10-26T07-19-14-067Z"
+}

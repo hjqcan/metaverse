@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "actualModelCalls": 0,
+  "groups": 1,
+  "assertions": 11,
+  "results": [
+    {
+      "name": "before",
+      "checks": [
+        {
+          "name": "actual capability fully validated",
+          "passed": true
+        },
+        {
+          "name": "capability cannot replace original platform",
+          "passed": true
+        },
+        {
+          "name": "missing or damaged evidence preserves pending",
+          "passed": true
+        },
+        {
+          "name": "original version 5 paint record survives JSON reload",
+          "passed": true
+        },
+        {
+          "name": "version 5 original remains visible when connecting to another world",
+          "passed": true
+        },
+        {
+          "name": "changed frozen patch rejected",
+          "passed": true
+        },
+        {
+          "name": "new paint cannot masquerade as old record format",
+          "passed": true
+        },
+        {
+          "name": "validation never replaces original body",
+          "passed": true
+        },
+        {
+          "name": "restarted adapter confirms original immutable edit",
+          "passed": true
+        },
+        {
+          "name": "original success retained even after later current picture changes",
+          "passed": true
+        },
+        {
+          "name": "original disk pending settled",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "sourceSha256": {
+    "clients/godot/command_evidence.gd": "3ab247823db24eff49c027098dec747cc689368e9239696dc3173715b0545594",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_canvas_panel.gd": "c1519805157bee96543980b12c8f883129be15587e6f5e7ca9db4b06bd61a1c6",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/entity_notes_panel.gd": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803",
+    "clients/godot/main.gd": "23bf58f280cba82a69bd7cf5422d057f5884926c9ef225a3c54c9324d3511bd4",
+    "clients/godot/material_panel.gd": "0ca9ce3e6eef38690d9bbc7e77b7e8d75f4bb654e1ab2495e7598aaa632a9798",
+    "clients/godot/pending_store.gd": "525a83101a6ec89726f3729a8e6ca813a684bc84d6cd5cead50544400e8bdcbb",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/world_client.gd": "76fe85a37d6283e5568d4a2591b5918d649df582c8ee27ff8e812fa4deb15975",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "ee0733b03887b49a7f695cf2e8818233f76f667a97edb36dbd5a0f370911caba",
+    "tests/entity_canvas_godot.py": "21ba08ff645a036e33f11a6d1f2ba561af4bf18b66e3151520d0b12e58f86dae",
+    "tests/godot/entity_canvas.gd": "97b1a20229a72ad3643c60d1577bddf932cfbda223cd9b3246b688f655f4d88f"
+  },
+  "sourceUnchanged": true,
+  "dllSha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/original-baseline"
+}

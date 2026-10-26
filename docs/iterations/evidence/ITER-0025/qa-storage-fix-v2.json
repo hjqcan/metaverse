@@ -1,0 +1,238 @@
+{
+  "passed": true,
+  "scope": "independent ITER25 core-v2 actual HTTP/SQLite; fixed reference no models",
+  "binarySha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+  "manifestSha256": "e4420d251edf46268741ef323b55c3b18e085e366cdac7cb49b3901df8f73523",
+  "seed": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T061604041742Z/continued-natural-v2",
+  "seedFilesBefore": {
+    "access.json": {
+      "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+      "bytes": 790,
+      "mtimeNs": 1792988757982573799
+    },
+    "server.log": {
+      "sha256": "8879131f4030c337cf83d1253b77d5c46fb201756acfd5c28f9994a51a0d48b8",
+      "bytes": 55446,
+      "mtimeNs": 1792995379633570681
+    },
+    "final-snapshot.json": {
+      "sha256": "9ab2a9c180995c7ba88e4b0692158a2300d4783acb07a1069d1a1654c1fe0c69",
+      "bytes": 879627,
+      "mtimeNs": 1792995379676572562
+    },
+    "milestones.json": {
+      "sha256": "8ff879c26290bdd978f3ee907955600320d21e5b5a3067715240b128db8a91ad",
+      "bytes": 870,
+      "mtimeNs": 1792995399868921158
+    },
+    "world.db-wal": {
+      "sha256": "bede4dc2ce0aad0459ec9d596fc4f465606cd281077a981fe8db6b27668e79f9",
+      "bytes": 4120032,
+      "mtimeNs": 1792995379485564206
+    },
+    "world.db": {
+      "sha256": "8fe126cafea5df222af4f8fb2cdac97504f44af4eb710f908266969670e85d1c",
+      "bytes": 868352,
+      "mtimeNs": 1792994328681062137
+    },
+    "trace.json": {
+      "sha256": "444ba1148cccc09145a934f7e8fe60d3287a612df27a478f10511c5b51de1f4c",
+      "bytes": 8864,
+      "mtimeNs": 1792995399868856084
+    },
+    "world.db-shm": {
+      "sha256": "f404251b86a3938cffbbd9c0d6cd23e133811a6b13528d4f087d444fe4b72df2",
+      "bytes": 32768,
+      "mtimeNs": 1792996666230907651
+    },
+    "world.db.material-clock.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtimeNs": 1792995372414254903
+    }
+  },
+  "cases": {
+    "fixed_storage_and_original_history": {
+      "passed": true,
+      "retainedCounterexample": {
+        "originalPath": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065339745660Z/malformed-edit-inventory",
+        "originalFilesUnchanged": true,
+        "repeatAdoptionRejected": {
+          "exitCode": 1,
+          "stdout": "",
+          "stderr": "离线管理失败：InvalidOperationException\n"
+        },
+        "coldStartRejectedExit": -6,
+        "noDatabaseMutation": true
+      },
+      "additionalIntegerFieldProbes": [
+        {
+          "name": "edit-state-fraction",
+          "classification": "isolated intentional SQLite REAL field corruption",
+          "adoptionRejected": {
+            "exitCode": 1,
+            "stdout": "",
+            "stderr": "离线管理失败：InvalidOperationException\n"
+          },
+          "coldStartRejectedExit": -6,
+          "noDatabaseMutation": true
+        },
+        {
+          "name": "cell-coordinate-fraction",
+          "classification": "isolated intentional SQLite REAL field corruption",
+          "adoptionRejected": {
+            "exitCode": 1,
+            "stdout": "",
+            "stderr": "离线管理失败：InvalidOperationException\n"
+          },
+          "coldStartRejectedExit": -6,
+          "noDatabaseMutation": true
+        },
+        {
+          "name": "cell-state-fraction",
+          "classification": "isolated intentional SQLite REAL field corruption",
+          "adoptionRejected": {
+            "exitCode": 1,
+            "stdout": "",
+            "stderr": "离线管理失败：InvalidOperationException\n"
+          },
+          "coldStartRejectedExit": -6,
+          "noDatabaseMutation": true
+        }
+      ],
+      "normalSameOriginalHistoryReads": true,
+      "repeatAdoptionOnOriginalValidHistory": {
+        "exitCode": 0,
+        "stdout": "地画已采用，原图和历史保持。\n",
+        "stderr": ""
+      },
+      "noAdditionalNaturalDrawingOrJourney": true,
+      "confirmedNineCellsRevisionTwo": true,
+      "audit": {
+        "schemaVersion": 12,
+        "source": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 168123,
+          "enabled_at_ms": 21047,
+          "next_production_ms": 171047,
+          "production_period": 14,
+          "generated_wood": 33,
+          "stock_wood": 6
+        },
+        "issuedWood": 45,
+        "inventoryWood": 18,
+        "embodiedWood": 21,
+        "sourceWood": 6,
+        "wildWood": 0,
+        "stateVersion": 1054,
+        "receipts": 1034,
+        "originalReceiptsPreserved": 1034,
+        "originalEventsPreserved": 1055,
+        "notes": 2,
+        "entities": 6,
+        "requests": 0,
+        "processStopped": {
+          "pid": 63975,
+          "exitCode": 0
+        },
+        "allStartedProcessesExited": true
+      }
+    }
+  },
+  "worlds": [
+    {
+      "name": "original-real-inventory-counterexample",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065825166839Z/original-real-inventory-counterexample",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065339745660Z/malformed-edit-inventory",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "edit-state-fraction",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065825166839Z/edit-state-fraction",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065014010983Z/natural",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "cell-coordinate-fraction",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065825166839Z/cell-coordinate-fraction",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065014010983Z/natural",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "cell-state-fraction",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065825166839Z/cell-state-fraction",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065014010983Z/natural",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "same-original-natural-history",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065825166839Z/same-original-natural-history",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065014010983Z/natural",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    }
+  ],
+  "actualModelCalls": 0,
+  "naturalDirectSqlEdits": false,
+  "naturalClockControlled": false,
+  "runtimeReuse": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/core-v2/bin/World.Server.dll",
+    "sha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+    "readOnlySharedFrozenBinary": true,
+    "perRunRuntimeCopy": false
+  },
+  "seedFilesAfter": {
+    "access.json": {
+      "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+      "bytes": 790,
+      "mtimeNs": 1792988757982573799
+    },
+    "server.log": {
+      "sha256": "8879131f4030c337cf83d1253b77d5c46fb201756acfd5c28f9994a51a0d48b8",
+      "bytes": 55446,
+      "mtimeNs": 1792995379633570681
+    },
+    "final-snapshot.json": {
+      "sha256": "9ab2a9c180995c7ba88e4b0692158a2300d4783acb07a1069d1a1654c1fe0c69",
+      "bytes": 879627,
+      "mtimeNs": 1792995379676572562
+    },
+    "milestones.json": {
+      "sha256": "8ff879c26290bdd978f3ee907955600320d21e5b5a3067715240b128db8a91ad",
+      "bytes": 870,
+      "mtimeNs": 1792995399868921158
+    },
+    "world.db-wal": {
+      "sha256": "bede4dc2ce0aad0459ec9d596fc4f465606cd281077a981fe8db6b27668e79f9",
+      "bytes": 4120032,
+      "mtimeNs": 1792995379485564206
+    },
+    "world.db": {
+      "sha256": "8fe126cafea5df222af4f8fb2cdac97504f44af4eb710f908266969670e85d1c",
+      "bytes": 868352,
+      "mtimeNs": 1792994328681062137
+    },
+    "trace.json": {
+      "sha256": "444ba1148cccc09145a934f7e8fe60d3287a612df27a478f10511c5b51de1f4c",
+      "bytes": 8864,
+      "mtimeNs": 1792995399868856084
+    },
+    "world.db-shm": {
+      "sha256": "f404251b86a3938cffbbd9c0d6cd23e133811a6b13528d4f087d444fe4b72df2",
+      "bytes": 32768,
+      "mtimeNs": 1792996666230907651
+    },
+    "world.db.material-clock.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtimeNs": 1792995372414254903
+    }
+  },
+  "originalSeedFilesUnchanged": true,
+  "allStartedProcessesExited": true
+}

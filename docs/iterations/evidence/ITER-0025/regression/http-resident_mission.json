@@ -1,0 +1,82 @@
+{
+  "suite": "resident-mission-http-v1",
+  "decisionSource": "test-double",
+  "realModelCalls": 0,
+  "recordedAtUtc": "2026-10-26T07:05:49.542059+00:00",
+  "passed": true,
+  "testsRun": 14,
+  "tests": [
+    {
+      "test": "__main__.MissionAcceptance.test_01_builder_verified_and_completed_resume_is_noop",
+      "passed": true,
+      "seconds": 0.48193324997555465
+    },
+    {
+      "test": "__main__.MissionAcceptance.test_02_pause_resume_retains_full_task_and_cumulative_budget",
+      "passed": true,
+      "seconds": 0.7488716130028479
+    },
+    {
+      "test": "__main__.MissionAcceptance.test_03_command_budget_never_resets_on_resume",
+      "passed": true,
+      "seconds": 0.3583427309640683
+    },
+    {
+      "test": "__main__.MissionAcceptance.test_04_material_budget_is_not_bypassed_by_existing_inventory",
+      "passed": true,
+      "seconds": 0.32298128097318113
+    },
+    {
+      "test": "__main__.MissionAcceptance.test_05_unlisted_goal_is_rejected_before_any_world_action",
+      "passed": true,
+      "seconds": 0.31015619495883584
+    },
+    {
+      "test": "__main__.MissionAcceptance.test_06_model_failure_does_not_retry_or_change_world",
+      "passed": true,
+      "seconds": 0.3077990189776756
+    },
+    {
+      "test": "__main__.MissionAcceptance.test_07_invalid_spec_boolean_budget_and_duplicate_goals",
+      "passed": true,
+      "seconds": 0.30772924795746803
+    },
+    {
+      "test": "__main__.MissionAcceptance.test_08_bridge_commit_then_service_exit_recovers_original_id",
+      "passed": true,
+      "seconds": 0.7964535029605031
+    },
+    {
+      "test": "__main__.MissionAcceptance.test_09_process_exit_after_receipt_before_local_settlement",
+      "passed": true,
+      "seconds": 0.5428502570139244
+    },
+    {
+      "test": "__main__.MissionAcceptance.test_10_identity_and_spec_binding_cannot_be_replaced",
+      "passed": true,
+      "seconds": 0.3418536320095882
+    },
+    {
+      "test": "__main__.MissionAcceptance.test_11_same_state_file_is_mutually_exclusive_across_processes",
+      "passed": true,
+      "seconds": 2.5767134049674496
+    },
+    {
+      "test": "__main__.MissionAcceptance.test_12_elapsed_budget_survives_pause",
+      "passed": true,
+      "seconds": 1.4503629179671407
+    },
+    {
+      "test": "__main__.MissionAcceptance.test_13_context_has_no_credentials_and_free_traveler_uses_public_work",
+      "passed": true,
+      "seconds": 0.6104241629946046
+    },
+    {
+      "test": "__main__.MissionAcceptance.test_14_query_routing_error_cannot_reject_original_pending_command",
+      "passed": true,
+      "seconds": 0.5102830220130272
+    }
+  ],
+  "dataRoot": ".local/iter0003/api/20261026T150539-3298da",
+  "failures": []
+}

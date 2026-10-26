@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "testsRun": 19,
+  "results": [
+    {
+      "name": "old_report_without_canvas_remains_readable",
+      "passed": true
+    },
+    {
+      "name": "first_actual_cli_original_edit_and_snapshot",
+      "passed": true
+    },
+    {
+      "name": "second_actual_cli_keeps_first_author_and_builder_separate",
+      "passed": true
+    },
+    {
+      "name": "lost_response_current_color_cannot_prove_original_success",
+      "passed": true
+    },
+    {
+      "name": "own_later_repaint_preserves_original_success_stops_return",
+      "passed": true
+    },
+    {
+      "name": "original_edit_outside_recent_fifty_still_verified",
+      "passed": true
+    },
+    {
+      "name": "four_query_budget_keeps_confirmed_edit_with_older_snapshot",
+      "passed": true
+    },
+    {
+      "name": "three_queries_do_not_claim_incomplete_proof",
+      "passed": true
+    },
+    {
+      "name": "forged_summary_author_downgrades_completion",
+      "passed": true
+    },
+    {
+      "name": "missing_permission_does_not_confirm_edit",
+      "passed": true
+    },
+    {
+      "name": "missing_queries_and_malformed_patch_rejected",
+      "passed": true
+    },
+    {
+      "name": "wrong_execution_version_is_rejected",
+      "passed": true
+    },
+    {
+      "name": "wrong_adoption_world_is_rejected",
+      "passed": true
+    },
+    {
+      "name": "query_overrun_remains_visible",
+      "passed": true
+    },
+    {
+      "name": "mobile_grid_authors_and_budget_fit",
+      "passed": true
+    },
+    {
+      "name": "forged_budget_downgrades_whole_mission_without_erasing_edit",
+      "passed": true
+    },
+    {
+      "name": "missing_current_picture_preserves_original_confirmed_fact",
+      "passed": true
+    },
+    {
+      "name": "original_unsorted_request_matches_canonical_immutable_edit",
+      "passed": true
+    },
+    {
+      "name": "readonly_no_world_requests_or_errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "worldRequests": [],
+  "browserVersion": "152.0.7977.82",
+  "actualModelCalls": 0
+}

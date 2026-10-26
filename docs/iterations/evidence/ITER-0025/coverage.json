@@ -1,0 +1,576 @@
+{
+  "recordedAtUtc": "2026-10-26T07:28:14.591674+00:00",
+  "actualModelCalls": 0,
+  "fullRegressionPassed": true,
+  "processes": 51,
+  "http": {
+    "suites": 29,
+    "testsRun": 333,
+    "passed": 332,
+    "skipped": [
+      {
+        "suite": "http-entity_notes_mission",
+        "cases": [
+          {
+            "test": "__main__.EntityNoteMissionAcceptance.test_07_old_service_with_and_without_original_receipt_never_blindly_posts",
+            "reason": "ENTITY_NOTES_OLD_DLL is required for the actual old-service probe"
+          }
+        ]
+      }
+    ]
+  },
+  "chrome": {
+    "suites": 20,
+    "testsRun": 199,
+    "passed": 199
+  },
+  "native": {
+    "suites": 11,
+    "groups": 67,
+    "assertions": 902,
+    "sourceUnchanged": false,
+    "scope": "Combined historical and final source coverage; final seven entity-canvas groups used native-v3 unchanged."
+  },
+  "suites": [
+    {
+      "name": "http-foundation",
+      "testsRun": 17,
+      "passed": 17,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-foundation.json",
+      "sha256": "3f9e1b7b106bf52fe9c7aa8c43e9086a92bbd65a054d4ff0553a6b6a83f9cdf5"
+    },
+    {
+      "name": "http-passage",
+      "testsRun": 13,
+      "passed": 13,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-passage.json",
+      "sha256": "c3321dc7aabd3d3b1227b6734611d094da625d522391b274cfe8343b190be5c6"
+    },
+    {
+      "name": "http-resident_mission",
+      "testsRun": 14,
+      "passed": 14,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-resident_mission.json",
+      "sha256": "7043347272eb91e0ed3e6432161febe3f64f5c635a082d29fe8f3f35360e44a7"
+    },
+    {
+      "name": "http-activities",
+      "testsRun": 15,
+      "passed": 15,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-activities.json",
+      "sha256": "440594676cee13d8a8282c449480be5b1f2472d9d453eb3b26a3ed273fb1aefc"
+    },
+    {
+      "name": "http-postcards",
+      "testsRun": 17,
+      "passed": 17,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-postcards.json",
+      "sha256": "c812b66231d2e74de5d1d5ae46da9e5df4cc0c846fc4cc06e9574ad3edf027b8"
+    },
+    {
+      "name": "http-mosaic",
+      "testsRun": 17,
+      "passed": 17,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-mosaic.json",
+      "sha256": "5f35c9e35fad9cc77a72002d839ad606fa9978d0e5dcee3ce39ec0078b6b67cb"
+    },
+    {
+      "name": "http-consent",
+      "testsRun": 19,
+      "passed": 19,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-consent.json",
+      "sha256": "ecd3e53621e29924a15f92ac8a114d8ca1eaf6ed4df7ae89ad181cffdfe6e7dc"
+    },
+    {
+      "name": "http-inbox",
+      "testsRun": 17,
+      "passed": 17,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-inbox.json",
+      "sha256": "985fbda073d99667e6cb5ee4f86d47c8d2f0f11b54d03e26cf50b3b7f6b10604"
+    },
+    {
+      "name": "http-entry_guide",
+      "testsRun": 9,
+      "passed": 9,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-entry_guide.json",
+      "sha256": "85151ccca02d7b68530a9c91b5edd57558b9f41bb2268b965a316885500bca1b"
+    },
+    {
+      "name": "http-wilderness",
+      "testsRun": 16,
+      "passed": 16,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-wilderness.json",
+      "sha256": "3a205a0962de55eff131fd3c30b46d85a1e7743ce9a3ab7c26e3c7bc9513d335"
+    },
+    {
+      "name": "http-wilderness_mission",
+      "testsRun": 13,
+      "passed": 13,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-wilderness_mission.json",
+      "sha256": "8ccf69b41456b2f8b74c02e759b9c3ec4adb9f4c196f0af49cfdb31ae9e22f77"
+    },
+    {
+      "name": "http-continuous",
+      "testsRun": 12,
+      "passed": 12,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-continuous.json",
+      "sha256": "52b79883383aba1a2d0e29ee27ce0c63b1ea2beb7a3300627e7894119c04529b"
+    },
+    {
+      "name": "http-continuous_mission",
+      "testsRun": 11,
+      "passed": 11,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-continuous_mission.json",
+      "sha256": "a838ae9fa71fa26d4f86452fdaf87beabf7ac530a5fba353d0294498a453e88b"
+    },
+    {
+      "name": "http-world_instance",
+      "testsRun": 8,
+      "passed": 8,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-world_instance.json",
+      "sha256": "11b249699ed202cd872eb103066effa9c87f466b6bc42f6c8f848bfc4b4ca16f"
+    },
+    {
+      "name": "http-construction_mission",
+      "testsRun": 13,
+      "passed": 13,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-construction_mission.json",
+      "sha256": "ad7acb3932ca17788e8669bf08ee10c9a8bc31234acffa35af242d31c3aa382f"
+    },
+    {
+      "name": "http-instance_mission",
+      "testsRun": 5,
+      "passed": 5,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-instance_mission.json",
+      "sha256": "4e05ac2a2f6b839b6b3eb246f67dda1d50b09352b3ce732c024873c7785b98c0"
+    },
+    {
+      "name": "http-actor_state",
+      "testsRun": 10,
+      "passed": 10,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-actor_state.json",
+      "sha256": "12f8a8f890897418d1d6bf8e36017995b4b2a73e254a936e4eeff2723a43295e"
+    },
+    {
+      "name": "http-actor_mission",
+      "testsRun": 12,
+      "passed": 12,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-actor_mission.json",
+      "sha256": "0d19e911fd208d64a6cd7aa5598e4f5c91ac988b4493081d931a0adda3e24f40"
+    },
+    {
+      "name": "http-material_transfer",
+      "testsRun": 9,
+      "passed": 9,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-material_transfer.json",
+      "sha256": "0a2ce996ad533a8594aa61ba15a9ae6b6764cbc37aca9da26d159bc108231593"
+    },
+    {
+      "name": "http-transfer_mission",
+      "testsRun": 10,
+      "passed": 10,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-transfer_mission.json",
+      "sha256": "f2336c5be46527ed0da20437d4ea8080e2e6b888053297dd5f02a401e2e26a46"
+    },
+    {
+      "name": "http-material_access",
+      "testsRun": 8,
+      "passed": 8,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-material_access.json",
+      "sha256": "dce989a0aeee55492cda9141405128b3c72f9efd4ee6e4c9cf78a186b41fd3cd"
+    },
+    {
+      "name": "http-material_access_time",
+      "testsRun": 2,
+      "passed": 2,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-material_access_time.json",
+      "sha256": "db2439f77d4ccaec66dc57fd761b43a29681c8894d0a3339874cc49eea75d4ea"
+    },
+    {
+      "name": "http-material_access_mission",
+      "testsRun": 11,
+      "passed": 11,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-material_access_mission.json",
+      "sha256": "4ada90076788833542522b174773600da2d3fcee7a1dd0fe257ac907289f3c80"
+    },
+    {
+      "name": "http-entity_notes",
+      "testsRun": 2,
+      "passed": 2,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-entity_notes.json",
+      "sha256": "e28a8a0ba233f4d8f8edb9c4e692784a46e6340ca018e6306846490f378b1a7f"
+    },
+    {
+      "name": "http-entity_notes_mission",
+      "testsRun": 13,
+      "passed": 12,
+      "skipped": 1,
+      "exitCode": 0,
+      "evidence": "regression/http-entity_notes_mission.json",
+      "sha256": "3af4f7e635eb73228544752cbdbb1c9f887b59dcb9b1c7b2039d30ba68452dde"
+    },
+    {
+      "name": "http-continuous_material",
+      "testsRun": 13,
+      "passed": 13,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-continuous_material.json",
+      "sha256": "283527cdef0f3aad591d7b7665e1ee55aa8267a3833aba3a9235be3c601dc1af"
+    },
+    {
+      "name": "http-continuous_material_mission",
+      "testsRun": 10,
+      "passed": 10,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-continuous_material_mission.json",
+      "sha256": "89fcb3da53b0ab7656df9980801fb8f569f6ea641cb4425c0d516fce2dd61d7e"
+    },
+    {
+      "name": "http-entity_canvas",
+      "testsRun": 9,
+      "passed": 9,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-entity_canvas.json",
+      "sha256": "7865efe4b4e00b4425eedf670bf5991fbec30ae311a20d764fbd5402a591d925"
+    },
+    {
+      "name": "http-entity_canvas_mission",
+      "testsRun": 8,
+      "passed": 8,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/http-entity_canvas_mission.json",
+      "sha256": "bb37ff64bae656f5a4cab277c7175890247a55d7fee6759809a2c9898062a8a4"
+    },
+    {
+      "name": "browser-foundation",
+      "testsRun": 10,
+      "passed": 10,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-foundation.json",
+      "sha256": "fc386644bf9b9e9a821012c740ff8bdb082f7c122b2fd9453e3aa18f0fbcd6c0"
+    },
+    {
+      "name": "browser-passage",
+      "testsRun": 8,
+      "passed": 8,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-passage.json",
+      "sha256": "3330515e226eb6bd6245e689e86337969136f1f4e3ef28df052c094213d5d343"
+    },
+    {
+      "name": "browser-resident",
+      "testsRun": 8,
+      "passed": 8,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-resident.json",
+      "sha256": "bc79772c9873f855a1013f94ba380fde547331a28063b661c3eca677456d683e"
+    },
+    {
+      "name": "browser-activities",
+      "testsRun": 10,
+      "passed": 10,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-activities.json",
+      "sha256": "f9d6b9149a01ff9f43a303f149391c4e046361c695df136f668b4388e24c7f4f"
+    },
+    {
+      "name": "browser-postcards",
+      "testsRun": 12,
+      "passed": 12,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-postcards.json",
+      "sha256": "44a4561e53d892c0113fe308ec42fe08e0decb11a7eb74987fd491fb0ad43b95"
+    },
+    {
+      "name": "browser-mosaic",
+      "testsRun": 12,
+      "passed": 12,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-mosaic.json",
+      "sha256": "9671a6d63bfafe7dfca17d2ffc22f12515534b811d71f47c5e9cf014e941ca35"
+    },
+    {
+      "name": "browser-consent",
+      "testsRun": 11,
+      "passed": 11,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-consent.json",
+      "sha256": "8044b3e408cc37b330128efb2c4c694570120fa07e9e463c127ef2e115dd4aaf"
+    },
+    {
+      "name": "browser-inbox",
+      "testsRun": 13,
+      "passed": 13,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-inbox.json",
+      "sha256": "16ccf83a8631e87d721cb19f945837dee9d94387356fe304ae41336135abb62c"
+    },
+    {
+      "name": "browser-consent-experience",
+      "testsRun": 8,
+      "passed": 8,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-consent-experience.json",
+      "sha256": "46004a8efd57a99ecfb926972a5c7bb684a3f70ca4f0eab1d0dbcca32640df53"
+    },
+    {
+      "name": "browser-entry",
+      "testsRun": 10,
+      "passed": 10,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-entry.json",
+      "sha256": "eb35055710899413ad8023eed6264cc68749e7d883f59fb1ceddec30fa4826cb"
+    },
+    {
+      "name": "browser-wilderness",
+      "testsRun": 11,
+      "passed": 11,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-wilderness.json",
+      "sha256": "39c671dcb0f7e78b7e260f8a5c2e50f18d744db1756e330b9dc93791bb4385bd"
+    },
+    {
+      "name": "browser-wilderness-resident",
+      "testsRun": 6,
+      "passed": 6,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-wilderness-resident.json",
+      "sha256": "817bd7ba5776c9db5aa587f22476e2725e72c9f7ecfbed3b40f272b053299563"
+    },
+    {
+      "name": "browser-continuous-resident",
+      "testsRun": 7,
+      "passed": 7,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-continuous-resident.json",
+      "sha256": "60672597ad579139542133a48774db2763c1a8afd3fb58012595011cd169ee89"
+    },
+    {
+      "name": "browser-construction-resident",
+      "testsRun": 8,
+      "passed": 8,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-construction-resident.json",
+      "sha256": "1409866f7ef94a7fe32246f668d58eecb4bcfcd3efc128c1a7d47a695914af4a"
+    },
+    {
+      "name": "browser-actor-resident",
+      "testsRun": 9,
+      "passed": 9,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-actor-resident.json",
+      "sha256": "e2ac5de7bf0424f313a078e75cc769d48e5b3f2a9a3cf9d1e6d04cadb31bcf7b"
+    },
+    {
+      "name": "browser-transfer-resident",
+      "testsRun": 11,
+      "passed": 11,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-transfer-resident.json",
+      "sha256": "6c0f1e889b21712f83c9861c1ad7cbd3f1f66433e99a72d226f3327145b62244"
+    },
+    {
+      "name": "browser-material-resident",
+      "testsRun": 8,
+      "passed": 8,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-material-resident.json",
+      "sha256": "f934b274caa0c5cc2c6ee76e2b521d6a39f9dd7f6d2a4e879982ff214e0c5140"
+    },
+    {
+      "name": "browser-entity-note-resident",
+      "testsRun": 8,
+      "passed": 8,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-entity-note-resident.json",
+      "sha256": "30c99fdbcd8e980d093ca33401f7a09f89aa9e124966bed49288302ca16b99ee"
+    },
+    {
+      "name": "browser-continuous-material-resident",
+      "testsRun": 10,
+      "passed": 10,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-continuous-material-resident.json",
+      "sha256": "cba7ca5006f1a9e8363feab15af800d3ff224975fe4d40d3b1b6b805d9ae3a76"
+    },
+    {
+      "name": "browser-entity-canvas-resident",
+      "testsRun": 19,
+      "passed": 19,
+      "skipped": 0,
+      "exitCode": 0,
+      "evidence": "regression/browser-entity-canvas-resident.json",
+      "sha256": "7288dad8cca31b2e7757b5ccfcf0bed9966c17ed09e09c276ddce26a718803f5"
+    },
+    {
+      "name": "native-godot_recovery",
+      "groups": 6,
+      "assertions": 400,
+      "exitCode": 0,
+      "evidence": "regression/native-godot_recovery.json",
+      "sourceUnchanged": null,
+      "sha256": "58191d50a776c068b4ffecc2a0db3425591f74a273f5826d09f70dff1ac6ac52"
+    },
+    {
+      "name": "native-world_instance_godot",
+      "groups": 9,
+      "assertions": 27,
+      "exitCode": 0,
+      "evidence": "regression/native-world_instance_godot.json",
+      "sourceUnchanged": null,
+      "sha256": "1ba0ae852a6f58661139f9ebdcd6aff799c0a3aa90c1641279c157b2baaa81e4"
+    },
+    {
+      "name": "native-continuous_godot",
+      "groups": 9,
+      "assertions": 56,
+      "exitCode": 0,
+      "evidence": "regression/native-continuous_godot.json",
+      "sourceUnchanged": null,
+      "sha256": "ef2ca08c8798dd6a6563a150fcfa586834aaad45b293f02e6b5f686a2a148ab5"
+    },
+    {
+      "name": "native-godot_navigation",
+      "groups": 5,
+      "assertions": 42,
+      "exitCode": 0,
+      "evidence": "regression/native-godot_navigation.json",
+      "sourceUnchanged": null,
+      "sha256": "e169a7aa4b7cb0e615a80188df03c6e02d18246135438834652082793a251385"
+    },
+    {
+      "name": "native-actor_state_godot",
+      "groups": 6,
+      "assertions": 43,
+      "exitCode": 0,
+      "evidence": "regression/native-actor_state_godot.json",
+      "sourceUnchanged": null,
+      "sha256": "c830ad12dc75a69853b625fa1b4cc90c6cba2c3e4ce9c1a46731fcd3f70bd9ad"
+    },
+    {
+      "name": "native-godot_attribution",
+      "groups": 1,
+      "assertions": 27,
+      "exitCode": 0,
+      "evidence": "regression/native-godot_attribution.json",
+      "sourceUnchanged": null,
+      "sha256": "14eb77ee3e60e89ad1cb0f0266b93e846a6cb8e8897aac76f0feb14e854f0dd6"
+    },
+    {
+      "name": "native-transfer_godot",
+      "groups": 5,
+      "assertions": 35,
+      "exitCode": 0,
+      "evidence": "regression/native-transfer_godot.json",
+      "sourceUnchanged": null,
+      "sha256": "a971538dbe86461e6b70f120d635455cb6ae536363820d3fb437e91825dee9c6"
+    },
+    {
+      "name": "native-material_access_godot",
+      "groups": 9,
+      "assertions": 75,
+      "exitCode": 0,
+      "evidence": "regression/native-material_access_godot.json",
+      "sourceUnchanged": false,
+      "sha256": "1ef2a1cced99a37db00d3e0cd5ae34e385e5506d6ee3e60d3f9357749f32c326"
+    },
+    {
+      "name": "native-entity_notes_godot",
+      "groups": 6,
+      "assertions": 62,
+      "exitCode": 0,
+      "evidence": "regression/native-entity_notes_godot.json",
+      "sourceUnchanged": true,
+      "sha256": "fd8c3708e48fef24f663666f5eb6d5c8bd40b0d62f2188f3297f56752e0df1b7"
+    },
+    {
+      "name": "native-continuous_material_godot",
+      "groups": 4,
+      "assertions": 47,
+      "exitCode": 0,
+      "evidence": "regression/native-continuous_material_godot.json",
+      "sourceUnchanged": true,
+      "sha256": "4b890b66d2dd4c778f43452b4bcdcdfed292add84a7a2623b8c942332d9cb3f5"
+    },
+    {
+      "name": "native-entity_canvas_godot",
+      "groups": 7,
+      "assertions": 88,
+      "exitCode": 0,
+      "evidence": "regression/native-entity_canvas_godot.json",
+      "sourceUnchanged": true,
+      "sha256": "98bee01f588d64f57033828b4d68872f7fd270517b92f7a9ca3a1cb630028635"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "suite": "actor-mission-http",
+  "actualModelCalls": 0,
+  "decisionSource": "test-double",
+  "passed": true,
+  "testsRun": 12,
+  "tests": [
+    {
+      "test": "__main__.ActorMissionAcceptance.test_01_real_interference_all_actions_finish_one_platform",
+      "passed": true,
+      "seconds": 13.796057529980317
+    },
+    {
+      "test": "__main__.ActorMissionAcceptance.test_02_same_actor_aba_stops_original_task_after_rejection",
+      "passed": true,
+      "seconds": 0.8542453999980353
+    },
+    {
+      "test": "__main__.ActorMissionAcceptance.test_03_other_resident_takes_one_wood_before_the_same_gather",
+      "passed": true,
+      "seconds": 52.17337553401012
+    },
+    {
+      "test": "__main__.ActorMissionAcceptance.test_04_before_commit_exit_retries_same_mode_body_and_id",
+      "passed": true,
+      "seconds": 5.724862980947364
+    },
+    {
+      "test": "__main__.ActorMissionAcceptance.test_05_after_commit_exit_keeps_execution_and_completed_offline_read",
+      "passed": true,
+      "seconds": 5.5873728939914145
+    },
+    {
+      "test": "__main__.ActorMissionAcceptance.test_06_false_walk_execution_retains_pending",
+      "passed": true,
+      "seconds": 4.452448152995203
+    },
+    {
+      "test": "__main__.ActorMissionAcceptance.test_07_false_gather_execution_retains_pending",
+      "passed": true,
+      "seconds": 5.429845364007633
+    },
+    {
+      "test": "__main__.ActorMissionAcceptance.test_08_false_build_execution_retains_pending",
+      "passed": true,
+      "seconds": 5.1327440979657695
+    },
+    {
+      "test": "__main__.ActorMissionAcceptance.test_09_false_gather_transaction_quantities_retain_pending",
+      "passed": true,
+      "seconds": 5.300716470985208
+    },
+    {
+      "test": "__main__.ActorMissionAcceptance.test_10_legacy_and_new_strict_tasks_do_not_upgrade_on_resume",
+      "passed": true,
+      "seconds": 1.7475828839815222
+    },
+    {
+      "test": "__main__.ActorMissionAcceptance.test_11_mode_and_before_record_corruption_never_contacts_world",
+      "passed": true,
+      "seconds": 4.775862983020488
+    },
+    {
+      "test": "__main__.ActorMissionAcceptance.test_12_rejected_execution_must_match_before_pending_is_cleared",
+      "passed": true,
+      "seconds": 0.6336120759951882
+    }
+  ],
+  "sourceHashesBefore": {
+    "scripts/command_preconditions.py": "58e6fc548fa75cf97026f046e3853259dbe98e22d721655fe56837ea577e7b8d",
+    "scripts/resident_mission.py": "937c751442240d329898ed09954ff42096e143950c3abbd3b437cf7ca410ebad",
+    "scripts/continuous_navigation.py": "0303f9ade6ce90e48a85fbf8e5a5aaff145ca0a305562cee4c0d0bb1cb21e578",
+    "scripts/wilderness_materials.py": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6",
+    "scripts/resident_construction.py": "eef4aa235fb0fdf2428b17005381074bb1f773f3ac21d600b2c095e96c1b6411",
+    "scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+    "src/World.Server/wwwroot/resident.js": "70db026e79198f9ff3a0207a6b1f7cb1f3f94eff9c4493e516e316fd78a962f8",
+    "tests/actor_mission_api.py": "5151c1a1d6dff76df082262fe222e4b1fc43de819fc7c4298e4b9cb15e19e796"
+  },
+  "sourceHashesAfter": {
+    "scripts/command_preconditions.py": "58e6fc548fa75cf97026f046e3853259dbe98e22d721655fe56837ea577e7b8d",
+    "scripts/resident_mission.py": "937c751442240d329898ed09954ff42096e143950c3abbd3b437cf7ca410ebad",
+    "scripts/continuous_navigation.py": "0303f9ade6ce90e48a85fbf8e5a5aaff145ca0a305562cee4c0d0bb1cb21e578",
+    "scripts/wilderness_materials.py": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6",
+    "scripts/resident_construction.py": "eef4aa235fb0fdf2428b17005381074bb1f773f3ac21d600b2c095e96c1b6411",
+    "scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+    "src/World.Server/wwwroot/resident.js": "70db026e79198f9ff3a0207a6b1f7cb1f3f94eff9c4493e516e316fd78a962f8",
+    "tests/actor_mission_api.py": "5151c1a1d6dff76df082262fe222e4b1fc43de819fc7c4298e4b9cb15e19e796"
+  },
+  "sourceStable": true,
+  "allStartedServicesStopped": true,
+  "serverDllSha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+  "failures": []
+}

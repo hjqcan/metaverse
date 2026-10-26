@@ -268,3 +268,15 @@ Python任务套件有13组，包括真实CLI、原命令提交前后进程退出
 报告页测试 `node tests/browser/continuous-material-resident.mjs` 默认执行两组真实Python任务并导入完成报告及 queries=4 预算耗尽报告；也可同时设置 `CONTINUOUS_MATERIAL_REPORT_FILE`、`CONTINUOUS_MATERIAL_QUERY_REPORT_FILE` 复用已完成产物。10项Chrome检查包含持续政策、原预约/领取/建设分列、未知或损坏政策、旧报告、390px及零世界请求。
 
 新测试直接共用只读服务程序集，避免为每组复制全部平台运行库。按用户的容量要求，`scripts/check.py` 在一套结束且没有进程引用后回收该套目录中的可再生成程序和运行库，保留世界、原命令、结果及截图，清单写入总结果。独立 QA 和原生专项完成后同样清理自己的临时副本；版本对照仍在使用的少量二进制保留至验收结束。
+
+### ITER-0025 原平台共同地画
+
+`npm run test:entity-canvas` 依次运行9组服务端、8组Python任务、7组Godot和19项Chrome检查；普通 `npm test` 包含两套HTTP及报告页，`npm run test:godot` 包含原生检查。各套默认用真实旧采集／建造／手记／持续材料命令建立隔离基线，不依赖某次本机QA目录，不通过SQL制造资源或作品。
+
+复用已停服的原世界时，同时设置 `ENTITY_CANVAS_BASELINE=/原世界目录` 和 `ENTITY_CANVAS_ENTITY_ID=原平台ID`，目录须有 `world.db` 与 `access.json`。复制时一并处理WAL，在副本上检查点，原库不启动；测试从实际实例和库存建立基准。`WORLD_SERVER_DLL` 指向只读冻结程序。`ENTITY_CANVAS_OLD_DLL` 可提供采用前的服务，验证存储12冷启动拒绝；不提供时只跳过该旧程序组，结果明确记录。
+
+服务端覆盖原历史接续、原子署名和版本冲突、不可变原修改、超过最近50条的精确读取，以及实际SQLite小数字段损坏拒绝。绘制不记材料账；正常后台生产单独守恒。Python验证实际CLI、原请求恢复、本人后续动作停止旧返程、累计查询和损坏存档；作者部分传输故障使用明确request替身，独立HTTP代理结论单列。
+
+`ENTITY_CANVAS_REPORT_DIR=/任务套件结果目录 node tests/browser/entity-canvas-resident.mjs` 可复用实际CLI、本人后来重画、超过50条历史和查询耗尽报告；不提供时实际运行相应四组任务。页面区分最后观察的图与本次原修改；4次查询完成三方确认后可能仍只有旧快照，成功事实保留，预算耗尽与实际返回状态另计。报告只检查文件自身一致性，公开报告不含全部失败查询日志，不能据此认证线上世界或恢复每次查询。
+
+Godot检查真实鼠标网格和色板、图面刷新、关闭草图、断线前后同body恢复及错误回执／事件／原edit。渲染与故障分支不冒充自然活动时间线；独立自然三阶段截图、旧恢复格式兼容与来源指纹见本轮结果报告。实际模型调用均为0。

@@ -1,0 +1,60 @@
+{
+  "suite": "entity-canvas-mission-http",
+  "validationLevel": "builder-self-check",
+  "actualModelCalls": 0,
+  "passed": true,
+  "testsRun": 4,
+  "tests": [
+    {
+      "test": "__main__.EntityCanvasMissionAcceptance.test_01_actual_cli_two_original_round_trips",
+      "passed": true,
+      "seconds": 43.919141663005576
+    },
+    {
+      "test": "__main__.EntityCanvasMissionAcceptance.test_04_old_success_after_own_repaint_keeps_fact_stops_route",
+      "passed": true,
+      "seconds": 4.723166806972586
+    },
+    {
+      "test": "__main__.EntityCanvasMissionAcceptance.test_05_older_than_recent_fifty_still_confirms_original_edit",
+      "passed": true,
+      "seconds": 18.794635789003223
+    },
+    {
+      "test": "__main__.EntityCanvasMissionAcceptance.test_07_first_failed_observation_and_query_budget_are_durable",
+      "passed": true,
+      "seconds": 16.891518015996553
+    }
+  ],
+  "sourceHashesBefore": {
+    "scripts/resident_entity_canvas.py": "9902931488e74a71448cfddfab72efae77ed56f4b45f8a028d727638398fde2d",
+    "scripts/resident_mission.py": "937c751442240d329898ed09954ff42096e143950c3abbd3b437cf7ca410ebad",
+    "scripts/command_preconditions.py": "58e6fc548fa75cf97026f046e3853259dbe98e22d721655fe56837ea577e7b8d",
+    "scripts/run_resident.py": "27a7eec6f57c7ac52717131058024c861d8def4d097ae81bd7f8362a214ef417",
+    "tests/entity_canvas_mission_api.py": "af23dc157e0ceec8e0781cb6414543fcc8e4d5221ad17a817f02a2a6c650b237",
+    "tests/fixtures/entity-canvas-first.json": "7f283c58ff949f921c0effa71af5f3db4c38fafff24085cfb149edf84b65fb18",
+    "tests/fixtures/entity-canvas-second.json": "163c98c363f2dae86f85622615e14b534027aaf97b4183839df33852a2b3f6fe"
+  },
+  "sourceHashesAfter": {
+    "scripts/resident_entity_canvas.py": "9902931488e74a71448cfddfab72efae77ed56f4b45f8a028d727638398fde2d",
+    "scripts/resident_mission.py": "937c751442240d329898ed09954ff42096e143950c3abbd3b437cf7ca410ebad",
+    "scripts/command_preconditions.py": "58e6fc548fa75cf97026f046e3853259dbe98e22d721655fe56837ea577e7b8d",
+    "scripts/run_resident.py": "27a7eec6f57c7ac52717131058024c861d8def4d097ae81bd7f8362a214ef417",
+    "tests/entity_canvas_mission_api.py": "af23dc157e0ceec8e0781cb6414543fcc8e4d5221ad17a817f02a2a6c650b237",
+    "tests/fixtures/entity-canvas-first.json": "7f283c58ff949f921c0effa71af5f3db4c38fafff24085cfb149edf84b65fb18",
+    "tests/fixtures/entity-canvas-second.json": "163c98c363f2dae86f85622615e14b534027aaf97b4183839df33852a2b3f6fe"
+  },
+  "sourceStable": true,
+  "allStartedServicesStopped": true,
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/python/20261026T072157Z-94f780/seed/continued",
+  "baselineHashes": {
+    "world.db": "98e018bf0807dac2934c90ceeeb0ce84c992e7ae65ad35fef3e9784e16e35ffb",
+    "world.db-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "dll": "/home/wangjunfeng/文档/Workspace/metaverse/src/World.Server/bin/Debug/net10.0/World.Server.dll",
+  "dllSha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+  "dllStable": true,
+  "runtimeMode": "shared-immutable-input",
+  "temporaryRuntimeCreated": false,
+  "failureDetails": []
+}

@@ -1,0 +1,19 @@
+{
+  "checkConstraintsIgnored": 0,
+  "integrityCheck": [
+    "ok"
+  ],
+  "rawInventory": [
+    [
+      "ee3c85a5d0f74313bf703a35301faa0e",
+      0.5,
+      "real"
+    ],
+    [
+      "7590f71def004084ad8f7685fe496a77",
+      9,
+      "integer"
+    ]
+  ],
+  "triggersRestored": 1
+}

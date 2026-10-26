@@ -1,0 +1,113 @@
+{
+  "passed": false,
+  "scope": "independent native-v1 on core-v2",
+  "binarySha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+  "manifestSha256": "e4420d251edf46268741ef323b55c3b18e085e366cdac7cb49b3901df8f73523",
+  "seed": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T061604041742Z/continued-natural-v2",
+  "seedFilesBefore": {
+    "access.json": {
+      "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+      "bytes": 790,
+      "mtimeNs": 1792988757982573799
+    },
+    "server.log": {
+      "sha256": "8879131f4030c337cf83d1253b77d5c46fb201756acfd5c28f9994a51a0d48b8",
+      "bytes": 55446,
+      "mtimeNs": 1792995379633570681
+    },
+    "final-snapshot.json": {
+      "sha256": "9ab2a9c180995c7ba88e4b0692158a2300d4783acb07a1069d1a1654c1fe0c69",
+      "bytes": 879627,
+      "mtimeNs": 1792995379676572562
+    },
+    "milestones.json": {
+      "sha256": "8ff879c26290bdd978f3ee907955600320d21e5b5a3067715240b128db8a91ad",
+      "bytes": 870,
+      "mtimeNs": 1792995399868921158
+    },
+    "world.db-wal": {
+      "sha256": "bede4dc2ce0aad0459ec9d596fc4f465606cd281077a981fe8db6b27668e79f9",
+      "bytes": 4120032,
+      "mtimeNs": 1792995379485564206
+    },
+    "world.db": {
+      "sha256": "8fe126cafea5df222af4f8fb2cdac97504f44af4eb710f908266969670e85d1c",
+      "bytes": 868352,
+      "mtimeNs": 1792994328681062137
+    },
+    "trace.json": {
+      "sha256": "444ba1148cccc09145a934f7e8fe60d3287a612df27a478f10511c5b51de1f4c",
+      "bytes": 8864,
+      "mtimeNs": 1792995399868856084
+    },
+    "world.db-shm": {
+      "sha256": "f404251b86a3938cffbbd9c0d6cd23e133811a6b13528d4f087d444fe4b72df2",
+      "bytes": 32768,
+      "mtimeNs": 1792996666230907651
+    },
+    "world.db.material-clock.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtimeNs": 1792995372414254903
+    }
+  },
+  "cases": {},
+  "worlds": [
+    {
+      "name": "near-native-fixture",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-godot-20261026T071015082014Z/near-native-fixture",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065014010983Z/natural/stage-blank",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "native-paint-before",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-godot-20261026T071015082014Z/native-paint-before",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-godot-20261026T071015082014Z/near-native-fixture",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    }
+  ],
+  "actualModelCalls": 0,
+  "naturalDirectSqlEdits": false,
+  "naturalClockControlled": false,
+  "runtimeReuse": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/core-v2/bin/World.Server.dll",
+    "sha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+    "readOnlySharedFrozenBinary": true,
+    "perRunRuntimeCopy": false
+  },
+  "godotManifest": {
+    "coreDll": ".local/iter0025/core-v2/bin/World.Server.dll",
+    "coreSha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+    "sourceSha256": {
+      "clients/godot/command_evidence.gd": "3ab247823db24eff49c027098dec747cc689368e9239696dc3173715b0545594",
+      "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+      "clients/godot/entity_canvas_panel.gd": "c1519805157bee96543980b12c8f883129be15587e6f5e7ca9db4b06bd61a1c6",
+      "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+      "clients/godot/entity_notes_panel.gd": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803",
+      "clients/godot/main.gd": "23bf58f280cba82a69bd7cf5422d057f5884926c9ef225a3c54c9324d3511bd4",
+      "clients/godot/material_panel.gd": "0ca9ce3e6eef38690d9bbc7e77b7e8d75f4bb654e1ab2495e7598aaa632a9798",
+      "clients/godot/pending_store.gd": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+      "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+      "clients/godot/world_client.gd": "5d2f16689a9bb668f706288f11c761802359482073a332b5b0ea37e8749ba39f",
+      "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+      "clients/godot/world_view.gd": "ee0733b03887b49a7f695cf2e8818233f76f667a97edb36dbd5a0f370911caba",
+      "clients/godot/main.tscn": "58496e2c5357a2774f2a70f19d0dcb9a015167d8bf9849dc68f4f20a7841e6b1",
+      "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424"
+    },
+    "authorReports": [
+      ".local/iter0025/godot/20261026T065653Z-0751e3/results.json",
+      ".local/iter0025/godot/20261026T070155Z-c3b123/results.json"
+    ]
+  },
+  "shaderSha256": "b5de02167c429ce338fff61bb0ad180aa4d2d1b7c5c1e96f3cbce3f4ba88631b",
+  "wrapperSha256": "bfe1a81d8e9b88f1aea28b5fcd79393592a945243f426b05f46d6be5563e4b36",
+  "failure": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-godot.py\", line 236, in <module>\n    report['cases'][name]=globals()[name]();save(OUT/'results.json',report);print(json.dumps({'case':name,'passed':True}),flush=True)\n                          ^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-godot.py\", line 168, in pending_recovery\n    raw=(d/'pending.json').read_bytes();posts=len(p.posts)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1021, in read_bytes\n    with self.open(mode='rb') as f:\n         ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1015, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-godot-20261026T071015082014Z/native-paint-before-client/pending.json'\n",
+  "originalSeedFilesUnchanged": true,
+  "allStartedProcessesExited": true,
+  "cleanedRegenerableCaches": [
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-godot-20261026T071015082014Z/prior-41aa448/.godot",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-godot-20261026T071015082014Z/clients/godot/.godot"
+  ]
+}

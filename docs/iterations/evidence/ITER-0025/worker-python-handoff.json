@@ -1,0 +1,215 @@
+{
+  "status": "frozen-for-coordinator-integration",
+  "validationLevel": "builder-self-check",
+  "testsRun": 8,
+  "passed": true,
+  "result": ".local/iter0025/python/20261026T065216Z-072bdc/results.json",
+  "sourceHashes": {
+    "scripts/resident_entity_canvas.py": "9902931488e74a71448cfddfab72efae77ed56f4b45f8a028d727638398fde2d",
+    "scripts/resident_mission.py": "937c751442240d329898ed09954ff42096e143950c3abbd3b437cf7ca410ebad",
+    "scripts/command_preconditions.py": "58e6fc548fa75cf97026f046e3853259dbe98e22d721655fe56837ea577e7b8d",
+    "scripts/run_resident.py": "27a7eec6f57c7ac52717131058024c861d8def4d097ae81bd7f8362a214ef417",
+    "tests/entity_canvas_mission_api.py": "285059d29ce8db33bbb64642017835545e74f9c1e54c0fe3601674de3d29b482",
+    "tests/fixtures/entity-canvas-first.json": "7f283c58ff949f921c0effa71af5f3db4c38fafff24085cfb149edf84b65fb18",
+    "tests/fixtures/entity-canvas-second.json": "163c98c363f2dae86f85622615e14b534027aaf97b4183839df33852a2b3f6fe"
+  },
+  "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/core-v1/bin/World.Server.dll",
+  "dllSha256": "98b42fb7156fd5ac4d44c52f9c1896255ace3b5786e4c1a025b2edee68117c9b",
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/original-baseline",
+  "baselineHashes": {
+    "world.db": "677d359c225d73973128d4780f8ea8cb334a5e86a1378f6a539388e03a42006e",
+    "world.db-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "allStartedServicesStopped": true,
+  "temporaryRuntimeCreated": false,
+  "actualModelCalls": 0,
+  "selectionBudgetNote": "used.modelCalls=1 is the fixed selection slot, no model invocation",
+  "examples": [
+    {
+      "path": ".local/iter0025/python/20261026T065216Z-072bdc/test_01_actual_cli_two_original_round_trips-world/a1_alias-report.json",
+      "sha256": "9f0f8ac57efcdddc71d49fc89c1a7ad87ac88902041635b75d086e25f22fd566",
+      "actor": "a1_alias",
+      "status": "completed",
+      "origin": [
+        5,
+        7
+      ],
+      "used": {
+        "commands": 77,
+        "wood": 0,
+        "modelCalls": 1,
+        "seconds": 35.53087782859802,
+        "queries": 81
+      },
+      "edit": {
+        "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+        "entityId": "e926486325c2c4e3e924610139ee26711",
+        "authorActorId": "a1_alias",
+        "operatorId": "local-operator",
+        "commandId": "3928fac1f9e64726910db973dc9a2051",
+        "baseRevision": 0,
+        "revision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 1,
+            "color": "river"
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "color": "river"
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "color": "river"
+          }
+        ],
+        "stateVersion": 795,
+        "eventCursor": 796,
+        "paintedAtUtc": "2026-10-26T06:52:38.8221545+00:00",
+        "position": [
+          24,
+          7
+        ],
+        "inventoryWood": 0,
+        "capabilityVersion": 1
+      }
+    },
+    {
+      "path": ".local/iter0025/python/20261026T065216Z-072bdc/test_01_actual_cli_two_original_round_trips-world/a2-report.json",
+      "sha256": "bfd2cfd194bf22ebc794e7cf354c590b06661617edd9aa57ba6b1865c4a403f2",
+      "actor": "a2",
+      "status": "completed",
+      "origin": [
+        26,
+        17
+      ],
+      "used": {
+        "commands": 35,
+        "wood": 0,
+        "modelCalls": 1,
+        "seconds": 7.73965048789978,
+        "queries": 39
+      },
+      "edit": {
+        "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+        "entityId": "e926486325c2c4e3e924610139ee26711",
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "13ce6fb8220246d5861fea7b912a20fd",
+        "baseRevision": 1,
+        "revision": 2,
+        "patch": [
+          {
+            "x": 3,
+            "y": 2,
+            "color": "river"
+          },
+          {
+            "x": 3,
+            "y": 3,
+            "color": "river"
+          }
+        ],
+        "stateVersion": 851,
+        "eventCursor": 852,
+        "paintedAtUtc": "2026-10-26T06:52:56.4669926+00:00",
+        "position": [
+          24,
+          7
+        ],
+        "inventoryWood": 9,
+        "capabilityVersion": 1
+      }
+    },
+    {
+      "path": ".local/iter0025/python/20261026T065216Z-072bdc/test_04_old_success_after_own_repaint_keeps_fact_stops_route-world/reports.json",
+      "status": "blocked",
+      "reason": "command_rejected:STALE_ACTOR_STATE",
+      "painted": true,
+      "returned": false,
+      "revision": 2,
+      "edit": {
+        "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+        "entityId": "e926486325c2c4e3e924610139ee26711",
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "1f2574dd91984656917dc8f28d8a4b5e",
+        "baseRevision": 0,
+        "revision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 1,
+            "color": "river"
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "color": "river"
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "color": "river"
+          }
+        ],
+        "stateVersion": 774,
+        "eventCursor": 775,
+        "paintedAtUtc": "2026-10-26T06:53:41.6163924+00:00",
+        "position": [
+          24,
+          7
+        ],
+        "inventoryWood": 9,
+        "capabilityVersion": 1
+      }
+    },
+    {
+      "path": ".local/iter0025/python/20261026T065216Z-072bdc/test_05_older_than_recent_fifty_still_confirms_original_edit-world/reports.json",
+      "status": "completed",
+      "reason": "round_trip_verified",
+      "painted": true,
+      "returned": true,
+      "revision": 52,
+      "edit": {
+        "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+        "entityId": "e926486325c2c4e3e924610139ee26711",
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "879f4d9a7dde4d93a811a4fa9ef932b4",
+        "baseRevision": 0,
+        "revision": 1,
+        "patch": [
+          {
+            "x": 1,
+            "y": 1,
+            "color": "river"
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "color": "river"
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "color": "river"
+          }
+        ],
+        "stateVersion": 813,
+        "eventCursor": 814,
+        "paintedAtUtc": "2026-10-26T06:54:00.9777154+00:00",
+        "position": [
+          24,
+          7
+        ],
+        "inventoryWood": 9,
+        "capabilityVersion": 1
+      }
+    }
+  ],
+  "remainingIntegration": "Coordinator report/Godot integration and independent QA; overall collaboration goal remains active."
+}

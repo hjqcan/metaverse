@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "testsRun": 1,
+  "tests": [
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts",
+      "passed": true,
+      "seconds": 42.09111204597866
+    }
+  ],
+  "failures": [],
+  "skipped": [],
+  "actualModelCalls": 0,
+  "sourceDll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/core-v2/bin/World.Server.dll",
+  "dllSha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+  "dllStable": true,
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/original-baseline",
+  "target": "e926486325c2c4e3e924610139ee26711"
+}

@@ -1,0 +1,330 @@
+{
+  "iteration": "ITER-0025",
+  "status": "Independent ITER25 scope complete: core-v1 original natural and protocol groups plus core-v2 storage/history fix; Python five groups; native six groups across retained v1/v2/v3 freezes; Web-v1 thirteen groups. Earlier failure evidence retained.",
+  "results": [
+    {
+      "group": "natural",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-http-20261026T065014010983Z/results.json",
+      "reportSha256": "13e255bf38617973db9d89524c2069e70ea03b7c8b7bf3d353dc2e0ff77f7c9d",
+      "caseKey": "natural",
+      "wholeRunPassed": true,
+      "allStartedProcessesExited": true
+    },
+    {
+      "group": "adoption_matrix",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-http-20261026T065227396112Z/results.json",
+      "reportSha256": "7e828f0116f4cc1a28f0747d765f33d1e73db0a6710912fc581242b5b7cd72aa",
+      "caseKey": "adoption_matrix",
+      "wholeRunPassed": false,
+      "allStartedProcessesExited": true
+    },
+    {
+      "group": "protocol_concurrency",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-http-20261026T065304508298Z/results.json",
+      "reportSha256": "6c6f224c0a651066b0a0ad2ab89ee05df3d84a3358453ae40e10588f44e184a3",
+      "caseKey": "protocol_concurrency",
+      "wholeRunPassed": true,
+      "allStartedProcessesExited": true
+    },
+    {
+      "group": "command_faults_history",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-http-20261026T065304508298Z/results.json",
+      "reportSha256": "6c6f224c0a651066b0a0ad2ab89ee05df3d84a3358453ae40e10588f44e184a3",
+      "caseKey": "command_faults_history",
+      "wholeRunPassed": true,
+      "allStartedProcessesExited": true
+    },
+    {
+      "group": "storage_types",
+      "passed": false,
+      "report": ".local/qa/20261026-test-agent/canvas-http-20261026T065339745660Z/results.json",
+      "reportSha256": "64ed3a3ba9b3cc5d1dc888d7fa9a1c7b5c222f0b840bd68b3358eba3262e886b",
+      "caseKey": "storage_types",
+      "wholeRunPassed": false,
+      "allStartedProcessesExited": true
+    }
+  ],
+  "actualModelCalls": 0,
+  "naturalHead": ".local/qa/20261026-test-agent/canvas-http-20261026T065014010983Z/natural",
+  "stateVersion": 1054,
+  "events": 1055,
+  "receipts": 1034,
+  "original736ReceiptsPreserved": true,
+  "stagesForLaterNative": [
+    "stage-blank",
+    "stage-first",
+    "stage-both"
+  ],
+  "historicalHarnessFailuresRetained": [
+    "canvas-http-20261026T065204188431Z",
+    "canvas-http-20261026T065227396112Z",
+    "canvas-python-20261026T070220620143Z",
+    "canvas-python-20261026T070348810057Z",
+    "canvas-godot-20261026T071015082014Z",
+    "canvas-godot-20261026T071139504955Z"
+  ],
+  "cleanup": ".local/qa/20261026-test-agent/continuous-cleanup-20261026T0646.json",
+  "coreV2Fix": {
+    "passed": true,
+    "binarySha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+    "report": ".local/qa/20261026-test-agent/canvas-http-20261026T065825166839Z/results.json",
+    "sha256": "5898d49aaa78acdff72365ed4be6e6b4c3ae0f8791bfcad7b2446cb3bddb1b38"
+  },
+  "python": [
+    {
+      "group": "actual_cli",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-python-20261026T070027433307Z/results.json",
+      "sha256": "968874f864eddfd655ba1e2a02e40df9f2b18948b1f74edbe98fa1f429c205c5",
+      "wholeRunPassed": true
+    },
+    {
+      "group": "first_query_failure",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-python-20261026T070027433307Z/results.json",
+      "sha256": "968874f864eddfd655ba1e2a02e40df9f2b18948b1f74edbe98fa1f429c205c5",
+      "wholeRunPassed": true
+    },
+    {
+      "group": "recovery_and_history",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-python-20261026T070027433307Z/results.json",
+      "sha256": "968874f864eddfd655ba1e2a02e40df9f2b18948b1f74edbe98fa1f429c205c5",
+      "wholeRunPassed": true
+    },
+    {
+      "group": "evidence_failures",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-python-20261026T070220620143Z/results.json",
+      "sha256": "d8649022d6c6bd97d665b6a13974d70e509f19c86f49ffaea5d730035ca2b3bb",
+      "wholeRunPassed": false
+    },
+    {
+      "group": "mid_proof_budget",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-python-20261026T070429369037Z/results.json",
+      "sha256": "8d4c49e0137ca6187719ca4db3b81ed5a12d6214bb91cdc5344c6a628a41a66f",
+      "wholeRunPassed": true
+    }
+  ],
+  "pythonReportInputs": {
+    "completed": ".local/qa/20261026-test-agent/canvas-python-20261026T070027433307Z/actual-cli/run-report.json",
+    "query3Pending": ".local/qa/20261026-test-agent/canvas-python-20261026T070429369037Z/budget-3/run-report.json",
+    "query4FactButBudgetExhausted": ".local/qa/20261026-test-agent/canvas-python-20261026T070429369037Z/budget-4/run-report.json",
+    "ownLaterBlockedWithPaintFact": ".local/qa/20261026-test-agent/canvas-python-20261026T070027433307Z/client-own-later/restart-report.json"
+  },
+  "coreBinarySha256HistoricalV1": "98b42fb7156fd5ac4d44c52f9c1896255ace3b5786e4c1a025b2edee68117c9b",
+  "currentCoreBinarySha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+  "native": [
+    {
+      "group": "original_stages",
+      "freeze": "native-v1",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-godot-20261026T070924306740Z/results.json",
+      "sha256": "c3aaa4ce3b8c568995d9c00b779cdbd1870e1766d35b936449250e9cd7db75ab",
+      "wholeRunPassed": true,
+      "allStartedProcessesExited": true
+    },
+    {
+      "group": "ui_edit",
+      "freeze": "native-v1",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-godot-20261026T070722753121Z/results.json",
+      "sha256": "a90212f85fd9e28db51eb4f8506ab95d08102ea8c9632420fa027a469b8cfb25",
+      "wholeRunPassed": true,
+      "allStartedProcessesExited": true
+    },
+    {
+      "group": "pending_recovery",
+      "freeze": "native-v2",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-godot-20261026T071550422974Z/results.json",
+      "sha256": "478f17a506dc392d6da417a862cb59b4fad98ce0742483ef6dd1ad5ef49f7abc",
+      "wholeRunPassed": true,
+      "allStartedProcessesExited": true
+    },
+    {
+      "group": "pending_evidence",
+      "freeze": "native-v2",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-godot-20261026T071550422974Z/results.json",
+      "sha256": "478f17a506dc392d6da417a862cb59b4fad98ce0742483ef6dd1ad5ef49f7abc",
+      "wholeRunPassed": true,
+      "allStartedProcessesExited": true
+    },
+    {
+      "group": "old_record4",
+      "freeze": "native-v2",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-godot-20261026T071550422974Z/results.json",
+      "sha256": "478f17a506dc392d6da417a862cb59b4fad98ce0742483ef6dd1ad5ef49f7abc",
+      "wholeRunPassed": true,
+      "allStartedProcessesExited": true
+    },
+    {
+      "group": "capability_and_foreign",
+      "freeze": "native-v3",
+      "passed": true,
+      "report": ".local/qa/20261026-test-agent/canvas-godot-20261026T071807803026Z/results.json",
+      "sha256": "ebb1ee53036c3f65a0bee23496b24985242ca69343b6d3b9050d729ee9997d03",
+      "wholeRunPassed": true,
+      "allStartedProcessesExited": true
+    }
+  ],
+  "web": {
+    "freeze": "web-v1",
+    "passed": true,
+    "groups": 13,
+    "report": ".local/qa/20261026-test-agent/canvas-web-2026-10-26T07-19-25-901Z/results.json",
+    "sha256": "0c4742a3460c39178908781f4538a3b9bc6c0524acf81bbe3343428633eff4be",
+    "malformedVariants": 11,
+    "actualReportsIndependent": true,
+    "syntheticCasesExplicitlyLabelled": true,
+    "worldApiRequests": 0,
+    "staticServerStopped": true,
+    "screenshotReview": [
+      "history-mobile.png",
+      "query4-mobile.png"
+    ],
+    "priorWebReportLabelClarification": "071733 third check had imprecise wording: actual lost-response report contains older blank snapshot, not current painted cells. 071925 corrects that title and separately tests labelled synthetic newer snapshot without original proof."
+  },
+  "nativeV2ForeignPendingCounterexample": {
+    "report": ".local/qa/20261026-test-agent/canvas-godot-20261026T071651271524Z/results.json",
+    "sha256": "fbef334af7675ffbd8fa0220eed234847295bfdeb6f06cc7caf75c437569bdce",
+    "wholeRunPassed": false,
+    "expected": 1,
+    "actual": 0,
+    "recordLost": false,
+    "wrongWorldPost": false,
+    "fixedIn": "native-v3",
+    "recheck": ".local/qa/20261026-test-agent/canvas-godot-20261026T071807803026Z/results.json"
+  },
+  "nativeHarnessFailureExplanations": {
+    "071015": "QA read legacy pending base path; actual per-command journal present.",
+    "071139": "QA initial action JSON parsing generated fractional JSON integer tokens; server correctly returned 400 and preserved original body. Only newly constructed test requests normalized to integers; historical pending untouched."
+  },
+  "naturalSnapshotsVisuallyReviewed": [
+    "blank",
+    "first",
+    "both"
+  ],
+  "liveOwnedWorldProcessesAfterTests": [],
+  "limitations": [
+    "Fixed programs and explicit input probes only; actual model calls 0.",
+    "Natural head was not repeated for clients; client scenarios are labelled branches.",
+    "Self-checks by builder are separate from this independent acceptance.",
+    "Does not establish real-user fun, durable governance, long-term economic fairness, or public deployment."
+  ],
+  "clientCleanup": {
+    "path": ".local/qa/20261026-test-agent/canvas-cleanup-20261026T0721.json",
+    "sha256": "d0b6def8d7828d2129ffd58fece61e37e5a1c523cbca1f908f8a76965e267d98",
+    "removedBytes": 44367216,
+    "removedFileCount": 124,
+    "retainedFilesUnchanged": true
+  },
+  "nativeReadOnlyVisualSupplement": {
+    "freeze": "native-v3",
+    "passed": true,
+    "report": ".local/qa/20261026-test-agent/canvas-godot-20261026T072315627013Z/results.json",
+    "sha256": "ee8cd218fa52ded4b16ef6fbed3694356da48495ca33fb4f2b7209212006694f",
+    "sourceStageFingerprints": {
+      "blank": {
+        "observation.json": {
+          "sha256": "81a21ab09e337d34b7a2ddc1dc9a5dfdadb7bc5eda741da5b3e78aad19af7c36",
+          "bytes": 24034,
+          "mtimeNs": 1792997414509549293
+        },
+        "access.json": {
+          "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+          "bytes": 790,
+          "mtimeNs": 1792988757982573799
+        },
+        "world.db": {
+          "sha256": "8b3309491bdf946fdb817537029eb71ee4fa59a71a2cae05ea20ad4d2b6b088e",
+          "bytes": 946176,
+          "mtimeNs": 1792997414508314103
+        }
+      },
+      "first": {
+        "observation.json": {
+          "sha256": "93cd6621f6c4f10e4ba73251ec303e48e9bddfbc5ac7e07fe0ee57a3ad3dba7c",
+          "bytes": 25206,
+          "mtimeNs": 1792997433870514005
+        },
+        "access.json": {
+          "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+          "bytes": 790,
+          "mtimeNs": 1792988757982573799
+        },
+        "world.db": {
+          "sha256": "780bd109c91a323d20d4312ac0d5a3e31d5d1a44d295e19184a3438feabbf04d",
+          "bytes": 1167360,
+          "mtimeNs": 1792997433869234156
+        }
+      },
+      "both": {
+        "observation.json": {
+          "sha256": "575c2f6b9482621d3d74c82e80f2a1705c669fe754e69565228232d943fd4778",
+          "bytes": 26212,
+          "mtimeNs": 1792997441295495748
+        },
+        "access.json": {
+          "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+          "bytes": 790,
+          "mtimeNs": 1792988757982573799
+        },
+        "world.db": {
+          "sha256": "cfc835a6f7ca3270305a1111192be289a0b3498bb0a448c2681a49a8967e8628",
+          "bytes": 1232896,
+          "mtimeNs": 1792997441294328879
+        }
+      }
+    },
+    "sourceStagesUnchanged": true,
+    "postCount": 0,
+    "getCount": 5,
+    "trafficReport": ".local/qa/20261026-test-agent/canvas-godot-20261026T072315627013Z/original-stage-http-traffic.json",
+    "trafficSha256": "d70df70ea97581c649392cb4aef7e7b80463e2209d1c2ef48e73c4ac82769305",
+    "camera": "Stopped automatic camera follow, pointed original actual platform at [24,7], preserved scene meshes; no actor movement.",
+    "allFourPngVisuallyReviewed": true,
+    "screenshots": {
+      "original-stages-first.png": "dec067cb72aab1c4bdc657122165596d145046f6435653b3d9713bea3158eb9f",
+      "original-stages-blank.png": "3f6e97b09699e8450c05d3fd2b560552242999878622eeb31ecb75e68b41e16c",
+      "original-stages-both-second-author.png": "200d1b76655e0d506e7b1a856198925a4613b8778e3681417c2dbeac056d6192",
+      "original-stages-both.png": "2b8826de0f20cbc18315f90b9e64671fdb88fd2fac9635a4373bea7d53e21363"
+    },
+    "actualMouseHoverAuthors": [
+      "无人",
+      "a1_alias",
+      "a2"
+    ]
+  },
+  "query4Interpretation": {
+    "origin": [
+      24,
+      7
+    ],
+    "target": [
+      24,
+      7
+    ],
+    "returned": true,
+    "paintConfirmed": true,
+    "queries": 4,
+    "status": "budget_exhausted",
+    "wholeMissionComplete": false,
+    "note": "Origin equals target. Do not describe this actual report as not returned."
+  },
+  "visualSupplementCleanup": {
+    "path": ".local/qa/20261026-test-agent/canvas-cleanup-20261026T0724.json",
+    "sha256": "f7c2be7b410baa9ad22258c8cc6bc6b17ccb8f08586f17733105697b6b8483e1",
+    "removedBytes": 3605480,
+    "removedFileCount": 12,
+    "retainedFilesUnchanged": true
+  },
+  "allCanvasClientCleanupBytes": 47972696
+}

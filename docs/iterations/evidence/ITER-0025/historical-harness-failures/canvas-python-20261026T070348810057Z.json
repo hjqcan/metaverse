@@ -1,0 +1,116 @@
+{
+  "passed": false,
+  "scope": "independent frozen Python v1 actual CLI on core-v2",
+  "binarySha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+  "manifestSha256": "e4420d251edf46268741ef323b55c3b18e085e366cdac7cb49b3901df8f73523",
+  "seed": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T061604041742Z/continued-natural-v2",
+  "seedFilesBefore": {
+    "access.json": {
+      "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+      "bytes": 790,
+      "mtimeNs": 1792988757982573799
+    },
+    "server.log": {
+      "sha256": "8879131f4030c337cf83d1253b77d5c46fb201756acfd5c28f9994a51a0d48b8",
+      "bytes": 55446,
+      "mtimeNs": 1792995379633570681
+    },
+    "final-snapshot.json": {
+      "sha256": "9ab2a9c180995c7ba88e4b0692158a2300d4783acb07a1069d1a1654c1fe0c69",
+      "bytes": 879627,
+      "mtimeNs": 1792995379676572562
+    },
+    "milestones.json": {
+      "sha256": "8ff879c26290bdd978f3ee907955600320d21e5b5a3067715240b128db8a91ad",
+      "bytes": 870,
+      "mtimeNs": 1792995399868921158
+    },
+    "world.db-wal": {
+      "sha256": "bede4dc2ce0aad0459ec9d596fc4f465606cd281077a981fe8db6b27668e79f9",
+      "bytes": 4120032,
+      "mtimeNs": 1792995379485564206
+    },
+    "world.db": {
+      "sha256": "8fe126cafea5df222af4f8fb2cdac97504f44af4eb710f908266969670e85d1c",
+      "bytes": 868352,
+      "mtimeNs": 1792994328681062137
+    },
+    "trace.json": {
+      "sha256": "444ba1148cccc09145a934f7e8fe60d3287a612df27a478f10511c5b51de1f4c",
+      "bytes": 8864,
+      "mtimeNs": 1792995399868856084
+    },
+    "world.db-shm": {
+      "sha256": "f404251b86a3938cffbbd9c0d6cd23e133811a6b13528d4f087d444fe4b72df2",
+      "bytes": 32768,
+      "mtimeNs": 1792996666230907651
+    },
+    "world.db.material-clock.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtimeNs": 1792995372414254903
+    }
+  },
+  "cases": {},
+  "worlds": [
+    {
+      "name": "budget-ready",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-python-20261026T070348810057Z/budget-ready",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065014010983Z/natural/stage-blank",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "budget-world-3",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-python-20261026T070348810057Z/budget-world-3",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-python-20261026T070348810057Z/budget-ready",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    }
+  ],
+  "actualModelCalls": 0,
+  "naturalDirectSqlEdits": false,
+  "naturalClockControlled": false,
+  "runtimeReuse": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/core-v2/bin/World.Server.dll",
+    "sha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+    "readOnlySharedFrozenBinary": true,
+    "perRunRuntimeCopy": false
+  },
+  "pythonHandoffSha256": "b8ee542de92c23d0f4989daab0c9005711b53a5153f913cffa01e31e25430435",
+  "pythonFiles": {
+    "scripts/resident_entity_canvas.py": "9902931488e74a71448cfddfab72efae77ed56f4b45f8a028d727638398fde2d",
+    "scripts/resident_mission.py": "937c751442240d329898ed09954ff42096e143950c3abbd3b437cf7ca410ebad",
+    "scripts/command_preconditions.py": "58e6fc548fa75cf97026f046e3853259dbe98e22d721655fe56837ea577e7b8d",
+    "scripts/run_resident.py": "27a7eec6f57c7ac52717131058024c861d8def4d097ae81bd7f8362a214ef417",
+    "tests/entity_canvas_mission_api.py": "285059d29ce8db33bbb64642017835545e74f9c1e54c0fe3601674de3d29b482",
+    "tests/fixtures/entity-canvas-first.json": "7f283c58ff949f921c0effa71af5f3db4c38fafff24085cfb149edf84b65fb18",
+    "tests/fixtures/entity-canvas-second.json": "163c98c363f2dae86f85622615e14b534027aaf97b4183839df33852a2b3f6fe"
+  },
+  "dependencyFiles": {
+    "scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+    "scripts/mosaic_inbox.py": "a9c0772e5946af581c3b423c8e5986b05413348a3e528c8d5a0b18401367aa59",
+    "scripts/check.py": "73fbfe4e2341395b41a1518af57a23b18219da8479f9a69ba8089f3d8c8bc691",
+    "scripts/postcard_text.py": "db3429983b8ee2062ab70f4c7e46b763c5839934f65a2a6776638f8c0a280a4c",
+    "scripts/activity_choice.py": "84bd020783870725947663eb41500977096c86e366099b4fb8607c9d1c049b5a",
+    "scripts/passage_agent.py": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e",
+    "scripts/test_agent_accounts.py": "07c9e2e66bcfec99a9d57ed7b9ba3497769d06bee5b838ca6c24a0264647df5c",
+    "scripts/resident_material_access.py": "a144eafc8ba4e12d1cf88ef147a2179b7808a1cd0b2f5a8a0e0dc01046b717e4",
+    "scripts/agent_accounts.py": "f1844d9db668e864ab215d0d811b884b6301500bfe260bb9bf9d9cfdbc481f10",
+    "scripts/resident_transfer.py": "957067bc33585e1fb5f7f9b21b703aa1c8decf8f4148fcb2fe24e4ce50329a83",
+    "scripts/wilderness_materials.py": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6",
+    "scripts/codex_goal_selector.py": "3a455c2906aaa3764c85794cb581300979f57cb3f24b46fe437fbd287a8b6936",
+    "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+    "scripts/continuous_navigation.py": "0303f9ade6ce90e48a85fbf8e5a5aaff145ca0a305562cee4c0d0bb1cb21e578",
+    "scripts/entry_guide.py": "9b768237d39f2e4b4820e0178508c132408215aa6653c996eaf9b6e913d79dbb",
+    "scripts/mosaic_consent.py": "cb3acc34abe43c6988359bc307755ad6d2743ac5e850bccaf165f14ae561eae9",
+    "scripts/mosaic_patch.py": "4abdb035967733e4aacbe175a37f8b32686de6182ded2fee888203726b0461a6",
+    "scripts/resident_construction.py": "eef4aa235fb0fdf2428b17005381074bb1f773f3ac21d600b2c095e96c1b6411"
+  },
+  "requestStubUsed": false,
+  "authorTestsExecuted": false,
+  "failure": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-python.py\", line 270, in <module>\n    report['cases'][name]=globals()[name]();save(OUT/'results.json',report)\n                          ^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-python.py\", line 256, in mid_proof_budget\n    assert again['exitCode']==0 and len(p.requests)==n and without_elapsed(again['report'])==without_elapsed(r)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "originalSeedFilesUnchanged": true,
+  "allStartedProcessesExited": true,
+  "cleanedCaches": []
+}

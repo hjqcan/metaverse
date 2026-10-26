@@ -142,8 +142,9 @@ internal sealed partial class WorldDatabase
             if (!Scenario.SupportsMaterialAccess || WorldInstance.Read(c, t) != expectedInstance)
                 throw new InvalidOperationException("持续政策只能在指定原材料实例采用");
             var previous = ContinuousMaterialRules.ReadPolicy(c, t, expectedInstance);
-            if ((storage == 11) != (previous is not null)) throw new InvalidOperationException("持续政策与存储不一致");
+            if ((storage is 11 or 12) != (previous is not null)) throw new InvalidOperationException("持续政策与存储不一致");
             ContinuousMaterialRules.ValidateState(c, t, previous);
+            EntityCanvasRules.ValidateStorage(c, t, expectedInstance, storage, previous);
             if (EntityNoteRules.ReadAdoption(c, t) is { } notes && (notes.InstanceId != expectedInstance || EntityNoteRules.ReadBridge(c, t, notes.EntityId) is null))
                 throw new InvalidOperationException("原手记目标不匹配");
             if (previous is not null) return false;

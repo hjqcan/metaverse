@@ -1,0 +1,641 @@
+{
+  "atUtc": "2026-10-26T07:21:12.010741+00:00",
+  "reason": "Explicit user cleanup of used tests; delete only finished passing isolated client databases with final logical snapshot available.",
+  "runDirectories": [
+    "canvas-godot-20261026T070722753121Z",
+    "canvas-godot-20261026T070924306740Z",
+    "canvas-godot-20261026T071550422974Z",
+    "canvas-godot-20261026T071807803026Z",
+    "canvas-python-20261026T070027433307Z",
+    "canvas-python-20261026T070429369037Z"
+  ],
+  "liveOwnedWorldProcesses": [],
+  "removedFiles": [
+    {
+      "path": "canvas-godot-20261026T070722753121Z/original-stage-both/world.db-wal",
+      "bytes": 74192,
+      "sha256": "c080c15b5d9022ca199b7e349ef4a5c9cc8e2da94bd8cb8ce1949016c78a61e8"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/original-stage-both/world.db",
+      "bytes": 1232896,
+      "sha256": "cfc835a6f7ca3270305a1111192be289a0b3498bb0a448c2681a49a8967e8628"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/original-stage-both/world.db-shm",
+      "bytes": 32768,
+      "sha256": "aafa57bd8fff57c26dc800a3495094a6981813f45b7355bc93cb0f70e26e8f7c"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/original-stage-both/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/native-mouse-branch/world.db-wal",
+      "bytes": 4148872,
+      "sha256": "252e9c698e25564bf140df0840dc971b779f9fe4a562f2f1fbb054d4ce21df75"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/native-mouse-branch/world.db",
+      "bytes": 1048576,
+      "sha256": "9c217ebef1506772ae356779627c34ac4a0941550ce0e23afa879dc2149d4b69"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/native-mouse-branch/world.db-shm",
+      "bytes": 32768,
+      "sha256": "f022866b7ac3c202cbdbd8c5b6413b3f72b4d9bf5f63d18593594c6694a9c07e"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/native-mouse-branch/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/original-stage-blank/world.db-wal",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/original-stage-blank/world.db",
+      "bytes": 946176,
+      "sha256": "b0ea10ca24f828b6c691b451e75ac6a3cd87716292436a9a01bf630f8fbf24ac"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/original-stage-blank/world.db-shm",
+      "bytes": 32768,
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/original-stage-blank/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/original-stage-first/world.db-wal",
+      "bytes": 78312,
+      "sha256": "a10fc3dbe6d0f526663d4e575310dedbe6b941e5bbdc3f3ce720ed3ce373e049"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/original-stage-first/world.db",
+      "bytes": 1167360,
+      "sha256": "780bd109c91a323d20d4312ac0d5a3e31d5d1a44d295e19184a3438feabbf04d"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/original-stage-first/world.db-shm",
+      "bytes": 32768,
+      "sha256": "fd194875ea2dd59128e2e7b4befbc489f867dab95124049cd02899ac8b89c463"
+    },
+    {
+      "path": "canvas-godot-20261026T070722753121Z/original-stage-first/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T070924306740Z/original-stage-both/world.db-wal",
+      "bytes": 78312,
+      "sha256": "9d44f658d5cd9297b1cf72ec43d676bddf9c1775dbb481cd817da1fad40bb438"
+    },
+    {
+      "path": "canvas-godot-20261026T070924306740Z/original-stage-both/world.db",
+      "bytes": 1232896,
+      "sha256": "cfc835a6f7ca3270305a1111192be289a0b3498bb0a448c2681a49a8967e8628"
+    },
+    {
+      "path": "canvas-godot-20261026T070924306740Z/original-stage-both/world.db-shm",
+      "bytes": 32768,
+      "sha256": "387096c4e3ddccd3e2357093d46fd2274d33ce47c3176b815280bf9ed999aafa"
+    },
+    {
+      "path": "canvas-godot-20261026T070924306740Z/original-stage-both/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T070924306740Z/original-stage-blank/world.db-wal",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T070924306740Z/original-stage-blank/world.db",
+      "bytes": 946176,
+      "sha256": "44c8e5e4b0d3d8e9038a7305fdc36a0eaf1f03223d4ced9e693c5217ed672fae"
+    },
+    {
+      "path": "canvas-godot-20261026T070924306740Z/original-stage-blank/world.db-shm",
+      "bytes": 32768,
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    {
+      "path": "canvas-godot-20261026T070924306740Z/original-stage-blank/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T070924306740Z/original-stage-first/world.db-wal",
+      "bytes": 82432,
+      "sha256": "5d01993c75cc653bf66989a5d7300efca2cbbc86e8276340705cf38096c10b01"
+    },
+    {
+      "path": "canvas-godot-20261026T070924306740Z/original-stage-first/world.db",
+      "bytes": 1167360,
+      "sha256": "780bd109c91a323d20d4312ac0d5a3e31d5d1a44d295e19184a3438feabbf04d"
+    },
+    {
+      "path": "canvas-godot-20261026T070924306740Z/original-stage-first/world.db-shm",
+      "bytes": 32768,
+      "sha256": "6cd62c0637a6573a4b50e06bd5130a473441279c3da520a8d453a49b860a8158"
+    },
+    {
+      "path": "canvas-godot-20261026T070924306740Z/original-stage-first/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/native-paint-after/world.db-wal",
+      "bytes": 123632,
+      "sha256": "0dd1aea62225f0a795e0339047f99d6718bc04dbfe17321137cb44f13e188828"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/native-paint-after/world.db",
+      "bytes": 978944,
+      "sha256": "1b87e67df1eb759f788ee53b3c3267b9062a8b3a5d60e2c49cf0f6da536c32e5"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/native-paint-after/world.db-shm",
+      "bytes": 32768,
+      "sha256": "b9a5ad154e5eec403d5109939a4b3f9fcc3ec995bbe10dbd825c60042d6cf7be"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/native-paint-after/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/old-record4-before/world.db-wal",
+      "bytes": 82432,
+      "sha256": "d5b3bbcefbb9215c2e9c964d860a49f8f28e6d0f65fa8d944e7ba6e3b0832de5"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/old-record4-before/world.db",
+      "bytes": 946176,
+      "sha256": "8b3309491bdf946fdb817537029eb71ee4fa59a71a2cae05ea20ad4d2b6b088e"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/old-record4-before/world.db-shm",
+      "bytes": 32768,
+      "sha256": "ed5eb53048bfa306680041bd20926d63036199c28c130c529b923bb7ce031cf1"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/old-record4-before/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/native-paint-before/world.db-wal",
+      "bytes": 70072,
+      "sha256": "ef91d5946d407aeab61696b75bcf6474e9c60827898d02b8bd9288ee4bb17c0e"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/native-paint-before/world.db",
+      "bytes": 978944,
+      "sha256": "1b87e67df1eb759f788ee53b3c3267b9062a8b3a5d60e2c49cf0f6da536c32e5"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/native-paint-before/world.db-shm",
+      "bytes": 32768,
+      "sha256": "1da1486b313b081b2c81638043e4b74210b3f9ceb83e1ac6c57f512b7b4048ff"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/native-paint-before/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/native-evidence-world/world.db-wal",
+      "bytes": 111272,
+      "sha256": "815904e027a28e9abc79d93dc5a3a2c274f6739a146febf18fe77608eaef8be0"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/native-evidence-world/world.db",
+      "bytes": 978944,
+      "sha256": "cd9864faf8eab2b6792c22430f2bdcbd93ca3ca18a843d7385ce5731cb5f4f7e"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/native-evidence-world/world.db-shm",
+      "bytes": 32768,
+      "sha256": "3b3f495d269bba0be586713717d1d4434780e06b2a0afa7c3368c47738b2eee3"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/native-evidence-world/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/evidence-native-fixture/world.db-wal",
+      "bytes": 1573872,
+      "sha256": "43a3fb09cf484b5298c2264423c02d763a7c5b087e4c9774ae40fc5c2bbf6b39"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/evidence-native-fixture/world.db",
+      "bytes": 946176,
+      "sha256": "8b3309491bdf946fdb817537029eb71ee4fa59a71a2cae05ea20ad4d2b6b088e"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/evidence-native-fixture/world.db-shm",
+      "bytes": 32768,
+      "sha256": "5e0af3028eb26455093ac34629c92f1b6181e0e0e4a745afde89c74305a288c4"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/evidence-native-fixture/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/near-native-fixture/world.db-wal",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/near-native-fixture/world.db",
+      "bytes": 978944,
+      "sha256": "1b87e67df1eb759f788ee53b3c3267b9062a8b3a5d60e2c49cf0f6da536c32e5"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/near-native-fixture/world.db-shm",
+      "bytes": 32768,
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/near-native-fixture/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/old-record4-after/world.db-wal",
+      "bytes": 78312,
+      "sha256": "d6e95d1f6fd2914e23df2d2314ddc9c1a2da58a2838541e3c2bdee7ff66d0eef"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/old-record4-after/world.db",
+      "bytes": 946176,
+      "sha256": "8b3309491bdf946fdb817537029eb71ee4fa59a71a2cae05ea20ad4d2b6b088e"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/old-record4-after/world.db-shm",
+      "bytes": 32768,
+      "sha256": "d3bb3d92c81666f3f6be3ba1a72aa0672e514948a1114d0afed51305464ef368"
+    },
+    {
+      "path": "canvas-godot-20261026T071550422974Z/old-record4-after/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-unknown-before/world.db-wal",
+      "bytes": 74192,
+      "sha256": "935d72c9360c4f93d0633e5406da8c5a3faf93eb7c861a372482e5e318cb3546"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-unknown-before/world.db",
+      "bytes": 978944,
+      "sha256": "dafaaced4e60f2635129cea789ee9f6f8c4ffe5f9906b14e4acab4e7fb1ab0a0"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-unknown-before/world.db-shm",
+      "bytes": 32768,
+      "sha256": "890ff2e769ab9a56ed4aa0f26c635239d8f5a78af83b5bf2cbf2851ab829a6b1"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-unknown-before/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/foreign-fresh/world.db-wal",
+      "bytes": 16512,
+      "sha256": "f88124c92dd1901d1c6de6531339474526b68b1695ea61184b2f56bc01af1a14"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/foreign-fresh/world.db",
+      "bytes": 163840,
+      "sha256": "d38b553ceacef5271f56510dd8d9c64ff915a91df38baee574fbc15bb0e0c2dd"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/foreign-fresh/world.db-shm",
+      "bytes": 32768,
+      "sha256": "2edf867709e5a5af98aedfef4a3edbc094e334e9313f8c90d6aec4c603213d3c"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/foreign-fresh/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/extra-near-fixture/world.db-wal",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/extra-near-fixture/world.db",
+      "bytes": 978944,
+      "sha256": "dafaaced4e60f2635129cea789ee9f6f8c4ffe5f9906b14e4acab4e7fb1ab0a0"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/extra-near-fixture/world.db-shm",
+      "bytes": 32768,
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/extra-near-fixture/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-unknown-after/world.db-wal",
+      "bytes": 70072,
+      "sha256": "ef2d2630a42f64d4a7df09ee83738bcc616e6e0e7a1295ca143f948ad27e2869"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-unknown-after/world.db",
+      "bytes": 978944,
+      "sha256": "dafaaced4e60f2635129cea789ee9f6f8c4ffe5f9906b14e4acab4e7fb1ab0a0"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-unknown-after/world.db-shm",
+      "bytes": 32768,
+      "sha256": "649ac0cdedcba01d0ba24d5fd19eb766860b542297c3e40ef652d12eadfbd87a"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-unknown-after/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-missing-before/world.db-wal",
+      "bytes": 74192,
+      "sha256": "28fb8ec60c6d55eb17282b63c2296b17f7e3d2b96fce8d1f1ebffed8eb33481e"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-missing-before/world.db",
+      "bytes": 978944,
+      "sha256": "dafaaced4e60f2635129cea789ee9f6f8c4ffe5f9906b14e4acab4e7fb1ab0a0"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-missing-before/world.db-shm",
+      "bytes": 32768,
+      "sha256": "efc8f0e14aa714b96397f19f62a4ef880a927a830e3dc71dc03aab53b0d2520f"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-missing-before/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/foreign-original/world.db-wal",
+      "bytes": 74192,
+      "sha256": "33599e81e36499046f07f4fb14ead90236d76b8d421734a137685b3947872fdf"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/foreign-original/world.db",
+      "bytes": 978944,
+      "sha256": "dafaaced4e60f2635129cea789ee9f6f8c4ffe5f9906b14e4acab4e7fb1ab0a0"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/foreign-original/world.db-shm",
+      "bytes": 32768,
+      "sha256": "434d86f731b2b1ec0eda4f3d5fd37fcfd0c9c4eedc3abf14f3d02ae208bf2bb4"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/foreign-original/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-missing-after/world.db-wal",
+      "bytes": 70072,
+      "sha256": "c29c78c87cb9c858025ed1c432906a99ea5376291e9e2cb5a727e26231e6c779"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-missing-after/world.db",
+      "bytes": 978944,
+      "sha256": "dafaaced4e60f2635129cea789ee9f6f8c4ffe5f9906b14e4acab4e7fb1ab0a0"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-missing-after/world.db-shm",
+      "bytes": 32768,
+      "sha256": "25224cf8d90d7793fdaff4fc0003a4b872812c86a98d5d2e398710bd23a09d3b"
+    },
+    {
+      "path": "canvas-godot-20261026T071807803026Z/unknown-cap-missing-after/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/first-query-failure/world.db-wal",
+      "bytes": 20632,
+      "sha256": "47c591515c37c11338c4dc19465dd63ee19686bc63cdbed20cd34dc49169c062"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/first-query-failure/world.db",
+      "bytes": 946176,
+      "sha256": "8b3309491bdf946fdb817537029eb71ee4fa59a71a2cae05ea20ad4d2b6b088e"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/first-query-failure/world.db-shm",
+      "bytes": 32768,
+      "sha256": "48fc2e1fd2cab1b52e6c2ef9a90446a760f7092c0f3b9200715220ca0290d508"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/first-query-failure/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/actual-cli-world/world.db-wal",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/actual-cli-world/world.db",
+      "bytes": 978944,
+      "sha256": "ab2ac6bbe1f8b138aed99cd1244e2f672aa9bcf2372ce3256c35a3c6bcd7ba17"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/actual-cli-world/world.db-shm",
+      "bytes": 32768,
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/actual-cli-world/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-own-later/world.db-wal",
+      "bytes": 222512,
+      "sha256": "a02e4efa92e0a381f46677b741f81bf0f7d11217892a2578e4bce58c9383fa4e"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-own-later/world.db",
+      "bytes": 974848,
+      "sha256": "29f7572ce8d330c45cdfbfa6c298f05ab90607d8aace7201af01675ecb8d6fd0"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-own-later/world.db-shm",
+      "bytes": 32768,
+      "sha256": "f71e9f3d830239d50fe3dd15b52234c56f3c24628895bfc7914a01e07a2c2277"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-own-later/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-after/world.db-wal",
+      "bytes": 226632,
+      "sha256": "2f5aa55794a435752042b87744d7648077a8724ca745c586b888012548f14e1f"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-after/world.db",
+      "bytes": 974848,
+      "sha256": "29f7572ce8d330c45cdfbfa6c298f05ab90607d8aace7201af01675ecb8d6fd0"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-after/world.db-shm",
+      "bytes": 32768,
+      "sha256": "50568c30555a793a05d237a11324aedd4b47cbae0c743a7b1ac505ea1f3e62b1"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-after/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-old-history/world.db-wal",
+      "bytes": 3992312,
+      "sha256": "4946551140e879375c0cff282f18d8dfa6b5e8c3755099654e437bab21cdff8b"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-old-history/world.db",
+      "bytes": 974848,
+      "sha256": "29f7572ce8d330c45cdfbfa6c298f05ab90607d8aace7201af01675ecb8d6fd0"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-old-history/world.db-shm",
+      "bytes": 32768,
+      "sha256": "82e8363a363f0c85a2d3130d7687e97dcbccb8dacee096ff23e62b05da1a3d06"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-old-history/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/legitimate-nearby-fixture/world.db-wal",
+      "bytes": 1425552,
+      "sha256": "f4285942656757a6318c9ef1f15f22a302445d1dcd54d3a2e5dfedd3b348f238"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/legitimate-nearby-fixture/world.db",
+      "bytes": 946176,
+      "sha256": "8b3309491bdf946fdb817537029eb71ee4fa59a71a2cae05ea20ad4d2b6b088e"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/legitimate-nearby-fixture/world.db-shm",
+      "bytes": 32768,
+      "sha256": "81515131a7724c9b998fed2b62d0c8d2bfb2d9cd5739741dd063cf74d259c94d"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/legitimate-nearby-fixture/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-before/world.db-wal",
+      "bytes": 226632,
+      "sha256": "6afcb4d696261ebaa5e4259212897db94eee76f0edcd6b6a2caa918ccde242f2"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-before/world.db",
+      "bytes": 974848,
+      "sha256": "29f7572ce8d330c45cdfbfa6c298f05ab90607d8aace7201af01675ecb8d6fd0"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-before/world.db-shm",
+      "bytes": 32768,
+      "sha256": "7468bbffed32de41074740dd4c184eeb89855a3b6590ed839097f39356e5a108"
+    },
+    {
+      "path": "canvas-python-20261026T070027433307Z/recover-before/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-python-20261026T070429369037Z/budget-world-3/world.db-wal",
+      "bytes": 57712,
+      "sha256": "a8d9bb995e8e098b0d1c4d025be97d077cafc078dded172df00a12d60be7cd2d"
+    },
+    {
+      "path": "canvas-python-20261026T070429369037Z/budget-world-3/world.db",
+      "bytes": 978944,
+      "sha256": "387ebf1f0ca76ad09f9259e353a1ca4f5eb5b565d19390a97ab6c397cc45ac8b"
+    },
+    {
+      "path": "canvas-python-20261026T070429369037Z/budget-world-3/world.db-shm",
+      "bytes": 32768,
+      "sha256": "5666d0ad4c8962f6ff889dc68b820bc514d713a32477170389ba894574539730"
+    },
+    {
+      "path": "canvas-python-20261026T070429369037Z/budget-world-3/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-python-20261026T070429369037Z/budget-ready/world.db-wal",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-python-20261026T070429369037Z/budget-ready/world.db",
+      "bytes": 978944,
+      "sha256": "387ebf1f0ca76ad09f9259e353a1ca4f5eb5b565d19390a97ab6c397cc45ac8b"
+    },
+    {
+      "path": "canvas-python-20261026T070429369037Z/budget-ready/world.db-shm",
+      "bytes": 32768,
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    {
+      "path": "canvas-python-20261026T070429369037Z/budget-ready/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-python-20261026T070429369037Z/budget-world-4/world.db-wal",
+      "bytes": 57712,
+      "sha256": "ea962a3b785cd1ef47e3f3e3f7dad20aca209580d295825052adda1e7dc58cc8"
+    },
+    {
+      "path": "canvas-python-20261026T070429369037Z/budget-world-4/world.db",
+      "bytes": 978944,
+      "sha256": "387ebf1f0ca76ad09f9259e353a1ca4f5eb5b565d19390a97ab6c397cc45ac8b"
+    },
+    {
+      "path": "canvas-python-20261026T070429369037Z/budget-world-4/world.db-shm",
+      "bytes": 32768,
+      "sha256": "3225dc719bc269ed2bc475dd82ecd68879d8ab1b5cc418e89285a0c418a6563b"
+    },
+    {
+      "path": "canvas-python-20261026T070429369037Z/budget-world-4/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "removedBytes": 44367216,
+  "removedFileCount": 124,
+  "retainedFileCount": 613,
+  "retainedFilesUnchanged": true,
+  "skippedDatabaseWithoutFinalSnapshot": [],
+  "preserved": "All scripts, reports, screenshots, source freezes, logical snapshots, original journals; original natural head/stages and all failed/corruption counterexamples untouched."
+}

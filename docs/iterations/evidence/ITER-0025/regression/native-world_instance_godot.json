@@ -1,0 +1,171 @@
+{
+  "passed": true,
+  "actualModelCalls": 0,
+  "groups": 9,
+  "assertions": 27,
+  "results": [
+    {
+      "name": "after-save",
+      "checks": [
+        {
+          "name": "new world establishes instance binding",
+          "passed": true
+        },
+        {
+          "name": "lost response retains original protected record",
+          "passed": true
+        },
+        {
+          "name": "original freezes persistent world identity",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "after-replacement",
+      "checks": [
+        {
+          "name": "same endpoint identifies a different world",
+          "passed": true
+        },
+        {
+          "name": "replacement does not load original but reports its retained record",
+          "passed": true
+        },
+        {
+          "name": "recovery sends no original action to replacement",
+          "passed": true
+        },
+        {
+          "name": "explicitly connected replacement can use its own independent records",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "after-corrupt",
+      "checks": [
+        {
+          "name": "protected format missing instance is corruption, not legacy",
+          "passed": true
+        },
+        {
+          "name": "corrupt protected record prevents replacement action",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "after-return",
+      "checks": [
+        {
+          "name": "relocated original keeps its identity after token rotation",
+          "passed": true
+        },
+        {
+          "name": "original world resolves the original command",
+          "passed": true
+        },
+        {
+          "name": "original command has exactly one material effect",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "before-save",
+      "checks": [
+        {
+          "name": "new world establishes instance binding",
+          "passed": true
+        },
+        {
+          "name": "lost response retains original protected record",
+          "passed": true
+        },
+        {
+          "name": "original freezes persistent world identity",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "before-replacement",
+      "checks": [
+        {
+          "name": "same endpoint identifies a different world",
+          "passed": true
+        },
+        {
+          "name": "replacement does not load original but reports its retained record",
+          "passed": true
+        },
+        {
+          "name": "recovery sends no original action to replacement",
+          "passed": true
+        },
+        {
+          "name": "explicitly connected replacement can use its own independent records",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "before-corrupt",
+      "checks": [
+        {
+          "name": "protected format missing instance is corruption, not legacy",
+          "passed": true
+        },
+        {
+          "name": "corrupt protected record prevents replacement action",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "before-return",
+      "checks": [
+        {
+          "name": "relocated original keeps its identity after token rotation",
+          "passed": true
+        },
+        {
+          "name": "unsubmitted original stays byte-identical",
+          "passed": true
+        },
+        {
+          "name": "original world resolves the original command",
+          "passed": true
+        },
+        {
+          "name": "original command has exactly one material effect",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "legacy-check",
+      "checks": [
+        {
+          "name": "old unbound pending is not adopted into protected world",
+          "passed": true
+        },
+        {
+          "name": "legacy barrier cannot send a replacement command",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "allExperimentProcessesStopped": true
+}

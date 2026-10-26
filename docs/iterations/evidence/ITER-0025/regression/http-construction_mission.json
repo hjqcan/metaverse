@@ -1,0 +1,75 @@
+{
+  "suite": "construction-mission-http",
+  "actualModelCalls": 0,
+  "decisionSource": "test-double",
+  "passed": true,
+  "testsRun": 13,
+  "tests": [
+    {
+      "test": "__main__.ConstructionAcceptance.test_01_platform_is_built_with_actual_material_and_return",
+      "passed": true,
+      "seconds": 10.822111063986085
+    },
+    {
+      "test": "__main__.ConstructionAcceptance.test_02_explicit_bridge_then_later_platform_and_free_visit",
+      "passed": true,
+      "seconds": 84.28715940803522
+    },
+    {
+      "test": "__main__.ConstructionAcceptance.test_03_lost_build_response_restores_same_entity_once",
+      "passed": true,
+      "seconds": 5.012259324023034
+    },
+    {
+      "test": "__main__.ConstructionAcceptance.test_04_server_exit_before_commit_retries_original_build",
+      "passed": true,
+      "seconds": 5.073999620042741
+    },
+    {
+      "test": "__main__.ConstructionAcceptance.test_05_client_process_exit_after_commit_restores_original_build",
+      "passed": true,
+      "seconds": 11.050086927018128
+    },
+    {
+      "test": "__main__.ConstructionAcceptance.test_06_mismatched_receipt_and_absent_entity_keep_original_pending",
+      "passed": true,
+      "seconds": 4.8655642489902675
+    },
+    {
+      "test": "__main__.ConstructionAcceptance.test_07_permissions_material_budget_and_geometry_prevent_actions",
+      "passed": true,
+      "seconds": 3.882717454980593
+    },
+    {
+      "test": "__main__.ConstructionAcceptance.test_08_existing_facility_is_not_this_tasks_construction",
+      "passed": true,
+      "seconds": 4.976611135993153
+    },
+    {
+      "test": "__main__.ConstructionAcceptance.test_09_pause_freezes_recipe_target_actor_and_permissions",
+      "passed": true,
+      "seconds": 4.556003965029959
+    },
+    {
+      "test": "__main__.ConstructionAcceptance.test_10_stale_build_requires_original_rejection_then_new_attempt",
+      "passed": true,
+      "seconds": 4.833881469035987
+    },
+    {
+      "test": "__main__.ConstructionAcceptance.test_11_fixed_reference_cli_exports_construction_facts",
+      "passed": true,
+      "seconds": 12.530484588001855
+    },
+    {
+      "test": "__main__.ConstructionAcceptance.test_12_visit_before_build_does_not_replace_visiting_completed_facility",
+      "passed": true,
+      "seconds": 6.4644463910372
+    },
+    {
+      "test": "__main__.ConstructionAcceptance.test_13_observation_failure_after_confirmation_keeps_built_fact",
+      "passed": true,
+      "seconds": 4.898967040993739
+    }
+  ],
+  "failures": []
+}

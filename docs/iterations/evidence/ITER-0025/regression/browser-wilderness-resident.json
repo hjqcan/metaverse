@@ -1,0 +1,37 @@
+{
+  "suite": "wilderness-resident-chrome",
+  "passed": true,
+  "recordedAtUtc": "2026-10-26T07:19:46.171Z",
+  "actualModelCalls": 0,
+  "browser": "152.0.7977.82",
+  "javascriptErrors": [],
+  "worldRequests": [],
+  "port": 43519,
+  "serviceStopped": true,
+  "tests": [
+    {
+      "name": "actual_fixed_reference_gather_and_bridge_facts",
+      "passed": true
+    },
+    {
+      "name": "gather_replay_retains_resident_position",
+      "passed": true
+    },
+    {
+      "name": "unknown_cut_is_not_counted_as_collected",
+      "passed": true
+    },
+    {
+      "name": "mismatched_gather_total_cannot_present_verified_completion",
+      "passed": true
+    },
+    {
+      "name": "invalid_source_rejected_during_import",
+      "passed": true
+    },
+    {
+      "name": "390px_material_summary_and_readonly_report",
+      "passed": true
+    }
+  ]
+}

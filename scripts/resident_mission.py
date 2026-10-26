@@ -30,6 +30,7 @@ import command_preconditions as preconditions
 import resident_transfer as transfer
 import resident_material_access as material
 import resident_entity_notes as entity_notes
+import resident_entity_canvas as entity_canvas
 
 
 def _utc():
@@ -43,7 +44,7 @@ def _integer(value, low, high):
 def _spec(value):
     required = {"missionId", "objective", "goals", "allowBuild", "budgets"}
     if (not isinstance(value, dict) or not required <= set(value)
-            or set(value) - required - {"allowGather", "allowTransfer", "allowMaterialAccess", "allowEntityNotes", "sharePostcard", "paintMosaic", "proposeMosaic", "reviewMosaicProposal"}):
+            or set(value) - required - {"allowGather", "allowTransfer", "allowMaterialAccess", "allowEntityNotes", "allowEntityCanvas", "sharePostcard", "paintMosaic", "proposeMosaic", "reviewMosaicProposal"}):
         raise ValueError("Invalid mission spec fields")
     if not isinstance(value["missionId"], str) or not re.fullmatch(r"[A-Za-z0-9_-]{1,64}", value["missionId"]):
         raise ValueError("Invalid missionId")
@@ -59,6 +60,8 @@ def _spec(value):
         raise ValueError('allowMaterialAccess must be boolean')
     if 'allowEntityNotes' in value and type(value['allowEntityNotes']) is not bool:
         raise ValueError('allowEntityNotes must be boolean')
+    if 'allowEntityCanvas' in value and type(value['allowEntityCanvas']) is not bool:
+        raise ValueError('allowEntityCanvas must be boolean')
     if "sharePostcard" in value and type(value["sharePostcard"]) is not bool:
         raise ValueError("sharePostcard must be boolean")
     if "paintMosaic" in value and type(value["paintMosaic"]) is not bool:
@@ -78,8 +81,14 @@ def _spec(value):
     ids = set()
     for goal in goals:
         if (not isinstance(goal, dict) or not {'id', 'label', 'target'} <= set(goal)
-                or set(goal) - {'id', 'label', 'target', 'activityId', 'buildRecipeId', 'transfer', 'materialAccess', 'entityNote'}):
+                or set(goal) - {'id', 'label', 'target', 'activityId', 'buildRecipeId', 'transfer', 'materialAccess', 'entityNote', 'entityCanvas'}):
             raise ValueError("Invalid goal fields")
+        if 'entityCanvas' in goal and (not entity_canvas.valid_goal(goal['entityCanvas'])
+                or value.get('allowEntityCanvas') is not True or len(goals) != 1
+                or set(goal) != {'id', 'label', 'target', 'entityCanvas'}
+                or any(value.get(k) for k in ('allowBuild', 'allowGather', 'allowTransfer', 'allowMaterialAccess',
+                                            'allowEntityNotes', 'sharePostcard', 'paintMosaic', 'proposeMosaic', 'reviewMosaicProposal'))):
+            raise ValueError('Entity canvas requires one fixed patch, original revision and exclusive explicit permission')
         if 'entityNote' in goal and (not entity_notes.valid_goal(goal['entityNote']) or value.get('allowEntityNotes') is not True
                 or any(k in goal for k in ('activityId', 'buildRecipeId', 'transfer', 'materialAccess'))
                 or any(value.get(k) for k in ('sharePostcard', 'paintMosaic', 'proposeMosaic', 'reviewMosaicProposal'))):
@@ -109,11 +118,15 @@ def _spec(value):
         if (not isinstance(goal["target"], list) or len(goal["target"]) != 2
                 or any(not continuous.finite(n) or n < 0 for n in goal["target"])):
             raise ValueError("Goal target must be two nonnegative finite coordinates")
+    if value.get('allowEntityCanvas') and not all('entityCanvas' in g for g in goals):
+        raise ValueError('Entity canvas permission requires its single explicit goal')
     budget = value["budgets"]
     bounds = {"commands": (1, 1000), "wood": (0, 12), "seconds": (1, 600), "modelCalls": (1, 1)}
     if any('materialAccess' in goal for goal in goals):
         if not all('materialAccess' in goal for goal in goals):
             raise ValueError('Material access tasks require explicit material goals throughout')
+        bounds['queries'] = (1, 5000)
+    if any('entityCanvas' in goal for goal in goals):
         bounds['queries'] = (1, 5000)
     if any('entityNote' in goal for goal in goals):
         if not all('entityNote' in goal for goal in goals):
@@ -199,6 +212,10 @@ def _public(observed, share_postcard=False, paint_mosaic=False, consent=False):
         public['entityNotes'] = deepcopy(observed['entityNotes'])
         world['entityNotes'] = deepcopy(observed['entityNotes'])
         public['self']['operatorId'] = observed['identity']['operatorId']
+    if entity_canvas.supported(observed):
+        public['entityCanvas'] = deepcopy(observed['entityCanvas'])
+        world['entityCanvas'] = deepcopy(observed['entityCanvas'])
+        public['self']['operatorId'] = observed['identity']['operatorId']
     entry = public_entry_guide(observed)
     if entry is not None:
         public["entryGuide"] = entry
@@ -232,6 +249,10 @@ def _validate_goals(spec, observed, *, recovering=False):
                 or any(not isinstance(observed["self"].get(k), list) for k in ("mosaicProposals", "mosaicReviews"))):
             raise ValueError("invalid_mosaic_consent_capability")
     for goal in spec["goals"]:
+        if 'entityCanvas' in goal and not recovering:
+            if preconditions.select_mode(observed) != preconditions.ACTOR_STATE:
+                raise ValueError('Entity canvas tasks require the original actor-state capability')
+            entity_canvas.validate_goal(observed, goal)
         if 'entityNote' in goal and not recovering:
             if preconditions.select_mode(observed) != preconditions.ACTOR_STATE:
                 raise ValueError('Entity note tasks require the original actor-state capability')
@@ -388,7 +409,8 @@ def _route_info(observed, target, allow_build, allow_gather=False):
 def _context(spec, observed):
     candidates = []
     for goal in spec["goals"]:
-        info = (entity_notes.plan(observed, goal) if 'entityNote' in goal else
+        info = (entity_canvas.plan(observed, goal) if 'entityCanvas' in goal else
+                entity_notes.plan(observed, goal) if 'entityNote' in goal else
                 material.plan(observed, goal) if 'materialAccess' in goal else
                 transfer.plan(observed, goal, spec['allowBuild'], spec.get('allowGather', False)) if 'transfer' in goal else
                 construction.plan(observed, goal, spec.get('allowGather', False)) if 'buildRecipeId' in goal
@@ -501,11 +523,12 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
     with _lock(path):
         state = json.loads(path.read_text()) if path.exists() else None
         endpoint = {"url": client.url.rstrip("/"), "prefix": client.prefix}
+        canvas_task = any('entityCanvas' in g for g in spec['goals'])
         note_task = any('entityNote' in g for g in spec['goals'])
         material_task = any('materialAccess' in g for g in spec['goals'])
-        startup_kind = entity_notes.STARTUP if note_task else material.STARTUP if material_task else None
+        startup_kind = entity_canvas.STARTUP if canvas_task else entity_notes.STARTUP if note_task else material.STARTUP if material_task else None
         startup = None
-        if isinstance(state, dict) and (state.get('kind') in (entity_notes.STARTUP, material.STARTUP)
+        if isinstance(state, dict) and (state.get('kind') in (entity_notes.STARTUP, material.STARTUP, entity_canvas.STARTUP)
                                        or startup_kind and '_state' not in state):
             if startup_kind is None:
                 raise ValueError('Unbound startup cannot become a different task')
@@ -520,6 +543,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 raise ValueError("State belongs to a different mission spec")
         if state is not None:
             entity_notes.validate_saved(state)
+            entity_canvas.validate_saved(state)
         mode = preconditions.saved_mode(state) if state is not None else None
         if state is not None:
             transfer.validate_saved(state)
@@ -534,6 +558,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             result['mission'].setdefault('allowTransfer', spec.get('allowTransfer', False))
             result['mission'].setdefault('allowMaterialAccess', spec.get('allowMaterialAccess', False))
             result['mission'].setdefault('allowEntityNotes', spec.get('allowEntityNotes', False))
+            result['mission'].setdefault('allowEntityCanvas', spec.get('allowEntityCanvas', False))
+            result['facts'].setdefault('entityCanvasPainted', False)
+            result['facts'].setdefault('entityCanvasEdit', None)
             result['facts'].setdefault('entityNoteShared', False)
             result['facts'].setdefault('entityNote', None)
             result['facts'].setdefault('transferCompleted', False)
@@ -568,6 +595,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 state['_state']['materialAccessTerminal'] = True
             if status == 'blocked' and any('entityNote' in g for g in spec['goals']) and reason.startswith('command_rejected:'):
                 state['_state']['entityNoteTerminal'] = True
+            if status == 'blocked' and canvas_task and reason.startswith('command_rejected:'):
+                state['_state']['entityCanvasTerminal'] = True
             summary = "已核验活动到访与返回" if state["facts"].get("activityCompleted") else "已核验到达与返回"
             if state["facts"].get("postcardShared"):
                 summary = "已核验活动到访、共同手记分享与返回"
@@ -584,6 +613,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 summary = '已核验会面交付木材与返回'
             if state['facts'].get('entityNoteShared'):
                 summary = '已核验原桥手记发表、原文与引用、到达和返回'
+            if state['facts'].get('entityCanvasPainted'):
+                summary = '已核验原平台固定地画修改、原edit与事件、到达和返回'
             state["feedback"] = {"summary": summary if status == "completed" else reason,
                                  "issues": [] if status in ("completed", "paused") else [reason], "suggestions": []}
             save()
@@ -599,6 +630,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 if state['budget']['used']['queries'] >= state['budget']['limits']['queries']:
                     raise material.QueryBudget()
                 state['budget']['used']['queries'] += 1
+                if 'entityCanvasBinding' in state['_state']:
+                    state['_state']['entityCanvasQueries'].append({'index': state['budget']['used']['queries'], 'kind': kind})
                 if 'entityNotesBinding' in state['_state']:
                     state['_state']['entityNoteQueries'].append({'index': state['budget']['used']['queries'], 'kind': kind})
                 if state['_state'].get('materialAccessTrackingVersion') == 1:
@@ -623,6 +656,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
         # cannot restart the journey, reselect, or send a replacement drawing.
         if state is not None and (state.get('_state', {}).get('materialAccessTerminal') is True
                                   or state.get('_state', {}).get('entityNoteTerminal') is True
+                                  or state.get('_state', {}).get('entityCanvasTerminal') is True
                                   or state["mission"]["status"] in ("completed", "decision_failed")
                                   or (state["mission"]["status"] == "blocked"
                                       and (state["mission"]["reason"] in ("command_rejected:MOSAIC_CHANGED",
@@ -675,6 +709,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                                  "allowTransfer": spec.get("allowTransfer", False),
                                  "allowMaterialAccess": spec.get("allowMaterialAccess", False),
                                  "allowEntityNotes": spec.get('allowEntityNotes', False),
+                                 "allowEntityCanvas": spec.get('allowEntityCanvas', False),
                                  "arrivalTolerance": continuous.ARRIVAL_TOLERANCE if continuous.continuous(observed) else 0,
                                  "sharePostcard": spec.get("sharePostcard", False),
                                  "paintMosaic": spec.get("paintMosaic", False),
@@ -692,6 +727,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                                                               if 'queries' in spec['budgets'] else {})}},
                      "facts": {"goalReached": False, "returned": True,
                                "entityNoteShared": False, "entityNote": None,
+                               "entityCanvasPainted": False, "entityCanvasEdit": None,
                                "activityCompleted": False, "activityVisit": None,
                                "postcardShared": False, "postcard": None,
                                "mosaicPainted": False, "mosaicEdit": None,
@@ -706,6 +742,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                      "_state": {"spec": spec, "binding": {**bind(observed), 'preconditionBindingVersion': 1,
                                                           'preconditionMode': mode}, "startedEpoch": startup['startedEpoch'] if startup else time.time(),
                                 "pending": None, "initial": public, "decisionStarted": False,
+                                **({'entityCanvasBinding': entity_canvas.binding(observed), 'entityCanvasQueries': deepcopy(startup['queries']),
+                                    'entityCanvasActorStateVersion': observed['stateVersion']}
+                                   if canvas_task else {}),
                                 **({'entityNotesBinding': entity_notes.binding(observed), 'entityNoteQueries': deepcopy(startup['queries'])}
                                    if note_task else {}),
                                 **({'materialAccessTrackingVersion': 1, 'materialAccessQueries': deepcopy(startup['queries']),
@@ -720,6 +759,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
         facts.setdefault('transferCompleted', False)
         facts.setdefault('transfer', None)
         facts.setdefault('woodTransferred', 0)
+        facts.setdefault('entityCanvasPainted', False)
+        facts.setdefault('entityCanvasEdit', None)
         facts.setdefault('entityNoteShared', False)
         facts.setdefault('entityNote', None)
         if any('materialAccess' in g for g in spec['goals']):
@@ -796,10 +837,13 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             needs_review = bool(spec.get("reviewMosaicProposal")) and not facts["mosaicReviewed"]
             needs_construction = 'buildRecipeId' in goal and not facts['constructionBuilt']
             needs_transfer = 'transfer' in goal and not facts['transferCompleted']
+            needs_entity_canvas = 'entityCanvas' in goal and not facts['entityCanvasPainted']
             needs_entity_note = 'entityNote' in goal and not facts['entityNoteShared']
             ready_to_return = (facts["goalReached"] and not any((needs_visit, needs_postcard, needs_mosaic,
-                                                               needs_proposal, needs_review, needs_construction, needs_transfer, needs_entity_note)))
+                                                               needs_proposal, needs_review, needs_construction, needs_transfer, needs_entity_note, needs_entity_canvas)))
             if pending is None:
+                if needs_entity_canvas and not entity_canvas.ready(observed, state['_state']['entityCanvasBinding']):
+                    return finish('unknown', 'entity_canvas_capability_unavailable')
                 if needs_entity_note and not entity_notes.ready(observed, goal, state['_state']['entityNotesBinding'], state['_state']['initial']):
                     return finish('unknown', 'entity_notes_capability_or_reference_unavailable')
                 if ready_to_return and facts["returned"]:
@@ -816,7 +860,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                     return finish("budget_exhausted", "commands")
                 returning = ready_to_return
                 target = state["mission"]["origin"] if returning else goal["target"]
-                info = (entity_notes.plan(observed, goal) if needs_entity_note else
+                info = (entity_canvas.plan(observed, goal) if needs_entity_canvas else
+                        entity_notes.plan(observed, goal) if needs_entity_note else
                         material.plan(observed, goal, facts) if needs_construction and 'materialAccess' in goal else
                         transfer.plan(observed, goal, spec['allowBuild'], spec.get('allowGather', False)) if needs_transfer else
                         construction.plan(observed, goal, spec.get('allowGather', False)) if needs_construction
@@ -898,9 +943,15 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                         reason = "返回原起点" if returning else "前往已选目标"
                 intent = {"schemaVersion": 1, "rulesVersion": observed["rulesVersion"], "commandId": uuid.uuid4().hex,
                           "expectedStateVersion": observed["stateVersion"], "action": action}
+                if canvas_task:
+                    # Preserve the last command confirmed by this task: another action
+                    # by this actor must still trigger the server's ABA protection.
+                    intent['expectedStateVersion'] = state['_state']['entityCanvasActorStateVersion']
                 if mode is not None:
                     intent['preconditionMode'] = mode
                 pending = {"request": intent, "woodCost": cost}
+                if action['type'] == entity_canvas.ACTION:
+                    pending['entityCanvasBefore'] = entity_canvas.before(observed, state['_state']['entityCanvasBinding'])
                 if action['type'] == entity_notes.ACTION:
                     pending['entityNoteBefore'] = entity_notes.before(observed, goal, state['_state']['entityNotesBinding'], state['_state']['initial'])
                 if action['type'] in material.ACTIONS:
@@ -1002,6 +1053,10 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 if recovery:
                     status, result = query(lambda: client.request("GET", client.prefix + "/commands/" + intent["commandId"]), 'receipt')
                     if status == 404 and isinstance(result, dict) and (result.get("error") or {}).get("code") == "COMMAND_NOT_FOUND":
+                        if (intent['action']['type'] == entity_canvas.ACTION
+                                and not entity_canvas.ready(observed, state['_state']['entityCanvasBinding'])):
+                            step['status'] = 'unknown'
+                            return finish('unknown', 'entity_canvas_capability_unavailable_pending_retained')
                         if (intent['action']['type'] == entity_notes.ACTION
                                 and not entity_notes.ready(observed, goal, state['_state']['entityNotesBinding'], state['_state']['initial'])):
                             step['status'] = 'unknown'
@@ -1055,7 +1110,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             if intent['action']['type'] in material.ACTIONS and rejected:
                 rejected = (type(result.get('schemaVersion')) is int
                             and result['identity'].get('operatorId') == pending['materialBefore']['operatorId'])
-            if intent['action']['type'] == entity_notes.ACTION:
+            if intent['action']['type'] in (entity_notes.ACTION, entity_canvas.ACTION):
+                original_before = pending['entityCanvasBefore' if intent['action']['type'] == entity_canvas.ACTION else 'entityNoteBefore']
                 # Parse-level 400/404 from an old service is not this command's durable rejection.
                 rejected = (400 <= status < 500 and status not in (401, 412, 428) and isinstance(result, dict)
                             and isinstance(error, dict) and error.get('mutated') is False
@@ -1064,8 +1120,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                             and result.get('status') == 'rejected' and result.get('commandId') == intent['commandId']
                             and type(result.get('schemaVersion')) is int and result['schemaVersion'] == 1
                             and result.get('rulesVersion') == 'r10' and isinstance(result.get('identity'), dict)
-                            and result['identity'].get('actorId') == pending['entityNoteBefore']['actorId']
-                            and result['identity'].get('operatorId') == pending['entityNoteBefore']['operatorId'])
+                            and result['identity'].get('actorId') == original_before['actorId']
+                            and result['identity'].get('operatorId') == original_before['operatorId'])
             if not committed and not rejected:
                 step["status"] = "unknown"
                 return finish("unknown", "unconfirmed_receipt")
@@ -1077,7 +1133,36 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 if not isinstance(result_action, dict) or result_action.get("action") != intent["action"]["type"]:
                     step["status"] = "unknown"
                     return finish("unknown", "unexpected_receipt_action")
-                if intent['action']['type'] == entity_notes.ACTION:
+                if intent['action']['type'] == entity_canvas.ACTION:
+                    cursor = result.get('eventCursor')
+                    event, read = None, None
+                    original = pending['entityCanvasBefore']
+                    if preconditions.integer(cursor) and cursor > 0:
+                        try:
+                            edit_path = (client.prefix + '/entities/' + original['target']['entityId']
+                                         + '/canvas/edits/' + original['actorId'] + '/' + intent['commandId'])
+                            edit_status, read = query(lambda: client.request('GET', edit_path), 'entity_canvas_edit')
+                            if edit_status == 200 and entity_canvas.envelope(read, original):
+                                event_status, envelope = query(lambda: client.request('GET', client.prefix + '/events?after=' + str(cursor - 1)), 'entity_canvas_event')
+                                if (event_status == 200 and entity_canvas.envelope(envelope, original)
+                                        and isinstance(envelope.get('events'), list) and envelope['events']):
+                                    event = envelope['events'][0]
+                            else:
+                                read = None
+                        except material.QueryBudget:
+                            return finish('budget_exhausted', 'queries_pending_retained')
+                        except (OSError, RuntimeError, ValueError):
+                            step['status'] = 'unknown'
+                            return finish('unknown', 'entity_canvas_evidence_unavailable')
+                    edit = entity_canvas.evidence(result, intent, original, read, event)
+                    if edit is None:
+                        step['status'] = 'unknown'
+                        return finish('unknown', 'unconfirmed_entity_canvas_evidence')
+                    facts.update(entityCanvasPainted=True, entityCanvasEdit=edit)
+                    state['_state']['entityCanvasProof'] = deepcopy({'request': intent, 'before': original,
+                                                                     'receipt': result, 'readback': read, 'event': event})
+                    step.update(entityCanvasEvidence=deepcopy(edit), evidenceSource='original_receipt_edit_and_event')
+                elif intent['action']['type'] == entity_notes.ACTION:
                     cursor = result.get('eventCursor')
                     event, read = None, None
                     if preconditions.integer(cursor) and cursor > 0:
@@ -1234,6 +1319,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             if mode is not None:
                 step.update(expectedStateVersion=intent['expectedStateVersion'], execution=deepcopy(result['execution']),
                             stateVersion=result['stateVersion'])
+            if canvas_task and committed:
+                state['_state']['entityCanvasActorStateVersion'] = result['stateVersion']
             # Settlement, accounting and clearing pending are one atomic write.
             state["_state"]["pending"] = None
             save()
@@ -1241,7 +1328,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             if committed and intent['action']['type'] == 'walk' and result_action['blocked']:
                 return finish('blocked', 'movement_collision')
             retryable = ("STALE_STATE",) if consent_validator else ("STALE_STATE", "CELL_OCCUPIED")
-            if intent['action']['type'] == entity_notes.ACTION:
+            if intent['action']['type'] in (entity_notes.ACTION, entity_canvas.ACTION):
                 retryable = ()
             if rejected and error.get("code") not in retryable:
                 return finish("blocked", "command_rejected:" + str(error.get("code")))

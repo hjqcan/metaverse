@@ -1,0 +1,62 @@
+{
+  "suite": "activities-real-chrome-v1",
+  "recordedAtUtc": "2026-10-26T07:18:25.669Z",
+  "browser": "152.0.7977.82",
+  "passed": true,
+  "tests": [
+    {
+      "name": "three_live_activities_and_select_keyboard_isolation",
+      "passed": true,
+      "milliseconds": 374
+    },
+    {
+      "name": "human_walk_and_visit_commit_real_fact_without_resources",
+      "passed": true,
+      "milliseconds": 428
+    },
+    {
+      "name": "actual_stale_visit_rejection_is_shown_and_never_written",
+      "passed": true,
+      "milliseconds": 171
+    },
+    {
+      "name": "lost_visit_response_reload_recovers_original_id_once",
+      "passed": true,
+      "milliseconds": 406
+    },
+    {
+      "name": "server_restart_retains_live_visit_history",
+      "passed": true,
+      "milliseconds": 2912
+    },
+    {
+      "name": "mobile_world_catalog_and_controls_390px",
+      "passed": true,
+      "milliseconds": 351
+    },
+    {
+      "name": "actual_gpt6_activity_report_requires_verified_visit",
+      "passed": true,
+      "milliseconds": 176
+    },
+    {
+      "name": "paired_evidence_shows_purpose_mismatch_and_real_call_counts",
+      "passed": true,
+      "milliseconds": 273
+    },
+    {
+      "name": "arrival_only_forged_completion_and_legacy_report_separated",
+      "passed": true,
+      "milliseconds": 132
+    },
+    {
+      "name": "mobile_comparison_no_overflow_or_live_world_requests",
+      "passed": true,
+      "milliseconds": 368
+    }
+  ],
+  "javascriptErrors": [],
+  "reportWorldRequests": [],
+  "actualModelCallsDuringUiTest": 0,
+  "dataRoot": ".local/iter0004/browser/2026-10-26T07-18-19-494Z"
+}

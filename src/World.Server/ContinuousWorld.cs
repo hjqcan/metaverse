@@ -138,6 +138,7 @@ internal sealed partial class WorldService
                 conserved = wildWood + source.StockWood + inventoryWood + embodiedWood == state.IssuedWood && state.IssuedWood == 12 + source.GeneratedWood };
             BindMaterialAccess(body, c, t, identity);
             BindEntityNotes(body, c, t, identity);
+            BindEntityCanvas(body, c, t);
         }
         if (Scenario.SupportsTransfer) BindTransfers(body, c, t, identity.ActorId);
         BindObservation(body, instance);

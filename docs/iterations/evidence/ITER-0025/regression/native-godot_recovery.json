@@ -1,0 +1,1643 @@
+{
+  "recordedAtUtc": "2026-10-26T07:08:40.829925+00:00",
+  "passed": true,
+  "actualModelCalls": 0,
+  "results": [
+    {
+      "name": "first",
+      "checks": [
+        {
+          "name": "both writers reached barrier",
+          "passed": true
+        },
+        {
+          "name": "publish first_0",
+          "passed": true
+        },
+        {
+          "name": "settle only first_0",
+          "passed": true
+        },
+        {
+          "name": "publish first_1",
+          "passed": true
+        },
+        {
+          "name": "publish first_2",
+          "passed": true
+        },
+        {
+          "name": "settle only first_2",
+          "passed": true
+        },
+        {
+          "name": "publish first_3",
+          "passed": true
+        },
+        {
+          "name": "publish first_4",
+          "passed": true
+        },
+        {
+          "name": "settle only first_4",
+          "passed": true
+        },
+        {
+          "name": "publish first_5",
+          "passed": true
+        },
+        {
+          "name": "publish first_6",
+          "passed": true
+        },
+        {
+          "name": "settle only first_6",
+          "passed": true
+        },
+        {
+          "name": "publish first_7",
+          "passed": true
+        },
+        {
+          "name": "publish first_8",
+          "passed": true
+        },
+        {
+          "name": "settle only first_8",
+          "passed": true
+        },
+        {
+          "name": "publish first_9",
+          "passed": true
+        },
+        {
+          "name": "publish first_10",
+          "passed": true
+        },
+        {
+          "name": "settle only first_10",
+          "passed": true
+        },
+        {
+          "name": "publish first_11",
+          "passed": true
+        },
+        {
+          "name": "publish first_12",
+          "passed": true
+        },
+        {
+          "name": "settle only first_12",
+          "passed": true
+        },
+        {
+          "name": "publish first_13",
+          "passed": true
+        },
+        {
+          "name": "publish first_14",
+          "passed": true
+        },
+        {
+          "name": "settle only first_14",
+          "passed": true
+        },
+        {
+          "name": "publish first_15",
+          "passed": true
+        },
+        {
+          "name": "publish first_16",
+          "passed": true
+        },
+        {
+          "name": "settle only first_16",
+          "passed": true
+        },
+        {
+          "name": "publish first_17",
+          "passed": true
+        },
+        {
+          "name": "publish first_18",
+          "passed": true
+        },
+        {
+          "name": "settle only first_18",
+          "passed": true
+        },
+        {
+          "name": "publish first_19",
+          "passed": true
+        },
+        {
+          "name": "publish first_20",
+          "passed": true
+        },
+        {
+          "name": "settle only first_20",
+          "passed": true
+        },
+        {
+          "name": "publish first_21",
+          "passed": true
+        },
+        {
+          "name": "publish first_22",
+          "passed": true
+        },
+        {
+          "name": "settle only first_22",
+          "passed": true
+        },
+        {
+          "name": "publish first_23",
+          "passed": true
+        },
+        {
+          "name": "publish first_24",
+          "passed": true
+        },
+        {
+          "name": "settle only first_24",
+          "passed": true
+        },
+        {
+          "name": "publish first_25",
+          "passed": true
+        },
+        {
+          "name": "publish first_26",
+          "passed": true
+        },
+        {
+          "name": "settle only first_26",
+          "passed": true
+        },
+        {
+          "name": "publish first_27",
+          "passed": true
+        },
+        {
+          "name": "publish first_28",
+          "passed": true
+        },
+        {
+          "name": "settle only first_28",
+          "passed": true
+        },
+        {
+          "name": "publish first_29",
+          "passed": true
+        },
+        {
+          "name": "publish first_30",
+          "passed": true
+        },
+        {
+          "name": "settle only first_30",
+          "passed": true
+        },
+        {
+          "name": "publish first_31",
+          "passed": true
+        },
+        {
+          "name": "publish first_32",
+          "passed": true
+        },
+        {
+          "name": "settle only first_32",
+          "passed": true
+        },
+        {
+          "name": "publish first_33",
+          "passed": true
+        },
+        {
+          "name": "publish first_34",
+          "passed": true
+        },
+        {
+          "name": "settle only first_34",
+          "passed": true
+        },
+        {
+          "name": "publish first_35",
+          "passed": true
+        },
+        {
+          "name": "publish first_36",
+          "passed": true
+        },
+        {
+          "name": "settle only first_36",
+          "passed": true
+        },
+        {
+          "name": "publish first_37",
+          "passed": true
+        },
+        {
+          "name": "publish first_38",
+          "passed": true
+        },
+        {
+          "name": "settle only first_38",
+          "passed": true
+        },
+        {
+          "name": "publish first_39",
+          "passed": true
+        },
+        {
+          "name": "publish first_40",
+          "passed": true
+        },
+        {
+          "name": "settle only first_40",
+          "passed": true
+        },
+        {
+          "name": "publish first_41",
+          "passed": true
+        },
+        {
+          "name": "publish first_42",
+          "passed": true
+        },
+        {
+          "name": "settle only first_42",
+          "passed": true
+        },
+        {
+          "name": "publish first_43",
+          "passed": true
+        },
+        {
+          "name": "publish first_44",
+          "passed": true
+        },
+        {
+          "name": "settle only first_44",
+          "passed": true
+        },
+        {
+          "name": "publish first_45",
+          "passed": true
+        },
+        {
+          "name": "publish first_46",
+          "passed": true
+        },
+        {
+          "name": "settle only first_46",
+          "passed": true
+        },
+        {
+          "name": "publish first_47",
+          "passed": true
+        },
+        {
+          "name": "publish first_48",
+          "passed": true
+        },
+        {
+          "name": "settle only first_48",
+          "passed": true
+        },
+        {
+          "name": "publish first_49",
+          "passed": true
+        },
+        {
+          "name": "publish first_50",
+          "passed": true
+        },
+        {
+          "name": "settle only first_50",
+          "passed": true
+        },
+        {
+          "name": "publish first_51",
+          "passed": true
+        },
+        {
+          "name": "publish first_52",
+          "passed": true
+        },
+        {
+          "name": "settle only first_52",
+          "passed": true
+        },
+        {
+          "name": "publish first_53",
+          "passed": true
+        },
+        {
+          "name": "publish first_54",
+          "passed": true
+        },
+        {
+          "name": "settle only first_54",
+          "passed": true
+        },
+        {
+          "name": "publish first_55",
+          "passed": true
+        },
+        {
+          "name": "publish first_56",
+          "passed": true
+        },
+        {
+          "name": "settle only first_56",
+          "passed": true
+        },
+        {
+          "name": "publish first_57",
+          "passed": true
+        },
+        {
+          "name": "publish first_58",
+          "passed": true
+        },
+        {
+          "name": "settle only first_58",
+          "passed": true
+        },
+        {
+          "name": "publish first_59",
+          "passed": true
+        },
+        {
+          "name": "publish first_60",
+          "passed": true
+        },
+        {
+          "name": "settle only first_60",
+          "passed": true
+        },
+        {
+          "name": "publish first_61",
+          "passed": true
+        },
+        {
+          "name": "publish first_62",
+          "passed": true
+        },
+        {
+          "name": "settle only first_62",
+          "passed": true
+        },
+        {
+          "name": "publish first_63",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "second",
+      "checks": [
+        {
+          "name": "both writers reached barrier",
+          "passed": true
+        },
+        {
+          "name": "publish second_0",
+          "passed": true
+        },
+        {
+          "name": "settle only second_0",
+          "passed": true
+        },
+        {
+          "name": "publish second_1",
+          "passed": true
+        },
+        {
+          "name": "publish second_2",
+          "passed": true
+        },
+        {
+          "name": "settle only second_2",
+          "passed": true
+        },
+        {
+          "name": "publish second_3",
+          "passed": true
+        },
+        {
+          "name": "publish second_4",
+          "passed": true
+        },
+        {
+          "name": "settle only second_4",
+          "passed": true
+        },
+        {
+          "name": "publish second_5",
+          "passed": true
+        },
+        {
+          "name": "publish second_6",
+          "passed": true
+        },
+        {
+          "name": "settle only second_6",
+          "passed": true
+        },
+        {
+          "name": "publish second_7",
+          "passed": true
+        },
+        {
+          "name": "publish second_8",
+          "passed": true
+        },
+        {
+          "name": "settle only second_8",
+          "passed": true
+        },
+        {
+          "name": "publish second_9",
+          "passed": true
+        },
+        {
+          "name": "publish second_10",
+          "passed": true
+        },
+        {
+          "name": "settle only second_10",
+          "passed": true
+        },
+        {
+          "name": "publish second_11",
+          "passed": true
+        },
+        {
+          "name": "publish second_12",
+          "passed": true
+        },
+        {
+          "name": "settle only second_12",
+          "passed": true
+        },
+        {
+          "name": "publish second_13",
+          "passed": true
+        },
+        {
+          "name": "publish second_14",
+          "passed": true
+        },
+        {
+          "name": "settle only second_14",
+          "passed": true
+        },
+        {
+          "name": "publish second_15",
+          "passed": true
+        },
+        {
+          "name": "publish second_16",
+          "passed": true
+        },
+        {
+          "name": "settle only second_16",
+          "passed": true
+        },
+        {
+          "name": "publish second_17",
+          "passed": true
+        },
+        {
+          "name": "publish second_18",
+          "passed": true
+        },
+        {
+          "name": "settle only second_18",
+          "passed": true
+        },
+        {
+          "name": "publish second_19",
+          "passed": true
+        },
+        {
+          "name": "publish second_20",
+          "passed": true
+        },
+        {
+          "name": "settle only second_20",
+          "passed": true
+        },
+        {
+          "name": "publish second_21",
+          "passed": true
+        },
+        {
+          "name": "publish second_22",
+          "passed": true
+        },
+        {
+          "name": "settle only second_22",
+          "passed": true
+        },
+        {
+          "name": "publish second_23",
+          "passed": true
+        },
+        {
+          "name": "publish second_24",
+          "passed": true
+        },
+        {
+          "name": "settle only second_24",
+          "passed": true
+        },
+        {
+          "name": "publish second_25",
+          "passed": true
+        },
+        {
+          "name": "publish second_26",
+          "passed": true
+        },
+        {
+          "name": "settle only second_26",
+          "passed": true
+        },
+        {
+          "name": "publish second_27",
+          "passed": true
+        },
+        {
+          "name": "publish second_28",
+          "passed": true
+        },
+        {
+          "name": "settle only second_28",
+          "passed": true
+        },
+        {
+          "name": "publish second_29",
+          "passed": true
+        },
+        {
+          "name": "publish second_30",
+          "passed": true
+        },
+        {
+          "name": "settle only second_30",
+          "passed": true
+        },
+        {
+          "name": "publish second_31",
+          "passed": true
+        },
+        {
+          "name": "publish second_32",
+          "passed": true
+        },
+        {
+          "name": "settle only second_32",
+          "passed": true
+        },
+        {
+          "name": "publish second_33",
+          "passed": true
+        },
+        {
+          "name": "publish second_34",
+          "passed": true
+        },
+        {
+          "name": "settle only second_34",
+          "passed": true
+        },
+        {
+          "name": "publish second_35",
+          "passed": true
+        },
+        {
+          "name": "publish second_36",
+          "passed": true
+        },
+        {
+          "name": "settle only second_36",
+          "passed": true
+        },
+        {
+          "name": "publish second_37",
+          "passed": true
+        },
+        {
+          "name": "publish second_38",
+          "passed": true
+        },
+        {
+          "name": "settle only second_38",
+          "passed": true
+        },
+        {
+          "name": "publish second_39",
+          "passed": true
+        },
+        {
+          "name": "publish second_40",
+          "passed": true
+        },
+        {
+          "name": "settle only second_40",
+          "passed": true
+        },
+        {
+          "name": "publish second_41",
+          "passed": true
+        },
+        {
+          "name": "publish second_42",
+          "passed": true
+        },
+        {
+          "name": "settle only second_42",
+          "passed": true
+        },
+        {
+          "name": "publish second_43",
+          "passed": true
+        },
+        {
+          "name": "publish second_44",
+          "passed": true
+        },
+        {
+          "name": "settle only second_44",
+          "passed": true
+        },
+        {
+          "name": "publish second_45",
+          "passed": true
+        },
+        {
+          "name": "publish second_46",
+          "passed": true
+        },
+        {
+          "name": "settle only second_46",
+          "passed": true
+        },
+        {
+          "name": "publish second_47",
+          "passed": true
+        },
+        {
+          "name": "publish second_48",
+          "passed": true
+        },
+        {
+          "name": "settle only second_48",
+          "passed": true
+        },
+        {
+          "name": "publish second_49",
+          "passed": true
+        },
+        {
+          "name": "publish second_50",
+          "passed": true
+        },
+        {
+          "name": "settle only second_50",
+          "passed": true
+        },
+        {
+          "name": "publish second_51",
+          "passed": true
+        },
+        {
+          "name": "publish second_52",
+          "passed": true
+        },
+        {
+          "name": "settle only second_52",
+          "passed": true
+        },
+        {
+          "name": "publish second_53",
+          "passed": true
+        },
+        {
+          "name": "publish second_54",
+          "passed": true
+        },
+        {
+          "name": "settle only second_54",
+          "passed": true
+        },
+        {
+          "name": "publish second_55",
+          "passed": true
+        },
+        {
+          "name": "publish second_56",
+          "passed": true
+        },
+        {
+          "name": "settle only second_56",
+          "passed": true
+        },
+        {
+          "name": "publish second_57",
+          "passed": true
+        },
+        {
+          "name": "publish second_58",
+          "passed": true
+        },
+        {
+          "name": "settle only second_58",
+          "passed": true
+        },
+        {
+          "name": "publish second_59",
+          "passed": true
+        },
+        {
+          "name": "publish second_60",
+          "passed": true
+        },
+        {
+          "name": "settle only second_60",
+          "passed": true
+        },
+        {
+          "name": "publish second_61",
+          "passed": true
+        },
+        {
+          "name": "publish second_62",
+          "passed": true
+        },
+        {
+          "name": "settle only second_62",
+          "passed": true
+        },
+        {
+          "name": "publish second_63",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "verify-concurrent",
+      "checks": [
+        {
+          "name": "both processes retained all 64 unresolved commands",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_0",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_1",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_2",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_3",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_4",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_5",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_6",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_7",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_8",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_9",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_10",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_11",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_12",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_13",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_14",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_15",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_16",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_17",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_18",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_19",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_20",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_21",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_22",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_23",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_24",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_25",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_26",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_27",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_28",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_29",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_30",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_31",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_32",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_33",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_34",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_35",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_36",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_37",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_38",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_39",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_40",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_41",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_42",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_43",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_44",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_45",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_46",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_47",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_48",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_49",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_50",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_51",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_52",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_53",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_54",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_55",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_56",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_57",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_58",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_59",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_60",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_61",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_62",
+          "passed": true
+        },
+        {
+          "name": "exact pending state first_63",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_0",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_1",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_2",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_3",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_4",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_5",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_6",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_7",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_8",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_9",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_10",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_11",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_12",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_13",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_14",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_15",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_16",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_17",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_18",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_19",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_20",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_21",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_22",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_23",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_24",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_25",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_26",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_27",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_28",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_29",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_30",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_31",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_32",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_33",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_34",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_35",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_36",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_37",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_38",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_39",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_40",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_41",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_42",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_43",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_44",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_45",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_46",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_47",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_48",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_49",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_50",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_51",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_52",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_53",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_54",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_55",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_56",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_57",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_58",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_59",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_60",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_61",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_62",
+          "passed": true
+        },
+        {
+          "name": "exact pending state second_63",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_39",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_53",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_37",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_5",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_7",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_41",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_35",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_49",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_19",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_45",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_29",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_11",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_55",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_37",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_17",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_51",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_61",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_63",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_57",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_3",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_25",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_23",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_5",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_57",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_59",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_41",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_49",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_23",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_47",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_19",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_61",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_27",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_9",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_31",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_17",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_21",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_15",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_31",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_59",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_47",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_45",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_1",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_39",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_29",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_7",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_33",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_15",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_3",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_27",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_25",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_63",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_33",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_43",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_53",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_51",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_43",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_13",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_9",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_21",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_35",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_1",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_55",
+          "passed": true
+        },
+        {
+          "name": "settle recovered second_11",
+          "passed": true
+        },
+        {
+          "name": "settle recovered first_13",
+          "passed": true
+        },
+        {
+          "name": "all recovered records settled",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "legacy",
+      "checks": [
+        {
+          "name": "read original aggregate",
+          "passed": true
+        },
+        {
+          "name": "other actor persists separately",
+          "passed": true
+        },
+        {
+          "name": "other actor settles separately",
+          "passed": true
+        },
+        {
+          "name": "restart still finds original actor",
+          "passed": true
+        },
+        {
+          "name": "settle original legacy entry",
+          "passed": true
+        },
+        {
+          "name": "settled legacy command does not reappear",
+          "passed": true
+        },
+        {
+          "name": "legacy file remains unchanged",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "conflict",
+      "checks": [
+        {
+          "name": "save original command",
+          "passed": true
+        },
+        {
+          "name": "reject changed body for same command",
+          "passed": true
+        },
+        {
+          "name": "conflict preserves original",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "corrupt",
+      "checks": [
+        {
+          "name": "save before corruption",
+          "passed": true
+        },
+        {
+          "name": "unknown record schema pauses recovery",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

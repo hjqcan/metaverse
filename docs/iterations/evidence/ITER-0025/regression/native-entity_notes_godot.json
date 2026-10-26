@@ -1,0 +1,310 @@
+{
+  "passed": true,
+  "actualModelCalls": 0,
+  "groups": 6,
+  "assertions": 62,
+  "results": [
+    {
+      "name": "ui",
+      "checks": [
+        {
+          "name": "native client sees opted-in old bridge",
+          "passed": true
+        },
+        {
+          "name": "mouse opens bridge notes",
+          "passed": true
+        },
+        {
+          "name": "native Unicode draft input",
+          "passed": true
+        },
+        {
+          "name": "closing a draft sends no command",
+          "passed": true
+        },
+        {
+          "name": "closed draft cleared",
+          "passed": true
+        },
+        {
+          "name": "empty inventory can publish nearby",
+          "passed": true
+        },
+        {
+          "name": "rendered draft",
+          "passed": true
+        },
+        {
+          "name": "actual note settled with receipt event and observation",
+          "passed": true
+        },
+        {
+          "name": "confirmed state distinct from draft",
+          "passed": true
+        },
+        {
+          "name": "rendered published",
+          "passed": true
+        },
+        {
+          "name": "identity switch clears previous draft and reference",
+          "passed": true
+        },
+        {
+          "name": "next resident reads original published text",
+          "passed": true
+        },
+        {
+          "name": "original note has reply action",
+          "passed": true
+        },
+        {
+          "name": "reply pins original note identity",
+          "passed": true
+        },
+        {
+          "name": "second resident publishes exactly one reply",
+          "passed": true
+        },
+        {
+          "name": "server retains original reference",
+          "passed": true
+        },
+        {
+          "name": "rendered reply",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "before",
+      "checks": [
+        {
+          "name": "actual capability fully validated",
+          "passed": true
+        },
+        {
+          "name": "capability alone cannot replace original bridge entity",
+          "passed": true
+        },
+        {
+          "name": "missing or damaged evidence preserves pending",
+          "passed": true
+        },
+        {
+          "name": "original v4 note survives JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "changed frozen text rejected",
+          "passed": true
+        },
+        {
+          "name": "validation never replaces original body",
+          "passed": true
+        },
+        {
+          "name": "restarted adapter settles original note",
+          "passed": true
+        },
+        {
+          "name": "exactly one immutable note",
+          "passed": true
+        },
+        {
+          "name": "original disk record settled",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "after",
+      "checks": [
+        {
+          "name": "actual capability fully validated",
+          "passed": true
+        },
+        {
+          "name": "capability alone cannot replace original bridge entity",
+          "passed": true
+        },
+        {
+          "name": "missing or damaged evidence preserves pending",
+          "passed": true
+        },
+        {
+          "name": "original v4 note survives JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "changed frozen text rejected",
+          "passed": true
+        },
+        {
+          "name": "validation never replaces original body",
+          "passed": true
+        },
+        {
+          "name": "restarted adapter settles original note",
+          "passed": true
+        },
+        {
+          "name": "exactly one immutable note",
+          "passed": true
+        },
+        {
+          "name": "original disk record settled",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "corrupt",
+      "checks": [
+        {
+          "name": "actual capability fully validated",
+          "passed": true
+        },
+        {
+          "name": "capability alone cannot replace original bridge entity",
+          "passed": true
+        },
+        {
+          "name": "missing or damaged evidence preserves pending",
+          "passed": true
+        },
+        {
+          "name": "original v4 note survives JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "changed frozen text rejected",
+          "passed": true
+        },
+        {
+          "name": "validation never replaces original body",
+          "passed": true
+        },
+        {
+          "name": "restarted adapter settles original note",
+          "passed": true
+        },
+        {
+          "name": "exactly one immutable note",
+          "passed": true
+        },
+        {
+          "name": "original disk record settled",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "event",
+      "checks": [
+        {
+          "name": "actual capability fully validated",
+          "passed": true
+        },
+        {
+          "name": "capability alone cannot replace original bridge entity",
+          "passed": true
+        },
+        {
+          "name": "missing or damaged evidence preserves pending",
+          "passed": true
+        },
+        {
+          "name": "original v4 note survives JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "changed frozen text rejected",
+          "passed": true
+        },
+        {
+          "name": "validation never replaces original body",
+          "passed": true
+        },
+        {
+          "name": "restarted adapter settles original note",
+          "passed": true
+        },
+        {
+          "name": "exactly one immutable note",
+          "passed": true
+        },
+        {
+          "name": "original disk record settled",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "observation",
+      "checks": [
+        {
+          "name": "actual capability fully validated",
+          "passed": true
+        },
+        {
+          "name": "capability alone cannot replace original bridge entity",
+          "passed": true
+        },
+        {
+          "name": "missing or damaged evidence preserves pending",
+          "passed": true
+        },
+        {
+          "name": "original v4 note survives JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "changed frozen text rejected",
+          "passed": true
+        },
+        {
+          "name": "validation never replaces original body",
+          "passed": true
+        },
+        {
+          "name": "restarted adapter settles original note",
+          "passed": true
+        },
+        {
+          "name": "exactly one immutable note",
+          "passed": true
+        },
+        {
+          "name": "original disk record settled",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "sourceSha256": {
+    "clients/godot/command_evidence.gd": "3ab247823db24eff49c027098dec747cc689368e9239696dc3173715b0545594",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_canvas_panel.gd": "c1519805157bee96543980b12c8f883129be15587e6f5e7ca9db4b06bd61a1c6",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/entity_notes_panel.gd": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803",
+    "clients/godot/main.gd": "23bf58f280cba82a69bd7cf5422d057f5884926c9ef225a3c54c9324d3511bd4",
+    "clients/godot/material_panel.gd": "0ca9ce3e6eef38690d9bbc7e77b7e8d75f4bb654e1ab2495e7598aaa632a9798",
+    "clients/godot/pending_store.gd": "4da2813d05a7514eac0a6f010e4648167795728ac63b859575465e644a6ab282",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/world_client.gd": "76fe85a37d6283e5568d4a2591b5918d649df582c8ee27ff8e812fa4deb15975",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "ee0733b03887b49a7f695cf2e8818233f76f667a97edb36dbd5a0f370911caba",
+    "tests/entity_notes_godot.py": "cf1f779ef615ad6304f7003e1e01891ec64cce3a7b2acb80d9bee7b264d1149b",
+    "tests/godot/entity_notes.gd": "f771da1ac8cb3933a2e0407080b5f96e57bdff4a08401449e8bd76b746d93ede"
+  },
+  "sourceUnchanged": true,
+  "dllSha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de"
+}

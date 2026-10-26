@@ -1,0 +1,32 @@
+{
+  "passed": false,
+  "actualModelCalls": 0,
+  "groups": 1,
+  "assertions": 0,
+  "results": [
+    {
+      "name": "ui",
+      "passed": false,
+      "error": "Command '['xvfb-run', '-a', '-s', '-screen 0 1280x800x24', '/home/wangjunfeng/文档/Workspace/metaverse/.local/tools/godot/Godot_v4.7.2-stable_linux.x86_64', '--path', '/home/wangjunfeng/文档/Workspace/metaverse/clients/godot', '--script', '/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/entity_canvas.gd', '--resolution', '1280x800', '--audio-driver', 'Dummy']' timed out after 80 seconds"
+    }
+  ],
+  "sourceSha256": {
+    "clients/godot/command_evidence.gd": "3ab247823db24eff49c027098dec747cc689368e9239696dc3173715b0545594",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_canvas_panel.gd": "11ad7b6f35c09b2e95581bb3efbe1e2da9027ac3870f9d513dea2b7876200682",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/entity_notes_panel.gd": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803",
+    "clients/godot/main.gd": "465f8708de759677c22c4f3cc3b9a05e3a25717a0b42be2f68df1c234c3344f5",
+    "clients/godot/material_panel.gd": "0ca9ce3e6eef38690d9bbc7e77b7e8d75f4bb654e1ab2495e7598aaa632a9798",
+    "clients/godot/pending_store.gd": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/world_client.gd": "5d2f16689a9bb668f706288f11c761802359482073a332b5b0ea37e8749ba39f",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "23f79ce4fa981fdf74114cfbfa2005b3544eecef32a18e8f86a259b6050f07a6",
+    "tests/entity_canvas_godot.py": "84093a955285144cdbd38c8d6f642602505de59592147ca126a024403b59d492",
+    "tests/godot/entity_canvas.gd": "0b807de36ea019e3c1bbc1264ecd9f71c0b28d265cfa209d2c5a0bce98f6db7b"
+  },
+  "sourceUnchanged": false,
+  "dllSha256": "98b42fb7156fd5ac4d44c52f9c1896255ace3b5786e4c1a025b2edee68117c9b",
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/original-baseline"
+}

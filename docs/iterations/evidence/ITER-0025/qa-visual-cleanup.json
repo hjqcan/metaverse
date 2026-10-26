@@ -1,0 +1,69 @@
+{
+  "atUtc": "2026-10-26T07:24:30.876332+00:00",
+  "reason": "Finished only-read visual supplement; original stage inputs unchanged; delete own three isolated completed databases only.",
+  "removedFiles": [
+    {
+      "path": "canvas-godot-20261026T072315627013Z/original-stage-both/world.db-wal",
+      "bytes": 78312,
+      "sha256": "836dfec45fce9bf85a64dde773f34c30b45e770a700507211769f8a46914594a"
+    },
+    {
+      "path": "canvas-godot-20261026T072315627013Z/original-stage-both/world.db",
+      "bytes": 1232896,
+      "sha256": "cfc835a6f7ca3270305a1111192be289a0b3498bb0a448c2681a49a8967e8628"
+    },
+    {
+      "path": "canvas-godot-20261026T072315627013Z/original-stage-both/world.db-shm",
+      "bytes": 32768,
+      "sha256": "ce3cc587aed2fe12da24281d7e28700a409e1a376bf21116b4ca942a9f712229"
+    },
+    {
+      "path": "canvas-godot-20261026T072315627013Z/original-stage-both/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T072315627013Z/original-stage-blank/world.db-wal",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T072315627013Z/original-stage-blank/world.db",
+      "bytes": 946176,
+      "sha256": "b0ea10ca24f828b6c691b451e75ac6a3cd87716292436a9a01bf630f8fbf24ac"
+    },
+    {
+      "path": "canvas-godot-20261026T072315627013Z/original-stage-blank/world.db-shm",
+      "bytes": 32768,
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    {
+      "path": "canvas-godot-20261026T072315627013Z/original-stage-blank/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "canvas-godot-20261026T072315627013Z/original-stage-first/world.db-wal",
+      "bytes": 82432,
+      "sha256": "e982b655aae80df7ceeb91f72619a7c81509523dde20a7c2c0d17c8011d2e4eb"
+    },
+    {
+      "path": "canvas-godot-20261026T072315627013Z/original-stage-first/world.db",
+      "bytes": 1167360,
+      "sha256": "780bd109c91a323d20d4312ac0d5a3e31d5d1a44d295e19184a3438feabbf04d"
+    },
+    {
+      "path": "canvas-godot-20261026T072315627013Z/original-stage-first/world.db-shm",
+      "bytes": 32768,
+      "sha256": "5fb4d781539c2f60685e42451f1c1fcc72fa1e10c3db2160a0d4ee1aff672c1a"
+    },
+    {
+      "path": "canvas-godot-20261026T072315627013Z/original-stage-first/world.db.material-clock.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "removedBytes": 3605480,
+  "retainedFilesUnchanged": true,
+  "liveOwnedWorldProcesses": []
+}

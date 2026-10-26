@@ -1,0 +1,48 @@
+{
+  "missionId": "original-platform-canvas-first",
+  "objective": "在原平台绘制明确授权的河流片段，然后返回任务原起点。",
+  "allowBuild": false,
+  "allowGather": false,
+  "allowTransfer": false,
+  "allowMaterialAccess": false,
+  "allowEntityNotes": false,
+  "allowEntityCanvas": true,
+  "goals": [
+    {
+      "id": "original-platform",
+      "label": "原平台地画",
+      "target": [
+        24,
+        7
+      ],
+      "entityCanvas": {
+        "entityId": "e926486325c2c4e3e924610139ee26711",
+        "expectedCanvasRevision": 0,
+        "patch": [
+          {
+            "x": 1,
+            "y": 1,
+            "color": "river"
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "color": "river"
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "color": "river"
+          }
+        ]
+      }
+    }
+  ],
+  "budgets": {
+    "commands": 250,
+    "wood": 0,
+    "seconds": 300,
+    "modelCalls": 1,
+    "queries": 800
+  }
+}

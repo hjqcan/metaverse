@@ -56,7 +56,7 @@ internal sealed record WorldAction(string Type, long Dx = 0, long Dy = 0, long Q
     MosaicPatchCell[]? Patch = null, string? ProposalActorId = null, string? ProposalCommandId = null,
     string? Decision = null, string? NodeId = null, double TargetX = 0, double TargetY = 0, bool Continuous = false,
     string? RecipientActorId = null, string? Resource = null, string? SourceId = null, string? ReservationId = null,
-    string? EntityId = null, string? ReplyToNoteId = null)
+    string? EntityId = null, string? ReplyToNoteId = null, long CapabilityVersion = 0, long ExpectedCanvasRevision = 0)
 {
     public object Canonical => Type switch
     {
@@ -69,6 +69,8 @@ internal sealed record WorldAction(string Type, long Dx = 0, long Dy = 0, long Q
         "reserve_material" => new { type = Type, sourceId = SourceId },
         "cancel_reservation" or "harvest_material" => new { type = Type, reservationId = ReservationId },
         "append_entity_note" => new { type = Type, entityId = EntityId, text = Text, replyToNoteId = ReplyToNoteId },
+        "paint_entity_canvas" => new { type = Type, entityId = EntityId, capabilityVersion = CapabilityVersion,
+            expectedCanvasRevision = ExpectedCanvasRevision, patch = Patch },
         "visit" => new { type = Type, activityId = ActivityId },
         "postcard" => new { type = Type, activityId = ActivityId, visitCommandId = VisitCommandId, text = Text },
         "mosaic" => new { type = Type, activityId = ActivityId, visitCommandId = VisitCommandId,
@@ -134,6 +136,16 @@ internal sealed record WorldCommand(int SchemaVersion, string RulesVersion, stri
             WorldAction parsed;
             switch (type)
             {
+                case "paint_entity_canvas":
+                    Fields(action, "type", "entityId", "capabilityVersion", "expectedCanvasRevision", "patch");
+                    var canvasEntity = String(action.GetProperty("entityId"));
+                    var canvasVersion = Integer(action.GetProperty("capabilityVersion"));
+                    var canvasRevision = Integer(action.GetProperty("expectedCanvasRevision"));
+                    if (!Protocol.ValidCommandId(canvasEntity) || canvasVersion != 1 || canvasRevision < 0)
+                        Invalid("地画目标、能力版本或绘制基准无效");
+                    parsed = new(type, EntityId: canvasEntity, CapabilityVersion: canvasVersion,
+                        ExpectedCanvasRevision: canvasRevision, Patch: MosaicPatch(action.GetProperty("patch")));
+                    break;
                 case "append_entity_note":
                     Fields(action, "type", "entityId", "text", "replyToNoteId");
                     var noteEntity = String(action.GetProperty("entityId"));

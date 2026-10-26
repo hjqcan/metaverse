@@ -27,8 +27,8 @@ def main():
     if args.state.resolve() == args.output.resolve():
         parser.error("State and report paths must differ")
     spec = json.loads(args.spec.read_text())
-    if not args.account and not args.fixed_reference and not any('entityNote' in g for g in spec.get('goals', [])):
-        parser.error('Select --account or --fixed-reference; explicit entity-note tasks default to the fixed reference')
+    if not args.account and not args.fixed_reference and not any('entityNote' in g or 'entityCanvas' in g for g in spec.get('goals', [])):
+        parser.error('Select --account or --fixed-reference; explicit entity-note and entity-canvas tasks default to the fixed reference')
     sessions = json.loads(args.access_file.read_text()).get('sessions', {})
     session = sessions.get(args.actor)
     if not isinstance(session, dict) or not isinstance(session.get('token'), str) or not session['token']:

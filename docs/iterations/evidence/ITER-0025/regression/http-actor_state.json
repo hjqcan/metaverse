@@ -1,0 +1,65 @@
+{
+  "suite": "actor-state-http-v1",
+  "recordedAtUtc": "2026-10-26T07:08:32.731148+00:00",
+  "passed": true,
+  "testsRun": 10,
+  "tests": [
+    {
+      "test": "__main__.ActorStateAcceptance.test_01_capability_legacy_and_existing_strict_receipt",
+      "passed": true,
+      "seconds": 1.134180297027342
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_02_twenty_unrelated_moves_allow_actual_progress",
+      "passed": true,
+      "seconds": 0.9130098809837364
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_03_unrelated_walk_does_not_block_gather_or_build",
+      "passed": true,
+      "seconds": 0.4022173639968969
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_04_same_actor_concurrency_and_ABA_remain_rejected",
+      "passed": true,
+      "seconds": 0.512523717014119
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_05_partial_and_final_resource_competition",
+      "passed": true,
+      "seconds": 32.19914148095995
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_06_same_build_space_is_revalidated_without_double_debit",
+      "passed": true,
+      "seconds": 16.313390574010555
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_07_walk_rechecks_new_bridge_and_keeps_speed_limit",
+      "passed": true,
+      "seconds": 35.439600026991684
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_08_same_id_mode_changes_conflict_and_replays_keep_original_execution",
+      "passed": true,
+      "seconds": 0.7512639290071093
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_09_invalid_modes_future_anchor_and_instance_errors_do_not_execute",
+      "passed": true,
+      "seconds": 0.3213649680255912
+    },
+    {
+      "test": "__main__.ActorStateAcceptance.test_10_before_and_after_commit_crashes_recover_original_mode",
+      "passed": true,
+      "seconds": 0.9408406160073355
+    }
+  ],
+  "actualModelCalls": 0,
+  "sourceSha256": {
+    "src/World.Server/Protocol.cs": "2e83f45b9acc362c06a3f4ceec732b38c76a924453595e3f25dd5251ba8b93b8",
+    "src/World.Server/WorldService.cs": "5edff262e7c6847fbb4d6fd5fd5a8eaaa5e9311ecf7b52a4b74eeac14ed80009",
+    "tests/actor_state_api.py": "41f93c2bff865302cd6b009165883fd557e9a2d43d09d47ebf2632a3562f664e"
+  },
+  "failureDetails": []
+}

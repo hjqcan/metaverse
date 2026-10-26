@@ -10,6 +10,11 @@ if (args.Length > 0)
 {
     try
     {
+        if (args.Length == 5 && args[0] == "adopt-entity-canvas" && args[1] == "--instance" && args[3] == "--entity")
+        {
+            Console.WriteLine(database.AdoptEntityCanvas(args[2], args[4]) ? "地画已在原平台开启。" : "地画已采用，原图和历史保持。");
+            return 0;
+        }
         if (args.Length == 3 && args[0] == "adopt-continuous-material-source" && args[1] == "--instance")
         {
             Console.WriteLine(database.AdoptContinuousMaterialSource(args[2]) ? "持续材料政策已在原实例采用。" : "持续材料政策已采用，原进度保持。");
@@ -149,6 +154,14 @@ app.MapGet("/v1/worlds/{worldId}/observation", (string worldId, HttpContext cont
 {
     RequireWorld(worldId);
     return service.Observe(TokenHash(context), WorldInstance.ReadHeader(context.Request)).ToResult();
+});
+app.MapGet("/v1/worlds/{worldId}/entities/{entityId}/canvas/edits/{authorActorId}/{commandId}",
+    (string worldId, string entityId, string authorActorId, string commandId, HttpContext context) =>
+{
+    RequireWorld(worldId);
+    if (context.Request.Query.Count != 0 || !Protocol.ValidCommandId(entityId) || !Protocol.ValidCommandId(authorActorId) || !Protocol.ValidCommandId(commandId))
+        throw new RequestFailure(400, "INVALID_REQUEST", "地画原记录定位字段无效或含有查询参数");
+    return service.EntityCanvasEditDetail(TokenHash(context), entityId, authorActorId, commandId, WorldInstance.ReadHeader(context.Request)).ToResult();
 });
 app.MapGet("/v1/worlds/{worldId}/mosaic-proposals", (string worldId, HttpContext context) =>
 {

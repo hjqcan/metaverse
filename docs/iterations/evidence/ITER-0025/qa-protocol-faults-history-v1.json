@@ -1,0 +1,1825 @@
+{
+  "passed": true,
+  "scope": "independent ITER25 core-v1 actual HTTP/SQLite; fixed reference no models",
+  "binarySha256": "98b42fb7156fd5ac4d44c52f9c1896255ace3b5786e4c1a025b2edee68117c9b",
+  "manifestSha256": "337c39c20fd019dbb6073623861cf799427b0f69d454587175c39f0a0c334f13",
+  "seed": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T061604041742Z/continued-natural-v2",
+  "seedFilesBefore": {
+    "access.json": {
+      "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+      "bytes": 790,
+      "mtimeNs": 1792988757982573799
+    },
+    "server.log": {
+      "sha256": "8879131f4030c337cf83d1253b77d5c46fb201756acfd5c28f9994a51a0d48b8",
+      "bytes": 55446,
+      "mtimeNs": 1792995379633570681
+    },
+    "final-snapshot.json": {
+      "sha256": "9ab2a9c180995c7ba88e4b0692158a2300d4783acb07a1069d1a1654c1fe0c69",
+      "bytes": 879627,
+      "mtimeNs": 1792995379676572562
+    },
+    "milestones.json": {
+      "sha256": "8ff879c26290bdd978f3ee907955600320d21e5b5a3067715240b128db8a91ad",
+      "bytes": 870,
+      "mtimeNs": 1792995399868921158
+    },
+    "world.db-wal": {
+      "sha256": "bede4dc2ce0aad0459ec9d596fc4f465606cd281077a981fe8db6b27668e79f9",
+      "bytes": 4120032,
+      "mtimeNs": 1792995379485564206
+    },
+    "world.db": {
+      "sha256": "8fe126cafea5df222af4f8fb2cdac97504f44af4eb710f908266969670e85d1c",
+      "bytes": 868352,
+      "mtimeNs": 1792994328681062137
+    },
+    "trace.json": {
+      "sha256": "444ba1148cccc09145a934f7e8fe60d3287a612df27a478f10511c5b51de1f4c",
+      "bytes": 8864,
+      "mtimeNs": 1792995399868856084
+    },
+    "world.db-shm": {
+      "sha256": "f404251b86a3938cffbbd9c0d6cd23e133811a6b13528d4f087d444fe4b72df2",
+      "bytes": 32768,
+      "mtimeNs": 1792996666230907651
+    },
+    "world.db.material-clock.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtimeNs": 1792995372414254903
+    }
+  },
+  "cases": {
+    "protocol_concurrency": {
+      "passed": true,
+      "far": {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "cb8f104639364ba28aa08fb071cc7f24",
+          "expectedStateVersion": 755,
+          "action": {
+            "type": "paint_entity_canvas",
+            "entityId": "e926486325c2c4e3e924610139ee26711",
+            "capabilityVersion": 1,
+            "expectedCanvasRevision": 0,
+            "patch": [
+              {
+                "x": 0,
+                "y": 0,
+                "color": "sun"
+              }
+            ]
+          },
+          "preconditionMode": "actor-state-v1"
+        },
+        "receipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 755,
+          "commandId": "cb8f104639364ba28aa08fb071cc7f24",
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s131d61be279840df94f00244eea8851d"
+          },
+          "eventCursor": 756,
+          "error": {
+            "code": "UNREACHABLE",
+            "message": "请走到原平台中心1.6米内且中间没有障碍",
+            "retryable": false,
+            "mutated": false
+          },
+          "status": "rejected",
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 755,
+            "appliedOnStateVersion": 755
+          }
+        },
+        "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":755,\"commandId\":\"cb8f104639364ba28aa08fb071cc7f24\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":756,\"error\":{\"code\":\"UNREACHABLE\",\"message\":\"\\u8BF7\\u8D70\\u5230\\u539F\\u5E73\\u53F0\\u4E2D\\u5FC31.6\\u7C73\\u5185\\u4E14\\u4E2D\\u95F4\\u6CA1\\u6709\\u969C\\u788D\",\"retryable\":false,\"mutated\":false},\"status\":\"rejected\",\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":755,\"appliedOnStateVersion\":755}}"
+      },
+      "wrongTarget": {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "0304bfe4b4f0454ea4bba537e63ea54c",
+          "expectedStateVersion": 755,
+          "action": {
+            "type": "paint_entity_canvas",
+            "entityId": "missing",
+            "capabilityVersion": 1,
+            "expectedCanvasRevision": 0,
+            "patch": [
+              {
+                "x": 0,
+                "y": 0,
+                "color": "sun"
+              }
+            ]
+          },
+          "preconditionMode": "actor-state-v1"
+        },
+        "receipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 755,
+          "commandId": "0304bfe4b4f0454ea4bba537e63ea54c",
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s131d61be279840df94f00244eea8851d"
+          },
+          "eventCursor": 756,
+          "error": {
+            "code": "CANVAS_TARGET_UNAVAILABLE",
+            "message": "目标未开放地画",
+            "retryable": false,
+            "mutated": false
+          },
+          "status": "rejected",
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 755,
+            "appliedOnStateVersion": 755
+          }
+        },
+        "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":755,\"commandId\":\"0304bfe4b4f0454ea4bba537e63ea54c\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":756,\"error\":{\"code\":\"CANVAS_TARGET_UNAVAILABLE\",\"message\":\"\\u76EE\\u6807\\u672A\\u5F00\\u653E\\u5730\\u753B\",\"retryable\":false,\"mutated\":false},\"status\":\"rejected\",\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":755,\"appliedOnStateVersion\":755}}"
+      },
+      "canonicalReplay": true,
+      "idempotencyConflict": {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "c02a978921e14a62a628035365c9acab",
+          "expectedStateVersion": 965,
+          "action": {
+            "type": "paint_entity_canvas",
+            "entityId": "e926486325c2c4e3e924610139ee26711",
+            "capabilityVersion": 1,
+            "expectedCanvasRevision": 0,
+            "patch": [
+              {
+                "x": 1,
+                "y": 1,
+                "color": "rose"
+              },
+              {
+                "x": 0,
+                "y": 0,
+                "color": "leaf"
+              }
+            ]
+          },
+          "preconditionMode": "actor-state-v1"
+        },
+        "receipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 966,
+          "commandId": "c02a978921e14a62a628035365c9acab",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1_alias",
+            "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+          },
+          "eventCursor": 967,
+          "error": {
+            "code": "IDEMPOTENCY_CONFLICT",
+            "message": "命令 ID 已用于不同参数",
+            "retryable": false,
+            "mutated": false
+          }
+        },
+        "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":966,\"commandId\":\"c02a978921e14a62a628035365c9acab\",\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1_alias\",\"sessionId\":\"s8b8c3cecf91c4d61a8935b0727444585\"},\"eventCursor\":967,\"error\":{\"code\":\"IDEMPOTENCY_CONFLICT\",\"message\":\"\\u547D\\u4EE4 ID \\u5DF2\\u7528\\u4E8E\\u4E0D\\u540C\\u53C2\\u6570\",\"retryable\":false,\"mutated\":false}}"
+      },
+      "blankKeepsAuthor": true,
+      "aliasSameOperatorAndPlatformOwnerCannotOverwrite": [
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "d15ab5e54a394bd3ac8559b7e2389198",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": 2,
+              "patch": [
+                {
+                  "x": 1,
+                  "y": 1,
+                  "color": "sun"
+                },
+                {
+                  "x": 4,
+                  "y": 4,
+                  "color": "rose"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 967,
+            "commandId": "d15ab5e54a394bd3ac8559b7e2389198",
+            "identity": {
+              "operatorId": "local-operator",
+              "actorId": "a1",
+              "sessionId": "s48ab04efc6f7451aa43d6a8caf8e0108"
+            },
+            "eventCursor": 968,
+            "error": {
+              "code": "CANVAS_CONSENT_REQUIRED",
+              "message": "不能直接覆盖其他居民的格子，原草图保留",
+              "retryable": false,
+              "mutated": false
+            },
+            "status": "rejected",
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 967,
+              "appliedOnStateVersion": 967
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":967,\"commandId\":\"d15ab5e54a394bd3ac8559b7e2389198\",\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1\",\"sessionId\":\"s48ab04efc6f7451aa43d6a8caf8e0108\"},\"eventCursor\":968,\"error\":{\"code\":\"CANVAS_CONSENT_REQUIRED\",\"message\":\"\\u4E0D\\u80FD\\u76F4\\u63A5\\u8986\\u76D6\\u5176\\u4ED6\\u5C45\\u6C11\\u7684\\u683C\\u5B50\\uFF0C\\u539F\\u8349\\u56FE\\u4FDD\\u7559\",\"retryable\":false,\"mutated\":false},\"status\":\"rejected\",\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":967,\"appliedOnStateVersion\":967}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "fc92c060e23e4957b2a3048f2108ea65",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": 2,
+              "patch": [
+                {
+                  "x": 1,
+                  "y": 1,
+                  "color": "sun"
+                },
+                {
+                  "x": 4,
+                  "y": 4,
+                  "color": "rose"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 967,
+            "commandId": "fc92c060e23e4957b2a3048f2108ea65",
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": 968,
+            "error": {
+              "code": "CANVAS_CONSENT_REQUIRED",
+              "message": "不能直接覆盖其他居民的格子，原草图保留",
+              "retryable": false,
+              "mutated": false
+            },
+            "status": "rejected",
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 967,
+              "appliedOnStateVersion": 967
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":967,\"commandId\":\"fc92c060e23e4957b2a3048f2108ea65\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":968,\"error\":{\"code\":\"CANVAS_CONSENT_REQUIRED\",\"message\":\"\\u4E0D\\u80FD\\u76F4\\u63A5\\u8986\\u76D6\\u5176\\u4ED6\\u5C45\\u6C11\\u7684\\u683C\\u5B50\\uFF0C\\u539F\\u8349\\u56FE\\u4FDD\\u7559\",\"retryable\":false,\"mutated\":false},\"status\":\"rejected\",\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":967,\"appliedOnStateVersion\":967}}"
+        }
+      ],
+      "mixedUnchangedRejectsWholeBatch": {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "43ee885173c14de29ba3f43d2cceb0c0",
+          "expectedStateVersion": 967,
+          "action": {
+            "type": "paint_entity_canvas",
+            "entityId": "e926486325c2c4e3e924610139ee26711",
+            "capabilityVersion": 1,
+            "expectedCanvasRevision": 2,
+            "patch": [
+              {
+                "x": 1,
+                "y": 1,
+                "color": "blank"
+              },
+              {
+                "x": 4,
+                "y": 4,
+                "color": "sun"
+              }
+            ]
+          },
+          "preconditionMode": "actor-state-v1"
+        },
+        "receipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 967,
+          "commandId": "43ee885173c14de29ba3f43d2cceb0c0",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1_alias",
+            "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+          },
+          "eventCursor": 968,
+          "error": {
+            "code": "CANVAS_UNCHANGED",
+            "message": "提交批次包含颜色未变化的格子",
+            "retryable": false,
+            "mutated": false
+          },
+          "status": "rejected",
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 967,
+            "appliedOnStateVersion": 967
+          }
+        },
+        "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":967,\"commandId\":\"43ee885173c14de29ba3f43d2cceb0c0\",\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1_alias\",\"sessionId\":\"s8b8c3cecf91c4d61a8935b0727444585\"},\"eventCursor\":968,\"error\":{\"code\":\"CANVAS_UNCHANGED\",\"message\":\"\\u63D0\\u4EA4\\u6279\\u6B21\\u5305\\u542B\\u989C\\u8272\\u672A\\u53D8\\u5316\\u7684\\u683C\\u5B50\",\"retryable\":false,\"mutated\":false},\"status\":\"rejected\",\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":967,\"appliedOnStateVersion\":967}}"
+      },
+      "oldRevision": {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "84bbae90e7b340c8a23eb7f6dc8d884e",
+          "expectedStateVersion": 967,
+          "action": {
+            "type": "paint_entity_canvas",
+            "entityId": "e926486325c2c4e3e924610139ee26711",
+            "capabilityVersion": 1,
+            "expectedCanvasRevision": 1,
+            "patch": [
+              {
+                "x": 4,
+                "y": 4,
+                "color": "sun"
+              }
+            ]
+          },
+          "preconditionMode": "actor-state-v1"
+        },
+        "receipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 967,
+          "commandId": "84bbae90e7b340c8a23eb7f6dc8d884e",
+          "identity": {
+            "operatorId": "declared-third",
+            "actorId": "a3",
+            "sessionId": "sa423548f7dce496895be25120daedb09"
+          },
+          "eventCursor": 968,
+          "error": {
+            "code": "CANVAS_REVISION_MISMATCH",
+            "message": "地画已更新，原草图保留；请明确确认新基准",
+            "retryable": false,
+            "mutated": false
+          },
+          "status": "rejected",
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 967,
+            "appliedOnStateVersion": 967
+          }
+        },
+        "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":967,\"commandId\":\"84bbae90e7b340c8a23eb7f6dc8d884e\",\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"sa423548f7dce496895be25120daedb09\"},\"eventCursor\":968,\"error\":{\"code\":\"CANVAS_REVISION_MISMATCH\",\"message\":\"\\u5730\\u753B\\u5DF2\\u66F4\\u65B0\\uFF0C\\u539F\\u8349\\u56FE\\u4FDD\\u7559\\uFF1B\\u8BF7\\u660E\\u786E\\u786E\\u8BA4\\u65B0\\u57FA\\u51C6\",\"retryable\":false,\"mutated\":false},\"status\":\"rejected\",\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":967,\"appliedOnStateVersion\":967}}"
+      },
+      "invalidSyntaxCount": 14,
+      "invalidSyntax": [
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "1e7ac643233047bb91a1286e69ef5a5f",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": true,
+              "expectedCanvasRevision": 2,
+              "patch": [
+                {
+                  "x": 4,
+                  "y": 4,
+                  "color": "sun"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "字段必须为 64 位整数",
+              "retryable": false,
+              "mutated": false
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_REQUEST\",\"message\":\"\\u5B57\\u6BB5\\u5FC5\\u987B\\u4E3A 64 \\u4F4D\\u6574\\u6570\",\"retryable\":false,\"mutated\":false}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "2f924333588f418a82ef9e6b39418b4a",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1.5,
+              "expectedCanvasRevision": 2,
+              "patch": [
+                {
+                  "x": 4,
+                  "y": 4,
+                  "color": "sun"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "字段必须为 64 位整数",
+              "retryable": false,
+              "mutated": false
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_REQUEST\",\"message\":\"\\u5B57\\u6BB5\\u5FC5\\u987B\\u4E3A 64 \\u4F4D\\u6574\\u6570\",\"retryable\":false,\"mutated\":false}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "89ca3698b56d464eaa7719fc30443256",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": true,
+              "patch": [
+                {
+                  "x": 4,
+                  "y": 4,
+                  "color": "sun"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "字段必须为 64 位整数",
+              "retryable": false,
+              "mutated": false
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_REQUEST\",\"message\":\"\\u5B57\\u6BB5\\u5FC5\\u987B\\u4E3A 64 \\u4F4D\\u6574\\u6570\",\"retryable\":false,\"mutated\":false}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "7192de4330254caf80a0e73052b9304c",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": -1,
+              "patch": [
+                {
+                  "x": 4,
+                  "y": 4,
+                  "color": "sun"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "地画目标、能力版本或绘制基准无效",
+              "retryable": false,
+              "mutated": false
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_REQUEST\",\"message\":\"\\u5730\\u753B\\u76EE\\u6807\\u3001\\u80FD\\u529B\\u7248\\u672C\\u6216\\u7ED8\\u5236\\u57FA\\u51C6\\u65E0\\u6548\",\"retryable\":false,\"mutated\":false}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "12a290c54b794f0e8aaa3a0b5916089c",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": 0.5,
+              "patch": [
+                {
+                  "x": 4,
+                  "y": 4,
+                  "color": "sun"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "字段必须为 64 位整数",
+              "retryable": false,
+              "mutated": false
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_REQUEST\",\"message\":\"\\u5B57\\u6BB5\\u5FC5\\u987B\\u4E3A 64 \\u4F4D\\u6574\\u6570\",\"retryable\":false,\"mutated\":false}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "2e892830819b46c1a43f25e69198f545",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": 2,
+              "patch": [
+                {
+                  "x": 4,
+                  "y": 4,
+                  "color": "sun"
+                }
+              ],
+              "extra": 1
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "请求包含未知或重复字段",
+              "retryable": false,
+              "mutated": false
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_REQUEST\",\"message\":\"\\u8BF7\\u6C42\\u5305\\u542B\\u672A\\u77E5\\u6216\\u91CD\\u590D\\u5B57\\u6BB5\",\"retryable\":false,\"mutated\":false}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "983cc84267fc4678ae7bff6f6b7c5c39",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": 2,
+              "patch": []
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "画布修改必须包含 1 至 8 格",
+              "retryable": false,
+              "mutated": false
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_REQUEST\",\"message\":\"\\u753B\\u5E03\\u4FEE\\u6539\\u5FC5\\u987B\\u5305\\u542B 1 \\u81F3 8 \\u683C\",\"retryable\":false,\"mutated\":false}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "0875574a878043379ce0b3453487de0d",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": 2,
+              "patch": [
+                {
+                  "x": true,
+                  "y": 1,
+                  "color": "sun"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "字段必须为 64 位整数",
+              "retryable": false,
+              "mutated": false
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_REQUEST\",\"message\":\"\\u5B57\\u6BB5\\u5FC5\\u987B\\u4E3A 64 \\u4F4D\\u6574\\u6570\",\"retryable\":false,\"mutated\":false}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "5aaa9f33e96d491e9d24b06103437263",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": 2,
+              "patch": [
+                {
+                  "x": 0.5,
+                  "y": 1,
+                  "color": "sun"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "字段必须为 64 位整数",
+              "retryable": false,
+              "mutated": false
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_REQUEST\",\"message\":\"\\u5B57\\u6BB5\\u5FC5\\u987B\\u4E3A 64 \\u4F4D\\u6574\\u6570\",\"retryable\":false,\"mutated\":false}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "5e08824417af4977ab0b2631248ff110",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": 2,
+              "patch": [
+                {
+                  "x": 5,
+                  "y": 1,
+                  "color": "sun"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "画布坐标必须为 0 至 4 且不得重复",
+              "retryable": false,
+              "mutated": false
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_REQUEST\",\"message\":\"\\u753B\\u5E03\\u5750\\u6807\\u5FC5\\u987B\\u4E3A 0 \\u81F3 4 \\u4E14\\u4E0D\\u5F97\\u91CD\\u590D\",\"retryable\":false,\"mutated\":false}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "2b151ab90c024b7498746cf55155af12",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": 2,
+              "patch": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "color": "unknown"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "画布颜色必须使用固定调色板 ID",
+              "retryable": false,
+              "mutated": false
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_REQUEST\",\"message\":\"\\u753B\\u5E03\\u989C\\u8272\\u5FC5\\u987B\\u4F7F\\u7528\\u56FA\\u5B9A\\u8C03\\u8272\\u677F ID\",\"retryable\":false,\"mutated\":false}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "d2c5a31acb7441af88f1db450d1ff567",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": 2,
+              "patch": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "color": "sun",
+                  "extra": 1
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "请求包含未知或重复字段",
+              "retryable": false,
+              "mutated": false
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_REQUEST\",\"message\":\"\\u8BF7\\u6C42\\u5305\\u542B\\u672A\\u77E5\\u6216\\u91CD\\u590D\\u5B57\\u6BB5\",\"retryable\":false,\"mutated\":false}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "81f24a4e01be42fe862d72bca0cb8605",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": 2,
+              "patch": [
+                {
+                  "x": 4,
+                  "y": 4,
+                  "color": "sun"
+                },
+                {
+                  "x": 4,
+                  "y": 4,
+                  "color": "sun"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "画布坐标必须为 0 至 4 且不得重复",
+              "retryable": false,
+              "mutated": false
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_REQUEST\",\"message\":\"\\u753B\\u5E03\\u5750\\u6807\\u5FC5\\u987B\\u4E3A 0 \\u81F3 4 \\u4E14\\u4E0D\\u5F97\\u91CD\\u590D\",\"retryable\":false,\"mutated\":false}}"
+        },
+        {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "9aea0e761d2a4363bff60f8af329b1bd",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": 2,
+              "patch": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "color": "sun"
+                },
+                {
+                  "x": 1,
+                  "y": 0,
+                  "color": "sun"
+                },
+                {
+                  "x": 2,
+                  "y": 0,
+                  "color": "sun"
+                },
+                {
+                  "x": 3,
+                  "y": 0,
+                  "color": "sun"
+                },
+                {
+                  "x": 4,
+                  "y": 0,
+                  "color": "sun"
+                },
+                {
+                  "x": 0,
+                  "y": 1,
+                  "color": "sun"
+                },
+                {
+                  "x": 1,
+                  "y": 1,
+                  "color": "sun"
+                },
+                {
+                  "x": 2,
+                  "y": 1,
+                  "color": "sun"
+                },
+                {
+                  "x": 3,
+                  "y": 1,
+                  "color": "sun"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "receipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": null,
+            "commandId": null,
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": null,
+            "error": {
+              "code": "INVALID_REQUEST",
+              "message": "画布修改必须包含 1 至 8 格",
+              "retryable": false,
+              "mutated": false
+            }
+          },
+          "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":null,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":null,\"error\":{\"code\":\"INVALID_REQUEST\",\"message\":\"\\u753B\\u5E03\\u4FEE\\u6539\\u5FC5\\u987B\\u5305\\u542B 1 \\u81F3 8 \\u683C\",\"retryable\":false,\"mutated\":false}}"
+        }
+      ],
+      "concurrentRequests": [
+        [
+          "a2",
+          {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "d8c1cb450ea34e90b369fd884b97565d",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": 2,
+              "patch": [
+                {
+                  "x": 2,
+                  "y": 0,
+                  "color": "sun"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          }
+        ],
+        [
+          "a3",
+          {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "1044899044254c1e9ff24f85e195d60c",
+            "expectedStateVersion": 967,
+            "action": {
+              "type": "paint_entity_canvas",
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "capabilityVersion": 1,
+              "expectedCanvasRevision": 2,
+              "patch": [
+                {
+                  "x": 4,
+                  "y": 4,
+                  "color": "rose"
+                }
+              ]
+            },
+            "preconditionMode": "actor-state-v1"
+          }
+        ]
+      ],
+      "concurrentResults": [
+        [
+          200,
+          {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 968,
+            "commandId": "d8c1cb450ea34e90b369fd884b97565d",
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": 969,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "authorActorId": "a2",
+              "operatorId": "declared-late",
+              "commandId": "d8c1cb450ea34e90b369fd884b97565d",
+              "baseRevision": 2,
+              "revision": 3,
+              "patch": [
+                {
+                  "x": 2,
+                  "y": 0,
+                  "color": "sun"
+                }
+              ],
+              "stateVersion": 968,
+              "eventCursor": 969,
+              "paintedAtUtc": "2026-10-26T06:53:23.9851219+00:00",
+              "position": [
+                24,
+                7
+              ],
+              "inventoryWood": 9,
+              "capabilityVersion": 1,
+              "action": "paint_entity_canvas"
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 967,
+              "appliedOnStateVersion": 967
+            }
+          },
+          "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":968,\"commandId\":\"d8c1cb450ea34e90b369fd884b97565d\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":969,\"error\":null,\"status\":\"committed\",\"result\":{\"entityId\":\"e926486325c2c4e3e924610139ee26711\",\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"d8c1cb450ea34e90b369fd884b97565d\",\"baseRevision\":2,\"revision\":3,\"patch\":[{\"x\":2,\"y\":0,\"color\":\"sun\"}],\"stateVersion\":968,\"eventCursor\":969,\"paintedAtUtc\":\"2026-10-26T06:53:23.9851219\\u002B00:00\",\"position\":[24,7],\"inventoryWood\":9,\"capabilityVersion\":1,\"action\":\"paint_entity_canvas\"},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":967,\"appliedOnStateVersion\":967}}"
+        ],
+        [
+          409,
+          {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 968,
+            "commandId": "1044899044254c1e9ff24f85e195d60c",
+            "identity": {
+              "operatorId": "declared-third",
+              "actorId": "a3",
+              "sessionId": "sa423548f7dce496895be25120daedb09"
+            },
+            "eventCursor": 969,
+            "error": {
+              "code": "CANVAS_REVISION_MISMATCH",
+              "message": "地画已更新，原草图保留；请明确确认新基准",
+              "retryable": false,
+              "mutated": false
+            },
+            "status": "rejected",
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 967,
+              "appliedOnStateVersion": 968
+            }
+          },
+          "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":968,\"commandId\":\"1044899044254c1e9ff24f85e195d60c\",\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"sa423548f7dce496895be25120daedb09\"},\"eventCursor\":969,\"error\":{\"code\":\"CANVAS_REVISION_MISMATCH\",\"message\":\"\\u5730\\u753B\\u5DF2\\u66F4\\u65B0\\uFF0C\\u539F\\u8349\\u56FE\\u4FDD\\u7559\\uFF1B\\u8BF7\\u660E\\u786E\\u786E\\u8BA4\\u65B0\\u57FA\\u51C6\",\"retryable\":false,\"mutated\":false},\"status\":\"rejected\",\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":967,\"appliedOnStateVersion\":968}}"
+        ]
+      ],
+      "winner": {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "d8c1cb450ea34e90b369fd884b97565d",
+          "expectedStateVersion": 967,
+          "action": {
+            "type": "paint_entity_canvas",
+            "entityId": "e926486325c2c4e3e924610139ee26711",
+            "capabilityVersion": 1,
+            "expectedCanvasRevision": 2,
+            "patch": [
+              {
+                "x": 2,
+                "y": 0,
+                "color": "sun"
+              }
+            ]
+          },
+          "preconditionMode": "actor-state-v1"
+        },
+        "receipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 968,
+          "commandId": "d8c1cb450ea34e90b369fd884b97565d",
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s131d61be279840df94f00244eea8851d"
+          },
+          "eventCursor": 969,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "entityId": "e926486325c2c4e3e924610139ee26711",
+            "authorActorId": "a2",
+            "operatorId": "declared-late",
+            "commandId": "d8c1cb450ea34e90b369fd884b97565d",
+            "baseRevision": 2,
+            "revision": 3,
+            "patch": [
+              {
+                "x": 2,
+                "y": 0,
+                "color": "sun"
+              }
+            ],
+            "stateVersion": 968,
+            "eventCursor": 969,
+            "paintedAtUtc": "2026-10-26T06:53:23.9851219+00:00",
+            "position": [
+              24,
+              7
+            ],
+            "inventoryWood": 9,
+            "capabilityVersion": 1,
+            "action": "paint_entity_canvas"
+          },
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 967,
+            "appliedOnStateVersion": 967
+          }
+        },
+        "editReadback": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 968,
+          "commandId": null,
+          "identity": {
+            "operatorId": "declared-third",
+            "actorId": "a3",
+            "sessionId": "sa423548f7dce496895be25120daedb09"
+          },
+          "eventCursor": 969,
+          "error": null,
+          "edit": {
+            "entityId": "e926486325c2c4e3e924610139ee26711",
+            "authorActorId": "a2",
+            "operatorId": "declared-late",
+            "commandId": "d8c1cb450ea34e90b369fd884b97565d",
+            "baseRevision": 2,
+            "revision": 3,
+            "patch": [
+              {
+                "x": 2,
+                "y": 0,
+                "color": "sun"
+              }
+            ],
+            "stateVersion": 968,
+            "eventCursor": 969,
+            "paintedAtUtc": "2026-10-26T06:53:23.9851219+00:00",
+            "position": [
+              24,
+              7
+            ],
+            "inventoryWood": 9,
+            "capabilityVersion": 1
+          }
+        },
+        "event": {
+          "entityId": "e926486325c2c4e3e924610139ee26711",
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "d8c1cb450ea34e90b369fd884b97565d",
+          "baseRevision": 2,
+          "revision": 3,
+          "patch": [
+            {
+              "x": 2,
+              "y": 0,
+              "color": "sun"
+            }
+          ],
+          "stateVersion": 968,
+          "eventCursor": 969,
+          "paintedAtUtc": "2026-10-26T06:53:23.9851219+00:00",
+          "position": [
+            24,
+            7
+          ],
+          "inventoryWood": 9,
+          "capabilityVersion": 1,
+          "type": "entityCanvasPainted",
+          "seq": 969,
+          "actorId": "a2"
+        }
+      },
+      "audit": {
+        "schemaVersion": 12,
+        "source": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 160563,
+          "enabled_at_ms": 21047,
+          "next_production_ms": 161047,
+          "production_period": 13,
+          "generated_wood": 33,
+          "stock_wood": 6
+        },
+        "issuedWood": 45,
+        "inventoryWood": 18,
+        "embodiedWood": 21,
+        "sourceWood": 6,
+        "wildWood": 0,
+        "stateVersion": 968,
+        "receipts": 955,
+        "originalReceiptsPreserved": 736,
+        "originalEventsPreserved": 755,
+        "notes": 2,
+        "entities": 6,
+        "requests": 234,
+        "processStopped": {
+          "pid": 49389,
+          "exitCode": 0
+        },
+        "allStartedProcessesExited": true
+      }
+    },
+    "command_faults_history": {
+      "passed": true,
+      "faults": [
+        {
+          "point": "before-commit",
+          "exitCode": 81,
+          "originalQueryStatus": 404,
+          "proof": {
+            "request": {
+              "schemaVersion": 1,
+              "rulesVersion": "r10",
+              "commandId": "bdcf2b0085024ae2b060c2368fec5a01",
+              "expectedStateVersion": 796,
+              "action": {
+                "type": "paint_entity_canvas",
+                "entityId": "e926486325c2c4e3e924610139ee26711",
+                "capabilityVersion": 1,
+                "expectedCanvasRevision": 0,
+                "patch": [
+                  {
+                    "x": 2,
+                    "y": 2,
+                    "color": "leaf"
+                  }
+                ]
+              },
+              "preconditionMode": "actor-state-v1"
+            },
+            "receipt": {
+              "schemaVersion": 1,
+              "rulesVersion": "r10",
+              "stateVersion": 797,
+              "commandId": "bdcf2b0085024ae2b060c2368fec5a01",
+              "identity": {
+                "operatorId": "declared-late",
+                "actorId": "a2",
+                "sessionId": "s131d61be279840df94f00244eea8851d"
+              },
+              "eventCursor": 798,
+              "error": null,
+              "status": "committed",
+              "result": {
+                "entityId": "e926486325c2c4e3e924610139ee26711",
+                "authorActorId": "a2",
+                "operatorId": "declared-late",
+                "commandId": "bdcf2b0085024ae2b060c2368fec5a01",
+                "baseRevision": 0,
+                "revision": 1,
+                "patch": [
+                  {
+                    "x": 2,
+                    "y": 2,
+                    "color": "leaf"
+                  }
+                ],
+                "stateVersion": 797,
+                "eventCursor": 798,
+                "paintedAtUtc": "2026-10-26T06:53:28.7805524+00:00",
+                "position": [
+                  24,
+                  7
+                ],
+                "inventoryWood": 9,
+                "capabilityVersion": 1,
+                "action": "paint_entity_canvas"
+              },
+              "execution": {
+                "preconditionMode": "actor-state-v1",
+                "observedStateVersion": 796,
+                "appliedOnStateVersion": 796
+              }
+            },
+            "editReadback": {
+              "schemaVersion": 1,
+              "rulesVersion": "r10",
+              "stateVersion": 797,
+              "commandId": null,
+              "identity": {
+                "operatorId": "declared-third",
+                "actorId": "a3",
+                "sessionId": "sa423548f7dce496895be25120daedb09"
+              },
+              "eventCursor": 798,
+              "error": null,
+              "edit": {
+                "entityId": "e926486325c2c4e3e924610139ee26711",
+                "authorActorId": "a2",
+                "operatorId": "declared-late",
+                "commandId": "bdcf2b0085024ae2b060c2368fec5a01",
+                "baseRevision": 0,
+                "revision": 1,
+                "patch": [
+                  {
+                    "x": 2,
+                    "y": 2,
+                    "color": "leaf"
+                  }
+                ],
+                "stateVersion": 797,
+                "eventCursor": 798,
+                "paintedAtUtc": "2026-10-26T06:53:28.7805524+00:00",
+                "position": [
+                  24,
+                  7
+                ],
+                "inventoryWood": 9,
+                "capabilityVersion": 1
+              }
+            },
+            "event": {
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "authorActorId": "a2",
+              "operatorId": "declared-late",
+              "commandId": "bdcf2b0085024ae2b060c2368fec5a01",
+              "baseRevision": 0,
+              "revision": 1,
+              "patch": [
+                {
+                  "x": 2,
+                  "y": 2,
+                  "color": "leaf"
+                }
+              ],
+              "stateVersion": 797,
+              "eventCursor": 798,
+              "paintedAtUtc": "2026-10-26T06:53:28.7805524+00:00",
+              "position": [
+                24,
+                7
+              ],
+              "inventoryWood": 9,
+              "capabilityVersion": 1,
+              "type": "entityCanvasPainted",
+              "seq": 798,
+              "actorId": "a2"
+            }
+          },
+          "oneEditOneEvent": true
+        },
+        {
+          "point": "after-commit",
+          "exitCode": 82,
+          "originalQueryStatus": 200,
+          "proof": {
+            "request": {
+              "schemaVersion": 1,
+              "rulesVersion": "r10",
+              "commandId": "43cfa4c6713b42b8bbbd64ba56e76b07",
+              "expectedStateVersion": 797,
+              "action": {
+                "type": "paint_entity_canvas",
+                "entityId": "e926486325c2c4e3e924610139ee26711",
+                "capabilityVersion": 1,
+                "expectedCanvasRevision": 1,
+                "patch": [
+                  {
+                    "x": 2,
+                    "y": 2,
+                    "color": "river"
+                  }
+                ]
+              },
+              "preconditionMode": "actor-state-v1"
+            },
+            "receipt": {
+              "schemaVersion": 1,
+              "rulesVersion": "r10",
+              "stateVersion": 798,
+              "commandId": "43cfa4c6713b42b8bbbd64ba56e76b07",
+              "identity": {
+                "operatorId": "declared-late",
+                "actorId": "a2",
+                "sessionId": "s131d61be279840df94f00244eea8851d"
+              },
+              "eventCursor": 799,
+              "error": null,
+              "status": "committed",
+              "result": {
+                "entityId": "e926486325c2c4e3e924610139ee26711",
+                "authorActorId": "a2",
+                "operatorId": "declared-late",
+                "commandId": "43cfa4c6713b42b8bbbd64ba56e76b07",
+                "baseRevision": 1,
+                "revision": 2,
+                "patch": [
+                  {
+                    "x": 2,
+                    "y": 2,
+                    "color": "river"
+                  }
+                ],
+                "stateVersion": 798,
+                "eventCursor": 799,
+                "paintedAtUtc": "2026-10-26T06:53:28.8308829+00:00",
+                "position": [
+                  24,
+                  7
+                ],
+                "inventoryWood": 9,
+                "capabilityVersion": 1,
+                "action": "paint_entity_canvas"
+              },
+              "execution": {
+                "preconditionMode": "actor-state-v1",
+                "observedStateVersion": 797,
+                "appliedOnStateVersion": 797
+              }
+            },
+            "editReadback": {
+              "schemaVersion": 1,
+              "rulesVersion": "r10",
+              "stateVersion": 798,
+              "commandId": null,
+              "identity": {
+                "operatorId": "declared-third",
+                "actorId": "a3",
+                "sessionId": "sa423548f7dce496895be25120daedb09"
+              },
+              "eventCursor": 799,
+              "error": null,
+              "edit": {
+                "entityId": "e926486325c2c4e3e924610139ee26711",
+                "authorActorId": "a2",
+                "operatorId": "declared-late",
+                "commandId": "43cfa4c6713b42b8bbbd64ba56e76b07",
+                "baseRevision": 1,
+                "revision": 2,
+                "patch": [
+                  {
+                    "x": 2,
+                    "y": 2,
+                    "color": "river"
+                  }
+                ],
+                "stateVersion": 798,
+                "eventCursor": 799,
+                "paintedAtUtc": "2026-10-26T06:53:28.8308829+00:00",
+                "position": [
+                  24,
+                  7
+                ],
+                "inventoryWood": 9,
+                "capabilityVersion": 1
+              }
+            },
+            "event": {
+              "entityId": "e926486325c2c4e3e924610139ee26711",
+              "authorActorId": "a2",
+              "operatorId": "declared-late",
+              "commandId": "43cfa4c6713b42b8bbbd64ba56e76b07",
+              "baseRevision": 1,
+              "revision": 2,
+              "patch": [
+                {
+                  "x": 2,
+                  "y": 2,
+                  "color": "river"
+                }
+              ],
+              "stateVersion": 798,
+              "eventCursor": 799,
+              "paintedAtUtc": "2026-10-26T06:53:28.8308829+00:00",
+              "position": [
+                24,
+                7
+              ],
+              "inventoryWood": 9,
+              "capabilityVersion": 1,
+              "type": "entityCanvasPainted",
+              "seq": 799,
+              "actorId": "a2"
+            }
+          },
+          "oneEditOneEvent": true
+        }
+      ],
+      "laterActualRepaints": 51,
+      "currentRevision": 53,
+      "recentLimit": 50,
+      "originalOutsideWindowStillVerified": {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "bdcf2b0085024ae2b060c2368fec5a01",
+          "expectedStateVersion": 796,
+          "action": {
+            "type": "paint_entity_canvas",
+            "entityId": "e926486325c2c4e3e924610139ee26711",
+            "capabilityVersion": 1,
+            "expectedCanvasRevision": 0,
+            "patch": [
+              {
+                "x": 2,
+                "y": 2,
+                "color": "leaf"
+              }
+            ]
+          },
+          "preconditionMode": "actor-state-v1"
+        },
+        "receipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 797,
+          "commandId": "bdcf2b0085024ae2b060c2368fec5a01",
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s131d61be279840df94f00244eea8851d"
+          },
+          "eventCursor": 798,
+          "error": null,
+          "status": "committed",
+          "result": {
+            "entityId": "e926486325c2c4e3e924610139ee26711",
+            "authorActorId": "a2",
+            "operatorId": "declared-late",
+            "commandId": "bdcf2b0085024ae2b060c2368fec5a01",
+            "baseRevision": 0,
+            "revision": 1,
+            "patch": [
+              {
+                "x": 2,
+                "y": 2,
+                "color": "leaf"
+              }
+            ],
+            "stateVersion": 797,
+            "eventCursor": 798,
+            "paintedAtUtc": "2026-10-26T06:53:28.7805524+00:00",
+            "position": [
+              24,
+              7
+            ],
+            "inventoryWood": 9,
+            "capabilityVersion": 1,
+            "action": "paint_entity_canvas"
+          },
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 796,
+            "appliedOnStateVersion": 796
+          }
+        },
+        "editReadback": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 849,
+          "commandId": null,
+          "identity": {
+            "operatorId": "declared-third",
+            "actorId": "a3",
+            "sessionId": "sa423548f7dce496895be25120daedb09"
+          },
+          "eventCursor": 850,
+          "error": null,
+          "edit": {
+            "entityId": "e926486325c2c4e3e924610139ee26711",
+            "authorActorId": "a2",
+            "operatorId": "declared-late",
+            "commandId": "bdcf2b0085024ae2b060c2368fec5a01",
+            "baseRevision": 0,
+            "revision": 1,
+            "patch": [
+              {
+                "x": 2,
+                "y": 2,
+                "color": "leaf"
+              }
+            ],
+            "stateVersion": 797,
+            "eventCursor": 798,
+            "paintedAtUtc": "2026-10-26T06:53:28.7805524+00:00",
+            "position": [
+              24,
+              7
+            ],
+            "inventoryWood": 9,
+            "capabilityVersion": 1
+          }
+        },
+        "event": {
+          "entityId": "e926486325c2c4e3e924610139ee26711",
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "bdcf2b0085024ae2b060c2368fec5a01",
+          "baseRevision": 0,
+          "revision": 1,
+          "patch": [
+            {
+              "x": 2,
+              "y": 2,
+              "color": "leaf"
+            }
+          ],
+          "stateVersion": 797,
+          "eventCursor": 798,
+          "paintedAtUtc": "2026-10-26T06:53:28.7805524+00:00",
+          "position": [
+            24,
+            7
+          ],
+          "inventoryWood": 9,
+          "capabilityVersion": 1,
+          "type": "entityCanvasPainted",
+          "seq": 798,
+          "actorId": "a2"
+        }
+      },
+      "exactPublicReadAndInstanceAuth": true,
+      "audit": {
+        "schemaVersion": 12,
+        "source": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 146096,
+          "enabled_at_ms": 21047,
+          "next_production_ms": 151047,
+          "production_period": 12,
+          "generated_wood": 30,
+          "stock_wood": 3
+        },
+        "issuedWood": 42,
+        "inventoryWood": 18,
+        "embodiedWood": 21,
+        "sourceWood": 3,
+        "wildWood": 0,
+        "stateVersion": 849,
+        "receipts": 830,
+        "originalReceiptsPreserved": 736,
+        "originalEventsPreserved": 755,
+        "notes": 2,
+        "entities": 6,
+        "requests": 94,
+        "processStopped": {
+          "pid": 50048,
+          "exitCode": 0
+        },
+        "allStartedProcessesExited": true
+      }
+    }
+  },
+  "worlds": [
+    {
+      "name": "protocol-concurrency",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065304508298Z/protocol-concurrency",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T061604041742Z/continued-natural-v2",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "command-faults-history",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065304508298Z/command-faults-history",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T061604041742Z/continued-natural-v2",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    }
+  ],
+  "actualModelCalls": 0,
+  "naturalDirectSqlEdits": false,
+  "naturalClockControlled": false,
+  "runtimeReuse": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/core-v1/bin/World.Server.dll",
+    "sha256": "98b42fb7156fd5ac4d44c52f9c1896255ace3b5786e4c1a025b2edee68117c9b",
+    "readOnlySharedFrozenBinary": true,
+    "perRunRuntimeCopy": false
+  },
+  "seedFilesAfter": {
+    "access.json": {
+      "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+      "bytes": 790,
+      "mtimeNs": 1792988757982573799
+    },
+    "server.log": {
+      "sha256": "8879131f4030c337cf83d1253b77d5c46fb201756acfd5c28f9994a51a0d48b8",
+      "bytes": 55446,
+      "mtimeNs": 1792995379633570681
+    },
+    "final-snapshot.json": {
+      "sha256": "9ab2a9c180995c7ba88e4b0692158a2300d4783acb07a1069d1a1654c1fe0c69",
+      "bytes": 879627,
+      "mtimeNs": 1792995379676572562
+    },
+    "milestones.json": {
+      "sha256": "8ff879c26290bdd978f3ee907955600320d21e5b5a3067715240b128db8a91ad",
+      "bytes": 870,
+      "mtimeNs": 1792995399868921158
+    },
+    "world.db-wal": {
+      "sha256": "bede4dc2ce0aad0459ec9d596fc4f465606cd281077a981fe8db6b27668e79f9",
+      "bytes": 4120032,
+      "mtimeNs": 1792995379485564206
+    },
+    "world.db": {
+      "sha256": "8fe126cafea5df222af4f8fb2cdac97504f44af4eb710f908266969670e85d1c",
+      "bytes": 868352,
+      "mtimeNs": 1792994328681062137
+    },
+    "trace.json": {
+      "sha256": "444ba1148cccc09145a934f7e8fe60d3287a612df27a478f10511c5b51de1f4c",
+      "bytes": 8864,
+      "mtimeNs": 1792995399868856084
+    },
+    "world.db-shm": {
+      "sha256": "f404251b86a3938cffbbd9c0d6cd23e133811a6b13528d4f087d444fe4b72df2",
+      "bytes": 32768,
+      "mtimeNs": 1792996666230907651
+    },
+    "world.db.material-clock.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtimeNs": 1792995372414254903
+    }
+  },
+  "originalSeedFilesUnchanged": true,
+  "allStartedProcessesExited": true
+}

@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "testsRun": 8,
+  "actualModelCalls": 0,
+  "version": "152.0.7977.82",
+  "results": [
+    {
+      "name": "old_report_hides_note_panel",
+      "passed": true
+    },
+    {
+      "name": "actual_cli_text_reference_and_author_match",
+      "passed": true
+    },
+    {
+      "name": "draft_or_arrival_never_claims_publication",
+      "passed": true
+    },
+    {
+      "name": "mismatched_note_author_reference_target_or_permission_is_unconfirmed",
+      "passed": true
+    },
+    {
+      "name": "damaged_evidence_or_query_budget_rejected",
+      "passed": true
+    },
+    {
+      "name": "literal_text_never_executes_markup",
+      "passed": true
+    },
+    {
+      "name": "repeat_import_has_no_world_writes",
+      "passed": true
+    },
+    {
+      "name": "mobile_notes_readable_without_overflow",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "worldRequests": []
+}

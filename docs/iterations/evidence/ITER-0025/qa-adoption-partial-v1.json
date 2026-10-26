@@ -1,0 +1,407 @@
+{
+  "passed": false,
+  "scope": "independent ITER25 core-v1 actual HTTP/SQLite; fixed reference no models",
+  "binarySha256": "98b42fb7156fd5ac4d44c52f9c1896255ace3b5786e4c1a025b2edee68117c9b",
+  "manifestSha256": "337c39c20fd019dbb6073623861cf799427b0f69d454587175c39f0a0c334f13",
+  "seed": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T061604041742Z/continued-natural-v2",
+  "seedFilesBefore": {
+    "access.json": {
+      "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+      "bytes": 790,
+      "mtimeNs": 1792988757982573799
+    },
+    "server.log": {
+      "sha256": "8879131f4030c337cf83d1253b77d5c46fb201756acfd5c28f9994a51a0d48b8",
+      "bytes": 55446,
+      "mtimeNs": 1792995379633570681
+    },
+    "final-snapshot.json": {
+      "sha256": "9ab2a9c180995c7ba88e4b0692158a2300d4783acb07a1069d1a1654c1fe0c69",
+      "bytes": 879627,
+      "mtimeNs": 1792995379676572562
+    },
+    "milestones.json": {
+      "sha256": "8ff879c26290bdd978f3ee907955600320d21e5b5a3067715240b128db8a91ad",
+      "bytes": 870,
+      "mtimeNs": 1792995399868921158
+    },
+    "world.db-wal": {
+      "sha256": "bede4dc2ce0aad0459ec9d596fc4f465606cd281077a981fe8db6b27668e79f9",
+      "bytes": 4120032,
+      "mtimeNs": 1792995379485564206
+    },
+    "world.db": {
+      "sha256": "8fe126cafea5df222af4f8fb2cdac97504f44af4eb710f908266969670e85d1c",
+      "bytes": 868352,
+      "mtimeNs": 1792994328681062137
+    },
+    "trace.json": {
+      "sha256": "444ba1148cccc09145a934f7e8fe60d3287a612df27a478f10511c5b51de1f4c",
+      "bytes": 8864,
+      "mtimeNs": 1792995399868856084
+    },
+    "world.db-shm": {
+      "sha256": "f404251b86a3938cffbbd9c0d6cd23e133811a6b13528d4f087d444fe4b72df2",
+      "bytes": 32768,
+      "mtimeNs": 1792996666230907651
+    },
+    "world.db.material-clock.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtimeNs": 1792995372414254903
+    }
+  },
+  "cases": {
+    "adoption_matrix": {
+      "passed": true,
+      "lockRejection": {
+        "exitCode": 1,
+        "stdout": "",
+        "stderr": "离线管理失败：IOException\n"
+      },
+      "invalid": [
+        {
+          "instance": "w_00000000000000000000000000000000",
+          "target": "e926486325c2c4e3e924610139ee26711",
+          "result": {
+            "exitCode": 1,
+            "stdout": "",
+            "stderr": "离线管理失败：InvalidOperationException\n"
+          }
+        },
+        {
+          "instance": "w_15ced6889f624d8da8a3d2129ba26874",
+          "target": "missing",
+          "result": {
+            "exitCode": 1,
+            "stdout": "",
+            "stderr": "离线管理失败：ArgumentException\n"
+          }
+        },
+        {
+          "instance": "w_15ced6889f624d8da8a3d2129ba26874",
+          "target": "efbde20b258d74a0eaca3a86e8d455755",
+          "result": {
+            "exitCode": 1,
+            "stdout": "",
+            "stderr": "离线管理失败：ArgumentException\n"
+          }
+        }
+      ],
+      "adopted": {
+        "adoption": {
+          "exitCode": 0,
+          "stdout": "地画已在原平台开启。\n",
+          "stderr": ""
+        },
+        "repeatedNoMutation": true,
+        "event": {
+          "type": "entityCanvasAdopted",
+          "seq": 756,
+          "stateVersion": 755,
+          "actorId": null,
+          "commandId": null,
+          "entityId": "e926486325c2c4e3e924610139ee26711",
+          "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+          "capability": "entity-canvas-v1",
+          "capabilityVersion": 1,
+          "width": 5,
+          "height": 5,
+          "maxPatchCells": 8,
+          "reach": 1.6,
+          "paintRule": "unowned-or-author-v1"
+        }
+      },
+      "schema11OldRuns": true,
+      "schema12OldColdRejectionExit": -6,
+      "schema12ContinuousAdoptionNoop": {
+        "exitCode": 0,
+        "output": "持续材料政策已采用，原进度保持。\n"
+      },
+      "oldUnavailableReceiptPreserved": {
+        "request": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "9776c3edb5a84e3f83c13bca37c0c998",
+          "expectedStateVersion": 754,
+          "action": {
+            "type": "paint_entity_canvas",
+            "entityId": "e926486325c2c4e3e924610139ee26711",
+            "capabilityVersion": 1,
+            "expectedCanvasRevision": 0,
+            "patch": [
+              {
+                "x": 0,
+                "y": 0,
+                "color": "sun"
+              }
+            ]
+          },
+          "preconditionMode": "actor-state-v1"
+        },
+        "receipt": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "stateVersion": 754,
+          "commandId": "9776c3edb5a84e3f83c13bca37c0c998",
+          "identity": {
+            "operatorId": "declared-late",
+            "actorId": "a2",
+            "sessionId": "s131d61be279840df94f00244eea8851d"
+          },
+          "eventCursor": 755,
+          "error": {
+            "code": "ENTITY_CANVAS_UNAVAILABLE",
+            "message": "当前世界尚未采用平台地画",
+            "retryable": false,
+            "mutated": false
+          },
+          "status": "rejected",
+          "execution": {
+            "preconditionMode": "actor-state-v1",
+            "observedStateVersion": 754,
+            "appliedOnStateVersion": 754
+          }
+        },
+        "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":754,\"commandId\":\"9776c3edb5a84e3f83c13bca37c0c998\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":755,\"error\":{\"code\":\"ENTITY_CANVAS_UNAVAILABLE\",\"message\":\"\\u5F53\\u524D\\u4E16\\u754C\\u5C1A\\u672A\\u91C7\\u7528\\u5E73\\u53F0\\u5730\\u753B\",\"retryable\":false,\"mutated\":false},\"status\":\"rejected\",\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":754,\"appliedOnStateVersion\":754}}"
+      },
+      "schema10CannotAdopt": {
+        "exitCode": 1,
+        "stdout": "",
+        "stderr": "离线管理失败：InvalidOperationException\n"
+      },
+      "legacyAudit": {
+        "schemaVersion": 10,
+        "source": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 84011,
+          "enabled_at_ms": 21047,
+          "next_production_ms": 91047,
+          "production_period": 6,
+          "generated_wood": 12,
+          "stock_wood": 0
+        },
+        "issuedWood": 24,
+        "inventoryWood": 6,
+        "embodiedWood": 18,
+        "sourceWood": 0,
+        "wildWood": 0,
+        "stateVersion": 623,
+        "receipts": 617,
+        "originalReceiptsPreserved": 616,
+        "originalEventsPreserved": 624,
+        "notes": 2,
+        "entities": 5,
+        "requests": 1,
+        "processStopped": {
+          "pid": 47850,
+          "exitCode": 0
+        },
+        "allStartedProcessesExited": true
+      },
+      "faults": [
+        {
+          "fault": "before-commit",
+          "exitCode": 87,
+          "recovered": {
+            "exitCode": 0,
+            "stdout": "地画已在原平台开启。\n",
+            "stderr": ""
+          },
+          "oneAdoptionEvent": true,
+          "audit": {
+            "schemaVersion": 12,
+            "source": {
+              "id": 1,
+              "active": 1,
+              "service_ms": 141266,
+              "enabled_at_ms": 21047,
+              "next_production_ms": 151047,
+              "production_period": 12,
+              "generated_wood": 30,
+              "stock_wood": 3
+            },
+            "issuedWood": 42,
+            "inventoryWood": 18,
+            "embodiedWood": 21,
+            "sourceWood": 3,
+            "wildWood": 0,
+            "stateVersion": 755,
+            "receipts": 736,
+            "originalReceiptsPreserved": 736,
+            "originalEventsPreserved": 755,
+            "notes": 2,
+            "entities": 6,
+            "requests": 0,
+            "processStopped": null,
+            "allStartedProcessesExited": true
+          }
+        },
+        {
+          "fault": "after-commit",
+          "exitCode": 88,
+          "recovered": {
+            "exitCode": 0,
+            "stdout": "地画已采用，原图和历史保持。\n",
+            "stderr": ""
+          },
+          "oneAdoptionEvent": true,
+          "audit": {
+            "schemaVersion": 12,
+            "source": {
+              "id": 1,
+              "active": 1,
+              "service_ms": 141266,
+              "enabled_at_ms": 21047,
+              "next_production_ms": 151047,
+              "production_period": 12,
+              "generated_wood": 30,
+              "stock_wood": 3
+            },
+            "issuedWood": 42,
+            "inventoryWood": 18,
+            "embodiedWood": 21,
+            "sourceWood": 3,
+            "wildWood": 0,
+            "stateVersion": 755,
+            "receipts": 736,
+            "originalReceiptsPreserved": 736,
+            "originalEventsPreserved": 755,
+            "notes": 2,
+            "entities": 6,
+            "requests": 0,
+            "processStopped": null,
+            "allStartedProcessesExited": true
+          }
+        }
+      ],
+      "audit": {
+        "schemaVersion": 12,
+        "source": {
+          "id": 1,
+          "active": 1,
+          "service_ms": 141505,
+          "enabled_at_ms": 21047,
+          "next_production_ms": 151047,
+          "production_period": 12,
+          "generated_wood": 30,
+          "stock_wood": 3
+        },
+        "issuedWood": 42,
+        "inventoryWood": 18,
+        "embodiedWood": 21,
+        "sourceWood": 3,
+        "wildWood": 0,
+        "stateVersion": 755,
+        "receipts": 737,
+        "originalReceiptsPreserved": 736,
+        "originalEventsPreserved": 755,
+        "notes": 2,
+        "entities": 6,
+        "requests": 1,
+        "processStopped": {
+          "pid": 47742,
+          "exitCode": 0
+        },
+        "allStartedProcessesExited": true
+      }
+    }
+  },
+  "worlds": [
+    {
+      "name": "adoption-matrix",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065227396112Z/adoption-matrix",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T061604041742Z/continued-natural-v2",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "schema10-negative",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065227396112Z/schema10-negative",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-preflight/20261026T054234754936Z",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "adopt-before-commit",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065227396112Z/adopt-before-commit",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T061604041742Z/continued-natural-v2",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "adopt-after-commit",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065227396112Z/adopt-after-commit",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T061604041742Z/continued-natural-v2",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "protocol-concurrency",
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http-20261026T065227396112Z/protocol-concurrency",
+      "source": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/continuous-http-20261026T061604041742Z/continued-natural-v2",
+      "branch": true,
+      "instanceId": "w_15ced6889f624d8da8a3d2129ba26874"
+    }
+  ],
+  "actualModelCalls": 0,
+  "naturalDirectSqlEdits": false,
+  "naturalClockControlled": false,
+  "runtimeReuse": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/core-v1/bin/World.Server.dll",
+    "sha256": "98b42fb7156fd5ac4d44c52f9c1896255ace3b5786e4c1a025b2edee68117c9b",
+    "readOnlySharedFrozenBinary": true,
+    "perRunRuntimeCopy": false
+  },
+  "failure": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http.py\", line 549, in <module>\n    report['cases'][name]=globals()[name]();save(OUT/'results.json',report)\n                          ^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http.py\", line 472, in protocol_concurrency\n    idconflict=reject(w,changed,'a1_alias',409,'IDEMPOTENCY_CONFLICT')\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-http.py\", line 407, in reject\n    assert r['status']=='rejected' and r['error']['mutated'] is False\n           ~^^^^^^^^^^\nKeyError: 'status'\n",
+  "seedFilesAfter": {
+    "access.json": {
+      "sha256": "021e814fea2e02b55e936171b37d904781db692e0cd97c387dc7ab5d4ef3718e",
+      "bytes": 790,
+      "mtimeNs": 1792988757982573799
+    },
+    "server.log": {
+      "sha256": "8879131f4030c337cf83d1253b77d5c46fb201756acfd5c28f9994a51a0d48b8",
+      "bytes": 55446,
+      "mtimeNs": 1792995379633570681
+    },
+    "final-snapshot.json": {
+      "sha256": "9ab2a9c180995c7ba88e4b0692158a2300d4783acb07a1069d1a1654c1fe0c69",
+      "bytes": 879627,
+      "mtimeNs": 1792995379676572562
+    },
+    "milestones.json": {
+      "sha256": "8ff879c26290bdd978f3ee907955600320d21e5b5a3067715240b128db8a91ad",
+      "bytes": 870,
+      "mtimeNs": 1792995399868921158
+    },
+    "world.db-wal": {
+      "sha256": "bede4dc2ce0aad0459ec9d596fc4f465606cd281077a981fe8db6b27668e79f9",
+      "bytes": 4120032,
+      "mtimeNs": 1792995379485564206
+    },
+    "world.db": {
+      "sha256": "8fe126cafea5df222af4f8fb2cdac97504f44af4eb710f908266969670e85d1c",
+      "bytes": 868352,
+      "mtimeNs": 1792994328681062137
+    },
+    "trace.json": {
+      "sha256": "444ba1148cccc09145a934f7e8fe60d3287a612df27a478f10511c5b51de1f4c",
+      "bytes": 8864,
+      "mtimeNs": 1792995399868856084
+    },
+    "world.db-shm": {
+      "sha256": "f404251b86a3938cffbbd9c0d6cd23e133811a6b13528d4f087d444fe4b72df2",
+      "bytes": 32768,
+      "mtimeNs": 1792996666230907651
+    },
+    "world.db.material-clock.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtimeNs": 1792995372414254903
+    }
+  },
+  "originalSeedFilesUnchanged": true,
+  "allStartedProcessesExited": true
+}

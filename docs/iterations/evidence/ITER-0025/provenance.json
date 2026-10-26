@@ -1,0 +1,804 @@
+{
+  "status": "complete evidence archive; derived coverage and final source audit identify version and skip limits",
+  "recordedAtUtc": "2026-10-26T07:28:14.602798+00:00",
+  "files": [
+    {
+      "file": "author-core-v1.json",
+      "source": ".local/iter0025/api/20261026T064628Z-cfb44b/results.json",
+      "sha256": "a61e45a83a9066232fd4401abdeb1ed7eb3b4a2155e06b821d64defc9d180275",
+      "bytes": 1913,
+      "rawUnmodified": true
+    },
+    {
+      "file": "author-core-v2-storage-types.json",
+      "source": ".local/iter0025/api/20261026T065624Z-6c43b6/results.json",
+      "sha256": "47b2577509f7f2141e11f17aeba80c829811d3bc6b4df7fc11d8fd948eb0cf63",
+      "bytes": 655,
+      "rawUnmodified": true
+    },
+    {
+      "file": "worker-python-v1.json",
+      "source": ".local/iter0025/python/20261026T065216Z-072bdc/results.json",
+      "sha256": "7620fe5635f1e4e3f862e58cf9d4b7be2a95b04d037b936b5250142eefc56538",
+      "bytes": 3853,
+      "rawUnmodified": true
+    },
+    {
+      "file": "worker-python-handoff.json",
+      "source": ".local/iter0025/python/handoff.json",
+      "sha256": "b8ee542de92c23d0f4989daab0c9005711b53a5153f913cffa01e31e25430435",
+      "bytes": 6772,
+      "rawUnmodified": true
+    },
+    {
+      "file": "author-native-first-ui-failure.json",
+      "source": ".local/iter0025/godot/20261026T065503Z-d2542e/results.json",
+      "sha256": "7fc0a44b2f835f34d9d4836977a28107bb7a0fa453f1b6f35bbcf226c976ceac",
+      "bytes": 2309,
+      "rawUnmodified": true
+    },
+    {
+      "file": "author-native-six-groups.json",
+      "source": ".local/iter0025/godot/20261026T065653Z-0751e3/results.json",
+      "sha256": "5789b087a350383e4a1fb7392ca4bcee168cba8f36a4ffb3442d9e318bdf1117",
+      "bytes": 9949,
+      "rawUnmodified": true
+    },
+    {
+      "file": "author-native-final-ui.json",
+      "source": ".local/iter0025/godot/20261026T070155Z-c3b123/results.json",
+      "sha256": "9ac95ed2db4cff8eeab44ea0c77413e95be8e7ae61552caf2d97894768ac8d1d",
+      "bytes": 4183,
+      "rawUnmodified": true
+    },
+    {
+      "file": "author-native-unknown-capability.json",
+      "source": ".local/iter0025/godot/20261026T071152Z-b7af0d/results.json",
+      "sha256": "8dcb575bec446b9245e7bfa787679fd669f1b417b8807bc062201164927b26d2",
+      "bytes": 3157,
+      "rawUnmodified": true
+    },
+    {
+      "file": "author-native-v3-foreign-pending.json",
+      "source": ".local/iter0025/godot/20261026T071659Z-bb2c2b/results.json",
+      "sha256": "fca59ca6643896f2eb09c2c126c779becd9527e11e315405c0660545ebb12283",
+      "bytes": 3165,
+      "rawUnmodified": true
+    },
+    {
+      "file": "author-chrome-19.json",
+      "source": ".local/iter0025/browser/2026-10-26T07-05-06-898Z/results.json",
+      "sha256": "7288dad8cca31b2e7757b5ccfcf0bed9966c17ed09e09c276ddce26a718803f5",
+      "bytes": 2020,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-natural-v1.json",
+      "source": ".local/qa/20261026-test-agent/canvas-http-20261026T065014010983Z/results.json",
+      "sha256": "13e255bf38617973db9d89524c2069e70ea03b7c8b7bf3d353dc2e0ff77f7c9d",
+      "bytes": 53895,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-adoption-partial-v1.json",
+      "source": ".local/qa/20261026-test-agent/canvas-http-20261026T065227396112Z/results.json",
+      "sha256": "7e828f0116f4cc1a28f0747d765f33d1e73db0a6710912fc581242b5b7cd72aa",
+      "bytes": 15091,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-protocol-faults-history-v1.json",
+      "source": ".local/qa/20261026-test-agent/canvas-http-20261026T065304508298Z/results.json",
+      "sha256": "6c6f224c0a651066b0a0ad2ab89ee05df3d84a3358453ae40e10588f44e184a3",
+      "bytes": 68436,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-storage-counterexample-v1.json",
+      "source": ".local/qa/20261026-test-agent/canvas-http-20261026T065339745660Z/results.json",
+      "sha256": "64ed3a3ba9b3cc5d1dc888d7fa9a1c7b5c222f0b840bd68b3358eba3262e886b",
+      "bytes": 6588,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-storage-fix-v2.json",
+      "source": ".local/qa/20261026-test-agent/canvas-http-20261026T065825166839Z/results.json",
+      "sha256": "5898d49aaa78acdff72365ed4be6e6b4c3ae0f8791bfcad7b2446cb3bddb1b38",
+      "bytes": 9121,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-python-cli-recovery.json",
+      "source": ".local/qa/20261026-test-agent/canvas-python-20261026T070027433307Z/results.json",
+      "sha256": "968874f864eddfd655ba1e2a02e40df9f2b18948b1f74edbe98fa1f429c205c5",
+      "bytes": 2533318,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-python-evidence-partial.json",
+      "source": ".local/qa/20261026-test-agent/canvas-python-20261026T070220620143Z/results.json",
+      "sha256": "d8649022d6c6bd97d665b6a13974d70e509f19c86f49ffaea5d730035ca2b3bb",
+      "bytes": 1710156,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-python-budget.json",
+      "source": ".local/qa/20261026-test-agent/canvas-python-20261026T070429369037Z/results.json",
+      "sha256": "8d4c49e0137ca6187719ca4db3b81ed5a12d6214bb91cdc5344c6a628a41a66f",
+      "bytes": 766408,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-native-stages-ui-v1.json",
+      "source": ".local/qa/20261026-test-agent/canvas-godot-20261026T070722753121Z/results.json",
+      "sha256": "a90212f85fd9e28db51eb4f8506ab95d08102ea8c9632420fa027a469b8cfb25",
+      "bytes": 140411,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-native-recovery-v2.json",
+      "source": ".local/qa/20261026-test-agent/canvas-godot-20261026T071550422974Z/results.json",
+      "sha256": "478f17a506dc392d6da417a862cb59b4fad98ce0742483ef6dd1ad5ef49f7abc",
+      "bytes": 865144,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-native-foreign-failure-v2.json",
+      "source": ".local/qa/20261026-test-agent/canvas-godot-20261026T071651271524Z/results.json",
+      "sha256": "fbef334af7675ffbd8fa0220eed234847295bfdeb6f06cc7caf75c437569bdce",
+      "bytes": 13861,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-chrome-12.json",
+      "source": ".local/qa/20261026-test-agent/canvas-web-2026-10-26T07-17-33-579Z/results.json",
+      "sha256": "b431aa5679002aab38a9e3b6a1cb210e7629918e7ef5ab3c0bd47b25e2d058bf",
+      "bytes": 5731,
+      "rawUnmodified": true
+    },
+    {
+      "file": "core-v1-manifest.json",
+      "source": ".local/iter0025/core-v1/manifest.json",
+      "sha256": "337c39c20fd019dbb6073623861cf799427b0f69d454587175c39f0a0c334f13",
+      "bytes": 2108,
+      "rawUnmodified": true
+    },
+    {
+      "file": "core-v2-manifest.json",
+      "source": ".local/iter0025/core-v2/manifest.json",
+      "sha256": "e4420d251edf46268741ef323b55c3b18e085e366cdac7cb49b3901df8f73523",
+      "bytes": 2082,
+      "rawUnmodified": true
+    },
+    {
+      "file": "native-v1-manifest.json",
+      "source": ".local/iter0025/native-v1/manifest.json",
+      "sha256": "bfeb90d25c3842c0d6c7d9d9b827ac3d6d331aeb8416bdf476c6872a8cdba632",
+      "bytes": 1825,
+      "rawUnmodified": true
+    },
+    {
+      "file": "native-v2-manifest.json",
+      "source": ".local/iter0025/native-v2/manifest.json",
+      "sha256": "0d1103edaf2053549177bb10f1ece76d60bf98840893f174dd84b7c6ec1e9d4c",
+      "bytes": 2043,
+      "rawUnmodified": true
+    },
+    {
+      "file": "native-v3-manifest.json",
+      "source": ".local/iter0025/native-v3/manifest.json",
+      "sha256": "c5be3faea2b8a548a2ec4656e072cd651f58be1c794c5ed0e83af31f0200d36b",
+      "bytes": 2360,
+      "rawUnmodified": true
+    },
+    {
+      "file": "web-v1-manifest.json",
+      "source": ".local/iter0025/web-v1/manifest.json",
+      "sha256": "97f68b72005f331f16a26753784bdbdd0b225969b2047a7394e53f02d646507b",
+      "bytes": 1037,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-summary.json",
+      "source": ".local/qa/20261026-test-agent/canvas-independent-status.json",
+      "sha256": "738ce3e6c8f593f5a0a63ea11323e9e65bbacf149ad366f9f71b3b78311b4399",
+      "bytes": 13599,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-native-v3-capability-foreign.json",
+      "source": ".local/qa/20261026-test-agent/canvas-godot-20261026T071807803026Z/results.json",
+      "sha256": "ebb1ee53036c3f65a0bee23496b24985242ca69343b6d3b9050d729ee9997d03",
+      "bytes": 518128,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-native-three-stages-v1-reframed.json",
+      "source": ".local/qa/20261026-test-agent/canvas-godot-20261026T070924306740Z/results.json",
+      "sha256": "c3aaa4ce3b8c568995d9c00b779cdbd1870e1766d35b936449250e9cd7db75ab",
+      "bytes": 136388,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-native-three-stages-v3.json",
+      "source": ".local/qa/20261026-test-agent/canvas-godot-20261026T072315627013Z/results.json",
+      "sha256": "ee8cd218fa52ded4b16ef6fbed3694356da48495ca33fb4f2b7209212006694f",
+      "bytes": 139759,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-native-three-stages-traffic.json",
+      "source": ".local/qa/20261026-test-agent/canvas-godot-20261026T072315627013Z/original-stage-http-traffic.json",
+      "sha256": "d70df70ea97581c649392cb4aef7e7b80463e2209d1c2ef48e73c4ac82769305",
+      "bytes": 75560,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-chrome-13.json",
+      "source": ".local/qa/20261026-test-agent/canvas-web-2026-10-26T07-19-25-901Z/results.json",
+      "sha256": "0c4742a3460c39178908781f4538a3b9bc6c0524acf81bbe3343428633eff4be",
+      "bytes": 5854,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-client-cleanup.json",
+      "source": ".local/qa/20261026-test-agent/canvas-cleanup-20261026T0721.json",
+      "sha256": "d0b6def8d7828d2129ffd58fece61e37e5a1c523cbca1f908f8a76965e267d98",
+      "bytes": 26479,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-visual-cleanup.json",
+      "source": ".local/qa/20261026-test-agent/canvas-cleanup-20261026T0724.json",
+      "sha256": "f7c2be7b410baa9ad22258c8cc6bc6b17ccb8f08586f17733105697b6b8483e1",
+      "bytes": 2787,
+      "rawUnmodified": true
+    },
+    {
+      "file": "worker-readonly-review.md",
+      "source": ".local/build-agent2/iter0025-report-review.md",
+      "sha256": "2ee5ae3ed7eeb4987d7c1d51cfb1161d1aa19722381e734014cca8e71f1cda54",
+      "bytes": 15735,
+      "rawUnmodified": true
+    },
+    {
+      "file": "author-full-regression.json",
+      "source": ".local/checks/20261026T070538Z-a6edfa/results.json",
+      "sha256": "7e386e0afa653dbf3c7df47e09130eedba04be912495db820ff613968c30b11f",
+      "bytes": 15346,
+      "rawUnmodified": true
+    },
+    {
+      "file": "author-native-all.json",
+      "source": ".local/iter0025/native-all/20261026T070839Z/results.json",
+      "sha256": "07490836b7fff00b8c216dbc9431315285dc2855c0bd500dede65b94d60d2f1d",
+      "bytes": 4703,
+      "rawUnmodified": true
+    },
+    {
+      "file": "author-browser-default-fixture-generation.json",
+      "source": ".local/iter0025/python/20261026T072157Z-94f780/results.json",
+      "sha256": "2f050c2ab1e223eb0e888150fbd0ffb058f6ad372eb4ac1bc8f3b00e9a05fe99",
+      "bytes": 3177,
+      "rawUnmodified": true
+    },
+    {
+      "file": "qa-storage-corruption-supplement.json",
+      "source": ".local/qa/20261026-test-agent/canvas-http-20261026T065339745660Z/corruption-supplement.json",
+      "sha256": "b1dc8b2e161a8f455376e62951c54c1c629a069441b5480546cefd31c6c1589f",
+      "bytes": 279,
+      "rawUnmodified": true
+    },
+    {
+      "file": "screenshots/original-platform-blank.png",
+      "source": ".local/qa/20261026-test-agent/canvas-godot-20261026T072315627013Z/original-stages-blank.png",
+      "sha256": "3f6e97b09699e8450c05d3fd2b560552242999878622eeb31ecb75e68b41e16c",
+      "bytes": 295617,
+      "rawUnmodified": true
+    },
+    {
+      "file": "screenshots/original-platform-first.png",
+      "source": ".local/qa/20261026-test-agent/canvas-godot-20261026T072315627013Z/original-stages-first.png",
+      "sha256": "dec067cb72aab1c4bdc657122165596d145046f6435653b3d9713bea3158eb9f",
+      "bytes": 295715,
+      "rawUnmodified": true
+    },
+    {
+      "file": "screenshots/original-platform-both.png",
+      "source": ".local/qa/20261026-test-agent/canvas-godot-20261026T072315627013Z/original-stages-both.png",
+      "sha256": "2b8826de0f20cbc18315f90b9e64671fdb88fd2fac9635a4373bea7d53e21363",
+      "bytes": 296804,
+      "rawUnmodified": true
+    },
+    {
+      "file": "screenshots/original-platform-both-second-author.png",
+      "source": ".local/qa/20261026-test-agent/canvas-godot-20261026T072315627013Z/original-stages-both-second-author.png",
+      "sha256": "200d1b76655e0d506e7b1a856198925a4613b8778e3681417c2dbeac056d6192",
+      "bytes": 296401,
+      "rawUnmodified": true
+    },
+    {
+      "file": "screenshots/history-mobile.png",
+      "source": ".local/qa/20261026-test-agent/canvas-web-2026-10-26T07-19-25-901Z/history-mobile.png",
+      "sha256": "1a15c34fc3b03c443ba3f6cdd2dcae170f10a2a75dc4c1ace58c1706a037e341",
+      "bytes": 366110,
+      "rawUnmodified": true
+    },
+    {
+      "file": "screenshots/query4-mobile.png",
+      "source": ".local/qa/20261026-test-agent/canvas-web-2026-10-26T07-19-25-901Z/query4-mobile.png",
+      "sha256": "493e3edcf471368e1a2bafd19f9051192f2fb08a6c3a2932b6b07451a7d3ee87",
+      "bytes": 317824,
+      "rawUnmodified": true
+    },
+    {
+      "file": "historical-harness-failures/canvas-http-20261026T065204188431Z.json",
+      "source": ".local/qa/20261026-test-agent/canvas-http-20261026T065204188431Z/results.json",
+      "sha256": "14c7347476aded72767173a2ec0f233884a04c22c0f210af951679af3bcccfb7",
+      "bytes": 5882,
+      "rawUnmodified": true
+    },
+    {
+      "file": "historical-harness-failures/canvas-python-20261026T070348810057Z.json",
+      "source": ".local/qa/20261026-test-agent/canvas-python-20261026T070348810057Z/results.json",
+      "sha256": "8a90d7984271833f1e827fc7f50d693ca5e87be62d036d3e68f4e61fcdb7f7ad",
+      "bytes": 6824,
+      "rawUnmodified": true
+    },
+    {
+      "file": "historical-harness-failures/canvas-godot-20261026T071015082014Z.json",
+      "source": ".local/qa/20261026-test-agent/canvas-godot-20261026T071015082014Z/results.json",
+      "sha256": "2402a500c33f892afff8db16de5024ab9a6995ad5d17792b06341a2e6a6cd33d",
+      "bytes": 6838,
+      "rawUnmodified": true
+    },
+    {
+      "file": "historical-harness-failures/canvas-godot-20261026T071139504955Z.json",
+      "source": ".local/qa/20261026-test-agent/canvas-godot-20261026T071139504955Z/results.json",
+      "sha256": "305ff0fc740f45a2d2f682c1492dee32e7fbb0453e79bcb2527a7d310373a166",
+      "bytes": 23591,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-foundation.json",
+      "source": ".local/iter0001/api/20261026T150539-b1d4b1/results.json",
+      "sha256": "3f9e1b7b106bf52fe9c7aa8c43e9086a92bbd65a054d4ff0553a6b6a83f9cdf5",
+      "bytes": 2961,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-passage.json",
+      "source": ".local/iter0002/api/20261026T150539-cc5dbe/results.json",
+      "sha256": "c3321dc7aabd3d3b1227b6734611d094da625d522391b274cfe8343b190be5c6",
+      "bytes": 2340,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-resident_mission.json",
+      "source": ".local/iter0003/api/20261026T150539-3298da/results.json",
+      "sha256": "7043347272eb91e0ed3e6432161febe3f64f5c635a082d29fe8f3f35360e44a7",
+      "bytes": 2701,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-activities.json",
+      "source": ".local/iter0004/api/20261026T150549-ba9823/results.json",
+      "sha256": "440594676cee13d8a8282c449480be5b1f2472d9d453eb3b26a3ed273fb1aefc",
+      "bytes": 2869,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-postcards.json",
+      "source": ".local/iter0005/api/20261026T150549-bf211b/results.json",
+      "sha256": "c812b66231d2e74de5d1d5ae46da9e5df4cc0c846fc4cc06e9574ad3edf027b8",
+      "bytes": 3085,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-mosaic.json",
+      "source": ".local/iter0006/api/20261026T150550-81ad70/results.json",
+      "sha256": "5f35c9e35fad9cc77a72002d839ad606fa9978d0e5dcee3ce39ec0078b6b67cb",
+      "bytes": 3196,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-consent.json",
+      "source": ".local/iter0007/api/20261026T150557-c37200/results.json",
+      "sha256": "ecd3e53621e29924a15f92ac8a114d8ca1eaf6ed4df7ae89ad181cffdfe6e7dc",
+      "bytes": 3599,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-inbox.json",
+      "source": ".local/iter0008/api/20261026T150600-f23ac2/results.json",
+      "sha256": "985fbda073d99667e6cb5ee4f86d47c8d2f0f11b54d03e26cf50b3b7f6b10604",
+      "bytes": 3275,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-entry_guide.json",
+      "source": ".local/iter0009/api/20261026T150601-aadc09/results.json",
+      "sha256": "85151ccca02d7b68530a9c91b5edd57558b9f41bb2268b965a316885500bca1b",
+      "bytes": 1884,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-wilderness.json",
+      "source": ".local/iter0010/api/20261026T150607-40ce75/results.json",
+      "sha256": "3a205a0962de55eff131fd3c30b46d85a1e7743ce9a3ab7c26e3c7bc9513d335",
+      "bytes": 3265,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-wilderness_mission.json",
+      "source": ".local/iter0013/api/20261026T070616Z-7ec757/results.json",
+      "sha256": "8ccf69b41456b2f8b74c02e759b9c3ec4adb9f4c196f0af49cfdb31ae9e22f77",
+      "bytes": 2677,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-continuous.json",
+      "source": ".local/iter0014/api/20261026T070617Z-bda77b/results.json",
+      "sha256": "52b79883383aba1a2d0e29ee27ce0c63b1ea2beb7a3300627e7894119c04529b",
+      "bytes": 94,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-continuous_mission.json",
+      "source": ".local/iter0015/api/20261026T070621Z-37321e/results.json",
+      "sha256": "a838ae9fa71fa26d4f86452fdaf87beabf7ac530a5fba353d0294498a453e88b",
+      "bytes": 2181,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-world_instance.json",
+      "source": ".local/world-instance/api/20261026T070624Z-4c4469/results.json",
+      "sha256": "11b249699ed202cd872eb103066effa9c87f466b6bc42f6c8f848bfc4b4ca16f",
+      "bytes": 81,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-construction_mission.json",
+      "source": ".local/iter0017/api/20261026T070631Z-4bf230/results.json",
+      "sha256": "ad7acb3932ca17788e8669bf08ee10c9a8bc31234acffa35af242d31c3aa382f",
+      "bytes": 2519,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-instance_mission.json",
+      "source": ".local/instance-mission/api/20261026T070643Z-85333a/results.json",
+      "sha256": "4e05ac2a2f6b839b6b3eb246f67dda1d50b09352b3ce732c024873c7785b98c0",
+      "bytes": 1088,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-actor_state.json",
+      "source": ".local/iter0019/api/20261026T070703Z-1f5245/results.json",
+      "sha256": "12f8a8f890897418d1d6bf8e36017995b4b2a73e254a936e4eeff2723a43295e",
+      "bytes": 2293,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-actor_mission.json",
+      "source": ".local/iter0019/python/20261026T070832Z-c1796d/results.json",
+      "sha256": "0d19e911fd208d64a6cd7aa5598e4f5c91ac988b4493081d931a0adda3e24f40",
+      "bytes": 4201,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-material_transfer.json",
+      "source": ".local/iter0020/api/20261026T070834Z-7c5f2c/results.json",
+      "sha256": "0a2ce996ad533a8594aa61ba15a9ae6b6764cbc37aca9da26d159bc108231593",
+      "bytes": 3776,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-transfer_mission.json",
+      "source": ".local/iter0020/python/20261026T070914Z-23b0b3/results.json",
+      "sha256": "f2336c5be46527ed0da20437d4ea8080e2e6b888053297dd5f02a401e2e26a46",
+      "bytes": 4406,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-material_access.json",
+      "source": ".local/iter0022/api/20261026T070948Z-80115c/results.json",
+      "sha256": "dce989a0aeee55492cda9141405128b3c72f9efd4ee6e4c9cf78a186b41fd3cd",
+      "bytes": 3605,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-material_access_time.json",
+      "source": ".local/iter0022/time/20261026T071018Z-719d37/results.json",
+      "sha256": "db2439f77d4ccaec66dc57fd761b43a29681c8894d0a3339874cc49eea75d4ea",
+      "bytes": 2572,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-material_access_mission.json",
+      "source": ".local/iter0022/python/20261026T071043Z-b1c84d/results.json",
+      "sha256": "4ada90076788833542522b174773600da2d3fcee7a1dd0fe257ac907289f3c80",
+      "bytes": 7620,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-entity_notes.json",
+      "source": ".local/iter0023/api/20261026T071126Z-ec031f/results.json",
+      "sha256": "e28a8a0ba233f4d8f8edb9c4e692784a46e6340ca018e6306846490f378b1a7f",
+      "bytes": 581,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-entity_notes_mission.json",
+      "source": ".local/iter0023/python/20261026T071324Z-9ff88f/results.json",
+      "sha256": "3af4f7e635eb73228544752cbdbb1c9f887b59dcb9b1c7b2039d30ba68452dde",
+      "bytes": 4853,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-continuous_material.json",
+      "source": ".local/iter0024/api/20261026T071402Z-f9bb43/results.json",
+      "sha256": "283527cdef0f3aad591d7b7665e1ee55aa8267a3833aba3a9235be3c601dc1af",
+      "bytes": 2998,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-continuous_material_mission.json",
+      "source": ".local/iter0024/python/20261026T071414Z-829da3/results.json",
+      "sha256": "89fcb3da53b0ab7656df9980801fb8f569f6ea641cb4425c0d516fce2dd61d7e",
+      "bytes": 4486,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-entity_canvas.json",
+      "source": ".local/iter0025/api/20261026T071653Z-f98e7f/results.json",
+      "sha256": "7865efe4b4e00b4425eedf670bf5991fbec30ae311a20d764fbd5402a591d925",
+      "bytes": 2131,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/http-entity_canvas_mission.json",
+      "source": ".local/iter0025/python/20261026T071717Z-0719fd/results.json",
+      "sha256": "bb37ff64bae656f5a4cab277c7175890247a55d7fee6759809a2c9898062a8a4",
+      "bytes": 3892,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-foundation.json",
+      "source": ".local/iter0001/browser/2026-10-26T07-17-59-184Z/results.json",
+      "sha256": "fc386644bf9b9e9a821012c740ff8bdb082f7c122b2fd9453e3aa18f0fbcd6c0",
+      "bytes": 1364,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-passage.json",
+      "source": ".local/iter0002/browser/2026-10-26T07-18-08-439Z/results.json",
+      "sha256": "3330515e226eb6bd6245e689e86337969136f1f4e3ef28df052c094213d5d343",
+      "bytes": 1224,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-resident.json",
+      "source": ".local/iter0003/browser/2026-10-26T07-18-17-446Z/results.json",
+      "sha256": "bc79772c9873f855a1013f94ba380fde547331a28063b661c3eca677456d683e",
+      "bytes": 1361,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-activities.json",
+      "source": ".local/iter0004/browser/2026-10-26T07-18-19-494Z/results.json",
+      "sha256": "f9d6b9149a01ff9f43a303f149391c4e046361c695df136f668b4388e24c7f4f",
+      "bytes": 1617,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-postcards.json",
+      "source": ".local/iter0005/browser/2026-10-26T07-18-25-991Z/results.json",
+      "sha256": "44a4561e53d892c0113fe308ec42fe08e0decb11a7eb74987fd491fb0ad43b95",
+      "bytes": 1928,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-mosaic.json",
+      "source": ".local/iter0006/browser/2026-10-26T07-18-35-275Z/results.json",
+      "sha256": "9671a6d63bfafe7dfca17d2ffc22f12515534b811d71f47c5e9cf014e941ca35",
+      "bytes": 1914,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-consent.json",
+      "source": ".local/iter0007/browser/2026-10-26T07-18-46-568Z/results.json",
+      "sha256": "8044b3e408cc37b330128efb2c4c694570120fa07e9e463c127ef2e115dd4aaf",
+      "bytes": 1807,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-inbox.json",
+      "source": ".local/iter0008/browser/2026-10-26T07-19-01-573Z/results.json",
+      "sha256": "16ccf83a8631e87d721cb19f945837dee9d94387356fe304ae41336135abb62c",
+      "bytes": 2218,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-consent-experience.json",
+      "source": ".local/consent-experience/browser/2026-10-26T07-19-14-067Z/results.json",
+      "sha256": "46004a8efd57a99ecfb926972a5c7bb684a3f70ca4f0eab1d0dbcca32640df53",
+      "bytes": 1481,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-entry.json",
+      "source": ".local/iter0009/browser/2026-10-26T07-19-23-722Z/results.json",
+      "sha256": "eb35055710899413ad8023eed6264cc68749e7d883f59fb1ceddec30fa4826cb",
+      "bytes": 1732,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-wilderness.json",
+      "source": ".local/iter0010/browser/2026-10-26T07-19-38-579Z/results.json",
+      "sha256": "39c671dcb0f7e78b7e260f8a5c2e50f18d744db1756e330b9dc93791bb4385bd",
+      "bytes": 1891,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-wilderness-resident.json",
+      "source": ".local/iter0013/browser/2026-10-26T07-19-44-543Z/results.json",
+      "sha256": "817bd7ba5776c9db5aa587f22476e2725e72c9f7ecfbed3b40f272b053299563",
+      "bytes": 846,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-continuous-resident.json",
+      "source": ".local/iter0015/browser/2026-10-26T07-19-46-404Z/results.json",
+      "sha256": "60672597ad579139542133a48774db2763c1a8afd3fb58012595011cd169ee89",
+      "bytes": 1013,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-construction-resident.json",
+      "source": ".local/iter0017/browser/2026-10-26T07-19-57-513Z/results.json",
+      "sha256": "1409866f7ef94a7fe32246f668d58eecb4bcfcd3efc128c1a7d47a695914af4a",
+      "bytes": 1120,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-actor-resident.json",
+      "source": ".local/iter0019/browser/2026-10-26T07-20-09-543Z/results.json",
+      "sha256": "e2ac5de7bf0424f313a078e75cc769d48e5b3f2a9a3cf9d1e6d04cadb31bcf7b",
+      "bytes": 1591,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-transfer-resident.json",
+      "source": ".local/iter0020/browser/2026-10-26T07-20-24-254Z/results.json",
+      "sha256": "6c0f1e889b21712f83c9861c1ad7cbd3f1f66433e99a72d226f3327145b62244",
+      "bytes": 1397,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-material-resident.json",
+      "source": ".local/iter0022/browser/2026-10-26T07-20-59-472Z/results.json",
+      "sha256": "f934b274caa0c5cc2c6ee76e2b521d6a39f9dd7f6d2a4e879982ff214e0c5140",
+      "bytes": 1031,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-entity-note-resident.json",
+      "source": ".local/iter0023/browser/2026-10-26T07-21-08-939Z/results.json",
+      "sha256": "30c99fdbcd8e980d093ca33401f7a09f89aa9e124966bed49288302ca16b99ee",
+      "bytes": 891,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-continuous-material-resident.json",
+      "source": ".local/iter0024/browser/2026-10-26T07-21-26-421Z/results.json",
+      "sha256": "cba7ca5006f1a9e8363feab15af800d3ff224975fe4d40d3b1b6b805d9ae3a76",
+      "bytes": 1259,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/browser-entity-canvas-resident.json",
+      "source": ".local/iter0025/browser/2026-10-26T07-21-57-568Z/results.json",
+      "sha256": "7288dad8cca31b2e7757b5ccfcf0bed9966c17ed09e09c276ddce26a718803f5",
+      "bytes": 2020,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/native-godot_recovery.json",
+      "source": ".local/godot-recovery/20261026T070839Z-5b5b7b/results.json",
+      "sha256": "58191d50a776c068b4ffecc2a0db3425591f74a273f5826d09f70dff1ac6ac52",
+      "bytes": 36974,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/native-world_instance_godot.json",
+      "source": ".local/world-instance/godot/20261026T070840Z-6d8057/results.json",
+      "sha256": "1ba0ae852a6f58661139f9ebdcd6aff799c0a3aa90c1641279c157b2baaa81e4",
+      "bytes": 4167,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/native-continuous_godot.json",
+      "source": ".local/iter0014/godot/20261026T070846Z-19687e/results.json",
+      "sha256": "ef2ca08c8798dd6a6563a150fcfa586834aaad45b293f02e6b5f686a2a148ab5",
+      "bytes": 6479,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/native-godot_navigation.json",
+      "source": ".local/iter0016/20261026T070938Z-0ee36b/results.json",
+      "sha256": "e169a7aa4b7cb0e615a80188df03c6e02d18246135438834652082793a251385",
+      "bytes": 4908,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/native-actor_state_godot.json",
+      "source": ".local/iter0019/godot/20261026T071106Z-d11d2a/results.json",
+      "sha256": "c830ad12dc75a69853b625fa1b4cc90c6cba2c3e4ce9c1a46731fcd3f70bd9ad",
+      "bytes": 5193,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/native-godot_attribution.json",
+      "source": ".local/iter0021/20261026T071122Z-66d0ad/results.json",
+      "sha256": "14eb77ee3e60e89ad1cb0f0266b93e846a6cb8e8897aac76f0feb14e854f0dd6",
+      "bytes": 4617,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/native-transfer_godot.json",
+      "source": ".local/iter0020/godot/20261026T071135Z-a3b7de/results.json",
+      "sha256": "a971538dbe86461e6b70f120d635455cb6ae536363820d3fb437e91825dee9c6",
+      "bytes": 4237,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/native-material_access_godot.json",
+      "source": ".local/iter0022/godot/20261026T071231Z-8a11db/results.json",
+      "sha256": "1ef2a1cced99a37db00d3e0cd5ae34e385e5506d6ee3e60d3f9357749f32c326",
+      "bytes": 10895,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/native-entity_notes_godot.json",
+      "source": ".local/iter0023/godot/20261026T071333Z-8ff6a6/results.json",
+      "sha256": "fd8c3708e48fef24f663666f5eb6d5c8bd40b0d62f2188f3297f56752e0df1b7",
+      "bytes": 8696,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/native-continuous_material_godot.json",
+      "source": ".local/iter0024/godot/20261026T071622Z-302428/results.json",
+      "sha256": "4b890b66d2dd4c778f43452b4bcdcdfed292add84a7a2623b8c942332d9cb3f5",
+      "bytes": 7527,
+      "rawUnmodified": true
+    },
+    {
+      "file": "regression/native-entity_canvas_godot.json",
+      "source": ".local/iter0025/godot/20261026T071835Z-2c3ff8/results.json",
+      "sha256": "98bee01f588d64f57033828b4d68872f7fd270517b92f7a9ca3a1cb630028635",
+      "bytes": 12334,
+      "rawUnmodified": true
+    },
+    {
+      "file": "coverage.json",
+      "source": ".local/iter0025/coverage.json",
+      "sha256": "150a7a83a0fe140f1766ef52c09cc56294c476365c9978bc921d26af7500ee25",
+      "bytes": 17622,
+      "rawUnmodified": true
+    },
+    {
+      "file": "final-source-audit.json",
+      "source": ".local/iter0025/final-source-audit.json",
+      "sha256": "80faa0092d4c1f52d38a916a6eeafb97864c1cf9738cc49540b7f8e9f970970f",
+      "bytes": 20107,
+      "rawUnmodified": true
+    },
+    {
+      "file": "author-completed-run-cleanup.json",
+      "source": ".local/iter0025/completed-run-cleanup.json",
+      "sha256": "84fb1139ec6924ae6cdb22dd30b867e55af1611ba4e7546501d5586e5682d3e2",
+      "bytes": 356135,
+      "rawUnmodified": true
+    }
+  ]
+}

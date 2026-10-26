@@ -1,0 +1,76 @@
+{
+  "suite": "wilderness-resident-http",
+  "actualModelCalls": 0,
+  "decisionSource": "test-double",
+  "recordedAtUtc": "2026-10-26T07:06:24.440309+00:00",
+  "passed": true,
+  "testsRun": 13,
+  "tests": [
+    {
+      "test": "__main__.WildernessMissionAcceptance.test_01_empty_hands_build_bridge_and_later_resident_reuses_without_harvesting",
+      "passed": true,
+      "seconds": 0.7895588999963365
+    },
+    {
+      "test": "__main__.WildernessMissionAcceptance.test_02_absent_permission_preserves_legacy_no_gather_behavior",
+      "passed": true,
+      "seconds": 0.319306415040046
+    },
+    {
+      "test": "__main__.WildernessMissionAcceptance.test_03_wood_budget_blocks_before_collecting_and_commands_survive_resume",
+      "passed": true,
+      "seconds": 0.3965571610024199
+    },
+    {
+      "test": "__main__.WildernessMissionAcceptance.test_04_unreachable_sources_are_not_counted_as_available_supply",
+      "passed": true,
+      "seconds": 0.3492896420066245
+    },
+    {
+      "test": "__main__.WildernessMissionAcceptance.test_05_preexisting_inventory_only_collects_the_remaining_shortage",
+      "passed": true,
+      "seconds": 0.6131455150316469
+    },
+    {
+      "test": "__main__.WildernessMissionAcceptance.test_06_exit_after_cut_commit_recovers_original_once",
+      "passed": true,
+      "seconds": 0.9372741799452342
+    },
+    {
+      "test": "__main__.WildernessMissionAcceptance.test_07_exit_before_commit_retries_same_cut",
+      "passed": true,
+      "seconds": 0.8485252000391483
+    },
+    {
+      "test": "__main__.WildernessMissionAcceptance.test_08_wrong_node_receipt_stays_pending_until_original_is_recovered",
+      "passed": true,
+      "seconds": 0.7339496659697033
+    },
+    {
+      "test": "__main__.WildernessMissionAcceptance.test_09_stale_cut_replans_only_after_confirmed_rejection",
+      "passed": true,
+      "seconds": 0.6128588920109905
+    },
+    {
+      "test": "__main__.WildernessMissionAcceptance.test_10_process_exit_after_cut_receipt_before_local_settlement",
+      "passed": true,
+      "seconds": 0.65130892500747
+    },
+    {
+      "test": "__main__.WildernessMissionAcceptance.test_11_permission_and_identity_binding_survive_pause",
+      "passed": true,
+      "seconds": 0.9479228369891644
+    },
+    {
+      "test": "__main__.WildernessMissionAcceptance.test_12_planning_is_readonly_and_untrusted_extra_fields_are_not_exposed",
+      "passed": true,
+      "seconds": 0.314937663031742
+    },
+    {
+      "test": "__main__.WildernessMissionAcceptance.test_13_fixed_reference_cli_exports_actual_gather_report_without_models",
+      "passed": true,
+      "seconds": 0.6255890119937249
+    }
+  ],
+  "failures": []
+}

@@ -43,7 +43,7 @@ func _valid_record(record: Variant) -> bool:
 		if not Evidence.whole(record.recordVersion):
 			return false
 		record_version = int(record.recordVersion)
-		if record_version not in [2, 3, 4] or not _valid_instance(record.get("instanceId")) \
+		if record_version not in [2, 3, 4, 5] or not _valid_instance(record.get("instanceId")) \
 			or record.get("worldId") != "foundation-01" or not record.get("endpoint") is String:
 			return false
 	elif record.has("instanceId"):
@@ -52,8 +52,8 @@ func _valid_record(record: Variant) -> bool:
 	if parser.parse(record.body) != OK or not parser.data is Dictionary:
 		return false
 	var command: Dictionary = parser.data
-	if record_version in [3, 4]:
-		if (record_version == 4) != (command.get("rulesVersion") == "r10"):
+	if record_version in [3, 4, 5]:
+		if (record_version in [4, 5]) != (command.get("rulesVersion") == "r10"):
 			return false
 		if command.get("preconditionMode") != Evidence.MODE or not record.get("before") is String:
 			return false
@@ -64,16 +64,21 @@ func _valid_record(record: Variant) -> bool:
 			return false
 		if command.action.get("type") in ["reserve_material", "cancel_reservation", "harvest_material"] and before.get("materialActorId") != record.actorId:
 			return false
+		if command.action.get("type") == "paint_entity_canvas" and (before.get("canvasActorId") != record.actorId or before.get("canvasAdoption", {}).get("worldInstanceId") != record.instanceId):
+			return false
+		if (record_version == 5) != (command.action.get("type") == "paint_entity_canvas"):
+			return false
 		if command.action.get("type") == "append_entity_note" and before.get("noteActorId") != record.actorId:
 			return false
 	elif command.has("preconditionMode"):
 		return false
 	return command.get("commandId") == record.commandId and command.get("schemaVersion") == 1 \
 		and command.get("rulesVersion") in ["r8", "r9", "r10"] and Evidence.whole(command.get("expectedStateVersion")) \
-		and (command.rulesVersion != "r10" or record_version == 4) \
+		and (command.rulesVersion != "r10" or record_version in [4, 5]) \
 		and command.get("action") is Dictionary and (command.action.get("type") in ["walk", "gather", "build"] \
 			or (command.action.get("type") == "transfer" and command.rulesVersion in ["r9", "r10"] and record_version in [3, 4]) \
-			or (command.action.get("type") in ["reserve_material", "cancel_reservation", "harvest_material", "append_entity_note"] and command.rulesVersion == "r10" and record_version == 4))
+			or (command.action.get("type") in ["reserve_material", "cancel_reservation", "harvest_material", "append_entity_note"] and command.rulesVersion == "r10" and record_version == 4) \
+			or (command.action.get("type") == "paint_entity_canvas" and command.rulesVersion == "r10" and record_version == 5))
 
 func can_act() -> bool:
 	return healthy and not busy and storage_ok and not legacy_unbound and pending.is_empty()
@@ -237,6 +242,10 @@ func refresh() -> void:
 func send_action(action: Dictionary) -> void:
 	if not can_act():
 		return
+	if action.get("type") == "paint_entity_canvas" and (not Evidence.Canvas.supported(observation) or not Evidence.supported(observation)):
+		message = "当前世界尚未提供可核对的平台地画。"
+		changed.emit()
+		return
 	if action.get("type") == "append_entity_note" and (not Evidence.Notes.supported(observation) or not Evidence.supported(observation)):
 		message = "这个世界尚未提供旧桥共同手记。"
 		changed.emit()
@@ -271,7 +280,7 @@ func send_action(action: Dictionary) -> void:
 		command.preconditionMode = Evidence.MODE
 	pending = {"actorId": identity.actorId, "commandId": command_id, "body": JSON.stringify(command)}
 	if not instance_id.is_empty():
-		pending.merge({"recordVersion": 4 if observation.rulesVersion == "r10" else 3 if actor_mode else 2, "instanceId": instance_id, "worldId": "foundation-01", "endpoint": endpoint})
+		pending.merge({"recordVersion": 5 if action.get("type") == "paint_entity_canvas" else 4 if observation.rulesVersion == "r10" else 3 if actor_mode else 2, "instanceId": instance_id, "worldId": "foundation-01", "endpoint": endpoint})
 		if actor_mode:
 			# Keep records flat so disk JSON number coercion cannot change equality.
 			pending.before = JSON.stringify(before)
@@ -316,7 +325,7 @@ func _settle(reply: Dictionary) -> bool:
 		var before: Dictionary = JSON.parse_string(pending.before)
 		if not Evidence.result(data, command, before):
 			return false
-		if command.action.type in ["reserve_material", "append_entity_note"]:
+		if command.action.type in ["reserve_material", "append_entity_note", "paint_entity_canvas"]:
 			if not Evidence.whole(data.get("eventCursor")) or data.eventCursor < 1:
 				return false
 			var events_reply: Dictionary = await _request(API + "/events?after=" + str(int(data.eventCursor) - 1))
@@ -326,6 +335,12 @@ func _settle(reply: Dictionary) -> bool:
 			if command.action.type == "reserve_material" and not Evidence.reserved_event(events_reply.data.events[0], data, command):
 				return false
 			if command.action.type == "append_entity_note" and not Evidence.Notes.event(events_reply.data.events[0], data):
+				return false
+			if command.action.type == "paint_entity_canvas" and not Evidence.Canvas.event(events_reply.data.events[0], data):
+				return false
+		if command.action.type == "paint_entity_canvas":
+			var edit_reply: Dictionary = await _request(API + "/entities/" + command.action.entityId.uri_encode() + "/canvas/edits/" + pending.actorId.uri_encode() + "/" + pending.commandId.uri_encode())
+			if edit_reply.code != 200 or not _reply_binding(edit_reply) or not Evidence.Canvas.detail(edit_reply.data, data):
 				return false
 		if command.action.type == "append_entity_note":
 			if not await _observe() or not Evidence.Notes.confirmed(observation, data, before):
@@ -363,6 +378,16 @@ func _lookup() -> void:
 	if not await _settle(reply):
 		retry_allowed = _reply_binding(reply) and reply.code == 404 and reply.data.get("error", {}).get("code") == "COMMAND_NOT_FOUND" and reply.data.get("identity", {}).get("actorId") == pending.actorId
 		var command = JSON.parse_string(pending.body)
+		if command.action.get("type") == "paint_entity_canvas":
+			var capable := false
+			var before = JSON.parse_string(pending.before)
+			if await _observe():
+				capable = Evidence.Canvas.supported(observation) and Evidence.Canvas.same_target(observation.entityCanvas.target, before.canvasTarget)
+			retry_allowed = retry_allowed and capable
+			if not capable:
+				healthy = false
+				message = "原地画请求已保留。当前服务缺少原平台地画能力，请恢复后查询。"
+				return
 		if command.action.get("type") == "append_entity_note":
 			# An old r10 service parses POST before receipt lookup. Never let its
 			# unknown-action response replace the result of this original request.

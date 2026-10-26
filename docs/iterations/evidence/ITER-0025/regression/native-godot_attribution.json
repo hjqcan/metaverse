@@ -1,0 +1,157 @@
+{
+  "passed": true,
+  "actualModelCalls": 0,
+  "checks": [
+    {
+      "name": "authenticated first resident",
+      "passed": true
+    },
+    {
+      "name": "first identity nameplates and rings match observation",
+      "passed": true
+    },
+    {
+      "name": "actual first platform credits its builder",
+      "passed": true
+    },
+    {
+      "name": "rendered first-resident",
+      "passed": true
+    },
+    {
+      "name": "switch starts while a read is in flight",
+      "passed": true
+    },
+    {
+      "name": "authenticated switch moves own marker to a2 and removes it from a1",
+      "passed": true
+    },
+    {
+      "name": "switching controller preserves the first platform builder",
+      "passed": true
+    },
+    {
+      "name": "actual gather command commits a new receipt",
+      "passed": true
+    },
+    {
+      "name": "real gather produces one temporary material caption",
+      "passed": true
+    },
+    {
+      "name": "actual walk command commits a new receipt",
+      "passed": true
+    },
+    {
+      "name": "ordinary observation keeps the live visual actor for interpolation",
+      "passed": true
+    },
+    {
+      "name": "interpolation target follows a committed movement",
+      "passed": true
+    },
+    {
+      "name": "same-instance reconnect snaps to the authoritative position",
+      "passed": true
+    },
+    {
+      "name": "reconnect removes old material captions and arm effects",
+      "passed": true
+    },
+    {
+      "name": "actual walk command commits a new receipt",
+      "passed": true
+    },
+    {
+      "name": "actual gather command commits a new receipt",
+      "passed": true
+    },
+    {
+      "name": "actual gather command commits a new receipt",
+      "passed": true
+    },
+    {
+      "name": "actual build command commits a new receipt",
+      "passed": true
+    },
+    {
+      "name": "second resident spends its own three gathered wood on a platform",
+      "passed": true
+    },
+    {
+      "name": "observed platform attribution stays with a1",
+      "passed": true
+    },
+    {
+      "name": "observed platform attribution stays with a2",
+      "passed": true
+    },
+    {
+      "name": "rendered second-resident",
+      "passed": true
+    },
+    {
+      "name": "same resident connects to a different persistent world",
+      "passed": true
+    },
+    {
+      "name": "replacement world contains no old platform or builder captions",
+      "passed": true
+    },
+    {
+      "name": "replacement identity and position form a fresh visual baseline",
+      "passed": true
+    },
+    {
+      "name": "replacement clears temporary effects and action visuals",
+      "passed": true
+    },
+    {
+      "name": "rendered replacement-world",
+      "passed": true
+    }
+  ],
+  "databaseAudit": {
+    "original": {
+      "materialTotal": 12,
+      "entities": [
+        [
+          "e4089a1d28560467097f8920dbb039568",
+          "a1",
+          3
+        ],
+        [
+          "e66c954e1de064b8a8038a73b29c7f894",
+          "a2",
+          3
+        ]
+      ],
+      "receiptCount": 21,
+      "buildCount": 2
+    },
+    "replacement": {
+      "materialTotal": 12,
+      "entities": [],
+      "receiptCount": 0,
+      "buildCount": 0
+    }
+  },
+  "allSelfStartedServicesStopped": true,
+  "sourceBefore": {
+    "clients/godot/main.gd": "23bf58f280cba82a69bd7cf5422d057f5884926c9ef225a3c54c9324d3511bd4",
+    "clients/godot/world_view.gd": "ee0733b03887b49a7f695cf2e8818233f76f667a97edb36dbd5a0f370911caba",
+    "clients/godot/world_client.gd": "5d2f16689a9bb668f706288f11c761802359482073a332b5b0ea37e8749ba39f",
+    "clients/godot/pending_store.gd": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+    "tests/godot/attribution.gd": "54157ec38fb28a3d1c78ff346731a2d83f4b70ad231fe84e15d9ea0017e4def0",
+    "tests/godot_attribution.py": "9f34aad109cb1f67506c0c4d1559e2b738f7d769764492209cc8d3ea4408ddf5"
+  },
+  "sourceAfter": {
+    "clients/godot/main.gd": "23bf58f280cba82a69bd7cf5422d057f5884926c9ef225a3c54c9324d3511bd4",
+    "clients/godot/world_view.gd": "ee0733b03887b49a7f695cf2e8818233f76f667a97edb36dbd5a0f370911caba",
+    "clients/godot/world_client.gd": "5d2f16689a9bb668f706288f11c761802359482073a332b5b0ea37e8749ba39f",
+    "clients/godot/pending_store.gd": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+    "tests/godot/attribution.gd": "54157ec38fb28a3d1c78ff346731a2d83f4b70ad231fe84e15d9ea0017e4def0",
+    "tests/godot_attribution.py": "9f34aad109cb1f67506c0c4d1559e2b738f7d769764492209cc8d3ea4408ddf5"
+  },
+  "serverDllSha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de"
+}

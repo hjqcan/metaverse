@@ -1,0 +1,97 @@
+{
+  "suite": "postcards-http-v1",
+  "decisionSource": "explicit-test-double",
+  "actualModelCalls": 0,
+  "recordedAtUtc": "2026-10-26T07:05:59.954407+00:00",
+  "passed": true,
+  "testsRun": 17,
+  "tests": [
+    {
+      "test": "__main__.PostcardAcceptance.test_01_author_public_read_and_restart",
+      "passed": true,
+      "seconds": 0.717584133031778
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_02_location_visit_and_identity_constraints",
+      "passed": true,
+      "seconds": 0.448540433018934
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_03_original_id_and_one_share_per_visit",
+      "passed": true,
+      "seconds": 0.3906449059722945
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_04_concurrent_original_id_commits_once",
+      "passed": true,
+      "seconds": 0.5313524299999699
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_05_before_commit_exit_rolls_back",
+      "passed": true,
+      "seconds": 0.6297789779491723
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_06_after_commit_exit_preserves_original",
+      "passed": true,
+      "seconds": 0.6315535109606571
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_07_unicode_scalars_and_invalid_content",
+      "passed": true,
+      "seconds": 0.39157383900601417
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_08_task_budget_stops_after_visit_before_share",
+      "passed": true,
+      "seconds": 0.3760495949536562
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_09_pause_share_and_complete_resume_noop",
+      "passed": true,
+      "seconds": 0.42056436801794916
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_10_task_after_commit_exit_recovers_same_share",
+      "passed": true,
+      "seconds": 0.738144661008846
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_11_previous_share_cannot_complete_new_task",
+      "passed": true,
+      "seconds": 0.5059113079914823
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_12_unmatched_share_evidence_keeps_pending",
+      "passed": true,
+      "seconds": 0.44768212095368654
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_13_query_failure_is_not_original_rejection",
+      "passed": true,
+      "seconds": 0.47566931397886947
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_14_capability_and_goal_validation_before_model",
+      "passed": true,
+      "seconds": 0.6285726010100916
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_15_missing_draft_fails_without_world_action_and_old_spec_still_runs",
+      "passed": true,
+      "seconds": 0.4281250329804607
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_16_existing_populated_schema3_world_is_unchanged",
+      "passed": true,
+      "seconds": 0.8708345589693636
+    },
+    {
+      "test": "__main__.PostcardAcceptance.test_17_recent_feeds_and_model_context_are_bounded",
+      "passed": true,
+      "seconds": 1.6502423909842037
+    }
+  ],
+  "dataRoot": ".local/iter0005/api/20261026T150549-bf211b",
+  "failures": []
+}

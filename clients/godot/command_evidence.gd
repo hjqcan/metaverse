@@ -2,6 +2,7 @@ extends RefCounted
 ## Frozen pre-submit facts for the opt-in actor-state protocol.
 const MODE = "actor-state-v1"
 const Notes = preload("res://entity_note_evidence.gd")
+const Canvas = preload("res://entity_canvas_evidence.gd")
 
 static func continuous_world(observed: Dictionary) -> bool:
 	return {"r8": "wilderness-continuous-v1", "r9": "wilderness-cooperation-v1", "r10": "wilderness-material-access-v1"}.get(observed.get("rulesVersion"), "") \
@@ -88,6 +89,8 @@ static func point(value: Variant) -> bool:
 		and is_finite(float(value[0])) and is_finite(float(value[1]))
 
 static func capture(observed: Dictionary, action: Dictionary) -> Dictionary:
+	if action.get("type") == "paint_entity_canvas":
+		return Canvas.capture(observed, action)
 	if action.get("type") == "append_entity_note":
 		return Notes.capture(observed, action)
 	var before = {"position": observed.get("self", {}).get("position"),
@@ -126,6 +129,8 @@ static func capture(observed: Dictionary, action: Dictionary) -> Dictionary:
 	return before if valid_before(action, before) else {}
 
 static func valid_before(action: Dictionary, before: Variant) -> bool:
+	if action.get("type") == "paint_entity_canvas":
+		return Canvas.valid_before(action, before)
 	if action.get("type") == "append_entity_note":
 		return Notes.valid_before(action, before)
 	if not before is Dictionary or not point(before.get("position")) or not whole(before.get("inventoryWood")) or before.inventoryWood > 12:
@@ -184,6 +189,8 @@ static func result(data: Dictionary, command: Dictionary, before: Dictionary) ->
 	if not actual is Dictionary or actual.get("action") != action.get("type") or not valid_before(action, before):
 		return false
 	match action.type:
+		"paint_entity_canvas":
+			return Canvas.result(data, command, before)
 		"append_entity_note":
 			return Notes.result(data, command, before)
 		"walk":

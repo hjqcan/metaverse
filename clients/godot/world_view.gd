@@ -2,6 +2,7 @@ extends SubViewportContainer
 ## Continuous landscape. All collision and resource facts come from World.Server.
 signal ground_clicked(point: Vector2, node_id: String)
 signal ground_hovered(point: Vector2)
+const Canvas = preload("res://entity_canvas_evidence.gd")
 
 var viewport: SubViewport
 var scene: Node3D
@@ -391,7 +392,8 @@ func update_world(observation: Dictionary, connection_changed := false) -> void:
 		_landscape(observation)
 		focus = Vector3(observation.self.position[0],0,observation.self.position[1])
 	var source: Dictionary = observation.get("materialAccess", {})
-	var stamp = JSON.stringify([observation.resourceNodes,observation.entities,source.get("active"),source.get("stockWood")])
+	var canvas: Dictionary = observation.entityCanvas if Canvas.supported(observation) else {}
+	var stamp = JSON.stringify([observation.resourceNodes,observation.entities,source.get("active"),source.get("stockWood"),canvas])
 	if stamp != object_stamp:
 		object_stamp = stamp
 		_clear_children(objects)
@@ -410,6 +412,15 @@ func update_world(observation: Dictionary, connection_changed := false) -> void:
 			label.font_size = 30
 			structure_labels[entity.entityId] = {"label":label, "owner":entity.ownerActorId,
 				"title":"木桥" if bridge else "平台"}
+			if not canvas.is_empty() and entity.entityId == canvas.target.entityId:
+				structure_labels[entity.entityId].title = "平台 · 地画"
+				for cell in canvas.cells:
+					var tile := BoxMesh.new()
+					tile.size = Vector3(0.38, 0.018, 0.38)
+					var surface := mesh(objects, tile, p + Vector3((cell.x - 2) * 0.4, 0.074, (cell.y - 2) * 0.4), material(Color(Canvas.HEX[Canvas.COLORS.find(cell.color)])))
+					surface.set_meta("canvas_cell", [cell.x, cell.y])
+					surface.set_meta("canvas_color", cell.color)
+					surface.set_meta("canvas_author", cell.authorActorId if cell.authorActorId != null else "")
 			for i in int(length/0.2):
 				var plank = BoxMesh.new()
 				plank.size = Vector3(0.18,0.12,width)

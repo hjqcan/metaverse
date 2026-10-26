@@ -1,0 +1,65 @@
+{
+  "suite": "continuous-mission-http",
+  "actualModelCalls": 0,
+  "decisionSource": "test-double",
+  "passed": true,
+  "testsRun": 11,
+  "tests": [
+    {
+      "test": "__main__.ContinuousMissionAcceptance.test_01_fractional_target_obstacle_detour_and_return",
+      "passed": true,
+      "seconds": 9.951392744027544
+    },
+    {
+      "test": "__main__.ContinuousMissionAcceptance.test_02_lost_walk_response_recovers_original_position_once",
+      "passed": true,
+      "seconds": 3.736560278048273
+    },
+    {
+      "test": "__main__.ContinuousMissionAcceptance.test_03_wrong_walk_receipt_cannot_confirm_a_teleport",
+      "passed": true,
+      "seconds": 3.5760456090210937
+    },
+    {
+      "test": "__main__.ContinuousMissionAcceptance.test_04_actual_gather_bridge_crossing_and_later_resident_reuse",
+      "passed": true,
+      "seconds": 85.41503106895834
+    },
+    {
+      "test": "__main__.ContinuousMissionAcceptance.test_05_budget_and_gather_permission_prevent_material_actions",
+      "passed": true,
+      "seconds": 0.8869146979996003
+    },
+    {
+      "test": "__main__.ContinuousMissionAcceptance.test_06_pause_preserves_identity_permissions_and_command_budget",
+      "passed": true,
+      "seconds": 3.9983049940201454
+    },
+    {
+      "test": "__main__.ContinuousMissionAcceptance.test_07_query_identity_version_and_collision_evidence",
+      "passed": true,
+      "seconds": 3.899981407041196
+    },
+    {
+      "test": "__main__.ContinuousMissionAcceptance.test_08_fixed_reference_cli_exports_fractional_report",
+      "passed": true,
+      "seconds": 9.916735458013136
+    },
+    {
+      "test": "__main__.ContinuousMissionAcceptance.test_09_actual_collision_receipt_stops_without_claiming_arrival",
+      "passed": true,
+      "seconds": 7.10769574000733
+    },
+    {
+      "test": "__main__.ContinuousMissionAcceptance.test_10_stale_walk_replans_after_authoritative_rejection",
+      "passed": true,
+      "seconds": 3.9741413129959255
+    },
+    {
+      "test": "__main__.ContinuousMissionAcceptance.test_11_planning_time_counts_before_any_material_mutation",
+      "passed": true,
+      "seconds": 0.5012008380144835
+    }
+  ],
+  "failures": []
+}

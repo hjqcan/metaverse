@@ -1,0 +1,13 @@
+{
+  "sourceSha256": {
+    "src/World.Server/wwwroot/resident.js": "70db026e79198f9ff3a0207a6b1f7cb1f3f94eff9c4493e516e316fd78a962f8",
+    "src/World.Server/wwwroot/resident.html": "e1c2a861f9b4cff153b9f7ea011f5e33dc26ab2b24e0d2443d8581e566513247",
+    "src/World.Server/wwwroot/resident.css": "24e69ae4c7bff4d4b8b92c3c02a2a9162dad559a96459005c60b9f72f5af5eef",
+    "src/World.Server/wwwroot/entity-canvas-report.js": "3fd49e9b123500df4d3be3c470da17b9cfbcf91bce9d26b8b490e5bad56baa27",
+    "src/World.Server/wwwroot/entity-note-report.js": "98cf1fd79e0303a34d2c9fb90cf850650363a317a3d4a3ce16fbb907b514a753",
+    "src/World.Server/wwwroot/material-report.js": "fac2aa41b97c336be37ab96a4c9ec3f5078a0701870475e59e7d67c5d9d649d4",
+    "src/World.Server/wwwroot/mosaic.js": "8f6ef59b7d9538ee0cb93d0e04b16c55ebdbf41cd04fab8a6296b889052ee08b",
+    "src/World.Server/wwwroot/consent.js": "396ad8dca4ea121124e7a771e47c3dd5dd966f71bb67f62eab580a38f3b92d91"
+  },
+  "authorEvidence": ".local/iter0025/browser/2026-10-26T07-05-06-898Z/results.json"
+}

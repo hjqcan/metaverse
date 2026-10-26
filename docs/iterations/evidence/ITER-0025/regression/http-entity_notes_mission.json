@@ -1,0 +1,106 @@
+{
+  "suite": "entity-note-mission-http",
+  "validationLevel": "builder-self-check",
+  "actualModelCalls": 0,
+  "passed": true,
+  "testsRun": 13,
+  "tests": [
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_01_actual_cli_first_note_and_original_reference_reply",
+      "passed": true,
+      "seconds": 35.40523349598516
+    },
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_02_before_and_after_commit_process_exit_and_session_rotation",
+      "passed": true,
+      "seconds": 20.735613276949152
+    },
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_03_false_receipt_full_note_event_and_instance_keep_pending",
+      "passed": true,
+      "seconds": 6.493176980991848
+    },
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_04_query_exhaustion_after_commit_and_cumulative_command_seconds",
+      "passed": true,
+      "seconds": 7.3160928600118496
+    },
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_05_damaged_saved_binding_body_permission_and_facts_are_zero_io",
+      "passed": true,
+      "seconds": 5.909384945000056
+    },
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_06_later_self_action_stops_original_note_without_rewriting",
+      "passed": true,
+      "seconds": 6.180251521000173
+    },
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_07_old_service_with_and_without_original_receipt_never_blindly_posts",
+      "passed": null,
+      "seconds": 0.6431289239553735,
+      "skipped": true,
+      "reason": "ENTITY_NOTES_OLD_DLL is required for the actual old-service probe"
+    },
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_08_unknown_queries_and_parse_rejections_do_not_settle_original",
+      "passed": true,
+      "seconds": 5.9059537120047025
+    },
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_09_permissions_reference_and_unused_flags",
+      "passed": true,
+      "seconds": 0.6929510949994437
+    },
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_10_existing_material_task_recovery_regression",
+      "passed": true,
+      "seconds": 17.880295585026033
+    },
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_11_first_failed_observation_is_durable_and_cannot_refill",
+      "passed": true,
+      "seconds": 1.9666584940277971
+    },
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_12_four_queries_project_confirmed_note_atomically",
+      "passed": true,
+      "seconds": 5.944434832024854
+    },
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_13_original_reference_body_cannot_change_between_observations",
+      "passed": true,
+      "seconds": 10.254912112024613
+    }
+  ],
+  "skipped": [
+    {
+      "test": "__main__.EntityNoteMissionAcceptance.test_07_old_service_with_and_without_original_receipt_never_blindly_posts",
+      "reason": "ENTITY_NOTES_OLD_DLL is required for the actual old-service probe"
+    }
+  ],
+  "sourceHashesBefore": {
+    "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+    "scripts/resident_mission.py": "937c751442240d329898ed09954ff42096e143950c3abbd3b437cf7ca410ebad",
+    "scripts/command_preconditions.py": "58e6fc548fa75cf97026f046e3853259dbe98e22d721655fe56837ea577e7b8d",
+    "scripts/run_resident.py": "27a7eec6f57c7ac52717131058024c861d8def4d097ae81bd7f8362a214ef417",
+    "tests/entity_notes_mission_api.py": "b7bfe1ce4fd5df3e77aca9d8c83e82647f8de94d06b596533d5e1014e5c6b4ad",
+    "tests/fixtures/entity-note.json": "89631943906fc1b7ef445399410a94ae6e94a9e13ee89402d6989a2a92f7cf84"
+  },
+  "sourceHashesAfter": {
+    "scripts/resident_entity_notes.py": "a217b2396f4edbc8b012c1188b58cce166503888a3eff607e9827187a08dbc5e",
+    "scripts/resident_mission.py": "937c751442240d329898ed09954ff42096e143950c3abbd3b437cf7ca410ebad",
+    "scripts/command_preconditions.py": "58e6fc548fa75cf97026f046e3853259dbe98e22d721655fe56837ea577e7b8d",
+    "scripts/run_resident.py": "27a7eec6f57c7ac52717131058024c861d8def4d097ae81bd7f8362a214ef417",
+    "tests/entity_notes_mission_api.py": "b7bfe1ce4fd5df3e77aca9d8c83e82647f8de94d06b596533d5e1014e5c6b4ad",
+    "tests/fixtures/entity-note.json": "89631943906fc1b7ef445399410a94ae6e94a9e13ee89402d6989a2a92f7cf84"
+  },
+  "sourceStable": true,
+  "allStartedServicesStopped": true,
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0023/api/20261026T071324Z-bd7c6c/test_05_budget_capacity_and_exhausted_budget_does_not_reset-world",
+  "baselineSha256": "2e778d10ebddc73436bb1716ae3f62f3f3caf6c44e7dcf64b5ac7cb47ec1e631",
+  "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0023/python/20261026T071324Z-9ff88f/bin/World.Server.dll",
+  "dllSha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+  "oldDllSha256": null,
+  "failureDetails": []
+}

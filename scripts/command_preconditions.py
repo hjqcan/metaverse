@@ -60,7 +60,8 @@ def saved_mode(state):
                         'transfer': ('transferBefore', ('position', 'inventoryWood')),
                         'reserve_material': ('materialBefore', ('position', 'inventoryWood', 'reservation')),
                         'harvest_material': ('materialBefore', ('position', 'inventoryWood', 'reservation')),
-                        'append_entity_note': ('entityNoteBefore', ('position', 'inventoryWood', 'target', 'reference'))}
+                        'append_entity_note': ('entityNoteBefore', ('position', 'inventoryWood', 'target', 'reference')),
+                        'paint_entity_canvas': ('entityCanvasBefore', ('position', 'inventoryWood', 'target', 'adoption'))}
             if (intent.get('preconditionMode') != mode or action not in required
                     or not integer(intent.get('expectedStateVersion'))
                     or step.get('commandId') != intent.get('commandId')
@@ -84,6 +85,9 @@ def saved_mode(state):
             elif action in ('reserve_material', 'harvest_material'):
                 from resident_material_access import valid_before
                 valid = binding['rulesVersion'] == 'r10' and valid_before(before, action)
+            elif action == 'paint_entity_canvas':
+                from resident_entity_canvas import valid_before
+                valid = binding['rulesVersion'] == 'r10' and valid_before(before)
             elif action == 'append_entity_note':
                 from resident_entity_notes import valid_before
                 valid = binding['rulesVersion'] == 'r10' and valid_before(before)

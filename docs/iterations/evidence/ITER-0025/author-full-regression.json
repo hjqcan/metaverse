@@ -1,0 +1,410 @@
+{
+  "recordedAtUtc": "2026-10-26T07:05:38.763016+00:00",
+  "suite": "all",
+  "passed": true,
+  "actualModelCalls": 0,
+  "results": [
+    {
+      "name": "restore",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/restore.log",
+      "evidence": null,
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/build.log",
+      "evidence": null,
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-foundation.log",
+      "evidence": ".local/iter0001/api/20261026T150539-b1d4b1/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-passage.log",
+      "evidence": ".local/iter0002/api/20261026T150539-cc5dbe/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-resident_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-resident_mission.log",
+      "evidence": ".local/iter0003/api/20261026T150539-3298da/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-activities.log",
+      "evidence": ".local/iter0004/api/20261026T150549-ba9823/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-postcards.log",
+      "evidence": ".local/iter0005/api/20261026T150549-bf211b/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-mosaic.log",
+      "evidence": ".local/iter0006/api/20261026T150550-81ad70/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-consent.log",
+      "evidence": ".local/iter0007/api/20261026T150557-c37200/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-inbox.log",
+      "evidence": ".local/iter0008/api/20261026T150600-f23ac2/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-entry_guide",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-entry_guide.log",
+      "evidence": ".local/iter0009/api/20261026T150601-aadc09/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-wilderness",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-wilderness.log",
+      "evidence": ".local/iter0010/api/20261026T150607-40ce75/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-wilderness_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-wilderness_mission.log",
+      "evidence": ".local/iter0013/api/20261026T070616Z-7ec757/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-continuous",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-continuous.log",
+      "evidence": ".local/iter0014/api/20261026T070617Z-bda77b/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-continuous_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-continuous_mission.log",
+      "evidence": ".local/iter0015/api/20261026T070621Z-37321e/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-world_instance",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-world_instance.log",
+      "evidence": ".local/world-instance/api/20261026T070624Z-4c4469/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-construction_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-construction_mission.log",
+      "evidence": ".local/iter0017/api/20261026T070631Z-4bf230/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-instance_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-instance_mission.log",
+      "evidence": ".local/instance-mission/api/20261026T070643Z-85333a/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-actor_state",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-actor_state.log",
+      "evidence": ".local/iter0019/api/20261026T070703Z-1f5245/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-actor_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-actor_mission.log",
+      "evidence": ".local/iter0019/python/20261026T070832Z-c1796d/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-material_transfer",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-material_transfer.log",
+      "evidence": ".local/iter0020/api/20261026T070834Z-7c5f2c/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-transfer_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-transfer_mission.log",
+      "evidence": ".local/iter0020/python/20261026T070914Z-23b0b3/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-material_access",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-material_access.log",
+      "evidence": ".local/iter0022/api/20261026T070948Z-80115c/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-material_access_time",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-material_access_time.log",
+      "evidence": ".local/iter0022/time/20261026T071018Z-719d37/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-material_access_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-material_access_mission.log",
+      "evidence": ".local/iter0022/python/20261026T071043Z-b1c84d/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-entity_notes",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-entity_notes.log",
+      "evidence": ".local/iter0023/api/20261026T071126Z-ec031f/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-entity_notes_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-entity_notes_mission.log",
+      "evidence": ".local/iter0023/python/20261026T071324Z-9ff88f/results.json",
+      "removedTemporaryBinaries": [
+        {
+          "path": ".local/iter0023/python/20261026T071324Z-9ff88f/bin/World.Server.runtimeconfig.json",
+          "logicalBytes": 401
+        },
+        {
+          "path": ".local/iter0023/python/20261026T071324Z-9ff88f/bin/SQLitePCLRaw.batteries_v2.dll",
+          "logicalBytes": 5632
+        },
+        {
+          "path": ".local/iter0023/python/20261026T071324Z-9ff88f/bin/World.Server.dll",
+          "logicalBytes": 648192
+        },
+        {
+          "path": ".local/iter0023/python/20261026T071324Z-9ff88f/bin/World.Server.deps.json",
+          "logicalBytes": 9316
+        },
+        {
+          "path": ".local/iter0023/python/20261026T071324Z-9ff88f/bin/World.Server.pdb",
+          "logicalBytes": 74012
+        },
+        {
+          "path": ".local/iter0023/python/20261026T071324Z-9ff88f/bin/Microsoft.Data.Sqlite.dll",
+          "logicalBytes": 177464
+        },
+        {
+          "path": ".local/iter0023/python/20261026T071324Z-9ff88f/bin/World.Server.staticwebassets.endpoints.json",
+          "logicalBytes": 96610
+        },
+        {
+          "path": ".local/iter0023/python/20261026T071324Z-9ff88f/bin/SQLitePCLRaw.provider.e_sqlite3.dll",
+          "logicalBytes": 36864
+        },
+        {
+          "path": ".local/iter0023/python/20261026T071324Z-9ff88f/bin/SQLitePCLRaw.core.dll",
+          "logicalBytes": 51712
+        },
+        {
+          "path": ".local/iter0023/python/20261026T071324Z-9ff88f/bin/World.Server",
+          "logicalBytes": 78256
+        },
+        {
+          "path": ".local/iter0023/python/20261026T071324Z-9ff88f/bin/runtimes",
+          "logicalBytes": 53571344
+        }
+      ]
+    },
+    {
+      "name": "http-continuous_material",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-continuous_material.log",
+      "evidence": ".local/iter0024/api/20261026T071402Z-f9bb43/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-continuous_material_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-continuous_material_mission.log",
+      "evidence": ".local/iter0024/python/20261026T071414Z-829da3/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-entity_canvas",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-entity_canvas.log",
+      "evidence": ".local/iter0025/api/20261026T071653Z-f98e7f/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "http-entity_canvas_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/http-entity_canvas_mission.log",
+      "evidence": ".local/iter0025/python/20261026T071717Z-0719fd/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-foundation.log",
+      "evidence": ".local/iter0001/browser/2026-10-26T07-17-59-184Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-passage.log",
+      "evidence": ".local/iter0002/browser/2026-10-26T07-18-08-439Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-resident.log",
+      "evidence": ".local/iter0003/browser/2026-10-26T07-18-17-446Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-activities.log",
+      "evidence": ".local/iter0004/browser/2026-10-26T07-18-19-494Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-postcards.log",
+      "evidence": ".local/iter0005/browser/2026-10-26T07-18-25-991Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-mosaic.log",
+      "evidence": ".local/iter0006/browser/2026-10-26T07-18-35-275Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-consent.log",
+      "evidence": ".local/iter0007/browser/2026-10-26T07-18-46-568Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-inbox.log",
+      "evidence": ".local/iter0008/browser/2026-10-26T07-19-01-573Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-consent-experience",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-consent-experience.log",
+      "evidence": ".local/consent-experience/browser/2026-10-26T07-19-14-067Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-entry",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-entry.log",
+      "evidence": ".local/iter0009/browser/2026-10-26T07-19-23-722Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-wilderness",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-wilderness.log",
+      "evidence": ".local/iter0010/browser/2026-10-26T07-19-38-579Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-wilderness-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-wilderness-resident.log",
+      "evidence": ".local/iter0013/browser/2026-10-26T07-19-44-543Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-continuous-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-continuous-resident.log",
+      "evidence": ".local/iter0015/browser/2026-10-26T07-19-46-404Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-construction-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-construction-resident.log",
+      "evidence": ".local/iter0017/browser/2026-10-26T07-19-57-513Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-actor-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-actor-resident.log",
+      "evidence": ".local/iter0019/browser/2026-10-26T07-20-09-543Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-transfer-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-transfer-resident.log",
+      "evidence": ".local/iter0020/browser/2026-10-26T07-20-24-254Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-material-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-material-resident.log",
+      "evidence": ".local/iter0022/browser/2026-10-26T07-20-59-472Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-entity-note-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-entity-note-resident.log",
+      "evidence": ".local/iter0023/browser/2026-10-26T07-21-08-939Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-continuous-material-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-continuous-material-resident.log",
+      "evidence": ".local/iter0024/browser/2026-10-26T07-21-26-421Z/results.json",
+      "removedTemporaryBinaries": []
+    },
+    {
+      "name": "browser-entity-canvas-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T070538Z-a6edfa/browser-entity-canvas-resident.log",
+      "evidence": ".local/iter0025/browser/2026-10-26T07-21-57-568Z/results.json",
+      "removedTemporaryBinaries": []
+    }
+  ]
+}

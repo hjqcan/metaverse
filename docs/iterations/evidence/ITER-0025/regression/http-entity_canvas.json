@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "testsRun": 9,
+  "tests": [
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_01_same_original_platform_two_residents_paint_and_return",
+      "passed": true,
+      "seconds": 36.152073253993876
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence",
+      "passed": true,
+      "seconds": 1.6415814580395818
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_03_author_permissions_blank_and_whole_batch_rejection",
+      "passed": true,
+      "seconds": 22.10885897098342
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_04_same_revision_concurrency_has_one_atomic_winner",
+      "passed": true,
+      "seconds": 6.539786125998944
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_05_before_and_after_commit_replay_original_id_once",
+      "passed": true,
+      "seconds": 5.3662332789972425
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_06_exact_history_survives_later_repaint_and_recent_window",
+      "passed": true,
+      "seconds": 4.828493540990166
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_07_strict_patch_parser_and_damaged_storage_reject",
+      "passed": true,
+      "seconds": 6.114475062000565
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_08_old_binary_refuses_new_storage_old_requests_remain_exact",
+      "passed": true,
+      "seconds": 2.1977308749919757
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts",
+      "passed": true,
+      "seconds": 30.103567013982683
+    }
+  ],
+  "failures": [],
+  "skipped": [],
+  "actualModelCalls": 0,
+  "sourceDll": "/home/wangjunfeng/文档/Workspace/metaverse/src/World.Server/bin/Debug/net10.0/World.Server.dll",
+  "dllSha256": "5f9426ac1df94cab856262688d02ab6265096bfb74f18747fd39e443b2f3e1de",
+  "dllStable": true,
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/api/20261026T071653Z-f98e7f/seed/continued",
+  "target": "e42490b38d4a24604a9f2e90fc3ad4a28"
+}

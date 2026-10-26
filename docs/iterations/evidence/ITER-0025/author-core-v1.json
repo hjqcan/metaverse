@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "testsRun": 8,
+  "tests": [
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_01_same_original_platform_two_residents_paint_and_return",
+      "passed": true,
+      "seconds": 42.18101649003802
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence",
+      "passed": true,
+      "seconds": 1.5647426159703173
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_03_author_permissions_blank_and_whole_batch_rejection",
+      "passed": true,
+      "seconds": 22.934879395004828
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_04_same_revision_concurrency_has_one_atomic_winner",
+      "passed": true,
+      "seconds": 5.935133907012641
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_05_before_and_after_commit_replay_original_id_once",
+      "passed": true,
+      "seconds": 4.961160250008106
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_06_exact_history_survives_later_repaint_and_recent_window",
+      "passed": true,
+      "seconds": 4.954982519033365
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_07_strict_patch_parser_and_damaged_storage_reject",
+      "passed": true,
+      "seconds": 6.045683126023505
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_08_old_binary_refuses_new_storage_old_requests_remain_exact",
+      "passed": true,
+      "seconds": 2.099233857996296
+    }
+  ],
+  "failures": [],
+  "skipped": [],
+  "actualModelCalls": 0,
+  "sourceDll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/core-v1/bin/World.Server.dll",
+  "dllSha256": "98b42fb7156fd5ac4d44c52f9c1896255ace3b5786e4c1a025b2edee68117c9b",
+  "dllStable": true,
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/original-baseline",
+  "target": "e926486325c2c4e3e924610139ee26711"
+}

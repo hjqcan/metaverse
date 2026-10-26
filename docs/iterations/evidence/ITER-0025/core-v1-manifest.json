@@ -1,0 +1,27 @@
+{
+  "baseCommit": "41aa448",
+  "component": "entity-canvas-core-v1",
+  "files": {
+    "src/World.Server/ContinuousMaterials.cs": "87e1eaa68992de6d1ac05c0205af2b701a70f9b9128ff88b33a3d623105e2918",
+    "src/World.Server/ContinuousWorld.cs": "92ea7de1b3726a181d655ce7fbb265e3a917abb50cf1b6e58e1b284c9b183593",
+    "src/World.Server/EntityCanvas.cs": "d327c88fcb3daeb0b959bbf30a5deffa0714659d6fee415e3209ef8389d6dd87",
+    "src/World.Server/EntityNotes.cs": "fc61a3eb54a1730fdf374bcafcdab251d89cfea00dac3cdea00fa08e17a8379d",
+    "src/World.Server/EntryGuide.cs": "097a08ad3f90f72e25743708e4f9a32e1cf2baec401c275bf7001a92655f3e8d",
+    "src/World.Server/MaterialAccess.cs": "84f1f37823c06ffee01e1bf154effaf531ce0256cccf1868b725664c89f682f8",
+    "src/World.Server/MaterialServiceClock.cs": "edec7589b0ff66179aa8a321212388928033b45ae350331c4dbd61b1db9336e2",
+    "src/World.Server/MaterialTransfer.cs": "413db75abfec5f98f7fc35344c7820ffd45b5f10c05f889918e0155e194befe1",
+    "src/World.Server/Program.cs": "f812d20e349d314f29ddec87bb8d4140ac77a2d5cd7f729d27a372a12cfba645",
+    "src/World.Server/Protocol.cs": "2e83f45b9acc362c06a3f4ceec732b38c76a924453595e3f25dd5251ba8b93b8",
+    "src/World.Server/ServerConfiguration.cs": "8b33f7b3aae70229397362d0571769198303507712accd624ecedb1320eea8d1",
+    "src/World.Server/WorldDatabase.cs": "e8695a2942720ce0dec332e8d4dbd7f5a35c07a916b73c6ca8555a9f516a485e",
+    "src/World.Server/WorldInstance.cs": "f865654d13b63ac9659fa119353b5e32b303484eab49215bb7796a49a5b3fd1b",
+    "src/World.Server/WorldScenario.cs": "ea63aa8b79740cc1a603447dcbc8ae808f3632460db87bc9df6145f2003ff816",
+    "src/World.Server/WorldService.cs": "5edff262e7c6847fbb4d6fd5fd5a8eaaa5e9311ecf7b52a4b74eeac14ed80009",
+    "src/World.Server/World.Server.csproj": "4353103ef1279d936ac936becd189f6396d5df1acc48311cc9aa3be9e50124f8",
+    "docs/contracts/entity-canvas-v1.md": "9c1b35a80aabefbde3e9dae0381275b4ca1335a43ce67a35097e1f2dae6b6083"
+  },
+  "dll": {
+    "path": ".local/iter0025/core-v1/bin/World.Server.dll",
+    "sha256": "98b42fb7156fd5ac4d44c52f9c1896255ace3b5786e4c1a025b2edee68117c9b"
+  }
+}

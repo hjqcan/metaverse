@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "validationLevel": "independent frozen Web-v1 with independently generated actual core-v2 Python reports",
+  "actualModelCalls": 0,
+  "files": {
+    "src/World.Server/wwwroot/resident.js": "70db026e79198f9ff3a0207a6b1f7cb1f3f94eff9c4493e516e316fd78a962f8",
+    "src/World.Server/wwwroot/resident.html": "e1c2a861f9b4cff153b9f7ea011f5e33dc26ab2b24e0d2443d8581e566513247",
+    "src/World.Server/wwwroot/resident.css": "24e69ae4c7bff4d4b8b92c3c02a2a9162dad559a96459005c60b9f72f5af5eef",
+    "src/World.Server/wwwroot/entity-canvas-report.js": "3fd49e9b123500df4d3be3c470da17b9cfbcf91bce9d26b8b490e5bad56baa27",
+    "src/World.Server/wwwroot/entity-note-report.js": "98cf1fd79e0303a34d2c9fb90cf850650363a317a3d4a3ce16fbb907b514a753",
+    "src/World.Server/wwwroot/material-report.js": "fac2aa41b97c336be37ab96a4c9ec3f5078a0701870475e59e7d67c5d9d649d4",
+    "src/World.Server/wwwroot/mosaic.js": "8f6ef59b7d9538ee0cb93d0e04b16c55ebdbf41cd04fab8a6296b889052ee08b",
+    "src/World.Server/wwwroot/consent.js": "396ad8dca4ea121124e7a771e47c3dd5dd966f71bb67f62eab580a38f3b92d91"
+  },
+  "originalCompleteManifest": {
+    "sourceSha256": {
+      "src/World.Server/wwwroot/resident.js": "70db026e79198f9ff3a0207a6b1f7cb1f3f94eff9c4493e516e316fd78a962f8",
+      "src/World.Server/wwwroot/resident.html": "e1c2a861f9b4cff153b9f7ea011f5e33dc26ab2b24e0d2443d8581e566513247",
+      "src/World.Server/wwwroot/resident.css": "24e69ae4c7bff4d4b8b92c3c02a2a9162dad559a96459005c60b9f72f5af5eef",
+      "src/World.Server/wwwroot/entity-canvas-report.js": "3fd49e9b123500df4d3be3c470da17b9cfbcf91bce9d26b8b490e5bad56baa27",
+      "src/World.Server/wwwroot/entity-note-report.js": "98cf1fd79e0303a34d2c9fb90cf850650363a317a3d4a3ce16fbb907b514a753",
+      "src/World.Server/wwwroot/material-report.js": "fac2aa41b97c336be37ab96a4c9ec3f5078a0701870475e59e7d67c5d9d649d4",
+      "src/World.Server/wwwroot/mosaic.js": "8f6ef59b7d9538ee0cb93d0e04b16c55ebdbf41cd04fab8a6296b889052ee08b",
+      "src/World.Server/wwwroot/consent.js": "396ad8dca4ea121124e7a771e47c3dd5dd966f71bb67f62eab580a38f3b92d91"
+    },
+    "authorEvidence": ".local/iter0025/browser/2026-10-26T07-05-06-898Z/results.json"
+  },
+  "authorTestDriverUsed": false,
+  "legacySha256": "191ffa5aac83d734be48827cfb239c13c548f33e70b44d4fd90d51464b3ce71f",
+  "inputs": {
+    "completed": {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-python-20261026T070027433307Z/actual-cli/run-report.json",
+      "sha256": "e26f4cd80e0594f85f280b98e05d80c2c9de20a991d16b0756610765a17ef1a4"
+    },
+    "unknown": {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-python-20261026T070027433307Z/client-own-later/run-report.json",
+      "sha256": "954fa3ee1a0e98e775eceed6c236ccf5c47dfc07d0d96810ab819d361830d5e8"
+    },
+    "ownLater": {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-python-20261026T070027433307Z/client-own-later/restart-report.json",
+      "sha256": "c304a1870f395a5b5cfc73d6d3309a3a260d2d15fad8afe517fe7f5bb5a00579"
+    },
+    "history": {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-python-20261026T070027433307Z/client-old-history/restart-report.json",
+      "sha256": "b3dd05f4527a484b753dcb791a8e339fc9eb7b2066b28ac8b03e9d8405737c2a"
+    },
+    "query3": {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-python-20261026T070429369037Z/budget-3/run-report.json",
+      "sha256": "ae8c6d0cc546c32c15c6ea8106723af22b2841beb2129393e81bc0aa3ae1715f"
+    },
+    "query4": {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/canvas-python-20261026T070429369037Z/budget-4/run-report.json",
+      "sha256": "5b8713b511edd1dfeaab58516da462ad49af4476a545f2abd9d4f3f717250b40"
+    }
+  },
+  "checks": [
+    {
+      "name": "legacy report loads without a canvas panel",
+      "passed": true
+    },
+    {
+      "name": "independent actual completed CLI renders its immutable edit and all current cells",
+      "passed": true
+    },
+    {
+      "name": "actual response loss displays unknown despite already painted current cells",
+      "passed": true
+    },
+    {
+      "name": "actual later own edit keeps original fact but stops return",
+      "passed": true
+    },
+    {
+      "name": "actual original edit outside recent fifty remains confirmed beside another author",
+      "passed": true
+    },
+    {
+      "name": "actual query three incomplete proof and query four confirmed edit remain distinct",
+      "passed": true
+    },
+    {
+      "name": "synthetic mismatched summary, missing permission and understated budgets cannot claim completion",
+      "passed": true
+    },
+    {
+      "name": "synthetic absent current snapshot preserves original proven edit and completion",
+      "passed": true
+    },
+    {
+      "name": "synthetic reordered original request compares against canonical immutable patch",
+      "passed": true
+    },
+    {
+      "name": "eleven malformed report variants reject and retain previous complete report",
+      "passed": true
+    },
+    {
+      "name": "390px mobile retains author grid and budget distinction without horizontal scroll",
+      "passed": true
+    },
+    {
+      "name": "read only report makes no world API calls and raises no browser exceptions",
+      "passed": true
+    }
+  ],
+  "browserVersion": "152.0.7977.82",
+  "malformedVariants": 11,
+  "errors": [],
+  "worldRequests": [],
+  "staticServerStopped": true,
+  "staticServerExit": {
+    "code": null,
+    "signal": "SIGTERM"
+  },
+  "checkCount": 12,
+  "frozenCopiesUnchanged": true
+}

@@ -11,6 +11,7 @@
   <script src="consent.js" defer></script>
   <script src="material-report.js" defer></script>
   <script src="entity-note-report.js" defer></script>
+  <script src="entity-canvas-report.js" defer></script>
   <script src="resident.js" defer></script>
 </head>
 <body>
@@ -78,6 +79,14 @@
               <p id="entity-note-fact" class="activity-fact"></p>
               <blockquote id="entity-note-text"></blockquote>
               <small>这里只核对导入报告内部记录，未向世界服务重新认证。固定任务正文不代表模型自主创作或真人体验。</small>
+            </section>
+            <section id="entity-canvas-panel" hidden>
+              <h3>原平台上的共同地画</h3>
+              <p id="entity-canvas-fact" class="activity-fact"></p>
+              <p id="entity-canvas-original"></p>
+              <p id="entity-canvas-current"></p>
+              <div id="entity-canvas-grid" class="entity-canvas-grid" role="group" aria-label="报告中的当前地画，25格及其最后作者"></div>
+              <small>当前图可在本次绘制后继续变化，原修改仍保留。这里核对导入记录自身的一致性，未向世界重新认证；固定草图不代表模型自主创作。</small>
             </section>
             <p id="recent-transfers" class="activity-fact" hidden></p>
             <div id="postcard-fact-panel" class="postcard-fact-panel" hidden><p id="postcard-fact" class="activity-fact"></p><blockquote id="postcard-shared-text"></blockquote></div>
