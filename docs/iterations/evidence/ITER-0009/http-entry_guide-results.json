@@ -1,0 +1,57 @@
+{
+  "suite": "entry-guide-http-v1",
+  "recordedAtUtc": "2026-10-26T01:13:39.235656+00:00",
+  "passed": true,
+  "testsRun": 9,
+  "tests": [
+    {
+      "test": "__main__.EntryAcceptance.test_01_unbuilt_recipe_does_not_claim_existing_access",
+      "passed": true,
+      "seconds": 0.2624021549709141
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_02_one_bridge_is_not_a_complete_route",
+      "passed": true,
+      "seconds": 0.36519612499978393
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_03_later_resident_reuses_actual_bridges_without_material_or_rebuilding",
+      "passed": true,
+      "seconds": 0.4770616930327378
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_04_here_zero_steps_and_identity_specific_routes",
+      "passed": true,
+      "seconds": 0.3044874289771542
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_05_empty_shared_stock_is_reported_but_free_participation_remains",
+      "passed": true,
+      "seconds": 0.383136029005982
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_06_reading_and_restart_leave_complete_logical_database_unchanged",
+      "passed": true,
+      "seconds": 0.6006084629916586
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_07_old_scenarios_and_populated_database_keep_rules_and_materials",
+      "passed": true,
+      "seconds": 1.776801844011061
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_08_public_model_input_uses_whitelist_and_legacy_service_remains_usable",
+      "passed": true,
+      "seconds": 0.3973976530251093
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_09_new_task_receives_same_guide_before_actions",
+      "passed": true,
+      "seconds": 0.40341001498745754
+    }
+  ],
+  "actualModelCalls": 0,
+  "decisionSource": "explicit-program-and-test-double",
+  "dataRoot": ".local/iter0009/api/20261026T091334-b5793e",
+  "failures": []
+}

@@ -1,0 +1,128 @@
+{
+  "recordedAtUtc": "2026-10-26T01:13:13.674468+00:00",
+  "suite": "all",
+  "passed": true,
+  "actualModelCalls": 0,
+  "results": [
+    {
+      "name": "restore",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/restore.log",
+      "evidence": null
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/build.log",
+      "evidence": null
+    },
+    {
+      "name": "http-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/http-foundation.log",
+      "evidence": ".local/iter0001/api/20261026T091314-9a7333/results.json"
+    },
+    {
+      "name": "http-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/http-passage.log",
+      "evidence": ".local/iter0002/api/20261026T091314-33e714/results.json"
+    },
+    {
+      "name": "http-resident_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/http-resident_mission.log",
+      "evidence": ".local/iter0003/api/20261026T091314-1244b1/results.json"
+    },
+    {
+      "name": "http-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/http-activities.log",
+      "evidence": ".local/iter0004/api/20261026T091323-7b42d8/results.json"
+    },
+    {
+      "name": "http-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/http-postcards.log",
+      "evidence": ".local/iter0005/api/20261026T091323-5e1048/results.json"
+    },
+    {
+      "name": "http-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/http-mosaic.log",
+      "evidence": ".local/iter0006/api/20261026T091323-6c6090/results.json"
+    },
+    {
+      "name": "http-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/http-consent.log",
+      "evidence": ".local/iter0007/api/20261026T091330-25271f/results.json"
+    },
+    {
+      "name": "http-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/http-inbox.log",
+      "evidence": ".local/iter0008/api/20261026T091332-add136/results.json"
+    },
+    {
+      "name": "http-entry_guide",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/http-entry_guide.log",
+      "evidence": ".local/iter0009/api/20261026T091334-b5793e/results.json"
+    },
+    {
+      "name": "browser-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/browser-foundation.log",
+      "evidence": ".local/iter0001/browser/2026-10-26T01-13-39-414Z/results.json"
+    },
+    {
+      "name": "browser-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/browser-passage.log",
+      "evidence": ".local/iter0002/browser/2026-10-26T01-13-48-049Z/results.json"
+    },
+    {
+      "name": "browser-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/browser-resident.log",
+      "evidence": ".local/iter0003/browser/2026-10-26T01-13-49-075Z/results.json"
+    },
+    {
+      "name": "browser-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/browser-activities.log",
+      "evidence": ".local/iter0004/browser/2026-10-26T01-13-50-631Z/results.json"
+    },
+    {
+      "name": "browser-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/browser-postcards.log",
+      "evidence": ".local/iter0005/browser/2026-10-26T01-13-52-928Z/results.json"
+    },
+    {
+      "name": "browser-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/browser-mosaic.log",
+      "evidence": ".local/iter0006/browser/2026-10-26T01-13-56-190Z/results.json"
+    },
+    {
+      "name": "browser-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/browser-consent.log",
+      "evidence": ".local/iter0007/browser/2026-10-26T01-13-56-585Z/results.json"
+    },
+    {
+      "name": "browser-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/browser-inbox.log",
+      "evidence": ".local/iter0008/browser/2026-10-26T01-14-02-142Z/results.json"
+    },
+    {
+      "name": "browser-entry",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T011313Z-eec4fc/browser-entry.log",
+      "evidence": ".local/iter0009/browser/2026-10-26T01-14-07-481Z/results.json"
+    }
+  ]
+}

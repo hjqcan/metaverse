@@ -1,0 +1,62 @@
+{
+  "suite": "entry-guide-http-v1",
+  "recordedAtUtc": "2026-10-26T01:09:40.624892+00:00",
+  "passed": false,
+  "testsRun": 9,
+  "tests": [
+    {
+      "test": "__main__.EntryAcceptance.test_01_unbuilt_recipe_does_not_claim_existing_access",
+      "passed": true,
+      "seconds": 0.25148164201527834
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_02_one_bridge_is_not_a_complete_route",
+      "passed": true,
+      "seconds": 0.31324575701728463
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_03_later_resident_reuses_actual_bridges_without_material_or_rebuilding",
+      "passed": true,
+      "seconds": 0.4133603379596025
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_04_here_zero_steps_and_identity_specific_routes",
+      "passed": true,
+      "seconds": 0.2902616110513918
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_05_empty_shared_stock_is_reported_but_free_participation_remains",
+      "passed": true,
+      "seconds": 0.31044632400153205
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_06_reading_and_restart_leave_complete_logical_database_unchanged",
+      "passed": true,
+      "seconds": 0.5848503849701956
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_07_old_scenarios_and_populated_database_keep_rules_and_materials",
+      "passed": true,
+      "seconds": 1.6408287429949269
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_08_public_model_input_uses_whitelist_and_legacy_service_remains_usable",
+      "passed": true,
+      "seconds": 0.377713002031669
+    },
+    {
+      "test": "__main__.EntryAcceptance.test_09_new_task_receives_same_guide_before_actions",
+      "passed": false,
+      "seconds": 0.31164581299526617
+    }
+  ],
+  "actualModelCalls": 0,
+  "decisionSource": "explicit-program-and-test-double",
+  "dataRoot": ".local/iter0009/api/20261026T090936-4139bd",
+  "failures": [
+    {
+      "test": "test_09_new_task_receives_same_guide_before_actions (__main__.EntryAcceptance.test_09_new_task_receives_same_guide_before_actions)",
+      "detail": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/entry_guide_api.py\", line 115, in test_09_new_task_receives_same_guide_before_actions\n    self.assertEqual(1,len(calls));self.assertEqual('completed',r['mission']['status']);self.assertEqual(0,r['budget']['wood']['used'])\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'completed' != 'decision_failed'\n- completed\n+ decision_failed\n\n"
+    }
+  ]
+}

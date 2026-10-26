@@ -1,0 +1,64 @@
+{
+  "recordedAtUtc": "2026-10-26T01:14:32.381301+00:00",
+  "previews": [
+    {
+      "port": 5080,
+      "status": "ok",
+      "worldId": "foundation-01",
+      "sqliteVersion": "3.53.4"
+    },
+    {
+      "port": 5081,
+      "status": "ok",
+      "worldId": "foundation-01",
+      "sqliteVersion": "3.53.4"
+    },
+    {
+      "port": 5082,
+      "status": "ok",
+      "worldId": "foundation-01",
+      "sqliteVersion": "3.53.4"
+    },
+    {
+      "port": 5083,
+      "status": "ok",
+      "worldId": "foundation-01",
+      "sqliteVersion": "3.53.4"
+    },
+    {
+      "port": 5084,
+      "status": "ok",
+      "worldId": "foundation-01",
+      "sqliteVersion": "3.53.4"
+    },
+    {
+      "port": 5085,
+      "status": "ok",
+      "worldId": "foundation-01",
+      "sqliteVersion": "3.53.4"
+    },
+    {
+      "port": 5086,
+      "status": "ok",
+      "worldId": "foundation-01",
+      "sqliteVersion": "3.53.4"
+    },
+    {
+      "port": 5087,
+      "status": "ok",
+      "worldId": "foundation-01",
+      "sqliteVersion": "3.53.4"
+    }
+  ],
+  "entryPreview": {
+    "actorId": "a1",
+    "stateVersion": 0,
+    "bridgeCount": 0,
+    "publicWood": 12,
+    "reachablePlaces": [
+      "garden",
+      "riverwalk"
+    ],
+    "readOnlyVerification": true
+  }
+}

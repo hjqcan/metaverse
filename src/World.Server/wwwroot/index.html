@@ -10,6 +10,7 @@
   <script src="mosaic.js" defer></script>
   <script src="consent.js" defer></script>
   <script src="mosaic-inbox.js" defer></script>
+  <script src="entry-guide.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -33,6 +34,15 @@
       </section>
 
       <div class="workspace">
+        <section id="entry-panel" class="entry-card card" aria-labelledby="entry-title" hidden>
+          <div class="card-heading"><div><p class="eyebrow">THE WORLD YOU ARRIVE IN</p><h2 id="entry-title">接着这里的故事，开始你的生活。</h2></div></div>
+          <p id="entry-state" class="subtle"></p>
+          <p id="entry-bridges"></p>
+          <div id="entry-places" class="entry-places"></div>
+          <p id="entry-materials" class="entry-materials"></p>
+          <p id="entry-participation"></p>
+          <p class="subtle">选择地点只标记位置；用方向按钮走过去，到访和创作由你决定。</p>
+        </section>
         <section id="mosaic-panel" class="mosaic-card card" aria-labelledby="mosaic-title" hidden>
           <div class="card-heading"><div><p class="eyebrow">A GARDEN WE DRAW TOGETHER</p><h2 id="mosaic-title">把花园，画成我们的样子。</h2></div><span id="mosaic-version" class="snapshot-status"></span></div>
           <p class="mosaic-intro">一条河、一株花，或者你自己的形状。每次到访后，最多改 8 格，让下一位来客接着画。</p>

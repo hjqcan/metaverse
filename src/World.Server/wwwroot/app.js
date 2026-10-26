@@ -11,6 +11,13 @@
   const mosaic = window.MosaicUI;
   const consent = window.ConsentUI;
   const inboxApi = window.MosaicInbox;
+  const renderEntry = window.EntryGuideUI.create($("entry-panel"), (id) => {
+    if (!observationHealthy) return;
+    const place = observation?.entryGuide?.places.find(p => p.id === id);
+    if (!place) return;
+    if (place.activityId) ui["activity-select"].value = place.activityId;
+    selectCell(place.position);
+  });
   const ui = Object.fromEntries([
     "token-input", "connect-button", "disconnect-button", "connection-status", "world-canvas",
     "actor-position", "inventory-wood", "depot-wood", "depot-position", "state-version",
@@ -602,6 +609,7 @@
   }
 
   function render() {
+    renderEntry(observation, observationHealthy && connection === "connected");
     const labels = { disconnected: "未连接", connecting: "正在连接", connected: "已连接", offline: "连接中断", unauthorized: "会话已失效" };
     ui["connection-status"].textContent = labels[connection];
     ui["connection-status"].dataset.status = connection;
@@ -1204,7 +1212,7 @@
   for (const [name, [dx, dy]] of Object.entries(directions)) ui[`move-${name}`].addEventListener("click", () => submitAction({ type: "move", dx, dy }));
   document.addEventListener("keydown", (event) => {
     if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.repeat || event.isComposing) return;
-    if (event.target instanceof Element && event.target.closest("input, textarea, select, #mosaic-panel, #consent-panel, [contenteditable]:not([contenteditable='false'])")) return;
+    if (event.target instanceof Element && event.target.closest("input, textarea, select, #entry-panel, #mosaic-panel, #consent-panel, [contenteditable]:not([contenteditable='false'])")) return;
     const name = { ArrowUp: "up", ArrowDown: "down", ArrowLeft: "left", ArrowRight: "right" }[event.key];
     if (!name || !canAct()) return;
     event.preventDefault();

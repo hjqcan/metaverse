@@ -1,0 +1,78 @@
+{
+  "suite": "mosaic-inbox-real-chrome-v1",
+  "recordedAtUtc": "2026-10-26T01:14:14.209Z",
+  "browser": "152.0.7977.82",
+  "passed": true,
+  "tests": [
+    {
+      "name": "default_inbox_finds_oldest_pending_beyond_recent_50_without_world_commands",
+      "passed": true,
+      "milliseconds": 235
+    },
+    {
+      "name": "scope_status_cursor_pages_remain_stable_when_new_record_arrives",
+      "passed": true,
+      "milliseconds": 1840
+    },
+    {
+      "name": "reason_dom_focus_and_selection_survive_poll_and_new_proposal",
+      "passed": true,
+      "milliseconds": 1201
+    },
+    {
+      "name": "onsite_visit_shortcut_and_failed_reads_preserve_list_and_disable_review",
+      "passed": true,
+      "milliseconds": 665
+    },
+    {
+      "name": "late_filter_response_cannot_replace_current_pending_page",
+      "passed": true,
+      "milliseconds": 517
+    },
+    {
+      "name": "identity_switch_ignores_late_response_and_isolates_draft_and_filters",
+      "passed": true,
+      "milliseconds": 648
+    },
+    {
+      "name": "original_older_proposal_accepts_once_and_history_exposes_confirmed_result",
+      "passed": true,
+      "milliseconds": 427
+    },
+    {
+      "name": "legacy_r6_service_uses_recent50_and_explicitly_marks_incomplete_scope",
+      "passed": true,
+      "milliseconds": 2013
+    },
+    {
+      "name": "lost_reject_response_and_reload_recover_original_command_without_resubmit",
+      "passed": true,
+      "milliseconds": 235
+    },
+    {
+      "name": "restart_preserves_inbox_counts_and_original_details",
+      "passed": true,
+      "milliseconds": 478
+    },
+    {
+      "name": "mobile_inbox_and_history_controls_fit_390px",
+      "passed": true,
+      "milliseconds": 301
+    },
+    {
+      "name": "actual_report_verifies_original_older_proposal_without_recent_list_membership",
+      "passed": true,
+      "milliseconds": 292
+    },
+    {
+      "name": "mobile_actual_inbox_review_report_fits_390px",
+      "passed": true,
+      "milliseconds": 219
+    }
+  ],
+  "javascriptErrors": [],
+  "reportWorldRequests": [],
+  "actualModelCallsDuringUiTest": 0,
+  "fixtureSource": "explicit-program-normal-HTTP",
+  "dataRoot": ".local/iter0008/browser/2026-10-26T01-14-02-142Z"
+}

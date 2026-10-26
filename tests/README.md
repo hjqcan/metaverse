@@ -1,5 +1,15 @@
 # 最小世界验收
 
+完整普通回归（构建一次，并行执行隔离的 HTTP／Chrome 套件，**不会调用真实模型**）：
+
+```bash
+npm ci --prefix tests/browser --ignore-scripts
+npm test
+# 只跑一类：npm run test:http 或 npm run test:browser
+```
+
+需要 .NET 10 SDK、Python 3、Node.js 和本机 Chrome。统一结果与各套件日志保存在 `.local/checks/`；每个套件继续保留自身原始证据和独立服务目录。依赖安装不会自动下载浏览器，`CHROME_PATH` 可指定现有 Chrome。下列单套命令仍可独立运行。
+
 先构建服务：
 
 ```bash
@@ -159,3 +169,14 @@ python3 tests/inbox_live.py --account-one newton-ming --account-two hjqcan
 ```
 
 沿用 `examples/consent/` 的有界目的，在隔离世界先以正常 HTTP 种入三格河流，再让 a2 一次真实调用发表提议并返回。程序插入并拒绝 51 条新提议（含往返 222 条命令），使原待办退出最近 50 条且不改图。a1 由完整收件箱找到原引用，详情实际进入一次模型输入，独立接受或拒绝并返回。明确区分程序历史、模型决定与世界事实，无补抽；结束后停服，证据在 `.local/iter0008/live/`。新本机预览 `bash scripts/run_inbox.sh` 使用 5086 / `.local/inbox/`，与已结束真实会话分开。
+
+## ITER-0009 当代入驻导览
+
+```bash
+python3 tests/entry_guide_api.py
+node tests/browser/entry.mjs
+```
+
+9 项 HTTP 使用实际服务与 SQLite，覆盖无桥／半通路／两段桥、后来者首次观察后实际复用通路与到访返回、本人位置和零步路线、公共木材耗尽后仍可零材料到访写手记、导览读取及重启不改逻辑库、r1—r5 与旧 populated r2、公开模型输入白名单及旧任务兼容。10 项 Chrome 覆盖同一通路在人类界面的真实操作、只选地点不行动、材料限制、断线暂停、身份切换、异常导览、旧服务回退、重启与 390px。固定程序和决策测试替身均明确标记，真实模型调用为 0。
+
+证据在 `.local/iter0009/api/` 与 `.local/iter0009/browser/`，测试服务自动关闭；合计 138 项 HTTP、94 项 Chrome。初次任务输入测试缺少替身元数据、随后预算字段断言路径错误，以及首次页面缺少内边距均保留记录，详见 [ITER-0009 报告](../docs/iterations/ITER-0009-results.md)。新本机预览用 `bash scripts/run_entry.sh`，5087 / `.local/entry/`；沿用 r6，不升级 schema 或修改材料规则。

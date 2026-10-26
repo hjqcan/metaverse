@@ -22,6 +22,7 @@ from postcard_text import valid_postcard_text
 from mosaic_patch import canonical_patch, public_mosaic, validate_mosaic, patch_target
 from mosaic_consent import public_proposal, proposal_evidence, review_evidence
 from mosaic_inbox import review_input
+from entry_guide import public_entry_guide
 
 
 def _utc():
@@ -137,6 +138,9 @@ def _public(observed, share_postcard=False, paint_mosaic=False, consent=False):
             "world": world, "depot": {key: deepcopy(observed["depot"][key]) for key in ("position", "wood")},
             "recipes": [{key: recipe[key] for key in ("id", "woodCost")} for recipe in observed.get("recipes", [])],
             "activities": activities}
+    entry = public_entry_guide(observed)
+    if entry is not None:
+        public["entryGuide"] = entry
     if share_postcard:
         # The server returns ascending versions; preserve order and original text.
         public["postcards"] = [{key: deepcopy(card[key]) for key in (

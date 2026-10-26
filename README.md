@@ -4,13 +4,13 @@
 
 长期愿景是让这个世界承载越来越丰富的创作、关系、活动与生活体验。海洋、星空、外星球、天堂和地下世界都是可能的发展方向，不是当前已经实现的功能。
 
-**当前阶段：提议收件箱。未处理提议即使被新记录挤出最近列表，仍可筛选、分页和按原引用审阅。两次真实 GPT-6 调用完成旧提议发现与接受，只改原定一格。129 项 HTTP、84 项真实 Chrome 检查通过；沿用原协商规则，长期体验与完整治理仍未验证。**
+**当前阶段：当代入驻导览。后来者能看见已有公共桥、真实可达地点和步行路线，直接复用前人建设。固定程序与实际 Chrome 验证零木材到访往返；138 项 HTTP、94 项 Chrome 检查通过，本轮真实模型调用 0。共享工坊、自动化与防垄断机制仍待实现。**
 
-最新成果：[ITER-0008 提议收件箱](docs/iterations/ITER-0008-results.md) · [收件箱契约](docs/contracts/mosaic-inbox-v1.md) · [ITER-0007 协商修改](docs/iterations/ITER-0007-results.md) · [协商契约](docs/contracts/mosaic-consent-v1.md) · [ITER-0006 共同画布](docs/iterations/ITER-0006-results.md) · [ITER-0005 共同手记](docs/iterations/ITER-0005-results.md) · [ITER-0004 活动对照](docs/iterations/ITER-0004-results.md) · [ITER-0003 模型居民](docs/iterations/ITER-0003-results.md) · [ITER-0002 两地通行](docs/iterations/ITER-0002-results.md) · [ITER-0001 基础世界](docs/iterations/ITER-0001-results.md) · [底层研究](docs/research/2026-10-25-foundation/00-report.md)。
+最新成果：[ITER-0009 入驻导览](docs/iterations/ITER-0009-results.md) · [导览契约](docs/contracts/entry-guide-v1.md) · [ITER-0008 提议收件箱](docs/iterations/ITER-0008-results.md) · [收件箱契约](docs/contracts/mosaic-inbox-v1.md) · [ITER-0007 协商修改](docs/iterations/ITER-0007-results.md) · [协商契约](docs/contracts/mosaic-consent-v1.md) · [ITER-0006 共同画布](docs/iterations/ITER-0006-results.md) · [ITER-0005 共同手记](docs/iterations/ITER-0005-results.md) · [ITER-0004 活动对照](docs/iterations/ITER-0004-results.md) · [ITER-0003 模型居民](docs/iterations/ITER-0003-results.md) · [ITER-0002 两地通行](docs/iterations/ITER-0002-results.md) · [ITER-0001 基础世界](docs/iterations/ITER-0001-results.md) · [底层研究](docs/research/2026-10-25-foundation/00-report.md)。
 
-最新世界：`bash scripts/run_inbox.sh`，打开 `http://127.0.0.1:5086`，密钥位于 `.local/inbox/access.json`。旧协商用 `run_consent.sh` / `5085` / `.local/consent`；画布用 `run_mosaic.sh` / `5084` / `.local/mosaic`；手记用 `run_postcards.sh` / `5083` / `.local/postcards`；活动用 `run_activities.sh` / `5082` / `.local/activities`；基础用 `run_world.sh` / `5080` / `.local/world`；通行用 `run_passage.sh` / `5081` / `.local/passage`，脚本均在 `scripts/`。七个数据目录独立，旧世界不重启或迁移。
+最新世界：`bash scripts/run_entry.sh`，打开 `http://127.0.0.1:5087`，密钥位于 `.local/entry/access.json`。收件箱旧预览用 `run_inbox.sh` / `5086` / `.local/inbox`；旧协商用 `run_consent.sh` / `5085` / `.local/consent`；画布用 `run_mosaic.sh` / `5084` / `.local/mosaic`；手记用 `run_postcards.sh` / `5083` / `.local/postcards`；活动用 `run_activities.sh` / `5082` / `.local/activities`；基础用 `run_world.sh` / `5080` / `.local/world`；通行用 `run_passage.sh` / `5081` / `.local/passage`，脚本均在 `scripts/`。八个数据目录独立，旧世界不重启或迁移。
 
-居民报告：打开 `http://127.0.0.1:5086/resident.html?sample=inbox-review` 查看从收件箱找到旧提议后的实际审阅，可切换提议人。页面只读历史记录，新预览仍为空。初始河流和用于挤出最近列表的 51 条已处理记录是明确程序样本，不冒充模型作品。新任务与复现命令见 ITER-0008 报告；每个新模型任务调用一次绑定账号的 GPT-6。
+居民报告：打开 `http://127.0.0.1:5087/resident.html?sample=inbox-review` 查看从收件箱找到旧提议后的实际审阅，可切换提议人。页面只读历史记录，新预览仍为空。初始河流和用于挤出最近列表的 51 条已处理记录是明确程序样本，不冒充模型作品。新任务与复现命令见 ITER-0008 报告；每个新模型任务调用一次绑定账号的 GPT-6。
 
 ## 已确认的方向
 
@@ -22,6 +22,8 @@
 - 以系统论、控制论、信息论、高等数学等为基础，结合 AI、概率、图论及相关知识边研究边构建。
 - 区块链是可研究的选项，尚未决定采用，也未决定发行代币。
 - 项目采用外部多 Agent 研发闭环：外部调研与设计 → 外部构建 → 测试 Agent 入驻候选世界 → 构建与测试反馈返回外部调研团队。
+
+普通回归：先 `npm ci --prefix tests/browser --ignore-scripts`，再 `npm test`。统一运行构建、全部 HTTP 和真实 Chrome 检查，不含任何真实模型调用；环境要求和单套入口见[验收说明](tests/README.md)。
 
 详细边界及依据见[项目章程](docs/00-project-charter.md)与[决定和待决问题](docs/09-decisions-and-open-questions.md)。
 

@@ -1,0 +1,179 @@
+{
+  "kind": "program-late-entry",
+  "decisionSource": "fixed-program-following-actual-guide",
+  "actualModelCalls": 0,
+  "constructionStateVersion": 8,
+  "entryGuide": {
+    "version": 1,
+    "stateVersion": 8,
+    "actorId": "a2",
+    "position": [
+      1,
+      2
+    ],
+    "sharedBridges": [
+      {
+        "entityId": "e031370113c1143a38c990b4d14d2567c",
+        "ownerActorId": "a1",
+        "position": [
+          5,
+          3
+        ]
+      },
+      {
+        "entityId": "e6a2cb935dd464f968a60de44e9f7596a",
+        "ownerActorId": "a1",
+        "position": [
+          4,
+          3
+        ]
+      }
+    ],
+    "places": [
+      {
+        "id": "garden",
+        "label": "静谧花园",
+        "position": [
+          1,
+          6
+        ],
+        "activityId": "garden",
+        "reachable": true,
+        "walkingSteps": 4,
+        "route": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "bridgeEntityIds": []
+      },
+      {
+        "id": "riverwalk",
+        "label": "河岸步道",
+        "position": [
+          2,
+          5
+        ],
+        "activityId": "riverwalk",
+        "reachable": true,
+        "walkingSteps": 4,
+        "route": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "bridgeEntityIds": []
+      },
+      {
+        "id": "lookout",
+        "label": "彼岸观景台",
+        "position": [
+          6,
+          1
+        ],
+        "activityId": "lookout",
+        "reachable": true,
+        "walkingSteps": 8,
+        "route": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            1
+          ]
+        ],
+        "bridgeEntityIds": [
+          "e6a2cb935dd464f968a60de44e9f7596a",
+          "e031370113c1143a38c990b4d14d2567c"
+        ]
+      }
+    ],
+    "materials": {
+      "publicWood": 6,
+      "ownWood": 0,
+      "depotPosition": [
+        1,
+        1
+      ]
+    },
+    "participation": {
+      "walkWoodCost": 0,
+      "visitSupported": true,
+      "postcardSupported": true,
+      "mosaicSupported": true,
+      "foreignMosaicNeedsConsent": true
+    }
+  },
+  "outboundSteps": 8,
+  "visited": {
+    "activityId": "lookout",
+    "commandId": "7ab47412d4aa479499e44b687b09f1f4",
+    "stateVersion": 17,
+    "visitedAtUtc": "2026-10-26T01:13:35.2900514+00:00",
+    "position": [
+      6,
+      1
+    ]
+  },
+  "returned": true,
+  "finalResourceAudit": {
+    "issuedWood": 12,
+    "depotWood": 6,
+    "inventoryWood": 0,
+    "embodiedWood": 6,
+    "conserved": true
+  },
+  "originalBridgesPreserved": true
+}

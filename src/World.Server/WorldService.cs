@@ -24,6 +24,7 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
             while (reader.Read()) residents.Add(new { actorId = reader.GetString(0), position = new[] { reader.GetInt64(1), reader.GetInt64(2) } });
         var entities = new List<object>();
         var bridges = new HashSet<(long X, long Y)>();
+        var bridgeDetails = new List<EntryBridge>();
         using (var command = Command(connection, transaction, """
             SELECT entity_id,definition_id,definition_version,rules_version,owner_actor_id,x,y,embodied_wood
             FROM entities WHERE world_id=$world ORDER BY entity_id
@@ -37,7 +38,11 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
                     rulesVersion = reader.GetString(3), ownerActorId = reader.GetString(4),
                     position = new[] { reader.GetInt64(5), reader.GetInt64(6) }, embodiedWood = reader.GetInt64(7)
                 });
-                if (reader.GetString(1) == "bridge") bridges.Add((reader.GetInt64(5), reader.GetInt64(6)));
+                if (reader.GetString(1) == "bridge")
+                {
+                    bridges.Add((reader.GetInt64(5), reader.GetInt64(6)));
+                    bridgeDetails.Add(new(reader.GetString(0), reader.GetString(4), [reader.GetInt64(5), reader.GetInt64(6)]));
+                }
             }
         var blocked = new List<int[]>();
         var water = new List<int[]>();
@@ -72,6 +77,8 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
         body["residents"] = residents;
         body["depot"] = new { position = new[] { 1, 1 }, wood = state.DepotWood };
         body["entities"] = entities;
+        body["entryGuide"] = EntryGuide.Build(Scenario, state.Version, identity.ActorId, self.X, self.Y,
+            state.DepotWood, self.Wood, bridgeDetails);
         body["resourceAudit"] = new { issuedWood = state.IssuedWood, depotWood = state.DepotWood, inventoryWood,
             embodiedWood, conserved = checked(state.DepotWood + inventoryWood + embodiedWood) == state.IssuedWood };
         return Protocol.Reply(200, body);

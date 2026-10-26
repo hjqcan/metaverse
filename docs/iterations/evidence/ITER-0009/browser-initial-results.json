@@ -1,0 +1,62 @@
+{
+  "suite": "entry-guide-real-chrome-v1",
+  "recordedAtUtc": "2026-10-26T01:10:30.819Z",
+  "browser": "152.0.7977.82",
+  "passed": true,
+  "tests": [
+    {
+      "name": "arrival_shows_actual_routes_and_selection_does_not_act",
+      "passed": true,
+      "milliseconds": 655
+    },
+    {
+      "name": "one_built_bridge_stays_blocked_then_complete_route_becomes_available",
+      "passed": true,
+      "milliseconds": 2586
+    },
+    {
+      "name": "newcomer_first_connection_uses_existing_bridges_and_returns_without_work",
+      "passed": true,
+      "milliseconds": 1578
+    },
+    {
+      "name": "exhausted_public_stock_is_honest_about_building_and_free_creative_options",
+      "passed": true,
+      "milliseconds": 1651
+    },
+    {
+      "name": "failed_observation_marks_old_guide_and_disables_selection_until_recovery",
+      "passed": true,
+      "milliseconds": 2892
+    },
+    {
+      "name": "identity_switch_refreshes_own_materials_and_disconnect_clears_guide",
+      "passed": true,
+      "milliseconds": 247
+    },
+    {
+      "name": "malformed_route_is_not_shown_as_confirmed_access",
+      "passed": true,
+      "milliseconds": 3277
+    },
+    {
+      "name": "legacy_service_without_guide_preserves_existing_interface",
+      "passed": true,
+      "milliseconds": 196
+    },
+    {
+      "name": "restart_keeps_same_guide_and_world_state",
+      "passed": true,
+      "milliseconds": 310
+    },
+    {
+      "name": "mobile_arrival_390px_routes_and_access_controls_are_readable",
+      "passed": true,
+      "milliseconds": 384
+    }
+  ],
+  "javascriptErrors": [],
+  "actualModelCalls": 0,
+  "decisionSource": "explicit-program-and-human-UI",
+  "dataRoot": ".local/iter0009/browser/2026-10-26T01-10-16-604Z"
+}

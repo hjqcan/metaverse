@@ -1,12 +1,12 @@
 {
-  "name": "https-github.com-hjqcan-metaverse",
+  "name": "metaverse",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "Persistent shared world with bounded resident workflows",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "python3 scripts/check.py",
+    "test:http": "python3 scripts/check.py --suite http",
+    "test:browser": "python3 scripts/check.py --suite browser"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }
