@@ -1,0 +1,365 @@
+{
+  "recordedAtUtc": "2026-10-26T02:50:25.163919+00:00",
+  "kind": "actual-current-r8-conflicts-and-read-only-candidate-gate",
+  "actualModelCalls": 0,
+  "candidateCommandsExecuted": 0,
+  "actualHttpCommands": 91,
+  "repositoryHeadAtFinish": "941c97aa3bcddcb836090fcfe6eb329e3517861c",
+  "assemblySha256": "1473453f8e35c7591b926926c7765bfbd239c1fcceaa356bebb9b65ada00d90f",
+  "sourceHashes": {
+    "src/World.Server/WorldService.cs": "0d6c2753978dfa82f57f0f8f4bffbff5baa04c96df78d89232f7ba81bf716d21",
+    "src/World.Server/ContinuousWorld.cs": "f179f61fe2e6331068e68567857a91a7bd194199cd39e9c6a76539cfe35b1b17",
+    "src/World.Server/Protocol.cs": "51f21e65b48224f2c3488ecf6fc83c52e1ebd6813ffac8f375f739d45c6d26ad",
+    "scripts/continuous_navigation.py": "e158eff635fbaa0a67146b9ab00d6c3e48cb5f43a684335ffdca5216983db749",
+    "scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf"
+  },
+  "sourceFilesUnchangedDuringRun": true,
+  "cases": [
+    {
+      "name": "unrelated-walk-blocks-walk",
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "c66390fb164c4ee7a87d54292aca580f",
+        "expectedStateVersion": 0,
+        "action": {
+          "type": "walk",
+          "to": [
+            5.05,
+            7
+          ]
+        }
+      },
+      "candidateGate": {
+        "observedStateVersion": 0,
+        "currentStateVersion": 1,
+        "lastActorCommitVersion": 0,
+        "eligibleForTransactionalRevalidation": true,
+        "candidateAppliedToServer": false
+      },
+      "actualRejected": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 1,
+        "commandId": "c66390fb164c4ee7a87d54292aca580f",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "s1b015f27300644f4acfcc6e26efde874"
+        },
+        "eventCursor": 2,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      "freshRequestControl": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 2,
+        "commandId": "9c27535fd87245dc9a029508e405a99b",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "s1b015f27300644f4acfcc6e26efde874"
+        },
+        "eventCursor": 3,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "walk",
+          "position": [
+            5.05,
+            7
+          ],
+          "blocked": false
+        }
+      }
+    },
+    {
+      "name": "unrelated-walk-blocks-gather",
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "2572f0c6a032419eb37581e9344a5d19",
+        "expectedStateVersion": 2,
+        "action": {
+          "type": "gather",
+          "nodeId": "tree-west-north"
+        }
+      },
+      "candidateGate": {
+        "observedStateVersion": 2,
+        "currentStateVersion": 3,
+        "lastActorCommitVersion": 2,
+        "eligibleForTransactionalRevalidation": true,
+        "candidateAppliedToServer": false
+      },
+      "actualRejected": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 3,
+        "commandId": "2572f0c6a032419eb37581e9344a5d19",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "s1b015f27300644f4acfcc6e26efde874"
+        },
+        "eventCursor": 4,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      "freshRequestControl": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 4,
+        "commandId": "7b7cf8f591dd43cfb2a799c76444b1aa",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "s1b015f27300644f4acfcc6e26efde874"
+        },
+        "eventCursor": 5,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "gather",
+          "nodeId": "tree-west-north",
+          "quantity": 1,
+          "position": [
+            6.2,
+            7.8
+          ],
+          "remainingWood": 2,
+          "inventoryWood": 1
+        }
+      }
+    },
+    {
+      "name": "unrelated-walk-blocks-build",
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "3031cd43e7114c14ae8a0dadcf23beea",
+        "expectedStateVersion": 6,
+        "action": {
+          "type": "build",
+          "recipeId": "platform.v1",
+          "at": [
+            4,
+            7
+          ]
+        }
+      },
+      "candidateGate": {
+        "observedStateVersion": 6,
+        "currentStateVersion": 7,
+        "lastActorCommitVersion": 6,
+        "eligibleForTransactionalRevalidation": true,
+        "candidateAppliedToServer": false
+      },
+      "actualRejected": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 7,
+        "commandId": "3031cd43e7114c14ae8a0dadcf23beea",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "s1b015f27300644f4acfcc6e26efde874"
+        },
+        "eventCursor": 8,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      "freshRequestControl": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 8,
+        "commandId": "84c5da0138294283ad1cc47783831b6e",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "s1b015f27300644f4acfcc6e26efde874"
+        },
+        "eventCursor": 9,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "build",
+          "entityId": "eb4e77d3df2b145f1b15627bda4fdf011",
+          "position": [
+            4,
+            7
+          ],
+          "inventoryWood": 0
+        }
+      }
+    },
+    {
+      "name": "same-actor-ABA",
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "883f1071836041f7aa52bdb518f97d2a",
+        "expectedStateVersion": 8,
+        "action": {
+          "type": "walk",
+          "to": [
+            4.95,
+            7
+          ]
+        }
+      },
+      "samePositionAgain": true,
+      "candidateGate": {
+        "observedStateVersion": 8,
+        "currentStateVersion": 10,
+        "lastActorCommitVersion": 10,
+        "eligibleForTransactionalRevalidation": false,
+        "candidateAppliedToServer": false
+      },
+      "actualRejected": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 10,
+        "commandId": "883f1071836041f7aa52bdb518f97d2a",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "s1b015f27300644f4acfcc6e26efde874"
+        },
+        "eventCursor": 11,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      }
+    },
+    {
+      "name": "last-unit-competition",
+      "request": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "commandId": "14af0ee48b4b4c5b85b7513add84cbc8",
+        "expectedStateVersion": 74,
+        "action": {
+          "type": "gather",
+          "nodeId": "tree-east-north"
+        }
+      },
+      "winner": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 75,
+        "commandId": "66ce63f086d344d4b7fe807b2e53cbcf",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "sad595c81e91343bf918bcc04882ff280"
+        },
+        "eventCursor": 76,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "gather",
+          "nodeId": "tree-east-north",
+          "quantity": 1,
+          "position": [
+            25.4,
+            5.8
+          ],
+          "remainingWood": 0,
+          "inventoryWood": 3
+        }
+      },
+      "candidateGate": {
+        "observedStateVersion": 74,
+        "currentStateVersion": 75,
+        "lastActorCommitVersion": 72,
+        "eligibleForTransactionalRevalidation": true,
+        "candidateAppliedToServer": false
+      },
+      "actualRejected": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 75,
+        "commandId": "14af0ee48b4b4c5b85b7513add84cbc8",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a2",
+          "sessionId": "s7b426a8d267940f6a05b2443736343f9"
+        },
+        "eventCursor": 76,
+        "error": {
+          "code": "STALE_STATE",
+          "message": "世界已更新，请重新观察",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      "freshRequestControl": {
+        "schemaVersion": 1,
+        "rulesVersion": "r8",
+        "stateVersion": 75,
+        "commandId": "7bb5fe7db7374a389f57f0bb70f20fb3",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a2",
+          "sessionId": "s7b426a8d267940f6a05b2443736343f9"
+        },
+        "eventCursor": 76,
+        "error": {
+          "code": "RESOURCE_DEPLETED",
+          "message": "木材已采空",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected"
+      },
+      "candidateMustStillReject": "RESOURCE_DEPLETED",
+      "resourceAudit": {
+        "issuedWood": 12,
+        "wildWood": 3,
+        "depotWood": 0,
+        "inventoryWood": 3,
+        "embodiedWood": 6,
+        "conserved": true
+      }
+    }
+  ],
+  "databaseAudits": [
+    {
+      "world": "independent-actions",
+      "materialTotal": 12,
+      "integrity": "ok",
+      "foreignKeyErrors": 0,
+      "processStopped": true
+    },
+    {
+      "world": "last-material",
+      "materialTotal": 12,
+      "integrity": "ok",
+      "foreignKeyErrors": 0,
+      "processStopped": true
+    }
+  ],
+  "allExperimentProcessesStopped": true
+}

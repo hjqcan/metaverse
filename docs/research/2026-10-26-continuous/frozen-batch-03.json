@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "frozen-research-batch",
+  "recordedAtUtc": "2026-10-26T02:55:01.511664+00:00",
+  "scope": "ITER-0019 candidate contract plus actual-current-r8 conflict evidence; candidate execution count is zero",
+  "status": "accepted as candidate baseline; not implemented or independently accepted; frozen for separate integration",
+  "files": [
+    {
+      "path": "08-action-preconditions.md",
+      "bytes": 14199,
+      "sha256": "96fa43b86c6d04bbb6cbf5a63f3693cfc0a22fb2819119328196c575db708260"
+    },
+    {
+      "path": "probes/action-preconditions.py",
+      "bytes": 9924,
+      "sha256": "3d2cd1dfbee2006c3f7d15190ef7f49c6aa5d0883f2a5f51eb4ee38a6c2a2d6f"
+    },
+    {
+      "path": "evidence/action-preconditions-r8.json",
+      "bytes": 10554,
+      "sha256": "c12764f6c1b033fe6143b52df0ac0d122492fb976ee20e6284dbd44fe25ae8de"
+    }
+  ]
+}

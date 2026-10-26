@@ -241,11 +241,12 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         var actor = ReadActor(connection, transaction, identity.ActorId);
         var action = request.Action;
         var fault = configuration.FaultsEnabled && action.Type is "claim" or "gather" or "build" or "visit" or "postcard" or "mosaic" or "mosaic_propose" or "mosaic_review" ? requestedFault : null;
-        var rejection = Validate(connection, transaction, request, state, actor, identity.ActorId);
+        var rejection = Validate(connection, transaction, request, state, actor, identity.ActorId, instance);
         if (rejection is not null)
         {
             var body = Protocol.Envelope(Scenario.RulesVersion, identity, state.Version, state.Cursor, request.CommandId, rejection.Value.Error);
             body["status"] = "rejected";
+            BindExecution(body, request, state.Version);
             var denied = Protocol.Reply(rejection.Value.Status, body);
             SaveReceipt(connection, transaction, identity.ActorId, request.CommandId, requestHash, denied);
             database.Authenticate(tokenHash, connection, transaction);
@@ -295,8 +296,12 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
                 InjectAfterDebit(fault);
                 Run(connection, transaction, "UPDATE residents SET wood=wood+1 WHERE world_id=$world AND actor_id=$actor",
                     ("$world", Protocol.WorldId), ("$actor", identity.ActorId));
-                result = new { action = "gather", nodeId = node.NodeId, quantity = 1,
-                    position = node.Position, remainingWood = node.RemainingWood - 1, inventoryWood = actor.Wood + 1 };
+                result = request.PreconditionMode is null
+                    ? (object)new { action = "gather", nodeId = node.NodeId, quantity = 1,
+                        position = node.Position, remainingWood = node.RemainingWood - 1, inventoryWood = actor.Wood + 1 }
+                    : new { action = "gather", nodeId = node.NodeId, quantity = 1,
+                        position = node.Position, remainingWoodBefore = node.RemainingWood,
+                        remainingWood = node.RemainingWood - 1, inventoryWood = actor.Wood + 1 };
                 worldEvent = new { seq = cursor, stateVersion = version, commandId = request.CommandId, actorId = identity.ActorId,
                     type = "gathered", nodeId = node.NodeId, quantity = 1, position = node.Position, remainingWood = node.RemainingWood - 1 };
                 source = "wild-wood";
@@ -410,6 +415,7 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         var committed = Protocol.Envelope(Scenario.RulesVersion, identity, version, cursor, request.CommandId);
         committed["status"] = "committed";
         committed["result"] = result;
+        BindExecution(committed, request, state.Version);
         var reply = Protocol.Reply(200, committed);
         SaveReceipt(connection, transaction, identity.ActorId, request.CommandId, requestHash, reply);
         database.Authenticate(tokenHash, connection, transaction);
@@ -420,12 +426,29 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
     }
 
     private (int Status, ApiError Error)? Validate(SqliteConnection connection, SqliteTransaction transaction,
-        WorldCommand request, State state, Actor actor, string actorId)
+        WorldCommand request, State state, Actor actor, string actorId, string? instance)
     {
         if (request.RulesVersion != Scenario.RulesVersion)
             return (409, new("RULES_VERSION_MISMATCH", "规则版本不匹配，请重新观察"));
-        if (request.ExpectedStateVersion != state.Version)
-            return (409, new("STALE_STATE", "世界已更新，请重新观察"));
+        if (request.PreconditionMode is null)
+        {
+            if (request.ExpectedStateVersion != state.Version)
+                return (409, new("STALE_STATE", "世界已更新，请重新观察"));
+        }
+        else
+        {
+            if (instance is null || !Scenario.SupportsContinuous || request.Action.Type is not ("walk" or "gather" or "build"))
+                return (422, new("PRECONDITION_MODE_UNAVAILABLE", "当前世界或动作不支持这个前置条件模式"));
+            if (request.ExpectedStateVersion > state.Version)
+                return (409, new("STATE_VERSION_AHEAD", "观察版本超过当前世界，请重新观察"));
+            // Existing immutable events capture every personal state mutation in r8.
+            // Foreign inventory/position changes must extend this gate before adoption.
+            if (Scalar(connection, transaction, """
+                SELECT EXISTS(SELECT 1 FROM events WHERE world_id=$world AND state_version>$observed
+                    AND json_extract(event_json,'$.actorId')=$actor)
+                """, ("$world", Protocol.WorldId), ("$observed", request.ExpectedStateVersion), ("$actor", actorId)) != 0)
+                return (409, new("STALE_ACTOR_STATE", "这位居民已有更新的动作，请重新观察"));
+        }
         var action = request.Action;
         if (Scenario.SupportsContinuous) return ValidateContinuous(connection, transaction, action, actor);
         if (action.Type == "move")
@@ -637,6 +660,15 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         if (instance is null) return;
         body["world"] = WithFields(body["world"]!, ("instanceId", instance));
         body["commandBinding"] = new { version = 1, required = true, header = WorldInstance.Header };
+        if (body["rulesVersion"] is "r8")
+            body["commandConcurrency"] = new { version = 1, supportedModes = new[] { Protocol.ActorStateMode } };
+    }
+
+    private static void BindExecution(Dictionary<string, object?> body, WorldCommand request, long appliedOn)
+    {
+        if (request.PreconditionMode is null) return;
+        body["execution"] = new { preconditionMode = request.PreconditionMode,
+            observedStateVersion = request.ExpectedStateVersion, appliedOnStateVersion = appliedOn };
     }
 
     private static Dictionary<string, object?> WithFields(object record, params (string Name, object? Value)[] fields)

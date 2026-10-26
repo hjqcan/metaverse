@@ -29,6 +29,7 @@ internal sealed class RequestFailure(int statusCode, string code, string message
 internal static class Protocol
 {
     public const string WorldId = "foundation-01";
+    public const string ActorStateMode = "actor-state-v1";
     public static readonly JsonSerializerOptions Json = new(JsonSerializerDefaults.Web);
 
     public static Dictionary<string, object?> Envelope(string rulesVersion, Identity? identity, long? version = null,
@@ -77,14 +78,16 @@ internal sealed record WorldAction(string Type, long Dx = 0, long Dy = 0, long Q
 internal sealed record MosaicPatchCell(long X, long Y, string Color);
 
 internal sealed record WorldCommand(int SchemaVersion, string RulesVersion, string CommandId,
-    long ExpectedStateVersion, WorldAction Action)
+    long ExpectedStateVersion, WorldAction Action, string? PreconditionMode = null)
 {
     // Re-serialize only typed semantic fields in fixed order, never raw client JSON.
-    public string RequestHash => Protocol.Hash(JsonSerializer.Serialize(new
-    {
-        schemaVersion = SchemaVersion, rulesVersion = RulesVersion,
-        expectedStateVersion = ExpectedStateVersion, action = Action.Canonical
-    }, Protocol.Json));
+    // The old branch is deliberately unchanged: persisted old hashes still match.
+    public string RequestHash => Protocol.Hash(JsonSerializer.Serialize(PreconditionMode is null
+        ? (object)new { schemaVersion = SchemaVersion, rulesVersion = RulesVersion,
+            expectedStateVersion = ExpectedStateVersion, action = Action.Canonical }
+        : new { schemaVersion = SchemaVersion, rulesVersion = RulesVersion,
+            expectedStateVersion = ExpectedStateVersion, preconditionMode = PreconditionMode,
+            action = Action.Canonical }, Protocol.Json));
 
     public static async Task<WorldCommand> Read(HttpRequest request, WorldScenario scenario)
     {
@@ -105,7 +108,12 @@ internal sealed record WorldCommand(int SchemaVersion, string RulesVersion, stri
         {
             var root = document.RootElement;
             RejectIdentity(root);
-            Fields(root, "schemaVersion", "rulesVersion", "commandId", "expectedStateVersion", "action");
+            var hasMode = root.ValueKind == JsonValueKind.Object && root.TryGetProperty("preconditionMode", out _);
+            if (hasMode)
+                Fields(root, "schemaVersion", "rulesVersion", "commandId", "expectedStateVersion", "preconditionMode", "action");
+            else Fields(root, "schemaVersion", "rulesVersion", "commandId", "expectedStateVersion", "action");
+            var mode = hasMode ? String(root.GetProperty("preconditionMode")) : null;
+            if (mode is not null && mode != Protocol.ActorStateMode) Invalid("不支持的动作前置条件模式");
             var schema = Integer(root.GetProperty("schemaVersion"));
             if (schema != 1) Invalid("不支持的接口版本");
             var rules = String(root.GetProperty("rulesVersion"));
@@ -194,7 +202,7 @@ internal sealed record WorldCommand(int SchemaVersion, string RulesVersion, stri
                 default:
                     throw new RequestFailure(400, "INVALID_REQUEST", "不支持的动作类型");
             }
-            return new((int)schema, rules, id, version, parsed);
+            return new((int)schema, rules, id, version, parsed, mode);
         }
     }
 
