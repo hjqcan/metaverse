@@ -1,0 +1,281 @@
+{
+  "passed": true,
+  "groups": 9,
+  "assertions": 55,
+  "results": [
+    {
+      "name": "basic",
+      "checks": [
+        {
+          "name": "r8 observation authenticated",
+          "passed": true
+        },
+        {
+          "name": "rendered initial",
+          "passed": true
+        },
+        {
+          "name": "held WASD moves in metres",
+          "passed": true
+        },
+        {
+          "name": "position has actual fractional coordinates",
+          "passed": true
+        },
+        {
+          "name": "mouse walks to unsnapped ground coordinate",
+          "passed": true
+        },
+        {
+          "name": "canopy raycast selects real tree",
+          "passed": true
+        },
+        {
+          "name": "walk approaches tree without entering trunk",
+          "passed": true
+        },
+        {
+          "name": "E gathers three authoritative units",
+          "passed": true
+        },
+        {
+          "name": "build shortcut opens preview",
+          "passed": true
+        },
+        {
+          "name": "continuous footprint preview visible",
+          "passed": true
+        },
+        {
+          "name": "rendered preview",
+          "passed": true
+        },
+        {
+          "name": "platform constructed from collected wood",
+          "passed": true
+        },
+        {
+          "name": "building position preserves fractions",
+          "passed": true
+        },
+        {
+          "name": "resource audit conserved",
+          "passed": true
+        },
+        {
+          "name": "rendered built",
+          "passed": true
+        },
+        {
+          "name": "rendered compact",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "bridge",
+      "checks": [
+        {
+          "name": "r8 observation authenticated",
+          "passed": true
+        },
+        {
+          "name": "rendered initial",
+          "passed": true
+        },
+        {
+          "name": "whole bridge preview selected",
+          "passed": true
+        },
+        {
+          "name": "bridge spans natural river from near bank",
+          "passed": true
+        },
+        {
+          "name": "six gathered wood builds one complete bridge",
+          "passed": true
+        },
+        {
+          "name": "rendered bridge-built",
+          "passed": true
+        },
+        {
+          "name": "builder crosses actual bridge",
+          "passed": true
+        },
+        {
+          "name": "other resident reuses bridge without wood",
+          "passed": true
+        },
+        {
+          "name": "rendered bridge-reused",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "input-loss",
+      "checks": [
+        {
+          "name": "r8 observation authenticated",
+          "passed": true
+        },
+        {
+          "name": "rendered initial",
+          "passed": true
+        },
+        {
+          "name": "automatic lookup recovers dropped walk receipt",
+          "passed": true
+        },
+        {
+          "name": "held key does not resume after uncertain result",
+          "passed": true
+        },
+        {
+          "name": "fresh key press resumes movement",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "after",
+      "checks": [
+        {
+          "name": "r8 initial observation",
+          "passed": true
+        },
+        {
+          "name": "lost response retains request and blocks new actions",
+          "passed": true
+        },
+        {
+          "name": "other identity cannot inherit pending command",
+          "passed": true
+        },
+        {
+          "name": "other resident remains unchanged",
+          "passed": true
+        },
+        {
+          "name": "restart resolves original persisted command",
+          "passed": true
+        },
+        {
+          "name": "lost response has exactly one effect",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "before",
+      "checks": [
+        {
+          "name": "r8 initial observation",
+          "passed": true
+        },
+        {
+          "name": "lost response retains request and blocks new actions",
+          "passed": true
+        },
+        {
+          "name": "other identity cannot inherit pending command",
+          "passed": true
+        },
+        {
+          "name": "other resident remains unchanged",
+          "passed": true
+        },
+        {
+          "name": "404 preserves original request",
+          "passed": true
+        },
+        {
+          "name": "original retry commits once",
+          "passed": true
+        },
+        {
+          "name": "original command ID preserved",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "wrong-receipt",
+      "checks": [
+        {
+          "name": "r8 initial observation",
+          "passed": true
+        },
+        {
+          "name": "wrong node receipt cannot settle original",
+          "passed": true
+        },
+        {
+          "name": "lookup resolves original once",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "stale",
+      "checks": [
+        {
+          "name": "r8 initial observation",
+          "passed": true
+        },
+        {
+          "name": "stale command settled as rejection",
+          "passed": true
+        },
+        {
+          "name": "stale command creates no material",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "offline",
+      "checks": [
+        {
+          "name": "r8 initial observation",
+          "passed": true
+        },
+        {
+          "name": "known receipt retained while observation unavailable",
+          "passed": true
+        },
+        {
+          "name": "commit remains known during observation outage",
+          "passed": true
+        },
+        {
+          "name": "outage blocks further action",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "corrupt-journal",
+      "checks": [
+        {
+          "name": "invalid durable record blocks actions",
+          "passed": true
+        },
+        {
+          "name": "invalid journal cannot mutate",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

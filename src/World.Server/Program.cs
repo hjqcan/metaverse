@@ -88,6 +88,26 @@ app.Use(async (context, next) =>
         await Protocol.Error(database.Scenario.RulesVersion, 503, "SERVICE_UNAVAILABLE", "服务暂时无法确认结果，请查询或原样重试", retryable: true, mutated: null).ToResult().ExecuteAsync(context);
     }
 });
+// The historical browser board speaks r1-r7. The continuous world uses the native client.
+if (database.Scenario.SupportsContinuous)
+    app.Use(async (context, next) =>
+    {
+        if (context.Request.Path is { Value: "/" or "/index.html" })
+        {
+            context.Response.ContentType = "text/html; charset=utf-8";
+            await context.Response.WriteAsync("""
+                <!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+                <title>荒野 · 连续世界</title>
+                <style>body{margin:12vh auto;padding:24px;max-width:620px;background:#17271f;color:#e9e8d5;font:18px/1.8 sans-serif}h1{font-size:34px}code{display:block;padding:18px;background:#294032;border-radius:8px;color:#e4c98e}a{color:#bbd3ad}</style>
+                <h1>荒野 · 连续世界</h1><p>河谷、树木与最初的居民。使用 Godot 客户端进入3D场景，自由行走、采集木材并建造。</p>
+                <p>在项目目录运行：</p><code>npm run start:godot</code>
+                <p>WASD 行走 · E 采集 · 1 / 2 建造 · 点击地面前往</p>
+                <p><a href="/resident.html">查看居民任务报告</a></p></html>
+                """);
+            return;
+        }
+        await next(context);
+    });
 app.UseDefaultFiles();
 app.UseStaticFiles();
 // Resolve the catch-all only after static files; otherwise its endpoint suppresses static serving.

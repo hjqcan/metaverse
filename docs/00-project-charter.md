@@ -18,7 +18,7 @@
 
 ## 2. 已确认的产品方向
 
-下列内容对应[决定记录](09-decisions-and-open-questions.md)中的 C01—C19。
+下列内容对应[决定记录](09-decisions-and-open-questions.md)中的 C01—C20。
 
 ### 2.1 参与是多种选择
 

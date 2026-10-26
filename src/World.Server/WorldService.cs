@@ -7,12 +7,13 @@ namespace World.Server;
 internal sealed class InjectedFailure : Exception;
 internal sealed record MosaicInboxQuery(string Scope, string Status, long? Before, int Limit);
 
-internal sealed class WorldService(WorldDatabase database, ServerConfiguration configuration)
+internal sealed partial class WorldService(WorldDatabase database, ServerConfiguration configuration)
 {
     private WorldScenario Scenario => database.Scenario;
 
     public ApiReply Observe(string tokenHash)
     {
+        if (Scenario.SupportsContinuous) return ObserveContinuous(tokenHash);
         using var connection = database.Open();
         using var transaction = connection.BeginTransaction(deferred: true);
         var identity = database.Authenticate(tokenHash, connection, transaction);
@@ -86,7 +87,7 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
             body["resourceNodes"] = resources;
         }
         body["entities"] = entities;
-        body["entryGuide"] = EntryGuide.Build(Scenario, state.Version, identity.ActorId, self.X, self.Y,
+        body["entryGuide"] = EntryGuide.Build(Scenario, state.Version, identity.ActorId, (long)self.X, (long)self.Y,
             state.DepotWood, self.Wood, bridgeDetails, resources);
         var wildWood = resources.Sum(n => n.RemainingWood);
         body["resourceAudit"] = Scenario.SupportsGathering
@@ -251,6 +252,11 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
         long quantity = 0;
         switch (action.Type)
         {
+            case "walk":
+                var walked = WalkContinuous(connection, transaction, actor, identity.ActorId, action.TargetX, action.TargetY);
+                result = new { action = "walk", position = walked.Position, blocked = walked.Blocked };
+                worldEvent = new { seq = cursor, stateVersion = version, commandId = request.CommandId, actorId = identity.ActorId, type = "walked", position = walked.Position, blocked = walked.Blocked };
+                break;
             case "move":
                 var x = actor.X + action.Dx;
                 var y = actor.Y + action.Dy;
@@ -301,7 +307,7 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
                 break;
             case "postcard":
                 var postcard = new Postcard(action.ActivityId!, identity.ActorId, request.CommandId, action.VisitCommandId!,
-                    action.Text!, version, DateTimeOffset.UtcNow.ToString("O"), [actor.X, actor.Y]);
+                    action.Text!, version, DateTimeOffset.UtcNow.ToString("O"), [(long)actor.X, (long)actor.Y]);
                 Run(connection, transaction, """
                     INSERT INTO postcards(world_id,author_actor_id,command_id,visit_command_id,activity_id,text,state_version,shared_at_utc,x,y)
                     VALUES($world,$actor,$command,$visit,$activity,$text,$version,$shared,$x,$y)
@@ -316,7 +322,7 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
             case "mosaic":
                 var edit = new MosaicEdit(action.ActivityId!, identity.ActorId, request.CommandId, action.VisitCommandId!,
                     action.ExpectedMosaicRevision, checked(action.ExpectedMosaicRevision + 1), action.Patch!,
-                    version, DateTimeOffset.UtcNow.ToString("O"), [actor.X, actor.Y]);
+                    version, DateTimeOffset.UtcNow.ToString("O"), [(long)actor.X, (long)actor.Y]);
                 ApplyMosaicEdit(connection, transaction, edit);
                 result = new { action = "mosaic", edit.ActivityId, edit.AuthorActorId, edit.CommandId, edit.VisitCommandId,
                     edit.BaseRevision, edit.Revision, edit.Patch, edit.StateVersion, edit.PaintedAtUtc, edit.Position };
@@ -327,7 +333,7 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
             case "mosaic_propose":
                 var proposal = new MosaicProposal(action.ActivityId!, identity.ActorId,
                     MosaicCellAuthor(connection, transaction, action.Patch![0])!, request.CommandId, action.VisitCommandId!,
-                    action.ExpectedMosaicRevision, action.Patch, action.Text!, version, DateTimeOffset.UtcNow.ToString("O"), [actor.X, actor.Y]);
+                    action.ExpectedMosaicRevision, action.Patch, action.Text!, version, DateTimeOffset.UtcNow.ToString("O"), [(long)actor.X, (long)actor.Y]);
                 Run(connection, transaction, """
                     INSERT INTO mosaic_proposals(world_id,activity_id,author_actor_id,target_actor_id,command_id,visit_command_id,
                         base_revision,patch_json,text,state_version,proposed_at_utc,x,y)
@@ -346,11 +352,11 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
                 if (action.Decision == "accept")
                 {
                     acceptedEdit = new(original.ActivityId, identity.ActorId, request.CommandId, action.VisitCommandId!,
-                        original.BaseRevision, checked(original.BaseRevision + 1), original.Patch, version, reviewedAtUtc, [actor.X, actor.Y]);
+                        original.BaseRevision, checked(original.BaseRevision + 1), original.Patch, version, reviewedAtUtc, [(long)actor.X, (long)actor.Y]);
                     ApplyMosaicEdit(connection, transaction, acceptedEdit);
                 }
                 var review = new MosaicReview(action.ActivityId!, identity.ActorId, request.CommandId, action.VisitCommandId!,
-                    original.AuthorActorId, original.CommandId, action.Decision!, action.Text!, version, reviewedAtUtc, [actor.X, actor.Y], acceptedEdit);
+                    original.AuthorActorId, original.CommandId, action.Decision!, action.Text!, version, reviewedAtUtc, [(long)actor.X, (long)actor.Y], acceptedEdit);
                 Run(connection, transaction, """
                     INSERT INTO mosaic_reviews(world_id,activity_id,author_actor_id,command_id,visit_command_id,
                         proposal_actor_id,proposal_command_id,decision,text,state_version,reviewed_at_utc,x,y,edit_command_id)
@@ -363,6 +369,8 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
                 worldEvent = WithFields(review, ("seq", cursor), ("type", "mosaic_reviewed"), ("actorId", identity.ActorId));
                 break;
             default:
+                var buildX = Scenario.SupportsContinuous ? action.TargetX : action.X;
+                var buildY = Scenario.SupportsContinuous ? action.TargetY : action.Y;
                 var cost = Scalar(connection, transaction, "SELECT wood_cost FROM recipes WHERE id=$recipe", ("$recipe", action.RecipeId));
                 GuardedDebit(Run(connection, transaction, "UPDATE residents SET wood=wood-$cost WHERE world_id=$world AND actor_id=$actor AND wood>=$cost",
                     ("$cost", cost), ("$world", Protocol.WorldId), ("$actor", identity.ActorId)));
@@ -372,9 +380,9 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
                     INSERT INTO entities(entity_id,world_id,owner_actor_id,recipe_id,definition_id,definition_version,rules_version,x,y,embodied_wood)
                     SELECT $id,$world,$actor,id,definition_id,definition_version,rules_version,$x,$y,wood_cost FROM recipes WHERE id=$recipe
                     """, ("$id", entityId), ("$world", Protocol.WorldId), ("$actor", identity.ActorId),
-                    ("$x", action.X), ("$y", action.Y), ("$recipe", action.RecipeId));
-                result = new { action = "build", entityId, position = new[] { action.X, action.Y }, inventoryWood = actor.Wood - cost };
-                worldEvent = new { seq = cursor, stateVersion = version, commandId = request.CommandId, actorId = identity.ActorId, type = "built", entityId, position = new[] { action.X, action.Y } };
+                    ("$x", buildX), ("$y", buildY), ("$recipe", action.RecipeId));
+                result = new { action = "build", entityId, position = new[] { buildX, buildY }, inventoryWood = actor.Wood - cost };
+                worldEvent = new { seq = cursor, stateVersion = version, commandId = request.CommandId, actorId = identity.ActorId, type = "built", entityId, position = new[] { buildX, buildY } };
                 source = "inventory:" + identity.ActorId;
                 destination = "entity:" + entityId;
                 quantity = cost;
@@ -410,11 +418,12 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
         if (request.ExpectedStateVersion != state.Version)
             return (409, new("STALE_STATE", "世界已更新，请重新观察"));
         var action = request.Action;
+        if (Scenario.SupportsContinuous) return ValidateContinuous(connection, transaction, action, actor);
         if (action.Type == "move")
         {
             // Do not abs/add untrusted integers before bounding them (long.MinValue must not overflow).
             if (!((action.Dx is -1 or 1 && action.Dy == 0) || (action.Dy is -1 or 1 && action.Dx == 0)) ||
-                !Walkable(connection, transaction, actor.X + action.Dx, actor.Y + action.Dy))
+                !Walkable(connection, transaction, (long)actor.X + action.Dx, (long)actor.Y + action.Dy))
                 return (422, new("UNREACHABLE", "只能向可通行的相邻格移动一步"));
         }
         else if (action.Type == "claim")
@@ -536,7 +545,7 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
             if (!(bridge ? Scenario.IsWater(action.X, action.Y) : Scenario.IsLand(action.X, action.Y)))
                 return (422, new("UNREACHABLE", bridge ? "桥段只能建在四邻水格" : "平台只能建在自身或相邻陆地"));
             var distance = Math.Abs(actor.X - action.X) + Math.Abs(actor.Y - action.Y);
-            if ((bridge ? distance != 1 : distance > 1) || !Walkable(connection, transaction, actor.X, actor.Y))
+            if ((bridge ? distance != 1 : distance > 1) || !Walkable(connection, transaction, (long)actor.X, (long)actor.Y))
                 return (422, new("UNREACHABLE", bridge ? "请从可通行格向四邻水格铺桥" : "平台只能建在自身或相邻陆地"));
             if (Scalar(connection, transaction, "SELECT count(*) FROM entities WHERE world_id=$world AND x=$x AND y=$y",
                     ("$world", Protocol.WorldId), ("$x", action.X), ("$y", action.Y)) != 0)
@@ -566,7 +575,7 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
             ("$world", Protocol.WorldId));
         using var reader = command.ExecuteReader();
         while (reader.Read()) resources.Add(new(reader.GetString(0), reader.GetString(1),
-            [reader.GetInt64(2), reader.GetInt64(3)], reader.GetInt64(4), reader.GetInt64(5)));
+            [reader.GetDouble(2), reader.GetDouble(3)], reader.GetInt64(4), reader.GetInt64(5)));
         return resources;
     }
 
@@ -574,7 +583,7 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
     private static void InjectAfterDebit(string? fault) { if (fault == "throw-after-debit") throw new InjectedFailure(); }
 
     private sealed record State(long Version, long Cursor, long DepotWood, long IssuedWood);
-    private sealed record Actor(long X, long Y, long Wood);
+    private sealed record Actor(double X, double Y, long Wood);
     private sealed record Postcard(string ActivityId, string AuthorActorId, string CommandId, string VisitCommandId,
         string Text, long StateVersion, string SharedAtUtc, long[] Position);
     private sealed record MosaicEdit(string ActivityId, string AuthorActorId, string CommandId, string VisitCommandId,
@@ -772,7 +781,7 @@ internal sealed class WorldService(WorldDatabase database, ServerConfiguration c
             ("$world", Protocol.WorldId), ("$actor", actor));
         using var reader = command.ExecuteReader();
         if (!reader.Read()) throw new InvalidOperationException("居民状态缺失");
-        return new(reader.GetInt64(0), reader.GetInt64(1), reader.GetInt64(2));
+        return new(reader.GetDouble(0), reader.GetDouble(1), reader.GetInt64(2));
     }
 
     private static (string Hash, ApiReply Reply)? FindReceipt(SqliteConnection connection, SqliteTransaction transaction, string actor, string id)

@@ -46,11 +46,13 @@ internal sealed record WorldAction(string Type, long Dx = 0, long Dy = 0, long Q
     string? RecipeId = null, long X = 0, long Y = 0, string? ActivityId = null,
     string? VisitCommandId = null, string? Text = null, long ExpectedMosaicRevision = 0,
     MosaicPatchCell[]? Patch = null, string? ProposalActorId = null, string? ProposalCommandId = null,
-    string? Decision = null, string? NodeId = null)
+    string? Decision = null, string? NodeId = null, double TargetX = 0, double TargetY = 0, bool Continuous = false)
 {
     public object Canonical => Type switch
     {
         "move" => new { type = Type, dx = Dx, dy = Dy },
+        "walk" => new { type = Type, to = new[] { TargetX, TargetY } },
+        "build" when Continuous => new { type = Type, recipeId = RecipeId, at = new[] { TargetX, TargetY } },
         "claim" => new { type = Type, quantity = Quantity },
         "gather" => new { type = Type, nodeId = NodeId },
         "visit" => new { type = Type, activityId = ActivityId },
@@ -111,6 +113,13 @@ internal sealed record WorldCommand(int SchemaVersion, string RulesVersion, stri
             WorldAction parsed;
             switch (type)
             {
+                case "walk":
+                    if (!scenario.SupportsContinuous) Invalid("当前世界不支持连续行走");
+                    Fields(action, "type", "to");
+                    var to = action.GetProperty("to");
+                    if (to.ValueKind != JsonValueKind.Array || to.GetArrayLength() != 2) Invalid("目标必须为两个有限实数");
+                    parsed = new(type, TargetX: Coordinate(to[0]), TargetY: Coordinate(to[1]), Continuous: true);
+                    break;
                 case "move":
                     Fields(action, "type", "dx", "dy");
                     parsed = new(type, Dx: Integer(action.GetProperty("dx")), Dy: Integer(action.GetProperty("dy")));
@@ -133,7 +142,9 @@ internal sealed record WorldCommand(int SchemaVersion, string RulesVersion, stri
                     if (!scenario.SupportsRecipe(recipe)) Invalid("当前世界不支持此建造配方");
                     var at = action.GetProperty("at");
                     if (at.ValueKind != JsonValueKind.Array || at.GetArrayLength() != 2) Invalid("目标必须为两个整数坐标");
-                    parsed = new(type, RecipeId: recipe, X: Integer(at[0]), Y: Integer(at[1]));
+                    parsed = scenario.SupportsContinuous
+                        ? new(type, RecipeId: recipe, TargetX: Coordinate(at[0]), TargetY: Coordinate(at[1]), Continuous: true)
+                        : new(type, RecipeId: recipe, X: Integer(at[0]), Y: Integer(at[1]));
                     break;
                 case "visit":
                     Fields(action, "type", "activityId");
@@ -252,6 +263,13 @@ internal sealed record WorldCommand(int SchemaVersion, string RulesVersion, stri
             cells.Add(new(x, y, color));
         }
         return cells.OrderBy(cell => cell.Y).ThenBy(cell => cell.X).ToArray();
+    }
+
+    private static double Coordinate(JsonElement element)
+    {
+        if (element.ValueKind != JsonValueKind.Number || !element.TryGetDouble(out var value) || !double.IsFinite(value) || Math.Abs(value) > 1000000)
+            throw new RequestFailure(400, "INVALID_REQUEST", "坐标必须为有限实数，绝对值不超过一百万");
+        return value;
     }
 
     private static long Integer(JsonElement element)

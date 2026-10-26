@@ -49,19 +49,19 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
         }
 
         Scenario = configuration.RequestedScenario ?? WorldScenario.Wilderness;
-        Run(connection, transaction, Scenario.SupportsGathering ? SchemaV7 : Scenario.SupportsMosaicConsent ? SchemaV6 : Scenario.SupportsMosaic ? SchemaV5 : Scenario.SupportsPostcards ? SchemaV4 : Scenario.SupportsActivities ? SchemaV3 : SchemaV2);
+        Run(connection, transaction, Scenario.SupportsContinuous ? SchemaV8 : Scenario.SupportsGathering ? SchemaV7 : Scenario.SupportsMosaicConsent ? SchemaV6 : Scenario.SupportsMosaic ? SchemaV5 : Scenario.SupportsPostcards ? SchemaV4 : Scenario.SupportsActivities ? SchemaV3 : SchemaV2);
         Run(connection, transaction, """
             INSERT INTO worlds(id,scenario_id,rules_version,state_version,issued_wood,depot_wood) VALUES($world,$scenario,$rules,0,12,$depot);
-            INSERT INTO residents(world_id,actor_id,operator_id,x,y,wood) VALUES($world,'a1','local-operator',1,1,0),($world,'a2','local-operator',$a2x,$a2y,0);
+            INSERT INTO residents(world_id,actor_id,operator_id,x,y,wood) VALUES($world,'a1','local-operator',$a1x,$a1y,0),($world,'a2','local-operator',$a2x,$a2y,0);
             INSERT INTO recipes(id,definition_id,definition_version,rules_version,wood_cost) VALUES('platform.v1','platform',1,$rules,3);
             """, ("$world", Protocol.WorldId), ("$scenario", Scenario.Id), ("$rules", Scenario.RulesVersion),
-            ("$depot", Scenario.SupportsGathering ? 0 : 12), ("$a2x", Scenario.SupportsGathering ? 6 : 1), ("$a2y", Scenario.SupportsGathering ? 6 : 2));
+            ("$a1x", Scenario.SupportsContinuous ? 5 : 1), ("$a1y", Scenario.SupportsContinuous ? 7 : 1), ("$depot", Scenario.SupportsGathering ? 0 : 12), ("$a2x", Scenario.SupportsContinuous ? 26 : Scenario.SupportsGathering ? 6 : 1), ("$a2y", Scenario.SupportsContinuous ? 17 : Scenario.SupportsGathering ? 6 : 2));
         if (Scenario.SupportsRecipe("bridge.v1"))
             Run(connection, transaction, """
-                INSERT INTO recipes(id,definition_id,definition_version,rules_version,wood_cost) VALUES('bridge.v1','bridge',1,$rules,3)
-                """, ("$rules", Scenario.RulesVersion));
+                INSERT INTO recipes(id,definition_id,definition_version,rules_version,wood_cost) VALUES('bridge.v1','bridge',1,$rules,$bridgeCost)
+                """, ("$rules", Scenario.RulesVersion), ("$bridgeCost", Scenario.SupportsContinuous ? 6 : 3));
         if (Scenario.SupportsGathering)
-            foreach (var tree in WorldScenario.InitialTrees)
+            foreach (var tree in Scenario.SupportsContinuous ? ContinuousWorld.Trees : WorldScenario.InitialTrees)
                 Run(connection, transaction, """
                     INSERT INTO resource_nodes(world_id,node_id,kind,x,y,initial_wood,remaining_wood)
                     VALUES($world,$node,$kind,$x,$y,$wood,$wood)
@@ -79,7 +79,7 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
         }
         var seed = JsonSerializer.Serialize(new { seq = 1, stateVersion = 0, commandId = (string?)null,
             actorId = (string?)null, type = "worldSeeded", quantity = 12,
-            source = Scenario.SupportsGathering ? "ITER-0010 initial wild wood" : Scenario == WorldScenario.Foundation ? "ITER-0001 initial allocation" :
+            source = Scenario.SupportsContinuous ? "ITER-0014 initial wild wood" : Scenario.SupportsGathering ? "ITER-0010 initial wild wood" : Scenario == WorldScenario.Foundation ? "ITER-0001 initial allocation" :
                 Scenario.SupportsMosaicConsent ? "ITER-0007 initial allocation" :
                 Scenario.SupportsMosaic ? "ITER-0006 initial allocation" :
                 Scenario.SupportsPostcards ? "ITER-0005 initial allocation" :
@@ -114,7 +114,7 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
 
     private WorldScenario ReadScenario(SqliteConnection connection, SqliteTransaction transaction, long schemaVersion)
     {
-        if (schemaVersion is not (1 or 2 or 3 or 4 or 5 or 6 or 7)) throw new InvalidOperationException("不支持的数据库版本");
+        if (schemaVersion is not (1 or 2 or 3 or 4 or 5 or 6 or 7 or 8)) throw new InvalidOperationException("不支持的数据库版本");
         // v1 predates scenario persistence and is always the original world. Do not migrate it,
         // rewrite historical objects/receipts, or infer a different world from environment values.
         using var command = Command(connection, transaction, schemaVersion == 1
@@ -293,6 +293,15 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
         CREATE TRIGGER immutable_resource_delete BEFORE DELETE ON resource_nodes
           BEGIN SELECT RAISE(ABORT,'immutable resource definition'); END;
         """ + SharedSchema + VisitsSchema + "\nPRAGMA user_version=7;";
+
+    private static readonly string SchemaV8 = SchemaV7
+        .Replace("'wilderness-v1'", "'wilderness-continuous-v1'").Replace("'r7'", "'r8'")
+        .Replace("x INTEGER NOT NULL CHECK(x BETWEEN 0 AND 7)", "x REAL NOT NULL CHECK(x BETWEEN 0 AND 32)")
+        .Replace("y INTEGER NOT NULL CHECK(y BETWEEN 0 AND 7)", "y REAL NOT NULL CHECK(y BETWEEN 0 AND 24)")
+        .Replace(", CHECK(x NOT IN(4,5) AND NOT(x=3 AND y<=2))", "")
+        .Replace(", CHECK(NOT(x=3 AND y<=2))", "")
+        .Replace("embodied_wood=3", "embodied_wood IN(3,6)")
+        .Replace("PRAGMA user_version=7;", "ALTER TABLE residents ADD COLUMN last_walk_ms INTEGER NOT NULL DEFAULT 0; ALTER TABLE residents ADD COLUMN walk_credit REAL NOT NULL DEFAULT 0.6; PRAGMA user_version=8;");
 
     private const string MosaicSchema = """
 

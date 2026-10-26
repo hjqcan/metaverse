@@ -3,7 +3,7 @@ extends Node
 signal changed
 
 const API = "/v1/worlds/foundation-01"
-var endpoint = "http://127.0.0.1:5088"
+var endpoint = "http://127.0.0.1:5089"
 var token = ""
 var observation: Dictionary = {}
 var identity: Dictionary = {}
@@ -14,8 +14,9 @@ var busy = false
 var storage_ok = true
 var message = "连接世界后开始探索。"
 var last_receipt: Dictionary = {}
-var state_path = "user://pending.json"
+var state_path = "user://continuous-pending.json"
 var floor_version = 0
+var retry_allowed = false
 
 func _ready() -> void:
 	if OS.has_environment("WORLD_CLIENT_STATE"):
@@ -39,9 +40,9 @@ func _valid_record(record: Variant) -> bool:
 		return false
 	var command: Dictionary = parser.data
 	return command.get("commandId") == record.commandId and command.get("schemaVersion") == 1 \
-		and command.get("rulesVersion") == "r7" and typeof(command.get("expectedStateVersion")) in [TYPE_INT, TYPE_FLOAT] \
+		and command.get("rulesVersion") == "r8" and typeof(command.get("expectedStateVersion")) in [TYPE_INT, TYPE_FLOAT] \
 		and command.expectedStateVersion >= 0 and command.expectedStateVersion <= 9007199254740991 \
-		and command.get("action") is Dictionary and command.action.get("type") in ["move", "gather", "build"]
+		and command.get("action") is Dictionary and command.action.get("type") in ["walk", "gather", "build"]
 
 func can_act() -> bool:
 	return healthy and not busy and storage_ok and pending.is_empty()
@@ -97,8 +98,7 @@ func _request(path: String, method: int = HTTPClient.METHOD_GET, body: String = 
 	return {"code": reply[1] if reply[0] == HTTPRequest.RESULT_SUCCESS else 0, "data": parsed if parsed is Dictionary else {}}
 
 func _integer_fields(value: Variant) -> Variant:
-	# Godot's JSON reader produces floats; protocol coordinates and counts are integers.
-	# Normalize once so array membership uses the same representation as local grid cells.
+	# JSON counts become integers; fractional metre coordinates stay fractional.
 	if value is float and is_finite(value) and value == floor(value) and abs(value) <= 9007199254740991:
 		return int(value)
 	if value is Array:
@@ -112,20 +112,21 @@ func _valid_observation(data: Dictionary) -> bool:
 	for field in ["world", "identity", "self"]:
 		if not data.get(field) is Dictionary:
 			return false
-	return data.get("schemaVersion") == 1 and data.get("rulesVersion") == "r7" \
+	return data.get("schemaVersion") == 1 and data.get("rulesVersion") == "r8" \
 		and data.get("world", {}).get("id") == "foundation-01" \
-		and data.get("world", {}).get("scenarioId") == "wilderness-v1" \
+		and data.get("world", {}).get("scenarioId") == "wilderness-continuous-v1" \
 		and data.get("identity", {}).get("actorId", "") == data.get("self", {}).get("actorId", "?") \
 		and data.get("stateVersion") is int and data.get("stateVersion", -1) >= floor_version \
 		and (identity.is_empty() or data.get("identity", {}).get("actorId") == identity.get("actorId")) \
 		and data.get("self", {}).get("position", []).size() == 2 \
-		and data.get("resourceNodes") is Array and data.get("entities") is Array
+		and data.get("resourceNodes") is Array and data.get("entities") is Array \
+		and data.get("movement", {}).get("kind") == "continuous"
 
 func _observe() -> bool:
 	var reply = await _request(API + "/observation")
 	if reply.code != 200 or not _valid_observation(reply.data):
 		healthy = false
-		message = "世界未同步，操作暂停。请检查连接、令牌及 wilderness-v1 场景。"
+		message = "世界未同步，操作暂停。请检查连接、令牌及 wilderness-continuous-v1 场景。"
 		return false
 	observation = reply.data
 	identity = observation.identity
@@ -171,7 +172,7 @@ func _settle(reply: Dictionary) -> bool:
 	var data = reply.data
 	if pending.is_empty() or not data.get("identity") is Dictionary or data.get("commandId") != pending.commandId \
 		or data.get("identity", {}).get("actorId") != pending.actorId \
-		or data.get("schemaVersion") != 1 or data.get("rulesVersion") != "r7" \
+		or data.get("schemaVersion") != 1 or data.get("rulesVersion") != "r8" \
 		or data.get("stateVersion", -1) < 0:
 		return false
 	var command = JSON.parse_string(pending.body)
@@ -204,8 +205,10 @@ func _submit() -> void:
 		message = "动作结果待确认。原请求已保留；可查询或原样重试。"
 
 func _lookup() -> void:
+	retry_allowed = false
 	var reply = await _request(API + "/commands/" + pending.commandId.uri_encode())
 	if not await _settle(reply):
+		retry_allowed = reply.code == 404 and reply.data.get("error", {}).get("code") == "COMMAND_NOT_FOUND" and reply.data.get("identity", {}).get("actorId") == pending.actorId
 		healthy = false
 		message = "尚未确认原动作。新动作暂停；可查询或原样重试。"
 
@@ -215,7 +218,7 @@ func recover(retry: bool = false) -> void:
 	busy = true
 	changed.emit()
 	await _lookup()
-	if retry and not pending.is_empty() and storage_ok:
+	if retry and retry_allowed and not pending.is_empty() and storage_ok:
 		await _submit()
 	busy = false
 	changed.emit()

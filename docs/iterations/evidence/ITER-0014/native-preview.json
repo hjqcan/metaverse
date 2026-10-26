@@ -1,0 +1,20 @@
+{
+  "renderer": "Godot 4.7.2 / OpenGL 3.3 / NVIDIA GeForce RTX 5070",
+  "status": "running",
+  "fpsSamples": [
+    "Project FPS: 60 (16.66 mspf)",
+    "Project FPS: 60 (16.66 mspf)",
+    "Project FPS: 60 (16.66 mspf)",
+    "Project FPS: 60 (16.66 mspf)",
+    "Project FPS: 60 (16.66 mspf)",
+    "Project FPS: 60 (16.66 mspf)",
+    "Project FPS: 60 (16.66 mspf)",
+    "Project FPS: 60 (16.66 mspf)",
+    "Project FPS: 60 (16.66 mspf)",
+    "Project FPS: 60 (16.66 mspf)",
+    "Project FPS: 60 (16.66 mspf)",
+    "Project FPS: 60 (16.66 mspf)"
+  ],
+  "liveWorldObservation": "preview.json",
+  "scope": "Idle native rendering samples; no claim of all-scene performance"
+}

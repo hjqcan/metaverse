@@ -1,0 +1,218 @@
+{
+  "passed": false,
+  "groups": 8,
+  "assertions": 41,
+  "results": [
+    {
+      "name": "basic",
+      "checks": [
+        {
+          "name": "r8 observation authenticated",
+          "passed": true
+        },
+        {
+          "name": "rendered initial",
+          "passed": true
+        },
+        {
+          "name": "held WASD moves in metres",
+          "passed": true
+        },
+        {
+          "name": "position has actual fractional coordinates",
+          "passed": true
+        },
+        {
+          "name": "mouse walks to unsnapped ground coordinate",
+          "passed": true
+        },
+        {
+          "name": "canopy raycast selects real tree",
+          "passed": true
+        },
+        {
+          "name": "walk approaches tree without entering trunk",
+          "passed": true
+        },
+        {
+          "name": "E gathers three authoritative units",
+          "passed": true
+        },
+        {
+          "name": "build shortcut opens preview",
+          "passed": true
+        },
+        {
+          "name": "continuous footprint preview visible",
+          "passed": true
+        },
+        {
+          "name": "rendered preview",
+          "passed": true
+        },
+        {
+          "name": "platform constructed from collected wood",
+          "passed": true
+        },
+        {
+          "name": "building position preserves fractions",
+          "passed": true
+        },
+        {
+          "name": "resource audit conserved",
+          "passed": true
+        },
+        {
+          "name": "rendered built",
+          "passed": true
+        },
+        {
+          "name": "rendered compact",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "bridge",
+      "passed": false,
+      "error": "bridge: exit 1\nGodot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nWARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.\n     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)\nWARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.\n     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:372)\nOpenGL API 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.2 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 20.1.2, 256 bits)\n\nERROR: whole bridge preview selected\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/godot/continuous.gd:11)\n       [1] run (/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/godot/continuous.gd:55)\n       [2] key (/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/godot/continuous.gd:34)\n"
+    },
+    {
+      "name": "after",
+      "checks": [
+        {
+          "name": "r8 initial observation",
+          "passed": true
+        },
+        {
+          "name": "lost response retains request and blocks new actions",
+          "passed": true
+        },
+        {
+          "name": "other identity cannot inherit pending command",
+          "passed": true
+        },
+        {
+          "name": "other resident remains unchanged",
+          "passed": true
+        },
+        {
+          "name": "restart resolves original persisted command",
+          "passed": true
+        },
+        {
+          "name": "lost response has exactly one effect",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "before",
+      "checks": [
+        {
+          "name": "r8 initial observation",
+          "passed": true
+        },
+        {
+          "name": "lost response retains request and blocks new actions",
+          "passed": true
+        },
+        {
+          "name": "other identity cannot inherit pending command",
+          "passed": true
+        },
+        {
+          "name": "other resident remains unchanged",
+          "passed": true
+        },
+        {
+          "name": "404 preserves original request",
+          "passed": true
+        },
+        {
+          "name": "original retry commits once",
+          "passed": true
+        },
+        {
+          "name": "original command ID preserved",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "wrong-receipt",
+      "checks": [
+        {
+          "name": "r8 initial observation",
+          "passed": true
+        },
+        {
+          "name": "wrong node receipt cannot settle original",
+          "passed": true
+        },
+        {
+          "name": "lookup resolves original once",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "stale",
+      "checks": [
+        {
+          "name": "r8 initial observation",
+          "passed": true
+        },
+        {
+          "name": "stale command settled as rejection",
+          "passed": true
+        },
+        {
+          "name": "stale command creates no material",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "offline",
+      "checks": [
+        {
+          "name": "r8 initial observation",
+          "passed": true
+        },
+        {
+          "name": "known receipt retained while observation unavailable",
+          "passed": true
+        },
+        {
+          "name": "commit remains known during observation outage",
+          "passed": true
+        },
+        {
+          "name": "outage blocks further action",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "corrupt-journal",
+      "checks": [
+        {
+          "name": "invalid durable record blocks actions",
+          "passed": true
+        },
+        {
+          "name": "invalid journal cannot mutate",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

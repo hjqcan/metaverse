@@ -4,13 +4,13 @@
 
 长期愿景是让这个世界承载越来越丰富的创作、关系、活动与生活体验。海洋、星空、外星球、天堂和地下世界都是可能的发展方向，不是当前已经实现的功能。
 
-**当前阶段：Godot 3D 俯视原型与原始采集。居民分散在河流两岸，空手出生，没有现成建筑或公共木材。木材先存在于树木中，砍取后进入个人库存，再用于搭建和造桥。已建成果会保留，后来者进入同一个持续世界。**
+**当前阶段：Godot 3D 俯视、连续自然地图与原始采集。居民分散在河流两岸，空手出生，没有现成建筑或公共木材。木材先存在于树木中，砍取后进入个人库存，再用于搭建和造桥。已建成果会保留，后来者进入同一个持续世界。**
 
 客户端路线已确认：先 Godot 原型，后续迁移 Unreal。启动服务后运行 `npm run start:godot`，进入实际3D场景；运行要求、操作和迁移边界见[Godot客户端](clients/godot/README.md)。世界状态仍由现有服务维护。
 
-最新成果：[ITER-0011 Godot俯视客户端](docs/iterations/ITER-0011-results.md) · [ITER-0010 原始开局](docs/iterations/ITER-0010-results.md) · [采集契约](docs/contracts/wilderness-v1.md) · [ITER-0009 入驻导览](docs/iterations/ITER-0009-results.md) · [导览契约](docs/contracts/entry-guide-v1.md) · [ITER-0008 提议收件箱](docs/iterations/ITER-0008-results.md) · [收件箱契约](docs/contracts/mosaic-inbox-v1.md) · [ITER-0007 协商修改](docs/iterations/ITER-0007-results.md) · [协商契约](docs/contracts/mosaic-consent-v1.md) · [ITER-0006 共同画布](docs/iterations/ITER-0006-results.md) · [ITER-0005 共同手记](docs/iterations/ITER-0005-results.md) · [ITER-0004 活动对照](docs/iterations/ITER-0004-results.md) · [ITER-0003 模型居民](docs/iterations/ITER-0003-results.md) · [ITER-0002 两地通行](docs/iterations/ITER-0002-results.md) · [ITER-0001 基础世界](docs/iterations/ITER-0001-results.md) · [底层研究](docs/research/2026-10-25-foundation/00-report.md)。
+最新成果：[ITER-0014 连续自然地图](docs/iterations/ITER-0014-results.md) · [连续坐标契约](docs/contracts/continuous-world-v1.md) · [ITER-0011 Godot俯视客户端](docs/iterations/ITER-0011-results.md) · [ITER-0010 原始开局](docs/iterations/ITER-0010-results.md) · [采集契约](docs/contracts/wilderness-v1.md) · [ITER-0009 入驻导览](docs/iterations/ITER-0009-results.md) · [导览契约](docs/contracts/entry-guide-v1.md) · [ITER-0008 提议收件箱](docs/iterations/ITER-0008-results.md) · [收件箱契约](docs/contracts/mosaic-inbox-v1.md) · [ITER-0007 协商修改](docs/iterations/ITER-0007-results.md) · [协商契约](docs/contracts/mosaic-consent-v1.md) · [ITER-0006 共同画布](docs/iterations/ITER-0006-results.md) · [ITER-0005 共同手记](docs/iterations/ITER-0005-results.md) · [ITER-0004 活动对照](docs/iterations/ITER-0004-results.md) · [ITER-0003 模型居民](docs/iterations/ITER-0003-results.md) · [ITER-0002 两地通行](docs/iterations/ITER-0002-results.md) · [ITER-0001 基础世界](docs/iterations/ITER-0001-results.md) · [底层研究](docs/research/2026-10-25-foundation/00-report.md)。
 
-当前入口：`npm start`（或 `bash scripts/run_wilderness.sh`），打开 `http://127.0.0.1:5088`，密钥位于 `.local/wilderness/access.json`。新世界默认 `wilderness-v1` / r7：选择树木、走到相邻一格、砍取木材，然后选择空地或水面搭建。初始 4 处树木、各 3 木材和 8×8 地图是本轮原型参数。
+当前入口：先 `npm start`（`bash scripts/run_continuous.sh`），再 `npm run start:godot`。新 r8 预览服务 `http://127.0.0.1:5089`，本机凭据与存档在 `.local/continuous`。32×24 米自然河谷，WASD／点击自由行走，E 采集，1／2 预览并搭平台或整座桥；没有格子取整。当前仍为四棵资源树共12木材的小型原型。旧 r7 预览可以用 `npm run start:wilderness` 启动，数据仍在 `.local/wilderness`；新地图不覆盖旧存档。
 
 历史脚本对应 5080—5087，数据目录相互独立，不把旧世界重置成原始开局。旧 `run_world.sh` 显式选择 foundation 实验；服务读取已有数据库时始终沿用原场景。低层服务面对未指定场景的新数据库时，也默认采用原始开局。
 

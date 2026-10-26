@@ -1,5 +1,7 @@
 # 最小世界验收
 
+当前 Godot 连续地图另外运行 `npm run test:continuous` 和 `npm run test:godot`。前者验证 r8 权威几何、限速、资源与恢复，后者使用真实 Godot / OpenGL 场景、键鼠输入和故障代理，证据在 `.local/iter0014/`；详见[客户端说明](../clients/godot/README.md)。以下旧场景验收继续保留。
+
 完整普通回归（构建一次，并行执行隔离的 HTTP／Chrome 套件，**不会调用真实模型**）：
 
 ```bash
@@ -194,6 +196,6 @@ node tests/browser/wilderness.mjs
 
 ## Godot 原生客户端
 
-`dotnet build src/World.Server/World.Server.csproj --no-restore` 后，运行 `GODOT_BIN=/path/to/godot npm run test:godot`。需要 Godot 4.7.2 和 Linux `xvfb-run`，结果及截图保存在 `.local/iter0011/godot/`。此入口独立于不要求安装游戏引擎的 `npm test`，不能把普通 Chrome 回归写成 Godot 验收。
+`dotnet build src/World.Server/World.Server.csproj --no-restore` 后，运行 `GODOT_BIN=/path/to/godot npm run test:godot`。需要 Godot 4.7.2 和 Linux `xvfb-run`，当前连续地图的结果及截图保存在 `.local/iter0014/godot/`（ITER-0011 的历史证据仍保留）。此入口独立于不要求安装游戏引擎的 `npm test`，不能把普通 Chrome 回归写成 Godot 验收。
 
 真实 Godot OpenGL 渲染、实际场景鼠标／键盘输入、隔离 .NET / SQLite 服务及故障代理验证采集、搭建、跨岸复用、身份、状态冲突、错误回执、读失败、丢响应与客户端／服务重启。所有测试子进程和代理结束时停止，模型调用0；仅无头导入不算视觉验证。

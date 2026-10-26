@@ -15,6 +15,7 @@ internal sealed record WorldScenario(string Id, string RulesVersion, int GoalX)
     public static readonly WorldScenario Postcards = new("postcards-v1", "r4", 6);
     public static readonly WorldScenario Mosaic = new("mosaic-v1", "r5", 6);
     public static readonly WorldScenario Consent = new("consent-v1", "r6", 6);
+    public static readonly WorldScenario Continuous = new("wilderness-continuous-v1", "r8", 26);
     public static readonly WorldScenario Wilderness = new("wilderness-v1", "r7", 6);
 
     public static readonly IReadOnlyList<MosaicColor> MosaicPalette = Array.AsReadOnly<MosaicColor>([
@@ -39,8 +40,9 @@ internal sealed record WorldScenario(string Id, string RulesVersion, int GoalX)
         new("tree-east-north", "tree", [6, 2], 3, 3), new("tree-east-south", "tree", [7, 6], 3, 3)
     ]);
 
-    public bool SupportsGathering => Id == Wilderness.Id;
-    public int StorageVersion => SupportsGathering ? 7 : SupportsMosaicConsent ? 6 : SupportsMosaic ? 5 : SupportsPostcards ? 4 : SupportsActivities ? 3 : 2;
+    public bool SupportsContinuous => Id == Continuous.Id;
+    public bool SupportsGathering => Id == Wilderness.Id || SupportsContinuous;
+    public int StorageVersion => SupportsContinuous ? 8 : SupportsGathering ? 7 : SupportsMosaicConsent ? 6 : SupportsMosaic ? 5 : SupportsPostcards ? 4 : SupportsActivities ? 3 : 2;
     public bool SupportsMosaicConsent => Id == Consent.Id;
     public bool SupportsMosaic => Id == Mosaic.Id || SupportsMosaicConsent;
     public bool SupportsPostcards => Id == Postcards.Id || SupportsMosaic;
@@ -56,6 +58,7 @@ internal sealed record WorldScenario(string Id, string RulesVersion, int GoalX)
         "mosaic-v1" => Mosaic,
         "consent-v1" => Consent,
         "wilderness-v1" => Wilderness,
+        "wilderness-continuous-v1" => Continuous,
         _ => throw new InvalidOperationException("不支持的 WORLD_SCENARIO 场景")
     };
 
@@ -68,4 +71,4 @@ internal sealed record WorldScenario(string Id, string RulesVersion, int GoalX)
 
 internal sealed record MosaicColor(string Id, string Label, string Hex);
 
-internal sealed record WorldResourceNode(string NodeId, string Kind, long[] Position, long InitialWood, long RemainingWood);
+internal sealed record WorldResourceNode(string NodeId, string Kind, double[] Position, long InitialWood, long RemainingWood);

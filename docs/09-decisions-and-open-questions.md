@@ -39,6 +39,7 @@
 | C17 | 不允许依靠先发形成垄断优势，后来者应能继续参与与创造 | 2026-10-26 后续明确；关键范围、替代条件与制度待设计，不将任何集中都等同于立即经济崩盘 | [先发与进入](13-entry-and-bounded-advantage.md)、[经济](02-economy-and-resources.md) |
 | C18 | 先用 Godot 制作原型，后续迁移 Unreal 引擎 | 2026-10-26 用户明确；不是直接把 Godot 场景自动转换为 Unreal | [架构](05-architecture-options.md)、[客户端](../clients/godot/README.md) |
 | C19 | Godot 原型采用3D俯视视角 | 用户在视角选择中明确“3D俯视”；连续移动、角色动画与视觉风格细节仍由原型验证 | [客户端](../clients/godot/README.md) |
+| C20 | 地图采用自然连续场景，居民直接自由行走，不再逐格操作 | 2026-10-26 用户明确要求正常地图，并提供游戏开发技能和3D工作流参考 | [连续地图](contracts/continuous-world-v1.md) |
 
 ## 3. 尚未逐项采纳的主要建议
 

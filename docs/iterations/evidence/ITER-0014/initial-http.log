@@ -1,0 +1,36 @@
+test_01_observation_is_continuous_and_old_grid_is_absent (__main__.ContinuousAcceptance.test_01_observation_is_continuous_and_old_grid_is_absent) ... ok
+test_02_fractional_diagonal_coordinates_persist_across_restart (__main__.ContinuousAcceptance.test_02_fractional_diagonal_coordinates_persist_across_restart) ... ok
+test_03_speed_budget_prevents_spam_teleport (__main__.ContinuousAcceptance.test_03_speed_budget_prevents_spam_teleport) ... ok
+test_04_tree_blocks_sweep_and_depletion_removes_collision (__main__.ContinuousAcceptance.test_04_tree_blocks_sweep_and_depletion_removes_collision) ... ok
+test_05_rock_and_river_stop_motion (__main__.ContinuousAcceptance.test_05_rock_and_river_stop_motion) ... ok
+test_06_world_boundary_is_continuous (__main__.ContinuousAcceptance.test_06_world_boundary_is_continuous) ... ok
+test_07_replay_and_concurrent_same_id_move_once (__main__.ContinuousAcceptance.test_07_replay_and_concurrent_same_id_move_once) ... ok
+test_08_legacy_move_stale_and_invalid_coordinates_fail_without_effect (__main__.ContinuousAcceptance.test_08_legacy_move_stale_and_invalid_coordinates_fail_without_effect) ... ok
+test_09_fractional_platform_uses_collected_wood_and_preserves_history (__main__.ContinuousAcceptance.test_09_fractional_platform_uses_collected_wood_and_preserves_history) ... ok
+test_10_build_checks_complete_footprint_and_gather_distance (__main__.ContinuousAcceptance.test_10_build_checks_complete_footprint_and_gather_distance) ... ok
+test_11_real_bridge_allows_both_residents_to_cross (__main__.ContinuousAcceptance.test_11_real_bridge_allows_both_residents_to_cross) ... FAIL
+test_12_failed_gather_and_commit_loss_preserve_original_identity (__main__.ContinuousAcceptance.test_12_failed_gather_and_commit_loss_preserve_original_identity) ... ok
+
+======================================================================
+FAIL: test_11_real_bridge_allows_both_residents_to_cross (__main__.ContinuousAcceptance.test_11_real_bridge_allows_both_residents_to_cross)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/continuous_api.py", line 99, in test_11_real_bridge_allows_both_residents_to_cross
+    self.gather();self.walk([7.8,15.5]);self.gather('tree-west-south')
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/continuous_api.py", line 51, in gather
+    for _ in range(count):self.send({'type':'gather','nodeId':node})
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/continuous_api.py", line 38, in send
+    self.assertEqual(status,code,result)
+AssertionError: 200 != 422 : {'schemaVersion': 1, 'rulesVersion': 'r8', 'stateVersion': 37, 'commandId': '6e7456b619de4a6da946e01a1c98195e', 'identity': {'operatorId': 'local-operator', 'actorId': 'a1', 'sessionId': 's91e669c293e547858d4afb2e02a10f79'}, 'eventCursor': 38, 'error': {'code': 'UNREACHABLE', 'message': '请走到树旁 1.6 米内', 'retryable': False, 'mutated': False}, 'status': 'rejected'}
+
+----------------------------------------------------------------------
+Ran 12 tests in 14.122s
+
+FAILED (failures=1)
+Traceback (most recent call last):
+  File "/home/wangjunfeng/orca/workspaces/metaverse/https-github.com-hjqcan-metaverse/tests/continuous_api.py", line 119, in <module>
+    (RUN/'results.json').write_text(json.dumps({'passed':result.wasSuccessful(),'testsRun':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'checks':result.evidence},indent=2))
+                                                                                                                                                                                ^^^^^^^^^^^^^^^
+AttributeError: 'EvidenceResult' object has no attribute 'evidence'

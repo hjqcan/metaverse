@@ -1,0 +1,57 @@
+{
+  "checks": [
+    {
+      "name": "r8 observation authenticated",
+      "passed": true
+    },
+    {
+      "name": "rendered initial",
+      "passed": true
+    },
+    {
+      "name": "held WASD moves in metres",
+      "passed": true
+    },
+    {
+      "name": "position has actual fractional coordinates",
+      "passed": true
+    },
+    {
+      "name": "mouse walks to unsnapped ground coordinate",
+      "passed": true
+    },
+    {
+      "name": "canopy raycast selects real tree",
+      "passed": true
+    },
+    {
+      "name": "walk approaches tree without entering trunk",
+      "passed": true
+    },
+    {
+      "name": "E gathers three authoritative units",
+      "passed": true
+    },
+    {
+      "name": "build shortcut opens preview",
+      "passed": true
+    },
+    {
+      "name": "continuous footprint preview visible",
+      "passed": true
+    },
+    {
+      "name": "rendered preview",
+      "passed": true
+    },
+    {
+      "name": "platform constructed from collected wood",
+      "passed": true
+    },
+    {
+      "name": "building position preserves fractions",
+      "passed": false
+    }
+  ],
+  "passed": false
+}

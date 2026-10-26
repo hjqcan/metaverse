@@ -1,0 +1,35 @@
+{
+  "rulesVersion": "r8",
+  "stateVersion": 0,
+  "world": {
+    "id": "foundation-01",
+    "scenarioId": "wilderness-continuous-v1",
+    "width": 32,
+    "height": 24,
+    "coordinateSystem": "continuous-xz",
+    "bounds": [
+      0,
+      0,
+      32,
+      24
+    ]
+  },
+  "self": {
+    "actorId": "a1",
+    "position": [
+      5,
+      7
+    ],
+    "inventory": {
+      "wood": 0
+    }
+  },
+  "resourceAudit": {
+    "issuedWood": 12,
+    "wildWood": 12,
+    "depotWood": 0,
+    "inventoryWood": 0,
+    "embodiedWood": 0,
+    "conserved": true
+  }
+}

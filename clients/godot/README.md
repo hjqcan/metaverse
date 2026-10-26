@@ -1,44 +1,49 @@
 # Godot 3D 俯视原型
 
-先用 Godot 做原型，后续迁移 Unreal。当前使用 Godot 4.7.2 标准版 / GDScript，兼容渲染器；不需要 Godot .NET。这是同一 `World.Server` 的原生客户端，初始分散居民、采集、库存、建造、通路与持久化仍由服务端裁决。浏览器保留为观察与调试入口。
+Godot 4.7.2 / GDScript，兼容渲染器。当前是连续自然地图：角色在河谷里自由行走，靠近树木采集，选择位置搭平台或造整座木桥。位置、碰撞、木材和建筑由 `World.Server` 权威裁决。
 
 ## 运行
 
-先在仓库根目录启动服务：
-
 ```bash
 npm start
+# 另开终端
+npm run start:godot
+# 第二名居民
+WORLD_ACTOR=a2 npm run start:godot
 ```
 
-另开终端运行客户端：
+默认服务 `http://127.0.0.1:5089`，新 r8 预览数据在 `.local/continuous`。启动脚本从该目录的 `access.json` 读取令牌，不打印凭据。旧 r7 数据保留在 `.local/wilderness`，可以用 `npm run start:wilderness` 启动其历史服务；不会迁移或重置旧存档。
+
+需安装 Godot 4.7.2，或设置 `GODOT_BIN=/path/to/godot`；本工作区已有经过官方 SHA512 校验的独立二进制。`WORLD_URL`、`WORLD_ACCESS_FILE`、`WORLD_ACTOR` 可覆盖连接。编辑器打开 `project.godot` 后运行，也可使用右上角连接面板。
+
+## 操作
+
+- WASD / 方向键自由行走，支持斜向；点击地面连续前往，点击树冠走近。撞到树、岩石、河岸便停下；点击路径暂不自动绕障碍。
+- 靠近树中心 1.6 米内按 E 采集，每次取得1木材；采空变为树桩并移除树干碰撞。
+- 1 选择平台，消耗3木材；2 选择整座木桥，消耗6木材。移动鼠标预览占地，左键确认。桥会对齐河道中心线；绿色表示当前可建，红色不可建。最终结果仍由服务器验证。
+- Esc 取消行走／建造；滚轮缩放。镜头平滑跟随，遮住居民的树冠淡出，采集有动作与到账反馈。
+
+接入失败或结果未知时暂停新动作，保留上次确认状态。原 ID、原请求和居民关联保存到 `user://continuous-pending.json`，不保存令牌。恢复先查询回执，确认 404 才能原样重试；切换身份不会继承别人的请求。`WORLD_CLIENT_STATE` 可指定独立恢复文件。
+
+## 协议与引擎边界
+
+[`continuous-world-v1.md`](../../docs/contracts/continuous-world-v1.md) 是 Godot 与 Python Agent 共用的 r8 契约。`[x,z]` 是米制实数，不再是格子编号。
+
+- `world_client.gd`：HTTP / JSON、认证观察、命令回执和恢复。
+- `main.gd`：键鼠输入、交互、建造预览和 HUD。
+- `world_view.gd`、`river.gdshader`：连续地形、场景对象、角色表现和跟随镜头；Godot 碰撞体用于场景拾取，服务端负责行走碰撞。
+- `src/World.Server/ContinuousWorld.cs`：可独立于引擎复用的几何、速度额度与资源规则。
+
+当前仍是小型原型，四棵资源树共12木材，无工具制造、生态再生和角色骨骼资产。以后迁移 Unreal 需要重写客户端、材质和交互；世界身份、HTTP 契约与持久事实可继续使用，并不承诺 GDScript 自动转换。
+
+## 验证与参考
 
 ```bash
-GODOT_BIN=/path/to/godot npm run start:godot
-# 本工作区已放置独立 Godot 二进制时，可以直接 npm run start:godot
-```
-
-脚本默认连接 `http://127.0.0.1:5088`，从本机 `.local/wilderness/access.json` 读取 a1 的令牌，不打印或把令牌传进命令参数。`WORLD_ACTOR=a2` 可进入另一居民；`WORLD_URL`、`WORLD_ACCESS_FILE` 可指定另一服务和凭据文件。直接在 Godot 编辑器打开 `project.godot` 并按 F6/F5 运行时，也可在客户端填写地址与令牌。
-
-操作：鼠标选择树木或地块，按钮走到树旁／走到这里；WASD、方向键或屏幕方向按钮逐格移动；树旁按 E 或点击砍取，每次获得1木材。采空后可通行，在空地搭平台、在相邻水面铺桥段，各耗3木材。滚轮缩放，Esc／停止按钮中断后续寻路；已经发送的那一步等待原回执。当前是8×8格的玩法原型，没有连续运动、角色动画、工具或生态再生。
-
-本版连接 `wilderness-v1` / r7。旧实验场景继续使用原浏览器；不静默迁移旧库。接入失败或读取失败时暂停新动作，显示上次已确认画面。动作发送前先把原ID、载荷与居民关联写入 `user://pending.json`，无令牌；结果未知时保留，可查询或原样重试。重启客户端和服务后按同一地址、居民恢复，不新建替代动作。`WORLD_CLIENT_STATE` 可指定独立恢复文件，自动验收使用它隔离数据。
-
-## 引擎边界
-
-- `world_client.gd`：现有 HTTP / JSON 协议适配、认证观察、命令与回执、未决记录。
-- `world_view.gd`：把观察映射为地块、树木、居民、平台／桥梁；碰撞体仅用于鼠标选择。
-- `main.gd`：输入、界面与逐步寻路。规划只建议下一步，每一步都需服务器确认；不直接修改权威位置、库存或资源。
-
-Godot 使用 X/Z 表示服务端二维 x/y，1格对应1视觉单位。后续 Unreal 重新实现输入、画面、镜头和协议适配，继续接入相同世界ID、居民身份、命令和版本规则；世界数据库不因换引擎重建。GDScript、场景、材质、UI不会自动转为 Unreal。现阶段不增加双引擎抽象框架，也不把规则搬进 Godot。
-
-## 验证
-
-```bash
-# 先构建 World.Server；普通回归仍为 npm test
 dotnet build src/World.Server/World.Server.csproj --no-restore
-GODOT_BIN=/path/to/godot npm run test:godot
+npm run test:continuous
+npm run test:godot
 ```
 
-Linux验收还需要 `xvfb-run`。脚本启动真实 Godot OpenGL 渲染器，给实际场景注入鼠标／键盘输入，连接隔离的 .NET / SQLite 服务，并用代理制造丢响应；自动保存截图与结果。服务、代理和客户端都在结束后停止，数据在 `.local/iter0011/`。模型调用为0。无图形界面的 `--headless` 导入检查不替代真实渲染验证。
+HTTP 验证和真实 Godot / OpenGL 输入测试使用隔离数据库和随机本机端口；故障代理测试断线、丢回包、原请求恢复和身份隔离。结果与截图写入 `.local/iter0014/`。Linux 需要 `xvfb-run`；模型调用0。
 
-依据：[Godot下载](https://godotengine.org/download/linux/)、[HTTPRequest](https://docs.godotengine.org/en/stable/classes/class_httprequest.html)、[Camera3D](https://docs.godotengine.org/en/stable/classes/class_camera3d.html)。下载版本已通过官方 `SHA512-SUMS.txt` 校验。
+本轮按用户提供的 [游戏开发技能库](https://github.com/gamedev-skills/awesome-gamedev-agent-skills) 使用 `godot-3d-essentials`、`godot-physics`、`camera-systems`。参考 [Sac 的 3D 游戏工作流](https://x.com/Saccc_c/status/2110694725640474759) 的统一风格、场景与角色分工、多角度实机检查；没有使用该游戏的模型、付费服务或改换引擎。

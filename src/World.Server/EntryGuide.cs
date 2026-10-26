@@ -10,7 +10,7 @@ internal static class EntryGuide
     {
         var start = (X: x, Y: y);
         var bridgeAt = bridges.ToDictionary(b => (X: b.Position[0], Y: b.Position[1]));
-        var liveTrees = resources.Where(n => n.RemainingWood > 0).Select(n => (n.Position[0], n.Position[1])).ToHashSet();
+        var liveTrees = resources.Where(n => n.RemainingWood > 0).Select(n => ((long)n.Position[0], (long)n.Position[1])).ToHashSet();
         var previous = new Dictionary<(long X, long Y), (long X, long Y)> { [start] = start };
         var queue = new Queue<(long X, long Y)>();
         queue.Enqueue(start);
