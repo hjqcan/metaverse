@@ -1,0 +1,148 @@
+{
+  "passed": false,
+  "groups": 9,
+  "assertions": 11,
+  "results": [
+    {
+      "name": "build_workshop-before",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: restarted native adapter settles original command\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:28)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original command ID survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:29)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original action survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:30)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original disk journal settles\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:31)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original action and author proven by three responses\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:34)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\n"
+    },
+    {
+      "name": "craft_tool-after",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: restarted native adapter settles original command\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:28)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original command ID survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:29)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original action survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:30)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original disk journal settles\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:31)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original action and author proven by three responses\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:34)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\n"
+    },
+    {
+      "name": "deposit_wood-after-later",
+      "passed": false,
+      "error": "({'schemaVersion': 1, 'rulesVersion': 'r10', 'commandId': 'qa2_ad0161d31c8049eaa2570d8657b9c340', 'expectedStateVersion': 139, 'preconditionMode': 'actor-state-v1', 'action': {'type': 'withdraw_wood', 'capabilityVersion': 1, 'entityId': 'eeda1761cc25f4ab39369ca41d35ad7d6', 'quantity': 3}}, (422, {'schemaVersion': 1, 'rulesVersion': 'r10', 'stateVersion': 139, 'commandId': 'qa2_ad0161d31c8049eaa2570d8657b9c340', 'identity': {'operatorId': 'declared-late', 'actorId': 'a2', 'sessionId': 's6110c5f4de504ca18682d67b7a49caab'}, 'eventCursor': 140, 'error': {'code': 'INSUFFICIENT_RESOURCE', 'message': '箱内木材不足', 'retryable': False, 'mutated': False}, 'status': 'rejected', 'execution': {'preconditionMode': 'actor-state-v1', 'observedStateVersion': 139, 'appliedOnStateVersion': 139}}))"
+    },
+    {
+      "name": "withdraw_wood-before",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: restarted native adapter settles original command\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:28)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original command ID survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:29)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original action survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:30)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original disk journal settles\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:31)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original action and author proven by three responses\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:34)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original transfer quantity retained\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:36)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\n"
+    },
+    {
+      "name": "deposit_wood-receipt",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: restarted native adapter settles original command\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:28)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original command ID survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:29)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original action survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:30)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original disk journal settles\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:31)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original action and author proven by three responses\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:34)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original transfer quantity retained\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:36)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\n"
+    },
+    {
+      "name": "deposit_wood-event",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: restarted native adapter settles original command\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:28)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original command ID survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:29)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original action survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:30)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original disk journal settles\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:31)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original action and author proven by three responses\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:34)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original transfer quantity retained\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:36)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\n"
+    },
+    {
+      "name": "deposit_wood-detail",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: restarted native adapter settles original command\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:28)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original command ID survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:29)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original action survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:30)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original disk journal settles\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:31)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original action and author proven by three responses\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:34)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original transfer quantity retained\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:36)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\n"
+    },
+    {
+      "name": "deposit_wood-capability",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: restarted native adapter settles original command\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:28)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original command ID survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:29)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original action survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:30)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original disk journal settles\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:31)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original action and author proven by three responses\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:34)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\nERROR: original transfer quantity retained\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:36)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:394)\n       [4] _request (res://world_client.gd:166)\n"
+    },
+    {
+      "name": "walk-legacy",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "workshop original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        }
+      ],
+      "postCount": 1,
+      "originalBodySha256": "dc496a54be0a26a814fe4b5ac38028b2789a22413cf4aef61f6ccb98f8c14db6",
+      "receipt": {
+        "commandId": "godot_2eecf334c3084050d6c5f913c2020fb2",
+        "error": null,
+        "eventCursor": 132,
+        "execution": {
+          "appliedOnStateVersion": 130,
+          "observedStateVersion": 130,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "s6110c5f4de504ca18682d67b7a49caab"
+        },
+        "result": {
+          "action": "walk",
+          "blocked": false,
+          "position": [
+            26.1,
+            21.4
+          ]
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 131,
+        "status": "committed"
+      }
+    }
+  ],
+  "actualModelCalls": 0,
+  "sourceSha256": {
+    "clients/godot/command_evidence.gd": "a9d9d78114c6a462bc7af7ea99de9b801b38dd8612790b1f6a3b6a1eda981937",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_canvas_panel.gd": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/entity_notes_panel.gd": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803",
+    "clients/godot/main.gd": "80e13053e1eb90c0c6d0a161ea5ace303e4d72062ed39c23be1b82b81933aee6",
+    "clients/godot/material_panel.gd": "0ca9ce3e6eef38690d9bbc7e77b7e8d75f4bb654e1ab2495e7598aaa632a9798",
+    "clients/godot/pending_store.gd": "98b0d5836e8d6d1850212756f2a131ca4010584e74dbd534638563fe56f09336",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/workshop_evidence.gd": "2ee74cc3336881d465e95618662357b1b6530bc22b7d6e92a43cd52729f37e31",
+    "clients/godot/workshop_panel.gd": "8b374a6d24c941ae431debd0bda15d36c8550663073f30da78923b6d734eb74c",
+    "clients/godot/world_client.gd": "630c2b93026e51f2060b6a0725be60de94b0d4c96c0e4eef84251b2706188b79",
+    "clients/godot/world_navigation.gd": "dd711ea6398bcfdf2f89242992f6b3c5aa8530bb1c59c1d705494f27be2f948a",
+    "clients/godot/world_view.gd": "63c541b7a766dc71dab544d67329422270ae4062ca62fbe00d9d5dd269f0f979",
+    "tests/workshop_godot.py": "d7da3f552834f515c4c3f45d14cde5643c11087bc2775a42734ae4277c2a0907",
+    "tests/godot/workshop_recovery.gd": "5a6d13359ca15eabf80a7bf102baee33b33a80ffcf4a544bf50b546806fada53"
+  },
+  "sourceUnchanged": true,
+  "dllSha256": "926a46b26db9753fbb8bc46b498ac661064c2039c7317bbf3bd26fa04d9e96a7",
+  "temporaryWorldsRemoved": true
+}

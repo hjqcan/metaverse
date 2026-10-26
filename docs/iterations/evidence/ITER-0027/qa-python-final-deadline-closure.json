@@ -1,0 +1,147 @@
+{
+  "kind": "qa2-final-persistence-deadline-closure",
+  "atUtc": "2026-10-26T09:21:21.704628+00:00",
+  "finding": "QA2-ITER27-PY-DEADLINE-01",
+  "verdict": "closed_verified",
+  "originalFindingReport": ".local/test-agent2/iter27-python-final-review.json",
+  "originalFindingReportSha256": "97c11ffe20d24bbf7badb6233d54c07a6c7c029b7447f3f9bc192d7cd292c5ba",
+  "sourceReport": ".local/iter0027/python-report.json",
+  "sourceReportSha256": "53c5bc390f8f3a157d8189738d09d8ad4af2898588e8cc5b9f4feab8dd9a55d4",
+  "scope": "Read-only two-line source difference and original-failure/final-targeted artifacts, no new runtime or broader testing.",
+  "sourceHashes": {
+    "scripts/resident_workshop.py": "0d1ef7c9d904031890dc29f8465fb72e14584733576561f4d182b7fd727ef2e0",
+    "scripts/resident_mission.py": "ee58118ca6396e75de6cc22e96e4dcc7bc3c6e3e0cf9f995648cc3579013b759",
+    "scripts/run_resident.py": "32834ee8e8e99f748f6e4939bfaabf8e8d9a217e696d6432ab1cbe33990ba5b3",
+    "scripts/foundation_agent.py": "47ed67f26d997b41550335885de07d9615594d9e13fbfa1135a4a520a04fb08b",
+    "scripts/continuous_navigation.py": "0e2a58a386aeb13bdf41a403d1a0864039e962e9f81bcbf981663500584a9225",
+    "scripts/command_preconditions.py": "37be9d8233627cd44026c4e7c4bdc7b23fbe77de46c69004a2affd910ab5c0af",
+    "scripts/resident_construction.py": "6d5b9ee9a7d3591bac2b57a80e42b474fb6f5a0b964b800a71f95c16dfa9939b",
+    "src/World.Server/wwwroot/resident.js": "4a18005d84706c5d39d9fb4be7c5f571ef355c99ae908c8268d94a131be980f0",
+    "tests/workshop_mission_api.py": "d77c5a63da604dfb5fa0bfafd72c7c338bff68a721440a248ca8f3e006ba0404",
+    "tests/browser/workshop-resident.mjs": "badf77cc93d2be4506b1f6ea549866c53a79645325ca705015c88f84d99aef95",
+    "docs/contracts/workshop-mission-v1.md": "8632612fffd4b56938944d2cfebff78121713cfb3d72caa29e9b60fe3590675c",
+    "examples/workshop-build-chest.json": "74f2c61af3bb81fade8b18c26cea8f9ec65b80622751f5144c2ef605e8185a9a",
+    "examples/workshop-build-workbench.json": "0eedd38e4e5a83f9b31022a2e74cee6a5954ece8b6729f467c78f468a6265a3c",
+    "examples/workshop-craft-mallet.json": "77a114eeec4d0dc26576a079185930c60201ffce7051c2ab6f3be2ce0f55d3a5",
+    "examples/workshop-deposit-wood.json": "f3681ba59eeb20da218c9cde91dadb3d878f55ad6450f83e16c1bd7ace27107f",
+    "examples/workshop-withdraw-wood.json": "04bb0569ad8b0adfb317fddc02ef583772c74985eb2939d47eac4e6aea184ada"
+  },
+  "changedFiles": [
+    "scripts/resident_workshop.py",
+    "tests/workshop_mission_api.py"
+  ],
+  "other14ManifestFilesUnchanged": true,
+  "twoLineDifferenceProof": "Replacing exactly the two new max(cached_seconds,current_elapsed) guards by the previous cached-only guards reconstructs the exact f890ff7a SHA256. No other product source change.",
+  "fixturePlacementReview": {
+    "fresh": "Second persistence with non-null pending: first is intent creation, second is final fresh pre-POST save. The delay follows the real durable writer but occurs before it returns to the executor.",
+    "resend": "Third persistence with last query kind observation: query pre-save, observation result save, then final resend save. Previous receipt-query saves are excluded.",
+    "faultBoundary": "Controlled wrapper delays return from _save after actual fsync/replace; models final durable-call latency. No claim that the OS fsync itself took1.05s naturally."
+  },
+  "evidence": [
+    {
+      "run": "20261026T091650Z-729b4a",
+      "test": "test_24_last_fresh_save_crosses_deadline_preserves_pending",
+      "stateStatus": "completed",
+      "stateReason": "workshop_action_and_return_verified",
+      "recordedPosts": 1,
+      "hashes": {
+        "state.json": "eae86c9dbf41557064342ac0a96398d8fa0217d19f45d7e6406f8f3bbcbb1754",
+        "traffic.json": "b8495807105e546ed1b5852c6d063e07edcca1d01dc13c1c30e9ffc92d9e13cb",
+        "reports.json": "2ccb4c79ec8bc059c5b6ea37331bbb7fd536ffbd8c8100f048b5b9477d8d7fe1",
+        "audit.json": "e5f0351e57a3cf0001d1941045f09e342ddb00f7cfeeebb646c4052a042cb980"
+      },
+      "cachedSeconds": 0.025080204010009766,
+      "elapsedAfterFinalSave": 1.07743501663208,
+      "delayArtifactSha256": "b2433cb1df442654f043778e7a070ef689d38d9f14c1dd54486b8c9c11372494",
+      "originalPendingRetained": false
+    },
+    {
+      "run": "20261026T091650Z-729b4a",
+      "test": "test_25_last_resend_save_crosses_deadline_preserves_original",
+      "stateStatus": "completed",
+      "stateReason": "workshop_action_and_return_verified",
+      "recordedPosts": 1,
+      "hashes": {
+        "state.json": "7e4759b4b874c3352c26eb14548fe17538ecb40c463bbb309c6d6455fa707f9b",
+        "traffic.json": "7bfacafec91b0db598141851c4ddce7d4acc301b785e09c5295cfe534badee9d",
+        "reports.json": "77221067a6c94d6459b5ce207fd352ca8b7c0e3ac51b22e860463e19ee24f64d",
+        "audit.json": "e5f0351e57a3cf0001d1941045f09e342ddb00f7cfeeebb646c4052a042cb980"
+      },
+      "cachedSeconds": 0.06807494163513184,
+      "elapsedAfterFinalSave": 1.120551347732544,
+      "delayArtifactSha256": "83f3c4d4ae6f1a87d536419464af44505772b956f3e6c6c9c30e2dd304038bc9",
+      "originalPendingRetained": false
+    },
+    {
+      "run": "20261026T091721Z-7fe1d9",
+      "test": "test_02_dropped_success_restores_original_without_post",
+      "stateStatus": "completed",
+      "stateReason": "workshop_action_and_return_verified",
+      "recordedPosts": 0,
+      "hashes": {
+        "state.json": "dfb98fba7730a36362795581168df4ec5cded56667a29a381d2bf28761f2db62",
+        "traffic.json": "01a686ffb91183ab4121699957c7817b8b37d403a89bdc49b529966cf58801af",
+        "reports.json": "7e1fae4b377bc0ef1643776ea7530e4b69cff48d98e6bca2cf070f9a6c6232fe",
+        "audit.json": "e5f0351e57a3cf0001d1941045f09e342ddb00f7cfeeebb646c4052a042cb980"
+      }
+    },
+    {
+      "run": "20261026T091721Z-7fe1d9",
+      "test": "test_03_unsubmitted_pending_404_resends_exact_original",
+      "stateStatus": "completed",
+      "stateReason": "workshop_action_and_return_verified",
+      "recordedPosts": 1,
+      "hashes": {
+        "state.json": "e07a64b5353857cf3183e571a852b31f57da01d2afbcb336f6b066052ebbc05c",
+        "traffic.json": "f41b0dbcdb1063790a162d9eac8cc7fb2832983c58131413126f900584b2b627",
+        "reports.json": "7eebf269fea8d03d9f036459f05e00bb609dc4d8110e2362bcec2f426eeee659",
+        "audit.json": "e5f0351e57a3cf0001d1941045f09e342ddb00f7cfeeebb646c4052a042cb980"
+      }
+    },
+    {
+      "run": "20261026T091721Z-7fe1d9",
+      "test": "test_24_last_fresh_save_crosses_deadline_preserves_pending",
+      "stateStatus": "budget_exhausted",
+      "stateReason": "seconds_pending_retained",
+      "recordedPosts": 0,
+      "hashes": {
+        "state.json": "8660509792edad60df013742e0c0adbbc5c562495198d1a81c3cc4d453ac6e7e",
+        "traffic.json": "345ee388dd0dd688c773c301bb22238da086a579527c29cad6240549b75362b6",
+        "reports.json": "cd56c7856395b885398e62c0c45a1c33d0a944284b33d943a9e753458b376744",
+        "audit.json": "68c66d78c89850f88d30206d0ba2193e64469cca089eed0adf329476148934df"
+      },
+      "cachedSeconds": 0.026131868362426758,
+      "elapsedAfterFinalSave": 1.0785505771636963,
+      "delayArtifactSha256": "37e8affa8ab2402b797b02ccc86259d06c349732c5885f86fe783b181f34c1c9",
+      "originalPendingRetained": true
+    },
+    {
+      "run": "20261026T091721Z-7fe1d9",
+      "test": "test_25_last_resend_save_crosses_deadline_preserves_original",
+      "stateStatus": "budget_exhausted",
+      "stateReason": "seconds_pending_retained",
+      "recordedPosts": 0,
+      "hashes": {
+        "state.json": "85cc9b8889fe10e78e36b1bdf002fc7701d86e784357c0a7fb3f77a48a204fad",
+        "traffic.json": "f5602d6e1b70e16b38c0206f726dc0d54cd087210e90e719891012336c62f3d3",
+        "reports.json": "adc2a2164f23420167d76c528c15da305ca3f710da27d982d5a94e291a359652",
+        "audit.json": "68c66d78c89850f88d30206d0ba2193e64469cca089eed0adf329476148934df"
+      },
+      "cachedSeconds": 0.067352294921875,
+      "elapsedAfterFinalSave": 1.1198341846466064,
+      "delayArtifactSha256": "df6db76fed08131ab076ae00bbbcbdf8ecc6b1a7828d8ce4db054827553508d3",
+      "originalPendingRetained": true
+    }
+  ],
+  "counting": {
+    "finalSourceTargetedGroups": 4,
+    "allVersionsDistinctGroups": 25,
+    "allVersionsSuccessfulExecutions": 39,
+    "singleFinal25GroupRun": false
+  },
+  "limitations": [
+    "Negative controls and final runtime evidence were executed by BUILD2; QA2 independently checked retained artifacts and exact source differences.",
+    "No Chrome/C#/Godot or original-history tests rerun for this two-line fix.",
+    "Old finding report remains unchanged; it describes the previous source, this closure describes the new frozen source."
+  ]
+}

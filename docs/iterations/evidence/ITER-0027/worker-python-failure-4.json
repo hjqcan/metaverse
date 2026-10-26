@@ -1,0 +1,55 @@
+{
+  "success": false,
+  "testsRun": 1,
+  "failures": [
+    {
+      "test": "test_23_crash_after_rejection_settlement_restores_terminal (__main__.WorkshopMissionAcceptance.test_23_crash_after_rejection_settlement_restores_terminal)",
+      "detail": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/workshop_mission_api.py\", line 492, in test_23_crash_after_rejection_settlement_restores_terminal\n    result = self.task(self.controlled())\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/workshop_mission_api.py\", line 137, in task\n    report = run_mission(client or self.client, self.job, self.state, forbidden, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/resident_mission.py\", line 524, in run_mission\n    return run_workshop(client, spec, state_path, choose, max_steps=max_steps)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/resident_workshop.py\", line 708, in run_mission\n    validate_saved(state, spec, endpoint)\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/resident_workshop.py\", line 528, in validate_saved\n    _validate_saved(state, spec, endpoint)\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/resident_workshop.py\", line 666, in _validate_saved\n    raise ValueError('Workshop completion, budget or pending summaries are inconsistent')\nValueError: Workshop completion, budget or pending summaries are inconsistent\n"
+    }
+  ],
+  "outcomes": [
+    {
+      "test": "test_23_crash_after_rejection_settlement_restores_terminal",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 18,
+          "structures": 21,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    }
+  ],
+  "finalCodeHashes": {
+    "scripts/resident_workshop.py": "be240c89fde9e14e65b98dd73b63cfb16f6478c41c56402e5860c4cc431e23eb",
+    "scripts/resident_mission.py": "ee58118ca6396e75de6cc22e96e4dcc7bc3c6e3e0cf9f995648cc3579013b759",
+    "scripts/run_resident.py": "32834ee8e8e99f748f6e4939bfaabf8e8d9a217e696d6432ab1cbe33990ba5b3",
+    "scripts/foundation_agent.py": "47ed67f26d997b41550335885de07d9615594d9e13fbfa1135a4a520a04fb08b",
+    "scripts/continuous_navigation.py": "0e2a58a386aeb13bdf41a403d1a0864039e962e9f81bcbf981663500584a9225",
+    "scripts/command_preconditions.py": "37be9d8233627cd44026c4e7c4bdc7b23fbe77de46c69004a2affd910ab5c0af",
+    "scripts/resident_construction.py": "6d5b9ee9a7d3591bac2b57a80e42b474fb6f5a0b964b800a71f95c16dfa9939b",
+    "tests/workshop_mission_api.py": "70872070b7483a8bd872d6ad5aa17470ad192a33b0e695dbd120d23b19fdb1c0"
+  },
+  "actualModelCalls": 0
+}

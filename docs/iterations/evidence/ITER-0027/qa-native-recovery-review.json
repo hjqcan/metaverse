@@ -1,0 +1,186 @@
+{
+  "recordedAtUtc": "2026-10-26T08:48:28.283348+00:00",
+  "kind": "read-only diagnosis of builder-owned recovery test evidence; no new runtime execution",
+  "sourceReport": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T084529Z-3f9e5b/results.json",
+  "sourceReportSha256": "13959b0dd9ec100be213afec3d5633d1343ff57f0ff3423412aab56623295c76",
+  "recordedSourceSha256": {
+    "clients/godot/workshop_panel.gd": "8b374a6d24c941ae431debd0bda15d36c8550663073f30da78923b6d734eb74c",
+    "clients/godot/world_client.gd": "630c2b93026e51f2060b6a0725be60de94b0d4c96c0e4eef84251b2706188b79",
+    "tests/godot/workshop_recovery.gd": "5a6d13359ca15eabf80a7bf102baee33b33a80ffcf4a544bf50b546806fada53"
+  },
+  "samples": [
+    {
+      "file": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T084529Z-3f9e5b/build_workshop-before-return.json",
+      "sha256": "2739e222f080bbec5636de18bf0305d5628cb38896096963b45c3dcde4f06a95",
+      "commandId": "godot_297e180b42a9d7bf2dbbb4bb719d812d",
+      "actionType": "build_workshop",
+      "numericFields": {
+        "capabilityVersion": {
+          "value": 1.0,
+          "jsonParsedPythonType": "float"
+        }
+      },
+      "bodySha256": "abfdd3166526dd551ea332dc06a72cbc00e27ce481506cdb1d8689e27808bb67"
+    },
+    {
+      "file": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T084529Z-3f9e5b/craft_tool-after-return.json",
+      "sha256": "401e9949a8a7c0cf8a7232f315aab728da6e399508798f369f64dee1675119bc",
+      "commandId": "godot_82b64c845bcaf33f9dfc57165ce1874b",
+      "actionType": "craft_tool",
+      "numericFields": {
+        "capabilityVersion": {
+          "value": 1.0,
+          "jsonParsedPythonType": "float"
+        }
+      },
+      "bodySha256": "a204e05db4b1f75a78b4558657f9d55719b67c4eb39eb1be7001f8cfe1773084"
+    },
+    {
+      "file": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T084529Z-3f9e5b/deposit_wood-after-later-lost.json",
+      "sha256": "6d6ea43b1bc7df767b72e6facd76e15f9f01a1dcd11289d60822b5688a2a6eeb",
+      "commandId": "godot_f36358f82313371ad767f4375f57e31a",
+      "actionType": "deposit_wood",
+      "numericFields": {
+        "capabilityVersion": {
+          "value": 1.0,
+          "jsonParsedPythonType": "float"
+        },
+        "quantity": {
+          "value": 3.0,
+          "jsonParsedPythonType": "float"
+        }
+      },
+      "bodySha256": "36f14dd468ba3a509718442b8b55a7840bf06e3e3dabbc29d95ae8e8c3b634d6"
+    }
+  ],
+  "finding": "New actions supplied by JSON.parse_string in recovery test contain floating JSON spellings 1.0 and 3.0; strict server Integer uses TryGetInt64, while native panel creates integers. This explains the missing commits and subsequent recovery failure.",
+  "recommendedBoundary": "Normalize protocol integer fields in a newly constructed test action before first send; preserve already-persisted pending.body and strict server integer parsing.",
+  "remaining": "Await overall integration and QA1 original-history/native acceptance; headless recovery evidence is now verified.",
+  "secondRun": {
+    "report": ".local/iter0027/godot/20261026T085048Z-97045c/results.json",
+    "passedGroups": 8,
+    "groups": 9,
+    "remainingFailureEvidence": ".local/iter0027/godot/20261026T085048Z-97045c/build_workshop-before-return.json",
+    "evidenceSha256": "eaabc2edef1bc7465ef84eff4667ef3c9dc36afc4d32b4b5addd588e5f71ae20",
+    "receiptStatus": "rejected",
+    "error": {
+      "code": "AREA_OCCUPIED",
+      "message": "占地碰到居民",
+      "mutated": false,
+      "retryable": false
+    },
+    "pending": {},
+    "benchTarget": [
+      30.5,
+      21.4
+    ],
+    "otherResidentPosition": [
+      30,
+      21.4
+    ],
+    "finding": "Requested workbench footprint overlaps a3; test incorrectly requires successful build. Adapter correctly preserves original command ID and settles the immutable rejection.",
+    "remaining": "Builder must choose a legal target before forming a new command and rerun."
+  },
+  "finalRecoveryReview": {
+    "recordedAtUtc": "2026-10-26T08:55:39.426749+00:00",
+    "status": "passed_readonly_evidence_review",
+    "distinctGroups": 9,
+    "passedAssertions": 122,
+    "cases": [
+      {
+        "name": "craft_tool-after",
+        "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T085048Z-97045c/results.json",
+        "checks": 13,
+        "commandId": "godot_5c615490dfe1f6ed10f951053f6768a3",
+        "originalBodySha256": "6b60b6b90e8517fa56389cdb2f5cc1e4340eb2e4c46721e32ea9c6e4170dd55c",
+        "committedOriginalConfirmed": true,
+        "pendingEmpty": true
+      },
+      {
+        "name": "deposit_wood-after-later",
+        "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T085048Z-97045c/results.json",
+        "checks": 14,
+        "commandId": "godot_a6213450f8b298324fa90db51df21c63",
+        "originalBodySha256": "3563b4f603529ae4e0d0cf92a4fd78f6b77c85e7fdb69e1c94647527b961ce2b",
+        "committedOriginalConfirmed": true,
+        "pendingEmpty": true
+      },
+      {
+        "name": "withdraw_wood-before",
+        "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T085048Z-97045c/results.json",
+        "checks": 14,
+        "commandId": "godot_444c730520245024c4f21033377da388",
+        "originalBodySha256": "b235f51cefc84d71c56fea943173c31ce30383ef1701fceb3b76f820451b0884",
+        "committedOriginalConfirmed": true,
+        "pendingEmpty": true
+      },
+      {
+        "name": "deposit_wood-receipt",
+        "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T085048Z-97045c/results.json",
+        "checks": 14,
+        "commandId": "godot_3a363b084dd536c6bf8c80af867dde42",
+        "originalBodySha256": "50f83507c63dec710ecb9d2d324b58a68d9f87ee691ae8459c9f3489778ac0f7",
+        "committedOriginalConfirmed": true,
+        "pendingEmpty": true
+      },
+      {
+        "name": "deposit_wood-event",
+        "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T085048Z-97045c/results.json",
+        "checks": 14,
+        "commandId": "godot_d5da6ed18388f901f97689a3606d170a",
+        "originalBodySha256": "d7d79fec2da62d9c44ec031f50033e45b55267dd0c76b3927624fa70e435d02a",
+        "committedOriginalConfirmed": true,
+        "pendingEmpty": true
+      },
+      {
+        "name": "deposit_wood-detail",
+        "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T085048Z-97045c/results.json",
+        "checks": 14,
+        "commandId": "godot_62b97267789c4129049581ff599f7315",
+        "originalBodySha256": "9dab3878b50a93430aaeb95962c94e85577ad7aa92c4a2ef37dc151a489dd5d2",
+        "committedOriginalConfirmed": true,
+        "pendingEmpty": true
+      },
+      {
+        "name": "deposit_wood-capability",
+        "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T085048Z-97045c/results.json",
+        "checks": 15,
+        "commandId": "godot_eb271de51fa044abbc86a8723e490088",
+        "originalBodySha256": "acf590d636c95dac56a1d33917204cec18730ba3e5b53b7c90019e1cc9ac16a2",
+        "committedOriginalConfirmed": true,
+        "pendingEmpty": true
+      },
+      {
+        "name": "walk-legacy",
+        "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T085048Z-97045c/results.json",
+        "checks": 11,
+        "commandId": "godot_0fefbfd8a7fdf568639a9ac9497bf5c1",
+        "originalBodySha256": "9fed1d7e8b89e8d279490ded1b3fb153ad9bc323403b2780a8de89088015d8c0",
+        "committedOriginalConfirmed": true,
+        "pendingEmpty": true
+      },
+      {
+        "name": "build_workshop-before",
+        "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T085248Z-fee8c4/results.json",
+        "checks": 13,
+        "commandId": "godot_1a7bd1bc31774f949e6ae2a249e41274",
+        "originalBodySha256": "7e7f4ea0f5dfc2e4cae04c9ad1b4460486307b5f05856725b47b375f1ac75a33",
+        "committedOriginalConfirmed": true,
+        "pendingEmpty": true
+      }
+    ],
+    "reportsSha256": {
+      "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T085048Z-97045c/results.json": "e411f43810140172b181562477088bded106d464c91ee7ca375f5754aee3047d",
+      "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/godot/20261026T085248Z-fee8c4/results.json": "87ba40ba3521767be678d5b586cce85fe74844c56c2fec53f15faa3731093b0d"
+    },
+    "dllSha256": "926a46b26db9753fbb8bc46b498ac661064c2039c7317bbf3bd26fa04d9e96a7",
+    "godotProductSourcesIdentical": true,
+    "bothReportsSourceUnchanged": true,
+    "temporaryWorldsRemovedByAuthor": true,
+    "limits": [
+      "Eight passing groups from full run plus one targeted repaired-fixture run, not a single nine-group green invocation.",
+      "This reviews author-owned headless adapter/process/journal evidence; it is not QA1 native mouse gameplay acceptance.",
+      "Original first run had integer-construction fixture errors; second run had occupied placement. Both failures remain recorded."
+    ]
+  }
+}

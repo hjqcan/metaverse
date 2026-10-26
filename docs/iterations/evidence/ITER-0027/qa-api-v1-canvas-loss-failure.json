@@ -1,0 +1,31 @@
+{
+  "suite": "independent-workshop-http-v1",
+  "passed": false,
+  "testsRun": 1,
+  "tests": [
+    {
+      "test": "__main__.WorkshopAcceptance.test_18_canvas_adopted_after_workshop_cannot_disappear_on_restart",
+      "passed": false,
+      "seconds": 1.347983292012941
+    }
+  ],
+  "actualModelCalls": 0,
+  "skipped": [],
+  "failures": [
+    [
+      "test_18_canvas_adopted_after_workshop_cannot_disappear_on_restart (__main__.WorkshopAcceptance.test_18_canvas_adopted_after_workshop_cannot_disappear_on_restart)",
+      "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/workshop_api.py\", line 785, in test_18_canvas_adopted_after_workshop_cannot_disappear_on_restart\n    self.assertTrue(rejected, 'Historical entityCanvasAdopted event survived but startup accepted the loss of all three canvas tables')\nAssertionError: False is not true : Historical entityCanvasAdopted event survived but startup accepted the loss of all three canvas tables\n"
+    ]
+  ],
+  "dllSha256": "415623d2e26751b650092f0aeb7088e6e33594ba3329fd4a693ad340e9122752",
+  "testSha256": "422a9d9c944d8c378640d4e595c02c36f7197e0a81322b8bbbdf1306910c38de",
+  "contractSha256": "682632fe4c5073103429cf8542902eb027b8e05471cb3c2c777ba6e9f6826fe0",
+  "candidateAtStart": {
+    "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/server-v1/World.Server.dll",
+    "dllSha256": "415623d2e26751b650092f0aeb7088e6e33594ba3329fd4a693ad340e9122752",
+    "testSha256": "422a9d9c944d8c378640d4e595c02c36f7197e0a81322b8bbbdf1306910c38de",
+    "contractSha256": "682632fe4c5073103429cf8542902eb027b8e05471cb3c2c777ba6e9f6826fe0",
+    "actualModelCalls": 0
+  },
+  "disposedBytes": 1088208
+}

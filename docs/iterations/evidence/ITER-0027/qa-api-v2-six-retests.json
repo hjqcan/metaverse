@@ -1,0 +1,51 @@
+{
+  "suite": "independent-workshop-http-v1",
+  "passed": true,
+  "testsRun": 6,
+  "tests": [
+    {
+      "test": "__main__.WorkshopAcceptance.test_02_complete_chain_original_facts_restart_and_use_withdrawn_wood",
+      "passed": true,
+      "seconds": 4.375137783004902
+    },
+    {
+      "test": "__main__.WorkshopAcceptance.test_13_r12_canvas_adoption_preserves_original_tables_and_pending",
+      "passed": true,
+      "seconds": 1.7702724870177917
+    },
+    {
+      "test": "__main__.WorkshopAcceptance.test_14_storage_releases_real_carry_capacity_for_new_harvest",
+      "passed": true,
+      "seconds": 47.173463089973666
+    },
+    {
+      "test": "__main__.WorkshopAcceptance.test_15_unknown_partial_and_inconsistent_storage_refuse_start_without_repair",
+      "passed": true,
+      "seconds": 5.2844345640041865
+    },
+    {
+      "test": "__main__.WorkshopAcceptance.test_17_interaction_ray_excludes_only_target_and_rejects_other_furniture",
+      "passed": true,
+      "seconds": 2.6868094080127776
+    },
+    {
+      "test": "__main__.WorkshopAcceptance.test_18_canvas_adopted_after_workshop_cannot_disappear_on_restart",
+      "passed": true,
+      "seconds": 2.3541540110018104
+    }
+  ],
+  "actualModelCalls": 0,
+  "skipped": [],
+  "failures": [],
+  "dllSha256": "926a46b26db9753fbb8bc46b498ac661064c2039c7317bbf3bd26fa04d9e96a7",
+  "testSha256": "422a9d9c944d8c378640d4e595c02c36f7197e0a81322b8bbbdf1306910c38de",
+  "contractSha256": "682632fe4c5073103429cf8542902eb027b8e05471cb3c2c777ba6e9f6826fe0",
+  "candidateAtStart": {
+    "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/server-v2/World.Server.dll",
+    "dllSha256": "926a46b26db9753fbb8bc46b498ac661064c2039c7317bbf3bd26fa04d9e96a7",
+    "testSha256": "422a9d9c944d8c378640d4e595c02c36f7197e0a81322b8bbbdf1306910c38de",
+    "contractSha256": "682632fe4c5073103429cf8542902eb027b8e05471cb3c2c777ba6e9f6826fe0",
+    "actualModelCalls": 0
+  },
+  "disposedBytes": 7066721
+}

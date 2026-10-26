@@ -1,0 +1,7 @@
+{
+  "removed": false,
+  "path": "clients/godot/.godot",
+  "reason": "Pre-existing Godot main window PID226787 started07:57:38UTC, outside this iteration; ownership not established. Cache and process preserved.",
+  "currentIterationAuthorTestProcessesExited": true,
+  "godotExecutableRetained": true
+}

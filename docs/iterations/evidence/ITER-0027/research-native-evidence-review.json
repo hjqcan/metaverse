@@ -1,0 +1,342 @@
+{
+  "reviewedAtUtc": "2026-10-26T09:08:26.674322+00:00",
+  "evidenceKind": "researcher read-only audit of independent QA native outputs and author Python tests; no world execution by this reviewer",
+  "sameDatabaseRestart": {
+    "schemaVersion": 13,
+    "tableCount": 25,
+    "fullSnapshotsEqual": true
+  },
+  "workshopOriginalProofsVerified": 17,
+  "workshopProofs": [
+    {
+      "actor": "a2",
+      "commandId": "godot_1deac5861b419a2f20e0154a72a2697b",
+      "action": "deposit_wood",
+      "recipe": null,
+      "quantity": 1,
+      "inventoryBefore": 4,
+      "inventoryAfter": 3,
+      "storedBefore": 1,
+      "storedAfter": 2,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_1deac5861b419a2f20e0154a72a2697b.json"
+    },
+    {
+      "actor": "a2",
+      "commandId": "godot_6a16d3df9e111a338675133bfde40023",
+      "action": "craft_tool",
+      "recipe": "wooden_mallet.v1",
+      "quantity": 1,
+      "inventoryBefore": 9,
+      "inventoryAfter": 8,
+      "storedBefore": null,
+      "storedAfter": null,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_6a16d3df9e111a338675133bfde40023.json"
+    },
+    {
+      "actor": "a2",
+      "commandId": "godot_98037cb41cede14a4ee5f39893e19bce",
+      "action": "deposit_wood",
+      "recipe": null,
+      "quantity": 1,
+      "inventoryBefore": 5,
+      "inventoryAfter": 4,
+      "storedBefore": 0,
+      "storedAfter": 1,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_98037cb41cede14a4ee5f39893e19bce.json"
+    },
+    {
+      "actor": "a2",
+      "commandId": "godot_b8ecfe5a0442c99d2abad65551eba16d",
+      "action": "build_workshop",
+      "recipe": "wooden_chest.v1",
+      "quantity": 3,
+      "inventoryBefore": 8,
+      "inventoryAfter": 5,
+      "storedBefore": 0,
+      "storedAfter": 0,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_b8ecfe5a0442c99d2abad65551eba16d.json"
+    },
+    {
+      "actor": "a2",
+      "commandId": "godot_c01c81c3f184ffcffde3828c7034732f",
+      "action": "build_workshop",
+      "recipe": "workbench.v1",
+      "quantity": 3,
+      "inventoryBefore": 12,
+      "inventoryAfter": 9,
+      "storedBefore": null,
+      "storedAfter": null,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_c01c81c3f184ffcffde3828c7034732f.json"
+    },
+    {
+      "actor": "a2",
+      "commandId": "godot_d186778c0c705a7647ae45f8112528ec",
+      "action": "deposit_wood",
+      "recipe": null,
+      "quantity": 1,
+      "inventoryBefore": 3,
+      "inventoryAfter": 2,
+      "storedBefore": 2,
+      "storedAfter": 3,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_d186778c0c705a7647ae45f8112528ec.json"
+    },
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_1e4c6e8c1d880d6208c066ed81439181",
+      "action": "craft_tool",
+      "recipe": "wooden_mallet.v1",
+      "quantity": 1,
+      "inventoryBefore": 9,
+      "inventoryAfter": 8,
+      "storedBefore": null,
+      "storedAfter": null,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_1e4c6e8c1d880d6208c066ed81439181.json"
+    },
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_6955f9ba16c8d15e0d0f777217a337c8",
+      "action": "withdraw_wood",
+      "recipe": null,
+      "quantity": 3,
+      "inventoryBefore": 2,
+      "inventoryAfter": 5,
+      "storedBefore": 3,
+      "storedAfter": 0,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_6955f9ba16c8d15e0d0f777217a337c8.json"
+    },
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_94a30deb4152a722997b488e1ebaeb07",
+      "action": "deposit_wood",
+      "recipe": null,
+      "quantity": 3,
+      "inventoryBefore": 5,
+      "inventoryAfter": 2,
+      "storedBefore": 0,
+      "storedAfter": 3,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_94a30deb4152a722997b488e1ebaeb07.json"
+    },
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_aab45e940ee97595474fed45bee86f51",
+      "action": "build_workshop",
+      "recipe": "workbench.v1",
+      "quantity": 3,
+      "inventoryBefore": 12,
+      "inventoryAfter": 9,
+      "storedBefore": null,
+      "storedAfter": null,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_aab45e940ee97595474fed45bee86f51.json"
+    },
+    {
+      "actor": "a1_alias",
+      "commandId": "godot_c6392aa78aa2c6388883be4ed03a97aa",
+      "action": "build_workshop",
+      "recipe": "wooden_chest.v1",
+      "quantity": 3,
+      "inventoryBefore": 8,
+      "inventoryAfter": 5,
+      "storedBefore": 0,
+      "storedAfter": 0,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_c6392aa78aa2c6388883be4ed03a97aa.json"
+    },
+    {
+      "actor": "a2",
+      "commandId": "godot_bb44b4e0b76fc6481802ea1278c9ebc8",
+      "action": "withdraw_wood",
+      "recipe": null,
+      "quantity": 3,
+      "inventoryBefore": 2,
+      "inventoryAfter": 5,
+      "storedBefore": 3,
+      "storedAfter": 0,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a2-godot_bb44b4e0b76fc6481802ea1278c9ebc8.json"
+    },
+    {
+      "actor": "a2",
+      "commandId": "godot_e91b97cc320d90fddb5b636278b7f37d",
+      "action": "deposit_wood",
+      "recipe": null,
+      "quantity": 3,
+      "inventoryBefore": 12,
+      "inventoryAfter": 9,
+      "storedBefore": 0,
+      "storedAfter": 3,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a2-godot_e91b97cc320d90fddb5b636278b7f37d.json"
+    },
+    {
+      "actor": "a3",
+      "commandId": "godot_046dd58076bab5337bd24ee578bd6eed",
+      "action": "withdraw_wood",
+      "recipe": null,
+      "quantity": 1,
+      "inventoryBefore": 1,
+      "inventoryAfter": 2,
+      "storedBefore": 1,
+      "storedAfter": 0,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a3-godot_046dd58076bab5337bd24ee578bd6eed.json"
+    },
+    {
+      "actor": "a3",
+      "commandId": "godot_23dac98d3d9420077e7da9b6b87aaf65",
+      "action": "craft_tool",
+      "recipe": "wooden_mallet.v1",
+      "quantity": 1,
+      "inventoryBefore": 6,
+      "inventoryAfter": 5,
+      "storedBefore": null,
+      "storedAfter": null,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a3-godot_23dac98d3d9420077e7da9b6b87aaf65.json"
+    },
+    {
+      "actor": "a3",
+      "commandId": "godot_54401d782cdc175a03634f6487bf7e83",
+      "action": "build_workshop",
+      "recipe": "wooden_chest.v1",
+      "quantity": 3,
+      "inventoryBefore": 5,
+      "inventoryAfter": 2,
+      "storedBefore": 0,
+      "storedAfter": 0,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a3-godot_54401d782cdc175a03634f6487bf7e83.json"
+    },
+    {
+      "actor": "a3",
+      "commandId": "godot_c67b6f056cb23e7b820ba97cc7c8f35c",
+      "action": "deposit_wood",
+      "recipe": null,
+      "quantity": 1,
+      "inventoryBefore": 2,
+      "inventoryAfter": 1,
+      "storedBefore": 0,
+      "storedAfter": 1,
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a3-godot_c67b6f056cb23e7b820ba97cc7c8f35c.json"
+    }
+  ],
+  "continuationNativePosts": 223,
+  "actors": {
+    "a2": {
+      "commandTypes": {
+        "walk": 68,
+        "withdraw_wood": 1,
+        "build": 1,
+        "reserve_material": 5,
+        "harvest_material": 13,
+        "cancel_reservation": 1,
+        "deposit_wood": 1
+      },
+      "harvested": 13,
+      "workshopRecipeWood": 0,
+      "oldBuildWood": 3,
+      "deposited": 3,
+      "withdrawn": 3
+    },
+    "a3": {
+      "commandTypes": {
+        "walk": 32,
+        "reserve_material": 1,
+        "harvest_material": 3,
+        "craft_tool": 1,
+        "build_workshop": 1,
+        "deposit_wood": 1,
+        "withdraw_wood": 1
+      },
+      "harvested": 3,
+      "workshopRecipeWood": 4,
+      "oldBuildWood": 0,
+      "deposited": 1,
+      "withdrawn": 1
+    },
+    "a1_alias": {
+      "commandTypes": {
+        "walk": 71,
+        "reserve_material": 4,
+        "harvest_material": 12,
+        "build_workshop": 2,
+        "craft_tool": 1,
+        "deposit_wood": 1,
+        "withdraw_wood": 1,
+        "build": 1
+      },
+      "harvested": 12,
+      "workshopRecipeWood": 7,
+      "oldBuildWood": 3,
+      "deposited": 3,
+      "withdrawn": 3
+    }
+  },
+  "capacityObserved": {
+    "carried": 12,
+    "stored": 3,
+    "stateVersion": 1203
+  },
+  "finalObservedAudit": {
+    "initialWood": 12,
+    "issuedWood": 76,
+    "generatedWood": 64,
+    "sourceWood": 6,
+    "wildWood": 0,
+    "depotWood": 0,
+    "inventoryWood": 22,
+    "embodiedWood": 42,
+    "toolWood": 3,
+    "storedWood": 3,
+    "conserved": true
+  },
+  "finalObservedStateVersion": 1352,
+  "pythonLatestTargeted": {
+    "testsRun": 6,
+    "success": true,
+    "allCurrentFileHashesMatch": true,
+    "hashMatches": {
+      "scripts/resident_workshop.py": true,
+      "scripts/resident_mission.py": true,
+      "scripts/run_resident.py": true,
+      "scripts/foundation_agent.py": true,
+      "scripts/continuous_navigation.py": true,
+      "scripts/command_preconditions.py": true,
+      "scripts/resident_construction.py": true,
+      "tests/workshop_mission_api.py": true
+    }
+  },
+  "limits": [
+    "Native operation was performed by QA1, not rerun by this reviewer.",
+    "Snapshots and captured responses are checked; no live database read or new world request.",
+    "a3 starts with 3 wood; alias starts with 0. This is not a matched elapsed-time comparison.",
+    "Alias uses the original public bridge and existing source; no gift or other actor workbench action appears in its captured chain. Not a proof of independence from all prior infrastructure.",
+    "Declared operator identities are not verified real-person identities.",
+    "Python result is six targeted author retests, not all tests on final code.",
+    "No long-term economy or forestry claim."
+  ],
+  "inputHashes": {
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/same-database-before-restart.json": "9e9ae454e50880d02acc6d58edaa68480d17c0d37ada767fb9f93ad276a472e1",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/same-database-after-restart.json": "9e9ae454e50880d02acc6d58edaa68480d17c0d37ada767fb9f93ad276a472e1",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/native-commands.json": "eb45e26d960cd0f296c28704d314caa4aaf470e592f529684aba8f001933aaf8",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_1deac5861b419a2f20e0154a72a2697b.json": "2f007f2691a7175adf2f05a37c2037be90574f762a3f761ec7917c3bca813727",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_6a16d3df9e111a338675133bfde40023.json": "567b6063ab64ba18dc1cee38f9ef87cafce1bcc45b70a282c1695f3786f7b7b0",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_98037cb41cede14a4ee5f39893e19bce.json": "a4ab5a2e15c0b26138720710565334d899715e8f6a160e128c0dbb61fbb26b65",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_b8ecfe5a0442c99d2abad65551eba16d.json": "c6539d9175e59fe662d78e81c5789bb43f329184756305b8a72636f44684d518",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_c01c81c3f184ffcffde3828c7034732f.json": "51aed1203eaeec44d951e2bf86f7458c8abfd5289a6a5f289010d4554d89e819",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_d186778c0c705a7647ae45f8112528ec.json": "c0267d0b51ec626a9dfbc6b8dd156aa8ca63082a566043b1102b20d2e502bc37",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-commands.json": "c5d4cfdf8a0521f3284687a1c068840a0e069669f000514aa948d9e904862400",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_1e4c6e8c1d880d6208c066ed81439181.json": "08fcc9910623fb8b89770dedd9baa3d2c34dfcf390bda3fc30a7e968b92796ad",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_6955f9ba16c8d15e0d0f777217a337c8.json": "fa2be4b4a4a19d39c6c1a9a76c4cacc63ea51594ef0fb09ee00fec36a94e144a",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_94a30deb4152a722997b488e1ebaeb07.json": "2821b59dbb410fa0a36e2784dae5029f6b6430f8bf71269412a3af26bc5af7c3",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_aab45e940ee97595474fed45bee86f51.json": "7fa6597b4bf3a907a8368034811f260eb372097c8e792120405a0fbc593f832c",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_c6392aa78aa2c6388883be4ed03a97aa.json": "96c92176fa35f37a1a0e23b7c873cd0ee76b8fefc20c633ba50c3e2569651e95",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a2-godot_bb44b4e0b76fc6481802ea1278c9ebc8.json": "0b976c36cbc2dabfb385b519b389440fce06e3b367383eabc4de0ba858ef26a4",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a2-godot_e91b97cc320d90fddb5b636278b7f37d.json": "812216775f55662b3790324342318e54b82419c5ef6ad04d2c504ceb64406e1d",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a2-platform-after-storage.json": "106b5c5909c0f0c8ed8b9e53cba2d09369ad1b9ae1bf287a601f2d3079a3c739",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a3-godot_046dd58076bab5337bd24ee578bd6eed.json": "ee062ae268a25e6ffaf102e4f4b0469456df96bc381ea60860ef56d2740cd277",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a3-godot_23dac98d3d9420077e7da9b6b87aaf65.json": "85c262444a3a2008963f646ea82b41417fd298d2cd0d2afd9d4a9399e1351bc5",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a3-godot_54401d782cdc175a03634f6487bf7e83.json": "7f6010af8f165e59acd51a142f9d2f3b29de24bac318a041b7c73488dca4d1ed",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a3-godot_c67b6f056cb23e7b820ba97cc7c8f35c.json": "24a3009d9c335d767c5e8c804409908cfc0e5d4dc874503bf12bdf6c8e3538ad",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/checkpoint-a2-carry-twelve-plus-box-three.json": "b3f813d416877b344c1311e97e82d6cb692c81f73d838b0a4b242382fd93b023",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/checkpoint-final-a2.json": "2a14ddb92f671ff917f417385624b4b67666e46058aea59e7a326aaa05e4135e",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/state-alias-starts-west-with-no-wood.json": "8ae6d8596a20fa380a19981ad1c3600649cd3989b526b69692a0b60615bc40af",
+    ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/checkpoint-alias-independent-facility-return-and-build.json": "65c8afe259c174383f8ad9962b8cd875590344f74b194853f6f7b8ff7778cd65",
+    ".local/iter0027/python/20261026T090509Z-d67d6a/summary.json": "3f0458dc46b8bc24cf309d69e1153cc9234075e019ac7a948c7840fa67b22f34"
+  },
+  "reviewerWorldCommands": 0,
+  "reviewerModelCalls": 0
+}

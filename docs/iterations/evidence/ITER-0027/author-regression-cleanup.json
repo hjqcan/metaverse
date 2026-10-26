@@ -1,0 +1,778 @@
+{
+  "removed": [
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_10_build_checks_complete_footprint_and_gather_distance/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_10_build_checks_complete_footprint_and_gather_distance/world.db",
+      "bytes": 143360
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_09_fractional_platform_uses_collected_wood_and_preserves_history/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_09_fractional_platform_uses_collected_wood_and_preserves_history/world.db",
+      "bytes": 131072
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_08_legacy_move_stale_and_invalid_coordinates_fail_without_effect/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_08_legacy_move_stale_and_invalid_coordinates_fail_without_effect/world.db",
+      "bytes": 131072
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_06_world_boundary_is_continuous/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_06_world_boundary_is_continuous/world.db",
+      "bytes": 139264
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_02_fractional_diagonal_coordinates_persist_across_restart/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_02_fractional_diagonal_coordinates_persist_across_restart/world.db",
+      "bytes": 131072
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_03_speed_budget_prevents_spam_teleport/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_03_speed_budget_prevents_spam_teleport/world.db",
+      "bytes": 159744
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_12_failed_gather_and_commit_loss_preserve_original_identity/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_12_failed_gather_and_commit_loss_preserve_original_identity/world.db",
+      "bytes": 131072
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_04_tree_blocks_sweep_and_depletion_removes_collision/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_04_tree_blocks_sweep_and_depletion_removes_collision/world.db",
+      "bytes": 131072
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_05_rock_and_river_stop_motion/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_05_rock_and_river_stop_motion/world.db",
+      "bytes": 159744
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_01_observation_is_continuous_and_old_grid_is_absent/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_01_observation_is_continuous_and_old_grid_is_absent/world.db",
+      "bytes": 131072
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_07_replay_and_concurrent_same_id_move_once/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_07_replay_and_concurrent_same_id_move_once/world.db",
+      "bytes": 131072
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_11_real_bridge_allows_both_residents_to_cross/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0014/api/20261026T085336Z-793e02/test_11_real_bridge_allows_both_residents_to_cross/world.db",
+      "bytes": 258048
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_07_walk_rechecks_new_bridge_and_keeps_speed_limit-world/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_07_walk_rechecks_new_bridge_and_keeps_speed_limit-world/world.db-wal",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_07_walk_rechecks_new_bridge_and_keeps_speed_limit-world/world.db",
+      "bytes": 204800
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_07_walk_rechecks_new_bridge_and_keeps_speed_limit-world/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_10_before_and_after_commit_crashes_recover_original_mode-world/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_10_before_and_after_commit_crashes_recover_original_mode-world/world.db-wal",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_10_before_and_after_commit_crashes_recover_original_mode-world/world.db",
+      "bytes": 131072
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_10_before_and_after_commit_crashes_recover_original_mode-world/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_06_same_build_space_is_revalidated_without_double_debit-world/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_06_same_build_space_is_revalidated_without_double_debit-world/world.db-wal",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_06_same_build_space_is_revalidated_without_double_debit-world/world.db",
+      "bytes": 212992
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_06_same_build_space_is_revalidated_without_double_debit-world/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_09_invalid_modes_future_anchor_and_instance_errors_do_not_execute-world/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_09_invalid_modes_future_anchor_and_instance_errors_do_not_execute-world/world.db-wal",
+      "bytes": 8272
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_09_invalid_modes_future_anchor_and_instance_errors_do_not_execute-world/world.db",
+      "bytes": 131072
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_09_invalid_modes_future_anchor_and_instance_errors_do_not_execute-world/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_02_twenty_unrelated_moves_allow_actual_progress-world/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_02_twenty_unrelated_moves_allow_actual_progress-world/world.db-wal",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_02_twenty_unrelated_moves_allow_actual_progress-world/world.db",
+      "bytes": 163840
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_02_twenty_unrelated_moves_allow_actual_progress-world/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_01_capability_legacy_and_existing_strict_receipt-world/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_01_capability_legacy_and_existing_strict_receipt-world/world.db-wal",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_01_capability_legacy_and_existing_strict_receipt-world/world.db",
+      "bytes": 131072
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_01_capability_legacy_and_existing_strict_receipt-world/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_03_unrelated_walk_does_not_block_gather_or_build-world/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_03_unrelated_walk_does_not_block_gather_or_build-world/world.db-wal",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_03_unrelated_walk_does_not_block_gather_or_build-world/world.db",
+      "bytes": 139264
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_03_unrelated_walk_does_not_block_gather_or_build-world/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_05_partial_and_final_resource_competition-world/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_05_partial_and_final_resource_competition-world/world.db-wal",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_05_partial_and_final_resource_competition-world/world.db",
+      "bytes": 208896
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_05_partial_and_final_resource_competition-world/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_08_same_id_mode_changes_conflict_and_replays_keep_original_execution-world/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_08_same_id_mode_changes_conflict_and_replays_keep_original_execution-world/world.db-wal",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_08_same_id_mode_changes_conflict_and_replays_keep_original_execution-world/world.db",
+      "bytes": 131072
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_08_same_id_mode_changes_conflict_and_replays_keep_original_execution-world/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_08_same_id_mode_changes_conflict_and_replays_keep_original_execution-world/issued-a1.json",
+      "bytes": 180
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_01_capability_legacy_and_existing_strict_receipt-legacy/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_01_capability_legacy_and_existing_strict_receipt-legacy/world.db",
+      "bytes": 131072
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_04_same_actor_concurrency_and_ABA_remain_rejected-world/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_04_same_actor_concurrency_and_ABA_remain_rejected-world/world.db-wal",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_04_same_actor_concurrency_and_ABA_remain_rejected-world/world.db",
+      "bytes": 131072
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_04_same_actor_concurrency_and_ABA_remain_rejected-world/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_01_capability_legacy_and_existing_strict_receipt-strict-fixture/access.json",
+      "bytes": 82
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_01_capability_legacy_and_existing_strict_receipt-strict-fixture/world.db-wal",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_01_capability_legacy_and_existing_strict_receipt-strict-fixture/world.db",
+      "bytes": 135168
+    },
+    {
+      "path": ".local/iter0019/api/20261026T085336Z-774678/test_01_capability_legacy_and_existing_strict_receipt-strict-fixture/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0016/20261026T085336Z-4047c7/obstacles/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0016/20261026T085336Z-4047c7/obstacles/world.db",
+      "bytes": 163840
+    },
+    {
+      "path": ".local/iter0016/20261026T085336Z-4047c7/bridge/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0016/20261026T085336Z-4047c7/bridge/world.db",
+      "bytes": 241664
+    },
+    {
+      "path": ".local/iter0016/20261026T085336Z-4047c7/cancel/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0016/20261026T085336Z-4047c7/cancel/world.db",
+      "bytes": 131072
+    },
+    {
+      "path": ".local/iter0016/20261026T085336Z-4047c7/route-loss/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0016/20261026T085336Z-4047c7/route-loss/world.db",
+      "bytes": 139264
+    },
+    {
+      "path": ".local/iter0016/20261026T085336Z-4047c7/tree-change/access.json",
+      "bytes": 412
+    },
+    {
+      "path": ".local/iter0016/20261026T085336Z-4047c7/tree-change/world.db",
+      "bytes": 143360
+    },
+    {
+      "path": ".local/iter0027/geometry-v2/bin",
+      "bytes": 110095
+    },
+    {
+      "path": ".local/iter0027/geometry-v2/obj",
+      "bytes": 168396
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/seed/continued/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/seed/continued/world.db",
+      "bytes": 475136
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/seed/continued/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/seed/prior/test_05_budget_capacity_and_exhausted_budget_does_not_reset-world/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/seed/prior/test_05_budget_capacity_and_exhausted_budget_does_not_reset-world/world.db-wal",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/seed/prior/test_05_budget_capacity_and_exhausted_budget_does_not_reset-world/world.db",
+      "bytes": 319488
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/seed/prior/test_05_budget_capacity_and_exhausted_budget_does_not_reset-world/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/seed/prior/test_05_budget_capacity_and_exhausted_budget_does_not_reset-world/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/seed/prior/test_01_same_instance_two_authors_reference_return_and_old_facts/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/seed/prior/test_01_same_instance_two_authors_reference_return_and_old_facts/world.db",
+      "bytes": 421888
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/seed/prior/test_01_same_instance_two_authors_reference_return_and_old_facts/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-0/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-0/world.db-wal",
+      "bytes": 8272
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-0/world.db",
+      "bytes": 516096
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-0/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-0/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/world/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/world/world.db",
+      "bytes": 516096
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/world/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-3/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-3/world.db-wal",
+      "bytes": 4152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-3/world.db",
+      "bytes": 516096
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-3/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-3/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-1/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-1/world.db-wal",
+      "bytes": 8272
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-1/world.db",
+      "bytes": 516096
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-1/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-1/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-2/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-2/world.db-wal",
+      "bytes": 4152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-2/world.db",
+      "bytes": 516096
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-2/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_07_strict_patch_parser_and_damaged_storage_reject/damage-2/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence/world/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence/world/world.db",
+      "bytes": 516096
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence/world/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence/after-commit/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence/after-commit/world.db-wal",
+      "bytes": 74192
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence/after-commit/world.db",
+      "bytes": 475136
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence/after-commit/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence/after-commit/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence/before-commit/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence/before-commit/world.db-wal",
+      "bytes": 74192
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence/before-commit/world.db",
+      "bytes": 475136
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence/before-commit/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence/before-commit/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-revision/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-revision/world.db-wal",
+      "bytes": 28872
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-revision/world.db",
+      "bytes": 561152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-revision/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-revision/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-state_version/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-state_version/world.db-wal",
+      "bytes": 4152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-state_version/world.db",
+      "bytes": 561152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-state_version/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-state_version/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-version/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-version/world.db-wal",
+      "bytes": 28872
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-version/world.db",
+      "bytes": 561152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-version/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-version/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-inventory_wood/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-inventory_wood/world.db-wal",
+      "bytes": 28872
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-inventory_wood/world.db",
+      "bytes": 561152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-inventory_wood/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-inventory_wood/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-event_seq/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-event_seq/world.db-wal",
+      "bytes": 32992
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-event_seq/world.db",
+      "bytes": 561152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-event_seq/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-event_seq/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/world/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/world/world.db",
+      "bytes": 561152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/world/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-state_version/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-state_version/world.db-wal",
+      "bytes": 28872
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-state_version/world.db",
+      "bytes": 561152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-state_version/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-state_version/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-x/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-x/world.db-wal",
+      "bytes": 8272
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-x/world.db",
+      "bytes": 561152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-x/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-x/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-y/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-y/world.db-wal",
+      "bytes": 8272
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-y/world.db",
+      "bytes": 561152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-y/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_cells-y/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-base_revision/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-base_revision/world.db-wal",
+      "bytes": 28872
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-base_revision/world.db",
+      "bytes": 561152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-base_revision/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-base_revision/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-event_seq/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-event_seq/world.db-wal",
+      "bytes": 32992
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-event_seq/world.db",
+      "bytes": 561152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-event_seq/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-event_seq/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-revision/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-revision/world.db-wal",
+      "bytes": 32992
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-revision/world.db",
+      "bytes": 561152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-revision/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas_edits-revision/world.db.material-clock.lock",
+      "bytes": 0
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-state_version/access.json",
+      "bytes": 790
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-state_version/world.db-wal",
+      "bytes": 28872
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-state_version/world.db",
+      "bytes": 561152
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-state_version/world.db-shm",
+      "bytes": 32768
+    },
+    {
+      "path": ".local/iter0025/api/20261026T085559Z-58f5bc/test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts/entity_canvas-state_version/world.db.material-clock.lock",
+      "bytes": 0
+    }
+  ],
+  "bytes": 18773289,
+  "activeOwnedServers": 0
+}

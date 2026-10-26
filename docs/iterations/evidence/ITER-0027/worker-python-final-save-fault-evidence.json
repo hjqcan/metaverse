@@ -1,0 +1,404 @@
+[
+  {
+    "version": "before",
+    "test": "test_24_last_fresh_save_crosses_deadline_preserves_pending",
+    "sourceDirectory": ".local/iter0027/python/20261026T091650Z-729b4a/test_24_last_fresh_save_crosses_deadline_preserves_pending",
+    "lastSaveDelay": [
+      {
+        "path": "fresh-final-save",
+        "cachedSeconds": 0.025080204010009766,
+        "elapsedBefore": 0.02735590934753418,
+        "pending": {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "d501bcace77041e0b600d14892e15d4a",
+            "preconditionMode": "actor-state-v1",
+            "expectedStateVersion": 1055,
+            "action": {
+              "type": "build_workshop",
+              "capabilityVersion": 1,
+              "recipeId": "workbench.v1",
+              "at": [
+                26,
+                20
+              ],
+              "toolId": null
+            }
+          },
+          "woodCost": 3,
+          "woodMoved": 0,
+          "workshopBefore": {
+            "version": 1,
+            "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+            "actorId": "a2",
+            "operatorId": "declared-late",
+            "adoption": {
+              "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+              "stateVersion": 1055,
+              "eventCursor": 1056
+            },
+            "target": null,
+            "tool": null,
+            "action": {
+              "type": "build_workshop",
+              "capabilityVersion": 1,
+              "recipeId": "workbench.v1",
+              "at": [
+                26,
+                20
+              ],
+              "toolId": null
+            },
+            "position": [
+              26,
+              17
+            ],
+            "inventoryWood": 9,
+            "storedWood": null,
+            "stateVersion": 1055,
+            "entityIds": [
+              "e76a6cc3bf333423e874d310f1f0371a0",
+              "e926486325c2c4e3e924610139ee26711",
+              "e9df7ee47564546f098a988085e93ce3d",
+              "eb40dd030a24941f28c3fb5313fe44784",
+              "eca67171501f8438e9fe790bfdbef9789",
+              "efbde20b258d74a0eaca3a86e8d455755"
+            ],
+            "toolIds": []
+          }
+        },
+        "elapsedAfter": 1.07743501663208
+      }
+    ],
+    "traffic": [
+      {
+        "method": "GET",
+        "path": "/v1/worlds/foundation-01/observation",
+        "payload": null
+      },
+      {
+        "method": "GET",
+        "path": "/v1/worlds/foundation-01/observation",
+        "payload": null
+      },
+      {
+        "method": "POST",
+        "path": "/v1/worlds/foundation-01/commands",
+        "payload": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "d501bcace77041e0b600d14892e15d4a",
+          "preconditionMode": "actor-state-v1",
+          "expectedStateVersion": 1055,
+          "action": {
+            "type": "build_workshop",
+            "capabilityVersion": 1,
+            "recipeId": "workbench.v1",
+            "at": [
+              26,
+              20
+            ],
+            "toolId": null
+          }
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/v1/worlds/foundation-01/workshop/actions/a2/d501bcace77041e0b600d14892e15d4a",
+        "payload": null
+      },
+      {
+        "method": "GET",
+        "path": "/v1/worlds/foundation-01/events?after=1056",
+        "payload": null
+      }
+    ]
+  },
+  {
+    "version": "before",
+    "test": "test_25_last_resend_save_crosses_deadline_preserves_original",
+    "sourceDirectory": ".local/iter0027/python/20261026T091650Z-729b4a/test_25_last_resend_save_crosses_deadline_preserves_original",
+    "lastSaveDelay": [
+      {
+        "path": "404-capability-final-save",
+        "cachedSeconds": 0.06807494163513184,
+        "elapsedBefore": 0.07046961784362793,
+        "pending": {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "db053467706d4b35b02fbebadbbc4c67",
+            "preconditionMode": "actor-state-v1",
+            "expectedStateVersion": 1055,
+            "action": {
+              "type": "build_workshop",
+              "capabilityVersion": 1,
+              "recipeId": "workbench.v1",
+              "at": [
+                26,
+                20
+              ],
+              "toolId": null
+            }
+          },
+          "woodCost": 3,
+          "woodMoved": 0,
+          "workshopBefore": {
+            "version": 1,
+            "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+            "actorId": "a2",
+            "operatorId": "declared-late",
+            "adoption": {
+              "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+              "stateVersion": 1055,
+              "eventCursor": 1056
+            },
+            "target": null,
+            "tool": null,
+            "action": {
+              "type": "build_workshop",
+              "capabilityVersion": 1,
+              "recipeId": "workbench.v1",
+              "at": [
+                26,
+                20
+              ],
+              "toolId": null
+            },
+            "position": [
+              26,
+              17
+            ],
+            "inventoryWood": 9,
+            "storedWood": null,
+            "stateVersion": 1055,
+            "entityIds": [
+              "e76a6cc3bf333423e874d310f1f0371a0",
+              "e926486325c2c4e3e924610139ee26711",
+              "e9df7ee47564546f098a988085e93ce3d",
+              "eb40dd030a24941f28c3fb5313fe44784",
+              "eca67171501f8438e9fe790bfdbef9789",
+              "efbde20b258d74a0eaca3a86e8d455755"
+            ],
+            "toolIds": []
+          }
+        },
+        "elapsedAfter": 1.120551347732544
+      }
+    ],
+    "traffic": [
+      {
+        "method": "GET",
+        "path": "/v1/worlds/foundation-01/commands/db053467706d4b35b02fbebadbbc4c67",
+        "payload": null
+      },
+      {
+        "method": "GET",
+        "path": "/v1/worlds/foundation-01/observation",
+        "payload": null
+      },
+      {
+        "method": "POST",
+        "path": "/v1/worlds/foundation-01/commands",
+        "payload": {
+          "schemaVersion": 1,
+          "rulesVersion": "r10",
+          "commandId": "db053467706d4b35b02fbebadbbc4c67",
+          "preconditionMode": "actor-state-v1",
+          "expectedStateVersion": 1055,
+          "action": {
+            "type": "build_workshop",
+            "capabilityVersion": 1,
+            "recipeId": "workbench.v1",
+            "at": [
+              26,
+              20
+            ],
+            "toolId": null
+          }
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/v1/worlds/foundation-01/workshop/actions/a2/db053467706d4b35b02fbebadbbc4c67",
+        "payload": null
+      },
+      {
+        "method": "GET",
+        "path": "/v1/worlds/foundation-01/events?after=1056",
+        "payload": null
+      }
+    ]
+  },
+  {
+    "version": "after",
+    "test": "test_24_last_fresh_save_crosses_deadline_preserves_pending",
+    "sourceDirectory": ".local/iter0027/python/20261026T091721Z-7fe1d9/test_24_last_fresh_save_crosses_deadline_preserves_pending",
+    "lastSaveDelay": [
+      {
+        "path": "fresh-final-save",
+        "cachedSeconds": 0.026131868362426758,
+        "elapsedBefore": 0.02846980094909668,
+        "pending": {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "416632695dea4e92a45a8d766b15e04a",
+            "preconditionMode": "actor-state-v1",
+            "expectedStateVersion": 1055,
+            "action": {
+              "type": "build_workshop",
+              "capabilityVersion": 1,
+              "recipeId": "workbench.v1",
+              "at": [
+                26,
+                20
+              ],
+              "toolId": null
+            }
+          },
+          "woodCost": 3,
+          "woodMoved": 0,
+          "workshopBefore": {
+            "version": 1,
+            "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+            "actorId": "a2",
+            "operatorId": "declared-late",
+            "adoption": {
+              "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+              "stateVersion": 1055,
+              "eventCursor": 1056
+            },
+            "target": null,
+            "tool": null,
+            "action": {
+              "type": "build_workshop",
+              "capabilityVersion": 1,
+              "recipeId": "workbench.v1",
+              "at": [
+                26,
+                20
+              ],
+              "toolId": null
+            },
+            "position": [
+              26,
+              17
+            ],
+            "inventoryWood": 9,
+            "storedWood": null,
+            "stateVersion": 1055,
+            "entityIds": [
+              "e76a6cc3bf333423e874d310f1f0371a0",
+              "e926486325c2c4e3e924610139ee26711",
+              "e9df7ee47564546f098a988085e93ce3d",
+              "eb40dd030a24941f28c3fb5313fe44784",
+              "eca67171501f8438e9fe790bfdbef9789",
+              "efbde20b258d74a0eaca3a86e8d455755"
+            ],
+            "toolIds": []
+          }
+        },
+        "elapsedAfter": 1.0785505771636963
+      }
+    ],
+    "traffic": [
+      {
+        "method": "GET",
+        "path": "/v1/worlds/foundation-01/observation",
+        "payload": null
+      },
+      {
+        "method": "GET",
+        "path": "/v1/worlds/foundation-01/observation",
+        "payload": null
+      }
+    ]
+  },
+  {
+    "version": "after",
+    "test": "test_25_last_resend_save_crosses_deadline_preserves_original",
+    "sourceDirectory": ".local/iter0027/python/20261026T091721Z-7fe1d9/test_25_last_resend_save_crosses_deadline_preserves_original",
+    "lastSaveDelay": [
+      {
+        "path": "404-capability-final-save",
+        "cachedSeconds": 0.067352294921875,
+        "elapsedBefore": 0.06975388526916504,
+        "pending": {
+          "request": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "0d4d4f70ac5a4129a074a373be7c8171",
+            "preconditionMode": "actor-state-v1",
+            "expectedStateVersion": 1055,
+            "action": {
+              "type": "build_workshop",
+              "capabilityVersion": 1,
+              "recipeId": "workbench.v1",
+              "at": [
+                26,
+                20
+              ],
+              "toolId": null
+            }
+          },
+          "woodCost": 3,
+          "woodMoved": 0,
+          "workshopBefore": {
+            "version": 1,
+            "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+            "actorId": "a2",
+            "operatorId": "declared-late",
+            "adoption": {
+              "worldInstanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+              "stateVersion": 1055,
+              "eventCursor": 1056
+            },
+            "target": null,
+            "tool": null,
+            "action": {
+              "type": "build_workshop",
+              "capabilityVersion": 1,
+              "recipeId": "workbench.v1",
+              "at": [
+                26,
+                20
+              ],
+              "toolId": null
+            },
+            "position": [
+              26,
+              17
+            ],
+            "inventoryWood": 9,
+            "storedWood": null,
+            "stateVersion": 1055,
+            "entityIds": [
+              "e76a6cc3bf333423e874d310f1f0371a0",
+              "e926486325c2c4e3e924610139ee26711",
+              "e9df7ee47564546f098a988085e93ce3d",
+              "eb40dd030a24941f28c3fb5313fe44784",
+              "eca67171501f8438e9fe790bfdbef9789",
+              "efbde20b258d74a0eaca3a86e8d455755"
+            ],
+            "toolIds": []
+          }
+        },
+        "elapsedAfter": 1.1198341846466064
+      }
+    ],
+    "traffic": [
+      {
+        "method": "GET",
+        "path": "/v1/worlds/foundation-01/commands/0d4d4f70ac5a4129a074a373be7c8171",
+        "payload": null
+      },
+      {
+        "method": "GET",
+        "path": "/v1/worlds/foundation-01/observation",
+        "payload": null
+      }
+    ]
+  }
+]

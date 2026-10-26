@@ -38,7 +38,7 @@ def placement_issue(observed, goal):
         if nav.distance((cx, cz), nearest) < radius:
             return 'construction_site_occupied'
     for entity in observed['entities']:
-        ex, ez = (2.4, .8) if entity['definitionId'] == 'bridge' else (1., 1.)
+        ex, ez = nav.entity_half_size(entity)
         if abs(entity['position'][0] - x) < ex + hx and abs(entity['position'][1] - z) < ez + hz:
             return 'construction_site_occupied'
     return None

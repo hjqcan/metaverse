@@ -119,8 +119,13 @@ internal static class EntityCanvasRules
     public static void ValidateStorage(SqliteConnection c, SqliteTransaction t, string? instance, long storage, MaterialProductionPolicy? policy)
     {
         var state = Read(c, t);
-        if ((storage == 12) != (state is not null)) throw new InvalidOperationException("地画能力与存储版本不一致");
-        if (state is null) return;
+        if (storage != 13 && (storage == 12) != (state is not null)) throw new InvalidOperationException("地画能力与存储版本不一致");
+        if (state is null)
+        {
+            if (storage == 13 && Scalar(c, t, "SELECT count(*) FROM events WHERE json_extract(event_json,'$.type')='entityCanvasAdopted'") != 0)
+                throw new InvalidOperationException("原地画采用历史存在，但当前地画存储缺失");
+            return;
+        }
         if (policy is null || state.WorldInstanceId != instance || Target(c, t, state.EntityId) is null)
             throw new InvalidOperationException("地画与原持续世界或平台不匹配");
         static string Normalize(string s) => string.Concat(s.Where(ch => !char.IsWhiteSpace(ch) && ch != '"')).TrimEnd(';');
@@ -188,7 +193,7 @@ internal sealed partial class WorldDatabase
         using var ownership = new FileStream(Path + ".material-clock.lock", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
         using var c = Open(); using var t = c.BeginTransaction(deferred: false);
         var storage = Scalar(c, t, "PRAGMA user_version"); Scenario = ReadScenario(c, t, storage);
-        if (!Scenario.SupportsMaterialAccess || WorldInstance.Read(c, t) != expectedInstance || storage is not (11 or 12))
+        if (!Scenario.SupportsMaterialAccess || WorldInstance.Read(c, t) != expectedInstance || storage is not (11 or 12 or 13))
             throw new InvalidOperationException("只能在指定原持续材料世界采用地画");
         var policy = ContinuousMaterialRules.ReadPolicy(c, t, expectedInstance) ?? throw new InvalidOperationException("缺少原持续材料政策");
         ContinuousMaterialRules.ValidateState(c, t, policy);
@@ -196,6 +201,7 @@ internal sealed partial class WorldDatabase
             (notes.InstanceId != expectedInstance || EntityNoteRules.ReadBridge(c, t, notes.EntityId) is null))
             throw new InvalidOperationException("原手记能力或目标不匹配");
         EntityCanvasRules.ValidateStorage(c, t, expectedInstance, storage, policy);
+        WorkshopRules.ValidateStorage(c, t, expectedInstance, storage, policy);
         if (EntityCanvasRules.Read(c, t) is { } previous)
         {
             if (previous.EntityId != entityId) throw new InvalidOperationException("地画不能更换原平台");
@@ -215,8 +221,9 @@ internal sealed partial class WorldDatabase
             ("$cap", EntityCanvasRules.Capability), ("$entity", entityId), ("$instance", expectedInstance), ("$state", state), ("$seq", cursor));
         for (var y = 0; y < 5; y++) for (var x = 0; x < 5; x++)
             Run(c, t, "INSERT INTO entity_canvas_cells(entity_id,x,y,color) VALUES($id,$x,$y,'blank')", ("$id", entityId), ("$x", x), ("$y", y));
-        Run(c, t, "PRAGMA user_version=12;");
-        EntityCanvasRules.ValidateStorage(c, t, expectedInstance, 12, policy);
+        var nextStorage = storage == 13 ? 13 : 12;
+        if (nextStorage == 12) Run(c, t, "PRAGMA user_version=12;");
+        EntityCanvasRules.ValidateStorage(c, t, expectedInstance, nextStorage, policy);
         var fault = configuration.FaultsEnabled ? Environment.GetEnvironmentVariable("WORLD_CANVAS_ADOPTION_TEST_FAULT") : null;
         if (fault == "before-commit") Environment.Exit(87);
         t.Commit();

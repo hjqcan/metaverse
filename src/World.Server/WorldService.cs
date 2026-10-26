@@ -11,9 +11,9 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
 {
     private WorldScenario Scenario => database.Scenario;
 
-    public ApiReply Observe(string tokenHash, string? expectedInstance = null)
+    public ApiReply Observe(string tokenHash, string? expectedInstance = null, bool supportsWorkshop = false)
     {
-        if (Scenario.SupportsContinuous) return ObserveContinuous(tokenHash, expectedInstance);
+        if (Scenario.SupportsContinuous) return ObserveContinuous(tokenHash, expectedInstance, supportsWorkshop);
         using var connection = database.Open();
         using var transaction = connection.BeginTransaction(deferred: true);
         var identity = database.Authenticate(tokenHash, connection, transaction);
@@ -191,7 +191,12 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
             {
                 nextCursor = reader.GetInt64(0);
                 using var document = JsonDocument.Parse(reader.GetString(1));
-                events.Add(document.RootElement.Clone());
+                var e = document.RootElement;
+                if (e.GetProperty("type").GetString() == "workshopActionCompleted" && e.GetProperty("actorId").GetString() != identity.ActorId)
+                    events.Add(JsonSerializer.SerializeToElement(new { seq = e.GetProperty("seq").GetInt64(),
+                        stateVersion = e.GetProperty("stateVersion").GetInt64(), actorId = e.GetProperty("actorId").GetString(),
+                        commandId = e.GetProperty("commandId").GetString(), type = "workshopActionCompleted" }, Protocol.Json));
+                else events.Add(e.Clone());
             }
         var body = Protocol.Envelope(Scenario.RulesVersion, identity, state.Version, state.Cursor);
         body["events"] = events;
@@ -222,7 +227,7 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         return instance;
     }
 
-    public ApiReply Execute(string tokenHash, WorldCommand request, string? requestedFault, string? expectedInstance = null)
+    public ApiReply Execute(string tokenHash, WorldCommand request, string? requestedFault, string? expectedInstance = null, bool supportsWorkshop = false)
     {
         var requestHash = request.RequestHash;
         using var connection = database.Open();
@@ -237,12 +242,22 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
             var current = ReadState(connection, transaction);
             return Protocol.Error(Scenario.RulesVersion, 409, "IDEMPOTENCY_CONFLICT", "命令 ID 已用于不同参数", identity, current.Version, current.Cursor, request.CommandId).WithInstance(instance);
         }
+        // Previously committed/rejected commands remain byte-exact above. New effects
+        // need a client that understands the solid furniture in this adopted world.
+        if (Scenario.SupportsMaterialAccess && WorkshopRules.Read(connection, transaction) is not null && !supportsWorkshop)
+        {
+            var current = ReadState(connection, transaction);
+            var required = Protocol.Envelope(Scenario.RulesVersion, identity, current.Version, current.Cursor, request.CommandId,
+                new("CLIENT_CAPABILITY_REQUIRED", "请升级支持workshop-v1的客户端后继续原命令"));
+            required["requiredCapabilities"] = new[] { WorkshopRules.Capability };
+            return Protocol.Reply(409, required).WithInstance(instance);
+        }
         if (Scenario.SupportsMaterialAccess)
             MaterialSourceRules.Advance(connection, transaction, materialClock?.Now ?? throw new InvalidOperationException("缺少材料服务时钟"), database.ProductionPolicy is not null);
         var state = ReadState(connection, transaction);
         var actor = ReadActor(connection, transaction, identity.ActorId);
         var action = request.Action;
-        var fault = configuration.FaultsEnabled && action.Type is "claim" or "gather" or "build" or "transfer" or "reserve_material" or "cancel_reservation" or "harvest_material" or "append_entity_note" or "paint_entity_canvas" or "visit" or "postcard" or "mosaic" or "mosaic_propose" or "mosaic_review" ? requestedFault : null;
+        var fault = configuration.FaultsEnabled && action.Type is "claim" or "gather" or "build" or "transfer" or "reserve_material" or "cancel_reservation" or "harvest_material" or "append_entity_note" or "paint_entity_canvas" or "build_workshop" or "craft_tool" or "deposit_wood" or "withdraw_wood" or "visit" or "postcard" or "mosaic" or "mosaic_propose" or "mosaic_review" ? requestedFault : null;
         var rejection = Validate(connection, transaction, request, state, actor, identity, instance);
         if (rejection is not null)
         {
@@ -264,6 +279,12 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         long quantity = 0;
         switch (action.Type)
         {
+            case "build_workshop":
+            case "craft_tool":
+            case "deposit_wood":
+            case "withdraw_wood":
+                (result, worldEvent, source, destination, quantity) = ApplyWorkshop(connection, transaction, request, identity, actor, version, cursor, fault);
+                break;
             case "paint_entity_canvas":
                 (result, worldEvent) = ApplyEntityCanvas(connection, transaction, request, identity, actor, version, cursor);
                 break;
@@ -467,7 +488,7 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         {
             if (instance is null || !Scenario.SupportsContinuous ||
                 !(request.Action.Type is "walk" or "gather" or "build" || Scenario.SupportsTransfer && request.Action.Type == "transfer" ||
-                    Scenario.SupportsMaterialAccess && request.Action.Type is "reserve_material" or "cancel_reservation" or "harvest_material" or "append_entity_note" or "paint_entity_canvas"))
+                    Scenario.SupportsMaterialAccess && request.Action.Type is "reserve_material" or "cancel_reservation" or "harvest_material" or "append_entity_note" or "paint_entity_canvas" or "build_workshop" or "craft_tool" or "deposit_wood" or "withdraw_wood"))
                 return (422, new("PRECONDITION_MODE_UNAVAILABLE", "当前世界或动作不支持这个前置条件模式"));
             if (request.ExpectedStateVersion > state.Version)
                 return (409, new("STATE_VERSION_AHEAD", "观察版本超过当前世界，请重新观察"));
@@ -481,6 +502,7 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
                 return (409, new("STALE_ACTOR_STATE", "这位居民的状态已变化，请重新观察"));
         }
         var action = request.Action;
+        if (WorkshopRules.IsAction(action.Type)) return ValidateWorkshop(connection, transaction, action, actor, identity);
         if (action.Type == "paint_entity_canvas") return ValidateEntityCanvas(connection, transaction, action, actor, identity);
         if (action.Type == "append_entity_note") return ValidateEntityNote(connection, transaction, action, actor, identity);
         if (action.Type is "reserve_material" or "cancel_reservation" or "harvest_material")

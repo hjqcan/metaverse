@@ -1,0 +1,91 @@
+{
+  "success": false,
+  "testsRun": 2,
+  "failures": [
+    {
+      "test": "test_21_delayed_observation_crosses_deadline_no_fresh_post (__main__.WorkshopMissionAcceptance.test_21_delayed_observation_crosses_deadline_no_fresh_post)",
+      "detail": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/workshop_mission_api.py\", line 456, in test_21_delayed_observation_crosses_deadline_no_fresh_post\n    self.assertEqual('budget_exhausted', result['mission']['status'])\nAssertionError: 'budget_exhausted' != 'completed'\n- budget_exhausted\n+ completed\n\n"
+    },
+    {
+      "test": "test_22_delayed_capability_observation_does_not_resend_pending (__main__.WorkshopMissionAcceptance.test_22_delayed_capability_observation_does_not_resend_pending)",
+      "detail": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/workshop_mission_api.py\", line 473, in test_22_delayed_capability_observation_does_not_resend_pending\n    self.assertEqual('budget_exhausted', result['mission']['status'])\nAssertionError: 'budget_exhausted' != 'completed'\n- budget_exhausted\n+ completed\n\n"
+    }
+  ],
+  "outcomes": [
+    {
+      "test": "test_21_delayed_observation_crosses_deadline_no_fresh_post",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 15,
+          "structures": 24,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_22_delayed_capability_observation_does_not_resend_pending",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 15,
+          "structures": 24,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    }
+  ],
+  "finalCodeHashes": {
+    "scripts/resident_workshop.py": "c48786408aea015ec27c7798e532b4a881ebff5eb2f1a28ab1b0123ebae6e7e9",
+    "scripts/resident_mission.py": "ee58118ca6396e75de6cc22e96e4dcc7bc3c6e3e0cf9f995648cc3579013b759",
+    "scripts/run_resident.py": "32834ee8e8e99f748f6e4939bfaabf8e8d9a217e696d6432ab1cbe33990ba5b3",
+    "scripts/foundation_agent.py": "47ed67f26d997b41550335885de07d9615594d9e13fbfa1135a4a520a04fb08b",
+    "scripts/continuous_navigation.py": "0e2a58a386aeb13bdf41a403d1a0864039e962e9f81bcbf981663500584a9225",
+    "scripts/command_preconditions.py": "37be9d8233627cd44026c4e7c4bdc7b23fbe77de46c69004a2affd910ab5c0af",
+    "scripts/resident_construction.py": "6d5b9ee9a7d3591bac2b57a80e42b474fb6f5a0b964b800a71f95c16dfa9939b",
+    "tests/workshop_mission_api.py": "a84e29a8f4fbfffde433341084984eeb57b905c6ee6e52a689f6a54b1f1582f2"
+  },
+  "actualModelCalls": 0
+}

@@ -10,6 +10,11 @@ if (args.Length > 0)
 {
     try
     {
+        if (args.Length == 3 && args[0] == "adopt-workshop" && args[1] == "--instance")
+        {
+            Console.WriteLine(database.AdoptWorkshop(args[2]) ? "工作坊能力已在原实例采用。" : "工作坊已采用，原历史保持。");
+            return 0;
+        }
         if (args.Length == 5 && args[0] == "adopt-entity-canvas" && args[1] == "--instance" && args[3] == "--entity")
         {
             Console.WriteLine(database.AdoptEntityCanvas(args[2], args[4]) ? "地画已在原平台开启。" : "地画已采用，原图和历史保持。");
@@ -153,7 +158,16 @@ app.MapDelete("/v1/session", (HttpContext context) =>
 app.MapGet("/v1/worlds/{worldId}/observation", (string worldId, HttpContext context) =>
 {
     RequireWorld(worldId);
-    return service.Observe(TokenHash(context), WorldInstance.ReadHeader(context.Request)).ToResult();
+    return service.Observe(TokenHash(context), WorldInstance.ReadHeader(context.Request),
+        context.Request.Headers[WorkshopRules.Header].ToString().Split(',', StringSplitOptions.TrimEntries).Contains(WorkshopRules.Capability)).ToResult();
+});
+app.MapGet("/v1/worlds/{worldId}/workshop/actions/{authorActorId}/{commandId}",
+    (string worldId, string authorActorId, string commandId, HttpContext context) =>
+{
+    RequireWorld(worldId);
+    if (context.Request.Query.Count != 0 || !Protocol.ValidCommandId(authorActorId) || !Protocol.ValidCommandId(commandId))
+        throw new RequestFailure(400, "INVALID_REQUEST", "工作坊原记录定位字段无效或含有查询参数");
+    return service.WorkshopActionDetail(TokenHash(context), authorActorId, commandId, WorldInstance.ReadHeader(context.Request)).ToResult();
 });
 app.MapGet("/v1/worlds/{worldId}/entities/{entityId}/canvas/edits/{authorActorId}/{commandId}",
     (string worldId, string entityId, string authorActorId, string commandId, HttpContext context) =>
@@ -196,7 +210,8 @@ app.MapPost("/v1/worlds/{worldId}/commands", async (string worldId, HttpContext 
 {
     RequireWorld(worldId);
     var request = await WorldCommand.Read(context.Request, database.Scenario);
-    return service.Execute(TokenHash(context), request, context.Request.Headers["X-Test-Fault"].ToString(), WorldInstance.ReadHeader(context.Request)).ToResult();
+    return service.Execute(TokenHash(context), request, context.Request.Headers["X-Test-Fault"].ToString(), WorldInstance.ReadHeader(context.Request),
+        context.Request.Headers[WorkshopRules.Header].ToString().Split(',', StringSplitOptions.TrimEntries).Contains(WorkshopRules.Capability)).ToResult();
 });
 app.MapFallback((HttpContext context) => Protocol.Error(database.Scenario.RulesVersion, 404, "INVALID_REQUEST", "接口不存在", context.Items["identity"] as Identity).ToResult());
 await app.RunAsync();

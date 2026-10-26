@@ -1,0 +1,54 @@
+{
+  "actualModelCalls": 0,
+  "checks": [
+    {
+      "name": "legal bridge-edge start",
+      "passed": true
+    },
+    {
+      "name": "nearby target still blocked by water",
+      "passed": true
+    },
+    {
+      "name": "alternative movement is clear",
+      "passed": true
+    },
+    {
+      "name": "alternative interaction is clear",
+      "passed": true
+    },
+    {
+      "name": "solid bench center cannot be occupied",
+      "passed": true
+    },
+    {
+      "name": "actual navigation bake completed",
+      "passed": true
+    },
+    {
+      "name": "approach changes the blocked position",
+      "passed": true
+    },
+    {
+      "name": "selected endpoint can interact",
+      "passed": true
+    },
+    {
+      "name": "entire navigation route is clear",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "route": [
+    [
+      19.542444229126,
+      11.5500001907349
+    ],
+    [
+      19.542444229126,
+      11.5500001907349
+    ]
+  ],
+  "scope": "Actual native navigation on retained terrain plus a synthetic bench; no world mutation.",
+  "worldCommands": 0
+}

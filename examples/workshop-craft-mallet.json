@@ -1,0 +1,38 @@
+{
+  "missionId": "workshop-craft-mallet",
+  "objective": "在原公共台旁用本人木材制一把本人木工锤并返回。",
+  "goals": [
+    {
+      "id": "fixed",
+      "label": "明确工坊目标",
+      "target": [
+        26,
+        20
+      ],
+      "workshop": {
+        "worldInstanceId": "w_00000000000000000000000000000000",
+        "actorId": "a2",
+        "action": {
+          "type": "craft_tool",
+          "capabilityVersion": 1,
+          "entityId": "replace_original_workbench_id",
+          "recipeId": "wooden_mallet.v1"
+        },
+        "returnToOrigin": true
+      }
+    }
+  ],
+  "allowBuild": false,
+  "allowWorkshopBuild": false,
+  "allowCraftTool": true,
+  "allowDepositWood": false,
+  "allowWithdrawWood": false,
+  "budgets": {
+    "commands": 250,
+    "queries": 1000,
+    "wood": 1,
+    "woodMoved": 0,
+    "seconds": 600,
+    "modelCalls": 0
+  }
+}

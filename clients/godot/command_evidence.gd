@@ -3,6 +3,7 @@ extends RefCounted
 const MODE = "actor-state-v1"
 const Notes = preload("res://entity_note_evidence.gd")
 const Canvas = preload("res://entity_canvas_evidence.gd")
+const Workshop = preload("res://workshop_evidence.gd")
 
 static func continuous_world(observed: Dictionary) -> bool:
 	return {"r8": "wilderness-continuous-v1", "r9": "wilderness-cooperation-v1", "r10": "wilderness-material-access-v1"}.get(observed.get("rulesVersion"), "") \
@@ -89,6 +90,8 @@ static func point(value: Variant) -> bool:
 		and is_finite(float(value[0])) and is_finite(float(value[1]))
 
 static func capture(observed: Dictionary, action: Dictionary) -> Dictionary:
+	if Workshop.is_action(action.get("type")):
+		return Workshop.capture(observed, action)
 	if action.get("type") == "paint_entity_canvas":
 		return Canvas.capture(observed, action)
 	if action.get("type") == "append_entity_note":
@@ -129,6 +132,8 @@ static func capture(observed: Dictionary, action: Dictionary) -> Dictionary:
 	return before if valid_before(action, before) else {}
 
 static func valid_before(action: Dictionary, before: Variant) -> bool:
+	if Workshop.is_action(action.get("type")):
+		return Workshop.valid_before(action, before)
 	if action.get("type") == "paint_entity_canvas":
 		return Canvas.valid_before(action, before)
 	if action.get("type") == "append_entity_note":
@@ -188,6 +193,8 @@ static func result(data: Dictionary, command: Dictionary, before: Dictionary) ->
 	var action: Dictionary = command.action
 	if not actual is Dictionary or actual.get("action") != action.get("type") or not valid_before(action, before):
 		return false
+	if Workshop.is_action(action.type):
+		return Workshop.result(data, command, before)
 	match action.type:
 		"paint_entity_canvas":
 			return Canvas.result(data, command, before)

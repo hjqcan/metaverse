@@ -404,6 +404,9 @@ func update_world(observation: Dictionary, connection_changed := false) -> void:
 		for tree in observation.resourceNodes:
 			tree_nodes[tree.nodeId] = _tree(objects,Vector2(tree.position[0],tree.position[1]),tree.nodeId,tree.remainingWood)
 		for entity in observation.entities:
+			if entity.definitionId in ["workbench", "wooden_chest"]:
+				_workshop_furniture(entity)
+				continue
 			var bridge = entity.definitionId == "bridge"
 			var length = 4.8 if bridge else 2.0
 			var width = 1.6 if bridge else 2.0
@@ -456,6 +459,33 @@ func update_world(observation: Dictionary, connection_changed := false) -> void:
 			targets.erase(id)
 	_update_identity()
 
+func _workshop_box(size: Vector3, position: Vector3, color: String) -> void:
+	var shape := BoxMesh.new()
+	shape.size = size
+	mesh(objects, shape, position, material(Color(color)))
+
+func _workshop_furniture(entity: Dictionary) -> void:
+	var p := Vector3(entity.position[0], height_at(entity.position[0], entity.position[1]), entity.position[1])
+	var bench: bool = entity.definitionId == "workbench"
+	if bench:
+		for x in [-0.82, 0.82]:
+			for z in [-0.32, 0.32]:
+				_workshop_box(Vector3(0.16, 0.8, 0.16), p + Vector3(x, 0.4, z), "654a32")
+		_workshop_box(Vector3(1.8, 0.12, 0.5), p + Vector3(0, 0.22, 0), "8c6842")
+		for i in 5:
+			_workshop_box(Vector3(2, 0.16, 0.19), p + Vector3(0, 0.86, -0.4 + 0.2 * i), "b18a54" if i % 2 else "a17c49")
+	else:
+		_workshop_box(Vector3(0.96, 0.66, 0.96), p + Vector3(0, 0.36, 0), "80613e")
+		for i in 4:
+			_workshop_box(Vector3(0.98, 0.16, 0.06), p + Vector3(0, 0.14 + i * 0.17, -0.49), "a8834f")
+		_workshop_box(Vector3(1, 0.12, 1), p + Vector3(0, 0.76, 0), "bc9257")
+		for x in [-0.32, 0.32]:
+			_workshop_box(Vector3(0.08, 0.8, 1.01), p + Vector3(x, 0.4, 0), "514c3d")
+		_workshop_box(Vector3(0.14, 0.16, 0.06), p + Vector3(0, 0.6, -0.52), "d2b56f")
+	var label := _caption(objects, "", p + Vector3(0, 1.55, 0), Color("ead9b4"))
+	label.font_size = 28
+	structure_labels[entity.entityId] = {"label": label, "owner": entity.ownerActorId, "title": "公共工作台" if bench else "私人储物箱"}
+
 func show_destination(point: Vector2) -> void:
 	marker.position = _route_position(point)
 	marker.visible = true
@@ -494,8 +524,10 @@ func show_build(point: Vector2, recipe: String, valid: bool) -> void:
 	ghost.visible = not recipe.is_empty()
 	if not ghost.visible:
 		return
-	ghost.mesh.size = Vector3(4.8,0.15,1.6) if recipe == "bridge.v1" else Vector3(2,0.15,2)
-	ghost.position = Vector3(point.x,0.25,point.y)
+	var size: Vector3 = {"bridge.v1": Vector3(4.8,0.15,1.6), "platform.v1": Vector3(2,0.15,2),
+		"workbench.v1": Vector3(2,0.92,1), "wooden_chest.v1": Vector3(1,0.82,1)}.get(recipe, Vector3.ZERO)
+	ghost.mesh.size = size
+	ghost.position = Vector3(point.x, height_at(point.x, point.y) + size.y / 2, point.y)
 	ghost.material_override = material(Color(0.6,0.84,0.55,0.6) if valid else Color(0.85,0.35,0.27,0.6))
 
 func gather_feedback(node_id: String) -> void:

@@ -289,3 +289,13 @@ Godot检查真实鼠标网格和色板、图面刷新、关闭草图、断线前
 原两条5格／4格与当前9格使用保留的实际输入；0条、超过50条、blank、后续改色与身份切换等界面边界使用明确标记的合成观察。它们证明界面行为，不计为新增原自然活动。查看不发送业务信号，保留原草图与基准、pending及last_receipt；原平台表面保持当前图。独立实际UI验收与作者测试分别记录，不为这项表现层改动重跑后端全套或重演绘制历史。
 
 需要Godot 4.7及`xvfb-run`，可用`GODOT_BIN`指定已有引擎。8组155项断言通过原生鼠标事件操作控件，不直接触发历史选择回调；当前模式的提交只捕获信号，不执行世界命令。结果写入`.local/iter0026/worker-*/results.json`，每轮自动停止自启进程并删除临时项目和缓存。该套件不测试恢复文件I/O；独立真实HTTP读取与界面夹具的边界见[本轮结果](../docs/iterations/ITER-0026-results.md)。
+
+### ITER-0027 工作台、工具与储物
+
+`npm run test:workshop` 构建本轮服务并运行 `workshop_api.py` 的18组HTTP／SQLite检查；已纳入普通HTTP入口。原数据由实际采集和来源领取建立，不通过SQL补物品。覆盖显式采用、原回执、公共台和私人箱、工具归属、容量、并发存取、几何、提交前后退出及损坏存储。独立验收可显式指定 `WORLD_SERVER_DLL` 直接运行该脚本；按报告哈希区分二进制版本。
+
+构建后，`npm run test:workshop:godot` 验证9个原生恢复场景：真实HTTP、逐命令磁盘记录、新进程及原命令查证。它使用headless客户端，不是鼠标操作验收。`npm run test:workshop:geometry` 运行实际导航网格和桥边穿水回归，夹具只含地形、旧实体与一张合成工作台，不发送世界动作。后者需要Godot 4.7.2，可用 `GODOT_BIN` 指定。
+
+原历史Python链另用 `WORKSHOP_BASELINE=/绝对路径/已停服原历史 WORLD_SERVER_DLL=/绝对路径/World.Server.dll npm run test:workshop:mission`。必须显式提供原历史，脚本只在副本执行；不将新建测试世界冒充原自然史。报告页用 `WORKSHOP_REPORT_DIR=/绝对路径/该次任务证据 npm run test:workshop:report`，通过真实Chrome导入实际CLI报告与损坏变体，静态服务不发送世界请求。这两个专项入口不并入依赖零私人数据的默认 `npm test`。
+
+测试自动删除其一次性世界、会话文件并停止自启服务；保留结果、请求证据与必要截图。失败夹具与修复后复验分列，作者自测、独立API和原生自然活动分别计数，真实模型调用0。

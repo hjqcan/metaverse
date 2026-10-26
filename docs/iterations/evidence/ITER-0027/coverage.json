@@ -1,0 +1,138 @@
+{
+  "iteration": "ITER-0027",
+  "date": "2026-10-26",
+  "status": "accepted; scoped final checks complete",
+  "modelCalls": 0,
+  "publicDeployment": false,
+  "independentHttp": {
+    "distinctGroups": 18,
+    "successfulExecutions": 22,
+    "runs": [
+      {
+        "version": "server-v1",
+        "groups": 16,
+        "evidence": "qa-api-v1-16.json"
+      },
+      {
+        "version": "server-v2",
+        "groups": 6,
+        "evidence": "qa-api-v2-six-retests.json"
+      }
+    ],
+    "fullSuiteOnFinalSource": false,
+    "failureEvidence": "qa-api-v1-canvas-loss-failure.json"
+  },
+  "authorNativeRecovery": {
+    "distinctGroups": 9,
+    "assertions": 122,
+    "runs": [
+      "author-native-recovery-eight-pass.json",
+      "author-native-recovery-build-retest.json"
+    ],
+    "initialFailure": "author-native-recovery-initial-failure.json",
+    "independentReadOnlyReview": "qa-native-recovery-review.json",
+    "limitation": "Real HTTP, disk and process recovery; headless client, not mouse-input acceptance."
+  },
+  "authorGeometry": {
+    "checks": 9,
+    "evidence": "author-native-geometry.json",
+    "actualServerCheck": "author-server-geometry.json",
+    "independentReproduction": "research-approach-fixed.json",
+    "originalCounterexample": "research-approach-original.json",
+    "worldCommands": 0
+  },
+  "legacyRegression": {
+    "httpGroups": 25,
+    "nativeGroups": 5,
+    "nativeAssertions": 42,
+    "evidence": [
+      "regression-continuous.json",
+      "regression-actor-state.json",
+      "regression-canvas-storage.json",
+      "regression-native-navigation.json"
+    ],
+    "fullHistoricalSuiteRerun": false
+  },
+  "workerPython": {
+    "distinctGroups": 25,
+    "successfulExecutions": 39,
+    "runs": [
+      {
+        "groups": 20,
+        "evidence": "worker-python-full_before_deadline_fix.json"
+      },
+      {
+        "groups": 9,
+        "evidence": "worker-python-deadline_fix_targeted.json"
+      },
+      {
+        "groups": 6,
+        "evidence": "worker-python-final_atomic_fix_targeted.json"
+      },
+      {
+        "groups": 4,
+        "evidence": "worker-python-final_save_deadline_targeted.json"
+      }
+    ],
+    "fullSuiteOnFinalSource": false,
+    "finalDelivery": "worker-python-delivery-final.json",
+    "initialDelivery": "worker-python-delivery.json",
+    "deadlineEvidence": "worker-python-final-save-fault-evidence.json",
+    "initialIndependentFinding": "qa-python-final-review-before-fsync-fix.json",
+    "independentReadOnlyClosure": "qa-python-final-deadline-closure.json"
+  },
+  "workerBrowser": {
+    "checks": 23,
+    "javascriptErrors": 0,
+    "worldRequests": 0,
+    "evidence": "worker-browser-final.json",
+    "screenshots": [
+      "worker-report-desktop.png",
+      "worker-report-mobile.png"
+    ],
+    "rendererUnchangedSinceRun": true,
+    "limitation": "Actual CLI reports from the earlier full20 Python run; deliberately damaged variants are fixtures."
+  },
+  "independentNativeNaturalHistory": {
+    "nativeCommands": 273,
+    "workshopReceiptEventDetailProofs": 17,
+    "instance": "w_15ced6889f624d8da8a3d2129ba26874",
+    "finalStateVersion": 1352,
+    "finalEventCursor": 1353,
+    "finalIssuedWood": 76,
+    "finalAccountedWood": 76,
+    "evidence": "qa-native-summary.json",
+    "commands": [
+      "qa-native-commands-phase1.json",
+      "qa-native-commands-phase2.json"
+    ],
+    "proofs": "qa-workshop-triple-proofs.json",
+    "coordinatorReadOnlyReview": "coordinator-evidence-review.json",
+    "independentReadOnlyReview": "qa-native-json-review.json",
+    "limitation": "Input.parse_input_event through native UI on the original history, normal polling/physics/animation. Fixed inputs, not model decisions or proof of human enjoyment."
+  },
+  "cleanup": {
+    "evidence": [
+      "author-regression-cleanup.json",
+      "server-v1-cleanup.json",
+      "qa-native-cleanup.json",
+      "research-historical-fixture-cleanup.json",
+      "author-godot-cache-cleanup.json"
+    ],
+    "retained": "Original natural world head, server-v2 continuation binaries, necessary small evidence and screenshots. Preexisting user Godot window and its cache were not stopped or deleted."
+  },
+  "sourceManifests": [
+    "server-v1-manifest.json",
+    "server-v2-manifest.json",
+    "native-v1-manifest.json",
+    "native-v2-manifest.json",
+    "worker-python-delivery-final.json"
+  ],
+  "limits": [
+    "Counts are scoped and not additive measures of product quality.",
+    "Archived failures remain versioned; no final-version full-suite claim.",
+    "a1_alias and a1 share one declared controller; no additional independent real person.",
+    "Reuse reduces the later actor recipe cost from7 to4 wood; both complete branches spend7 in total.",
+    "Storage enables stockpiling; long-term fairness, unlimited entry, space and forestry remain unresolved."
+  ]
+}

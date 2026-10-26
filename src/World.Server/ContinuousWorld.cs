@@ -54,12 +54,21 @@ internal static class ContinuousWorld
         }
         return inside;
     }
-    public static (double X, double Z) HalfSize(NaturalStructure e) => e.DefinitionId == "bridge" ? (2.4, 0.8) : (1, 1);
+    public static (double X, double Z) HalfSize(NaturalStructure e) => e.DefinitionId switch
+    {
+        "bridge" => (2.4, 0.8), "platform" => (1, 1), "workbench" => (1, 0.5), "wooden_chest" => (0.5, 0.5),
+        _ => throw new InvalidOperationException("不支持的实体几何")
+    };
     public static bool Walkable(double x, double z, IReadOnlyList<WorldResourceNode> trees, IReadOnlyList<NaturalStructure> entities)
     {
         if (x < Radius || x > 32 - Radius || z < Radius || z > 24 - Radius) return false;
         if (Rocks.Any(r => Distance(x, z, r.Position[0], r.Position[1]) < r.Radius + Radius - 1e-9)) return false;
         if (trees.Any(t => t.RemainingWood > 0 && Distance(x, z, t.Position[0], t.Position[1]) < TreeRadius + Radius - 1e-9)) return false;
+        foreach (var e in entities.Where(WorkshopRules.IsFurniture))
+        {
+            var h = HalfSize(e); var p = e.Position;
+            if (Distance(x, z, Math.Clamp(x, p[0] - h.X, p[0] + h.X), Math.Clamp(z, p[1] - h.Z, p[1] + h.Z)) < Radius - 1e-9) return false;
+        }
         return !Water(x, z, Radius) || entities.Any(e => e.DefinitionId == "bridge" &&
             Math.Abs(x - e.Position[0]) <= 2.4 - Radius && Math.Abs(z - e.Position[1]) <= 0.8 - Radius);
     }
@@ -91,6 +100,17 @@ internal static class ContinuousWorld
         }
         foreach (var e in entities.Where(e => e.DefinitionId == "bridge"))
         { Vertical(e.Position[0] - 2.4 + Radius); Vertical(e.Position[0] + 2.4 - Radius); Horizontal(e.Position[1] - 0.8 + Radius); Horizontal(e.Position[1] + 0.8 - Radius); }
+        foreach (var e in entities.Where(WorkshopRules.IsFurniture))
+        {
+            var h = HalfSize(e); var p = e.Position;
+            foreach (var cx in new[] { p[0] - h.X, p[0] + h.X })
+            {
+                Vertical(cx - Radius); Vertical(cx); Vertical(cx + Radius);
+                foreach (var cz in new[] { p[1] - h.Z, p[1] + h.Z }) Circle(cx, cz, Radius);
+            }
+            foreach (var cz in new[] { p[1] - h.Z, p[1] + h.Z })
+            { Horizontal(cz - Radius); Horizontal(cz); Horizontal(cz + Radius); }
+        }
         cuts.Sort();
         for (var i = 0; i < cuts.Count - 1; i++)
         {
@@ -112,11 +132,18 @@ internal sealed partial class WorldService
         while (r.Read()) list.Add(new(r.GetString(0), r.GetString(1), r.GetInt64(2), r.GetString(3), r.GetString(4), [r.GetDouble(5), r.GetDouble(6)], r.GetInt64(7)));
         return list;
     }
-    private ApiReply ObserveContinuous(string tokenHash, string? expectedInstance)
+    private ApiReply ObserveContinuous(string tokenHash, string? expectedInstance, bool supportsWorkshop)
     {
         using var c = database.Open(); using var t = c.BeginTransaction(deferred: true);
         var identity = database.Authenticate(tokenHash, c, t); var state = ReadState(c, t); var actor = ReadActor(c, t, identity.ActorId);
         var instance = WorldInstance.Require(c, t, expectedInstance);
+        if (Scenario.SupportsMaterialAccess && WorkshopRules.Read(c, t) is not null && !supportsWorkshop)
+        {
+            var required = Protocol.Envelope(Scenario.RulesVersion, identity, state.Version, state.Cursor,
+                error: new("CLIENT_CAPABILITY_REQUIRED", "此世界已采用工作台和储物箱，请升级支持workshop-v1的客户端"));
+            required["requiredCapabilities"] = new[] { WorkshopRules.Capability };
+            return Protocol.Reply(409, required).WithInstance(instance);
+        }
         var trees = ReadResourceNodes(c, t); var entities = ReadStructures(c, t); var residents = new List<object>();
         using (var command = Command(c, t, "SELECT actor_id,x,y FROM residents WHERE world_id=$world ORDER BY actor_id", ("$world", Protocol.WorldId)))
         using (var r = command.ExecuteReader()) while (r.Read()) residents.Add(new { actorId = r.GetString(0), position = new[] { r.GetDouble(1), r.GetDouble(2) } });
@@ -133,12 +160,14 @@ internal sealed partial class WorldService
         if (Scenario.SupportsMaterialAccess)
         {
             var source = MaterialSourceRules.Read(c, t);
+            var (toolWood, storedWood) = WorkshopRules.Wood(c, t);
             body["resourceAudit"] = new { initialWood = 12, issuedWood = state.IssuedWood, generatedWood = source.GeneratedWood,
-                sourceWood = source.StockWood, wildWood, depotWood = 0, inventoryWood, embodiedWood,
-                conserved = wildWood + source.StockWood + inventoryWood + embodiedWood == state.IssuedWood && state.IssuedWood == 12 + source.GeneratedWood };
+                sourceWood = source.StockWood, wildWood, depotWood = 0, inventoryWood, embodiedWood, toolWood, storedWood,
+                conserved = wildWood + source.StockWood + inventoryWood + embodiedWood + toolWood + storedWood == state.IssuedWood && state.IssuedWood == 12 + source.GeneratedWood };
             BindMaterialAccess(body, c, t, identity);
             BindEntityNotes(body, c, t, identity);
             BindEntityCanvas(body, c, t);
+            BindWorkshop(body, c, t, identity, entities);
         }
         if (Scenario.SupportsTransfer) BindTransfers(body, c, t, identity.ActorId);
         BindObservation(body, instance);

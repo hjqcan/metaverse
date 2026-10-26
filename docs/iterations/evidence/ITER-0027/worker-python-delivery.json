@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 1,
+  "kind": "iter0027-build2-workshop-delivery",
+  "atUtc": "2026-10-26T09:07:02.579857+00:00",
+  "status": "ready_for_coordinator_integration",
+  "server": {
+    "dll": ".local/iter0027/server-v2/World.Server.dll",
+    "sha256": "926a46b26db9753fbb8bc46b498ac661064c2039c7317bbf3bd26fa04d9e96a7"
+  },
+  "files": {
+    "scripts/resident_workshop.py": "f890ff7a81cb09e39826bc47a12261b98513d96d267d745688844eb197424acc",
+    "scripts/resident_mission.py": "ee58118ca6396e75de6cc22e96e4dcc7bc3c6e3e0cf9f995648cc3579013b759",
+    "scripts/run_resident.py": "32834ee8e8e99f748f6e4939bfaabf8e8d9a217e696d6432ab1cbe33990ba5b3",
+    "scripts/foundation_agent.py": "47ed67f26d997b41550335885de07d9615594d9e13fbfa1135a4a520a04fb08b",
+    "scripts/continuous_navigation.py": "0e2a58a386aeb13bdf41a403d1a0864039e962e9f81bcbf981663500584a9225",
+    "scripts/command_preconditions.py": "37be9d8233627cd44026c4e7c4bdc7b23fbe77de46c69004a2affd910ab5c0af",
+    "scripts/resident_construction.py": "6d5b9ee9a7d3591bac2b57a80e42b474fb6f5a0b964b800a71f95c16dfa9939b",
+    "src/World.Server/wwwroot/resident.js": "4a18005d84706c5d39d9fb4be7c5f571ef355c99ae908c8268d94a131be980f0",
+    "tests/workshop_mission_api.py": "70872070b7483a8bd872d6ad5aa17470ad192a33b0e695dbd120d23b19fdb1c0",
+    "tests/browser/workshop-resident.mjs": "badf77cc93d2be4506b1f6ea549866c53a79645325ca705015c88f84d99aef95",
+    "docs/contracts/workshop-mission-v1.md": "8632612fffd4b56938944d2cfebff78121713cfb3d72caa29e9b60fe3590675c",
+    "examples/workshop-build-chest.json": "74f2c61af3bb81fade8b18c26cea8f9ec65b80622751f5144c2ef605e8185a9a",
+    "examples/workshop-build-workbench.json": "0eedd38e4e5a83f9b31022a2e74cee6a5954ece8b6729f467c78f468a6265a3c",
+    "examples/workshop-craft-mallet.json": "77a114eeec4d0dc26576a079185930c60201ffce7051c2ab6f3be2ce0f55d3a5",
+    "examples/workshop-deposit-wood.json": "f3681ba59eeb20da218c9cde91dadb3d878f55ad6450f83e16c1bd7ace27107f",
+    "examples/workshop-withdraw-wood.json": "04bb0569ad8b0adfb317fddc02ef583772c74985eb2939d47eac4e6aea184ada"
+  },
+  "tests": [
+    {
+      "label": "full_before_deadline_fix",
+      "groups": 20,
+      "passed": true,
+      "summary": ".local/iter0027/python/20261026T085758Z-9bb06c/summary.json",
+      "summarySha256": "455937ec079d0fc32fed59bad46c2a59088ea5699d14189a9737c84a41f4fbd1",
+      "codeHashes": {
+        "scripts/resident_workshop.py": "c48786408aea015ec27c7798e532b4a881ebff5eb2f1a28ab1b0123ebae6e7e9",
+        "scripts/resident_mission.py": "ee58118ca6396e75de6cc22e96e4dcc7bc3c6e3e0cf9f995648cc3579013b759",
+        "scripts/run_resident.py": "32834ee8e8e99f748f6e4939bfaabf8e8d9a217e696d6432ab1cbe33990ba5b3",
+        "scripts/foundation_agent.py": "47ed67f26d997b41550335885de07d9615594d9e13fbfa1135a4a520a04fb08b",
+        "scripts/continuous_navigation.py": "0e2a58a386aeb13bdf41a403d1a0864039e962e9f81bcbf981663500584a9225",
+        "scripts/command_preconditions.py": "37be9d8233627cd44026c4e7c4bdc7b23fbe77de46c69004a2affd910ab5c0af",
+        "scripts/resident_construction.py": "6d5b9ee9a7d3591bac2b57a80e42b474fb6f5a0b964b800a71f95c16dfa9939b",
+        "tests/workshop_mission_api.py": "8041121746f6aa73a3d774082af816afdaa3eb5c10cbde608150ad79a44daceb"
+      },
+      "runtimeRemoved": true,
+      "originalHistoryRetained": true,
+      "materialConservation": true
+    },
+    {
+      "label": "deadline_fix_targeted",
+      "groups": 9,
+      "passed": true,
+      "summary": ".local/iter0027/python/20261026T090129Z-a3b2dd/summary.json",
+      "summarySha256": "2f075f021f439d0d738b77527d516e1609e949f93cf646f06bd05171c79fa7a9",
+      "codeHashes": {
+        "scripts/resident_workshop.py": "be240c89fde9e14e65b98dd73b63cfb16f6478c41c56402e5860c4cc431e23eb",
+        "scripts/resident_mission.py": "ee58118ca6396e75de6cc22e96e4dcc7bc3c6e3e0cf9f995648cc3579013b759",
+        "scripts/run_resident.py": "32834ee8e8e99f748f6e4939bfaabf8e8d9a217e696d6432ab1cbe33990ba5b3",
+        "scripts/foundation_agent.py": "47ed67f26d997b41550335885de07d9615594d9e13fbfa1135a4a520a04fb08b",
+        "scripts/continuous_navigation.py": "0e2a58a386aeb13bdf41a403d1a0864039e962e9f81bcbf981663500584a9225",
+        "scripts/command_preconditions.py": "37be9d8233627cd44026c4e7c4bdc7b23fbe77de46c69004a2affd910ab5c0af",
+        "scripts/resident_construction.py": "6d5b9ee9a7d3591bac2b57a80e42b474fb6f5a0b964b800a71f95c16dfa9939b",
+        "tests/workshop_mission_api.py": "a84e29a8f4fbfffde433341084984eeb57b905c6ee6e52a689f6a54b1f1582f2"
+      },
+      "runtimeRemoved": true,
+      "originalHistoryRetained": true,
+      "materialConservation": true
+    },
+    {
+      "label": "final_atomic_fix_targeted",
+      "groups": 6,
+      "passed": true,
+      "summary": ".local/iter0027/python/20261026T090509Z-d67d6a/summary.json",
+      "summarySha256": "3f0458dc46b8bc24cf309d69e1153cc9234075e019ac7a948c7840fa67b22f34",
+      "codeHashes": {
+        "scripts/resident_workshop.py": "f890ff7a81cb09e39826bc47a12261b98513d96d267d745688844eb197424acc",
+        "scripts/resident_mission.py": "ee58118ca6396e75de6cc22e96e4dcc7bc3c6e3e0cf9f995648cc3579013b759",
+        "scripts/run_resident.py": "32834ee8e8e99f748f6e4939bfaabf8e8d9a217e696d6432ab1cbe33990ba5b3",
+        "scripts/foundation_agent.py": "47ed67f26d997b41550335885de07d9615594d9e13fbfa1135a4a520a04fb08b",
+        "scripts/continuous_navigation.py": "0e2a58a386aeb13bdf41a403d1a0864039e962e9f81bcbf981663500584a9225",
+        "scripts/command_preconditions.py": "37be9d8233627cd44026c4e7c4bdc7b23fbe77de46c69004a2affd910ab5c0af",
+        "scripts/resident_construction.py": "6d5b9ee9a7d3591bac2b57a80e42b474fb6f5a0b964b800a71f95c16dfa9939b",
+        "tests/workshop_mission_api.py": "70872070b7483a8bd872d6ad5aa17470ad192a33b0e695dbd120d23b19fdb1c0"
+      },
+      "runtimeRemoved": true,
+      "originalHistoryRetained": true,
+      "materialConservation": true
+    }
+  ],
+  "distinctHttpGroups": 23,
+  "fullSuiteOnFinalSource": false,
+  "testVersionNote": "20 full groups preceded the deadline fix; 9 groups rechecked the deadline fix including complete CLI chain; 6 final groups rechecked atomic rejection, ABA/concurrency, newer actual position and both deadline faults. No claim of one final-source full 23-group run.",
+  "browser": {
+    "groups": 23,
+    "passed": true,
+    "version": "152.0.7977.82",
+    "summary": ".local/iter0027/browser/2026-10-26T09-01-06-531Z/results.json",
+    "sourceSha256": "4a18005d84706c5d39d9fb4be7c5f571ef355c99ae908c8268d94a131be980f0",
+    "worldRequests": 0,
+    "javascriptErrors": 0,
+    "staticServerExited": true,
+    "desktop": ".local/iter0027/browser/2026-10-26T09-01-06-531Z/workshop-desktop.png",
+    "mobile": ".local/iter0027/browser/2026-10-26T09-01-06-531Z/workshop-mobile.png",
+    "inputVersion": "actual CLI reports from the full 20-group run; renderer unchanged after its 23 checks"
+  },
+  "original": {
+    "source": ".local/qa/20261026-test-agent/canvas-http-20261026T065014010983Z/natural/stage-both",
+    "instance": "w_15ced6889f624d8da8a3d2129ba26874",
+    "hashes": {
+      "world.db-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "world.db": "cfc835a6f7ca3270305a1111192be289a0b3498bb0a448c2681a49a8967e8628",
+      "world.db-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    "counts": {
+      "entities": 6,
+      "entity_notes": 2,
+      "entity_canvas_cells": 25,
+      "entity_canvas_edits": 2,
+      "receipts": 1034,
+      "events": 1055
+    },
+    "unchanged": true
+  },
+  "actualCliChain": {
+    "instance": "w_15ced6889f624d8da8a3d2129ba26874",
+    "initialInventory": 9,
+    "workshopRecipeWood": 7,
+    "actualHarvested": 13,
+    "storedThenWithdrawn": 3,
+    "postStoragePlatformWood": 6,
+    "finalInventory": 9,
+    "bench": {
+      "entityId": "e20273c3201c449f3a104fed79c3cca8f",
+      "definitionId": "workbench",
+      "definitionVersion": 1,
+      "rulesVersion": "r10",
+      "ownerActorId": "a2",
+      "position": [
+        26,
+        20
+      ],
+      "embodiedWood": 3
+    },
+    "mallet": {
+      "toolId": "t67c5a2dc35f94200951c516f5bc2e188",
+      "ownerActorId": "a2",
+      "workbenchId": "e20273c3201c449f3a104fed79c3cca8f",
+      "commandId": "ef93966359a04808a6522c717927d92c",
+      "stateVersion": 1060,
+      "eventCursor": 1061,
+      "definitionId": "wooden_mallet",
+      "definitionVersion": 1,
+      "embodiedWood": 1
+    },
+    "chest": {
+      "entityId": "e414d4bdcdcdb4526950396b81492791a",
+      "definitionId": "wooden_chest",
+      "definitionVersion": 1,
+      "rulesVersion": "r10",
+      "ownerActorId": "a2",
+      "position": [
+        29,
+        20
+      ],
+      "embodiedWood": 3
+    },
+    "actualModelCalls": 0,
+    "limitation": "Original historical branch, fixed CLI tasks; not the original live head or independent people"
+  },
+  "comparison": [
+    {
+      "actor": "a3",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874",
+      "originalInventory": 3,
+      "actuallyHarvested": 1,
+      "consumedWood": 4,
+      "finalInventory": 0,
+      "workbenchOwner": "a2",
+      "mallet": {
+        "toolId": "t5fa1475daf56466baadc626fc1accbc6",
+        "ownerActorId": "a3",
+        "workbenchId": "e19365d48f845453aadf32a22f23911e3",
+        "commandId": "26d77d1ca0a447e2aaf56a4739574aaa",
+        "stateVersion": 1077,
+        "eventCursor": 1078,
+        "definitionId": "wooden_mallet",
+        "definitionVersion": 1,
+        "embodiedWood": 1
+      },
+      "chest": {
+        "entityId": "e82d29ad4423846cfb0ee38ea2bb4fe2f",
+        "definitionId": "wooden_chest",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a3",
+        "position": [
+          29,
+          20
+        ],
+        "embodiedWood": 3
+      },
+      "actualModelCalls": 0,
+      "returnRequired": false,
+      "limitation": "Same declared actor and initial inventory on separate original-history branches; no timing or independent-person claim"
+    },
+    {
+      "actor": "a3",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874",
+      "originalInventory": 3,
+      "actuallyHarvested": 4,
+      "consumedWood": 7,
+      "finalInventory": 0,
+      "workbenchOwner": "a3",
+      "mallet": {
+        "toolId": "tc82eefd155784678ba4a0ee52ce9b7c5",
+        "ownerActorId": "a3",
+        "workbenchId": "e85d95665dbac4c748c84c26e63e691c0",
+        "commandId": "f2fd6d223bdc487e9624c54a38c80f02",
+        "stateVersion": 1082,
+        "eventCursor": 1083,
+        "definitionId": "wooden_mallet",
+        "definitionVersion": 1,
+        "embodiedWood": 1
+      },
+      "chest": {
+        "entityId": "eeed449064dc64ba1b1c60f574bf8f4bd",
+        "definitionId": "wooden_chest",
+        "definitionVersion": 1,
+        "rulesVersion": "r10",
+        "ownerActorId": "a3",
+        "position": [
+          29,
+          20
+        ],
+        "embodiedWood": 3
+      },
+      "actualModelCalls": 0,
+      "returnRequired": false,
+      "limitation": "Same declared actor and initial inventory on separate original-history branches; no timing or independent-person claim"
+    }
+  ],
+  "failures": [
+    {
+      "summary": ".local/iter0027/python/20261026T084621Z-331489/summary.json",
+      "failedGroups": 1,
+      "reason": "Harness audit initially referenced a nonexistent embodied_wood column on tools; behavior passed, cleanup corrected.",
+      "retained": true
+    },
+    {
+      "summary": ".local/iter0027/python/20261026T084641Z-afc3b2/summary.json",
+      "failedGroups": 3,
+      "reason": "Three harness mistakes: out-of-bounds legacy platform, missing selector argument, wrong expected stale-state error name.",
+      "retained": true
+    },
+    {
+      "summary": ".local/iter0027/python/20261026T090106Z-d7066e/summary.json",
+      "failedGroups": 2,
+      "reason": "Two real HTTP with delayed-observation fixtures reproduced sending after the task deadline; fixed with final pre-send elapsed-time checks.",
+      "retained": true
+    },
+    {
+      "summary": ".local/iter0027/python/20261026T090439Z-b97f1a/summary.json",
+      "failedGroups": 1,
+      "reason": "Injected process cut after rejected receipt persistence exposed a non-terminal settled journal; fixed by atomic terminal settlement.",
+      "retained": true
+    }
+  ],
+  "reviewedAndFixed": {
+    "newerObservationReturn": "A task stopped by external actor movement now uses newer actual observed position rather than the previous confirmed origin.",
+    "deadline": "Observation/planning/persistence elapsed time checked before first POST and after 404 capability observation; pending retained.",
+    "atomicRejection": "Rejected or collision-stopped original receipt, cleared pending, status and terminal flag persist in one atomic write."
+  },
+  "cleanup": {
+    "allOwnedWorldProcessesExited": true,
+    "allOwnedRuntimeDatabaseAndTokenCopiesRemoved": true,
+    "noBinaryCopiesCreated": true,
+    "removedOwnPythonCaches": [
+      "scripts/__pycache__/resident_workshop.cpython-312.pyc",
+      "tests/__pycache__/workshop_mission_api.cpython-312.pyc"
+    ],
+    "retained": "Reports, request evidence, audit, initial failures and screenshots"
+  },
+  "boundaries": [
+    "Author tests on read-only backup branches of the original stage-both history; not original natural-history head acceptance.",
+    "Only original actor/session identities and real source harvests; no SQL wood or position grants.",
+    "Two comparison branches use the same declared a3 and initial 3 wood; not independent real people or elapsed-time efficiency evidence.",
+    "Fault injection cases are explicitly controlled observations/process cut fixtures on real HTTP.",
+    "No actual model calls, public deployment, commit or push by BUILD2.",
+    "Independent QA, Godot user interaction and integrated full regression are coordinated by ROOT; this report does not claim those results."
+  ],
+  "actualModelCalls": 0
+}

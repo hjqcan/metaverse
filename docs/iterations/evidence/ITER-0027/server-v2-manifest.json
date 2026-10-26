@@ -1,0 +1,22 @@
+{
+  "files": {
+    "src/World.Server/EntryGuide.cs": "097a08ad3f90f72e25743708e4f9a32e1cf2baec401c275bf7001a92655f3e8d",
+    "src/World.Server/Workshop.cs": "744a964352da258688783a9aa85bfd04cc3b19bf3c228200c3de208483ddf8bc",
+    "src/World.Server/WorldInstance.cs": "f865654d13b63ac9659fa119353b5e32b303484eab49215bb7796a49a5b3fd1b",
+    "src/World.Server/ContinuousMaterials.cs": "868fd41ce93043ae6e87f6f701f4309ebb56affea3176e175b79594425c04853",
+    "src/World.Server/ContinuousWorld.cs": "6176ec5d32b31bd0bdcfd458fe14a22a1e2b501f4dcd61a6e975e0e25fc04659",
+    "src/World.Server/MaterialTransfer.cs": "413db75abfec5f98f7fc35344c7820ffd45b5f10c05f889918e0155e194befe1",
+    "src/World.Server/EntityNotes.cs": "fc61a3eb54a1730fdf374bcafcdab251d89cfea00dac3cdea00fa08e17a8379d",
+    "src/World.Server/EntityCanvas.cs": "7bff7e863b381ba5c97a850ceb85b3f78f84b8c1b5ddd99b58cecd1099fed0a1",
+    "src/World.Server/MaterialAccess.cs": "84f1f37823c06ffee01e1bf154effaf531ce0256cccf1868b725664c89f682f8",
+    "src/World.Server/WorldScenario.cs": "ea63aa8b79740cc1a603447dcbc8ae808f3632460db87bc9df6145f2003ff816",
+    "src/World.Server/ServerConfiguration.cs": "8b33f7b3aae70229397362d0571769198303507712accd624ecedb1320eea8d1",
+    "src/World.Server/WorldService.cs": "066868e37c275b07c339b4f41b893351908db5790ac003043ec7182df2f7fdd5",
+    "src/World.Server/MaterialServiceClock.cs": "edec7589b0ff66179aa8a321212388928033b45ae350331c4dbd61b1db9336e2",
+    "src/World.Server/Protocol.cs": "efb22cd05a6e2b8f8c33d05eba350dc57eab897539292132b95b54ab5ed1ff6d",
+    "src/World.Server/WorldDatabase.cs": "9bdcf9e27f7883473c1b0961afa94940c2481dc8fb623ea15907ea4fd7830c5a",
+    "src/World.Server/Program.cs": "44c6eb68d7f8ae319e22f9293835d09284c31a4645fd13a52bff78616bd005fc"
+  },
+  "dll": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/iter0027/server-v2/World.Server.dll",
+  "dllSha256": "926a46b26db9753fbb8bc46b498ac661064c2039c7317bbf3bd26fa04d9e96a7"
+}

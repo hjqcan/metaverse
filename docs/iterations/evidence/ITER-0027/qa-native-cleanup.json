@@ -1,0 +1,60 @@
+{
+  "scope": "Only QA-owned frozen product-source copies and imported project caches; original world, evidence, driver source and shared server binary preserved.",
+  "allRecordedProcessesAndProcessGroupsExited": true,
+  "recordedPids": [
+    298000,
+    298360,
+    298429,
+    310374,
+    344479,
+    345251,
+    345539,
+    345592,
+    354344,
+    356810
+  ],
+  "closedPorts": [
+    33451,
+    36695,
+    47833,
+    59271
+  ],
+  "removed": [
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/frozen",
+      "files": 48,
+      "bytes": 458669,
+      "sourceHashesVerifiedBeforeRemoval": true,
+      "manifestPaths": [
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/server-v2-manifest.json",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/native-v1-manifest.json"
+      ]
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085914346967Z/frozen",
+      "files": 50,
+      "bytes": 465295,
+      "sourceHashesVerifiedBeforeRemoval": true,
+      "manifestPaths": [
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085914346967Z/native-v2-manifest.json",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085914346967Z/server-v2-manifest.json"
+      ]
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/frozen",
+      "files": 50,
+      "bytes": 465295,
+      "sourceHashesVerifiedBeforeRemoval": true,
+      "manifestPaths": [
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-v2-manifest.json",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/server-v2-manifest.json"
+      ]
+    }
+  ],
+  "retainedNaturalWorld": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/natural/world.db",
+  "retainedEvidenceRoots": [
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085914346967Z",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z"
+  ]
+}

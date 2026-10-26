@@ -1,0 +1,2945 @@
+[
+  {
+    "actor": "a2",
+    "commandId": "godot_1deac5861b419a2f20e0154a72a2697b",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1099,
+      "commandId": "godot_1deac5861b419a2f20e0154a72a2697b",
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1100,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "deposit_wood",
+        "workshopAction": {
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "godot_1deac5861b419a2f20e0154a72a2697b",
+          "action": {
+            "type": "deposit_wood",
+            "capabilityVersion": 1,
+            "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+            "quantity": 1
+          },
+          "entity": {
+            "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+            "definitionId": "wooden_chest",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a2",
+            "position": [
+              28.5,
+              19.9999980926514
+            ],
+            "embodiedWood": 3
+          },
+          "tool": null,
+          "quantity": 1,
+          "inventoryWoodBefore": 4,
+          "inventoryWood": 3,
+          "storedWoodBefore": 1,
+          "storedWood": 2,
+          "position": [
+            27.4226608276367,
+            19.4714736938477
+          ],
+          "stateVersion": 1099,
+          "eventCursor": 1100,
+          "completedAtUtc": "2026-10-26T08:58:43.5362050+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1098,
+        "appliedOnStateVersion": 1098
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1099,\"commandId\":\"godot_1deac5861b419a2f20e0154a72a2697b\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1100,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"deposit_wood\",\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_1deac5861b419a2f20e0154a72a2697b\",\"action\":{\"type\":\"deposit_wood\",\"capabilityVersion\":1,\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"quantity\":1},\"entity\":{\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[28.5,19.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":1,\"inventoryWoodBefore\":4,\"inventoryWood\":3,\"storedWoodBefore\":1,\"storedWood\":2,\"position\":[27.4226608276367,19.4714736938477],\"stateVersion\":1099,\"eventCursor\":1100,\"completedAtUtc\":\"2026-10-26T08:58:43.5362050\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1098,\"appliedOnStateVersion\":1098}}",
+    "event": {
+      "seq": 1100,
+      "stateVersion": 1099,
+      "actorId": "a2",
+      "commandId": "godot_1deac5861b419a2f20e0154a72a2697b",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_1deac5861b419a2f20e0154a72a2697b",
+        "action": {
+          "type": "deposit_wood",
+          "capabilityVersion": 1,
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "quantity": 1
+        },
+        "entity": {
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            28.5,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 1,
+        "inventoryWoodBefore": 4,
+        "inventoryWood": 3,
+        "storedWoodBefore": 1,
+        "storedWood": 2,
+        "position": [
+          27.4226608276367,
+          19.4714736938477
+        ],
+        "stateVersion": 1099,
+        "eventCursor": 1100,
+        "completedAtUtc": "2026-10-26T08:58:43.5362050+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1099,
+      "commandId": null,
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1100,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_1deac5861b419a2f20e0154a72a2697b",
+        "action": {
+          "type": "deposit_wood",
+          "capabilityVersion": 1,
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "quantity": 1
+        },
+        "entity": {
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            28.5,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 1,
+        "inventoryWoodBefore": 4,
+        "inventoryWood": 3,
+        "storedWoodBefore": 1,
+        "storedWood": 2,
+        "position": [
+          27.4226608276367,
+          19.4714736938477
+        ],
+        "stateVersion": 1099,
+        "eventCursor": 1100,
+        "completedAtUtc": "2026-10-26T08:58:43.5362050+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1099,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1100,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_1deac5861b419a2f20e0154a72a2697b\",\"action\":{\"type\":\"deposit_wood\",\"capabilityVersion\":1,\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"quantity\":1},\"entity\":{\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[28.5,19.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":1,\"inventoryWoodBefore\":4,\"inventoryWood\":3,\"storedWoodBefore\":1,\"storedWood\":2,\"position\":[27.4226608276367,19.4714736938477],\"stateVersion\":1099,\"eventCursor\":1100,\"completedAtUtc\":\"2026-10-26T08:58:43.5362050\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a2",
+    "commandId": "godot_6a16d3df9e111a338675133bfde40023",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1092,
+      "commandId": "godot_6a16d3df9e111a338675133bfde40023",
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1093,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "craft_tool",
+        "workshopAction": {
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "godot_6a16d3df9e111a338675133bfde40023",
+          "action": {
+            "type": "craft_tool",
+            "capabilityVersion": 1,
+            "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+            "recipeId": "wooden_mallet.v1"
+          },
+          "entity": {
+            "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+            "definitionId": "workbench",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a2",
+            "position": [
+              26,
+              19.9999980926514
+            ],
+            "embodiedWood": 3
+          },
+          "tool": {
+            "toolId": "tcfa6246a07bc4b529a8c9de1e10f2925",
+            "ownerActorId": "a2",
+            "workbenchId": "e31cade2f71e04cabaa6303f9036f1d91",
+            "commandId": "godot_6a16d3df9e111a338675133bfde40023",
+            "stateVersion": 1092,
+            "eventCursor": 1093,
+            "definitionId": "wooden_mallet",
+            "definitionVersion": 1,
+            "embodiedWood": 1
+          },
+          "quantity": 1,
+          "inventoryWoodBefore": 9,
+          "inventoryWood": 8,
+          "storedWoodBefore": null,
+          "storedWood": null,
+          "position": [
+            26.0054092407227,
+            18.7761936187744
+          ],
+          "stateVersion": 1092,
+          "eventCursor": 1093,
+          "completedAtUtc": "2026-10-26T08:57:17.6926025+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1091,
+        "appliedOnStateVersion": 1091
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1092,\"commandId\":\"godot_6a16d3df9e111a338675133bfde40023\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1093,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"craft_tool\",\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_6a16d3df9e111a338675133bfde40023\",\"action\":{\"type\":\"craft_tool\",\"capabilityVersion\":1,\"entityId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"recipeId\":\"wooden_mallet.v1\"},\"entity\":{\"entityId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"definitionId\":\"workbench\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[26,19.9999980926514],\"embodiedWood\":3},\"tool\":{\"toolId\":\"tcfa6246a07bc4b529a8c9de1e10f2925\",\"ownerActorId\":\"a2\",\"workbenchId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"commandId\":\"godot_6a16d3df9e111a338675133bfde40023\",\"stateVersion\":1092,\"eventCursor\":1093,\"definitionId\":\"wooden_mallet\",\"definitionVersion\":1,\"embodiedWood\":1},\"quantity\":1,\"inventoryWoodBefore\":9,\"inventoryWood\":8,\"storedWoodBefore\":null,\"storedWood\":null,\"position\":[26.0054092407227,18.7761936187744],\"stateVersion\":1092,\"eventCursor\":1093,\"completedAtUtc\":\"2026-10-26T08:57:17.6926025\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1091,\"appliedOnStateVersion\":1091}}",
+    "event": {
+      "seq": 1093,
+      "stateVersion": 1092,
+      "actorId": "a2",
+      "commandId": "godot_6a16d3df9e111a338675133bfde40023",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_6a16d3df9e111a338675133bfde40023",
+        "action": {
+          "type": "craft_tool",
+          "capabilityVersion": 1,
+          "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "recipeId": "wooden_mallet.v1"
+        },
+        "entity": {
+          "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "definitionId": "workbench",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            26,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": {
+          "toolId": "tcfa6246a07bc4b529a8c9de1e10f2925",
+          "ownerActorId": "a2",
+          "workbenchId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "commandId": "godot_6a16d3df9e111a338675133bfde40023",
+          "stateVersion": 1092,
+          "eventCursor": 1093,
+          "definitionId": "wooden_mallet",
+          "definitionVersion": 1,
+          "embodiedWood": 1
+        },
+        "quantity": 1,
+        "inventoryWoodBefore": 9,
+        "inventoryWood": 8,
+        "storedWoodBefore": null,
+        "storedWood": null,
+        "position": [
+          26.0054092407227,
+          18.7761936187744
+        ],
+        "stateVersion": 1092,
+        "eventCursor": 1093,
+        "completedAtUtc": "2026-10-26T08:57:17.6926025+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1092,
+      "commandId": null,
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1093,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_6a16d3df9e111a338675133bfde40023",
+        "action": {
+          "type": "craft_tool",
+          "capabilityVersion": 1,
+          "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "recipeId": "wooden_mallet.v1"
+        },
+        "entity": {
+          "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "definitionId": "workbench",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            26,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": {
+          "toolId": "tcfa6246a07bc4b529a8c9de1e10f2925",
+          "ownerActorId": "a2",
+          "workbenchId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "commandId": "godot_6a16d3df9e111a338675133bfde40023",
+          "stateVersion": 1092,
+          "eventCursor": 1093,
+          "definitionId": "wooden_mallet",
+          "definitionVersion": 1,
+          "embodiedWood": 1
+        },
+        "quantity": 1,
+        "inventoryWoodBefore": 9,
+        "inventoryWood": 8,
+        "storedWoodBefore": null,
+        "storedWood": null,
+        "position": [
+          26.0054092407227,
+          18.7761936187744
+        ],
+        "stateVersion": 1092,
+        "eventCursor": 1093,
+        "completedAtUtc": "2026-10-26T08:57:17.6926025+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1092,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1093,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_6a16d3df9e111a338675133bfde40023\",\"action\":{\"type\":\"craft_tool\",\"capabilityVersion\":1,\"entityId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"recipeId\":\"wooden_mallet.v1\"},\"entity\":{\"entityId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"definitionId\":\"workbench\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[26,19.9999980926514],\"embodiedWood\":3},\"tool\":{\"toolId\":\"tcfa6246a07bc4b529a8c9de1e10f2925\",\"ownerActorId\":\"a2\",\"workbenchId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"commandId\":\"godot_6a16d3df9e111a338675133bfde40023\",\"stateVersion\":1092,\"eventCursor\":1093,\"definitionId\":\"wooden_mallet\",\"definitionVersion\":1,\"embodiedWood\":1},\"quantity\":1,\"inventoryWoodBefore\":9,\"inventoryWood\":8,\"storedWoodBefore\":null,\"storedWood\":null,\"position\":[26.0054092407227,18.7761936187744],\"stateVersion\":1092,\"eventCursor\":1093,\"completedAtUtc\":\"2026-10-26T08:57:17.6926025\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a2",
+    "commandId": "godot_98037cb41cede14a4ee5f39893e19bce",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1098,
+      "commandId": "godot_98037cb41cede14a4ee5f39893e19bce",
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1099,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "deposit_wood",
+        "workshopAction": {
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "godot_98037cb41cede14a4ee5f39893e19bce",
+          "action": {
+            "type": "deposit_wood",
+            "capabilityVersion": 1,
+            "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+            "quantity": 1
+          },
+          "entity": {
+            "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+            "definitionId": "wooden_chest",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a2",
+            "position": [
+              28.5,
+              19.9999980926514
+            ],
+            "embodiedWood": 3
+          },
+          "tool": null,
+          "quantity": 1,
+          "inventoryWoodBefore": 5,
+          "inventoryWood": 4,
+          "storedWoodBefore": 0,
+          "storedWood": 1,
+          "position": [
+            27.4226608276367,
+            19.4714736938477
+          ],
+          "stateVersion": 1098,
+          "eventCursor": 1099,
+          "completedAtUtc": "2026-10-26T08:58:41.8931687+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1097,
+        "appliedOnStateVersion": 1097
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1098,\"commandId\":\"godot_98037cb41cede14a4ee5f39893e19bce\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1099,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"deposit_wood\",\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_98037cb41cede14a4ee5f39893e19bce\",\"action\":{\"type\":\"deposit_wood\",\"capabilityVersion\":1,\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"quantity\":1},\"entity\":{\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[28.5,19.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":1,\"inventoryWoodBefore\":5,\"inventoryWood\":4,\"storedWoodBefore\":0,\"storedWood\":1,\"position\":[27.4226608276367,19.4714736938477],\"stateVersion\":1098,\"eventCursor\":1099,\"completedAtUtc\":\"2026-10-26T08:58:41.8931687\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1097,\"appliedOnStateVersion\":1097}}",
+    "event": {
+      "seq": 1099,
+      "stateVersion": 1098,
+      "actorId": "a2",
+      "commandId": "godot_98037cb41cede14a4ee5f39893e19bce",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_98037cb41cede14a4ee5f39893e19bce",
+        "action": {
+          "type": "deposit_wood",
+          "capabilityVersion": 1,
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "quantity": 1
+        },
+        "entity": {
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            28.5,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 1,
+        "inventoryWoodBefore": 5,
+        "inventoryWood": 4,
+        "storedWoodBefore": 0,
+        "storedWood": 1,
+        "position": [
+          27.4226608276367,
+          19.4714736938477
+        ],
+        "stateVersion": 1098,
+        "eventCursor": 1099,
+        "completedAtUtc": "2026-10-26T08:58:41.8931687+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1098,
+      "commandId": null,
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1099,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_98037cb41cede14a4ee5f39893e19bce",
+        "action": {
+          "type": "deposit_wood",
+          "capabilityVersion": 1,
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "quantity": 1
+        },
+        "entity": {
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            28.5,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 1,
+        "inventoryWoodBefore": 5,
+        "inventoryWood": 4,
+        "storedWoodBefore": 0,
+        "storedWood": 1,
+        "position": [
+          27.4226608276367,
+          19.4714736938477
+        ],
+        "stateVersion": 1098,
+        "eventCursor": 1099,
+        "completedAtUtc": "2026-10-26T08:58:41.8931687+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1098,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1099,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_98037cb41cede14a4ee5f39893e19bce\",\"action\":{\"type\":\"deposit_wood\",\"capabilityVersion\":1,\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"quantity\":1},\"entity\":{\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[28.5,19.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":1,\"inventoryWoodBefore\":5,\"inventoryWood\":4,\"storedWoodBefore\":0,\"storedWood\":1,\"position\":[27.4226608276367,19.4714736938477],\"stateVersion\":1098,\"eventCursor\":1099,\"completedAtUtc\":\"2026-10-26T08:58:41.8931687\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a2",
+    "commandId": "godot_b8ecfe5a0442c99d2abad65551eba16d",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1093,
+      "commandId": "godot_b8ecfe5a0442c99d2abad65551eba16d",
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1094,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "build_workshop",
+        "workshopAction": {
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "godot_b8ecfe5a0442c99d2abad65551eba16d",
+          "action": {
+            "type": "build_workshop",
+            "capabilityVersion": 1,
+            "recipeId": "wooden_chest.v1",
+            "at": [
+              28.5,
+              19.9999980926514
+            ],
+            "toolId": "tcfa6246a07bc4b529a8c9de1e10f2925"
+          },
+          "entity": {
+            "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+            "definitionId": "wooden_chest",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a2",
+            "position": [
+              28.5,
+              19.9999980926514
+            ],
+            "embodiedWood": 3
+          },
+          "tool": {
+            "toolId": "tcfa6246a07bc4b529a8c9de1e10f2925",
+            "ownerActorId": "a2",
+            "workbenchId": "e31cade2f71e04cabaa6303f9036f1d91",
+            "commandId": "godot_6a16d3df9e111a338675133bfde40023",
+            "stateVersion": 1092,
+            "eventCursor": 1093,
+            "definitionId": "wooden_mallet",
+            "definitionVersion": 1,
+            "embodiedWood": 1
+          },
+          "quantity": 3,
+          "inventoryWoodBefore": 8,
+          "inventoryWood": 5,
+          "storedWoodBefore": 0,
+          "storedWood": 0,
+          "position": [
+            26.0054092407227,
+            18.7761936187744
+          ],
+          "stateVersion": 1093,
+          "eventCursor": 1094,
+          "completedAtUtc": "2026-10-26T08:57:19.4322575+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1092,
+        "appliedOnStateVersion": 1092
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1093,\"commandId\":\"godot_b8ecfe5a0442c99d2abad65551eba16d\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1094,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"build_workshop\",\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_b8ecfe5a0442c99d2abad65551eba16d\",\"action\":{\"type\":\"build_workshop\",\"capabilityVersion\":1,\"recipeId\":\"wooden_chest.v1\",\"at\":[28.5,19.9999980926514],\"toolId\":\"tcfa6246a07bc4b529a8c9de1e10f2925\"},\"entity\":{\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[28.5,19.9999980926514],\"embodiedWood\":3},\"tool\":{\"toolId\":\"tcfa6246a07bc4b529a8c9de1e10f2925\",\"ownerActorId\":\"a2\",\"workbenchId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"commandId\":\"godot_6a16d3df9e111a338675133bfde40023\",\"stateVersion\":1092,\"eventCursor\":1093,\"definitionId\":\"wooden_mallet\",\"definitionVersion\":1,\"embodiedWood\":1},\"quantity\":3,\"inventoryWoodBefore\":8,\"inventoryWood\":5,\"storedWoodBefore\":0,\"storedWood\":0,\"position\":[26.0054092407227,18.7761936187744],\"stateVersion\":1093,\"eventCursor\":1094,\"completedAtUtc\":\"2026-10-26T08:57:19.4322575\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1092,\"appliedOnStateVersion\":1092}}",
+    "event": {
+      "seq": 1094,
+      "stateVersion": 1093,
+      "actorId": "a2",
+      "commandId": "godot_b8ecfe5a0442c99d2abad65551eba16d",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_b8ecfe5a0442c99d2abad65551eba16d",
+        "action": {
+          "type": "build_workshop",
+          "capabilityVersion": 1,
+          "recipeId": "wooden_chest.v1",
+          "at": [
+            28.5,
+            19.9999980926514
+          ],
+          "toolId": "tcfa6246a07bc4b529a8c9de1e10f2925"
+        },
+        "entity": {
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            28.5,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": {
+          "toolId": "tcfa6246a07bc4b529a8c9de1e10f2925",
+          "ownerActorId": "a2",
+          "workbenchId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "commandId": "godot_6a16d3df9e111a338675133bfde40023",
+          "stateVersion": 1092,
+          "eventCursor": 1093,
+          "definitionId": "wooden_mallet",
+          "definitionVersion": 1,
+          "embodiedWood": 1
+        },
+        "quantity": 3,
+        "inventoryWoodBefore": 8,
+        "inventoryWood": 5,
+        "storedWoodBefore": 0,
+        "storedWood": 0,
+        "position": [
+          26.0054092407227,
+          18.7761936187744
+        ],
+        "stateVersion": 1093,
+        "eventCursor": 1094,
+        "completedAtUtc": "2026-10-26T08:57:19.4322575+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1093,
+      "commandId": null,
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1094,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_b8ecfe5a0442c99d2abad65551eba16d",
+        "action": {
+          "type": "build_workshop",
+          "capabilityVersion": 1,
+          "recipeId": "wooden_chest.v1",
+          "at": [
+            28.5,
+            19.9999980926514
+          ],
+          "toolId": "tcfa6246a07bc4b529a8c9de1e10f2925"
+        },
+        "entity": {
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            28.5,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": {
+          "toolId": "tcfa6246a07bc4b529a8c9de1e10f2925",
+          "ownerActorId": "a2",
+          "workbenchId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "commandId": "godot_6a16d3df9e111a338675133bfde40023",
+          "stateVersion": 1092,
+          "eventCursor": 1093,
+          "definitionId": "wooden_mallet",
+          "definitionVersion": 1,
+          "embodiedWood": 1
+        },
+        "quantity": 3,
+        "inventoryWoodBefore": 8,
+        "inventoryWood": 5,
+        "storedWoodBefore": 0,
+        "storedWood": 0,
+        "position": [
+          26.0054092407227,
+          18.7761936187744
+        ],
+        "stateVersion": 1093,
+        "eventCursor": 1094,
+        "completedAtUtc": "2026-10-26T08:57:19.4322575+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1093,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1094,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_b8ecfe5a0442c99d2abad65551eba16d\",\"action\":{\"type\":\"build_workshop\",\"capabilityVersion\":1,\"recipeId\":\"wooden_chest.v1\",\"at\":[28.5,19.9999980926514],\"toolId\":\"tcfa6246a07bc4b529a8c9de1e10f2925\"},\"entity\":{\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[28.5,19.9999980926514],\"embodiedWood\":3},\"tool\":{\"toolId\":\"tcfa6246a07bc4b529a8c9de1e10f2925\",\"ownerActorId\":\"a2\",\"workbenchId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"commandId\":\"godot_6a16d3df9e111a338675133bfde40023\",\"stateVersion\":1092,\"eventCursor\":1093,\"definitionId\":\"wooden_mallet\",\"definitionVersion\":1,\"embodiedWood\":1},\"quantity\":3,\"inventoryWoodBefore\":8,\"inventoryWood\":5,\"storedWoodBefore\":0,\"storedWood\":0,\"position\":[26.0054092407227,18.7761936187744],\"stateVersion\":1093,\"eventCursor\":1094,\"completedAtUtc\":\"2026-10-26T08:57:19.4322575\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a2",
+    "commandId": "godot_c01c81c3f184ffcffde3828c7034732f",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1091,
+      "commandId": "godot_c01c81c3f184ffcffde3828c7034732f",
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1092,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "build_workshop",
+        "workshopAction": {
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "godot_c01c81c3f184ffcffde3828c7034732f",
+          "action": {
+            "type": "build_workshop",
+            "capabilityVersion": 1,
+            "recipeId": "workbench.v1",
+            "at": [
+              26,
+              19.9999980926514
+            ],
+            "toolId": null
+          },
+          "entity": {
+            "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+            "definitionId": "workbench",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a2",
+            "position": [
+              26,
+              19.9999980926514
+            ],
+            "embodiedWood": 3
+          },
+          "tool": null,
+          "quantity": 3,
+          "inventoryWoodBefore": 12,
+          "inventoryWood": 9,
+          "storedWoodBefore": null,
+          "storedWood": null,
+          "position": [
+            26.0054092407227,
+            18.7761936187744
+          ],
+          "stateVersion": 1091,
+          "eventCursor": 1092,
+          "completedAtUtc": "2026-10-26T08:57:03.1327948+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1090,
+        "appliedOnStateVersion": 1090
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1091,\"commandId\":\"godot_c01c81c3f184ffcffde3828c7034732f\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1092,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"build_workshop\",\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_c01c81c3f184ffcffde3828c7034732f\",\"action\":{\"type\":\"build_workshop\",\"capabilityVersion\":1,\"recipeId\":\"workbench.v1\",\"at\":[26,19.9999980926514],\"toolId\":null},\"entity\":{\"entityId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"definitionId\":\"workbench\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[26,19.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":3,\"inventoryWoodBefore\":12,\"inventoryWood\":9,\"storedWoodBefore\":null,\"storedWood\":null,\"position\":[26.0054092407227,18.7761936187744],\"stateVersion\":1091,\"eventCursor\":1092,\"completedAtUtc\":\"2026-10-26T08:57:03.1327948\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1090,\"appliedOnStateVersion\":1090}}",
+    "event": {
+      "seq": 1092,
+      "stateVersion": 1091,
+      "actorId": "a2",
+      "commandId": "godot_c01c81c3f184ffcffde3828c7034732f",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_c01c81c3f184ffcffde3828c7034732f",
+        "action": {
+          "type": "build_workshop",
+          "capabilityVersion": 1,
+          "recipeId": "workbench.v1",
+          "at": [
+            26,
+            19.9999980926514
+          ],
+          "toolId": null
+        },
+        "entity": {
+          "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "definitionId": "workbench",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            26,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 3,
+        "inventoryWoodBefore": 12,
+        "inventoryWood": 9,
+        "storedWoodBefore": null,
+        "storedWood": null,
+        "position": [
+          26.0054092407227,
+          18.7761936187744
+        ],
+        "stateVersion": 1091,
+        "eventCursor": 1092,
+        "completedAtUtc": "2026-10-26T08:57:03.1327948+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1091,
+      "commandId": null,
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1092,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_c01c81c3f184ffcffde3828c7034732f",
+        "action": {
+          "type": "build_workshop",
+          "capabilityVersion": 1,
+          "recipeId": "workbench.v1",
+          "at": [
+            26,
+            19.9999980926514
+          ],
+          "toolId": null
+        },
+        "entity": {
+          "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "definitionId": "workbench",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            26,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 3,
+        "inventoryWoodBefore": 12,
+        "inventoryWood": 9,
+        "storedWoodBefore": null,
+        "storedWood": null,
+        "position": [
+          26.0054092407227,
+          18.7761936187744
+        ],
+        "stateVersion": 1091,
+        "eventCursor": 1092,
+        "completedAtUtc": "2026-10-26T08:57:03.1327948+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1091,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1092,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_c01c81c3f184ffcffde3828c7034732f\",\"action\":{\"type\":\"build_workshop\",\"capabilityVersion\":1,\"recipeId\":\"workbench.v1\",\"at\":[26,19.9999980926514],\"toolId\":null},\"entity\":{\"entityId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"definitionId\":\"workbench\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[26,19.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":3,\"inventoryWoodBefore\":12,\"inventoryWood\":9,\"storedWoodBefore\":null,\"storedWood\":null,\"position\":[26.0054092407227,18.7761936187744],\"stateVersion\":1091,\"eventCursor\":1092,\"completedAtUtc\":\"2026-10-26T08:57:03.1327948\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a2",
+    "commandId": "godot_d186778c0c705a7647ae45f8112528ec",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1100,
+      "commandId": "godot_d186778c0c705a7647ae45f8112528ec",
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1101,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "deposit_wood",
+        "workshopAction": {
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "godot_d186778c0c705a7647ae45f8112528ec",
+          "action": {
+            "type": "deposit_wood",
+            "capabilityVersion": 1,
+            "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+            "quantity": 1
+          },
+          "entity": {
+            "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+            "definitionId": "wooden_chest",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a2",
+            "position": [
+              28.5,
+              19.9999980926514
+            ],
+            "embodiedWood": 3
+          },
+          "tool": null,
+          "quantity": 1,
+          "inventoryWoodBefore": 3,
+          "inventoryWood": 2,
+          "storedWoodBefore": 2,
+          "storedWood": 3,
+          "position": [
+            27.4226608276367,
+            19.4714736938477
+          ],
+          "stateVersion": 1100,
+          "eventCursor": 1101,
+          "completedAtUtc": "2026-10-26T08:58:44.9178303+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1099,
+        "appliedOnStateVersion": 1099
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1100,\"commandId\":\"godot_d186778c0c705a7647ae45f8112528ec\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1101,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"deposit_wood\",\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_d186778c0c705a7647ae45f8112528ec\",\"action\":{\"type\":\"deposit_wood\",\"capabilityVersion\":1,\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"quantity\":1},\"entity\":{\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[28.5,19.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":1,\"inventoryWoodBefore\":3,\"inventoryWood\":2,\"storedWoodBefore\":2,\"storedWood\":3,\"position\":[27.4226608276367,19.4714736938477],\"stateVersion\":1100,\"eventCursor\":1101,\"completedAtUtc\":\"2026-10-26T08:58:44.9178303\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1099,\"appliedOnStateVersion\":1099}}",
+    "event": {
+      "seq": 1101,
+      "stateVersion": 1100,
+      "actorId": "a2",
+      "commandId": "godot_d186778c0c705a7647ae45f8112528ec",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_d186778c0c705a7647ae45f8112528ec",
+        "action": {
+          "type": "deposit_wood",
+          "capabilityVersion": 1,
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "quantity": 1
+        },
+        "entity": {
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            28.5,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 1,
+        "inventoryWoodBefore": 3,
+        "inventoryWood": 2,
+        "storedWoodBefore": 2,
+        "storedWood": 3,
+        "position": [
+          27.4226608276367,
+          19.4714736938477
+        ],
+        "stateVersion": 1100,
+        "eventCursor": 1101,
+        "completedAtUtc": "2026-10-26T08:58:44.9178303+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1100,
+      "commandId": null,
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1101,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_d186778c0c705a7647ae45f8112528ec",
+        "action": {
+          "type": "deposit_wood",
+          "capabilityVersion": 1,
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "quantity": 1
+        },
+        "entity": {
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            28.5,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 1,
+        "inventoryWoodBefore": 3,
+        "inventoryWood": 2,
+        "storedWoodBefore": 2,
+        "storedWood": 3,
+        "position": [
+          27.4226608276367,
+          19.4714736938477
+        ],
+        "stateVersion": 1100,
+        "eventCursor": 1101,
+        "completedAtUtc": "2026-10-26T08:58:44.9178303+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1100,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1101,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_d186778c0c705a7647ae45f8112528ec\",\"action\":{\"type\":\"deposit_wood\",\"capabilityVersion\":1,\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"quantity\":1},\"entity\":{\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[28.5,19.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":1,\"inventoryWoodBefore\":3,\"inventoryWood\":2,\"storedWoodBefore\":2,\"storedWood\":3,\"position\":[27.4226608276367,19.4714736938477],\"stateVersion\":1100,\"eventCursor\":1101,\"completedAtUtc\":\"2026-10-26T08:58:44.9178303\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a1_alias",
+    "commandId": "godot_1e4c6e8c1d880d6208c066ed81439181",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1333,
+      "commandId": "godot_1e4c6e8c1d880d6208c066ed81439181",
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1_alias",
+        "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+      },
+      "eventCursor": 1334,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "craft_tool",
+        "workshopAction": {
+          "authorActorId": "a1_alias",
+          "operatorId": "local-operator",
+          "commandId": "godot_1e4c6e8c1d880d6208c066ed81439181",
+          "action": {
+            "type": "craft_tool",
+            "capabilityVersion": 1,
+            "entityId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+            "recipeId": "wooden_mallet.v1"
+          },
+          "entity": {
+            "entityId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+            "definitionId": "workbench",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a1_alias",
+            "position": [
+              23,
+              16.9999980926514
+            ],
+            "embodiedWood": 3
+          },
+          "tool": {
+            "toolId": "tfb6676ef505741fabf76d8d0eb16338d",
+            "ownerActorId": "a1_alias",
+            "workbenchId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+            "commandId": "godot_1e4c6e8c1d880d6208c066ed81439181",
+            "stateVersion": 1333,
+            "eventCursor": 1334,
+            "definitionId": "wooden_mallet",
+            "definitionVersion": 1,
+            "embodiedWood": 1
+          },
+          "quantity": 1,
+          "inventoryWoodBefore": 9,
+          "inventoryWood": 8,
+          "storedWoodBefore": null,
+          "storedWood": null,
+          "position": [
+            22.9999980926514,
+            15.7999982833862
+          ],
+          "stateVersion": 1333,
+          "eventCursor": 1334,
+          "completedAtUtc": "2026-10-26T09:05:42.4861920+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1332,
+        "appliedOnStateVersion": 1332
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1333,\"commandId\":\"godot_1e4c6e8c1d880d6208c066ed81439181\",\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1_alias\",\"sessionId\":\"s8b8c3cecf91c4d61a8935b0727444585\"},\"eventCursor\":1334,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"craft_tool\",\"workshopAction\":{\"authorActorId\":\"a1_alias\",\"operatorId\":\"local-operator\",\"commandId\":\"godot_1e4c6e8c1d880d6208c066ed81439181\",\"action\":{\"type\":\"craft_tool\",\"capabilityVersion\":1,\"entityId\":\"e62ad2e07552a4ae2907e75f2eb68bce3\",\"recipeId\":\"wooden_mallet.v1\"},\"entity\":{\"entityId\":\"e62ad2e07552a4ae2907e75f2eb68bce3\",\"definitionId\":\"workbench\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a1_alias\",\"position\":[23,16.9999980926514],\"embodiedWood\":3},\"tool\":{\"toolId\":\"tfb6676ef505741fabf76d8d0eb16338d\",\"ownerActorId\":\"a1_alias\",\"workbenchId\":\"e62ad2e07552a4ae2907e75f2eb68bce3\",\"commandId\":\"godot_1e4c6e8c1d880d6208c066ed81439181\",\"stateVersion\":1333,\"eventCursor\":1334,\"definitionId\":\"wooden_mallet\",\"definitionVersion\":1,\"embodiedWood\":1},\"quantity\":1,\"inventoryWoodBefore\":9,\"inventoryWood\":8,\"storedWoodBefore\":null,\"storedWood\":null,\"position\":[22.9999980926514,15.7999982833862],\"stateVersion\":1333,\"eventCursor\":1334,\"completedAtUtc\":\"2026-10-26T09:05:42.4861920\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1332,\"appliedOnStateVersion\":1332}}",
+    "event": {
+      "seq": 1334,
+      "stateVersion": 1333,
+      "actorId": "a1_alias",
+      "commandId": "godot_1e4c6e8c1d880d6208c066ed81439181",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a1_alias",
+        "operatorId": "local-operator",
+        "commandId": "godot_1e4c6e8c1d880d6208c066ed81439181",
+        "action": {
+          "type": "craft_tool",
+          "capabilityVersion": 1,
+          "entityId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+          "recipeId": "wooden_mallet.v1"
+        },
+        "entity": {
+          "entityId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+          "definitionId": "workbench",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a1_alias",
+          "position": [
+            23,
+            16.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": {
+          "toolId": "tfb6676ef505741fabf76d8d0eb16338d",
+          "ownerActorId": "a1_alias",
+          "workbenchId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+          "commandId": "godot_1e4c6e8c1d880d6208c066ed81439181",
+          "stateVersion": 1333,
+          "eventCursor": 1334,
+          "definitionId": "wooden_mallet",
+          "definitionVersion": 1,
+          "embodiedWood": 1
+        },
+        "quantity": 1,
+        "inventoryWoodBefore": 9,
+        "inventoryWood": 8,
+        "storedWoodBefore": null,
+        "storedWood": null,
+        "position": [
+          22.9999980926514,
+          15.7999982833862
+        ],
+        "stateVersion": 1333,
+        "eventCursor": 1334,
+        "completedAtUtc": "2026-10-26T09:05:42.4861920+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1333,
+      "commandId": null,
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1_alias",
+        "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+      },
+      "eventCursor": 1334,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a1_alias",
+        "operatorId": "local-operator",
+        "commandId": "godot_1e4c6e8c1d880d6208c066ed81439181",
+        "action": {
+          "type": "craft_tool",
+          "capabilityVersion": 1,
+          "entityId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+          "recipeId": "wooden_mallet.v1"
+        },
+        "entity": {
+          "entityId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+          "definitionId": "workbench",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a1_alias",
+          "position": [
+            23,
+            16.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": {
+          "toolId": "tfb6676ef505741fabf76d8d0eb16338d",
+          "ownerActorId": "a1_alias",
+          "workbenchId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+          "commandId": "godot_1e4c6e8c1d880d6208c066ed81439181",
+          "stateVersion": 1333,
+          "eventCursor": 1334,
+          "definitionId": "wooden_mallet",
+          "definitionVersion": 1,
+          "embodiedWood": 1
+        },
+        "quantity": 1,
+        "inventoryWoodBefore": 9,
+        "inventoryWood": 8,
+        "storedWoodBefore": null,
+        "storedWood": null,
+        "position": [
+          22.9999980926514,
+          15.7999982833862
+        ],
+        "stateVersion": 1333,
+        "eventCursor": 1334,
+        "completedAtUtc": "2026-10-26T09:05:42.4861920+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1333,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1_alias\",\"sessionId\":\"s8b8c3cecf91c4d61a8935b0727444585\"},\"eventCursor\":1334,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a1_alias\",\"operatorId\":\"local-operator\",\"commandId\":\"godot_1e4c6e8c1d880d6208c066ed81439181\",\"action\":{\"type\":\"craft_tool\",\"capabilityVersion\":1,\"entityId\":\"e62ad2e07552a4ae2907e75f2eb68bce3\",\"recipeId\":\"wooden_mallet.v1\"},\"entity\":{\"entityId\":\"e62ad2e07552a4ae2907e75f2eb68bce3\",\"definitionId\":\"workbench\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a1_alias\",\"position\":[23,16.9999980926514],\"embodiedWood\":3},\"tool\":{\"toolId\":\"tfb6676ef505741fabf76d8d0eb16338d\",\"ownerActorId\":\"a1_alias\",\"workbenchId\":\"e62ad2e07552a4ae2907e75f2eb68bce3\",\"commandId\":\"godot_1e4c6e8c1d880d6208c066ed81439181\",\"stateVersion\":1333,\"eventCursor\":1334,\"definitionId\":\"wooden_mallet\",\"definitionVersion\":1,\"embodiedWood\":1},\"quantity\":1,\"inventoryWoodBefore\":9,\"inventoryWood\":8,\"storedWoodBefore\":null,\"storedWood\":null,\"position\":[22.9999980926514,15.7999982833862],\"stateVersion\":1333,\"eventCursor\":1334,\"completedAtUtc\":\"2026-10-26T09:05:42.4861920\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a1_alias",
+    "commandId": "godot_6955f9ba16c8d15e0d0f777217a337c8",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1350,
+      "commandId": "godot_6955f9ba16c8d15e0d0f777217a337c8",
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1_alias",
+        "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+      },
+      "eventCursor": 1351,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "withdraw_wood",
+        "workshopAction": {
+          "authorActorId": "a1_alias",
+          "operatorId": "local-operator",
+          "commandId": "godot_6955f9ba16c8d15e0d0f777217a337c8",
+          "action": {
+            "type": "withdraw_wood",
+            "capabilityVersion": 1,
+            "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+            "quantity": 3
+          },
+          "entity": {
+            "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+            "definitionId": "wooden_chest",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a1_alias",
+            "position": [
+              20.5,
+              16.9999980926514
+            ],
+            "embodiedWood": 3
+          },
+          "tool": null,
+          "quantity": 3,
+          "inventoryWoodBefore": 2,
+          "inventoryWood": 5,
+          "storedWoodBefore": 3,
+          "storedWood": 0,
+          "position": [
+            20.705493927002,
+            18.2329940795898
+          ],
+          "stateVersion": 1350,
+          "eventCursor": 1351,
+          "completedAtUtc": "2026-10-26T09:06:30.3641436+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1349,
+        "appliedOnStateVersion": 1349
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1350,\"commandId\":\"godot_6955f9ba16c8d15e0d0f777217a337c8\",\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1_alias\",\"sessionId\":\"s8b8c3cecf91c4d61a8935b0727444585\"},\"eventCursor\":1351,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"withdraw_wood\",\"workshopAction\":{\"authorActorId\":\"a1_alias\",\"operatorId\":\"local-operator\",\"commandId\":\"godot_6955f9ba16c8d15e0d0f777217a337c8\",\"action\":{\"type\":\"withdraw_wood\",\"capabilityVersion\":1,\"entityId\":\"e57d4e62d8f4a46568479d1ebb31e8550\",\"quantity\":3},\"entity\":{\"entityId\":\"e57d4e62d8f4a46568479d1ebb31e8550\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a1_alias\",\"position\":[20.5,16.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":3,\"inventoryWoodBefore\":2,\"inventoryWood\":5,\"storedWoodBefore\":3,\"storedWood\":0,\"position\":[20.705493927002,18.2329940795898],\"stateVersion\":1350,\"eventCursor\":1351,\"completedAtUtc\":\"2026-10-26T09:06:30.3641436\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1349,\"appliedOnStateVersion\":1349}}",
+    "event": {
+      "seq": 1351,
+      "stateVersion": 1350,
+      "actorId": "a1_alias",
+      "commandId": "godot_6955f9ba16c8d15e0d0f777217a337c8",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a1_alias",
+        "operatorId": "local-operator",
+        "commandId": "godot_6955f9ba16c8d15e0d0f777217a337c8",
+        "action": {
+          "type": "withdraw_wood",
+          "capabilityVersion": 1,
+          "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+          "quantity": 3
+        },
+        "entity": {
+          "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a1_alias",
+          "position": [
+            20.5,
+            16.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 3,
+        "inventoryWoodBefore": 2,
+        "inventoryWood": 5,
+        "storedWoodBefore": 3,
+        "storedWood": 0,
+        "position": [
+          20.705493927002,
+          18.2329940795898
+        ],
+        "stateVersion": 1350,
+        "eventCursor": 1351,
+        "completedAtUtc": "2026-10-26T09:06:30.3641436+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1350,
+      "commandId": null,
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1_alias",
+        "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+      },
+      "eventCursor": 1351,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a1_alias",
+        "operatorId": "local-operator",
+        "commandId": "godot_6955f9ba16c8d15e0d0f777217a337c8",
+        "action": {
+          "type": "withdraw_wood",
+          "capabilityVersion": 1,
+          "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+          "quantity": 3
+        },
+        "entity": {
+          "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a1_alias",
+          "position": [
+            20.5,
+            16.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 3,
+        "inventoryWoodBefore": 2,
+        "inventoryWood": 5,
+        "storedWoodBefore": 3,
+        "storedWood": 0,
+        "position": [
+          20.705493927002,
+          18.2329940795898
+        ],
+        "stateVersion": 1350,
+        "eventCursor": 1351,
+        "completedAtUtc": "2026-10-26T09:06:30.3641436+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1350,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1_alias\",\"sessionId\":\"s8b8c3cecf91c4d61a8935b0727444585\"},\"eventCursor\":1351,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a1_alias\",\"operatorId\":\"local-operator\",\"commandId\":\"godot_6955f9ba16c8d15e0d0f777217a337c8\",\"action\":{\"type\":\"withdraw_wood\",\"capabilityVersion\":1,\"entityId\":\"e57d4e62d8f4a46568479d1ebb31e8550\",\"quantity\":3},\"entity\":{\"entityId\":\"e57d4e62d8f4a46568479d1ebb31e8550\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a1_alias\",\"position\":[20.5,16.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":3,\"inventoryWoodBefore\":2,\"inventoryWood\":5,\"storedWoodBefore\":3,\"storedWood\":0,\"position\":[20.705493927002,18.2329940795898],\"stateVersion\":1350,\"eventCursor\":1351,\"completedAtUtc\":\"2026-10-26T09:06:30.3641436\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a1_alias",
+    "commandId": "godot_94a30deb4152a722997b488e1ebaeb07",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1340,
+      "commandId": "godot_94a30deb4152a722997b488e1ebaeb07",
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1_alias",
+        "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+      },
+      "eventCursor": 1341,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "deposit_wood",
+        "workshopAction": {
+          "authorActorId": "a1_alias",
+          "operatorId": "local-operator",
+          "commandId": "godot_94a30deb4152a722997b488e1ebaeb07",
+          "action": {
+            "type": "deposit_wood",
+            "capabilityVersion": 1,
+            "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+            "quantity": 3
+          },
+          "entity": {
+            "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+            "definitionId": "wooden_chest",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a1_alias",
+            "position": [
+              20.5,
+              16.9999980926514
+            ],
+            "embodiedWood": 3
+          },
+          "tool": null,
+          "quantity": 3,
+          "inventoryWoodBefore": 5,
+          "inventoryWood": 2,
+          "storedWoodBefore": 0,
+          "storedWood": 3,
+          "position": [
+            21.6269035339355,
+            16.4590835571289
+          ],
+          "stateVersion": 1340,
+          "eventCursor": 1341,
+          "completedAtUtc": "2026-10-26T09:05:51.1594580+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1339,
+        "appliedOnStateVersion": 1339
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1340,\"commandId\":\"godot_94a30deb4152a722997b488e1ebaeb07\",\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1_alias\",\"sessionId\":\"s8b8c3cecf91c4d61a8935b0727444585\"},\"eventCursor\":1341,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"deposit_wood\",\"workshopAction\":{\"authorActorId\":\"a1_alias\",\"operatorId\":\"local-operator\",\"commandId\":\"godot_94a30deb4152a722997b488e1ebaeb07\",\"action\":{\"type\":\"deposit_wood\",\"capabilityVersion\":1,\"entityId\":\"e57d4e62d8f4a46568479d1ebb31e8550\",\"quantity\":3},\"entity\":{\"entityId\":\"e57d4e62d8f4a46568479d1ebb31e8550\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a1_alias\",\"position\":[20.5,16.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":3,\"inventoryWoodBefore\":5,\"inventoryWood\":2,\"storedWoodBefore\":0,\"storedWood\":3,\"position\":[21.6269035339355,16.4590835571289],\"stateVersion\":1340,\"eventCursor\":1341,\"completedAtUtc\":\"2026-10-26T09:05:51.1594580\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1339,\"appliedOnStateVersion\":1339}}",
+    "event": {
+      "seq": 1341,
+      "stateVersion": 1340,
+      "actorId": "a1_alias",
+      "commandId": "godot_94a30deb4152a722997b488e1ebaeb07",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a1_alias",
+        "operatorId": "local-operator",
+        "commandId": "godot_94a30deb4152a722997b488e1ebaeb07",
+        "action": {
+          "type": "deposit_wood",
+          "capabilityVersion": 1,
+          "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+          "quantity": 3
+        },
+        "entity": {
+          "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a1_alias",
+          "position": [
+            20.5,
+            16.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 3,
+        "inventoryWoodBefore": 5,
+        "inventoryWood": 2,
+        "storedWoodBefore": 0,
+        "storedWood": 3,
+        "position": [
+          21.6269035339355,
+          16.4590835571289
+        ],
+        "stateVersion": 1340,
+        "eventCursor": 1341,
+        "completedAtUtc": "2026-10-26T09:05:51.1594580+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1340,
+      "commandId": null,
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1_alias",
+        "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+      },
+      "eventCursor": 1341,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a1_alias",
+        "operatorId": "local-operator",
+        "commandId": "godot_94a30deb4152a722997b488e1ebaeb07",
+        "action": {
+          "type": "deposit_wood",
+          "capabilityVersion": 1,
+          "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+          "quantity": 3
+        },
+        "entity": {
+          "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a1_alias",
+          "position": [
+            20.5,
+            16.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 3,
+        "inventoryWoodBefore": 5,
+        "inventoryWood": 2,
+        "storedWoodBefore": 0,
+        "storedWood": 3,
+        "position": [
+          21.6269035339355,
+          16.4590835571289
+        ],
+        "stateVersion": 1340,
+        "eventCursor": 1341,
+        "completedAtUtc": "2026-10-26T09:05:51.1594580+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1340,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1_alias\",\"sessionId\":\"s8b8c3cecf91c4d61a8935b0727444585\"},\"eventCursor\":1341,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a1_alias\",\"operatorId\":\"local-operator\",\"commandId\":\"godot_94a30deb4152a722997b488e1ebaeb07\",\"action\":{\"type\":\"deposit_wood\",\"capabilityVersion\":1,\"entityId\":\"e57d4e62d8f4a46568479d1ebb31e8550\",\"quantity\":3},\"entity\":{\"entityId\":\"e57d4e62d8f4a46568479d1ebb31e8550\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a1_alias\",\"position\":[20.5,16.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":3,\"inventoryWoodBefore\":5,\"inventoryWood\":2,\"storedWoodBefore\":0,\"storedWood\":3,\"position\":[21.6269035339355,16.4590835571289],\"stateVersion\":1340,\"eventCursor\":1341,\"completedAtUtc\":\"2026-10-26T09:05:51.1594580\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a1_alias",
+    "commandId": "godot_aab45e940ee97595474fed45bee86f51",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1331,
+      "commandId": "godot_aab45e940ee97595474fed45bee86f51",
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1_alias",
+        "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+      },
+      "eventCursor": 1332,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "build_workshop",
+        "workshopAction": {
+          "authorActorId": "a1_alias",
+          "operatorId": "local-operator",
+          "commandId": "godot_aab45e940ee97595474fed45bee86f51",
+          "action": {
+            "type": "build_workshop",
+            "capabilityVersion": 1,
+            "recipeId": "workbench.v1",
+            "at": [
+              23,
+              16.9999980926514
+            ],
+            "toolId": null
+          },
+          "entity": {
+            "entityId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+            "definitionId": "workbench",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a1_alias",
+            "position": [
+              23,
+              16.9999980926514
+            ],
+            "embodiedWood": 3
+          },
+          "tool": null,
+          "quantity": 3,
+          "inventoryWoodBefore": 12,
+          "inventoryWood": 9,
+          "storedWoodBefore": null,
+          "storedWood": null,
+          "position": [
+            22.9999980926514,
+            15.7999982833862
+          ],
+          "stateVersion": 1331,
+          "eventCursor": 1332,
+          "completedAtUtc": "2026-10-26T09:05:19.0776342+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1330,
+        "appliedOnStateVersion": 1330
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1331,\"commandId\":\"godot_aab45e940ee97595474fed45bee86f51\",\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1_alias\",\"sessionId\":\"s8b8c3cecf91c4d61a8935b0727444585\"},\"eventCursor\":1332,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"build_workshop\",\"workshopAction\":{\"authorActorId\":\"a1_alias\",\"operatorId\":\"local-operator\",\"commandId\":\"godot_aab45e940ee97595474fed45bee86f51\",\"action\":{\"type\":\"build_workshop\",\"capabilityVersion\":1,\"recipeId\":\"workbench.v1\",\"at\":[23,16.9999980926514],\"toolId\":null},\"entity\":{\"entityId\":\"e62ad2e07552a4ae2907e75f2eb68bce3\",\"definitionId\":\"workbench\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a1_alias\",\"position\":[23,16.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":3,\"inventoryWoodBefore\":12,\"inventoryWood\":9,\"storedWoodBefore\":null,\"storedWood\":null,\"position\":[22.9999980926514,15.7999982833862],\"stateVersion\":1331,\"eventCursor\":1332,\"completedAtUtc\":\"2026-10-26T09:05:19.0776342\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1330,\"appliedOnStateVersion\":1330}}",
+    "event": {
+      "seq": 1332,
+      "stateVersion": 1331,
+      "actorId": "a1_alias",
+      "commandId": "godot_aab45e940ee97595474fed45bee86f51",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a1_alias",
+        "operatorId": "local-operator",
+        "commandId": "godot_aab45e940ee97595474fed45bee86f51",
+        "action": {
+          "type": "build_workshop",
+          "capabilityVersion": 1,
+          "recipeId": "workbench.v1",
+          "at": [
+            23,
+            16.9999980926514
+          ],
+          "toolId": null
+        },
+        "entity": {
+          "entityId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+          "definitionId": "workbench",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a1_alias",
+          "position": [
+            23,
+            16.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 3,
+        "inventoryWoodBefore": 12,
+        "inventoryWood": 9,
+        "storedWoodBefore": null,
+        "storedWood": null,
+        "position": [
+          22.9999980926514,
+          15.7999982833862
+        ],
+        "stateVersion": 1331,
+        "eventCursor": 1332,
+        "completedAtUtc": "2026-10-26T09:05:19.0776342+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1331,
+      "commandId": null,
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1_alias",
+        "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+      },
+      "eventCursor": 1332,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a1_alias",
+        "operatorId": "local-operator",
+        "commandId": "godot_aab45e940ee97595474fed45bee86f51",
+        "action": {
+          "type": "build_workshop",
+          "capabilityVersion": 1,
+          "recipeId": "workbench.v1",
+          "at": [
+            23,
+            16.9999980926514
+          ],
+          "toolId": null
+        },
+        "entity": {
+          "entityId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+          "definitionId": "workbench",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a1_alias",
+          "position": [
+            23,
+            16.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 3,
+        "inventoryWoodBefore": 12,
+        "inventoryWood": 9,
+        "storedWoodBefore": null,
+        "storedWood": null,
+        "position": [
+          22.9999980926514,
+          15.7999982833862
+        ],
+        "stateVersion": 1331,
+        "eventCursor": 1332,
+        "completedAtUtc": "2026-10-26T09:05:19.0776342+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1331,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1_alias\",\"sessionId\":\"s8b8c3cecf91c4d61a8935b0727444585\"},\"eventCursor\":1332,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a1_alias\",\"operatorId\":\"local-operator\",\"commandId\":\"godot_aab45e940ee97595474fed45bee86f51\",\"action\":{\"type\":\"build_workshop\",\"capabilityVersion\":1,\"recipeId\":\"workbench.v1\",\"at\":[23,16.9999980926514],\"toolId\":null},\"entity\":{\"entityId\":\"e62ad2e07552a4ae2907e75f2eb68bce3\",\"definitionId\":\"workbench\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a1_alias\",\"position\":[23,16.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":3,\"inventoryWoodBefore\":12,\"inventoryWood\":9,\"storedWoodBefore\":null,\"storedWood\":null,\"position\":[22.9999980926514,15.7999982833862],\"stateVersion\":1331,\"eventCursor\":1332,\"completedAtUtc\":\"2026-10-26T09:05:19.0776342\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a1_alias",
+    "commandId": "godot_c6392aa78aa2c6388883be4ed03a97aa",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1334,
+      "commandId": "godot_c6392aa78aa2c6388883be4ed03a97aa",
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1_alias",
+        "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+      },
+      "eventCursor": 1335,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "build_workshop",
+        "workshopAction": {
+          "authorActorId": "a1_alias",
+          "operatorId": "local-operator",
+          "commandId": "godot_c6392aa78aa2c6388883be4ed03a97aa",
+          "action": {
+            "type": "build_workshop",
+            "capabilityVersion": 1,
+            "recipeId": "wooden_chest.v1",
+            "at": [
+              20.5,
+              16.9999980926514
+            ],
+            "toolId": "tfb6676ef505741fabf76d8d0eb16338d"
+          },
+          "entity": {
+            "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+            "definitionId": "wooden_chest",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a1_alias",
+            "position": [
+              20.5,
+              16.9999980926514
+            ],
+            "embodiedWood": 3
+          },
+          "tool": {
+            "toolId": "tfb6676ef505741fabf76d8d0eb16338d",
+            "ownerActorId": "a1_alias",
+            "workbenchId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+            "commandId": "godot_1e4c6e8c1d880d6208c066ed81439181",
+            "stateVersion": 1333,
+            "eventCursor": 1334,
+            "definitionId": "wooden_mallet",
+            "definitionVersion": 1,
+            "embodiedWood": 1
+          },
+          "quantity": 3,
+          "inventoryWoodBefore": 8,
+          "inventoryWood": 5,
+          "storedWoodBefore": 0,
+          "storedWood": 0,
+          "position": [
+            22.9999980926514,
+            15.7999982833862
+          ],
+          "stateVersion": 1334,
+          "eventCursor": 1335,
+          "completedAtUtc": "2026-10-26T09:05:44.5254682+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1333,
+        "appliedOnStateVersion": 1333
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1334,\"commandId\":\"godot_c6392aa78aa2c6388883be4ed03a97aa\",\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1_alias\",\"sessionId\":\"s8b8c3cecf91c4d61a8935b0727444585\"},\"eventCursor\":1335,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"build_workshop\",\"workshopAction\":{\"authorActorId\":\"a1_alias\",\"operatorId\":\"local-operator\",\"commandId\":\"godot_c6392aa78aa2c6388883be4ed03a97aa\",\"action\":{\"type\":\"build_workshop\",\"capabilityVersion\":1,\"recipeId\":\"wooden_chest.v1\",\"at\":[20.5,16.9999980926514],\"toolId\":\"tfb6676ef505741fabf76d8d0eb16338d\"},\"entity\":{\"entityId\":\"e57d4e62d8f4a46568479d1ebb31e8550\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a1_alias\",\"position\":[20.5,16.9999980926514],\"embodiedWood\":3},\"tool\":{\"toolId\":\"tfb6676ef505741fabf76d8d0eb16338d\",\"ownerActorId\":\"a1_alias\",\"workbenchId\":\"e62ad2e07552a4ae2907e75f2eb68bce3\",\"commandId\":\"godot_1e4c6e8c1d880d6208c066ed81439181\",\"stateVersion\":1333,\"eventCursor\":1334,\"definitionId\":\"wooden_mallet\",\"definitionVersion\":1,\"embodiedWood\":1},\"quantity\":3,\"inventoryWoodBefore\":8,\"inventoryWood\":5,\"storedWoodBefore\":0,\"storedWood\":0,\"position\":[22.9999980926514,15.7999982833862],\"stateVersion\":1334,\"eventCursor\":1335,\"completedAtUtc\":\"2026-10-26T09:05:44.5254682\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1333,\"appliedOnStateVersion\":1333}}",
+    "event": {
+      "seq": 1335,
+      "stateVersion": 1334,
+      "actorId": "a1_alias",
+      "commandId": "godot_c6392aa78aa2c6388883be4ed03a97aa",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a1_alias",
+        "operatorId": "local-operator",
+        "commandId": "godot_c6392aa78aa2c6388883be4ed03a97aa",
+        "action": {
+          "type": "build_workshop",
+          "capabilityVersion": 1,
+          "recipeId": "wooden_chest.v1",
+          "at": [
+            20.5,
+            16.9999980926514
+          ],
+          "toolId": "tfb6676ef505741fabf76d8d0eb16338d"
+        },
+        "entity": {
+          "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a1_alias",
+          "position": [
+            20.5,
+            16.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": {
+          "toolId": "tfb6676ef505741fabf76d8d0eb16338d",
+          "ownerActorId": "a1_alias",
+          "workbenchId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+          "commandId": "godot_1e4c6e8c1d880d6208c066ed81439181",
+          "stateVersion": 1333,
+          "eventCursor": 1334,
+          "definitionId": "wooden_mallet",
+          "definitionVersion": 1,
+          "embodiedWood": 1
+        },
+        "quantity": 3,
+        "inventoryWoodBefore": 8,
+        "inventoryWood": 5,
+        "storedWoodBefore": 0,
+        "storedWood": 0,
+        "position": [
+          22.9999980926514,
+          15.7999982833862
+        ],
+        "stateVersion": 1334,
+        "eventCursor": 1335,
+        "completedAtUtc": "2026-10-26T09:05:44.5254682+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1334,
+      "commandId": null,
+      "identity": {
+        "operatorId": "local-operator",
+        "actorId": "a1_alias",
+        "sessionId": "s8b8c3cecf91c4d61a8935b0727444585"
+      },
+      "eventCursor": 1335,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a1_alias",
+        "operatorId": "local-operator",
+        "commandId": "godot_c6392aa78aa2c6388883be4ed03a97aa",
+        "action": {
+          "type": "build_workshop",
+          "capabilityVersion": 1,
+          "recipeId": "wooden_chest.v1",
+          "at": [
+            20.5,
+            16.9999980926514
+          ],
+          "toolId": "tfb6676ef505741fabf76d8d0eb16338d"
+        },
+        "entity": {
+          "entityId": "e57d4e62d8f4a46568479d1ebb31e8550",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a1_alias",
+          "position": [
+            20.5,
+            16.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": {
+          "toolId": "tfb6676ef505741fabf76d8d0eb16338d",
+          "ownerActorId": "a1_alias",
+          "workbenchId": "e62ad2e07552a4ae2907e75f2eb68bce3",
+          "commandId": "godot_1e4c6e8c1d880d6208c066ed81439181",
+          "stateVersion": 1333,
+          "eventCursor": 1334,
+          "definitionId": "wooden_mallet",
+          "definitionVersion": 1,
+          "embodiedWood": 1
+        },
+        "quantity": 3,
+        "inventoryWoodBefore": 8,
+        "inventoryWood": 5,
+        "storedWoodBefore": 0,
+        "storedWood": 0,
+        "position": [
+          22.9999980926514,
+          15.7999982833862
+        ],
+        "stateVersion": 1334,
+        "eventCursor": 1335,
+        "completedAtUtc": "2026-10-26T09:05:44.5254682+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1334,\"commandId\":null,\"identity\":{\"operatorId\":\"local-operator\",\"actorId\":\"a1_alias\",\"sessionId\":\"s8b8c3cecf91c4d61a8935b0727444585\"},\"eventCursor\":1335,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a1_alias\",\"operatorId\":\"local-operator\",\"commandId\":\"godot_c6392aa78aa2c6388883be4ed03a97aa\",\"action\":{\"type\":\"build_workshop\",\"capabilityVersion\":1,\"recipeId\":\"wooden_chest.v1\",\"at\":[20.5,16.9999980926514],\"toolId\":\"tfb6676ef505741fabf76d8d0eb16338d\"},\"entity\":{\"entityId\":\"e57d4e62d8f4a46568479d1ebb31e8550\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a1_alias\",\"position\":[20.5,16.9999980926514],\"embodiedWood\":3},\"tool\":{\"toolId\":\"tfb6676ef505741fabf76d8d0eb16338d\",\"ownerActorId\":\"a1_alias\",\"workbenchId\":\"e62ad2e07552a4ae2907e75f2eb68bce3\",\"commandId\":\"godot_1e4c6e8c1d880d6208c066ed81439181\",\"stateVersion\":1333,\"eventCursor\":1334,\"definitionId\":\"wooden_mallet\",\"definitionVersion\":1,\"embodiedWood\":1},\"quantity\":3,\"inventoryWoodBefore\":8,\"inventoryWood\":5,\"storedWoodBefore\":0,\"storedWood\":0,\"position\":[22.9999980926514,15.7999982833862],\"stateVersion\":1334,\"eventCursor\":1335,\"completedAtUtc\":\"2026-10-26T09:05:44.5254682\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a2",
+    "commandId": "godot_bb44b4e0b76fc6481802ea1278c9ebc8",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1117,
+      "commandId": "godot_bb44b4e0b76fc6481802ea1278c9ebc8",
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1118,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "withdraw_wood",
+        "workshopAction": {
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "godot_bb44b4e0b76fc6481802ea1278c9ebc8",
+          "action": {
+            "type": "withdraw_wood",
+            "capabilityVersion": 1,
+            "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+            "quantity": 3
+          },
+          "entity": {
+            "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+            "definitionId": "wooden_chest",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a2",
+            "position": [
+              28.5,
+              19.9999980926514
+            ],
+            "embodiedWood": 3
+          },
+          "tool": null,
+          "quantity": 3,
+          "inventoryWoodBefore": 2,
+          "inventoryWood": 5,
+          "storedWoodBefore": 3,
+          "storedWood": 0,
+          "position": [
+            27.3782482147217,
+            19.4484806060791
+          ],
+          "stateVersion": 1117,
+          "eventCursor": 1118,
+          "completedAtUtc": "2026-10-26T08:59:58.6768339+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1116,
+        "appliedOnStateVersion": 1116
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1117,\"commandId\":\"godot_bb44b4e0b76fc6481802ea1278c9ebc8\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1118,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"withdraw_wood\",\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_bb44b4e0b76fc6481802ea1278c9ebc8\",\"action\":{\"type\":\"withdraw_wood\",\"capabilityVersion\":1,\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"quantity\":3},\"entity\":{\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[28.5,19.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":3,\"inventoryWoodBefore\":2,\"inventoryWood\":5,\"storedWoodBefore\":3,\"storedWood\":0,\"position\":[27.3782482147217,19.4484806060791],\"stateVersion\":1117,\"eventCursor\":1118,\"completedAtUtc\":\"2026-10-26T08:59:58.6768339\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1116,\"appliedOnStateVersion\":1116}}",
+    "event": {
+      "seq": 1118,
+      "stateVersion": 1117,
+      "actorId": "a2",
+      "commandId": "godot_bb44b4e0b76fc6481802ea1278c9ebc8",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_bb44b4e0b76fc6481802ea1278c9ebc8",
+        "action": {
+          "type": "withdraw_wood",
+          "capabilityVersion": 1,
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "quantity": 3
+        },
+        "entity": {
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            28.5,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 3,
+        "inventoryWoodBefore": 2,
+        "inventoryWood": 5,
+        "storedWoodBefore": 3,
+        "storedWood": 0,
+        "position": [
+          27.3782482147217,
+          19.4484806060791
+        ],
+        "stateVersion": 1117,
+        "eventCursor": 1118,
+        "completedAtUtc": "2026-10-26T08:59:58.6768339+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1117,
+      "commandId": null,
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1118,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_bb44b4e0b76fc6481802ea1278c9ebc8",
+        "action": {
+          "type": "withdraw_wood",
+          "capabilityVersion": 1,
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "quantity": 3
+        },
+        "entity": {
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            28.5,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 3,
+        "inventoryWoodBefore": 2,
+        "inventoryWood": 5,
+        "storedWoodBefore": 3,
+        "storedWood": 0,
+        "position": [
+          27.3782482147217,
+          19.4484806060791
+        ],
+        "stateVersion": 1117,
+        "eventCursor": 1118,
+        "completedAtUtc": "2026-10-26T08:59:58.6768339+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1117,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1118,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_bb44b4e0b76fc6481802ea1278c9ebc8\",\"action\":{\"type\":\"withdraw_wood\",\"capabilityVersion\":1,\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"quantity\":3},\"entity\":{\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[28.5,19.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":3,\"inventoryWoodBefore\":2,\"inventoryWood\":5,\"storedWoodBefore\":3,\"storedWood\":0,\"position\":[27.3782482147217,19.4484806060791],\"stateVersion\":1117,\"eventCursor\":1118,\"completedAtUtc\":\"2026-10-26T08:59:58.6768339\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a2",
+    "commandId": "godot_e91b97cc320d90fddb5b636278b7f37d",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1183,
+      "commandId": "godot_e91b97cc320d90fddb5b636278b7f37d",
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1184,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "deposit_wood",
+        "workshopAction": {
+          "authorActorId": "a2",
+          "operatorId": "declared-late",
+          "commandId": "godot_e91b97cc320d90fddb5b636278b7f37d",
+          "action": {
+            "type": "deposit_wood",
+            "capabilityVersion": 1,
+            "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+            "quantity": 3
+          },
+          "entity": {
+            "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+            "definitionId": "wooden_chest",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a2",
+            "position": [
+              28.5,
+              19.9999980926514
+            ],
+            "embodiedWood": 3
+          },
+          "tool": null,
+          "quantity": 3,
+          "inventoryWoodBefore": 12,
+          "inventoryWood": 9,
+          "storedWoodBefore": 0,
+          "storedWood": 3,
+          "position": [
+            28.4375782012939,
+            18.751558303833
+          ],
+          "stateVersion": 1183,
+          "eventCursor": 1184,
+          "completedAtUtc": "2026-10-26T09:02:07.6008612+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1182,
+        "appliedOnStateVersion": 1182
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1183,\"commandId\":\"godot_e91b97cc320d90fddb5b636278b7f37d\",\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1184,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"deposit_wood\",\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_e91b97cc320d90fddb5b636278b7f37d\",\"action\":{\"type\":\"deposit_wood\",\"capabilityVersion\":1,\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"quantity\":3},\"entity\":{\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[28.5,19.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":3,\"inventoryWoodBefore\":12,\"inventoryWood\":9,\"storedWoodBefore\":0,\"storedWood\":3,\"position\":[28.4375782012939,18.751558303833],\"stateVersion\":1183,\"eventCursor\":1184,\"completedAtUtc\":\"2026-10-26T09:02:07.6008612\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1182,\"appliedOnStateVersion\":1182}}",
+    "event": {
+      "seq": 1184,
+      "stateVersion": 1183,
+      "actorId": "a2",
+      "commandId": "godot_e91b97cc320d90fddb5b636278b7f37d",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_e91b97cc320d90fddb5b636278b7f37d",
+        "action": {
+          "type": "deposit_wood",
+          "capabilityVersion": 1,
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "quantity": 3
+        },
+        "entity": {
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            28.5,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 3,
+        "inventoryWoodBefore": 12,
+        "inventoryWood": 9,
+        "storedWoodBefore": 0,
+        "storedWood": 3,
+        "position": [
+          28.4375782012939,
+          18.751558303833
+        ],
+        "stateVersion": 1183,
+        "eventCursor": 1184,
+        "completedAtUtc": "2026-10-26T09:02:07.6008612+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1183,
+      "commandId": null,
+      "identity": {
+        "operatorId": "declared-late",
+        "actorId": "a2",
+        "sessionId": "s131d61be279840df94f00244eea8851d"
+      },
+      "eventCursor": 1184,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a2",
+        "operatorId": "declared-late",
+        "commandId": "godot_e91b97cc320d90fddb5b636278b7f37d",
+        "action": {
+          "type": "deposit_wood",
+          "capabilityVersion": 1,
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "quantity": 3
+        },
+        "entity": {
+          "entityId": "ef9eac399410c43338d30a3b8b10ce7af",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            28.5,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 3,
+        "inventoryWoodBefore": 12,
+        "inventoryWood": 9,
+        "storedWoodBefore": 0,
+        "storedWood": 3,
+        "position": [
+          28.4375782012939,
+          18.751558303833
+        ],
+        "stateVersion": 1183,
+        "eventCursor": 1184,
+        "completedAtUtc": "2026-10-26T09:02:07.6008612+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1183,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-late\",\"actorId\":\"a2\",\"sessionId\":\"s131d61be279840df94f00244eea8851d\"},\"eventCursor\":1184,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a2\",\"operatorId\":\"declared-late\",\"commandId\":\"godot_e91b97cc320d90fddb5b636278b7f37d\",\"action\":{\"type\":\"deposit_wood\",\"capabilityVersion\":1,\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"quantity\":3},\"entity\":{\"entityId\":\"ef9eac399410c43338d30a3b8b10ce7af\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[28.5,19.9999980926514],\"embodiedWood\":3},\"tool\":null,\"quantity\":3,\"inventoryWoodBefore\":12,\"inventoryWood\":9,\"storedWoodBefore\":0,\"storedWood\":3,\"position\":[28.4375782012939,18.751558303833],\"stateVersion\":1183,\"eventCursor\":1184,\"completedAtUtc\":\"2026-10-26T09:02:07.6008612\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a3",
+    "commandId": "godot_046dd58076bab5337bd24ee578bd6eed",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1248,
+      "commandId": "godot_046dd58076bab5337bd24ee578bd6eed",
+      "identity": {
+        "operatorId": "declared-third",
+        "actorId": "a3",
+        "sessionId": "sa423548f7dce496895be25120daedb09"
+      },
+      "eventCursor": 1249,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "withdraw_wood",
+        "workshopAction": {
+          "authorActorId": "a3",
+          "operatorId": "declared-third",
+          "commandId": "godot_046dd58076bab5337bd24ee578bd6eed",
+          "action": {
+            "type": "withdraw_wood",
+            "capabilityVersion": 1,
+            "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+            "quantity": 1
+          },
+          "entity": {
+            "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+            "definitionId": "wooden_chest",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a3",
+            "position": [
+              23.5,
+              20
+            ],
+            "embodiedWood": 3
+          },
+          "tool": null,
+          "quantity": 1,
+          "inventoryWoodBefore": 1,
+          "inventoryWood": 2,
+          "storedWoodBefore": 1,
+          "storedWood": 0,
+          "position": [
+            24.25,
+            21
+          ],
+          "stateVersion": 1248,
+          "eventCursor": 1249,
+          "completedAtUtc": "2026-10-26T09:03:48.2412855+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1247,
+        "appliedOnStateVersion": 1247
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1248,\"commandId\":\"godot_046dd58076bab5337bd24ee578bd6eed\",\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"sa423548f7dce496895be25120daedb09\"},\"eventCursor\":1249,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"withdraw_wood\",\"workshopAction\":{\"authorActorId\":\"a3\",\"operatorId\":\"declared-third\",\"commandId\":\"godot_046dd58076bab5337bd24ee578bd6eed\",\"action\":{\"type\":\"withdraw_wood\",\"capabilityVersion\":1,\"entityId\":\"e29fe07f5b60e4652b351689a74ef30a0\",\"quantity\":1},\"entity\":{\"entityId\":\"e29fe07f5b60e4652b351689a74ef30a0\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a3\",\"position\":[23.5,20],\"embodiedWood\":3},\"tool\":null,\"quantity\":1,\"inventoryWoodBefore\":1,\"inventoryWood\":2,\"storedWoodBefore\":1,\"storedWood\":0,\"position\":[24.25,21],\"stateVersion\":1248,\"eventCursor\":1249,\"completedAtUtc\":\"2026-10-26T09:03:48.2412855\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1247,\"appliedOnStateVersion\":1247}}",
+    "event": {
+      "seq": 1249,
+      "stateVersion": 1248,
+      "actorId": "a3",
+      "commandId": "godot_046dd58076bab5337bd24ee578bd6eed",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a3",
+        "operatorId": "declared-third",
+        "commandId": "godot_046dd58076bab5337bd24ee578bd6eed",
+        "action": {
+          "type": "withdraw_wood",
+          "capabilityVersion": 1,
+          "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+          "quantity": 1
+        },
+        "entity": {
+          "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a3",
+          "position": [
+            23.5,
+            20
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 1,
+        "inventoryWoodBefore": 1,
+        "inventoryWood": 2,
+        "storedWoodBefore": 1,
+        "storedWood": 0,
+        "position": [
+          24.25,
+          21
+        ],
+        "stateVersion": 1248,
+        "eventCursor": 1249,
+        "completedAtUtc": "2026-10-26T09:03:48.2412855+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1248,
+      "commandId": null,
+      "identity": {
+        "operatorId": "declared-third",
+        "actorId": "a3",
+        "sessionId": "sa423548f7dce496895be25120daedb09"
+      },
+      "eventCursor": 1249,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a3",
+        "operatorId": "declared-third",
+        "commandId": "godot_046dd58076bab5337bd24ee578bd6eed",
+        "action": {
+          "type": "withdraw_wood",
+          "capabilityVersion": 1,
+          "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+          "quantity": 1
+        },
+        "entity": {
+          "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a3",
+          "position": [
+            23.5,
+            20
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 1,
+        "inventoryWoodBefore": 1,
+        "inventoryWood": 2,
+        "storedWoodBefore": 1,
+        "storedWood": 0,
+        "position": [
+          24.25,
+          21
+        ],
+        "stateVersion": 1248,
+        "eventCursor": 1249,
+        "completedAtUtc": "2026-10-26T09:03:48.2412855+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1248,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"sa423548f7dce496895be25120daedb09\"},\"eventCursor\":1249,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a3\",\"operatorId\":\"declared-third\",\"commandId\":\"godot_046dd58076bab5337bd24ee578bd6eed\",\"action\":{\"type\":\"withdraw_wood\",\"capabilityVersion\":1,\"entityId\":\"e29fe07f5b60e4652b351689a74ef30a0\",\"quantity\":1},\"entity\":{\"entityId\":\"e29fe07f5b60e4652b351689a74ef30a0\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a3\",\"position\":[23.5,20],\"embodiedWood\":3},\"tool\":null,\"quantity\":1,\"inventoryWoodBefore\":1,\"inventoryWood\":2,\"storedWoodBefore\":1,\"storedWood\":0,\"position\":[24.25,21],\"stateVersion\":1248,\"eventCursor\":1249,\"completedAtUtc\":\"2026-10-26T09:03:48.2412855\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a3",
+    "commandId": "godot_23dac98d3d9420077e7da9b6b87aaf65",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1233,
+      "commandId": "godot_23dac98d3d9420077e7da9b6b87aaf65",
+      "identity": {
+        "operatorId": "declared-third",
+        "actorId": "a3",
+        "sessionId": "sa423548f7dce496895be25120daedb09"
+      },
+      "eventCursor": 1234,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "craft_tool",
+        "workshopAction": {
+          "authorActorId": "a3",
+          "operatorId": "declared-third",
+          "commandId": "godot_23dac98d3d9420077e7da9b6b87aaf65",
+          "action": {
+            "type": "craft_tool",
+            "capabilityVersion": 1,
+            "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+            "recipeId": "wooden_mallet.v1"
+          },
+          "entity": {
+            "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+            "definitionId": "workbench",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a2",
+            "position": [
+              26,
+              19.9999980926514
+            ],
+            "embodiedWood": 3
+          },
+          "tool": {
+            "toolId": "tfa173fcd4a4a44bcba3b075fed582199",
+            "ownerActorId": "a3",
+            "workbenchId": "e31cade2f71e04cabaa6303f9036f1d91",
+            "commandId": "godot_23dac98d3d9420077e7da9b6b87aaf65",
+            "stateVersion": 1233,
+            "eventCursor": 1234,
+            "definitionId": "wooden_mallet",
+            "definitionVersion": 1,
+            "embodiedWood": 1
+          },
+          "quantity": 1,
+          "inventoryWoodBefore": 6,
+          "inventoryWood": 5,
+          "storedWoodBefore": null,
+          "storedWood": null,
+          "position": [
+            26.2451457977295,
+            18.7742729187012
+          ],
+          "stateVersion": 1233,
+          "eventCursor": 1234,
+          "completedAtUtc": "2026-10-26T09:03:04.5188844+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1231,
+        "appliedOnStateVersion": 1232
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1233,\"commandId\":\"godot_23dac98d3d9420077e7da9b6b87aaf65\",\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"sa423548f7dce496895be25120daedb09\"},\"eventCursor\":1234,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"craft_tool\",\"workshopAction\":{\"authorActorId\":\"a3\",\"operatorId\":\"declared-third\",\"commandId\":\"godot_23dac98d3d9420077e7da9b6b87aaf65\",\"action\":{\"type\":\"craft_tool\",\"capabilityVersion\":1,\"entityId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"recipeId\":\"wooden_mallet.v1\"},\"entity\":{\"entityId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"definitionId\":\"workbench\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[26,19.9999980926514],\"embodiedWood\":3},\"tool\":{\"toolId\":\"tfa173fcd4a4a44bcba3b075fed582199\",\"ownerActorId\":\"a3\",\"workbenchId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"commandId\":\"godot_23dac98d3d9420077e7da9b6b87aaf65\",\"stateVersion\":1233,\"eventCursor\":1234,\"definitionId\":\"wooden_mallet\",\"definitionVersion\":1,\"embodiedWood\":1},\"quantity\":1,\"inventoryWoodBefore\":6,\"inventoryWood\":5,\"storedWoodBefore\":null,\"storedWood\":null,\"position\":[26.2451457977295,18.7742729187012],\"stateVersion\":1233,\"eventCursor\":1234,\"completedAtUtc\":\"2026-10-26T09:03:04.5188844\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1231,\"appliedOnStateVersion\":1232}}",
+    "event": {
+      "seq": 1234,
+      "stateVersion": 1233,
+      "actorId": "a3",
+      "commandId": "godot_23dac98d3d9420077e7da9b6b87aaf65",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a3",
+        "operatorId": "declared-third",
+        "commandId": "godot_23dac98d3d9420077e7da9b6b87aaf65",
+        "action": {
+          "type": "craft_tool",
+          "capabilityVersion": 1,
+          "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "recipeId": "wooden_mallet.v1"
+        },
+        "entity": {
+          "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "definitionId": "workbench",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            26,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": {
+          "toolId": "tfa173fcd4a4a44bcba3b075fed582199",
+          "ownerActorId": "a3",
+          "workbenchId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "commandId": "godot_23dac98d3d9420077e7da9b6b87aaf65",
+          "stateVersion": 1233,
+          "eventCursor": 1234,
+          "definitionId": "wooden_mallet",
+          "definitionVersion": 1,
+          "embodiedWood": 1
+        },
+        "quantity": 1,
+        "inventoryWoodBefore": 6,
+        "inventoryWood": 5,
+        "storedWoodBefore": null,
+        "storedWood": null,
+        "position": [
+          26.2451457977295,
+          18.7742729187012
+        ],
+        "stateVersion": 1233,
+        "eventCursor": 1234,
+        "completedAtUtc": "2026-10-26T09:03:04.5188844+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1233,
+      "commandId": null,
+      "identity": {
+        "operatorId": "declared-third",
+        "actorId": "a3",
+        "sessionId": "sa423548f7dce496895be25120daedb09"
+      },
+      "eventCursor": 1234,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a3",
+        "operatorId": "declared-third",
+        "commandId": "godot_23dac98d3d9420077e7da9b6b87aaf65",
+        "action": {
+          "type": "craft_tool",
+          "capabilityVersion": 1,
+          "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "recipeId": "wooden_mallet.v1"
+        },
+        "entity": {
+          "entityId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "definitionId": "workbench",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            26,
+            19.9999980926514
+          ],
+          "embodiedWood": 3
+        },
+        "tool": {
+          "toolId": "tfa173fcd4a4a44bcba3b075fed582199",
+          "ownerActorId": "a3",
+          "workbenchId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "commandId": "godot_23dac98d3d9420077e7da9b6b87aaf65",
+          "stateVersion": 1233,
+          "eventCursor": 1234,
+          "definitionId": "wooden_mallet",
+          "definitionVersion": 1,
+          "embodiedWood": 1
+        },
+        "quantity": 1,
+        "inventoryWoodBefore": 6,
+        "inventoryWood": 5,
+        "storedWoodBefore": null,
+        "storedWood": null,
+        "position": [
+          26.2451457977295,
+          18.7742729187012
+        ],
+        "stateVersion": 1233,
+        "eventCursor": 1234,
+        "completedAtUtc": "2026-10-26T09:03:04.5188844+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1233,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"sa423548f7dce496895be25120daedb09\"},\"eventCursor\":1234,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a3\",\"operatorId\":\"declared-third\",\"commandId\":\"godot_23dac98d3d9420077e7da9b6b87aaf65\",\"action\":{\"type\":\"craft_tool\",\"capabilityVersion\":1,\"entityId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"recipeId\":\"wooden_mallet.v1\"},\"entity\":{\"entityId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"definitionId\":\"workbench\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a2\",\"position\":[26,19.9999980926514],\"embodiedWood\":3},\"tool\":{\"toolId\":\"tfa173fcd4a4a44bcba3b075fed582199\",\"ownerActorId\":\"a3\",\"workbenchId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"commandId\":\"godot_23dac98d3d9420077e7da9b6b87aaf65\",\"stateVersion\":1233,\"eventCursor\":1234,\"definitionId\":\"wooden_mallet\",\"definitionVersion\":1,\"embodiedWood\":1},\"quantity\":1,\"inventoryWoodBefore\":6,\"inventoryWood\":5,\"storedWoodBefore\":null,\"storedWood\":null,\"position\":[26.2451457977295,18.7742729187012],\"stateVersion\":1233,\"eventCursor\":1234,\"completedAtUtc\":\"2026-10-26T09:03:04.5188844\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a3",
+    "commandId": "godot_54401d782cdc175a03634f6487bf7e83",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1234,
+      "commandId": "godot_54401d782cdc175a03634f6487bf7e83",
+      "identity": {
+        "operatorId": "declared-third",
+        "actorId": "a3",
+        "sessionId": "sa423548f7dce496895be25120daedb09"
+      },
+      "eventCursor": 1235,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "build_workshop",
+        "workshopAction": {
+          "authorActorId": "a3",
+          "operatorId": "declared-third",
+          "commandId": "godot_54401d782cdc175a03634f6487bf7e83",
+          "action": {
+            "type": "build_workshop",
+            "capabilityVersion": 1,
+            "recipeId": "wooden_chest.v1",
+            "at": [
+              23.5,
+              20
+            ],
+            "toolId": "tfa173fcd4a4a44bcba3b075fed582199"
+          },
+          "entity": {
+            "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+            "definitionId": "wooden_chest",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a3",
+            "position": [
+              23.5,
+              20
+            ],
+            "embodiedWood": 3
+          },
+          "tool": {
+            "toolId": "tfa173fcd4a4a44bcba3b075fed582199",
+            "ownerActorId": "a3",
+            "workbenchId": "e31cade2f71e04cabaa6303f9036f1d91",
+            "commandId": "godot_23dac98d3d9420077e7da9b6b87aaf65",
+            "stateVersion": 1233,
+            "eventCursor": 1234,
+            "definitionId": "wooden_mallet",
+            "definitionVersion": 1,
+            "embodiedWood": 1
+          },
+          "quantity": 3,
+          "inventoryWoodBefore": 5,
+          "inventoryWood": 2,
+          "storedWoodBefore": 0,
+          "storedWood": 0,
+          "position": [
+            26.2451457977295,
+            18.7742729187012
+          ],
+          "stateVersion": 1234,
+          "eventCursor": 1235,
+          "completedAtUtc": "2026-10-26T09:03:06.0489424+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1233,
+        "appliedOnStateVersion": 1233
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1234,\"commandId\":\"godot_54401d782cdc175a03634f6487bf7e83\",\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"sa423548f7dce496895be25120daedb09\"},\"eventCursor\":1235,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"build_workshop\",\"workshopAction\":{\"authorActorId\":\"a3\",\"operatorId\":\"declared-third\",\"commandId\":\"godot_54401d782cdc175a03634f6487bf7e83\",\"action\":{\"type\":\"build_workshop\",\"capabilityVersion\":1,\"recipeId\":\"wooden_chest.v1\",\"at\":[23.5,20],\"toolId\":\"tfa173fcd4a4a44bcba3b075fed582199\"},\"entity\":{\"entityId\":\"e29fe07f5b60e4652b351689a74ef30a0\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a3\",\"position\":[23.5,20],\"embodiedWood\":3},\"tool\":{\"toolId\":\"tfa173fcd4a4a44bcba3b075fed582199\",\"ownerActorId\":\"a3\",\"workbenchId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"commandId\":\"godot_23dac98d3d9420077e7da9b6b87aaf65\",\"stateVersion\":1233,\"eventCursor\":1234,\"definitionId\":\"wooden_mallet\",\"definitionVersion\":1,\"embodiedWood\":1},\"quantity\":3,\"inventoryWoodBefore\":5,\"inventoryWood\":2,\"storedWoodBefore\":0,\"storedWood\":0,\"position\":[26.2451457977295,18.7742729187012],\"stateVersion\":1234,\"eventCursor\":1235,\"completedAtUtc\":\"2026-10-26T09:03:06.0489424\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1233,\"appliedOnStateVersion\":1233}}",
+    "event": {
+      "seq": 1235,
+      "stateVersion": 1234,
+      "actorId": "a3",
+      "commandId": "godot_54401d782cdc175a03634f6487bf7e83",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a3",
+        "operatorId": "declared-third",
+        "commandId": "godot_54401d782cdc175a03634f6487bf7e83",
+        "action": {
+          "type": "build_workshop",
+          "capabilityVersion": 1,
+          "recipeId": "wooden_chest.v1",
+          "at": [
+            23.5,
+            20
+          ],
+          "toolId": "tfa173fcd4a4a44bcba3b075fed582199"
+        },
+        "entity": {
+          "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a3",
+          "position": [
+            23.5,
+            20
+          ],
+          "embodiedWood": 3
+        },
+        "tool": {
+          "toolId": "tfa173fcd4a4a44bcba3b075fed582199",
+          "ownerActorId": "a3",
+          "workbenchId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "commandId": "godot_23dac98d3d9420077e7da9b6b87aaf65",
+          "stateVersion": 1233,
+          "eventCursor": 1234,
+          "definitionId": "wooden_mallet",
+          "definitionVersion": 1,
+          "embodiedWood": 1
+        },
+        "quantity": 3,
+        "inventoryWoodBefore": 5,
+        "inventoryWood": 2,
+        "storedWoodBefore": 0,
+        "storedWood": 0,
+        "position": [
+          26.2451457977295,
+          18.7742729187012
+        ],
+        "stateVersion": 1234,
+        "eventCursor": 1235,
+        "completedAtUtc": "2026-10-26T09:03:06.0489424+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1234,
+      "commandId": null,
+      "identity": {
+        "operatorId": "declared-third",
+        "actorId": "a3",
+        "sessionId": "sa423548f7dce496895be25120daedb09"
+      },
+      "eventCursor": 1235,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a3",
+        "operatorId": "declared-third",
+        "commandId": "godot_54401d782cdc175a03634f6487bf7e83",
+        "action": {
+          "type": "build_workshop",
+          "capabilityVersion": 1,
+          "recipeId": "wooden_chest.v1",
+          "at": [
+            23.5,
+            20
+          ],
+          "toolId": "tfa173fcd4a4a44bcba3b075fed582199"
+        },
+        "entity": {
+          "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a3",
+          "position": [
+            23.5,
+            20
+          ],
+          "embodiedWood": 3
+        },
+        "tool": {
+          "toolId": "tfa173fcd4a4a44bcba3b075fed582199",
+          "ownerActorId": "a3",
+          "workbenchId": "e31cade2f71e04cabaa6303f9036f1d91",
+          "commandId": "godot_23dac98d3d9420077e7da9b6b87aaf65",
+          "stateVersion": 1233,
+          "eventCursor": 1234,
+          "definitionId": "wooden_mallet",
+          "definitionVersion": 1,
+          "embodiedWood": 1
+        },
+        "quantity": 3,
+        "inventoryWoodBefore": 5,
+        "inventoryWood": 2,
+        "storedWoodBefore": 0,
+        "storedWood": 0,
+        "position": [
+          26.2451457977295,
+          18.7742729187012
+        ],
+        "stateVersion": 1234,
+        "eventCursor": 1235,
+        "completedAtUtc": "2026-10-26T09:03:06.0489424+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1234,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"sa423548f7dce496895be25120daedb09\"},\"eventCursor\":1235,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a3\",\"operatorId\":\"declared-third\",\"commandId\":\"godot_54401d782cdc175a03634f6487bf7e83\",\"action\":{\"type\":\"build_workshop\",\"capabilityVersion\":1,\"recipeId\":\"wooden_chest.v1\",\"at\":[23.5,20],\"toolId\":\"tfa173fcd4a4a44bcba3b075fed582199\"},\"entity\":{\"entityId\":\"e29fe07f5b60e4652b351689a74ef30a0\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a3\",\"position\":[23.5,20],\"embodiedWood\":3},\"tool\":{\"toolId\":\"tfa173fcd4a4a44bcba3b075fed582199\",\"ownerActorId\":\"a3\",\"workbenchId\":\"e31cade2f71e04cabaa6303f9036f1d91\",\"commandId\":\"godot_23dac98d3d9420077e7da9b6b87aaf65\",\"stateVersion\":1233,\"eventCursor\":1234,\"definitionId\":\"wooden_mallet\",\"definitionVersion\":1,\"embodiedWood\":1},\"quantity\":3,\"inventoryWoodBefore\":5,\"inventoryWood\":2,\"storedWoodBefore\":0,\"storedWood\":0,\"position\":[26.2451457977295,18.7742729187012],\"stateVersion\":1234,\"eventCursor\":1235,\"completedAtUtc\":\"2026-10-26T09:03:06.0489424\\u002B00:00\",\"capabilityVersion\":1}}"
+  },
+  {
+    "actor": "a3",
+    "commandId": "godot_c67b6f056cb23e7b820ba97cc7c8f35c",
+    "receipt": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1238,
+      "commandId": "godot_c67b6f056cb23e7b820ba97cc7c8f35c",
+      "identity": {
+        "operatorId": "declared-third",
+        "actorId": "a3",
+        "sessionId": "sa423548f7dce496895be25120daedb09"
+      },
+      "eventCursor": 1239,
+      "error": null,
+      "status": "committed",
+      "result": {
+        "action": "deposit_wood",
+        "workshopAction": {
+          "authorActorId": "a3",
+          "operatorId": "declared-third",
+          "commandId": "godot_c67b6f056cb23e7b820ba97cc7c8f35c",
+          "action": {
+            "type": "deposit_wood",
+            "capabilityVersion": 1,
+            "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+            "quantity": 1
+          },
+          "entity": {
+            "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+            "definitionId": "wooden_chest",
+            "definitionVersion": 1,
+            "rulesVersion": "r10",
+            "ownerActorId": "a3",
+            "position": [
+              23.5,
+              20
+            ],
+            "embodiedWood": 3
+          },
+          "tool": null,
+          "quantity": 1,
+          "inventoryWoodBefore": 2,
+          "inventoryWood": 1,
+          "storedWoodBefore": 0,
+          "storedWood": 1,
+          "position": [
+            24.5200309753418,
+            19.2774810791016
+          ],
+          "stateVersion": 1238,
+          "eventCursor": 1239,
+          "completedAtUtc": "2026-10-26T09:03:41.1953503+00:00",
+          "capabilityVersion": 1
+        }
+      },
+      "execution": {
+        "preconditionMode": "actor-state-v1",
+        "observedStateVersion": 1237,
+        "appliedOnStateVersion": 1237
+      }
+    },
+    "rawReceipt": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1238,\"commandId\":\"godot_c67b6f056cb23e7b820ba97cc7c8f35c\",\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"sa423548f7dce496895be25120daedb09\"},\"eventCursor\":1239,\"error\":null,\"status\":\"committed\",\"result\":{\"action\":\"deposit_wood\",\"workshopAction\":{\"authorActorId\":\"a3\",\"operatorId\":\"declared-third\",\"commandId\":\"godot_c67b6f056cb23e7b820ba97cc7c8f35c\",\"action\":{\"type\":\"deposit_wood\",\"capabilityVersion\":1,\"entityId\":\"e29fe07f5b60e4652b351689a74ef30a0\",\"quantity\":1},\"entity\":{\"entityId\":\"e29fe07f5b60e4652b351689a74ef30a0\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a3\",\"position\":[23.5,20],\"embodiedWood\":3},\"tool\":null,\"quantity\":1,\"inventoryWoodBefore\":2,\"inventoryWood\":1,\"storedWoodBefore\":0,\"storedWood\":1,\"position\":[24.5200309753418,19.2774810791016],\"stateVersion\":1238,\"eventCursor\":1239,\"completedAtUtc\":\"2026-10-26T09:03:41.1953503\\u002B00:00\",\"capabilityVersion\":1}},\"execution\":{\"preconditionMode\":\"actor-state-v1\",\"observedStateVersion\":1237,\"appliedOnStateVersion\":1237}}",
+    "event": {
+      "seq": 1239,
+      "stateVersion": 1238,
+      "actorId": "a3",
+      "commandId": "godot_c67b6f056cb23e7b820ba97cc7c8f35c",
+      "type": "workshopActionCompleted",
+      "workshopAction": {
+        "authorActorId": "a3",
+        "operatorId": "declared-third",
+        "commandId": "godot_c67b6f056cb23e7b820ba97cc7c8f35c",
+        "action": {
+          "type": "deposit_wood",
+          "capabilityVersion": 1,
+          "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+          "quantity": 1
+        },
+        "entity": {
+          "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a3",
+          "position": [
+            23.5,
+            20
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 1,
+        "inventoryWoodBefore": 2,
+        "inventoryWood": 1,
+        "storedWoodBefore": 0,
+        "storedWood": 1,
+        "position": [
+          24.5200309753418,
+          19.2774810791016
+        ],
+        "stateVersion": 1238,
+        "eventCursor": 1239,
+        "completedAtUtc": "2026-10-26T09:03:41.1953503+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "detailReadback": {
+      "schemaVersion": 1,
+      "rulesVersion": "r10",
+      "stateVersion": 1238,
+      "commandId": null,
+      "identity": {
+        "operatorId": "declared-third",
+        "actorId": "a3",
+        "sessionId": "sa423548f7dce496895be25120daedb09"
+      },
+      "eventCursor": 1239,
+      "error": null,
+      "workshopAction": {
+        "authorActorId": "a3",
+        "operatorId": "declared-third",
+        "commandId": "godot_c67b6f056cb23e7b820ba97cc7c8f35c",
+        "action": {
+          "type": "deposit_wood",
+          "capabilityVersion": 1,
+          "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+          "quantity": 1
+        },
+        "entity": {
+          "entityId": "e29fe07f5b60e4652b351689a74ef30a0",
+          "definitionId": "wooden_chest",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a3",
+          "position": [
+            23.5,
+            20
+          ],
+          "embodiedWood": 3
+        },
+        "tool": null,
+        "quantity": 1,
+        "inventoryWoodBefore": 2,
+        "inventoryWood": 1,
+        "storedWoodBefore": 0,
+        "storedWood": 1,
+        "position": [
+          24.5200309753418,
+          19.2774810791016
+        ],
+        "stateVersion": 1238,
+        "eventCursor": 1239,
+        "completedAtUtc": "2026-10-26T09:03:41.1953503+00:00",
+        "capabilityVersion": 1
+      }
+    },
+    "rawDetail": "{\"schemaVersion\":1,\"rulesVersion\":\"r10\",\"stateVersion\":1238,\"commandId\":null,\"identity\":{\"operatorId\":\"declared-third\",\"actorId\":\"a3\",\"sessionId\":\"sa423548f7dce496895be25120daedb09\"},\"eventCursor\":1239,\"error\":null,\"workshopAction\":{\"authorActorId\":\"a3\",\"operatorId\":\"declared-third\",\"commandId\":\"godot_c67b6f056cb23e7b820ba97cc7c8f35c\",\"action\":{\"type\":\"deposit_wood\",\"capabilityVersion\":1,\"entityId\":\"e29fe07f5b60e4652b351689a74ef30a0\",\"quantity\":1},\"entity\":{\"entityId\":\"e29fe07f5b60e4652b351689a74ef30a0\",\"definitionId\":\"wooden_chest\",\"definitionVersion\":1,\"rulesVersion\":\"r10\",\"ownerActorId\":\"a3\",\"position\":[23.5,20],\"embodiedWood\":3},\"tool\":null,\"quantity\":1,\"inventoryWoodBefore\":2,\"inventoryWood\":1,\"storedWoodBefore\":0,\"storedWood\":1,\"position\":[24.5200309753418,19.2774810791016],\"stateVersion\":1238,\"eventCursor\":1239,\"completedAtUtc\":\"2026-10-26T09:03:41.1953503\\u002B00:00\",\"capabilityVersion\":1}}"
+  }
+]

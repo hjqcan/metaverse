@@ -1,0 +1,11 @@
+{
+  "removed": ".local/iter0027/server-v1",
+  "bytes": 55718775,
+  "reason": "Superseded frozen v1 candidate; all tests complete, v2 retained for original-history continuation.",
+  "retained": [
+    "server-v1-manifest.json",
+    "qa-api-v1-16.json",
+    "qa-api-v1-canvas-loss-failure.json"
+  ],
+  "activeUsers": 0
+}

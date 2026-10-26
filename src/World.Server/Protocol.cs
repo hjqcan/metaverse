@@ -56,10 +56,15 @@ internal sealed record WorldAction(string Type, long Dx = 0, long Dy = 0, long Q
     MosaicPatchCell[]? Patch = null, string? ProposalActorId = null, string? ProposalCommandId = null,
     string? Decision = null, string? NodeId = null, double TargetX = 0, double TargetY = 0, bool Continuous = false,
     string? RecipientActorId = null, string? Resource = null, string? SourceId = null, string? ReservationId = null,
-    string? EntityId = null, string? ReplyToNoteId = null, long CapabilityVersion = 0, long ExpectedCanvasRevision = 0)
+    string? EntityId = null, string? ReplyToNoteId = null, long CapabilityVersion = 0, long ExpectedCanvasRevision = 0,
+    string? ToolId = null)
 {
     public object Canonical => Type switch
     {
+        "build_workshop" => new { type = Type, capabilityVersion = CapabilityVersion, recipeId = RecipeId,
+            at = new[] { TargetX, TargetY }, toolId = ToolId },
+        "craft_tool" => new { type = Type, capabilityVersion = CapabilityVersion, entityId = EntityId, recipeId = RecipeId },
+        "deposit_wood" or "withdraw_wood" => new { type = Type, capabilityVersion = CapabilityVersion, entityId = EntityId, quantity = Quantity },
         "move" => new { type = Type, dx = Dx, dy = Dy },
         "walk" => new { type = Type, to = new[] { TargetX, TargetY } },
         "build" when Continuous => new { type = Type, recipeId = RecipeId, at = new[] { TargetX, TargetY } },
@@ -136,6 +141,35 @@ internal sealed record WorldCommand(int SchemaVersion, string RulesVersion, stri
             WorldAction parsed;
             switch (type)
             {
+                case "build_workshop":
+                    Fields(action, "type", "capabilityVersion", "recipeId", "at", "toolId");
+                    var workshopRecipe = String(action.GetProperty("recipeId"));
+                    var workshopAt = action.GetProperty("at");
+                    var workshopTool = action.GetProperty("toolId");
+                    var toolId = workshopTool.ValueKind == JsonValueKind.Null ? null : String(workshopTool);
+                    if (Integer(action.GetProperty("capabilityVersion")) != 1 || workshopRecipe is not ("workbench.v1" or "wooden_chest.v1")
+                        || workshopAt.ValueKind != JsonValueKind.Array || workshopAt.GetArrayLength() != 2
+                        || toolId is not null && !Protocol.ValidCommandId(toolId) || workshopRecipe == "workbench.v1" && toolId is not null)
+                        Invalid("工作坊建造参数无效");
+                    parsed = new(type, CapabilityVersion: 1, RecipeId: workshopRecipe, TargetX: Coordinate(workshopAt[0]),
+                        TargetY: Coordinate(workshopAt[1]), ToolId: toolId);
+                    break;
+                case "craft_tool":
+                    Fields(action, "type", "capabilityVersion", "entityId", "recipeId");
+                    var benchId = String(action.GetProperty("entityId"));
+                    if (Integer(action.GetProperty("capabilityVersion")) != 1 || !Protocol.ValidCommandId(benchId)
+                        || String(action.GetProperty("recipeId")) != "wooden_mallet.v1") Invalid("工具制作参数无效");
+                    parsed = new(type, CapabilityVersion: 1, EntityId: benchId, RecipeId: "wooden_mallet.v1");
+                    break;
+                case "deposit_wood":
+                case "withdraw_wood":
+                    Fields(action, "type", "capabilityVersion", "entityId", "quantity");
+                    var chestId = String(action.GetProperty("entityId"));
+                    var chestQuantity = Integer(action.GetProperty("quantity"));
+                    if (Integer(action.GetProperty("capabilityVersion")) != 1 || !Protocol.ValidCommandId(chestId)
+                        || chestQuantity is < 1 or > 12) Invalid("箱子存取参数无效");
+                    parsed = new(type, CapabilityVersion: 1, EntityId: chestId, Quantity: chestQuantity);
+                    break;
                 case "paint_entity_canvas":
                     Fields(action, "type", "entityId", "capabilityVersion", "expectedCanvasRevision", "patch");
                     var canvasEntity = String(action.GetProperty("entityId"));

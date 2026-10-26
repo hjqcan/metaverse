@@ -1,0 +1,985 @@
+{
+  "passed": false,
+  "groups": 9,
+  "assertions": 109,
+  "results": [
+    {
+      "name": "build_workshop-before",
+      "passed": false,
+      "error": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nERROR: original action survives process restart\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:33)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:392)\n       [4] _settle (res://world_client.gd:388)\n       [5] _observe (res://world_client.gd:231)\n       [6] _request (res://world_client.gd:166)\nERROR: original action and author proven by three responses\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:13)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/workshop_recovery.gd:37)\n       [2] recover (res://world_client.gd:446)\n       [3] _submit (res://world_client.gd:392)\n       [4] _settle (res://world_client.gd:388)\n       [5] _observe (res://world_client.gd:231)\n       [6] _request (res://world_client.gd:166)\n"
+    },
+    {
+      "name": "craft_tool-after",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "workshop original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        }
+      ],
+      "postCount": 1,
+      "originalBodySha256": "6b60b6b90e8517fa56389cdb2f5cc1e4340eb2e4c46721e32ea9c6e4170dd55c",
+      "receipt": {
+        "commandId": "godot_5c615490dfe1f6ed10f951053f6768a3",
+        "error": null,
+        "eventCursor": 146,
+        "execution": {
+          "appliedOnStateVersion": 144,
+          "observedStateVersion": 144,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "sd5941bc9fa644541b0444c373bc27b72"
+        },
+        "result": {
+          "action": "craft_tool",
+          "workshopAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "entityId": "ef683108fdf1340ce84f9b3785960fb85",
+              "recipeId": "wooden_mallet.v1",
+              "type": "craft_tool"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_5c615490dfe1f6ed10f951053f6768a3",
+            "completedAtUtc": "2026-10-26T08:52:00.4400701+00:00",
+            "entity": {
+              "definitionId": "workbench",
+              "definitionVersion": 1,
+              "embodiedWood": 3,
+              "entityId": "ef683108fdf1340ce84f9b3785960fb85",
+              "ownerActorId": "a2",
+              "position": [
+                26,
+                20
+              ],
+              "rulesVersion": "r10"
+            },
+            "eventCursor": 146,
+            "inventoryWood": 4,
+            "inventoryWoodBefore": 5,
+            "operatorId": "declared-late",
+            "position": [
+              26,
+              21.4
+            ],
+            "quantity": 1,
+            "stateVersion": 145,
+            "storedWood": null,
+            "storedWoodBefore": null,
+            "tool": {
+              "commandId": "godot_5c615490dfe1f6ed10f951053f6768a3",
+              "definitionId": "wooden_mallet",
+              "definitionVersion": 1,
+              "embodiedWood": 1,
+              "eventCursor": 146,
+              "ownerActorId": "a2",
+              "stateVersion": 145,
+              "toolId": "td39080e6e1324190b90f596060b9dafc",
+              "workbenchId": "ef683108fdf1340ce84f9b3785960fb85"
+            }
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 145,
+        "status": "committed"
+      }
+    },
+    {
+      "name": "deposit_wood-after-later",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "workshop original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        },
+        {
+          "name": "original transfer quantity retained",
+          "passed": true
+        }
+      ],
+      "postCount": 1,
+      "originalBodySha256": "3563b4f603529ae4e0d0cf92a4fd78f6b77c85e7fdb69e1c94647527b961ce2b",
+      "receipt": {
+        "commandId": "godot_a6213450f8b298324fa90db51df21c63",
+        "error": null,
+        "eventCursor": 141,
+        "execution": {
+          "appliedOnStateVersion": 139,
+          "observedStateVersion": 139,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "sd5941bc9fa644541b0444c373bc27b72"
+        },
+        "result": {
+          "action": "deposit_wood",
+          "workshopAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "entityId": "e768ca51e69b44334a8d251e90078699d",
+              "quantity": 3,
+              "type": "deposit_wood"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_a6213450f8b298324fa90db51df21c63",
+            "completedAtUtc": "2026-10-26T08:52:02.3696016+00:00",
+            "entity": {
+              "definitionId": "wooden_chest",
+              "definitionVersion": 1,
+              "embodiedWood": 3,
+              "entityId": "e768ca51e69b44334a8d251e90078699d",
+              "ownerActorId": "a2",
+              "position": [
+                28.5,
+                20
+              ],
+              "rulesVersion": "r10"
+            },
+            "eventCursor": 141,
+            "inventoryWood": 2,
+            "inventoryWoodBefore": 5,
+            "operatorId": "declared-late",
+            "position": [
+              28.5,
+              21.4
+            ],
+            "quantity": 3,
+            "stateVersion": 140,
+            "storedWood": 3,
+            "storedWoodBefore": 0,
+            "tool": null
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 140,
+        "status": "committed"
+      }
+    },
+    {
+      "name": "withdraw_wood-before",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "workshop original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        },
+        {
+          "name": "original transfer quantity retained",
+          "passed": true
+        }
+      ],
+      "postCount": 2,
+      "originalBodySha256": "b235f51cefc84d71c56fea943173c31ce30383ef1701fceb3b76f820451b0884",
+      "receipt": {
+        "commandId": "godot_444c730520245024c4f21033377da388",
+        "error": null,
+        "eventCursor": 142,
+        "execution": {
+          "appliedOnStateVersion": 140,
+          "observedStateVersion": 140,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "sd5941bc9fa644541b0444c373bc27b72"
+        },
+        "result": {
+          "action": "withdraw_wood",
+          "workshopAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "entityId": "e768ca51e69b44334a8d251e90078699d",
+              "quantity": 3,
+              "type": "withdraw_wood"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_444c730520245024c4f21033377da388",
+            "completedAtUtc": "2026-10-26T08:52:05.1203348+00:00",
+            "entity": {
+              "definitionId": "wooden_chest",
+              "definitionVersion": 1,
+              "embodiedWood": 3,
+              "entityId": "e768ca51e69b44334a8d251e90078699d",
+              "ownerActorId": "a2",
+              "position": [
+                28.5,
+                20
+              ],
+              "rulesVersion": "r10"
+            },
+            "eventCursor": 142,
+            "inventoryWood": 5,
+            "inventoryWoodBefore": 2,
+            "operatorId": "declared-late",
+            "position": [
+              28.5,
+              21.4
+            ],
+            "quantity": 3,
+            "stateVersion": 141,
+            "storedWood": 0,
+            "storedWoodBefore": 3,
+            "tool": null
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 141,
+        "status": "committed"
+      }
+    },
+    {
+      "name": "deposit_wood-receipt",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "workshop original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        },
+        {
+          "name": "original transfer quantity retained",
+          "passed": true
+        }
+      ],
+      "postCount": 1,
+      "originalBodySha256": "50f83507c63dec710ecb9d2d324b58a68d9f87ee691ae8459c9f3489778ac0f7",
+      "receipt": {
+        "commandId": "godot_3a363b084dd536c6bf8c80af867dde42",
+        "error": null,
+        "eventCursor": 141,
+        "execution": {
+          "appliedOnStateVersion": 139,
+          "observedStateVersion": 139,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "sd5941bc9fa644541b0444c373bc27b72"
+        },
+        "result": {
+          "action": "deposit_wood",
+          "workshopAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "entityId": "e768ca51e69b44334a8d251e90078699d",
+              "quantity": 3,
+              "type": "deposit_wood"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_3a363b084dd536c6bf8c80af867dde42",
+            "completedAtUtc": "2026-10-26T08:52:06.3326790+00:00",
+            "entity": {
+              "definitionId": "wooden_chest",
+              "definitionVersion": 1,
+              "embodiedWood": 3,
+              "entityId": "e768ca51e69b44334a8d251e90078699d",
+              "ownerActorId": "a2",
+              "position": [
+                28.5,
+                20
+              ],
+              "rulesVersion": "r10"
+            },
+            "eventCursor": 141,
+            "inventoryWood": 2,
+            "inventoryWoodBefore": 5,
+            "operatorId": "declared-late",
+            "position": [
+              28.5,
+              21.4
+            ],
+            "quantity": 3,
+            "stateVersion": 140,
+            "storedWood": 3,
+            "storedWoodBefore": 0,
+            "tool": null
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 140,
+        "status": "committed"
+      }
+    },
+    {
+      "name": "deposit_wood-event",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "workshop original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        },
+        {
+          "name": "original transfer quantity retained",
+          "passed": true
+        }
+      ],
+      "postCount": 1,
+      "originalBodySha256": "d7d79fec2da62d9c44ec031f50033e45b55267dd0c76b3927624fa70e435d02a",
+      "receipt": {
+        "commandId": "godot_d5da6ed18388f901f97689a3606d170a",
+        "error": null,
+        "eventCursor": 141,
+        "execution": {
+          "appliedOnStateVersion": 139,
+          "observedStateVersion": 139,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "sd5941bc9fa644541b0444c373bc27b72"
+        },
+        "result": {
+          "action": "deposit_wood",
+          "workshopAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "entityId": "e768ca51e69b44334a8d251e90078699d",
+              "quantity": 3,
+              "type": "deposit_wood"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_d5da6ed18388f901f97689a3606d170a",
+            "completedAtUtc": "2026-10-26T08:52:08.4792108+00:00",
+            "entity": {
+              "definitionId": "wooden_chest",
+              "definitionVersion": 1,
+              "embodiedWood": 3,
+              "entityId": "e768ca51e69b44334a8d251e90078699d",
+              "ownerActorId": "a2",
+              "position": [
+                28.5,
+                20
+              ],
+              "rulesVersion": "r10"
+            },
+            "eventCursor": 141,
+            "inventoryWood": 2,
+            "inventoryWoodBefore": 5,
+            "operatorId": "declared-late",
+            "position": [
+              28.5,
+              21.4
+            ],
+            "quantity": 3,
+            "stateVersion": 140,
+            "storedWood": 3,
+            "storedWoodBefore": 0,
+            "tool": null
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 140,
+        "status": "committed"
+      }
+    },
+    {
+      "name": "deposit_wood-detail",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "workshop original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        },
+        {
+          "name": "original transfer quantity retained",
+          "passed": true
+        }
+      ],
+      "postCount": 1,
+      "originalBodySha256": "9dab3878b50a93430aaeb95962c94e85577ad7aa92c4a2ef37dc151a489dd5d2",
+      "receipt": {
+        "commandId": "godot_62b97267789c4129049581ff599f7315",
+        "error": null,
+        "eventCursor": 141,
+        "execution": {
+          "appliedOnStateVersion": 139,
+          "observedStateVersion": 139,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "sd5941bc9fa644541b0444c373bc27b72"
+        },
+        "result": {
+          "action": "deposit_wood",
+          "workshopAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "entityId": "e768ca51e69b44334a8d251e90078699d",
+              "quantity": 3,
+              "type": "deposit_wood"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_62b97267789c4129049581ff599f7315",
+            "completedAtUtc": "2026-10-26T08:52:10.4266079+00:00",
+            "entity": {
+              "definitionId": "wooden_chest",
+              "definitionVersion": 1,
+              "embodiedWood": 3,
+              "entityId": "e768ca51e69b44334a8d251e90078699d",
+              "ownerActorId": "a2",
+              "position": [
+                28.5,
+                20
+              ],
+              "rulesVersion": "r10"
+            },
+            "eventCursor": 141,
+            "inventoryWood": 2,
+            "inventoryWoodBefore": 5,
+            "operatorId": "declared-late",
+            "position": [
+              28.5,
+              21.4
+            ],
+            "quantity": 3,
+            "stateVersion": 140,
+            "storedWood": 3,
+            "storedWoodBefore": 0,
+            "tool": null
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 140,
+        "status": "committed"
+      }
+    },
+    {
+      "name": "deposit_wood-capability",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "workshop original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "new action cannot masquerade as legacy format",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "unknown furniture capability pauses native adapter",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        },
+        {
+          "name": "original action and author proven by three responses",
+          "passed": true
+        },
+        {
+          "name": "original transfer quantity retained",
+          "passed": true
+        }
+      ],
+      "postCount": 2,
+      "originalBodySha256": "acf590d636c95dac56a1d33917204cec18730ba3e5b53b7c90019e1cc9ac16a2",
+      "receipt": {
+        "commandId": "godot_eb271de51fa044abbc86a8723e490088",
+        "error": null,
+        "eventCursor": 141,
+        "execution": {
+          "appliedOnStateVersion": 139,
+          "observedStateVersion": 139,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "sd5941bc9fa644541b0444c373bc27b72"
+        },
+        "result": {
+          "action": "deposit_wood",
+          "workshopAction": {
+            "action": {
+              "capabilityVersion": 1,
+              "entityId": "e768ca51e69b44334a8d251e90078699d",
+              "quantity": 3,
+              "type": "deposit_wood"
+            },
+            "authorActorId": "a2",
+            "capabilityVersion": 1,
+            "commandId": "godot_eb271de51fa044abbc86a8723e490088",
+            "completedAtUtc": "2026-10-26T08:52:13.5992096+00:00",
+            "entity": {
+              "definitionId": "wooden_chest",
+              "definitionVersion": 1,
+              "embodiedWood": 3,
+              "entityId": "e768ca51e69b44334a8d251e90078699d",
+              "ownerActorId": "a2",
+              "position": [
+                28.5,
+                20
+              ],
+              "rulesVersion": "r10"
+            },
+            "eventCursor": 141,
+            "inventoryWood": 2,
+            "inventoryWoodBefore": 5,
+            "operatorId": "declared-late",
+            "position": [
+              28.5,
+              21.4
+            ],
+            "quantity": 3,
+            "stateVersion": 140,
+            "storedWood": 3,
+            "storedWoodBefore": 0,
+            "tool": null
+          }
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 140,
+        "status": "committed"
+      }
+    },
+    {
+      "name": "walk-legacy",
+      "passed": true,
+      "checks": [
+        {
+          "name": "native adapter observes the actual world",
+          "passed": true
+        },
+        {
+          "name": "lost or corrupted evidence retains unresolved original",
+          "passed": true
+        },
+        {
+          "name": "action uses its own compatible journal format",
+          "passed": true
+        },
+        {
+          "name": "journal validates after numeric JSON roundtrip",
+          "passed": true
+        },
+        {
+          "name": "original remains discoverable after switching world",
+          "passed": true
+        },
+        {
+          "name": "workshop original author cannot be replaced",
+          "passed": true
+        },
+        {
+          "name": "validation preserves original serialized request",
+          "passed": true
+        },
+        {
+          "name": "restarted native adapter settles original command",
+          "passed": true
+        },
+        {
+          "name": "original command ID survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original action survives process restart",
+          "passed": true
+        },
+        {
+          "name": "original disk journal settles",
+          "passed": true
+        }
+      ],
+      "postCount": 1,
+      "originalBodySha256": "9fed1d7e8b89e8d279490ded1b3fb153ad9bc323403b2780a8de89088015d8c0",
+      "receipt": {
+        "commandId": "godot_0fefbfd8a7fdf568639a9ac9497bf5c1",
+        "error": null,
+        "eventCursor": 132,
+        "execution": {
+          "appliedOnStateVersion": 130,
+          "observedStateVersion": 130,
+          "preconditionMode": "actor-state-v1"
+        },
+        "identity": {
+          "actorId": "a2",
+          "operatorId": "declared-late",
+          "sessionId": "sd5941bc9fa644541b0444c373bc27b72"
+        },
+        "result": {
+          "action": "walk",
+          "blocked": false,
+          "position": [
+            26.1,
+            21.4
+          ]
+        },
+        "rulesVersion": "r10",
+        "schemaVersion": 1,
+        "stateVersion": 131,
+        "status": "committed"
+      }
+    }
+  ],
+  "actualModelCalls": 0,
+  "sourceSha256": {
+    "clients/godot/command_evidence.gd": "a9d9d78114c6a462bc7af7ea99de9b801b38dd8612790b1f6a3b6a1eda981937",
+    "clients/godot/entity_canvas_evidence.gd": "2475571a6d073aa03e0ad56a2a880f91c4c17c180f966a4c15d702d67c6a84ee",
+    "clients/godot/entity_canvas_panel.gd": "2b8f872572d082f9ea4968dff0c62bce03fe16ec6e7df432dad434ca8e58348e",
+    "clients/godot/entity_note_evidence.gd": "5f4fc9338a142b7be4713506053f6983859ad61da51bfcab8fc51a4784228393",
+    "clients/godot/entity_notes_panel.gd": "5547590a54e0cf0ca14de6fa320f8d22a2678a7378b415077f21ad9c49ad7803",
+    "clients/godot/main.gd": "4e28529ea93277a9345c47045b2c405dc40b211a84e05a7e463e98e18e50f953",
+    "clients/godot/material_panel.gd": "0ca9ce3e6eef38690d9bbc7e77b7e8d75f4bb654e1ab2495e7598aaa632a9798",
+    "clients/godot/pending_store.gd": "98b0d5836e8d6d1850212756f2a131ca4010584e74dbd534638563fe56f09336",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/workshop_evidence.gd": "2ee74cc3336881d465e95618662357b1b6530bc22b7d6e92a43cd52729f37e31",
+    "clients/godot/workshop_geometry.gd": "6a84d6e727094a07cd4f0ea953a26018c79ba92d34179376b7f76c354598d656",
+    "clients/godot/workshop_panel.gd": "1545fa187422875c92f1e7f2e7d0ffed7b64a39a0b2bbf19b6a98662cfad1b20",
+    "clients/godot/world_client.gd": "630c2b93026e51f2060b6a0725be60de94b0d4c96c0e4eef84251b2706188b79",
+    "clients/godot/world_navigation.gd": "a6682c79f7b9c263b6ffa2d944fcb357736d2abda8a7fde2e4fce363c76974ba",
+    "clients/godot/world_view.gd": "63c541b7a766dc71dab544d67329422270ae4062ca62fbe00d9d5dd269f0f979",
+    "tests/workshop_godot.py": "d7da3f552834f515c4c3f45d14cde5643c11087bc2775a42734ae4277c2a0907",
+    "tests/godot/workshop_recovery.gd": "e175479ddff67892c33cf13a0d9dffab1f5a735e1536002cbbcd30462a6c49e5"
+  },
+  "sourceUnchanged": true,
+  "dllSha256": "926a46b26db9753fbb8bc46b498ac661064c2039c7317bbf3bd26fa04d9e96a7",
+  "temporaryWorldsRemoved": true
+}

@@ -15,6 +15,8 @@
   };
   const providers = { "codex-exec": "模型决策", "fixed-reference": "固定策略基线", "test-double": "测试替身 · 非真实模型" };
   const structures = { "platform.v1": { label: "平台", definition: "platform", wood: 3 }, "bridge.v1": { label: "木桥", definition: "bridge", wood: 6 } };
+  const workshopPermissions = { build_workshop: "allowWorkshopBuild", craft_tool: "allowCraftTool", deposit_wood: "allowDepositWood", withdraw_wood: "allowWithdrawWood" };
+  const workshopNames = { build_workshop: "建造工坊家具", craft_tool: "制作本人木工锤", deposit_wood: "存入本人箱", withdraw_wood: "从本人箱取出" };
   const actionNames = { paint_entity_canvas: "绘制平台地画", append_entity_note: "发表旧桥手记", reserve_material: "预约材料", harvest_material: "按原预约领取", walk: "行走", move: "移动", claim: "领取木材", gather: "采集木材", transfer: "赠送木材", build: "建造", visit: "到访", postcard: "分享手记", mosaic: "绘制画布", mosaic_propose: "提出修改建议", mosaic_review: "审阅修改建议", observe: "观察", wait: "等待" };
   const stepStatuses = { committed: "已提交", rejected: "已拒绝", unknown: "结果未知", pending: "待确认", failed: "失败" };
   const reasonNames = { round_trip_verified: "已核验到达目标并返回原起点", max_steps: "本次分段步数已到，等待恢复" };
@@ -41,6 +43,133 @@
     return element;
   }
 
+  const exact = (a, b) => {
+    if (a === b) return true;
+    if (Array.isArray(a) && Array.isArray(b)) return a.length === b.length && a.every((v, i) => exact(v, b[i]));
+    return object(a) && object(b) && Object.keys(a).length === Object.keys(b).length && Object.keys(a).every(k => Object.hasOwn(b, k) && exact(a[k], b[k]));
+  };
+  const fields = (v, keys) => object(v) && exact(Object.keys(v).sort(), keys.split(" ").sort());
+  const identifier = v => string(v) && /^[A-Za-z0-9_-]{1,128}$/.test(v);
+  const point = v => Array.isArray(v) && v.length === 2 && v.every(number);
+  const wood = v => integer(v) && v <= 12;
+  const distance = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
+  function workshopAction(a) {
+    if (!object(a) || a.capabilityVersion !== 1 || !Object.hasOwn(workshopPermissions, a.type)) return false;
+    if (a.type === "build_workshop") return fields(a, "type capabilityVersion recipeId at toolId") && point(a.at)
+      && (a.recipeId === "workbench.v1" && a.toolId === null || a.recipeId === "wooden_chest.v1" && identifier(a.toolId));
+    if (a.type === "craft_tool") return fields(a, "type capabilityVersion entityId recipeId") && identifier(a.entityId) && a.recipeId === "wooden_mallet.v1";
+    return fields(a, "type capabilityVersion entityId quantity") && identifier(a.entityId) && wood(a.quantity) && a.quantity > 0;
+  }
+  function workshopEntity(e) {
+    return fields(e, "entityId definitionId definitionVersion rulesVersion ownerActorId position embodiedWood")
+      && identifier(e.entityId) && identifier(e.ownerActorId) && ["workbench", "wooden_chest"].includes(e.definitionId)
+      && e.definitionVersion === 1 && e.rulesVersion === "r10" && point(e.position) && e.embodiedWood === 3;
+  }
+  function workshopTool(t) {
+    return fields(t, "toolId definitionId definitionVersion ownerActorId embodiedWood workbenchId commandId stateVersion eventCursor")
+      && [t.toolId, t.ownerActorId, t.workbenchId, t.commandId].every(identifier)
+      && t.definitionId === "wooden_mallet" && t.definitionVersion === 1 && t.embodiedWood === 1
+      && integer(t.stateVersion) && integer(t.eventCursor) && t.eventCursor > 0;
+  }
+  function workshopAssess(data) {
+    const { mission: m, facts: f, budget: b, steps } = data;
+    const uses = m.workshopVersion !== undefined || m.goal?.workshop !== undefined;
+    if (!uses) return { uses: false, verified: false, consistent: true, complete: true };
+    try {
+      const task = m.goal.workshop, action = task.action, records = [], ids = new Set();
+      let consistent = m.workshopVersion === 1 && m.rulesVersion === "r10" && m.preconditionMode === "actor-state-v1"
+        && task.worldInstanceId === m.worldInstanceId && task.actorId === m.actorId && m.allowBuild === false
+        && Object.entries(workshopPermissions).every(([kind, p]) => m[p] === (kind === action.type))
+        && b.used.commands === steps.length && b.used.modelCalls === 0 && b.limits.modelCalls === 0
+        && b.used.queries >= 1 + steps.length && ["commands", "queries", "wood", "woodMoved"].every(k => b.used[k] <= b.limits[k])
+        && integer(data.world.observedStateVersion) && data.world.observedStateVersion <= f.endStateVersion
+        && fields(data.world.observedSelf, "actorId position inventoryWood") && data.world.observedSelf.actorId === m.actorId
+        && point(data.world.observedSelf.position) && wood(data.world.observedSelf.inventoryWood);
+      const envelope = r => object(r) && r.schemaVersion === 1 && r.rulesVersion === "r10" && r.identity?.actorId === m.actorId
+        && r.identity?.operatorId === m.operatorId && integer(r.stateVersion) && integer(r.eventCursor);
+      let position = m.origin, inventory = steps[0]?.before?.inventoryWood, version = f.startStateVersion;
+      for (const [index, s] of steps.entries()) {
+        const q = s.request, before = s.before, r = s.receipt;
+        consistent &&= s.index === index + 1 && !ids.has(s.commandId) && identifier(s.commandId) && object(before)
+          && before.worldInstanceId === m.worldInstanceId && before.actorId === m.actorId && before.operatorId === m.operatorId
+          && exact(before.position, position) && wood(before.inventoryWood) && before.inventoryWood === inventory
+          && integer(before.stateVersion) && before.stateVersion >= version
+          && fields(q, "schemaVersion rulesVersion commandId expectedStateVersion preconditionMode action")
+          && q.schemaVersion === 1 && q.rulesVersion === "r10" && q.commandId === s.commandId && exact(q.action, s.action)
+          && q.preconditionMode === m.preconditionMode && q.expectedStateVersion === version && s.expectedStateVersion === version;
+        ids.add(s.commandId);
+        if (s.status !== "committed") {
+          consistent &&= index === steps.length - 1 && s.workshopEvidence === null && s.workshopProof === null
+            && exact(s.position, position) && s.inventoryWood === inventory;
+          continue;
+        }
+        consistent &&= envelope(r) && r.error === null && r.commandId === s.commandId && r.stateVersion === s.stateVersion
+          && s.receiptInstanceId === m.worldInstanceId && exact(r.execution, s.execution) && r.result?.action === s.action.type
+          && r.execution?.observedStateVersion === version && r.execution?.appliedOnStateVersion >= before.stateVersion;
+        if (s.action.type === "walk") {
+          const end = r.result?.position;
+          consistent &&= point(end) && r.result.blocked === false && s.blocked === false && number(before.maxStepDistance)
+            && before.maxStepDistance > 0 && before.maxStepDistance <= .6 && distance(position, end) <= before.maxStepDistance + 1e-6
+            && distance(position, end) + distance(end, s.action.to) <= distance(position, s.action.to) + 1e-6
+            && s.workshopProof === null && s.workshopEvidence === null;
+          position = end;
+        } else {
+          const p = s.workshopProof, d = r.result?.workshopAction;
+          consistent &&= workshopAction(s.action) && exact(s.action, action) && fields(r.result, "action workshopAction")
+            && fields(d, "capabilityVersion authorActorId operatorId commandId action entity tool quantity inventoryWoodBefore inventoryWood storedWoodBefore storedWood position stateVersion eventCursor completedAtUtc")
+            && d.capabilityVersion === 1 && d.authorActorId === m.actorId && d.operatorId === m.operatorId && d.commandId === s.commandId
+            && exact(d.action, action) && exact(before.action, action) && exact(d.position, position)
+            && d.inventoryWoodBefore === inventory && wood(d.inventoryWood) && wood(d.quantity) && d.quantity > 0
+            && d.stateVersion === s.stateVersion && d.eventCursor === r.eventCursor && Number.isFinite(Date.parse(d.completedAtUtc))
+            && fields(p, "receiptInstanceId detailInstanceId eventInstanceId detail events")
+            && [p.receiptInstanceId, p.detailInstanceId, p.eventInstanceId].every(v => v === m.worldInstanceId)
+            && envelope(p.detail) && envelope(p.events) && p.detail.error === null && p.events.error === null
+            && exact(p.detail.workshopAction, d) && exact(s.workshopEvidence, { worldInstanceId: m.worldInstanceId, ...d })
+            && [p.detail, p.events].every(v => v.stateVersion >= d.stateVersion && v.eventCursor >= d.eventCursor)
+            && Array.isArray(p.events.events) && exact(p.events.events.filter(e => e.seq === d.eventCursor), [{
+              seq: d.eventCursor, stateVersion: d.stateVersion, actorId: m.actorId, commandId: s.commandId,
+              type: "workshopActionCompleted", workshopAction: d }]) && workshopEntity(d.entity);
+          const build = action.type === "build_workshop", craft = action.type === "craft_tool";
+          const delta = action.type === "withdraw_wood" ? d.quantity : -d.quantity;
+          consistent &&= d.quantity === (build ? 3 : craft ? 1 : action.quantity) && d.inventoryWood === inventory + delta
+            && distance(position, m.goal.target) <= (build ? 3.2 : 1.6) + 1e-8;
+          if (build) consistent &&= d.entity.ownerActorId === m.actorId && exact(d.entity.position, action.at)
+            && d.entity.definitionId === (action.recipeId === "workbench.v1" ? "workbench" : "wooden_chest")
+            && Array.isArray(before.entityIds) && !before.entityIds.includes(d.entity.entityId)
+            && exact(d.tool, before.tool) && (action.toolId === null ? d.tool === null : workshopTool(d.tool)
+              && d.tool.toolId === action.toolId && d.tool.ownerActorId === m.actorId)
+            && exact([d.storedWoodBefore, d.storedWood], action.toolId === null ? [null, null] : [0, 0]);
+          else {
+            consistent &&= exact(d.entity, before.target) && d.entity.entityId === action.entityId && exact(d.entity.position, m.goal.target);
+            if (craft) consistent &&= d.entity.definitionId === "workbench" && workshopTool(d.tool) && d.tool.ownerActorId === m.actorId
+              && d.tool.workbenchId === action.entityId && d.tool.commandId === s.commandId && d.tool.stateVersion === d.stateVersion
+              && d.tool.eventCursor === d.eventCursor && Array.isArray(before.toolIds) && !before.toolIds.includes(d.tool.toolId)
+              && d.storedWoodBefore === null && d.storedWood === null;
+            else consistent &&= d.entity.definitionId === "wooden_chest" && d.entity.ownerActorId === m.actorId && d.tool === null
+              && wood(d.storedWoodBefore) && wood(d.storedWood) && d.storedWoodBefore === before.storedWood
+              && d.storedWood === d.storedWoodBefore - delta;
+          }
+          inventory = d.inventoryWood;
+          records.push(s.workshopEvidence);
+        }
+        version = s.stateVersion;
+        consistent &&= exact(s.position, position) && s.inventoryWood === inventory;
+      }
+      const actualPosition = data.world.observedStateVersion >= version ? data.world.observedSelf.position : position;
+      const record = records[0], done = records.length === 1, returned = distance(actualPosition, m.origin) <= .06;
+      consistent &&= records.length <= 1 && f.workshopCompleted === done && f.goalReached === done && f.returned === returned
+        && exact(f.workshopAction, record ?? null) && b.used.wood === (done ? action.type === "build_workshop" ? 3 : action.type === "craft_tool" ? 1 : 0 : 0)
+        && b.used.woodMoved === (done && ["deposit_wood", "withdraw_wood"].includes(action.type) ? action.quantity : 0)
+        && f.woodDeposited === (done && action.type === "deposit_wood" ? action.quantity : 0)
+        && f.woodWithdrawn === (done && action.type === "withdraw_wood" ? action.quantity : 0)
+        && exact(f.createdEntityIds, done && action.type === "build_workshop" ? [record.entity.entityId] : [])
+        && exact(f.createdToolIds, done && action.type === "craft_tool" ? [record.tool.toolId] : [])
+        && (!done || b.used.queries >= steps.length + 3);
+      return { uses, consistent: Boolean(consistent), verified: Boolean(consistent && done),
+        complete: Boolean(consistent && done && (!task.returnToOrigin || returned) && steps.every(s => s.status === "committed")) };
+    } catch { return { uses, consistent: false, verified: false, complete: false }; }
+  }
+
   function validate(data) {
     require(object(data), "报告根节点必须是 JSON 对象。");
     require(data.schemaVersion === 1 && data.kind === "resident-mission-report", "文件不是受支持的居民任务报告（需要 schemaVersion 1）。");
@@ -52,6 +181,18 @@
     require(Object.hasOwn(statuses, m.status), "报告包含不支持的任务状态。");
     require(integer(w.width) && integer(w.height) && w.width >= 1 && w.height >= 1 && w.width <= 128 && w.height <= 128, "地图尺寸应为 1—128 的整数。");
     const free = continuous(w), maxCommands = free ? 1000 : 100;
+    const workshop = m.workshopVersion !== undefined || m.goal?.workshop !== undefined;
+    if (workshop) {
+      const task = m.goal?.workshop;
+      require(m.workshopVersion === 1 && fields(task, "worldInstanceId actorId action returnToOrigin") && workshopAction(task.action)
+        && task.worldInstanceId === m.worldInstanceId && task.actorId === m.actorId && typeof task.returnToOrigin === "boolean"
+        && m.allowBuild === false && Object.entries(workshopPermissions).every(([kind, p]) => m[p] === (kind === task.action.type))
+        && identifier(m.operatorId), "工坊任务须绑定原实例、居民、单一动作和对应独立权限。");
+      require(b.limits.modelCalls === 0 && b.used.modelCalls === 0 && [b.limits.woodMoved, b.used.woodMoved].every(wood)
+        && integer(b.limits.queries) && b.limits.queries >= 1 && b.limits.queries <= 5000 && integer(b.used.queries), "工坊固定任务需要零模型、独立存取量与累计查询预算。");
+      require(typeof f.workshopCompleted === "boolean" && [f.woodDeposited, f.woodWithdrawn].every(wood)
+        && Array.isArray(f.createdToolIds) && f.createdToolIds.every(identifier), "工坊动作事实或存取量格式不正确。");
+    }
     const actorState = m.preconditionMode === "actor-state-v1";
     require(m.preconditionMode === undefined || m.preconditionMode === null || actorState, "任务的动作前置模式不受支持。");
     require(!actorState || free && ["r8", "r9", "r10"].includes(m.rulesVersion) && /^w_[0-9a-f]{32}$/.test(m.worldInstanceId)
@@ -89,7 +230,7 @@
     require(f.mosaicReview === undefined || f.mosaicReview === null || consent.validReview(f.mosaicReview), "审阅记录不完整。");
     require(object(b.limits) && object(b.used), "预算必须包含 limits 与 used。");
     require(["commands", "wood", "modelCalls"].every((key) => integer(b.limits[key]) && integer(b.used[key])) && number(b.limits.seconds) && number(b.used.seconds), "预算上限与累计值必须是非负数字，次数和木材必须是整数。");
-    require(b.limits.commands >= 1 && b.limits.commands <= maxCommands && b.limits.wood <= 12 && b.limits.modelCalls === 1 && integer(b.limits.seconds) && b.limits.seconds >= 1 && b.limits.seconds <= 600, `任务预算上限不符合契约（命令 1—${maxCommands}、木材 0—12、时间 1—600 秒、目标选择 1 次）。`);
+    require(b.limits.commands >= 1 && b.limits.commands <= maxCommands && b.limits.wood <= 12 && b.limits.modelCalls === (workshop ? 0 : 1) && integer(b.limits.seconds) && b.limits.seconds >= 1 && b.limits.seconds <= 600, `任务预算上限不符合契约（命令 1—${maxCommands}、木材 0—12、时间 1—600 秒）。`);
     require(typeof f.goalReached === "boolean" && typeof f.returned === "boolean" && integer(f.woodClaimed), "到达、返回或领取木材事实的类型不正确。");
     require(f.woodGathered === undefined || integer(f.woodGathered), "采集木材事实须为非负整数。");
     require(f.woodTransferred === undefined || integer(f.woodTransferred), "赠送木材事实须为非负整数。");
@@ -145,7 +286,7 @@
       require(step.inventoryWood === null || integer(step.inventoryWood), `${prefix}的木材库存格式不正确。`);
       if (actorState) {
         require(step.preconditionMode === m.preconditionMode && integer(step.expectedStateVersion)
-          && (["walk", "gather", "build"].includes(step.action.type) || ["r9", "r10"].includes(m.rulesVersion) && step.action.type === "transfer" || m.rulesVersion === "r10" && (window.MaterialReport.action(step.action) || window.EntityNoteReport.action(step.action) || window.EntityCanvasReport.action(step.action))), `${prefix}缺少原命令的前置模式或观察版本。`);
+          && (["walk", "gather", "build"].includes(step.action.type) || ["r9", "r10"].includes(m.rulesVersion) && step.action.type === "transfer" || m.rulesVersion === "r10" && (workshop && workshopAction(step.action) || window.MaterialReport.action(step.action) || window.EntityNoteReport.action(step.action) || window.EntityCanvasReport.action(step.action))), `${prefix}缺少原命令的前置模式或观察版本。`);
         if (["committed", "rejected"].includes(step.status)) {
           const execution = step.execution;
           require(object(execution) && execution.preconditionMode === m.preconditionMode
@@ -248,13 +389,14 @@
   function showReport(data, source) {
     report = data;
     const { mission: m, decision: d, facts: f, budget: b } = data;
+    const workshop = workshopAssess(data);
     $("empty-state").hidden = true;
     $("report-content").hidden = false;
     put("mission-id", m.id);
     put("mission-objective", m.objective);
     put("actor-id", m.actorId);
     put("world-identity", `${m.worldId} / ${m.rulesVersion}`);
-    put("goal-route", m.goal ? `${coord(m.origin)} → ${m.goal.buildRecipeId ? `建造${structures[m.goal.buildRecipeId].label} · ` : ""}${m.goal.label} ${coord(m.goal.target)} → 起点` : `${coord(m.origin)} · 尚未选择目标`);
+    put("goal-route", m.goal ? `${coord(m.origin)} → ${m.goal.buildRecipeId ? `建造${structures[m.goal.buildRecipeId].label} · ` : ""}${m.goal.label} ${coord(m.goal.target)}${workshop.uses && !m.goal.workshop.returnToOrigin ? " · 本任务未要求返程" : " → 起点"}` : `${coord(m.origin)} · 尚未选择目标`);
     put("report-status", statuses[m.status][0]);
     $("report-status").dataset.tone = statuses[m.status][1];
     put("mission-reason", `执行器状态原因：${reasonNames[m.reason] || m.reason || "未提供"}`);
@@ -378,7 +520,31 @@
     $("material-source-policy").hidden = sourceDescription === "";
     put("material-source-policy", sourceDescription);
     $("query-budget-item").hidden = b.limits.queries === undefined;
+    let workshopPanel = $("workshop-report-fact");
+    if (!workshopPanel) {
+      workshopPanel = node("div", ""); workshopPanel.id = "workshop-report-fact";
+      $("construction-fact").after(workshopPanel);
+    }
+    workshopPanel.hidden = !workshop.uses;
+    workshopPanel.dataset.verified = String(workshop.verified);
+    workshopPanel.replaceChildren();
+    if (workshop.uses) {
+      const action = m.goal.workshop.action, result = f.workshopAction;
+      workshopPanel.append(node("p", "", workshop.verified
+        ? `原动作已核对回执、事件和详情：${workshopNames[action.type]} · 命令 ${result.commandId} · v${result.stateVersion}`
+        : "工坊原动作尚未核实；当前工具、箱内余额或完成标记不能代替原回执、事件和详情。"));
+      workshopPanel.append(node("p", "", `配方用材 ${b.used.wood} / ${b.limits.wood} · 存取周转 ${b.used.woodMoved} / ${b.limits.woodMoved} · 存入 ${f.woodDeposited} · 取出 ${f.woodWithdrawn}`));
+      if (workshop.verified) workshopPanel.append(node("p", "", `本人库存 ${result.inventoryWoodBefore} → ${result.inventoryWood}${result.storedWood === null ? "" : ` · 本人箱 ${result.storedWoodBefore} → ${result.storedWood}`} · 实体 ${result.entity.entityId}${result.tool ? ` · 本人工具 ${result.tool.toolId}` : ""}`));
+      workshopPanel.append(node("p", "", f.returned ? "已确认位于原起点。" : m.goal.workshop.returnToOrigin
+        ? "原动作和返程分别核实；返程尚未完成。" : "任务明确未要求返程；尚未返回原起点。"));
+      put("goal-reached", workshop.verified ? "原工坊动作已核实" : "原工坊动作未核实");
+      $("goal-reached").dataset.verified = String(workshop.verified);
+      put("decision-boundary", "任务明确指定单一工坊动作和独立权限；未调用选择器或模型。原动作、返程、未知结果分别核对。");
+      put("model-budget-label", "模型调用");
+      put("model-budget-note", "固定动作 · 未调用选择器");
+    }
     const warnings = [];
+    if (!workshop.consistent) warnings.push("工坊原动作三方证据、权限、前后库存或预算不一致；完成标记待复核。");
     if (!canvas.consistent) warnings.push("地画汇总与原目标、版本、草图或作者记录不一致。");
     if (!canvas.budgetConsistent) warnings.push("地画任务预算与原步骤数、必要查询或累计上限不一致；整体完成待复核。");
     if (!notes.consistent) warnings.push("手记汇总与原命令、正文、引用或作者记录不一致。");
@@ -392,14 +558,14 @@
     const constructionVisited = !requiresConstruction || constructionVerified
       && data.steps.slice(data.steps.findIndex(s => s.commandId === built.commandId))
         .some(s => s.status === "committed" && s.position && near(s.position, m.goal.target));
-    const walkConsistent = !continuous(data.world) || m.goal && [m.origin, ...committedPositions].some(p => near(p, m.goal.target)) && near(committedPositions.at(-1) || m.origin, m.origin) && !data.steps.some(s => s.status === "committed" && s.blocked === true);
-    const incomplete = canvas.uses && (!canvas.verified || !canvas.budgetConsistent) || notes.uses && !notes.verified || material.uses && !material.verified || !walkConsistent || !constructionVisited || !gatheringConsistent || !transferConsistent || !f.goalReached || !f.returned || !m.goal || requiresTransfer && !transferVerified || requiresConstruction && !constructionVerified || requiresActivity && !activityVerified || requiresPostcard && !postcardVerified || requiresMosaic && !mosaicVerified || (m.proposeMosaic || m.reviewMosaicProposal) && !consentVerified;
+    const walkConsistent = workshop.uses ? workshop.complete : !continuous(data.world) || m.goal && [m.origin, ...committedPositions].some(p => near(p, m.goal.target)) && near(committedPositions.at(-1) || m.origin, m.origin) && !data.steps.some(s => s.status === "committed" && s.blocked === true);
+    const incomplete = workshop.uses && !workshop.complete || canvas.uses && (!canvas.verified || !canvas.budgetConsistent) || notes.uses && !notes.verified || material.uses && !material.verified || !walkConsistent || !constructionVisited || !gatheringConsistent || !transferConsistent || !f.goalReached || !f.returned && !(workshop.uses && m.goal.workshop.returnToOrigin === false) || !m.goal || requiresTransfer && !transferVerified || requiresConstruction && !constructionVerified || requiresActivity && !activityVerified || requiresPostcard && !postcardVerified || requiresMosaic && !mosaicVerified || (m.proposeMosaic || m.reviewMosaicProposal) && !consentVerified;
     if (m.status === "completed" && incomplete) warnings.push("报告标记为已完成，但到达、返回、目标、到访或本次创作事实不完整，不能据此认定任务成功。");
     if (d && m.goal && d.goalId !== m.goal.id) warnings.push("模型选择与执行目标编号不一致，请复核原始报告。");
     if (d?.provider.kind === "test-double") warnings.push("这份报告使用测试替身，不是一次真实模型运行；仅供客户端或执行器测试。");
     if (!gatheringConsistent) warnings.push("采集汇总与原采集步骤或任务权限不一致，请复核原始记录。");
     if (!transferConsistent) warnings.push("赠送汇总与原交付步骤、身份或任务权限不一致，请复核原始记录。");
-    if (m.status === "completed" && !walkConsistent) warnings.push("连续行走记录未支持在 0.06 米内到达并返回，或包含碰撞截停。");
+    if (m.status === "completed" && !walkConsistent) warnings.push(workshop.uses ? "工坊动作或任务要求的返程尚未得到一致证据支持。" : "连续行走记录未支持在 0.06 米内到达并返回，或包含碰撞截停。");
     if (m.status === "completed" && constructionVerified && !constructionVisited) warnings.push("建设完成后的记录未支持到达设施中心。");
     for (const [key, prefix] of [["commands", "command"], ["wood", "wood"], ["modelCalls", "model"], ["seconds", "seconds"], ...(b.limits.queries === undefined ? [] : [["queries", "queries"]])]) {
       put(`${prefix}-budget`, `${formatNumber(b.used[key])} / ${formatNumber(b.limits[key])}`);
@@ -430,7 +596,7 @@
     }
     const w = data.world;
     put("map-summary", continuous(w)
-      ? `${w.width} × ${w.height} 米 · 连续自然地形。起点 ${coord(m.origin)}；目标 ${m.goal ? coord(m.goal.target) : "未选择"}；到达容差 0.06 米。地形与资源显示结束快照，轨迹按步骤回看。设施：${w.entities.map(e => `${e.definitionId} ${coord(e.position)}`).join("、") || "无"}。`
+      ? `${w.width} × ${w.height} 米 · 连续自然地形。起点 ${coord(m.origin)}；目标 ${m.goal ? coord(m.goal.target) : "未选择"}；到达容差 0.06 米。${workshop.uses ? `地形、设施与资源为最近实际观察 v${w.observedStateVersion}，可能早于最后动作；` : "地形与资源显示结束快照，"}轨迹按步骤回看。设施：${w.entities.map(e => `${e.definitionId} ${coord(e.position)}`).join("、") || "无"}。`
       : `${w.width} × ${w.height}。起点 ${coord(m.origin)}；目标 ${m.goal ? coord(m.goal.target) : "未选择"}。水面：${w.water.map(coord).join("、") || "无"}。阻挡：${w.blocked.map(coord).join("、") || "无"}。设施：${w.entities.map((e) => `${e.definitionId} ${coord(e.position)}`).join("、") || "无"}。`);
     $("replay-slider").max = String(data.steps.length);
     $("replay-slider").disabled = data.steps.length === 0;
@@ -485,7 +651,10 @@
   }
 
   function actionLabel(action) {
-    const label = actionNames[action.type] || action.type;
+    const label = workshopNames[action.type] || actionNames[action.type] || action.type;
+    if (action.type === "build_workshop") return `${label} · ${action.recipeId === "workbench.v1" ? "工作台" : "私人储物箱"} ${coord(action.at)}`;
+    if (action.type === "craft_tool") return `${label} · 工作台 ${action.entityId}`;
+    if (["deposit_wood", "withdraw_wood"].includes(action.type)) return `${label} · ${action.quantity} 木材 · ${action.entityId}`;
     if (["visit", "postcard", "mosaic", "mosaic_propose", "mosaic_review"].includes(action.type)) return `${label} · ${report.world.activities?.find((a) => a.id === action.activityId)?.label || action.activityId || "活动地点"}`;
     if (action.type === "claim" && action.quantity !== undefined) return `${label} · ${action.quantity} 单位`;
     if (action.type === "gather") return `${label} · ${action.nodeId}`;
@@ -607,8 +776,10 @@
     }
     for (const entity of w.entities) {
       const [x, y] = center(entity.position);
-      const halfX = free ? entity.definitionId === "bridge" ? 2.4 : 1 : .38;
-      const halfY = free ? entity.definitionId === "bridge" ? .8 : 1 : .3;
+      const dimensions = { bridge: [2.4, .8], platform: [1, 1], workbench: [1, .5], wooden_chest: [.5, .5] }[entity.definitionId];
+      if (free && !dimensions) continue;
+      const halfX = free ? dimensions[0] : .38;
+      const halfY = free ? dimensions[1] : .3;
       ctx.fillStyle = "#bd9966"; ctx.fillRect(x - cellSize * halfX, y - cellSize * halfY, cellSize * halfX * 2, cellSize * halfY * 2);
       ctx.strokeStyle = "#8e704c"; ctx.lineWidth = Math.max(1, cellSize * .025);
       for (let j = -2; j <= 2; j++) {

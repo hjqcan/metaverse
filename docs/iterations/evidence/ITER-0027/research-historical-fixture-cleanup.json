@@ -1,0 +1,27 @@
+{
+  "recordedAtUtc": "2026-10-26T09:01:03.463250+00:00",
+  "reason": "Completed researcher-owned synthetic SQL benchmark; retain reproducible generator and all small frozen results, remove only unused large fixture databases.",
+  "removed": [
+    {
+      "file": "range-index.db",
+      "bytes": 38113280,
+      "sha256": "92f694c0e676b673e17e7465a837aa3cfc510c4bf605cdc6b7b3d166e49c23bb",
+      "eventRows": 200000,
+      "eventContentSha256": "4823904625c46084f1b77bbeafa30782e691a206c0785ea4796ca154326f3f02",
+      "openProcesses": []
+    },
+    {
+      "file": "actor-index.db",
+      "bytes": 43909120,
+      "sha256": "81e6a7af8ba03a9fb3d6d81f6ba32b60b6b094e6af44d2c0dce5dbe79571dd8c",
+      "eventRows": 200000,
+      "eventContentSha256": "4823904625c46084f1b77bbeafa30782e691a206c0785ea4796ca154326f3f02",
+      "openProcesses": []
+    }
+  ],
+  "bytesReleased": 82022400,
+  "preservedResultSha256": "5a2d746b896e6ac0064cf078c9e6ceba70bcc62fe418b99b371b4dca6319fbb2",
+  "publishedEvidenceUnchanged": true,
+  "generator": "docs/research/2026-10-26-continuous/probes/event-query-cost.py",
+  "worldDatabasesTouched": 0
+}

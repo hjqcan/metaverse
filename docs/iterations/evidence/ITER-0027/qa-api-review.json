@@ -1,0 +1,211 @@
+{
+  "recordedAtUtc": "2026-10-26T08:45:10.151340+00:00",
+  "role": "QA2 independent HTTP/SQLite",
+  "status": "passed_with_verified_fix",
+  "source": "/home/wangjunfeng/文档/Workspace/metaverse/tests/workshop_api.py",
+  "sourceSha256": "422a9d9c944d8c378640d4e595c02c36f7197e0a81322b8bbbdf1306910c38de",
+  "runs": [
+    {
+      "phase": "v1-base",
+      "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/test-agent2/iter27-20261026T083551Z-912b96/results.json",
+      "reportSha256": "b29e751fe2e92e1b2a809db0f61ab576dc102af763877a4707f8638b0d5d8334",
+      "passed": true,
+      "testsRun": 16,
+      "tests": [
+        {
+          "test": "__main__.WorkshopAcceptance.test_01_explicit_adoption_old_receipts_pending_and_observation_gate",
+          "passed": true,
+          "seconds": 0.9923943009926006
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_02_complete_chain_original_facts_restart_and_use_withdrawn_wood",
+          "passed": true,
+          "seconds": 4.2608369790250435
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_03_public_bench_own_mallet_private_chest_and_observation_privacy",
+          "passed": true,
+          "seconds": 4.790316790982615
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_04_strict_fields_integer_quantities_and_target_type",
+          "passed": true,
+          "seconds": 1.9082939400104806
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_05_capacity_no_partial_success_and_parallel_same_and_different_ids",
+          "passed": true,
+          "seconds": 3.0869842910324223
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_06_rejection_persists_and_changed_original_id_conflicts",
+          "passed": true,
+          "seconds": 2.091260240005795
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_07_readonly_authenticated_instance_bound_private_action_detail",
+          "passed": true,
+          "seconds": 1.761482806992717
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_08_every_workshop_action_invalidates_own_pending_even_after_aba",
+          "passed": true,
+          "seconds": 1.9947603779728524
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_09_build_and_interact_range_resident_and_reserved_space",
+          "passed": true,
+          "seconds": 6.55827424605377
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_10_furniture_center_thin_corner_and_reachable_operation_side",
+          "passed": true,
+          "seconds": 4.575108908989932
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_11_before_commit_crash_four_actions_roll_back_and_same_id_resumes",
+          "passed": true,
+          "seconds": 6.3339058220153674
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_12_after_commit_crash_four_actions_recover_original_facts_once",
+          "passed": true,
+          "seconds": 6.497492266003974
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_13_r12_canvas_adoption_preserves_original_tables_and_pending",
+          "passed": true,
+          "seconds": 1.7607353459461592
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_14_storage_releases_real_carry_capacity_for_new_harvest",
+          "passed": true,
+          "seconds": 47.0854291190044
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_15_unknown_partial_and_inconsistent_storage_refuse_start_without_repair",
+          "passed": true,
+          "seconds": 5.338902172050439
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_16_throw_after_debit_rolls_back_tools_and_both_storage_directions",
+          "passed": true,
+          "seconds": 5.1913231069920585
+        }
+      ],
+      "dllSha256": "415623d2e26751b650092f0aeb7088e6e33594ba3329fd4a693ad340e9122752",
+      "testSha256": "fdba02e87ebb17081348c7fb9470d485c0c1c6679ce6f293ac8341128da69bfa",
+      "databaseAudits": 16,
+      "allAuditsBalanced": true,
+      "disposedBytes": 11790065,
+      "skipped": [],
+      "actualModelCalls": 0
+    },
+    {
+      "phase": "v1-negative-control",
+      "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/test-agent2/iter27-20261026T084037Z-ee82e2/results.json",
+      "reportSha256": "28e2cb011ba441cffc071a2845d8a85cfc8bfeab7ff7f6a16604e94536f89c16",
+      "passed": false,
+      "testsRun": 1,
+      "tests": [
+        {
+          "test": "__main__.WorkshopAcceptance.test_18_canvas_adopted_after_workshop_cannot_disappear_on_restart",
+          "passed": false,
+          "seconds": 1.347983292012941
+        }
+      ],
+      "dllSha256": "415623d2e26751b650092f0aeb7088e6e33594ba3329fd4a693ad340e9122752",
+      "testSha256": "422a9d9c944d8c378640d4e595c02c36f7197e0a81322b8bbbdf1306910c38de",
+      "databaseAudits": 1,
+      "allAuditsBalanced": true,
+      "disposedBytes": 1088208,
+      "skipped": [],
+      "actualModelCalls": 0
+    },
+    {
+      "phase": "v2-final",
+      "report": "/home/wangjunfeng/文档/Workspace/metaverse/.local/test-agent2/iter27-20261026T084204Z-78bb82/results.json",
+      "reportSha256": "5cd1cbe48b5bf8acde9c1e0e5a64ffeebfdf51425a0094b71eec7515b6fa3c3b",
+      "passed": true,
+      "testsRun": 6,
+      "tests": [
+        {
+          "test": "__main__.WorkshopAcceptance.test_02_complete_chain_original_facts_restart_and_use_withdrawn_wood",
+          "passed": true,
+          "seconds": 4.375137783004902
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_13_r12_canvas_adoption_preserves_original_tables_and_pending",
+          "passed": true,
+          "seconds": 1.7702724870177917
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_14_storage_releases_real_carry_capacity_for_new_harvest",
+          "passed": true,
+          "seconds": 47.173463089973666
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_15_unknown_partial_and_inconsistent_storage_refuse_start_without_repair",
+          "passed": true,
+          "seconds": 5.2844345640041865
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_17_interaction_ray_excludes_only_target_and_rejects_other_furniture",
+          "passed": true,
+          "seconds": 2.6868094080127776
+        },
+        {
+          "test": "__main__.WorkshopAcceptance.test_18_canvas_adopted_after_workshop_cannot_disappear_on_restart",
+          "passed": true,
+          "seconds": 2.3541540110018104
+        }
+      ],
+      "dllSha256": "926a46b26db9753fbb8bc46b498ac661064c2039c7317bbf3bd26fa04d9e96a7",
+      "testSha256": "422a9d9c944d8c378640d4e595c02c36f7197e0a81322b8bbbdf1306910c38de",
+      "databaseAudits": 6,
+      "allAuditsBalanced": true,
+      "disposedBytes": 7066721,
+      "skipped": [],
+      "actualModelCalls": 0
+    }
+  ],
+  "distinctTestGroupsCovered": 18,
+  "successfulTestExecutions": 22,
+  "expectedFailingNegativeControls": 1,
+  "v1ToV2ChangedSources": [
+    "src/World.Server/EntityCanvas.cs"
+  ],
+  "defect": {
+    "origin": "builder-relayed research review, independently reproduced by QA2",
+    "case": "storage11 -> workshop13 -> canvas adoption; all three canvas tables removed from stopped disposable copy while adoption event remains",
+    "v1": {
+      "startupRejected": false,
+      "baseStorageVersion": 11,
+      "adoptionEventRetained": true,
+      "observedCanvas": null,
+      "observedWorkshop": "workshop-v1",
+      "dllSha256": "415623d2e26751b650092f0aeb7088e6e33594ba3329fd4a693ad340e9122752"
+    },
+    "v2": {
+      "startupRejected": true,
+      "baseStorageVersion": 11,
+      "adoptionEventRetained": true,
+      "observedCanvas": null,
+      "observedWorkshop": null,
+      "dllSha256": "926a46b26db9753fbb8bc46b498ac661064c2039c7317bbf3bd26fa04d9e96a7"
+    }
+  },
+  "cleanup": {
+    "allOwnedServicesStopped": true,
+    "ownedServicesStillRunning": [],
+    "disposableWorldsRemoved": true,
+    "disposedBytes": 19944994
+  },
+  "limits": [
+    "v1 ran the original sixteen groups; v2 ran six relevant groups after the single EntityCanvas.cs change. Do not label this eighteen groups all executed on v2.",
+    "Fresh isolated r10/storage11 worlds were prepared through actual gather/production/harvest requests. QA1 owns original-world history and native UI acceptance.",
+    "Public aggregate resource audits still expose totals; event field restriction is not complete information secrecy.",
+    "Background source-clock commits are separated from protected business-table invariants in GET and capability-gate checks.",
+    "No model calls, public deployment, or shared-source changes besides tests/workshop_api.py."
+  ]
+}

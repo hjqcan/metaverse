@@ -1,0 +1,170 @@
+{
+  "kind": "qa2-readonly-final-python-evidence-review",
+  "atUtc": "2026-10-26T09:13:20.260799+00:00",
+  "sourceReport": ".local/iter0027/python-report.json",
+  "sourceReportSha256": "4e3aad3e713c5b0ebedce15e77bbf58dfee241ff8c173d0fd6ef0a2364a08260",
+  "scope": "Frozen BUILD2 manifest, newer observation/return, deadline and terminal settlement; read-only code and retained evidence, no service or test execution.",
+  "checks": {
+    "manifest16FilesMatch": true,
+    "counting": {
+      "distinctGroups": 23,
+      "successfulExecutions": 35,
+      "finalSourceGroups": 6,
+      "singleFinal23GroupRun": false
+    },
+    "browser": {
+      "checks": 23,
+      "passed": true,
+      "sourceHashMatches": true,
+      "summary": ".local/iter0027/browser/2026-10-26T09-01-06-531Z/results.json",
+      "sha256": "02e5654b447a5dcc0b8ac61ca2b1362b5cb96602fc363f3ac0292d8f9d78463f",
+      "input": "Actual CLI outputs from earlier full20 execution; unchanged renderer; QA2 read artifacts only"
+    }
+  },
+  "evidence": [
+    {
+      "summary": ".local/iter0027/python/20261026T085758Z-9bb06c/summary.json",
+      "sha256": "455937ec079d0fc32fed59bad46c2a59088ea5699d14189a9737c84a41f4fbd1",
+      "groups": 20,
+      "passed": true,
+      "workshopSourceSha256": "c48786408aea015ec27c7798e532b4a881ebff5eb2f1a28ab1b0123ebae6e7e9"
+    },
+    {
+      "summary": ".local/iter0027/python/20261026T090129Z-a3b2dd/summary.json",
+      "sha256": "2f075f021f439d0d738b77527d516e1609e949f93cf646f06bd05171c79fa7a9",
+      "groups": 9,
+      "passed": true,
+      "workshopSourceSha256": "be240c89fde9e14e65b98dd73b63cfb16f6478c41c56402e5860c4cc431e23eb"
+    },
+    {
+      "summary": ".local/iter0027/python/20261026T090509Z-d67d6a/summary.json",
+      "sha256": "3f0458dc46b8bc24cf309d69e1153cc9234075e019ac7a948c7840fa67b22f34",
+      "groups": 6,
+      "passed": true,
+      "workshopSourceSha256": "f890ff7a81cb09e39826bc47a12261b98513d96d267d745688844eb197424acc"
+    },
+    {
+      "test": "test_20_newer_actual_position_does_not_claim_original_return",
+      "status": "blocked",
+      "reason": "workshop_actor_changed_outside_task",
+      "terminal": true,
+      "returned": false,
+      "retainedPending": false,
+      "retainedTrafficPosts": 0,
+      "artifactHashes": {
+        "state.json": "82fa1948242b5477d27597ef015ef25968e33a9ccf7db852071846881299b030",
+        "traffic.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "reports.json": "c91205fa024c44d087bee4e033cc4edc5f688b451d458c5cee79b2ba6d4e596f"
+      }
+    },
+    {
+      "test": "test_21_delayed_observation_crosses_deadline_no_fresh_post",
+      "status": "budget_exhausted",
+      "reason": "seconds",
+      "terminal": false,
+      "returned": true,
+      "retainedPending": false,
+      "retainedTrafficPosts": 0,
+      "artifactHashes": {
+        "state.json": "6f8898db0ae86bdf360a360b5ba8028ad46829f650cb0849433cedcff7cdae03",
+        "traffic.json": "345ee388dd0dd688c773c301bb22238da086a579527c29cad6240549b75362b6",
+        "reports.json": "97d38bb7e42cca84b8bb67cfc73da4eeb9a74f351e16694c49fd40d51ad38104"
+      }
+    },
+    {
+      "test": "test_22_delayed_capability_observation_does_not_resend_pending",
+      "status": "budget_exhausted",
+      "reason": "seconds_pending_retained",
+      "terminal": false,
+      "returned": true,
+      "retainedPending": true,
+      "retainedTrafficPosts": 0,
+      "artifactHashes": {
+        "state.json": "966397822e402ee98a41a1603f75938414a0eb35e786076808ac1788b0f06732",
+        "traffic.json": "6d9380b1f8d36700c4aacf4a476502eda9a2e0624101fa14ae61487ff9b50edc",
+        "reports.json": "314525385aa88c968b7e1a0ee662bd6e3de4e52c835d075430fd203948c86f69"
+      }
+    },
+    {
+      "test": "test_23_crash_after_rejection_settlement_restores_terminal",
+      "status": "blocked",
+      "reason": "command_rejected:STALE_ACTOR_STATE",
+      "terminal": true,
+      "returned": true,
+      "retainedPending": false,
+      "retainedTrafficPosts": 0,
+      "artifactHashes": {
+        "state.json": "4837f157e7ecfeefbc0851c96ddb37bda4e229d1fc3200ab47df54017f4504ea",
+        "traffic.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "reports.json": "47311826ab5fce2fae57ef0b1c3781d3b45a36151ef252a7594d9a83412b65f0"
+      }
+    },
+    {
+      "summary": ".local/iter0027/python/20261026T090106Z-d7066e/summary.json",
+      "sha256": "218e92884557280cbee59d2e5503db6051741e6812863c10cf50b0122dabf456",
+      "expectedNegativeControl": true,
+      "failureCount": 2,
+      "failures": [
+        {
+          "test": "test_21_delayed_observation_crosses_deadline_no_fresh_post (__main__.WorkshopMissionAcceptance.test_21_delayed_observation_crosses_deadline_no_fresh_post)",
+          "detail": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/workshop_mission_api.py\", line 456, in test_21_delayed_observation_crosses_deadline_no_fresh_post\n    self.assertEqual('budget_exhausted', result['mission']['status'])\nAssertionError: 'budget_exhausted' != 'completed'\n- budget_exhausted\n+ completed\n\n"
+        },
+        {
+          "test": "test_22_delayed_capability_observation_does_not_resend_pending (__main__.WorkshopMissionAcceptance.test_22_delayed_capability_observation_does_not_resend_pending)",
+          "detail": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/workshop_mission_api.py\", line 473, in test_22_delayed_capability_observation_does_not_resend_pending\n    self.assertEqual('budget_exhausted', result['mission']['status'])\nAssertionError: 'budget_exhausted' != 'completed'\n- budget_exhausted\n+ completed\n\n"
+        }
+      ]
+    },
+    {
+      "summary": ".local/iter0027/python/20261026T090439Z-b97f1a/summary.json",
+      "sha256": "07e0d5b67281bcf0518d30bd0ffee3792bd0244fe755be31788afe80e3d26df5",
+      "expectedNegativeControl": true,
+      "failureCount": 1,
+      "failures": [
+        {
+          "test": "test_23_crash_after_rejection_settlement_restores_terminal (__main__.WorkshopMissionAcceptance.test_23_crash_after_rejection_settlement_restores_terminal)",
+          "detail": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/workshop_mission_api.py\", line 492, in test_23_crash_after_rejection_settlement_restores_terminal\n    result = self.task(self.controlled())\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/workshop_mission_api.py\", line 137, in task\n    report = run_mission(client or self.client, self.job, self.state, forbidden, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/resident_mission.py\", line 524, in run_mission\n    return run_workshop(client, spec, state_path, choose, max_steps=max_steps)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/resident_workshop.py\", line 708, in run_mission\n    validate_saved(state, spec, endpoint)\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/resident_workshop.py\", line 528, in validate_saved\n    _validate_saved(state, spec, endpoint)\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/scripts/resident_workshop.py\", line 666, in _validate_saved\n    raise ValueError('Workshop completion, budget or pending summaries are inconsistent')\nValueError: Workshop completion, budget or pending summaries are inconsistent\n"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "QA2-ITER27-PY-DEADLINE-01",
+      "severity": "medium",
+      "status": "open",
+      "basis": "Static confirmed execution order; not a new runtime reproduction.",
+      "title": "Final persistence latency is omitted from pre-POST elapsed-time gate",
+      "source": "scripts/resident_workshop.py:717-719,851-859; scripts/resident_mission.py:159-174",
+      "contract": "docs/contracts/workshop-mission-v1.md:43",
+      "explanation": "save refreshes used.seconds before blocking _save, which serializes and fsyncs file and directory. Both final POST branches compare this cached time after save returns. A last save begun at elapsed0.95s taking0.10s passes a1s gate and sends after1.05s. Test21/22 inject observation delay, not the last durable write delay.",
+      "requestedFix": "After all blocking durable writes, recompute current elapsed immediately before both initial and resend POST decisions; preserve original pending on exhaustion. Cover these two persistence-delay paths with minimal targeted evidence.",
+      "reportedMessage": "msg_c02ced784063"
+    }
+  ],
+  "filesAtReview": {
+    "scripts/resident_workshop.py": "f890ff7a81cb09e39826bc47a12261b98513d96d267d745688844eb197424acc",
+    "scripts/resident_mission.py": "ee58118ca6396e75de6cc22e96e4dcc7bc3c6e3e0cf9f995648cc3579013b759",
+    "scripts/run_resident.py": "32834ee8e8e99f748f6e4939bfaabf8e8d9a217e696d6432ab1cbe33990ba5b3",
+    "scripts/foundation_agent.py": "47ed67f26d997b41550335885de07d9615594d9e13fbfa1135a4a520a04fb08b",
+    "scripts/continuous_navigation.py": "0e2a58a386aeb13bdf41a403d1a0864039e962e9f81bcbf981663500584a9225",
+    "scripts/command_preconditions.py": "37be9d8233627cd44026c4e7c4bdc7b23fbe77de46c69004a2affd910ab5c0af",
+    "scripts/resident_construction.py": "6d5b9ee9a7d3591bac2b57a80e42b474fb6f5a0b964b800a71f95c16dfa9939b",
+    "src/World.Server/wwwroot/resident.js": "4a18005d84706c5d39d9fb4be7c5f571ef355c99ae908c8268d94a131be980f0",
+    "tests/workshop_mission_api.py": "70872070b7483a8bd872d6ad5aa17470ad192a33b0e695dbd120d23b19fdb1c0",
+    "tests/browser/workshop-resident.mjs": "badf77cc93d2be4506b1f6ea549866c53a79645325ca705015c88f84d99aef95",
+    "docs/contracts/workshop-mission-v1.md": "8632612fffd4b56938944d2cfebff78121713cfb3d72caa29e9b60fe3590675c",
+    "examples/workshop-build-chest.json": "74f2c61af3bb81fade8b18c26cea8f9ec65b80622751f5144c2ef605e8185a9a",
+    "examples/workshop-build-workbench.json": "0eedd38e4e5a83f9b31022a2e74cee6a5954ece8b6729f467c78f468a6265a3c",
+    "examples/workshop-craft-mallet.json": "77a114eeec4d0dc26576a079185930c60201ffce7051c2ab6f3be2ce0f55d3a5",
+    "examples/workshop-deposit-wood.json": "f3681ba59eeb20da218c9cde91dadb3d878f55ad6450f83e16c1bd7ace27107f",
+    "examples/workshop-withdraw-wood.json": "04bb0569ad8b0adfb317fddc02ef583772c74985eb2939d47eac4e6aea184ada"
+  },
+  "verdict": "changes_requested_for_final_persistence_deadline; other scoped source/evidence checks pass",
+  "limitations": [
+    "No new test process or server started; no original world/database reads or writes.",
+    "35 passing executions across23 distinct groups use3 source versions; only6 groups on frozen final f890ff7a.",
+    "Atomic rejection process-cut runtime evidence exists; collision branch uses the same terminal-before-save structure, no separate new collision process-cut execution claimed.",
+    "Original history preservation and audit runtime guarantees come from author retained evidence; this review does not re-open the removed runtime databases."
+  ]
+}

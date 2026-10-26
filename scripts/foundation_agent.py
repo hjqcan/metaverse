@@ -14,6 +14,7 @@ import uuid
 
 
 INSTANCE_HEADER = "World-Instance-Id"
+CAPABILITIES_HEADER = "World-Capabilities"
 
 
 def valid_world_instance(value):
@@ -56,11 +57,15 @@ class WorldClient:
         body = json.dumps(payload).encode() if payload is not None else None
         world_request = path.startswith("/v1/")
         request_headers = {"Authorization": "Bearer " + self.token, "Content-Type": "application/json"}
+        if world_request:
+            request_headers[CAPABILITIES_HEADER] = "workshop-v1"
         if world_request and self.world_instance_id is not None:
             request_headers[INSTANCE_HEADER] = self.world_instance_id
         for key, value in (headers or {}).items():
             if key.lower() == INSTANCE_HEADER.lower() and self.binding_observed and value != self.world_instance_id:
                 raise WorldBindingError("Cannot override the pinned world instance")
+            if world_request and key.lower() == CAPABILITIES_HEADER.lower() and value != "workshop-v1":
+                raise WorldBindingError("Cannot replace the supported workshop capability declaration")
             request_headers[key] = value
         request = urllib.request.Request(
             self.url + path, data=body, method=method,

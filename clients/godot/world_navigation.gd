@@ -3,6 +3,8 @@ extends Node
 
 const CELL_SIZE := 0.05
 const CLEARANCE := 0.07
+const Workshop = preload("res://workshop_evidence.gd")
+const WorkshopGeometry = preload("res://workshop_geometry.gd")
 var map: RID
 var region: RID
 var geometry_key := ""
@@ -36,11 +38,17 @@ func update_geometry(observation: Dictionary) -> bool:
 		if tree.remainingWood > 0:
 			circles.append({"position": tree.position, "radius": 0.45})
 	var bridges: Array = []
+	var furniture: Array = []
 	for entity: Dictionary in observation.entities:
 		if entity.definitionId == "bridge":
 			bridges.append(entity.position)
+		elif entity.definitionId in ["workbench", "wooden_chest"]:
+			furniture.append(entity)
+		elif entity.definitionId != "platform":
+			geometry_key = ""
+			return false
 	var radius: float = observation.movement.radius + CLEARANCE
-	var key := JSON.stringify([observation.world.bounds, radius, observation.terrain.river.polygon, circles, bridges])
+	var key := JSON.stringify([observation.world.bounds, radius, observation.terrain.river.polygon, circles, bridges, furniture])
 	if key == geometry_key:
 		return false
 	geometry_key = key
@@ -69,6 +77,10 @@ func update_geometry(observation: Dictionary) -> bool:
 		water = remainder
 	for polygon: PackedVector2Array in water:
 		_obstruct(geometry, polygon, true)
+	for entity: Dictionary in furniture:
+		var center := Vector2(entity.position[0], entity.position[1])
+		var half := Workshop.half_size(entity.definitionId)
+		_obstruct(geometry, _rectangle(Rect2(center - half, half * 2)), false)
 	for circle: Dictionary in circles:
 		var outline := PackedVector2Array()
 		var center := Vector2(circle.position[0], circle.position[1])
@@ -141,6 +153,25 @@ func approach(start: Vector2, center: Vector2) -> PackedVector2Array:
 	for i in 16:
 		var candidate := path(start, center + Vector2.from_angle(angle + TAU * i / 16) * 1.2)
 		if candidate.is_empty() or candidate[-1].distance_to(center) > 1.4:
+			continue
+		var length := start.distance_to(candidate[0])
+		for j in range(1, candidate.size()):
+			length += candidate[j - 1].distance_to(candidate[j])
+		if length < best_length:
+			best_length = length
+			best = candidate
+	return best
+
+func workshop_approach(start: Vector2, entity: Dictionary, observed: Dictionary) -> PackedVector2Array:
+	if WorkshopGeometry.can_interact(observed, start, entity):
+		return PackedVector2Array([start])
+	var center := Vector2(entity.position[0], entity.position[1])
+	var best := PackedVector2Array()
+	var best_length := INF
+	var angle := (start - center).angle()
+	for i in 32:
+		var candidate := path(start, center + Vector2.from_angle(angle + TAU * i / 32) * 1.25)
+		if candidate.is_empty() or not WorkshopGeometry.can_interact(observed, candidate[-1], entity):
 			continue
 		var length := start.distance_to(candidate[0])
 		for j in range(1, candidate.size()):

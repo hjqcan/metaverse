@@ -9,6 +9,7 @@ from codex_goal_selector import CodexGoalSelector
 from foundation_agent import WorldClient
 from resident_mission import run_mission
 from activity_choice import choose_lowest_cost
+from resident_workshop import uses as workshop_task
 
 
 def main():
@@ -27,7 +28,11 @@ def main():
     if args.state.resolve() == args.output.resolve():
         parser.error("State and report paths must differ")
     spec = json.loads(args.spec.read_text())
-    if not args.account and not args.fixed_reference and not any('entityNote' in g or 'entityCanvas' in g for g in spec.get('goals', [])):
+    if workshop_task(spec) and args.account:
+        parser.error('Workshop tasks execute the explicitly authorized fixed action; --account is not supported')
+    if workshop_task(spec) and spec['goals'][0].get('workshop', {}).get('actorId') != args.actor:
+        parser.error('The CLI actor differs from the explicitly bound workshop actor')
+    if not args.account and not args.fixed_reference and not workshop_task(spec) and not any('entityNote' in g or 'entityCanvas' in g for g in spec.get('goals', [])):
         parser.error('Select --account or --fixed-reference; explicit entity-note and entity-canvas tasks default to the fixed reference')
     sessions = json.loads(args.access_file.read_text()).get('sessions', {})
     session = sessions.get(args.actor)

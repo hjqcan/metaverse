@@ -1,0 +1,42 @@
+{
+  "missionId": "workshop-build-chest",
+  "objective": "用明确指定的本人锤搭一个私人箱并返回。",
+  "goals": [
+    {
+      "id": "fixed",
+      "label": "明确工坊目标",
+      "target": [
+        29,
+        20
+      ],
+      "workshop": {
+        "worldInstanceId": "w_00000000000000000000000000000000",
+        "actorId": "a2",
+        "action": {
+          "type": "build_workshop",
+          "capabilityVersion": 1,
+          "recipeId": "wooden_chest.v1",
+          "at": [
+            29,
+            20
+          ],
+          "toolId": "replace_own_mallet_id"
+        },
+        "returnToOrigin": true
+      }
+    }
+  ],
+  "allowBuild": false,
+  "allowWorkshopBuild": true,
+  "allowCraftTool": false,
+  "allowDepositWood": false,
+  "allowWithdrawWood": false,
+  "budgets": {
+    "commands": 250,
+    "queries": 1000,
+    "wood": 3,
+    "woodMoved": 0,
+    "seconds": 600,
+    "modelCalls": 0
+  }
+}

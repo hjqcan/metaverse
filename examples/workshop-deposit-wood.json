@@ -1,0 +1,38 @@
+{
+  "missionId": "workshop-deposit-wood",
+  "objective": "向原私人箱存入三木并返回。",
+  "goals": [
+    {
+      "id": "fixed",
+      "label": "明确工坊目标",
+      "target": [
+        29,
+        20
+      ],
+      "workshop": {
+        "worldInstanceId": "w_00000000000000000000000000000000",
+        "actorId": "a2",
+        "action": {
+          "type": "deposit_wood",
+          "capabilityVersion": 1,
+          "entityId": "replace_own_chest_id",
+          "quantity": 3
+        },
+        "returnToOrigin": true
+      }
+    }
+  ],
+  "allowBuild": false,
+  "allowWorkshopBuild": false,
+  "allowCraftTool": false,
+  "allowDepositWood": true,
+  "allowWithdrawWood": false,
+  "budgets": {
+    "commands": 250,
+    "queries": 1000,
+    "wood": 0,
+    "woodMoved": 3,
+    "seconds": 600,
+    "modelCalls": 0
+  }
+}

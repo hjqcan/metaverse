@@ -42,6 +42,9 @@ def _integer(value, low, high):
 
 
 def _spec(value):
+    from resident_workshop import uses, normalize_spec
+    if uses(value):
+        return normalize_spec(value)
     required = {"missionId", "objective", "goals", "allowBuild", "budgets"}
     if (not isinstance(value, dict) or not required <= set(value)
             or set(value) - required - {"allowGather", "allowTransfer", "allowMaterialAccess", "allowEntityNotes", "allowEntityCanvas", "sharePostcard", "paintMosaic", "proposeMosaic", "reviewMosaicProposal"}):
@@ -516,6 +519,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
     max_steps counts logical commands handled in this call, including recovery;
     receipt queries do not consume the mission's command budget.
     """
+    from resident_workshop import uses, run_mission as run_workshop
+    if uses(spec):
+        return run_workshop(client, spec, state_path, choose, max_steps=max_steps)
     spec = _spec(spec)
     if max_steps is not None and not _integer(max_steps, 0, 1000):
         raise ValueError("max_steps must be an integer from 0 to 1000, or None")

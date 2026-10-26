@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "testsRun": 3,
+  "tests": [
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_02_explicit_adoption_lock_atomicity_and_legacy_policy_idempotence",
+      "passed": true,
+      "seconds": 2.10893811105052
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_07_strict_patch_parser_and_damaged_storage_reject",
+      "passed": true,
+      "seconds": 6.880541355989408
+    },
+    {
+      "test": "__main__.EntityCanvasAcceptance.test_09_real_sqlite_numbers_cannot_be_truncated_to_canvas_facts",
+      "passed": true,
+      "seconds": 32.967048195016105
+    }
+  ],
+  "failures": [],
+  "skipped": [],
+  "actualModelCalls": 0,
+  "sourceDll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0027/server-v2/World.Server.dll",
+  "dllSha256": "926a46b26db9753fbb8bc46b498ac661064c2039c7317bbf3bd26fa04d9e96a7",
+  "dllStable": true,
+  "baseline": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0025/api/20261026T085559Z-58f5bc/seed/continued",
+  "target": "e974de6189c1a4116bc771d854d31644d"
+}

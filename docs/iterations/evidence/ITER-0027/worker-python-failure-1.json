@@ -1,0 +1,22 @@
+{
+  "success": false,
+  "testsRun": 1,
+  "failures": [
+    {
+      "test": "test_02_dropped_success_restores_original_without_post (__main__.WorkshopMissionAcceptance.test_02_dropped_success_restores_original_without_post)",
+      "detail": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/文档/Workspace/metaverse/tests/workshop_mission_api.py\", line 116, in dispose\n    audit[name] = db.execute(query).fetchone()[0]\n                  ^^^^^^^^^^^^^^^^^\nsqlite3.OperationalError: no such column: embodied_wood\n"
+    }
+  ],
+  "outcomes": [],
+  "finalCodeHashes": {
+    "scripts/resident_workshop.py": "3f84b5f95eee7392c92b010a824f71c568242746e16a9520db9909d7069bf3ac",
+    "scripts/resident_mission.py": "ee58118ca6396e75de6cc22e96e4dcc7bc3c6e3e0cf9f995648cc3579013b759",
+    "scripts/run_resident.py": "32834ee8e8e99f748f6e4939bfaabf8e8d9a217e696d6432ab1cbe33990ba5b3",
+    "scripts/foundation_agent.py": "47ed67f26d997b41550335885de07d9615594d9e13fbfa1135a4a520a04fb08b",
+    "scripts/continuous_navigation.py": "0e2a58a386aeb13bdf41a403d1a0864039e962e9f81bcbf981663500584a9225",
+    "scripts/command_preconditions.py": "37be9d8233627cd44026c4e7c4bdc7b23fbe77de46c69004a2affd910ab5c0af",
+    "scripts/resident_construction.py": "6d5b9ee9a7d3591bac2b57a80e42b474fb6f5a0b964b800a71f95c16dfa9939b",
+    "tests/workshop_mission_api.py": "e7e5264a6a1518ea5b3150ba54343247aa0343830d62a676e3ca3e8533785bfa"
+  },
+  "actualModelCalls": 0
+}

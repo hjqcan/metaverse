@@ -43,7 +43,7 @@ func _valid_record(record: Variant) -> bool:
 		if not Evidence.whole(record.recordVersion):
 			return false
 		record_version = int(record.recordVersion)
-		if record_version not in [2, 3, 4, 5] or not _valid_instance(record.get("instanceId")) \
+		if record_version not in [2, 3, 4, 5, 6] or not _valid_instance(record.get("instanceId")) \
 			or record.get("worldId") != "foundation-01" or not record.get("endpoint") is String:
 			return false
 	elif record.has("instanceId"):
@@ -52,8 +52,8 @@ func _valid_record(record: Variant) -> bool:
 	if parser.parse(record.body) != OK or not parser.data is Dictionary:
 		return false
 	var command: Dictionary = parser.data
-	if record_version in [3, 4, 5]:
-		if (record_version in [4, 5]) != (command.get("rulesVersion") == "r10"):
+	if record_version in [3, 4, 5, 6]:
+		if (record_version in [4, 5, 6]) != (command.get("rulesVersion") == "r10"):
 			return false
 		if command.get("preconditionMode") != Evidence.MODE or not record.get("before") is String:
 			return false
@@ -66,6 +66,10 @@ func _valid_record(record: Variant) -> bool:
 			return false
 		if command.action.get("type") == "paint_entity_canvas" and (before.get("canvasActorId") != record.actorId or before.get("canvasAdoption", {}).get("worldInstanceId") != record.instanceId):
 			return false
+		if (record_version == 6) != Evidence.Workshop.is_action(command.action.get("type")):
+			return false
+		if record_version == 6 and (before.get("workshopActorId") != record.actorId or before.get("workshopAdoption", {}).get("worldInstanceId") != record.instanceId):
+			return false
 		if (record_version == 5) != (command.action.get("type") == "paint_entity_canvas"):
 			return false
 		if command.action.get("type") == "append_entity_note" and before.get("noteActorId") != record.actorId:
@@ -74,11 +78,12 @@ func _valid_record(record: Variant) -> bool:
 		return false
 	return command.get("commandId") == record.commandId and command.get("schemaVersion") == 1 \
 		and command.get("rulesVersion") in ["r8", "r9", "r10"] and Evidence.whole(command.get("expectedStateVersion")) \
-		and (command.rulesVersion != "r10" or record_version in [4, 5]) \
+		and (command.rulesVersion != "r10" or record_version in [4, 5, 6]) \
 		and command.get("action") is Dictionary and (command.action.get("type") in ["walk", "gather", "build"] \
 			or (command.action.get("type") == "transfer" and command.rulesVersion in ["r9", "r10"] and record_version in [3, 4]) \
 			or (command.action.get("type") in ["reserve_material", "cancel_reservation", "harvest_material", "append_entity_note"] and command.rulesVersion == "r10" and record_version == 4) \
-			or (command.action.get("type") == "paint_entity_canvas" and command.rulesVersion == "r10" and record_version == 5))
+			or (command.action.get("type") == "paint_entity_canvas" and command.rulesVersion == "r10" and record_version == 5) \
+			or (Evidence.Workshop.is_action(command.action.get("type")) and command.rulesVersion == "r10" and record_version == 6))
 
 func can_act() -> bool:
 	return healthy and not busy and storage_ok and not legacy_unbound and pending.is_empty()
@@ -140,7 +145,7 @@ func _request(path: String, method: int = HTTPClient.METHOD_GET, body: String = 
 	request.max_redirects = 0
 	request.body_size_limit = 2 * 1024 * 1024
 	add_child(request)
-	var headers = PackedStringArray(["Authorization: Bearer " + token, "Content-Type: application/json"])
+	var headers = PackedStringArray(["Authorization: Bearer " + token, "Content-Type: application/json", "World-Capabilities: workshop-v1"])
 	if not instance_id.is_empty():
 		headers.append(INSTANCE_HEADER + ": " + instance_id)
 	var error = request.request(endpoint + path, headers, method, body)
@@ -194,6 +199,12 @@ func _valid_observation(data: Dictionary) -> bool:
 	for field in ["world", "identity", "self"]:
 		if not data.get(field) is Dictionary:
 			return false
+	if data.has("workshop") and not Evidence.Workshop.supported(data):
+		return false
+	for entity in data.get("entities", []):
+		if not entity is Dictionary or Evidence.Workshop.half_size(str(entity.get("definitionId"))).is_zero_approx() \
+			or (entity.get("definitionId") in ["workbench", "wooden_chest"] and not data.has("workshop")):
+			return false
 	return data.get("schemaVersion") == 1 and Evidence.continuous_world(data) \
 		and data.get("world", {}).get("id") == "foundation-01" \
 		and (data.rulesVersion not in ["r9", "r10"] or (Evidence.transfer_supported(data) and data.get("recentTransfers") is Dictionary \
@@ -242,6 +253,10 @@ func refresh() -> void:
 func send_action(action: Dictionary) -> void:
 	if not can_act():
 		return
+	if Evidence.Workshop.is_action(action.get("type")) and (not Evidence.Workshop.supported(observation) or not Evidence.supported(observation)):
+		message = "这个世界尚未提供可核对的工作台和储物箱。"
+		changed.emit()
+		return
 	if action.get("type") == "paint_entity_canvas" and (not Evidence.Canvas.supported(observation) or not Evidence.supported(observation)):
 		message = "当前世界尚未提供可核对的平台地画。"
 		changed.emit()
@@ -280,7 +295,7 @@ func send_action(action: Dictionary) -> void:
 		command.preconditionMode = Evidence.MODE
 	pending = {"actorId": identity.actorId, "commandId": command_id, "body": JSON.stringify(command)}
 	if not instance_id.is_empty():
-		pending.merge({"recordVersion": 5 if action.get("type") == "paint_entity_canvas" else 4 if observation.rulesVersion == "r10" else 3 if actor_mode else 2, "instanceId": instance_id, "worldId": "foundation-01", "endpoint": endpoint})
+		pending.merge({"recordVersion": 6 if Evidence.Workshop.is_action(action.get("type")) else 5 if action.get("type") == "paint_entity_canvas" else 4 if observation.rulesVersion == "r10" else 3 if actor_mode else 2, "instanceId": instance_id, "worldId": "foundation-01", "endpoint": endpoint})
 		if actor_mode:
 			# Keep records flat so disk JSON number coercion cannot change equality.
 			pending.before = JSON.stringify(before)
@@ -325,18 +340,24 @@ func _settle(reply: Dictionary) -> bool:
 		var before: Dictionary = JSON.parse_string(pending.before)
 		if not Evidence.result(data, command, before):
 			return false
-		if command.action.type in ["reserve_material", "append_entity_note", "paint_entity_canvas"]:
+		if command.action.type in ["reserve_material", "append_entity_note", "paint_entity_canvas"] or Evidence.Workshop.is_action(command.action.type):
 			if not Evidence.whole(data.get("eventCursor")) or data.eventCursor < 1:
 				return false
 			var events_reply: Dictionary = await _request(API + "/events?after=" + str(int(data.eventCursor) - 1))
 			if events_reply.code != 200 or not _reply_binding(events_reply) or not events_reply.data.get("events") is Array \
 				or events_reply.data.events.is_empty():
 				return false
+			if Evidence.Workshop.is_action(command.action.type) and not Evidence.Workshop.event(events_reply.data.events[0], data):
+				return false
 			if command.action.type == "reserve_material" and not Evidence.reserved_event(events_reply.data.events[0], data, command):
 				return false
 			if command.action.type == "append_entity_note" and not Evidence.Notes.event(events_reply.data.events[0], data):
 				return false
 			if command.action.type == "paint_entity_canvas" and not Evidence.Canvas.event(events_reply.data.events[0], data):
+				return false
+		if Evidence.Workshop.is_action(command.action.type):
+			var workshop_reply: Dictionary = await _request(API + "/workshop/actions/" + pending.actorId.uri_encode() + "/" + pending.commandId.uri_encode())
+			if workshop_reply.code != 200 or not _reply_binding(workshop_reply) or not Evidence.Workshop.detail(workshop_reply.data, data):
 				return false
 		if command.action.type == "paint_entity_canvas":
 			var edit_reply: Dictionary = await _request(API + "/entities/" + command.action.entityId.uri_encode() + "/canvas/edits/" + pending.actorId.uri_encode() + "/" + pending.commandId.uri_encode())
@@ -378,6 +399,16 @@ func _lookup() -> void:
 	if not await _settle(reply):
 		retry_allowed = _reply_binding(reply) and reply.code == 404 and reply.data.get("error", {}).get("code") == "COMMAND_NOT_FOUND" and reply.data.get("identity", {}).get("actorId") == pending.actorId
 		var command = JSON.parse_string(pending.body)
+		if Evidence.Workshop.is_action(command.action.get("type")):
+			var capable := false
+			var before = JSON.parse_string(pending.before)
+			if await _observe():
+				capable = Evidence.Workshop.retry_supported(observation, before)
+			retry_allowed = retry_allowed and capable
+			if not capable:
+				healthy = false
+				message = "原制作或存取请求已保留。请恢复原工作坊能力和目标后查证。"
+				return
 		if command.action.get("type") == "paint_entity_canvas":
 			var capable := false
 			var before = JSON.parse_string(pending.before)

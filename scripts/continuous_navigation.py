@@ -7,6 +7,9 @@ import math
 
 ARRIVAL_TOLERANCE = 0.06
 MARGIN = 0.035
+ENTITY_HALF_SIZE = {'platform': (1., 1.), 'bridge': (2.4, .8),
+                    'workbench': (1., .5), 'wooden_chest': (.5, .5)}
+FURNITURE = {'workbench', 'wooden_chest'}
 
 
 def finite(value):
@@ -54,6 +57,34 @@ def validate_observation(observed):
             raise ValueError('Invalid continuous river geometry')
     if any(not point(o.get('position')) or not finite(o.get('radius')) or o['radius'] <= 0 for o in terrain.get('obstacles', [])):
         raise ValueError('Invalid continuous obstacle geometry')
+    furniture_geometry(observed)
+
+
+def entity_half_size(entity):
+    definition = entity.get('definitionId')
+    if definition not in ENTITY_HALF_SIZE or not point(entity.get('position')):
+        raise ValueError('Unknown or malformed continuous entity geometry')
+    return ENTITY_HALF_SIZE[definition]
+
+
+def furniture_geometry(observed, exclude_entity_id=None):
+    """Only a named interaction ray may omit its target, never ordinary walking."""
+    cap = observed.get('workshop')
+    if cap is not None and (not isinstance(cap, dict) or cap.get('capability') != 'workshop-v1'
+                            or type(cap.get('version')) is not int or cap['version'] != 1):
+        raise ValueError('Unknown workshop geometry capability')
+    rectangles = []
+    for entity in observed['entities']:
+        hx, hz = entity_half_size(entity)
+        if entity['definitionId'] not in FURNITURE:
+            continue
+        if (cap is None or entity.get('rulesVersion') != 'r10'
+                or type(entity.get('definitionVersion')) is not int or entity['definitionVersion'] != 1
+                or not isinstance(entity.get('entityId'), str) or not entity['entityId']):
+            raise ValueError('Furniture requires its explicit supported capability and identity')
+        if entity['entityId'] != exclude_entity_id:
+            rectangles.append([*entity['position'], hx, hz])
+    return rectangles
 
 
 def _point_segment(p, a, b):
@@ -75,6 +106,19 @@ def _segments_distance(a, b, c, d):
     return min(_point_segment(a, c, d), _point_segment(b, c, d), _point_segment(c, a, b), _point_segment(d, a, b))
 
 
+def _point_rectangle(p, rectangle):
+    x, z, hx, hz = rectangle
+    return math.hypot(max(abs(p[0] - x) - hx, 0), max(abs(p[1] - z) - hz, 0))
+
+
+def _segment_rectangle(a, b, rectangle):
+    if _point_rectangle(a, rectangle) == 0 or _point_rectangle(b, rectangle) == 0:
+        return 0.
+    x, z, hx, hz = rectangle
+    vertices = [(x-hx, z-hz), (x+hx, z-hz), (x+hx, z+hz), (x-hx, z+hz)]
+    return min(_segments_distance(a, b, c, d) for c, d in zip(vertices, vertices[1:] + vertices[:1]))
+
+
 def _inside(p, polygon):
     inside = False
     for a, b in zip(polygon, polygon[1:] + polygon[:1]):
@@ -89,6 +133,7 @@ class Navigation:
         self.river = geometry['river']
         self.circles = geometry['circles']
         self.bridges = geometry['bridges']
+        self.rectangles = geometry.get('rectangles', [])
         self.nodes = []
         self.edges = None
 
@@ -101,6 +146,8 @@ class Navigation:
             return False
         if any(distance(p, c[:2]) < c[2] + self.radius - 1e-9 for c in self.circles):
             return False
+        if any(_point_rectangle(p, rectangle) < self.radius - 1e-9 for rectangle in self.rectangles):
+            return False
         if self._covered(p):
             return True
         return not _inside(p, self.river) and all(_point_segment(p, a, b) >= self.radius - 1e-9 for a, b in zip(self.river, self.river[1:] + self.river[:1]))
@@ -109,6 +156,8 @@ class Navigation:
         if not self.walkable(a) or not self.walkable(b):
             return False
         if any(_point_segment(c[:2], a, b) < c[2] + self.radius - 1e-9 for c in self.circles):
+            return False
+        if any(_segment_rectangle(a, b, rectangle) < self.radius - 1e-9 for rectangle in self.rectangles):
             return False
         dx, dz = b[0] - a[0], b[1] - a[1]
         cuts = [0., 1.]
@@ -139,6 +188,12 @@ class Navigation:
         for x, z, radius in [*self.circles, *((p[0], p[1], 0) for p in self.river)]:
             size = (radius + self.radius + MARGIN) / math.cos(math.pi / 12)
             candidates.extend((x + math.cos(i * math.tau / 12) * size, z + math.sin(i * math.tau / 12) * size) for i in range(12))
+        clearance = (self.radius + MARGIN) / math.cos(math.pi / 12)
+        for x, z, hx, hz in self.rectangles:
+            for cx in (x-hx, x+hx):
+                for cz in (z-hz, z+hz):
+                    candidates.extend((cx + math.cos(i * math.tau / 12) * clearance,
+                                       cz + math.sin(i * math.tau / 12) * clearance) for i in range(12))
         x0, z0, x1, z1 = self.bounds
         padding = self.radius + MARGIN
         candidates.extend((x, z) for x in (x0 + padding, x1 - padding) for z in (z0 + padding, z1 - padding))
@@ -194,11 +249,12 @@ def _navigation(encoded):
     return Navigation(json.loads(encoded))
 
 
-def navigation(observed):
+def navigation(observed, *, interaction_target=None):
     geometry = {'bounds': observed['world']['bounds'], 'radius': observed['movement']['radius'],
                 'river': observed['terrain']['river']['polygon'],
                 'circles': [[*r['position'], r['radius']] for r in observed['terrain']['obstacles']],
-                'bridges': [e['position'] for e in observed['entities'] if e['definitionId'] == 'bridge']}
+                'bridges': [e['position'] for e in observed['entities'] if e['definitionId'] == 'bridge'],
+                'rectangles': furniture_geometry(observed, interaction_target)}
     geometry['circles'] += [[*n['position'], .45] for n in observed['resourceNodes'] if n['remainingWood'] > 0]
     return _navigation(json.dumps(geometry, sort_keys=True, separators=(',', ':')))
 
@@ -267,7 +323,7 @@ def _bridge_free(observed, center):
         if distance((cx, cz), closest) < radius + MARGIN:
             return False
     for entity in observed['entities']:
-        hx, hz = (2.4, .8) if entity['definitionId'] == 'bridge' else (1, 1)
+        hx, hz = entity_half_size(entity)
         if abs(entity['position'][0] - x) < hx + 2.4 + MARGIN and abs(entity['position'][1] - z) < hz + .8 + MARGIN:
             return False
     return True

@@ -1,0 +1,658 @@
+{
+  "success": true,
+  "testsRun": 20,
+  "failures": [],
+  "outcomes": [
+    {
+      "test": "test_01_actual_cli_chain_restart_storage_and_reuse",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 18,
+          "structures": 33,
+          "tools": 1,
+          "stored": 0,
+          "stock": 6,
+          "generated": 46,
+          "issued": 58,
+          "accounted": 58
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_02_dropped_success_restores_original_without_post",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 15,
+          "structures": 24,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_03_unsubmitted_pending_404_resends_exact_original",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 15,
+          "structures": 24,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_04_partial_three_records_keep_pending",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 15,
+          "structures": 24,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_05_query_failure_cost_survives_restart",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 18,
+          "structures": 21,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_06_permissions_and_forged_journal_rejected_before_io",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 18,
+          "structures": 21,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_07_unknown_capability_and_recipe_budget_stop",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 18,
+          "structures": 21,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_08_changed_actor_aba_original_state_rejects",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 18,
+          "structures": 21,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_09_workshop_success_without_required_return_is_separate",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 15,
+          "structures": 24,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_10_furniture_geometry_and_only_target_exclusion",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 15,
+          "structures": 24,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_11_same_initial_resident_reuses_public_bench",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 12,
+          "structures": 27,
+          "tools": 1,
+          "stored": 0,
+          "stock": 6,
+          "generated": 34,
+          "issued": 46,
+          "accounted": 46
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_12_same_initial_resident_builds_own_bench",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 15,
+          "structures": 27,
+          "tools": 1,
+          "stored": 0,
+          "stock": 5,
+          "generated": 36,
+          "issued": 48,
+          "accounted": 48
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_13_storage_budget_and_other_owner_stay_separate",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 11,
+          "structures": 27,
+          "tools": 1,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_14_unauthorized_and_server_errors_preserve_exact_pending",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 15,
+          "structures": 24,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_15_missing_proof_query_budget_retains_original",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 15,
+          "structures": 24,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_16_issued_success_then_altered_detail_stays_unknown",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 15,
+          "structures": 24,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_17_concurrent_storage_rejects_original_without_new_id",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 10,
+          "structures": 27,
+          "tools": 1,
+          "stored": 1,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_18_expired_time_does_not_resend_missing_pending",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 18,
+          "structures": 21,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_19_expired_time_can_verify_already_committed_original",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 15,
+          "structures": 24,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    },
+    {
+      "test": "test_20_newer_actual_position_does_not_claim_original_return",
+      "cleanup": {
+        "processExited": true,
+        "originalHistoryRetained": {
+          "entities": true,
+          "resource_nodes": true,
+          "entity_notes": true,
+          "entity_note_adoption": true,
+          "world_instance": true,
+          "entity_canvas_cells": true,
+          "entity_canvas_edits": true,
+          "receipts": true,
+          "events": true,
+          "resource_ledger": true
+        },
+        "audit": {
+          "natural": 0,
+          "residents": 18,
+          "structures": 21,
+          "tools": 0,
+          "stored": 0,
+          "stock": 6,
+          "generated": 33,
+          "issued": 45,
+          "accounted": 45
+        },
+        "integrity": "ok",
+        "foreignKeys": [],
+        "runtimeRemoved": true
+      }
+    }
+  ],
+  "finalCodeHashes": {
+    "scripts/resident_workshop.py": "c48786408aea015ec27c7798e532b4a881ebff5eb2f1a28ab1b0123ebae6e7e9",
+    "scripts/resident_mission.py": "ee58118ca6396e75de6cc22e96e4dcc7bc3c6e3e0cf9f995648cc3579013b759",
+    "scripts/run_resident.py": "32834ee8e8e99f748f6e4939bfaabf8e8d9a217e696d6432ab1cbe33990ba5b3",
+    "scripts/foundation_agent.py": "47ed67f26d997b41550335885de07d9615594d9e13fbfa1135a4a520a04fb08b",
+    "scripts/continuous_navigation.py": "0e2a58a386aeb13bdf41a403d1a0864039e962e9f81bcbf981663500584a9225",
+    "scripts/command_preconditions.py": "37be9d8233627cd44026c4e7c4bdc7b23fbe77de46c69004a2affd910ab5c0af",
+    "scripts/resident_construction.py": "6d5b9ee9a7d3591bac2b57a80e42b474fb6f5a0b964b800a71f95c16dfa9939b",
+    "tests/workshop_mission_api.py": "8041121746f6aa73a3d774082af816afdaa3eb5c10cbde608150ad79a44daceb"
+  },
+  "actualModelCalls": 0
+}

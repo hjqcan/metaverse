@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "kind": "compiled-server-geometry-only",
+  "dllSha256": "926a46b26db9753fbb8bc46b498ac661064c2039c7317bbf3bd26fa04d9e96a7",
+  "start": [
+    19.54244444610128,
+    11.503484512108173
+  ],
+  "target": [
+    20.5,
+    10.7
+  ],
+  "distance": 1.2499999999999991,
+  "startWalkable": true,
+  "originalInteractionBlocked": true,
+  "stoppedAt": [
+    19.570424537332087,
+    11.480006427876095
+  ],
+  "nearbyAlternative": [
+    19.542444229126,
+    11.5500001907349
+  ],
+  "movementToAlternativeBlocked": false,
+  "alternativeInteractionBlocked": false,
+  "worldCommands": 0,
+  "serverProcesses": 0,
+  "actualModelCalls": 0,
+  "scope": "Synthetic bench added to retained geometry; no actual build, HTTP validation, resource issuance, or world database change."
+}

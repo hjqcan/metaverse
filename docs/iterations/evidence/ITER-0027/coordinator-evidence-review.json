@@ -1,0 +1,11 @@
+{
+  "nativeCommands": 273,
+  "uniqueActorCommandPairs": 273,
+  "allRawResponseHashesMatch": true,
+  "workshopTripleProofs": 17,
+  "receiptEventDetailMatch": true,
+  "originalNativePostBytesMatchProof": true,
+  "scope": "Read-only verification of independent QA artifacts; no new UI or world action.",
+  "sourceSummarySha256": "e088274123c02dd4c7b3968cb1ee069936f1fb03631fe7ab8f5d1ccb3e5becc2",
+  "summaryUpdatedWithCleanupAfterReview": true
+}

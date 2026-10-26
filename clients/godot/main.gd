@@ -7,6 +7,7 @@ const TransferPanel = preload("res://transfer_panel.gd")
 const MaterialPanel = preload("res://material_panel.gd")
 const NotesPanel = preload("res://entity_notes_panel.gd")
 const CanvasPanel = preload("res://entity_canvas_panel.gd")
+const WorkshopPanel = preload("res://workshop_panel.gd")
 var client: Node
 var navigation: Node
 var world_view: SubViewportContainer
@@ -26,6 +27,9 @@ var notes_panel: PanelContainer
 var notes_button: Button
 var canvas_panel: PanelContainer
 var canvas_button: Button
+var workshop_panel: PanelContainer
+var workshop_button: Button
+var build_tool := ""
 var url_input: LineEdit
 var token_input: LineEdit
 var connection_panel: PanelContainer
@@ -146,15 +150,18 @@ func _build_ui() -> void:
 		transfer_panel.hide()
 		notes_panel.close_panel()
 		canvas_panel.close_panel()
+		workshop_panel.close_panel()
 		connection_panel.visible = not connection_panel.visible)
 	transfer_button = _button(controls,"赠送木材",func():
 		_stop_walk()
 		connection_panel.hide()
 		notes_panel.close_panel()
 		canvas_panel.close_panel()
+		workshop_panel.close_panel()
 		transfer_panel.visible = not transfer_panel.visible)
 	notes_button = _button(controls, "旧桥手记", _open_notes)
 	canvas_button = _button(controls, "平台地画", _open_canvas)
+	workshop_button = _button(controls, "工作台与储物", func(): _open_workshop())
 	transfer_panel = TransferPanel.new()
 	transfer_panel.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
 	transfer_panel.offset_left = -420
@@ -181,6 +188,16 @@ func _build_ui() -> void:
 	root.add_child(canvas_panel)
 	canvas_panel.requested.connect(_material_action)
 	canvas_panel.destination_requested.connect(func(point: Vector2): _plan_walk(point, ""))
+	workshop_panel = WorkshopPanel.new()
+	workshop_panel.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+	workshop_panel.offset_left = -440
+	workshop_panel.offset_right = -24
+	workshop_panel.offset_top = 250
+	workshop_panel.add_theme_stylebox_override("panel", _style(Color(0.09,0.15,0.12,0.97)))
+	root.add_child(workshop_panel)
+	workshop_panel.requested.connect(_material_action)
+	workshop_panel.build_requested.connect(_begin_workshop_build)
+	workshop_panel.approach_requested.connect(_approach_workshop)
 	connection_panel = _panel(root,Control.PRESET_TOP_RIGHT,Vector2(-420,80))
 	connection_panel.custom_minimum_size.x = 396
 	var connection = VBoxContainer.new()
@@ -220,6 +237,7 @@ func _build_ui() -> void:
 	# Control input follows sibling order as well as draw order.
 	root.move_child(notes_panel, root.get_child_count() - 1)
 	root.move_child(canvas_panel, root.get_child_count() - 1)
+	root.move_child(workshop_panel, root.get_child_count() - 1)
 
 func position_2d() -> Vector2:
 	var p = client.observation.get("self",{}).get("position",[0,0])
@@ -269,6 +287,8 @@ func _render() -> void:
 	notes_panel.update_world(observation, ready, client.pending, client.last_receipt, client.connection_generation)
 	canvas_button.visible = Client.Evidence.Canvas.supported(observation)
 	canvas_panel.update_world(observation, ready, client.pending, client.last_receipt, client.connection_generation)
+	workshop_button.visible = Client.Evidence.Workshop.supported(observation)
+	workshop_panel.update_world(observation, ready, client.pending, client.last_receipt, client.connection_generation)
 	if not transfer_button.visible:
 		transfer_panel.hide()
 	transfer_history.visible = transfer_button.visible
@@ -322,6 +342,8 @@ func _render() -> void:
 			if client.last_receipt.result.action == "transfer":
 				status_label.text = "已向 %s 赠送 %d 木材" % [client.last_receipt.result.recipientActorId, client.last_receipt.result.quantity]
 				transfer_panel.hide()
+			elif Client.Evidence.Workshop.is_action(client.last_receipt.result.action):
+				status_label.text = {"build_workshop": "家具已建成。", "craft_tool": "木工锤已制成，可用来建箱。", "deposit_wood": "木材已存入本人箱子。", "withdraw_wood": "木材已从箱内取出。"}[client.last_receipt.result.action]
 			elif client.last_receipt.result.action == "append_entity_note":
 				status_label.text = "手记已发表，后来者可以阅读或接写。"
 			elif client.last_receipt.result.action == "paint_entity_canvas":
@@ -355,6 +377,7 @@ func _open_notes() -> void:
 	transfer_panel.hide()
 	connection_panel.hide()
 	canvas_panel.close_panel()
+	workshop_panel.close_panel()
 	if notes_panel.visible:
 		notes_panel.close_panel()
 	else:
@@ -367,11 +390,64 @@ func _open_canvas() -> void:
 	transfer_panel.hide()
 	connection_panel.hide()
 	notes_panel.close_panel()
+	workshop_panel.close_panel()
 	canvas_panel.visible = not canvas_panel.visible
 
-func _clicked(point: Vector2, node_id: String) -> void:
-	if transfer_panel.visible or notes_panel.visible or canvas_panel.visible:
+func _open_workshop(entity_id: String = "") -> void:
+	_stop_walk()
+	build_recipe = ""
+	build_tool = ""
+	world_view.ghost.visible = false
+	transfer_panel.hide()
+	connection_panel.hide()
+	notes_panel.close_panel()
+	canvas_panel.close_panel()
+	workshop_panel.visible = not workshop_panel.visible if entity_id.is_empty() else true
+	if not entity_id.is_empty():
+		workshop_panel.select_entity(entity_id)
+
+func _begin_workshop_build(recipe: String, tool_id: String) -> void:
+	workshop_panel.close_panel()
+	await _begin_build(recipe)
+	if build_recipe == recipe:
+		build_tool = tool_id
+
+func _approach_workshop(entity: Dictionary) -> void:
+	if entity.is_empty():
 		return
+	_stop_walk()
+	var request := route_request
+	for i in 120:
+		if request != route_request:
+			return
+		if navigation.is_ready() and not client.busy:
+			break
+		await get_tree().physics_frame
+	if request != route_request or not client.can_act():
+		return
+	var path: PackedVector2Array = navigation.workshop_approach(position_2d(), entity, client.observation)
+	if path.is_empty():
+		status_label.text = "暂时找不到可达操作侧。"
+		message_until = Time.get_ticks_msec()/1000.0 + 3
+		return
+	workshop_panel.close_panel()
+	await _plan_walk(path[-1], "")
+
+func _clicked(point: Vector2, node_id: String) -> void:
+	if transfer_panel.visible or notes_panel.visible or canvas_panel.visible or workshop_panel.visible:
+		return
+	if build_recipe.is_empty() and Client.Evidence.Workshop.supported(client.observation):
+		for entity in client.observation.entities:
+			if entity.definitionId not in ["workbench", "wooden_chest"]:
+				continue
+			var half: Vector2 = Client.Evidence.Workshop.half_size(entity.definitionId)
+			if absf(point.x - entity.position[0]) <= half.x and absf(point.y - entity.position[1]) <= half.y:
+				if entity.definitionId == "wooden_chest" and entity.ownerActorId != client.identity.actorId:
+					status_label.text = "这是%s的私人箱，只有箱主能存取。" % entity.ownerActorId
+					message_until = Time.get_ticks_msec()/1000.0 + 3
+				else:
+					_open_workshop(entity.entityId)
+				return
 	if build_recipe.is_empty() and Client.Evidence.Canvas.supported(client.observation):
 		var target: Array = client.observation.entityCanvas.target.position
 		if absf(point.x - target[0]) <= 1.0 and absf(point.y - target[1]) <= 1.0:
@@ -392,6 +468,8 @@ func _clicked(point: Vector2, node_id: String) -> void:
 		_hovered(point)
 		if _placement_valid(build_point,build_recipe):
 			var action = {"type":"build","recipeId":build_recipe,"at":[build_point.x,build_point.y]}
+			if build_recipe in ["workbench.v1", "wooden_chest.v1"]:
+				action = {"type": "build_workshop", "capabilityVersion": 1, "recipeId": build_recipe, "at": [build_point.x, build_point.y], "toolId": build_tool if build_recipe == "wooden_chest.v1" else null}
 			_cancel()
 			await client.send_action(action)
 		return
@@ -449,7 +527,7 @@ func _hovered(point: Vector2) -> void:
 
 func _placement_valid(point: Vector2, recipe: String) -> bool:
 	var bridge = recipe == "bridge.v1"
-	var half = Vector2(2.4,0.8) if bridge else Vector2.ONE
+	var half: Vector2 = Client.Evidence.Workshop.half_size(recipe.trim_suffix(".v1"))
 	if Client.Evidence.material_supported(client.observation):
 		var exclusion: Array = client.observation.materialAccess.buildExclusion
 		if point.x + half.x > exclusion[0] and point.x - half.x < exclusion[2] \
@@ -458,8 +536,18 @@ func _placement_valid(point: Vector2, recipe: String) -> bool:
 	if position_2d().distance_to(point)>3.2 or point.x<half.x or point.y<half.y or point.x>32-half.x or point.y>24-half.y:
 		return false
 	if not bridge:
-		for z in [point.y-1,point.y+1]:
-			if point.x+1>world_view.river_x(z)-1.4 and point.x-1<world_view.river_x(z)+1.4:
+		var heights: Array = [point.y - half.y, point.y + half.y]
+		for vertex in client.observation.terrain.river.centerline:
+			if vertex[1] > point.y - half.y and vertex[1] < point.y + half.y:
+				heights.append(vertex[1])
+		for z in heights:
+			if point.x + half.x > world_view.river_x(z) - 1.4 and point.x - half.x < world_view.river_x(z) + 1.4:
+				return false
+	if recipe in ["workbench.v1", "wooden_chest.v1"]:
+		for resident in client.observation.residents:
+			var p := Vector2(resident.position[0], resident.position[1])
+			var closest := Vector2(clampf(p.x, point.x - half.x, point.x + half.x), clampf(p.y, point.y - half.y, point.y + half.y))
+			if p.distance_to(closest) < 0.28:
 				return false
 	for obstacle in client.observation.get("terrain",{}).get("obstacles",[]) + client.observation.get("resourceNodes",[]):
 		if obstacle.get("remainingWood",1)==0:
@@ -469,7 +557,7 @@ func _placement_valid(point: Vector2, recipe: String) -> bool:
 		if p.distance_to(closest) < obstacle.get("radius",0.45):
 			return false
 	for entity in client.observation.get("entities",[]):
-		var other = Vector2(2.4,0.8) if entity.definitionId=="bridge" else Vector2.ONE
+		var other: Vector2 = Client.Evidence.Workshop.half_size(entity.definitionId)
 		if absf(point.x-entity.position[0])<half.x+other.x and absf(point.y-entity.position[1])<half.y+other.y:
 			return false
 	return true
@@ -482,6 +570,7 @@ func _begin_build(recipe: String) -> void:
 	if request != route_request or not client.can_act():
 		return
 	build_recipe = recipe
+	build_tool = ""
 	_hovered(position_2d()+Vector2(0,-2))
 	_render()
 
@@ -489,6 +578,7 @@ func _cancel() -> void:
 	transfer_panel.hide()
 	notes_panel.close_panel()
 	canvas_panel.close_panel()
+	workshop_panel.close_panel()
 	_stop_walk()
 	selected_node = ""
 	build_recipe = ""
@@ -521,6 +611,10 @@ func _material_action(action: Dictionary) -> void:
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo or get_viewport().gui_get_focus_owner() is LineEdit:
 		return
+	if workshop_panel.visible:
+		if event.physical_keycode == KEY_ESCAPE:
+			workshop_panel.close_panel()
+		return
 	if canvas_panel.visible:
 		if event.physical_keycode == KEY_ESCAPE:
 			canvas_panel.close_panel()
@@ -552,7 +646,7 @@ func _physics_process(delta: float) -> void:
 			await client.refresh()
 		return
 	var direction = Vector2.ZERO
-	if not get_viewport().gui_get_focus_owner() is LineEdit and build_recipe.is_empty() and not transfer_panel.visible and not notes_panel.visible and not canvas_panel.visible:
+	if not get_viewport().gui_get_focus_owner() is LineEdit and build_recipe.is_empty() and not transfer_panel.visible and not notes_panel.visible and not canvas_panel.visible and not workshop_panel.visible:
 		direction = Vector2(int(Input.is_physical_key_pressed(KEY_D) or Input.is_physical_key_pressed(KEY_RIGHT))-int(Input.is_physical_key_pressed(KEY_A) or Input.is_physical_key_pressed(KEY_LEFT)),int(Input.is_physical_key_pressed(KEY_S) or Input.is_physical_key_pressed(KEY_DOWN))-int(Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_UP))).normalized()
 	if direction == Vector2.ZERO:
 		input_suspended = false

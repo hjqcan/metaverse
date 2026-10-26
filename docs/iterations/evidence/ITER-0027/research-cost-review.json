@@ -1,0 +1,55 @@
+{
+  "kind": "read-only-author-evidence-reconciliation",
+  "cases": [
+    {
+      "path": ".local/iter0027/python/20261026T085101Z-825dab/test_11_same_initial_resident_reuses_public_bench",
+      "reuse": true,
+      "actor": "a3",
+      "initialInventory": 3,
+      "actualHarvestedQuantity": 1,
+      "ownRecipeConsumed": 4,
+      "otherActorSetupConsumed": 3,
+      "allActorsWorkshopConsumedInBranch": 7,
+      "finalInventory": 0,
+      "ownCliCommandCountExcludingAcquisitionSetup": 18,
+      "sourceHashes": {
+        "setup-requests.json": "e6c749bd712520b5ff69404bfd6958ce12d6f3fd35b67ab3d81263f5da831eb2",
+        "visitor-summary.json": "b3c6d782428ccc91240ab384de5b66a27cf174bde3f8695be75ea4237c34cdaa",
+        "visitor-mallet-report.json": "ce81e03e5d043ee122a3e1eb397c1d48d4218433517767d649cb76132def9015",
+        "visitor-chest-report.json": "4c5ff3ca0064e42f5d0e51b5d6f10884b323649d2883eeb52e6ef16ea17ff420",
+        "audit.json": "de4e52b34ca1f5fa001e2cea35b139a8d62c92d17f019e97aae68b5ef5409f46",
+        "existing-public-bench-report.json": "ba232ef6cd376b92f2d5c1f405892eff7670dc0b7f22ce659d7ed2d6f18fa47f"
+      }
+    },
+    {
+      "path": ".local/iter0027/python/20261026T085101Z-825dab/test_12_same_initial_resident_builds_own_bench",
+      "reuse": false,
+      "actor": "a3",
+      "initialInventory": 3,
+      "actualHarvestedQuantity": 4,
+      "ownRecipeConsumed": 7,
+      "otherActorSetupConsumed": 0,
+      "allActorsWorkshopConsumedInBranch": 7,
+      "finalInventory": 0,
+      "ownCliCommandCountExcludingAcquisitionSetup": 19,
+      "sourceHashes": {
+        "own-workbench-report.json": "eac8095ff963c804e833bab3159ebd140db757693ad165a2fcc0529d94d107c0",
+        "setup-requests.json": "b807fc9abdaf12a1acf93fcc092490789d5ecdbddee5098d265a0fda6bada52d",
+        "visitor-summary.json": "7529efd6f0d422f557613e9b3cd4977fdd5275a85b5262b82ac01e1f53d406ee",
+        "visitor-mallet-report.json": "94baf457329782db162f9f119a3d940301bb472eb98091e6a8020e03357f0f45",
+        "visitor-chest-report.json": "ef2f1fb5c38ee2d6d67bb82d37628fe786f38347b3918c8bff0fb7b6fb301a8a",
+        "audit.json": "984215e2c230801da363d473dc7e553d1f0a89b0b5cb5e3178aff25ca9f388bb"
+      }
+    }
+  ],
+  "laterResidentWoodSavings": 3,
+  "wholeBranchRecipeSavings": 0,
+  "sourceChangedAfterAuthorRun": [
+    "scripts/resident_workshop.py",
+    "tests/workshop_mission_api.py"
+  ],
+  "conclusion": "This pair supports a 3-wood reduction in the later resident marginal recipe cost. Its reuse branch creates a2 bench as setup, so total workshop wood consumed within each branch is 7, not 4 vs 7. It does not measure two fully equipped residents sharing one versus two benches.",
+  "scope": "Reads author actual CLI and HTTP artifacts; no new experiment, no current final-source acceptance, no original live-head or timing claim",
+  "actualWorldCommands": 0,
+  "actualModelCalls": 0
+}

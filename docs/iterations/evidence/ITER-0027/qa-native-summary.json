@@ -1,0 +1,450 @@
+{
+  "passed": true,
+  "atUtc": "2026-10-26T09:12:25.752012+00:00",
+  "scope": "Independent QA1 native input participation on the continuing original r10 world; not API boundary or author recovery acceptance.",
+  "naturalHistoryHead": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/natural",
+  "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+  "rulesVersion": "r10",
+  "schemaVersion": 13,
+  "initialStateVersion": 1054,
+  "finalStateVersion": 1352,
+  "finalEventCursor": 1353,
+  "phaseDirectories": [
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z",
+    "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z"
+  ],
+  "sameDatabaseColdRestart": {
+    "previousRun": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z",
+    "sameDatabase": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/natural/world.db",
+    "previousClientManifestSha256": "7e386e3aea7a2266a57b068844afa6ca88a357ceaa0a37f939ed00e6573cf0b8",
+    "sameInstance": "w_15ced6889f624d8da8a3d2129ba26874",
+    "copiedDatabase": false,
+    "reAdopted": false
+  },
+  "coldRestartPreservedMaterialClockExactly": true,
+  "backendSha256": "926a46b26db9753fbb8bc46b498ac661064c2039c7317bbf3bd26fa04d9e96a7",
+  "nativeManifestSha256ByPhase": [
+    "7e386e3aea7a2266a57b068844afa6ca88a357ceaa0a37f939ed00e6573cf0b8",
+    "860f4e009b7c2a111e08f3dbc30b07f5b5ed42afe9274e27440e5d0bf7035767"
+  ],
+  "nativeInput": {
+    "method": "Godot Input.parse_input_event mouse and keyboard in an actual rendered Xvfb native window",
+    "businessMethodsOrSignalsInvokedByDriver": false,
+    "gameplayPostFromQaHttp": false,
+    "physicsAnimationAndNormalPollingKeptEnabled": true,
+    "cameraFramingOnly": true,
+    "runs": [
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/native-a2-create",
+        "actor": "a2",
+        "candidateSha256": "7e386e3aea7a2266a57b068844afa6ca88a357ceaa0a37f939ed00e6573cf0b8",
+        "driverSha256": "d65746fa4d508cf3e734729d9d65e9f3ab5f789d7acd4d2dd9624e57e6aa3d77",
+        "project": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/frozen/clients/godot",
+        "inputEvents": 1,
+        "actualMouseClicks": 1,
+        "actualKeyEvents": 0
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/native-a2-live-input",
+        "actor": "a2",
+        "candidateSha256": "7e386e3aea7a2266a57b068844afa6ca88a357ceaa0a37f939ed00e6573cf0b8",
+        "driverSha256": "af0c3d900239162f9cd08a2c4b0f3143bc1608235e865daf6b1bbeeabeb65014",
+        "project": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/frozen/clients/godot",
+        "inputEvents": 24,
+        "actualMouseClicks": 21,
+        "actualKeyEvents": 0
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-a2-create",
+        "actor": "a2",
+        "candidateSha256": "860f4e009b7c2a111e08f3dbc30b07f5b5ed42afe9274e27440e5d0bf7035767",
+        "driverSha256": "c3e91d811bab2c1b856138df72f2dcd14a573d0251e13db542edc849bfd5910e",
+        "project": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/frozen/clients/godot",
+        "inputEvents": 48,
+        "actualMouseClicks": 37,
+        "actualKeyEvents": 6
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-a3-shared-bench",
+        "actor": "a3",
+        "candidateSha256": "860f4e009b7c2a111e08f3dbc30b07f5b5ed42afe9274e27440e5d0bf7035767",
+        "driverSha256": "c3e91d811bab2c1b856138df72f2dcd14a573d0251e13db542edc849bfd5910e",
+        "project": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/frozen/clients/godot",
+        "inputEvents": 28,
+        "actualMouseClicks": 23,
+        "actualKeyEvents": 0
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-alias-own-facilities",
+        "actor": "a1_alias",
+        "candidateSha256": "860f4e009b7c2a111e08f3dbc30b07f5b5ed42afe9274e27440e5d0bf7035767",
+        "driverSha256": "c3e91d811bab2c1b856138df72f2dcd14a573d0251e13db542edc849bfd5910e",
+        "project": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/frozen/clients/godot",
+        "inputEvents": 51,
+        "actualMouseClicks": 42,
+        "actualKeyEvents": 3
+      }
+    ]
+  },
+  "actualNativePostCount": 273,
+  "uniqueOriginalCommands": 273,
+  "allStoredReceiptBytesMatched": true,
+  "allOriginalIdsActorsAndEventsMatched": true,
+  "nativeActionCounts": {
+    "walk": 211,
+    "reserve_material": 11,
+    "harvest_material": 31,
+    "build_workshop": 5,
+    "craft_tool": 3,
+    "deposit_wood": 6,
+    "withdraw_wood": 3,
+    "build": 2,
+    "cancel_reservation": 1
+  },
+  "workshopTripleProofCount": 17,
+  "proofs": [
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_1deac5861b419a2f20e0154a72a2697b.json",
+      "sha256": "2f007f2691a7175adf2f05a37c2037be90574f762a3f761ec7917c3bca813727",
+      "actor": "a2",
+      "commandId": "godot_1deac5861b419a2f20e0154a72a2697b"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_6a16d3df9e111a338675133bfde40023.json",
+      "sha256": "567b6063ab64ba18dc1cee38f9ef87cafce1bcc45b70a282c1695f3786f7b7b0",
+      "actor": "a2",
+      "commandId": "godot_6a16d3df9e111a338675133bfde40023"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_98037cb41cede14a4ee5f39893e19bce.json",
+      "sha256": "a4ab5a2e15c0b26138720710565334d899715e8f6a160e128c0dbb61fbb26b65",
+      "actor": "a2",
+      "commandId": "godot_98037cb41cede14a4ee5f39893e19bce"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_b8ecfe5a0442c99d2abad65551eba16d.json",
+      "sha256": "c6539d9175e59fe662d78e81c5789bb43f329184756305b8a72636f44684d518",
+      "actor": "a2",
+      "commandId": "godot_b8ecfe5a0442c99d2abad65551eba16d"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_c01c81c3f184ffcffde3828c7034732f.json",
+      "sha256": "51aed1203eaeec44d951e2bf86f7458c8abfd5289a6a5f289010d4554d89e819",
+      "actor": "a2",
+      "commandId": "godot_c01c81c3f184ffcffde3828c7034732f"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/proof-a2-godot_d186778c0c705a7647ae45f8112528ec.json",
+      "sha256": "c0267d0b51ec626a9dfbc6b8dd156aa8ca63082a566043b1102b20d2e502bc37",
+      "actor": "a2",
+      "commandId": "godot_d186778c0c705a7647ae45f8112528ec"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_1e4c6e8c1d880d6208c066ed81439181.json",
+      "sha256": "08fcc9910623fb8b89770dedd9baa3d2c34dfcf390bda3fc30a7e968b92796ad",
+      "actor": "a1_alias",
+      "commandId": "godot_1e4c6e8c1d880d6208c066ed81439181"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_6955f9ba16c8d15e0d0f777217a337c8.json",
+      "sha256": "fa2be4b4a4a19d39c6c1a9a76c4cacc63ea51594ef0fb09ee00fec36a94e144a",
+      "actor": "a1_alias",
+      "commandId": "godot_6955f9ba16c8d15e0d0f777217a337c8"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_94a30deb4152a722997b488e1ebaeb07.json",
+      "sha256": "2821b59dbb410fa0a36e2784dae5029f6b6430f8bf71269412a3af26bc5af7c3",
+      "actor": "a1_alias",
+      "commandId": "godot_94a30deb4152a722997b488e1ebaeb07"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_aab45e940ee97595474fed45bee86f51.json",
+      "sha256": "7fa6597b4bf3a907a8368034811f260eb372097c8e792120405a0fbc593f832c",
+      "actor": "a1_alias",
+      "commandId": "godot_aab45e940ee97595474fed45bee86f51"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a1_alias-godot_c6392aa78aa2c6388883be4ed03a97aa.json",
+      "sha256": "96c92176fa35f37a1a0e23b7c873cd0ee76b8fefc20c633ba50c3e2569651e95",
+      "actor": "a1_alias",
+      "commandId": "godot_c6392aa78aa2c6388883be4ed03a97aa"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a2-godot_bb44b4e0b76fc6481802ea1278c9ebc8.json",
+      "sha256": "0b976c36cbc2dabfb385b519b389440fce06e3b367383eabc4de0ba858ef26a4",
+      "actor": "a2",
+      "commandId": "godot_bb44b4e0b76fc6481802ea1278c9ebc8"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a2-godot_e91b97cc320d90fddb5b636278b7f37d.json",
+      "sha256": "812216775f55662b3790324342318e54b82419c5ef6ad04d2c504ceb64406e1d",
+      "actor": "a2",
+      "commandId": "godot_e91b97cc320d90fddb5b636278b7f37d"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a3-godot_046dd58076bab5337bd24ee578bd6eed.json",
+      "sha256": "ee062ae268a25e6ffaf102e4f4b0469456df96bc381ea60860ef56d2740cd277",
+      "actor": "a3",
+      "commandId": "godot_046dd58076bab5337bd24ee578bd6eed"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a3-godot_23dac98d3d9420077e7da9b6b87aaf65.json",
+      "sha256": "85c262444a3a2008963f646ea82b41417fd298d2cd0d2afd9d4a9399e1351bc5",
+      "actor": "a3",
+      "commandId": "godot_23dac98d3d9420077e7da9b6b87aaf65"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a3-godot_54401d782cdc175a03634f6487bf7e83.json",
+      "sha256": "7f6010af8f165e59acd51a142f9d2f3b29de24bac318a041b7c73488dca4d1ed",
+      "actor": "a3",
+      "commandId": "godot_54401d782cdc175a03634f6487bf7e83"
+    },
+    {
+      "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/proof-a3-godot_c67b6f056cb23e7b820ba97cc7c8f35c.json",
+      "sha256": "24a3009d9c335d767c5e8c804409908cfc0e5d4dc874503bf12bdf6c8e3538ad",
+      "actor": "a3",
+      "commandId": "godot_c67b6f056cb23e7b820ba97cc7c8f35c"
+    }
+  ],
+  "actualHarvests": {
+    "a2": 16,
+    "a3": 3,
+    "a1_alias": 12
+  },
+  "phases": {
+    "a2": "9 + harvest3 = 12; bench3 + mallet1 + chest3 => 5; deposit1 three times => carry2/store3; leave; same-DB v2 restart; return/withdraw3 => 5; old platform3 => 2; harvest10 => 12; explicit cancellation of unused 2 reservations; deposit3 => 9; harvest3 => carry12/store3.",
+    "a3": "a2 native process exited; start with3; harvest3=>6; use a2 public bench for own mallet1 and own chest3=>2; deposit1, leave, return, withdraw1=>2. No new workbench.",
+    "a1_alias": "Start0 on west bank; walk over original bridge; harvest12; own bench3/mallet1/chest3=>5; deposit3=>2; leave/return/withdraw3=>5; old platform3=>2. No gifts."
+  },
+  "controlIdentity": {
+    "a1AndAliasSameOperator": true,
+    "basis": "declared-local-fixture",
+    "aliasNotCountedAsAnotherIndependentController": true,
+    "newResidentModelApiCalls": 0
+  },
+  "finalAudit": {
+    "schemaVersion": 13,
+    "instanceId": "w_15ced6889f624d8da8a3d2129ba26874",
+    "stateVersion": 1352,
+    "issuedWood": 76,
+    "inventoryWood": 22,
+    "embodiedWood": 42,
+    "toolWood": 3,
+    "storedWood": 3,
+    "wildWood": 0,
+    "sourceWood": 6,
+    "generatedWood": 64,
+    "normalProductionDelta": 31,
+    "originalReceiptsPreserved": 1034,
+    "originalEventsPreserved": 1055,
+    "allOriginalEntitiesPreserved": true,
+    "canvasAndNotesUnchanged": true,
+    "residentA1Unchanged": true,
+    "processStopped": {
+      "pid": 345539,
+      "exitCode": 0
+    },
+    "allStartedProcessesExited": true
+  },
+  "finalInventory": {
+    "a1": 6,
+    "a2": 12,
+    "a1_alias": 2,
+    "a3": 2
+  },
+  "originalPreserved": {
+    "receipts": 1034,
+    "events": 1055,
+    "entities": 6,
+    "notes": 2,
+    "canvasCells": 25,
+    "paintedCells": 9,
+    "canvasRevision": 2,
+    "a1FullResidentRow": true,
+    "archivedSourceHeadFiles": true
+  },
+  "remainingGrantsOrQueue": 0,
+  "allStartedProcessesExited": true,
+  "privateGodotCachesRemoved": true,
+  "retainedDriverIssues": {
+    "firstGesture": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/initial-navigation-input-no-effect.json",
+    "description": "Initial cross-frame mouse press/release yielded zero native POSTs; a same-frame pair was used thereafter. Normal polling was never disabled.",
+    "preInputRefusals": [
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/native-a2-live-input/failed-operation-007e563df98f4794ae27028bb9f5dbe0.json",
+        "op": "click",
+        "label": "预约3木材",
+        "busy": true,
+        "pendingEmpty": true
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/native-a2-live-input/failed-operation-48ef3ac002f84770b745b5eb9e92042b.json",
+        "op": "click",
+        "label": "存入",
+        "busy": true,
+        "pendingEmpty": true
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/native-a2-live-input/failed-operation-825321766b224390b8298e5e97ceed3d.json",
+        "op": "click",
+        "label": "采集1木材",
+        "busy": true,
+        "pendingEmpty": true
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-a2-create/failed-operation-0c3cdcd4993a4ca785ddd554099d8c38.json",
+        "op": "click",
+        "label": "采集1木材",
+        "busy": true,
+        "pendingEmpty": true
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-a3-shared-bench/failed-operation-8a9d29281b854ee49d8b52fed0572a2b.json",
+        "op": "click",
+        "label": "预约3木材",
+        "busy": true,
+        "pendingEmpty": true
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-a3-shared-bench/failed-operation-d696fc55894341aaa4b2041d162932ec.json",
+        "op": "click",
+        "label": "走到箱旁",
+        "busy": true,
+        "pendingEmpty": true
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-a3-shared-bench/failed-operation-ed4b40d3bc1f4a668ba4273c898231b9.json",
+        "op": "click",
+        "label": "存入",
+        "busy": true,
+        "pendingEmpty": true
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-alias-own-facilities/failed-operation-0eccc9e133ed4284bc2bc06ed5932bdc.json",
+        "op": "click",
+        "label": "采集1木材",
+        "busy": true,
+        "pendingEmpty": true
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-alias-own-facilities/failed-operation-245c8cf840014824a48bcf864afbcc39.json",
+        "op": "click",
+        "label": "[1]  平台 · 3 木材",
+        "busy": true,
+        "pendingEmpty": true
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-alias-own-facilities/failed-operation-c36925a392224f3c944c032a269ef63c.json",
+        "op": "click",
+        "label": "走到箱旁",
+        "busy": true,
+        "pendingEmpty": true
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-alias-own-facilities/failed-operation-df9209bee2054b858b0c42b3f3e64a2d.json",
+        "op": "click",
+        "label": "走到箱旁",
+        "busy": true,
+        "pendingEmpty": true
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-alias-own-facilities/failed-operation-eabae499b4db4363a670bfb683940bff.json",
+        "op": "click",
+        "label": "存入",
+        "busy": true,
+        "pendingEmpty": true
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-alias-own-facilities/failed-operation-ebf3a66bb8334d5e897ed06e892527dd.json",
+        "op": "click",
+        "label": "采集1木材",
+        "busy": true,
+        "pendingEmpty": true
+      },
+      {
+        "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-alias-own-facilities/failed-operation-f7d0ecaef75645839660644f12a52ef4.json",
+        "op": "click",
+        "label": "预约3木材",
+        "busy": true,
+        "pendingEmpty": true
+      }
+    ],
+    "preInputRefusalCount": 14,
+    "retryRule": "Retry only after proving no sent mouse click, no new native POST, no pending command; never repeat an unknown committed action with a new ID.",
+    "resumePreflightFailure": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085914346967Z/runtime-state.json",
+    "resumePreflightCause": "QA tuple/list JSON comparison mismatch before any server start; fixed in driver only, failed evidence retained.",
+    "productFailureClaimed": false
+  },
+  "uxFollowup": "14 pre-input guards observed transient disabled controls during polling; review background observation busy-state behavior before treating this as a product defect.",
+  "finalScreenshot": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-alias-own-facilities/alias-own-storage-withdrawn-wood-platform.png",
+  "historyHashes": {
+    "world.db": "30b92ca4c0e4c65d3a446cef99ec4e9ac4f1b21334c7cb61582eafbd3a2e8fdd",
+    "initial-snapshot.json": "bae59f239262fa3591bbcc030c87afb94cef0714f4807d39e1c339c27d96adb1",
+    "final-snapshot.json": "3bfc44a6ce0924c4cb7cada60f097495954d6a9c85a42a4316fe4b68990a95f7",
+    "lineage.json": "be6424ace3b7cad0aed0e37e0e56d7d8b2f3684b4d855b4faac3a276cce42a77"
+  },
+  "cleanup": {
+    "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-cleanup.json",
+    "sha256": "d38250ce529b07086a9c005ef67765439496b834577546c27a80d57e46688d6d",
+    "receipt": {
+      "scope": "Only QA-owned frozen product-source copies and imported project caches; original world, evidence, driver source and shared server binary preserved.",
+      "allRecordedProcessesAndProcessGroupsExited": true,
+      "recordedPids": [
+        298000,
+        298360,
+        298429,
+        310374,
+        344479,
+        345251,
+        345539,
+        345592,
+        354344,
+        356810
+      ],
+      "closedPorts": [
+        33451,
+        36695,
+        47833,
+        59271
+      ],
+      "removed": [
+        {
+          "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/frozen",
+          "files": 48,
+          "bytes": 458669,
+          "sourceHashesVerifiedBeforeRemoval": true,
+          "manifestPaths": [
+            "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/server-v2-manifest.json",
+            "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/native-v1-manifest.json"
+          ]
+        },
+        {
+          "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085914346967Z/frozen",
+          "files": 50,
+          "bytes": 465295,
+          "sourceHashesVerifiedBeforeRemoval": true,
+          "manifestPaths": [
+            "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085914346967Z/native-v2-manifest.json",
+            "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085914346967Z/server-v2-manifest.json"
+          ]
+        },
+        {
+          "path": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/frozen",
+          "files": 50,
+          "bytes": 465295,
+          "sourceHashesVerifiedBeforeRemoval": true,
+          "manifestPaths": [
+            "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-v2-manifest.json",
+            "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/server-v2-manifest.json"
+          ]
+        }
+      ],
+      "retainedNaturalWorld": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/natural/world.db",
+      "retainedEvidenceRoots": [
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085914346967Z",
+        "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z"
+      ]
+    }
+  }
+}

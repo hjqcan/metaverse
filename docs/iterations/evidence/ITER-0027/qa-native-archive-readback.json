@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "atUtc": "2026-10-26T09:17:40.191755+00:00",
+  "scope": "Read-only archival fidelity and receipt of independent QA2 consistency review, no new gameplay or replay.",
+  "byteIdenticalArtifacts": [
+    {
+      "source": ".local/qa/20261026-test-agent/workshop-native-summary.json",
+      "archive": "docs/iterations/evidence/ITER-0027/qa-native-summary.json",
+      "sha256": "e088274123c02dd4c7b3968cb1ee069936f1fb03631fe7ab8f5d1ccb3e5becc2",
+      "identical": true
+    },
+    {
+      "source": ".local/qa/20261026-test-agent/workshop-cleanup.json",
+      "archive": "docs/iterations/evidence/ITER-0027/qa-native-cleanup.json",
+      "sha256": "d38250ce529b07086a9c005ef67765439496b834577546c27a80d57e46688d6d",
+      "identical": true
+    },
+    {
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/native-commands.json",
+      "archive": "docs/iterations/evidence/ITER-0027/qa-native-commands-phase1.json",
+      "sha256": "eb45e26d960cd0f296c28704d314caa4aaf470e592f529684aba8f001933aaf8",
+      "identical": true
+    },
+    {
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-commands.json",
+      "archive": "docs/iterations/evidence/ITER-0027/qa-native-commands-phase2.json",
+      "sha256": "c5d4cfdf8a0521f3284687a1c068840a0e069669f000514aa948d9e904862400",
+      "identical": true
+    },
+    {
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T085927206506Z/native-alias-own-facilities/alias-own-storage-withdrawn-wood-platform.png",
+      "archive": "docs/iterations/evidence/ITER-0027/qa-final-own-workshop.png",
+      "sha256": "4617c2471c51f3709a6a25b90ca9cbd09ad64487aa14320f363f7e33f8b18d94",
+      "identical": true
+    },
+    {
+      "source": ".local/qa/20261026-test-agent/workshop-native-run-20261026T084410352280Z/native-a2-live-input/a2-deposited-three.png",
+      "archive": "docs/iterations/evidence/ITER-0027/qa-a2-stored-three.png",
+      "sha256": "1b8d4c856acfb509b7569067c71df1b60a20d6b9fcea1d5ded608262246d19ba",
+      "identical": true
+    },
+    {
+      "source": ".local/test-agent2/iter27-qa1-final-review.json",
+      "archive": "docs/iterations/evidence/ITER-0027/qa-native-json-review.json",
+      "sha256": "9a862367831cb599f4f9ebc593f95174916343398c0f6f7d6a107ac186ef07f6",
+      "identical": true
+    }
+  ],
+  "bundledProofsIdentical": 17,
+  "independentReviewSha256": "9a862367831cb599f4f9ebc593f95174916343398c0f6f7d6a107ac186ef07f6",
+  "independentReviewScope": "Independent consistency checking of QA1 supplied retained JSON snapshots, request bytes, receipt/event/detail proofs and drivers. No DB opened, no service or Godot launched, no QA1 artifact changed.",
+  "independentReviewLimitations": [
+    "QA2 verifies exported snapshots, not a fresh read of the original database; QA1 owns direct runtime/DB evidence.",
+    "Input.parse_input_event in a rendered Xvfb native window is native event injection, not a human OS mouse session.",
+    "A1 alias is a distinct resident under the same declared controller, not an independent human/model.",
+    "No claim that 14 transient disabled pre-input refusals are product faults; no new recovery or retry acceptance claimed from those records.",
+    "Two native client manifests across a same-DB cold restart; backend v2 hash unchanged."
+  ],
+  "originalWorldOpened": false,
+  "servicesStarted": false
+}

@@ -4,6 +4,7 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -11,7 +12,7 @@ import sys
 import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
-HTTP = ('foundation', 'passage', 'resident_mission', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'entry_guide', 'wilderness', 'wilderness_mission', 'continuous', 'continuous_mission', 'world_instance', 'construction_mission', 'instance_mission', 'actor_state', 'actor_mission', 'material_transfer', 'transfer_mission', 'material_access', 'material_access_time', 'material_access_mission', 'entity_notes', 'entity_notes_mission', 'continuous_material', 'continuous_material_mission', 'entity_canvas', 'entity_canvas_mission')
+HTTP = ('foundation', 'passage', 'resident_mission', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'entry_guide', 'wilderness', 'wilderness_mission', 'continuous', 'continuous_mission', 'world_instance', 'construction_mission', 'instance_mission', 'actor_state', 'actor_mission', 'material_transfer', 'transfer_mission', 'material_access', 'material_access_time', 'material_access_mission', 'entity_notes', 'entity_notes_mission', 'continuous_material', 'continuous_material_mission', 'entity_canvas', 'entity_canvas_mission', 'workshop')
 BROWSER = ('foundation', 'passage', 'resident', 'activities', 'postcards', 'mosaic', 'consent', 'inbox', 'consent-experience', 'entry', 'wilderness', 'wilderness-resident', 'continuous-resident', 'construction-resident', 'actor-resident', 'transfer-resident', 'material-resident', 'entity-note-resident', 'continuous-material-resident', 'entity-canvas-resident')
 
 
@@ -56,12 +57,19 @@ def evidence_path(lines):
             if path.is_dir():
                 path /= 'results.json'
             return str(path.relative_to(ROOT))
+        if line.startswith('{'):
+            try:
+                value = json.loads(line)
+                if isinstance(value.get('evidence'), str):
+                    return str(Path(value['evidence']).resolve().relative_to(ROOT))
+            except (ValueError, TypeError, AttributeError):
+                pass
     return None
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--suite', choices=('all', 'http', 'browser'), default='all')
+    parser.add_argument('--suite', choices=('all', 'http', 'browser', 'workshop'), default='all')
     args = parser.parse_args()
     recorded = datetime.now(timezone.utc)
     output = ROOT / '.local/checks' / (recorded.strftime('%Y%m%dT%H%M%SZ') + '-' + uuid.uuid4().hex[:6])
@@ -70,8 +78,11 @@ def main():
     def run(item):
         name, command = item
         log = output / (name + '.log')
+        env = dict(os.environ)
+        if name == 'http-workshop':
+            env['WORLD_SERVER_DLL'] = str(ROOT/'src/World.Server/bin/Debug/net10.0/World.Server.dll')
         with log.open('w') as stream:
-            result = subprocess.run(command, cwd=ROOT, stdout=stream, stderr=subprocess.STDOUT)
+            result = subprocess.run(command, cwd=ROOT, env=env, stdout=stream, stderr=subprocess.STDOUT)
         lines = log.read_text().splitlines()
         print(f'{name}: {"PASS" if result.returncode == 0 else "FAIL"}', flush=True)
         if result.returncode:
@@ -92,6 +103,8 @@ def main():
         suites = []
         if args.suite in ('all', 'http'):
             suites += [(f'http-{name}', [sys.executable, f'tests/{name}_api.py']) for name in HTTP]
+        if args.suite == 'workshop':
+            suites += [('http-workshop', [sys.executable, 'tests/workshop_api.py'])]
         if args.suite in ('all', 'browser'):
             suites += [(f'browser-{name}', ['node', f'tests/browser/{name}.mjs']) for name in BROWSER]
         with ThreadPoolExecutor(max_workers=3) as pool:
