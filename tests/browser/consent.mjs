@@ -155,8 +155,12 @@ try {
     const handler=async route=>{if(route.request().method()==='POST'){posts++;original=route.request().postDataJSON();const r=await route.fetch();assert.equal(r.status(),200);await route.abort('failed');}else if(hold)await route.abort('failed');else await route.continue();};
     await page.route(/\/commands(?:\/[^/?]+)?$/,handler);await entry(page,p.commandId).locator('[data-review="accept"]').click();
     await until(async()=>posts===1&&!(await page.locator('#pending-panel').isHidden()),'review not pending');await page.reload();
-    await until(async()=>!(await page.locator('#pending-panel').isHidden()),'original review lost after reload');hold=false;
-    await until(async()=>!(await page.locator('#query-command-button').isDisabled()),'query disabled');await page.locator('#query-command-button').click();
+    await until(async()=>!(await page.locator('#pending-panel').isHidden()),'original review lost after reload');
+    // Reload already starts original-receipt recovery. Releasing the transport
+    // can settle it before a manual query button becomes clickable.
+    const recovered=page.waitForResponse(r=>r.url()===url+prefix+'/commands/'+original.commandId&&r.request().method()==='GET'&&r.status()===200,{timeout:12000});
+    hold=false;
+    const receipt=await(await recovered).json();assert.equal(receipt.commandId,original.commandId);assert.equal(receipt.status,'committed');
     await until(async()=>await page.locator('#pending-panel').isHidden(),'review recovery failed');await page.unroute(/\/commands(?:\/[^/?]+)?$/,handler);
     const after=await observed();assert.equal(posts,1);assert.equal(after.mosaic.revision,before.mosaic.revision+1);assert.equal(after.self.mosaicReviews.filter(r=>r.commandId===original.commandId).length,1);
     assert.equal(after.mosaicProposals.find(x=>x.commandId===p.commandId).review.commandId,original.commandId);
