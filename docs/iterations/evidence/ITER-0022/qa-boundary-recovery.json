@@ -1,0 +1,559 @@
+{
+  "passed": false,
+  "binarySha256": "11c0478324d11476dfce3f37bb7d6cf5281ec91fbfb9b36444a114ccbfc2b502",
+  "cases": {
+    "recovery": {
+      "passed": true,
+      "actualOriginalCommandRecoveries": [
+        {
+          "action": "reserve_material",
+          "fault": "before-commit",
+          "originalRequest": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "4e6739448a2b4d3fa644d0c463269661",
+            "expectedStateVersion": 258,
+            "action": {
+              "type": "reserve_material",
+              "sourceId": "wood-source-east"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "firstReceiptStatus": 404,
+          "recoveredReceipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 259,
+            "commandId": "4e6739448a2b4d3fa644d0c463269661",
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": 260,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "reserve_material",
+              "reservationId": "m513486fe74f64516bd284da1a5110030",
+              "sourceId": "wood-source-east",
+              "queueSequence": 2,
+              "status": "queued",
+              "requestedAtMs": 31274
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 258,
+              "appliedOnStateVersion": 258
+            }
+          },
+          "originalBytesAfterLaterActions": true,
+          "audit": {
+            "issued": 15,
+            "generated": 3,
+            "wild": 0,
+            "source": 3,
+            "inventory": 6,
+            "embodied": 6,
+            "activeReserved": 3,
+            "serviceMs": 31308,
+            "processedPeriod": 1,
+            "production": [
+              [
+                1,
+                31047,
+                3,
+                258
+              ]
+            ],
+            "stateVersion": 260,
+            "realCommandsThisBranch": 2,
+            "processStopped": true
+          }
+        },
+        {
+          "action": "reserve_material",
+          "fault": "after-commit",
+          "originalRequest": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "0b3bb6209acd472f9e3cab485d5b37ce",
+            "expectedStateVersion": 258,
+            "action": {
+              "type": "reserve_material",
+              "sourceId": "wood-source-east"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "firstReceiptStatus": 200,
+          "recoveredReceipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 259,
+            "commandId": "0b3bb6209acd472f9e3cab485d5b37ce",
+            "identity": {
+              "operatorId": "declared-late",
+              "actorId": "a2",
+              "sessionId": "s131d61be279840df94f00244eea8851d"
+            },
+            "eventCursor": 260,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "reserve_material",
+              "reservationId": "m8794a057096647719b72130da8195f21",
+              "sourceId": "wood-source-east",
+              "queueSequence": 2,
+              "status": "queued",
+              "requestedAtMs": 31296
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 258,
+              "appliedOnStateVersion": 258
+            }
+          },
+          "originalBytesAfterLaterActions": true,
+          "audit": {
+            "issued": 15,
+            "generated": 3,
+            "wild": 0,
+            "source": 3,
+            "inventory": 6,
+            "embodied": 6,
+            "activeReserved": 3,
+            "serviceMs": 31488,
+            "processedPeriod": 1,
+            "production": [
+              [
+                1,
+                31047,
+                3,
+                258
+              ]
+            ],
+            "stateVersion": 260,
+            "realCommandsThisBranch": 2,
+            "processStopped": true
+          }
+        },
+        {
+          "action": "cancel_reservation",
+          "fault": "before-commit",
+          "originalRequest": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "c14457599a9144ec993c77edd4d5077f",
+            "expectedStateVersion": 258,
+            "action": {
+              "type": "cancel_reservation",
+              "reservationId": "m25a803d198ab4fa99a444a27acdb60e9"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "firstReceiptStatus": 404,
+          "recoveredReceipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 259,
+            "commandId": "c14457599a9144ec993c77edd4d5077f",
+            "identity": {
+              "operatorId": "declared-third",
+              "actorId": "a3",
+              "sessionId": "sa423548f7dce496895be25120daedb09"
+            },
+            "eventCursor": 260,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "cancel_reservation",
+              "reservationId": "m25a803d198ab4fa99a444a27acdb60e9",
+              "sourceId": "wood-source-east",
+              "status": "cancelled",
+              "releasedQuantity": 3
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 258,
+              "appliedOnStateVersion": 258
+            }
+          },
+          "originalBytesAfterLaterActions": true,
+          "audit": {
+            "issued": 15,
+            "generated": 3,
+            "wild": 0,
+            "source": 3,
+            "inventory": 6,
+            "embodied": 6,
+            "activeReserved": 0,
+            "serviceMs": 31315,
+            "processedPeriod": 1,
+            "production": [
+              [
+                1,
+                31047,
+                3,
+                258
+              ]
+            ],
+            "stateVersion": 260,
+            "realCommandsThisBranch": 2,
+            "processStopped": true
+          }
+        },
+        {
+          "action": "cancel_reservation",
+          "fault": "after-commit",
+          "originalRequest": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "68a06208eb7245018386805cd52cf72b",
+            "expectedStateVersion": 258,
+            "action": {
+              "type": "cancel_reservation",
+              "reservationId": "m25a803d198ab4fa99a444a27acdb60e9"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "firstReceiptStatus": 200,
+          "recoveredReceipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 259,
+            "commandId": "68a06208eb7245018386805cd52cf72b",
+            "identity": {
+              "operatorId": "declared-third",
+              "actorId": "a3",
+              "sessionId": "sa423548f7dce496895be25120daedb09"
+            },
+            "eventCursor": 260,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "cancel_reservation",
+              "reservationId": "m25a803d198ab4fa99a444a27acdb60e9",
+              "sourceId": "wood-source-east",
+              "status": "cancelled",
+              "releasedQuantity": 3
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 258,
+              "appliedOnStateVersion": 258
+            }
+          },
+          "originalBytesAfterLaterActions": true,
+          "audit": {
+            "issued": 15,
+            "generated": 3,
+            "wild": 0,
+            "source": 3,
+            "inventory": 6,
+            "embodied": 6,
+            "activeReserved": 0,
+            "serviceMs": 31481,
+            "processedPeriod": 1,
+            "production": [
+              [
+                1,
+                31047,
+                3,
+                258
+              ]
+            ],
+            "stateVersion": 260,
+            "realCommandsThisBranch": 2,
+            "processStopped": true
+          }
+        },
+        {
+          "action": "harvest_material",
+          "fault": "before-commit",
+          "originalRequest": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "27c4fc23f28344dbbd6a540d09dc2a0d",
+            "expectedStateVersion": 258,
+            "action": {
+              "type": "harvest_material",
+              "reservationId": "m25a803d198ab4fa99a444a27acdb60e9"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "firstReceiptStatus": 404,
+          "recoveredReceipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 259,
+            "commandId": "27c4fc23f28344dbbd6a540d09dc2a0d",
+            "identity": {
+              "operatorId": "declared-third",
+              "actorId": "a3",
+              "sessionId": "sa423548f7dce496895be25120daedb09"
+            },
+            "eventCursor": 260,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "harvest_material",
+              "reservationId": "m25a803d198ab4fa99a444a27acdb60e9",
+              "sourceId": "wood-source-east",
+              "quantity": 1,
+              "remainingBefore": 3,
+              "remaining": 2,
+              "inventoryWoodBefore": 0,
+              "inventoryWood": 1,
+              "position": [
+                28,
+                10
+              ]
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 258,
+              "appliedOnStateVersion": 258
+            }
+          },
+          "originalBytesAfterLaterActions": true,
+          "audit": {
+            "issued": 15,
+            "generated": 3,
+            "wild": 0,
+            "source": 2,
+            "inventory": 7,
+            "embodied": 6,
+            "activeReserved": 2,
+            "serviceMs": 31396,
+            "processedPeriod": 1,
+            "production": [
+              [
+                1,
+                31047,
+                3,
+                258
+              ]
+            ],
+            "stateVersion": 260,
+            "realCommandsThisBranch": 2,
+            "processStopped": true
+          }
+        },
+        {
+          "action": "harvest_material",
+          "fault": "after-commit",
+          "originalRequest": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "00ec35a96093430896d832ec8cce40bf",
+            "expectedStateVersion": 258,
+            "action": {
+              "type": "harvest_material",
+              "reservationId": "m25a803d198ab4fa99a444a27acdb60e9"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "firstReceiptStatus": 200,
+          "recoveredReceipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 259,
+            "commandId": "00ec35a96093430896d832ec8cce40bf",
+            "identity": {
+              "operatorId": "declared-third",
+              "actorId": "a3",
+              "sessionId": "sa423548f7dce496895be25120daedb09"
+            },
+            "eventCursor": 260,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "harvest_material",
+              "reservationId": "m25a803d198ab4fa99a444a27acdb60e9",
+              "sourceId": "wood-source-east",
+              "quantity": 1,
+              "remainingBefore": 3,
+              "remaining": 2,
+              "inventoryWoodBefore": 0,
+              "inventoryWood": 1,
+              "position": [
+                28,
+                10
+              ]
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 258,
+              "appliedOnStateVersion": 258
+            }
+          },
+          "originalBytesAfterLaterActions": true,
+          "audit": {
+            "issued": 15,
+            "generated": 3,
+            "wild": 0,
+            "source": 2,
+            "inventory": 7,
+            "embodied": 6,
+            "activeReserved": 2,
+            "serviceMs": 31597,
+            "processedPeriod": 1,
+            "production": [
+              [
+                1,
+                31047,
+                3,
+                258
+              ]
+            ],
+            "stateVersion": 260,
+            "realCommandsThisBranch": 2,
+            "processStopped": true
+          }
+        },
+        {
+          "action": "harvest_material",
+          "fault": "throw-after-debit",
+          "originalRequest": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "commandId": "e42a0794178d493e91d669ca6a00cae0",
+            "expectedStateVersion": 258,
+            "action": {
+              "type": "harvest_material",
+              "reservationId": "m25a803d198ab4fa99a444a27acdb60e9"
+            },
+            "preconditionMode": "actor-state-v1"
+          },
+          "firstReceiptStatus": 404,
+          "recoveredReceipt": {
+            "schemaVersion": 1,
+            "rulesVersion": "r10",
+            "stateVersion": 259,
+            "commandId": "e42a0794178d493e91d669ca6a00cae0",
+            "identity": {
+              "operatorId": "declared-third",
+              "actorId": "a3",
+              "sessionId": "sa423548f7dce496895be25120daedb09"
+            },
+            "eventCursor": 260,
+            "error": null,
+            "status": "committed",
+            "result": {
+              "action": "harvest_material",
+              "reservationId": "m25a803d198ab4fa99a444a27acdb60e9",
+              "sourceId": "wood-source-east",
+              "quantity": 1,
+              "remainingBefore": 3,
+              "remaining": 2,
+              "inventoryWoodBefore": 0,
+              "inventoryWood": 1,
+              "position": [
+                28,
+                10
+              ]
+            },
+            "execution": {
+              "preconditionMode": "actor-state-v1",
+              "observedStateVersion": 258,
+              "appliedOnStateVersion": 258
+            }
+          },
+          "originalBytesAfterLaterActions": true,
+          "audit": {
+            "issued": 15,
+            "generated": 3,
+            "wild": 0,
+            "source": 2,
+            "inventory": 7,
+            "embodied": 6,
+            "activeReserved": 2,
+            "serviceMs": 31401,
+            "processedPeriod": 1,
+            "production": [
+              [
+                1,
+                31047,
+                3,
+                258
+              ]
+            ],
+            "stateVersion": 260,
+            "realCommandsThisBranch": 2,
+            "processStopped": true
+          }
+        }
+      ],
+      "audit": {
+        "issued": 15,
+        "generated": 3,
+        "wild": 0,
+        "source": 3,
+        "inventory": 6,
+        "embodied": 6,
+        "activeReserved": 3,
+        "serviceMs": 31099,
+        "processedPeriod": 1,
+        "production": [
+          [
+            1,
+            31047,
+            3,
+            258
+          ]
+        ],
+        "stateVersion": 258,
+        "realCommandsThisBranch": 1,
+        "processStopped": true
+      }
+    },
+    "legacy": {
+      "passed": false,
+      "failure": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/entry_boundaries.py\", line 217, in <module>\n    try:report['cases'][name]={'passed':True,**legacy()}\n                                               ^^^^^^^^\n  File \"/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/entry_boundaries.py\", line 196, in legacy\n    assert r['error']['code']=='ACTION_UNAVAILABLE';rejected.append(r)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+    }
+  },
+  "worlds": [
+    {
+      "name": "recovery",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "reserve_material-before-commit",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "reserve_material-after-commit",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "cancel_reservation-before-commit",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "cancel_reservation-after-commit",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "harvest_material-before-commit",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "harvest_material-after-commit",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "harvest_material-throw-after-debit",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "actual-r9",
+      "instance": "w_a2d7cd9ccbde4295b2fe38adfc3de6b8"
+    }
+  ],
+  "scope": "independent r10 protocol/spatial/recovery/r9 boundary",
+  "contractSha256": "0f9aa15d2d616130a45a69c1691239759f25462d57c0a04b6d63169298c67752",
+  "externalModelCalls": 0,
+  "directSqlStateEdits": false,
+  "controlledClock": false,
+  "earnedSeed": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/entry-http-20261026T042557872761Z/closed-earned-baseline"
+}

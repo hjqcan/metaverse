@@ -16,6 +16,8 @@ WORLD_ACTOR=a2 npm run start:godot
 
 材料转让使用独立 r9 入口：先 `npm run start:cooperation`，另开终端运行 `npm run start:godot:cooperation`；第二居民加 `WORLD_ACTOR=a2`。服务地址5090，存档 `.local/cooperation`，恢复记录默认 `user://cooperation-pending.json`。旧 r8 客户端保持原恢复目录；旧二进制读取含 r9 新记录的共用目录不在兼容范围内。自定义 `WORLD_CLIENT_STATE` 时保留所需隔离，不搬移或清空旧未决记录。
 
+材料入口使用独立r10入口：先 `npm run start:material-access`，再 `WORLD_ACTOR=a2 npm run start:godot:material-access`，服务5091、存档 `.local/material-access`，恢复前缀 `user://material-access-pending.json`。来源须按[运行说明](../../docs/iterations/ITER-0022-results.md#运行与采用)停服后在原实例开启一次。左侧面板显示来源存量、剩余额度和当前组预约；明确点击预约、前往来源、逐次领取或取消。东岸保留矩形可走、不可建，空存量时也保持保留边界。
+
 需安装 Godot 4.7.2，或设置 `GODOT_BIN=/path/to/godot`；本工作区已有经过官方 SHA512 校验的独立二进制。`WORLD_URL`、`WORLD_ACCESS_FILE`、`WORLD_ACTOR` 可覆盖连接。编辑器打开 `project.godot` 后运行，也可使用右上角连接面板。
 
 ## 操作
@@ -34,6 +36,8 @@ WORLD_ACTOR=a2 npm run start:godot
 
 r9 收到木材也会使此前本人意图过期，确认拒绝后同样停止旧路线／持键。赠送回执须匹配原规则、双方、数量、执行版本与原库存扣减，不能以当前余额代替原交付事实；详情见[材料转让契约](../../docs/contracts/material-transfer-v1.md)。
 
+r10继承上述规则，原动作记录为v4。预约凭据须与原事件一致，领取和取消须匹配原预约及提交前事实；过期或取消不会自动换一份预约。磁盘JSON数字经整数校验后读取，v4不可冒充旧v3。当前客户端兼容旧记录；旧客户端不能处理新r10记录，不应共用恢复目录或清空其中未决项。
+
 居民头顶显示“你”或居民 ID，平台和桥显示实际建造者；切换身份会同步更新圆环与署名，参见[身份与作品标记](../../docs/iterations/ITER-0021-results.md)。
 
 ## 协议与引擎边界
@@ -45,6 +49,7 @@ r9 收到木材也会使此前本人意图过期，确认拒绝后同样停止�
 - `pending_store.gd`：逐命令持久记录、多实例隔离及旧格式读取。
 - `main.gd`：键鼠输入、交互、建造预览和 HUD。
 - `transfer_panel.gd`：r9 收件人、数量和明确赠送操作。
+- `material_panel.gd`：r10 来源、原预约、领取与取消操作。
 - `world_navigation.gd`：根据已确认地形生成导航网格与点击路线；服务端继续确认每次移动。
 - `world_view.gd`、`river.gdshader`：连续地形、场景对象、角色表现和跟随镜头；Godot 碰撞体用于场景拾取，服务端负责行走碰撞。
 - `src/World.Server/ContinuousWorld.cs`：可独立于引擎复用的几何、速度额度与资源规则。

@@ -1,0 +1,203 @@
+{
+  "passed": false,
+  "actualModelCalls": 0,
+  "groups": 8,
+  "assertions": 34,
+  "results": [
+    {
+      "name": "reserve-corrupt",
+      "checks": [
+        {
+          "name": "r10 native adapter connected",
+          "passed": true
+        },
+        {
+          "name": "unknown r10 action keeps version4 original record",
+          "passed": true
+        },
+        {
+          "name": "missing sourceId retains original",
+          "passed": true
+        },
+        {
+          "name": "missing reservationId retains original",
+          "passed": true
+        },
+        {
+          "name": "missing queueSequence retains original",
+          "passed": true
+        },
+        {
+          "name": "missing requestedAtMs retains original",
+          "passed": true
+        },
+        {
+          "name": "unrelated reservation cannot settle original",
+          "passed": true
+        },
+        {
+          "name": "r10 record cannot masquerade as old record format",
+          "passed": true
+        },
+        {
+          "name": "original actor bound into source evidence",
+          "passed": true
+        },
+        {
+          "name": "original authoritative receipt and reference settle",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "harvest-corrupt",
+      "checks": [
+        {
+          "name": "r10 native adapter connected",
+          "passed": true
+        },
+        {
+          "name": "unknown r10 action keeps version4 original record",
+          "passed": true
+        },
+        {
+          "name": "missing sourceId retains original",
+          "passed": true
+        },
+        {
+          "name": "missing reservationId retains original",
+          "passed": true
+        },
+        {
+          "name": "missing remainingBefore retains original",
+          "passed": true
+        },
+        {
+          "name": "missing remaining retains original",
+          "passed": true
+        },
+        {
+          "name": "missing inventoryWoodBefore retains original",
+          "passed": true
+        },
+        {
+          "name": "missing inventoryWood retains original",
+          "passed": true
+        },
+        {
+          "name": "unrelated reservation cannot settle original",
+          "passed": true
+        },
+        {
+          "name": "r10 record cannot masquerade as old record format",
+          "passed": true
+        },
+        {
+          "name": "original actor bound into source evidence",
+          "passed": true
+        },
+        {
+          "name": "original authoritative receipt and reference settle",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "reserve-before",
+      "passed": false,
+      "error": "reserve-return: exit 1\nGodot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nWARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.\n     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)\nWARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.\n     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:372)\nOpenGL API 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.2 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 20.1.2, 256 bits)\n\nERROR: original request retained one qualification\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_access.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_access.gd:109)\n       [2] connect_world (res://world_client.gd:103)\n       [3] refresh (res://world_client.gd:229)\n       [4] _observe (res://world_client.gd:209)\n       [5] _request (res://world_client.gd:150)\n"
+    },
+    {
+      "name": "reserve-after",
+      "checks": [
+        {
+          "name": "r10 native adapter connected",
+          "passed": true
+        },
+        {
+          "name": "unknown r10 action keeps version4 original record",
+          "passed": true
+        },
+        {
+          "name": "fresh client settles original r10 action",
+          "passed": true
+        },
+        {
+          "name": "original request retained one qualification",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "harvest-before",
+      "passed": false,
+      "error": "harvest-return: exit 1\nGodot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nWARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.\n     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)\nWARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.\n     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:372)\nOpenGL API 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.2 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 20.1.2, 256 bits)\n\nERROR: interrupted harvest occurs exactly once\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_access.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_access.gd:107)\n       [2] connect_world (res://world_client.gd:103)\n       [3] refresh (res://world_client.gd:229)\n       [4] _observe (res://world_client.gd:209)\n       [5] _request (res://world_client.gd:150)\n"
+    },
+    {
+      "name": "harvest-after",
+      "checks": [
+        {
+          "name": "r10 native adapter connected",
+          "passed": true
+        },
+        {
+          "name": "unknown r10 action keeps version4 original record",
+          "passed": true
+        },
+        {
+          "name": "fresh client settles original r10 action",
+          "passed": true
+        },
+        {
+          "name": "interrupted harvest occurs exactly once",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "cancel-before",
+      "passed": false,
+      "error": "cancel-return: exit 1\nGodot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\nWARNING: Failed to create wd.xic as the input method or its xim server may not have started yet.\n     at: _create_xic (platform/linuxbsd/x11/display_server_x11.cpp:6347)\nWARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.\n     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:372)\nOpenGL API 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.2 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 20.1.2, 256 bits)\n\nERROR: original cancellation retained\n   at: push_error (core/variant/variant_utility.cpp:1023)\n   GDScript backtrace (most recent call first):\n       [0] check (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_access.gd:14)\n       [1] run (/home/wangjunfeng/文档/Workspace/metaverse/tests/godot/material_access.gd:111)\n       [2] connect_world (res://world_client.gd:103)\n       [3] refresh (res://world_client.gd:229)\n       [4] _observe (res://world_client.gd:209)\n       [5] _request (res://world_client.gd:150)\n"
+    },
+    {
+      "name": "cancel-after",
+      "checks": [
+        {
+          "name": "r10 native adapter connected",
+          "passed": true
+        },
+        {
+          "name": "unknown r10 action keeps version4 original record",
+          "passed": true
+        },
+        {
+          "name": "fresh client settles original r10 action",
+          "passed": true
+        },
+        {
+          "name": "original cancellation retained",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "sourceSha256": {
+    "clients/godot/command_evidence.gd": "660018b6d01a554acce57a81ad560731fce2e9930b452fe8cd4db48941f05e22",
+    "clients/godot/main.gd": "57349c061c84168e16514ae99723fa80e96b5992508750ca8751f16945dcf4d7",
+    "clients/godot/material_panel.gd": "39624af0442670059f6408b73b46cf21eaefb2aa0b75b19828194bba9a48cc3c",
+    "clients/godot/pending_store.gd": "3b74ae2abe449eba670bc5874be1dcdc79de21a7cea18f31c8ab82016d2b4b31",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/world_client.gd": "3f82bd3d829133cbd1c514448c5e376e9b7dd55b4a2f62bd8216b527243c9cfe",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "76894c40d47f7258a3f1014b02c177b087557d6e14fc70eb0d54fbfe7359b770",
+    "tests/material_access_godot.py": "6524e3378b1fffe71d3b55feed4749bf32ab89b3f047acec6e0d998173b84f9e",
+    "tests/godot/material_access.gd": "277ff912a401e7263f929fed966eda625a8dc2f9c323ec7304c3634a9b6bbd8d"
+  },
+  "sourceUnchanged": true,
+  "dllSha256": "11c0478324d11476dfce3f37bb7d6cf5281ec91fbfb9b36444a114ccbfc2b502"
+}

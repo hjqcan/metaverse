@@ -1,0 +1,83 @@
+{
+  "suite": "material-access-mission-http",
+  "validationLevel": "builder-self-check",
+  "actualModelCalls": 0,
+  "clock": "real service monotonic time; no time injection",
+  "dll": "/home/wangjunfeng/文档/Workspace/metaverse/.local/iter0022/core-v1/bin/World.Server.dll",
+  "dllSha256": "11c0478324d11476dfce3f37bb7d6cf5281ec91fbfb9b36444a114ccbfc2b502",
+  "sourceSha256": {
+    "scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+    "scripts/mosaic_inbox.py": "a9c0772e5946af581c3b423c8e5986b05413348a3e528c8d5a0b18401367aa59",
+    "scripts/check.py": "2f0224d10d2838610d86876c1eaa72f5f37bf1c1234491ba8f046c5a052f63c9",
+    "scripts/postcard_text.py": "db3429983b8ee2062ab70f4c7e46b763c5839934f65a2a6776638f8c0a280a4c",
+    "scripts/activity_choice.py": "84bd020783870725947663eb41500977096c86e366099b4fb8607c9d1c049b5a",
+    "scripts/passage_agent.py": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e",
+    "scripts/test_agent_accounts.py": "07c9e2e66bcfec99a9d57ed7b9ba3497769d06bee5b838ca6c24a0264647df5c",
+    "scripts/resident_material_access.py": "0e9aa7bc9bfd89bc65270a0cc49fd8a2c128cdaff2fc95b6dcde3d56ad081d68",
+    "scripts/agent_accounts.py": "f1844d9db668e864ab215d0d811b884b6301500bfe260bb9bf9d9cfdbc481f10",
+    "scripts/resident_transfer.py": "957067bc33585e1fb5f7f9b21b703aa1c8decf8f4148fcb2fe24e4ce50329a83",
+    "scripts/resident_mission.py": "3dd915be5cf53132b3d09bc3fdca9b5a698e9c7d494ea098e0eb435635d7189d",
+    "scripts/wilderness_materials.py": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6",
+    "scripts/codex_goal_selector.py": "3a455c2906aaa3764c85794cb581300979f57cb3f24b46fe437fbd287a8b6936",
+    "scripts/continuous_navigation.py": "0303f9ade6ce90e48a85fbf8e5a5aaff145ca0a305562cee4c0d0bb1cb21e578",
+    "scripts/entry_guide.py": "9b768237d39f2e4b4820e0178508c132408215aa6653c996eaf9b6e913d79dbb",
+    "scripts/mosaic_consent.py": "cb3acc34abe43c6988359bc307755ad6d2743ac5e850bccaf165f14ae561eae9",
+    "scripts/run_resident.py": "3c517466e6ab985d99d1572a2cad7075bebf2c763e22cca7481326a92c3791cf",
+    "scripts/mosaic_patch.py": "4abdb035967733e4aacbe175a37f8b32686de6182ded2fee888203726b0461a6",
+    "scripts/command_preconditions.py": "c8da1f3edcd7499739f02bea27c1ec213e34dc1ed64b7b5ff88f908f640ea440",
+    "scripts/resident_construction.py": "eef4aa235fb0fdf2428b17005381074bb1f773f3ac21d600b2c095e96c1b6411",
+    "tests/material_access_mission_api.py": "03c90a5d6bea028667dca8c617299832231187af87869ad64234807397357568",
+    "tests/fixtures/material-access-platform.json": "4be419aa7bad271c5bc2adf915124d2ab5ab6ca9abc87ba10fc1cecbb45011f3"
+  },
+  "sourceSha256Before": {
+    "scripts/foundation_agent.py": "469166e41a3b73edd7298b3845e6d3f97afc5909f38bda3962d9f7723d881fdf",
+    "scripts/mosaic_inbox.py": "a9c0772e5946af581c3b423c8e5986b05413348a3e528c8d5a0b18401367aa59",
+    "scripts/check.py": "2f0224d10d2838610d86876c1eaa72f5f37bf1c1234491ba8f046c5a052f63c9",
+    "scripts/postcard_text.py": "db3429983b8ee2062ab70f4c7e46b763c5839934f65a2a6776638f8c0a280a4c",
+    "scripts/activity_choice.py": "84bd020783870725947663eb41500977096c86e366099b4fb8607c9d1c049b5a",
+    "scripts/passage_agent.py": "4ccdab0a8dd41347565c7d5eace27739bb26bd7445ff8bfb8a3b9815f634f17e",
+    "scripts/test_agent_accounts.py": "07c9e2e66bcfec99a9d57ed7b9ba3497769d06bee5b838ca6c24a0264647df5c",
+    "scripts/resident_material_access.py": "0e9aa7bc9bfd89bc65270a0cc49fd8a2c128cdaff2fc95b6dcde3d56ad081d68",
+    "scripts/agent_accounts.py": "f1844d9db668e864ab215d0d811b884b6301500bfe260bb9bf9d9cfdbc481f10",
+    "scripts/resident_transfer.py": "957067bc33585e1fb5f7f9b21b703aa1c8decf8f4148fcb2fe24e4ce50329a83",
+    "scripts/resident_mission.py": "3dd915be5cf53132b3d09bc3fdca9b5a698e9c7d494ea098e0eb435635d7189d",
+    "scripts/wilderness_materials.py": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6",
+    "scripts/codex_goal_selector.py": "3a455c2906aaa3764c85794cb581300979f57cb3f24b46fe437fbd287a8b6936",
+    "scripts/continuous_navigation.py": "0303f9ade6ce90e48a85fbf8e5a5aaff145ca0a305562cee4c0d0bb1cb21e578",
+    "scripts/entry_guide.py": "9b768237d39f2e4b4820e0178508c132408215aa6653c996eaf9b6e913d79dbb",
+    "scripts/mosaic_consent.py": "cb3acc34abe43c6988359bc307755ad6d2743ac5e850bccaf165f14ae561eae9",
+    "scripts/run_resident.py": "3c517466e6ab985d99d1572a2cad7075bebf2c763e22cca7481326a92c3791cf",
+    "scripts/mosaic_patch.py": "4abdb035967733e4aacbe175a37f8b32686de6182ded2fee888203726b0461a6",
+    "scripts/command_preconditions.py": "c8da1f3edcd7499739f02bea27c1ec213e34dc1ed64b7b5ff88f908f640ea440",
+    "scripts/resident_construction.py": "eef4aa235fb0fdf2428b17005381074bb1f773f3ac21d600b2c095e96c1b6411",
+    "tests/material_access_mission_api.py": "03c90a5d6bea028667dca8c617299832231187af87869ad64234807397357568",
+    "tests/fixtures/material-access-platform.json": "4be419aa7bad271c5bc2adf915124d2ab5ab6ca9abc87ba10fc1cecbb45011f3"
+  },
+  "sourceStable": true,
+  "tests": 4,
+  "testResults": [
+    {
+      "test": "__main__.MaterialMissionAcceptance.test_07_damaged_saved_authority_and_query_budget_make_no_requests",
+      "passed": true,
+      "seconds": 0.8282284060260281
+    },
+    {
+      "test": "__main__.MaterialMissionAcceptance.test_09_reserve_recovers_original_event_beyond_recent_twenty",
+      "passed": true,
+      "seconds": 1.2634458339889534
+    },
+    {
+      "test": "__main__.MaterialMissionAcceptance.test_10_query_exhaustion_after_commit_retains_pending_without_budget_refill",
+      "passed": true,
+      "seconds": 0.7758559370413423
+    },
+    {
+      "test": "__main__.MaterialMissionAcceptance.test_11_corrupt_harvest_receipts_and_pending_reservation_are_not_facts",
+      "passed": true,
+      "seconds": 16.237556226958986
+    }
+  ],
+  "successful": true,
+  "failures": [],
+  "errors": []
+}

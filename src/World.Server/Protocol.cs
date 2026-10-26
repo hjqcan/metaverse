@@ -55,7 +55,7 @@ internal sealed record WorldAction(string Type, long Dx = 0, long Dy = 0, long Q
     string? VisitCommandId = null, string? Text = null, long ExpectedMosaicRevision = 0,
     MosaicPatchCell[]? Patch = null, string? ProposalActorId = null, string? ProposalCommandId = null,
     string? Decision = null, string? NodeId = null, double TargetX = 0, double TargetY = 0, bool Continuous = false,
-    string? RecipientActorId = null, string? Resource = null)
+    string? RecipientActorId = null, string? Resource = null, string? SourceId = null, string? ReservationId = null)
 {
     public object Canonical => Type switch
     {
@@ -65,6 +65,8 @@ internal sealed record WorldAction(string Type, long Dx = 0, long Dy = 0, long Q
         "claim" => new { type = Type, quantity = Quantity },
         "gather" => new { type = Type, nodeId = NodeId },
         "transfer" => new { type = Type, recipientActorId = RecipientActorId, resource = Resource, quantity = Quantity },
+        "reserve_material" => new { type = Type, sourceId = SourceId },
+        "cancel_reservation" or "harvest_material" => new { type = Type, reservationId = ReservationId },
         "visit" => new { type = Type, activityId = ActivityId },
         "postcard" => new { type = Type, activityId = ActivityId, visitCommandId = VisitCommandId, text = Text },
         "mosaic" => new { type = Type, activityId = ActivityId, visitCommandId = VisitCommandId,
@@ -130,6 +132,19 @@ internal sealed record WorldCommand(int SchemaVersion, string RulesVersion, stri
             WorldAction parsed;
             switch (type)
             {
+                case "reserve_material":
+                    Fields(action, "type", "sourceId");
+                    var sourceId = String(action.GetProperty("sourceId"));
+                    if (!Protocol.ValidCommandId(sourceId)) Invalid("来源ID格式无效");
+                    parsed = new(type, SourceId: sourceId);
+                    break;
+                case "cancel_reservation":
+                case "harvest_material":
+                    Fields(action, "type", "reservationId");
+                    var reservationId = String(action.GetProperty("reservationId"));
+                    if (!Protocol.ValidCommandId(reservationId)) Invalid("预约ID格式无效");
+                    parsed = new(type, ReservationId: reservationId);
+                    break;
                 case "walk":
                     if (!scenario.SupportsContinuous) Invalid("当前世界不支持连续行走");
                     Fields(action, "type", "to");

@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "binarySha256": "11c0478324d11476dfce3f37bb7d6cf5281ec91fbfb9b36444a114ccbfc2b502",
+  "cases": {
+    "legacy": {
+      "passed": true,
+      "schemaRemains9": true,
+      "startupLogicalDumpUnchanged": true,
+      "originalR9ObservationUnchanged": true,
+      "originalReceiptBytesChecked": 330,
+      "unavailableActions": [
+        {
+          "schemaVersion": 1,
+          "rulesVersion": "r9",
+          "stateVersion": 330,
+          "commandId": "7d056d516b1647f9bcb7a0e7c3ec6aee",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+          },
+          "eventCursor": 331,
+          "error": {
+            "code": "ACTION_UNAVAILABLE",
+            "message": "\u5f53\u524d\u4e16\u754c\u6ca1\u6709\u9884\u7ea6\u91c7\u96c6\u6765\u6e90",
+            "retryable": false,
+            "mutated": false
+          },
+          "status": "rejected"
+        },
+        {
+          "schemaVersion": 1,
+          "rulesVersion": "r9",
+          "stateVersion": 330,
+          "commandId": "d9fc46b3c38143d1b2ed86ace294fc19",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+          },
+          "eventCursor": 331,
+          "error": {
+            "code": "ACTION_UNAVAILABLE",
+            "message": "\u5f53\u524d\u4e16\u754c\u6ca1\u6709\u9884\u7ea6\u91c7\u96c6\u6765\u6e90",
+            "retryable": false,
+            "mutated": false
+          },
+          "status": "rejected"
+        },
+        {
+          "schemaVersion": 1,
+          "rulesVersion": "r9",
+          "stateVersion": 330,
+          "commandId": "6527d61807eb4e5486dd6ba7a941e6dc",
+          "identity": {
+            "operatorId": "local-operator",
+            "actorId": "a1",
+            "sessionId": "se0fcfd495a124e4c91a8a1455d57a20e"
+          },
+          "eventCursor": 331,
+          "error": {
+            "code": "ACTION_UNAVAILABLE",
+            "message": "\u5f53\u524d\u4e16\u754c\u6ca1\u6709\u9884\u7ea6\u91c7\u96c6\u6765\u6e90",
+            "retryable": false,
+            "mutated": false
+          },
+          "status": "rejected"
+        }
+      ],
+      "offlineEnableRejectedWithoutMutation": true,
+      "audit": {
+        "materialTotal": 12,
+        "stateVersion": 330,
+        "requests": 6,
+        "processStopped": true
+      }
+    }
+  },
+  "worlds": [
+    {
+      "name": "actual-r9",
+      "instance": "w_a2d7cd9ccbde4295b2fe38adfc3de6b8"
+    }
+  ],
+  "scope": "independent r10 protocol/spatial/recovery/r9 boundary",
+  "contractSha256": "0f9aa15d2d616130a45a69c1691239759f25462d57c0a04b6d63169298c67752",
+  "externalModelCalls": 0,
+  "directSqlStateEdits": false,
+  "controlledClock": false,
+  "earnedSeed": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/entry-http-20261026T042557872761Z/closed-earned-baseline"
+}

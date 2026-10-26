@@ -1,0 +1,260 @@
+{
+  "recordedAtUtc": "2026-10-26T04:35:25.125196+00:00",
+  "suite": "all",
+  "passed": false,
+  "actualModelCalls": 0,
+  "results": [
+    {
+      "name": "restore",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/restore.log",
+      "evidence": null
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/build.log",
+      "evidence": null
+    },
+    {
+      "name": "http-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-foundation.log",
+      "evidence": ".local/iter0001/api/20261026T123526-0568b1/results.json"
+    },
+    {
+      "name": "http-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-passage.log",
+      "evidence": ".local/iter0002/api/20261026T123526-285a80/results.json"
+    },
+    {
+      "name": "http-resident_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-resident_mission.log",
+      "evidence": ".local/iter0003/api/20261026T123526-f518fa/results.json"
+    },
+    {
+      "name": "http-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-activities.log",
+      "evidence": ".local/iter0004/api/20261026T123535-f91da5/results.json"
+    },
+    {
+      "name": "http-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-postcards.log",
+      "evidence": ".local/iter0005/api/20261026T123536-d3dc28/results.json"
+    },
+    {
+      "name": "http-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-mosaic.log",
+      "evidence": ".local/iter0006/api/20261026T123536-c530d5/results.json"
+    },
+    {
+      "name": "http-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-consent.log",
+      "evidence": ".local/iter0007/api/20261026T123544-0a4cfd/results.json"
+    },
+    {
+      "name": "http-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-inbox.log",
+      "evidence": ".local/iter0008/api/20261026T123547-1077af/results.json"
+    },
+    {
+      "name": "http-entry_guide",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-entry_guide.log",
+      "evidence": ".local/iter0009/api/20261026T123548-69ff72/results.json"
+    },
+    {
+      "name": "http-wilderness",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-wilderness.log",
+      "evidence": ".local/iter0010/api/20261026T123554-b8d545/results.json"
+    },
+    {
+      "name": "http-wilderness_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-wilderness_mission.log",
+      "evidence": ".local/iter0013/api/20261026T043606Z-45eefc/results.json"
+    },
+    {
+      "name": "http-continuous",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-continuous.log",
+      "evidence": ".local/iter0014/api/20261026T043607Z-36baf1/results.json"
+    },
+    {
+      "name": "http-continuous_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-continuous_mission.log",
+      "evidence": ".local/iter0015/api/20261026T043613Z-8dfdbb/results.json"
+    },
+    {
+      "name": "http-world_instance",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-world_instance.log",
+      "evidence": ".local/world-instance/api/20261026T043616Z-fadc9b/results.json"
+    },
+    {
+      "name": "http-construction_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-construction_mission.log",
+      "evidence": ".local/iter0017/api/20261026T043623Z-192528/results.json"
+    },
+    {
+      "name": "http-instance_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-instance_mission.log",
+      "evidence": ".local/instance-mission/api/20261026T043633Z-0aedd0/results.json"
+    },
+    {
+      "name": "http-actor_state",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-actor_state.log",
+      "evidence": ".local/iter0019/api/20261026T043657Z-41a384/results.json"
+    },
+    {
+      "name": "http-actor_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-actor_mission.log",
+      "evidence": ".local/iter0019/python/20261026T043836Z-653a83/results.json"
+    },
+    {
+      "name": "http-material_transfer",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-material_transfer.log",
+      "evidence": ".local/iter0020/api/20261026T043844Z-803b29/results.json"
+    },
+    {
+      "name": "http-transfer_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-transfer_mission.log",
+      "evidence": ".local/iter0020/python/20261026T043923Z-0d39ca/results.json"
+    },
+    {
+      "name": "http-material_access",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-material_access.log",
+      "evidence": ".local/iter0022/api/20261026T043955Z-6af505/results.json"
+    },
+    {
+      "name": "http-material_access_time",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-material_access_time.log",
+      "evidence": ".local/iter0022/time/20261026T044017Z-7aabe8/results.json"
+    },
+    {
+      "name": "http-material_access_mission",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/http-material_access_mission.log",
+      "evidence": ".local/iter0022/python/20261026T044041Z-1195ac/results.json"
+    },
+    {
+      "name": "browser-foundation",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-foundation.log",
+      "evidence": ".local/iter0001/browser/2026-10-26T04-41-21-578Z/results.json"
+    },
+    {
+      "name": "browser-passage",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-passage.log",
+      "evidence": ".local/iter0002/browser/2026-10-26T04-41-30-805Z/results.json"
+    },
+    {
+      "name": "browser-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-resident.log",
+      "evidence": ".local/iter0003/browser/2026-10-26T04-41-39-056Z/results.json"
+    },
+    {
+      "name": "browser-activities",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-activities.log",
+      "evidence": ".local/iter0004/browser/2026-10-26T04-41-40-674Z/results.json"
+    },
+    {
+      "name": "browser-postcards",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-postcards.log",
+      "evidence": ".local/iter0005/browser/2026-10-26T04-41-46-081Z/results.json"
+    },
+    {
+      "name": "browser-mosaic",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-mosaic.log",
+      "evidence": ".local/iter0006/browser/2026-10-26T04-41-55-072Z/results.json"
+    },
+    {
+      "name": "browser-consent",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-consent.log",
+      "evidence": ".local/iter0007/browser/2026-10-26T04-42-06-193Z/results.json"
+    },
+    {
+      "name": "browser-inbox",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-inbox.log",
+      "evidence": ".local/iter0008/browser/2026-10-26T04-42-22-399Z/results.json"
+    },
+    {
+      "name": "browser-consent-experience",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-consent-experience.log",
+      "evidence": ".local/consent-experience/browser/2026-10-26T04-42-34-655Z/results.json"
+    },
+    {
+      "name": "browser-entry",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-entry.log",
+      "evidence": ".local/iter0009/browser/2026-10-26T04-42-44-099Z/results.json"
+    },
+    {
+      "name": "browser-wilderness",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-wilderness.log",
+      "evidence": ".local/iter0010/browser/2026-10-26T04-42-58-540Z/results.json"
+    },
+    {
+      "name": "browser-wilderness-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-wilderness-resident.log",
+      "evidence": ".local/iter0013/browser/2026-10-26T04-43-04-620Z/results.json"
+    },
+    {
+      "name": "browser-continuous-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-continuous-resident.log",
+      "evidence": ".local/iter0015/browser/2026-10-26T04-43-06-348Z/results.json"
+    },
+    {
+      "name": "browser-construction-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-construction-resident.log",
+      "evidence": ".local/iter0017/browser/2026-10-26T04-43-17-227Z/results.json"
+    },
+    {
+      "name": "browser-actor-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-actor-resident.log",
+      "evidence": ".local/iter0019/browser/2026-10-26T04-43-29-096Z/results.json"
+    },
+    {
+      "name": "browser-transfer-resident",
+      "exitCode": 0,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-transfer-resident.log",
+      "evidence": ".local/iter0020/browser/2026-10-26T04-43-43-881Z/results.json"
+    },
+    {
+      "name": "browser-material-resident",
+      "exitCode": 1,
+      "log": ".local/checks/20261026T043525Z-3f0fe3/browser-material-resident.log",
+      "evidence": ".local/iter0022/browser/2026-10-26T04-43-55-806Z/results.json"
+    }
+  ]
+}

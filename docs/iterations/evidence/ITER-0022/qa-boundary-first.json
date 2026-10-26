@@ -1,0 +1,561 @@
+{
+  "passed": false,
+  "binarySha256": "11c0478324d11476dfce3f37bb7d6cf5281ec91fbfb9b36444a114ccbfc2b502",
+  "cases": {
+    "protocol": {
+      "passed": true,
+      "malformed": [
+        {
+          "action": "reserve_material",
+          "value": null,
+          "status": 400
+        },
+        {
+          "action": "reserve_material",
+          "value": true,
+          "status": 400
+        },
+        {
+          "action": "reserve_material",
+          "value": 3,
+          "status": 400
+        },
+        {
+          "action": "reserve_material",
+          "value": [],
+          "status": 400
+        },
+        {
+          "action": "reserve_material",
+          "value": {},
+          "status": 400
+        },
+        {
+          "action": "reserve_material",
+          "value": "",
+          "status": 400
+        },
+        {
+          "action": "reserve_material",
+          "value": " ",
+          "status": 400
+        },
+        {
+          "action": "reserve_material",
+          "value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          "status": 400
+        },
+        {
+          "action": "cancel_reservation",
+          "value": null,
+          "status": 400
+        },
+        {
+          "action": "cancel_reservation",
+          "value": true,
+          "status": 400
+        },
+        {
+          "action": "cancel_reservation",
+          "value": 3,
+          "status": 400
+        },
+        {
+          "action": "cancel_reservation",
+          "value": [],
+          "status": 400
+        },
+        {
+          "action": "cancel_reservation",
+          "value": {},
+          "status": 400
+        },
+        {
+          "action": "cancel_reservation",
+          "value": "",
+          "status": 400
+        },
+        {
+          "action": "cancel_reservation",
+          "value": " ",
+          "status": 400
+        },
+        {
+          "action": "cancel_reservation",
+          "value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          "status": 400
+        },
+        {
+          "action": "harvest_material",
+          "value": null,
+          "status": 400
+        },
+        {
+          "action": "harvest_material",
+          "value": true,
+          "status": 400
+        },
+        {
+          "action": "harvest_material",
+          "value": 3,
+          "status": 400
+        },
+        {
+          "action": "harvest_material",
+          "value": [],
+          "status": 400
+        },
+        {
+          "action": "harvest_material",
+          "value": {},
+          "status": 400
+        },
+        {
+          "action": "harvest_material",
+          "value": "",
+          "status": 400
+        },
+        {
+          "action": "harvest_material",
+          "value": " ",
+          "status": 400
+        },
+        {
+          "action": "harvest_material",
+          "value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          "status": 400
+        }
+      ],
+      "duplicateFieldsRejected": 3,
+      "identityOverrideRejected": 4,
+      "wrongValidInstanceId": "w_7f53a8ba63064aa6850b2025fc268ec9",
+      "instanceRejection": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": null,
+        "commandId": null,
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "s48ab04efc6f7451aa43d6a8caf8e0108"
+        },
+        "eventCursor": null,
+        "error": {
+          "code": "WORLD_INSTANCE_MISMATCH",
+          "message": "\u8fde\u63a5\u5df2\u6307\u5411\u53e6\u4e00\u4e2a\u4e16\u754c\uff0c\u539f\u52a8\u4f5c\u4ecd\u987b\u5728\u539f\u4e16\u754c\u786e\u8ba4",
+          "retryable": false,
+          "mutated": false
+        }
+      },
+      "enable": {
+        "wrongInstanceRejected": {
+          "exitCode": 1,
+          "output": "\u79bb\u7ebf\u7ba1\u7406\u5931\u8d25\uff1aArgumentException\n"
+        },
+        "enabled": {
+          "exitCode": 0,
+          "output": "\u6750\u6599\u6765\u6e90\u5df2\u5728\u539f\u5b9e\u4f8b\u5f00\u542f\u3002\n"
+        },
+        "repeatNoChange": {
+          "exitCode": 0,
+          "output": "\u6750\u6599\u6765\u6e90\u5df2\u7ecf\u5f00\u542f\uff0c\u539f\u8fdb\u5ea6\u4fdd\u6301\u3002\n"
+        }
+      },
+      "rotatedSessionStillSameGroup": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 256,
+        "commandId": "a94f35c419554ec9951cc7b797fb06a7",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1_alias",
+          "sessionId": "s1dc91edbf0a147798c484cc21227215e"
+        },
+        "eventCursor": 257,
+        "error": {
+          "code": "RESERVATION_ALREADY_ACTIVE",
+          "message": "\u540c\u4e00\u5df2\u77e5\u63a7\u5236\u7ec4\u5df2\u6709\u6392\u961f\u6216\u5f85\u91c7\u9884\u7ea6",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected",
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 256,
+          "appliedOnStateVersion": 256
+        }
+      },
+      "aliasCannotCancel": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 256,
+        "commandId": "194c53a4d79f423783384031080506c7",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1_alias",
+          "sessionId": "s1dc91edbf0a147798c484cc21227215e"
+        },
+        "eventCursor": 257,
+        "error": {
+          "code": "RESERVATION_NOT_FOUND",
+          "message": "\u672a\u627e\u5230\u672c\u4eba\u539f\u9884\u7ea6",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected",
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 256,
+          "appliedOnStateVersion": 256
+        }
+      },
+      "cancelled": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 258,
+        "commandId": "2c01156778b94e2da4d580570b430936",
+        "identity": {
+          "operatorId": "local-operator",
+          "actorId": "a1",
+          "sessionId": "s48ab04efc6f7451aa43d6a8caf8e0108"
+        },
+        "eventCursor": 259,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "cancel_reservation",
+          "reservationId": "mda6d841b71da48e8a361932d43b35c63",
+          "sourceId": "wood-source-east",
+          "status": "cancelled",
+          "releasedQuantity": 0
+        },
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 257,
+          "appliedOnStateVersion": 257
+        }
+      },
+      "reapplication": {
+        "reservationId": "maccf9cc5e58a4487b4a1789e737119c5",
+        "actorId": "a1",
+        "operatorId": "local-operator",
+        "requestCommandId": "ecf2c136b1fe4a889ddc6ed9b5f776a7",
+        "queueSequence": 3,
+        "status": "queued",
+        "requestedAtMs": 21446,
+        "grantedAtMs": null,
+        "expiresAtMs": null,
+        "remaining": 3
+      },
+      "late": {
+        "reservationId": "md8ef8fe6c0d94458b8b601fcd310f64e",
+        "actorId": "a2",
+        "operatorId": "declared-late",
+        "requestCommandId": "eaf10b91d6e644a69155f9c55cd183bb",
+        "queueSequence": 2,
+        "status": "queued",
+        "requestedAtMs": 21437,
+        "grantedAtMs": null,
+        "expiresAtMs": null,
+        "remaining": 3
+      },
+      "otherActorSameCommandId": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 260,
+        "commandId": "aecd934ba07d4f099f54f6d31433f57b",
+        "identity": {
+          "operatorId": "declared-third",
+          "actorId": "a3",
+          "sessionId": "sa423548f7dce496895be25120daedb09"
+        },
+        "eventCursor": 261,
+        "error": null,
+        "status": "committed",
+        "result": {
+          "action": "reserve_material",
+          "reservationId": "m1546733d3ddd440b8d966c3baa991d09",
+          "sourceId": "wood-source-east",
+          "queueSequence": 4,
+          "status": "queued",
+          "requestedAtMs": 21458
+        },
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 259,
+          "appliedOnStateVersion": 259
+        }
+      },
+      "originalReserveAndCancelBytesPreserved": true,
+      "audit": {
+        "issued": 12,
+        "generated": 0,
+        "wild": 0,
+        "source": 0,
+        "inventory": 6,
+        "embodied": 6,
+        "activeReserved": 0,
+        "serviceMs": 21458,
+        "processedPeriod": 0,
+        "production": [],
+        "stateVersion": 260,
+        "realCommandsThisBranch": 7,
+        "processStopped": true
+      }
+    },
+    "spatial": {
+      "passed": true,
+      "fourOldTreePlatforms": [
+        {
+          "entityId": "e13f4e9d4d0774178957588b3b4bab567",
+          "definitionId": "platform",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            25.7,
+            18.2
+          ],
+          "embodiedWood": 3
+        },
+        {
+          "entityId": "e26210d94f0e64fa6aab560d7c3406d0a",
+          "definitionId": "platform",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a1",
+          "position": [
+            6.2,
+            7.8
+          ],
+          "embodiedWood": 3
+        },
+        {
+          "entityId": "e78de64b8d40d44b99350b9bc1027083b",
+          "definitionId": "platform",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a1",
+          "position": [
+            9.2,
+            16.3
+          ],
+          "embodiedWood": 3
+        },
+        {
+          "entityId": "ee509d8d14a5e4b729ffa4898c3717d0e",
+          "definitionId": "platform",
+          "definitionVersion": 1,
+          "rulesVersion": "r10",
+          "ownerActorId": "a2",
+          "position": [
+            25.4,
+            5.8
+          ],
+          "embodiedWood": 3
+        }
+      ],
+      "fullNaturalSource": {
+        "version": 1,
+        "sourceId": "wood-source-east",
+        "position": [
+          28,
+          10
+        ],
+        "buildExclusion": [
+          27,
+          9,
+          29,
+          11
+        ],
+        "active": true,
+        "serviceMs": 33350,
+        "enabledAtServiceMs": 13294,
+        "nextProductionAtMs": 43294,
+        "generatedWood": 6,
+        "stockWood": 6,
+        "freeWood": 6,
+        "inputBudget": 12,
+        "capacity": 6,
+        "reservationQuantity": 3,
+        "leaseMs": 60000,
+        "productionIntervalMs": 10000,
+        "currentReservation": null,
+        "recentReservations": [],
+        "queue": [],
+        "controlBasis": "declared-local-fixture",
+        "controlRoster": [
+          {
+            "actorId": "a1",
+            "operatorId": "local-operator"
+          },
+          {
+            "actorId": "a1_alias",
+            "operatorId": "local-operator"
+          },
+          {
+            "actorId": "a2",
+            "operatorId": "declared-late"
+          },
+          {
+            "actorId": "a3",
+            "operatorId": "declared-third"
+          }
+        ]
+      },
+      "emptyAndFullSourceWalkable": true,
+      "oldPlatformCentersStillWalkable": true,
+      "closedExclusion": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 98,
+        "commandId": "3fa6170f427c4eb28442bea3fd07d3d9",
+        "identity": {
+          "operatorId": "declared-late",
+          "actorId": "a2",
+          "sessionId": "s46a12e06c7ba437d96445ca08a5e1505"
+        },
+        "eventCursor": 99,
+        "error": {
+          "code": "AREA_OCCUPIED",
+          "message": "\u91c7\u96c6\u533a\u59cb\u7ec8\u4fdd\u7559\uff0c\u4e0d\u80fd\u5728\u5176\u4e2d\u5efa\u9020",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected",
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 98,
+          "appliedOnStateVersion": 98
+        }
+      },
+      "activeExclusion": {
+        "schemaVersion": 1,
+        "rulesVersion": "r10",
+        "stateVersion": 274,
+        "commandId": "4c90f655855e454983f35375a4f80104",
+        "identity": {
+          "operatorId": "declared-third",
+          "actorId": "a3",
+          "sessionId": "s5788ad6088de43b48c35ea8dff792704"
+        },
+        "eventCursor": 275,
+        "error": {
+          "code": "AREA_OCCUPIED",
+          "message": "\u91c7\u96c6\u533a\u59cb\u7ec8\u4fdd\u7559\uff0c\u4e0d\u80fd\u5728\u5176\u4e2d\u5efa\u9020",
+          "retryable": false,
+          "mutated": false
+        },
+        "status": "rejected",
+        "execution": {
+          "preconditionMode": "actor-state-v1",
+          "observedStateVersion": 274,
+          "appliedOnStateVersion": 274
+        }
+      },
+      "allOldEntitiesPreserved": true,
+      "audit": {
+        "issued": 18,
+        "generated": 6,
+        "wild": 0,
+        "source": 3,
+        "inventory": 3,
+        "embodied": 12,
+        "activeReserved": 0,
+        "serviceMs": 42700,
+        "processedPeriod": 2,
+        "production": [
+          [
+            1,
+            23294,
+            3,
+            166
+          ],
+          [
+            2,
+            33294,
+            3,
+            167
+          ]
+        ],
+        "stateVersion": 274,
+        "realCommandsThisBranch": 272,
+        "processStopped": true
+      }
+    },
+    "recovery": {
+      "passed": false,
+      "failure": "Traceback (most recent call last):\n  File \"/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/entry_boundaries.py\", line 224, in <module>\n    try:report['cases'][name]={'passed':True,**globals()[name](w)}\n                                               ^^^^^^^^^^^^^^^^^^\n  File \"/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/entry_boundaries.py\", line 132, in recovery\n    assert response[1]['mutated'] is None and child.process.poll() is None\n           ~~~~~~~~~~~^^^^^^^^^^^\nKeyError: 'mutated'\n",
+      "audit": {
+        "issued": 15,
+        "generated": 3,
+        "wild": 0,
+        "source": 3,
+        "inventory": 6,
+        "embodied": 6,
+        "activeReserved": 3,
+        "serviceMs": 31093,
+        "processedPeriod": 1,
+        "production": [
+          [
+            1,
+            31047,
+            3,
+            258
+          ]
+        ],
+        "stateVersion": 258,
+        "realCommandsThisBranch": 1,
+        "processStopped": true
+      }
+    }
+  },
+  "worlds": [
+    {
+      "name": "protocol",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "spatial",
+      "instance": "w_45f9ecd67e874fb295790ba9ac29afa5"
+    },
+    {
+      "name": "recovery",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "reserve_material-before-commit",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "reserve_material-after-commit",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "cancel_reservation-before-commit",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "cancel_reservation-after-commit",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "harvest_material-before-commit",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "harvest_material-after-commit",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    },
+    {
+      "name": "harvest_material-throw-after-debit",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    }
+  ],
+  "scope": "independent r10 protocol/spatial/recovery/r9 boundary",
+  "contractSha256": "0f9aa15d2d616130a45a69c1691239759f25462d57c0a04b6d63169298c67752",
+  "externalModelCalls": 0,
+  "directSqlStateEdits": false,
+  "controlledClock": false,
+  "earnedSeed": "/home/wangjunfeng/\u6587\u6863/Workspace/metaverse/.local/qa/20261026-test-agent/entry-http-20261026T042557872761Z/closed-earned-baseline"
+}

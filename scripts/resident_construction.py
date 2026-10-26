@@ -15,6 +15,14 @@ def placement_issue(observed, goal):
     x0, z0, x1, z1 = observed['world']['bounds']
     if x - hx < x0 or x + hx > x1 or z - hz < z0 or z + hz > z1:
         return 'construction_outside_world'
+    if observed.get('rulesVersion') == 'r10':
+        exclusion = observed.get('materialAccess', {}).get('buildExclusion')
+        if (not isinstance(exclusion, list) or len(exclusion) != 4
+                or not all(nav.finite(n) for n in exclusion)):
+            return 'construction_material_exclusion_unavailable'
+        left, top, right, bottom = exclusion
+        if x + hx > left and x - hx < right and z + hz > top and z - hz < bottom:
+            return 'construction_material_source_reserved'
     river = observed['terrain']['river']
     if definition == 'bridge':
         center = nav._river_x(river['centerline'], z)
@@ -106,7 +114,7 @@ def evidence(receipt, intent, actor, before, observed):
     position = intent['action'].get('at')
     if (receipt.get('commandId') != intent['commandId'] or receipt.get('status') != 'committed'
             or type(receipt.get('schemaVersion')) is not int or receipt['schemaVersion'] != 1
-            or receipt.get('rulesVersion') != intent.get('rulesVersion') or intent.get('rulesVersion') not in ('r8', 'r9')
+            or receipt.get('rulesVersion') != intent.get('rulesVersion') or intent.get('rulesVersion') not in ('r8', 'r9', 'r10')
             or not isinstance(receipt.get('identity'), dict)
             or receipt['identity'].get('actorId') != actor
             or not valid_execution(receipt, intent) or not integer(before.get('inventoryWood'))

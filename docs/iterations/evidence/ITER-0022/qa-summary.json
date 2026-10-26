@@ -1,0 +1,280 @@
+{
+  "updatedAtUtc": "2026-10-26T04:45:44.757658+00:00",
+  "passed": true,
+  "level": "independent isolated participant and tester",
+  "coreGroups": 10,
+  "godotGroups": 6,
+  "pythonGroups": 7,
+  "chromeChecks": 8,
+  "acceptedEvidence": {
+    "core-primary": {
+      "file": "entry-http-20261026T042557872761Z/results.json",
+      "fileSha256": "ba5e1e49194f8924260e026d06958630ddd9889e6020bc21fd466fced07750d3",
+      "acceptedCases": [
+        "creation",
+        "competition",
+        "expiry",
+        "budget",
+        "clock",
+        "production_faults"
+      ],
+      "wholeRunPassed": true,
+      "binarySha256": "11c0478324d11476dfce3f37bb7d6cf5281ec91fbfb9b36444a114ccbfc2b502"
+    },
+    "core-boundary-geometry": {
+      "file": "entry-boundaries-20261026T043039284331Z/results.json",
+      "fileSha256": "2737e34e9ae4d528ac565639fe9a446efa7b38251a543cabc9523c0f2919fe60",
+      "acceptedCases": [
+        "protocol",
+        "spatial"
+      ],
+      "wholeRunPassed": false,
+      "binarySha256": "11c0478324d11476dfce3f37bb7d6cf5281ec91fbfb9b36444a114ccbfc2b502"
+    },
+    "core-boundary-recovery": {
+      "file": "entry-boundaries-20261026T043242626247Z/results.json",
+      "fileSha256": "b1350df47cd2b239ed52f948caaf02585bb7b7c06d3e4e7de2fb53e5bbb8502b",
+      "acceptedCases": [
+        "recovery"
+      ],
+      "wholeRunPassed": false,
+      "binarySha256": "11c0478324d11476dfce3f37bb7d6cf5281ec91fbfb9b36444a114ccbfc2b502"
+    },
+    "core-boundary-legacy": {
+      "file": "entry-boundaries-20261026T043452836416Z/results.json",
+      "fileSha256": "c54c869064448a411952aac50cbabb4371b571a97e75215d78ae20b96bb61df6",
+      "acceptedCases": [
+        "legacy"
+      ],
+      "wholeRunPassed": true,
+      "binarySha256": "11c0478324d11476dfce3f37bb7d6cf5281ec91fbfb9b36444a114ccbfc2b502"
+    },
+    "godot-records": {
+      "file": "entry-godot-20261026T043618229528Z/results.json",
+      "fileSha256": "f16d47406050440c807dcae48092d87ca91076a1f1134746aa887c08c5e4bbdd",
+      "acceptedCases": [
+        "recovery",
+        "preflight",
+        "replacement"
+      ],
+      "wholeRunPassed": false,
+      "binarySha256": "4a66fd0a2382bb71597d3ae25f2b169bc70af8a469b33d6cb149b748a6b96b37"
+    },
+    "godot-events-ui": {
+      "file": "entry-godot-20261026T043708607242Z/results.json",
+      "fileSha256": "efe7d5c58cd0a424931dbe6bb2050255cba316dafa3c3ae969249b0b1e7ca47c",
+      "acceptedCases": [
+        "event_evidence",
+        "queued_cancel",
+        "ui"
+      ],
+      "wholeRunPassed": true,
+      "binarySha256": "4a66fd0a2382bb71597d3ae25f2b169bc70af8a469b33d6cb149b748a6b96b37"
+    },
+    "python-cli-records": {
+      "file": "entry-python-20261026T043853281771Z/results.json",
+      "fileSha256": "466e2e91db4241d5d85b1ae37a323c0931ff95b489129b6a7061f2f4a337ca3f",
+      "acceptedCases": [
+        "cli",
+        "recovery",
+        "preflight"
+      ],
+      "wholeRunPassed": false,
+      "binarySha256": "4a66fd0a2382bb71597d3ae25f2b169bc70af8a469b33d6cb149b748a6b96b37"
+    },
+    "python-budget": {
+      "file": "entry-python-20261026T044002691532Z/results.json",
+      "fileSha256": "57a54e3f33a79c49762b702415e520e88edf18ca463231a54df7cfca170f0b92",
+      "acceptedCases": [
+        "budgets"
+      ],
+      "wholeRunPassed": false,
+      "binarySha256": "4a66fd0a2382bb71597d3ae25f2b169bc70af8a469b33d6cb149b748a6b96b37"
+    },
+    "python-expired-original-history": {
+      "file": "entry-python-20261026T044219576308Z/results.json",
+      "fileSha256": "a31e607c421654e90cd58e00cd7e9cf42696209e5e226fa72b707a3858eb4c37",
+      "acceptedCases": [
+        "expiry_existing",
+        "original_event"
+      ],
+      "wholeRunPassed": true,
+      "binarySha256": "4a66fd0a2382bb71597d3ae25f2b169bc70af8a469b33d6cb149b748a6b96b37"
+    },
+    "python-unused-permission": {
+      "file": "entry-python-20261026T044102343219Z/results.json",
+      "fileSha256": "aee1b57a087f62f05ac33cea1f418a5f5b031db061e1e93614704ebde03c5286",
+      "acceptedCases": [
+        "ordinary"
+      ],
+      "wholeRunPassed": true,
+      "binarySha256": "4a66fd0a2382bb71597d3ae25f2b169bc70af8a469b33d6cb149b748a6b96b37"
+    }
+  },
+  "browser": {
+    "file": "entry-web-v2-20261026T044102288554Z/results.json",
+    "fileSha256": "a32a2b5d591ef95318d39586c65289ed17b7c99361697f1361b89389ecc991f1",
+    "screenshotsViewed": [
+      "completed-desktop.png",
+      "completed-mobile.png"
+    ]
+  },
+  "pythonActualCli": {
+    "commands": 28,
+    "queries": 44,
+    "wood": 3,
+    "origin": [
+      26,
+      17
+    ],
+    "completed": true,
+    "newSessionAndRestartPreservedOriginal": true
+  },
+  "worldFacts": {
+    "initialNaturalWood": 12,
+    "naturalWoodBeforeSource": 0,
+    "firstResidentPrivateWoodPreserved": 6,
+    "originalBridgeWoodPreserved": 6,
+    "oneLaterPlatformWood": 3
+  },
+  "modelCalls": {
+    "external": 0,
+    "fixedSelectorInvocationsPerCliTask": 1
+  },
+  "directSqlWorldMutations": false,
+  "simulatedServiceClock": false,
+  "controlRoster": "declared local fixture; not independently controlled humans",
+  "testerProductWrites": false,
+  "testerServicesRemaining": [],
+  "qaCorrections": [
+    "recovery error.mutated field path",
+    "r9 actor-state mode rejection precedes action-unavailable; strict tested separately",
+    "materialReserved has no quantity field; corrupt queueSequence instead",
+    "low-wood execution guard uses preselected target because least-cost has no feasible choice",
+    "recentReservations are actor-filtered: initial other-actor window claim withdrawn and revalidated with 24 same-actor reservations",
+    "expiry poll used wrong actor; original DB naturally expired, then copied after stop and original pending resumed with original identity"
+  ],
+  "nonblockingVisualFinding": {
+    "id": "ITER0022-SOURCE-LABEL-OVERLAP",
+    "state": "fixed-and-independently-retested",
+    "evidence": "entry-godot-20261026T043708607242Z/ui-built.png",
+    "fixedSource": "clients/godot/world_view.gd ebf2271dd1541216ec7f0785600032e18607e1b027a95a5100f41f37395535d2",
+    "verification": "entry-godot-20261026T044339456302Z/results.json",
+    "screenshotViewed": "entry-godot-20261026T044339456302Z/ui-built.png"
+  },
+  "remaining": "Final source/commit attribution pending.",
+  "godotFinalVisual": {
+    "file": "entry-godot-20261026T044339456302Z/results.json",
+    "fileSha256": "95afe3ee139b30801a146e433e2470865a38cbb493e57b24ac582dce9da90e57",
+    "scope": "v2 single caption position change; actual source/harvest/build/controls UI rerun on earned baseline; previous five nonvisual groups not repeated"
+  },
+  "sourceAttribution": {
+    "core-v1": {
+      "manifest": "entry-frozen-core.json",
+      "files": {
+        "src/World.Server/ContinuousWorld.cs": "a52d234c27dabb19b5dfcb3ef4b077647508edc47617b074c7faefea6bfcdff3",
+        "src/World.Server/EntryGuide.cs": "097a08ad3f90f72e25743708e4f9a32e1cf2baec401c275bf7001a92655f3e8d",
+        "src/World.Server/MaterialAccess.cs": "2d3579095e5586adbf1a7954bf3b5b0b40b1e76125684e077fc9171fa111600d",
+        "src/World.Server/MaterialServiceClock.cs": "cc6b2b7e6a9040bd37fcb2edfc216266ed44171094ad4442917077d7e22f128f",
+        "src/World.Server/MaterialTransfer.cs": "413db75abfec5f98f7fc35344c7820ffd45b5f10c05f889918e0155e194befe1",
+        "src/World.Server/Program.cs": "2c40de52e8501093d790778b900016e2a20ed21acd82b7eea7b0f0ab76f350bc",
+        "src/World.Server/Protocol.cs": "809b0c9431ea403d34efcc5c30ef66855308ff59b74d900bfa5af63d9472a22d",
+        "src/World.Server/ServerConfiguration.cs": "8b33f7b3aae70229397362d0571769198303507712accd624ecedb1320eea8d1",
+        "src/World.Server/WorldDatabase.cs": "6b78848189df9867908d004f9c450d89977694d2fcec0cde47e83849b351bac3",
+        "src/World.Server/WorldInstance.cs": "f865654d13b63ac9659fa119353b5e32b303484eab49215bb7796a49a5b3fd1b",
+        "src/World.Server/WorldScenario.cs": "ea63aa8b79740cc1a603447dcbc8ae808f3632460db87bc9df6145f2003ff816",
+        "src/World.Server/WorldService.cs": "207ea946a234ea30d2d2cd6892b473653c85345a253defee676d4c5ae15ca23a",
+        "docs/contracts/material-access-v1.md": "0f9aa15d2d616130a45a69c1691239759f25462d57c0a04b6d63169298c67752"
+      },
+      "snapshot": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/entry-core-v1-20261026T042551736184Z",
+      "dllSha256": "11c0478324d11476dfce3f37bb7d6cf5281ec91fbfb9b36444a114ccbfc2b502"
+    },
+    "core-v2": {
+      "manifest": "entry-core-v2-frozen.json",
+      "files": {
+        "src/World.Server/ContinuousWorld.cs": "a52d234c27dabb19b5dfcb3ef4b077647508edc47617b074c7faefea6bfcdff3",
+        "src/World.Server/EntryGuide.cs": "097a08ad3f90f72e25743708e4f9a32e1cf2baec401c275bf7001a92655f3e8d",
+        "src/World.Server/MaterialAccess.cs": "2d3579095e5586adbf1a7954bf3b5b0b40b1e76125684e077fc9171fa111600d",
+        "src/World.Server/MaterialServiceClock.cs": "cc6b2b7e6a9040bd37fcb2edfc216266ed44171094ad4442917077d7e22f128f",
+        "src/World.Server/MaterialTransfer.cs": "413db75abfec5f98f7fc35344c7820ffd45b5f10c05f889918e0155e194befe1",
+        "src/World.Server/Program.cs": "1b9bfef75fdd5b55013ec1c0d64c0c8cf03fc2f6a223974bbc5ac842032ebe60",
+        "src/World.Server/Protocol.cs": "809b0c9431ea403d34efcc5c30ef66855308ff59b74d900bfa5af63d9472a22d",
+        "src/World.Server/ServerConfiguration.cs": "8b33f7b3aae70229397362d0571769198303507712accd624ecedb1320eea8d1",
+        "src/World.Server/WorldDatabase.cs": "6b78848189df9867908d004f9c450d89977694d2fcec0cde47e83849b351bac3",
+        "src/World.Server/WorldInstance.cs": "f865654d13b63ac9659fa119353b5e32b303484eab49215bb7796a49a5b3fd1b",
+        "src/World.Server/WorldScenario.cs": "ea63aa8b79740cc1a603447dcbc8ae808f3632460db87bc9df6145f2003ff816",
+        "src/World.Server/WorldService.cs": "207ea946a234ea30d2d2cd6892b473653c85345a253defee676d4c5ae15ca23a",
+        "docs/contracts/material-access-v1.md": "05ae40cea57832f11eae64243e797b358d21271cbcf7e9632450edbbf4f20347"
+      },
+      "snapshot": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/entry-core-v2-20261026T043518525851Z",
+      "dllSha256": "4a66fd0a2382bb71597d3ae25f2b169bc70af8a469b33d6cb149b748a6b96b37"
+    },
+    "godot-v1": {
+      "manifest": "entry-godot-frozen.json",
+      "files": {
+        "clients/godot/command_evidence.gd": "660018b6d01a554acce57a81ad560731fce2e9930b452fe8cd4db48941f05e22",
+        "clients/godot/main.gd": "57349c061c84168e16514ae99723fa80e96b5992508750ca8751f16945dcf4d7",
+        "clients/godot/material_panel.gd": "39624af0442670059f6408b73b46cf21eaefb2aa0b75b19828194bba9a48cc3c",
+        "clients/godot/pending_store.gd": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+        "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+        "clients/godot/world_client.gd": "f6bd6296495dbc8410e64adf6b8b9ee187517463bc0f2c28af0ba88df2825a63",
+        "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+        "clients/godot/world_view.gd": "76894c40d47f7258a3f1014b02c177b087557d6e14fc70eb0d54fbfe7359b770",
+        "clients/godot/main.tscn": "58496e2c5357a2774f2a70f19d0dcb9a015167d8bf9849dc68f4f20a7841e6b1",
+        "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424",
+        "tests/material_access_godot.py": "6524e3378b1fffe71d3b55feed4749bf32ab89b3f047acec6e0d998173b84f9e",
+        "tests/godot/material_access.gd": "c1b5babb9169ae4f5e3495ff99f0683dde28e480db934a1c17328b093ca7ca03"
+      },
+      "snapshot": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/entry-godot-v1-20261026T043243758735Z"
+    },
+    "godot-v2": {
+      "manifest": "entry-godot-v2-frozen.json",
+      "files": {
+        "clients/godot/command_evidence.gd": "660018b6d01a554acce57a81ad560731fce2e9930b452fe8cd4db48941f05e22",
+        "clients/godot/main.gd": "57349c061c84168e16514ae99723fa80e96b5992508750ca8751f16945dcf4d7",
+        "clients/godot/material_panel.gd": "39624af0442670059f6408b73b46cf21eaefb2aa0b75b19828194bba9a48cc3c",
+        "clients/godot/pending_store.gd": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+        "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+        "clients/godot/world_client.gd": "f6bd6296495dbc8410e64adf6b8b9ee187517463bc0f2c28af0ba88df2825a63",
+        "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+        "clients/godot/world_view.gd": "ebf2271dd1541216ec7f0785600032e18607e1b027a95a5100f41f37395535d2",
+        "clients/godot/main.tscn": "58496e2c5357a2774f2a70f19d0dcb9a015167d8bf9849dc68f4f20a7841e6b1",
+        "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424",
+        "tests/material_access_godot.py": "6524e3378b1fffe71d3b55feed4749bf32ab89b3f047acec6e0d998173b84f9e",
+        "tests/godot/material_access.gd": "c1b5babb9169ae4f5e3495ff99f0683dde28e480db934a1c17328b093ca7ca03"
+      },
+      "snapshot": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/entry-godot-v2-20261026T044334142462Z"
+    },
+    "python-v1": {
+      "manifest": "entry-python-frozen.json",
+      "files": {
+        "scripts/resident_mission.py": "3dd915be5cf53132b3d09bc3fdca9b5a698e9c7d494ea098e0eb435635d7189d",
+        "scripts/command_preconditions.py": "c8da1f3edcd7499739f02bea27c1ec213e34dc1ed64b7b5ff88f908f640ea440",
+        "scripts/continuous_navigation.py": "0303f9ade6ce90e48a85fbf8e5a5aaff145ca0a305562cee4c0d0bb1cb21e578",
+        "scripts/resident_construction.py": "eef4aa235fb0fdf2428b17005381074bb1f773f3ac21d600b2c095e96c1b6411",
+        "scripts/resident_transfer.py": "957067bc33585e1fb5f7f9b21b703aa1c8decf8f4148fcb2fe24e4ce50329a83",
+        "scripts/wilderness_materials.py": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6",
+        "scripts/run_resident.py": "3c517466e6ab985d99d1572a2cad7075bebf2c763e22cca7481326a92c3791cf",
+        "scripts/resident_material_access.py": "0e9aa7bc9bfd89bc65270a0cc49fd8a2c128cdaff2fc95b6dcde3d56ad081d68",
+        "tests/material_access_mission_api.py": "03c90a5d6bea028667dca8c617299832231187af87869ad64234807397357568",
+        "tests/fixtures/material-access-platform.json": "4be419aa7bad271c5bc2adf915124d2ab5ab6ca9abc87ba10fc1cecbb45011f3"
+      },
+      "snapshot": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/entry-python-v1-20261026T043637337795Z"
+    },
+    "web-v2": {
+      "manifest": "entry-web-v2-frozen.json",
+      "files": {
+        "src/World.Server/wwwroot/resident.js": "a949e38be64ae243b105a040da94f767635f0c3993ff3a22aecdcb5e97b86042",
+        "src/World.Server/wwwroot/resident.html": "ddb32d79320cda42707ac1fa6c15e281e161b823e9d0b4a295b36fa0d0aed3d0",
+        "src/World.Server/wwwroot/material-report.js": "087db4b4b5e6e8193b0b7c4ade00797d4f1b6e31d55ec22cac891bd1bdf47efa",
+        "tests/browser/material-resident.mjs": "c0aa0177d7f24c8b0bd006402298bae5375fd5ca6b12fe599e6da7b609d70a00"
+      },
+      "snapshot": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/entry-web-v2-20261026T044102288554Z"
+    }
+  },
+  "stopAudit": {
+    "checkedAtUtc": "2026-10-26T04:45:44.757658+00:00",
+    "method": "/proc exact argv for HTTP/Godot and WORLD_DATA_DIR scoped to tester QA root; after final Godot v2 UI exit",
+    "matchingPids": []
+  }
+}

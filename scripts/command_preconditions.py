@@ -16,7 +16,7 @@ def point(value):
 
 def select_mode(observed):
     capability = observed.get('commandConcurrency')
-    if (observed.get('rulesVersion') in ('r8', 'r9')
+    if (observed.get('rulesVersion') in ('r8', 'r9', 'r10')
             and valid_world_instance(observed.get('world', {}).get('instanceId'))
             and isinstance(capability, dict) and type(capability.get('version')) is int
             and capability['version'] == 1 and isinstance(capability.get('supportedModes'), list)
@@ -42,7 +42,7 @@ def saved_mode(state):
         mode = binding['preconditionMode']
         if mode not in (None, ACTOR_STATE) or mission['preconditionMode'] != mode:
             raise ValueError('Persisted command precondition modes disagree')
-        if mode == ACTOR_STATE and (binding.get('rulesVersion') not in ('r8', 'r9')
+        if mode == ACTOR_STATE and (binding.get('rulesVersion') not in ('r8', 'r9', 'r10')
                                    or not valid_world_instance(binding.get('instanceId'))):
             raise ValueError('Actor-state commands require the original protected continuous world')
     pending = state['_state'].get('pending')
@@ -57,7 +57,9 @@ def saved_mode(state):
             required = {'walk': ('walkBefore', ('position', 'maxStepDistance')),
                         'gather': ('gatherBefore', ('position', 'remainingWood', 'inventoryWood')),
                         'build': ('constructionBefore', ('inventoryWood',)),
-                        'transfer': ('transferBefore', ('position', 'inventoryWood'))}
+                        'transfer': ('transferBefore', ('position', 'inventoryWood')),
+                        'reserve_material': ('materialBefore', ('position', 'inventoryWood', 'reservation')),
+                        'harvest_material': ('materialBefore', ('position', 'inventoryWood', 'reservation'))}
             if (intent.get('preconditionMode') != mode or action not in required
                     or not integer(intent.get('expectedStateVersion'))
                     or step.get('commandId') != intent.get('commandId')
@@ -76,8 +78,11 @@ def saved_mode(state):
                          and 1 <= before['remainingWood'] <= 3 and integer(before['inventoryWood'])
                          and before['inventoryWood'] < 12)
             elif action == 'transfer':
-                valid = (binding['rulesVersion'] == 'r9' and point(before['position'])
+                valid = (binding['rulesVersion'] in ('r9', 'r10') and point(before['position'])
                          and integer(before['inventoryWood']) and before['inventoryWood'] <= 12)
+            elif action in ('reserve_material', 'harvest_material'):
+                from resident_material_access import valid_before
+                valid = binding['rulesVersion'] == 'r10' and valid_before(before, action)
             else:
                 valid = integer(before['inventoryWood']) and before['inventoryWood'] <= 12
             if not valid:

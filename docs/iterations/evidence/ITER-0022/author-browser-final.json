@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "testsRun": 8,
+  "results": [
+    {
+      "name": "legacy_report_hides_material_facts_and_query_budget",
+      "passed": true
+    },
+    {
+      "name": "real_material_report_separates_reservation_harvest_and_own_build",
+      "passed": true
+    },
+    {
+      "name": "reservation_only_does_not_claim_harvest_or_completed_construction",
+      "passed": true
+    },
+    {
+      "name": "unrelated_identity_id_permission_or_duplicate_claim_never_settles_materials",
+      "passed": true
+    },
+    {
+      "name": "missing_evidence_query_budget_or_wrong_rules_rejected_preserving_original",
+      "passed": true
+    },
+    {
+      "name": "query_budget_overrun_is_visible",
+      "passed": true
+    },
+    {
+      "name": "mobile_material_report_keeps_facts_and_budget_readable",
+      "passed": true
+    },
+    {
+      "name": "report_is_readonly_and_has_no_runtime_errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "worldRequests": [],
+  "browserVersion": "152.0.7977.82",
+  "actualModelCalls": 0
+}

@@ -61,7 +61,7 @@ def valid_gather_receipt(receipt, intent, actor, before):
                 "position": before["position"], "remainingWood": remaining - 1,
                 "inventoryWood": before["inventoryWood"] + 1}
     return (type(receipt.get("schemaVersion")) is int and receipt["schemaVersion"] == 1
-            and receipt.get("rulesVersion") == intent["rulesVersion"] in ("r7", "r8", "r9")
+            and receipt.get("rulesVersion") == intent["rulesVersion"] in ("r7", "r8", "r9", "r10")
             and receipt.get("identity", {}).get("actorId") == actor
             and valid_execution(receipt, intent)
             and all(result.get(key) == value and type(result.get(key)) is type(value)

@@ -38,8 +38,12 @@ func _ready() -> void:
 func _valid_record(record: Variant) -> bool:
 	if not record is Dictionary or not record.get("body") is String or not record.get("actorId") is String or not record.get("commandId") is String:
 		return false
+	var record_version := 0
 	if record.has("recordVersion"):
-		if (record.recordVersion != 2 and record.recordVersion != 3) or not _valid_instance(record.get("instanceId")) \
+		if not Evidence.whole(record.recordVersion):
+			return false
+		record_version = int(record.recordVersion)
+		if record_version not in [2, 3, 4] or not _valid_instance(record.get("instanceId")) \
 			or record.get("worldId") != "foundation-01" or not record.get("endpoint") is String:
 			return false
 	elif record.has("instanceId"):
@@ -48,7 +52,9 @@ func _valid_record(record: Variant) -> bool:
 	if parser.parse(record.body) != OK or not parser.data is Dictionary:
 		return false
 	var command: Dictionary = parser.data
-	if record.get("recordVersion") == 3:
+	if record_version in [3, 4]:
+		if (record_version == 4) != (command.get("rulesVersion") == "r10"):
+			return false
 		if command.get("preconditionMode") != Evidence.MODE or not record.get("before") is String:
 			return false
 		var before = JSON.parse_string(record.before)
@@ -56,12 +62,16 @@ func _valid_record(record: Variant) -> bool:
 			return false
 		if command.action.get("type") == "transfer" and before.get("senderActorId") != record.actorId:
 			return false
+		if command.action.get("type") in ["reserve_material", "cancel_reservation", "harvest_material"] and before.get("materialActorId") != record.actorId:
+			return false
 	elif command.has("preconditionMode"):
 		return false
 	return command.get("commandId") == record.commandId and command.get("schemaVersion") == 1 \
-		and command.get("rulesVersion") in ["r8", "r9"] and Evidence.whole(command.get("expectedStateVersion")) \
+		and command.get("rulesVersion") in ["r8", "r9", "r10"] and Evidence.whole(command.get("expectedStateVersion")) \
+		and (command.rulesVersion != "r10" or record_version == 4) \
 		and command.get("action") is Dictionary and (command.action.get("type") in ["walk", "gather", "build"] \
-			or (command.action.get("type") == "transfer" and command.rulesVersion == "r9" and record.get("recordVersion") == 3))
+			or (command.action.get("type") == "transfer" and command.rulesVersion in ["r9", "r10"] and record_version in [3, 4]) \
+			or (command.action.get("type") in ["reserve_material", "cancel_reservation", "harvest_material"] and command.rulesVersion == "r10" and record_version == 4))
 
 func can_act() -> bool:
 	return healthy and not busy and storage_ok and not legacy_unbound and pending.is_empty()
@@ -179,8 +189,9 @@ func _valid_observation(data: Dictionary) -> bool:
 			return false
 	return data.get("schemaVersion") == 1 and Evidence.continuous_world(data) \
 		and data.get("world", {}).get("id") == "foundation-01" \
-		and (data.rulesVersion != "r9" or (Evidence.transfer_supported(data) and data.get("recentTransfers") is Dictionary \
+		and (data.rulesVersion not in ["r9", "r10"] or (Evidence.transfer_supported(data) and data.get("recentTransfers") is Dictionary \
 			and data.recentTransfers.get("items") is Array and data.recentTransfers.get("truncated") is bool)) \
+		and (data.rulesVersion != "r10" or Evidence.material_supported(data)) \
 		and data.get("identity", {}).get("actorId", "") == data.get("self", {}).get("actorId", "?") \
 		and data.get("stateVersion") is int and data.get("stateVersion", -1) >= floor_version \
 		and (identity.is_empty() or data.get("identity", {}).get("actorId") == identity.get("actorId")) \
@@ -228,6 +239,11 @@ func send_action(action: Dictionary) -> void:
 		message = "这个世界尚未提供木材赠送。"
 		changed.emit()
 		return
+	if action.get("type") in ["reserve_material", "cancel_reservation", "harvest_material"] \
+		and (not Evidence.material_supported(observation) or not Evidence.supported(observation)):
+		message = "这个世界尚未提供预约采集。"
+		changed.emit()
+		return
 	# Another process may have saved an unresolved command since the last poll.
 	_load_pending()
 	if not can_act():
@@ -249,7 +265,7 @@ func send_action(action: Dictionary) -> void:
 		command.preconditionMode = Evidence.MODE
 	pending = {"actorId": identity.actorId, "commandId": command_id, "body": JSON.stringify(command)}
 	if not instance_id.is_empty():
-		pending.merge({"recordVersion": 3 if actor_mode else 2, "instanceId": instance_id, "worldId": "foundation-01", "endpoint": endpoint})
+		pending.merge({"recordVersion": 4 if observation.rulesVersion == "r10" else 3 if actor_mode else 2, "instanceId": instance_id, "worldId": "foundation-01", "endpoint": endpoint})
 		if actor_mode:
 			# Keep records flat so disk JSON number coercion cannot change equality.
 			pending.before = JSON.stringify(before)
@@ -294,6 +310,13 @@ func _settle(reply: Dictionary) -> bool:
 		var before: Dictionary = JSON.parse_string(pending.before)
 		if not Evidence.result(data, command, before):
 			return false
+		if command.action.type == "reserve_material":
+			if not Evidence.whole(data.get("eventCursor")) or data.eventCursor < 1:
+				return false
+			var events_reply: Dictionary = await _request(API + "/events?after=" + str(int(data.eventCursor) - 1))
+			if events_reply.code != 200 or not _reply_binding(events_reply) or not events_reply.data.get("events") is Array \
+				or events_reply.data.events.is_empty() or not Evidence.reserved_event(events_reply.data.events[0], data, command):
+				return false
 		if command.action.type == "build":
 			if not await _observe() or not Evidence.built_entity(observation, data, command, before, pending.actorId):
 				return false

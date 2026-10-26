@@ -1,0 +1,18 @@
+{
+  "missionId": "material-access-platform",
+  "objective": "从明确授权的材料入口预约并亲自采集3木材，建造本人平台，返回原起点。",
+  "goals": [
+    {
+      "id": "platform",
+      "label": "材料入口与本人平台",
+      "target": [28, 16],
+      "buildRecipeId": "platform.v1",
+      "materialAccess": {"sourceId": "wood-source-east", "quantity": 3}
+    }
+  ],
+  "allowMaterialAccess": true,
+  "allowBuild": true,
+  "allowGather": false,
+  "allowTransfer": false,
+  "budgets": {"commands": 100, "wood": 3, "seconds": 180, "modelCalls": 1, "queries": 300}
+}

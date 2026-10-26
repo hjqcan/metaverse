@@ -1,0 +1,147 @@
+{
+  "passed": true,
+  "binarySha256": "4a66fd0a2382bb71597d3ae25f2b169bc70af8a469b33d6cb149b748a6b96b37",
+  "cases": {
+    "ui": {
+      "passed": true,
+      "driver": "frozen author UI driver independently run on earned refusal baseline",
+      "result": {
+        "checks": [
+          {
+            "name": "actual r10 adapter authenticated",
+            "passed": true
+          },
+          {
+            "name": "source request shown for unfunded resident",
+            "passed": true
+          },
+          {
+            "name": "empty source footprint excluded in placement preview",
+            "passed": true
+          },
+          {
+            "name": "mouse request settled through original event",
+            "passed": true
+          },
+          {
+            "name": "rendered queued",
+            "passed": true
+          },
+          {
+            "name": "real production grants original reservation",
+            "passed": true
+          },
+          {
+            "name": "grant keeps original reservation identity",
+            "passed": true
+          },
+          {
+            "name": "actual walk reaches nonblocking source",
+            "passed": true
+          },
+          {
+            "name": "harvest button enabled for original owner 0",
+            "passed": true
+          },
+          {
+            "name": "harvest receipt settled 0",
+            "passed": true
+          },
+          {
+            "name": "harvest button enabled for original owner 1",
+            "passed": true
+          },
+          {
+            "name": "harvest receipt settled 1",
+            "passed": true
+          },
+          {
+            "name": "harvest button enabled for original owner 2",
+            "passed": true
+          },
+          {
+            "name": "harvest receipt settled 2",
+            "passed": true
+          },
+          {
+            "name": "three actual harvests fund own construction",
+            "passed": true
+          },
+          {
+            "name": "original builder uses source wood for platform",
+            "passed": true
+          },
+          {
+            "name": "completed build clears durable original and restores controls",
+            "passed": true
+          },
+          {
+            "name": "fresh observation keeps completed client ready",
+            "passed": true
+          },
+          {
+            "name": "platform author confirmed from actual observation",
+            "passed": true
+          },
+          {
+            "name": "source reservation remains after stock consumed",
+            "passed": true
+          },
+          {
+            "name": "rendered built",
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      "audit": {
+        "issued": 15,
+        "generated": 3,
+        "wild": 0,
+        "source": 0,
+        "inventory": 6,
+        "embodied": 9,
+        "activeReserved": 0,
+        "serviceMs": 37089,
+        "processedPeriod": 1,
+        "production": [
+          [
+            1,
+            31047,
+            3,
+            258
+          ]
+        ],
+        "stateVersion": 264,
+        "realCommandsThisBranch": 0,
+        "processStopped": true
+      }
+    }
+  },
+  "worlds": [
+    {
+      "name": "actual-ui",
+      "instance": "w_15ced6889f624d8da8a3d2129ba26874"
+    }
+  ],
+  "scope": "independent frozen Godot v4 on earned world and core-v2",
+  "contractSha256": "05ae40cea57832f11eae64243e797b358d21271cbcf7e9632450edbbf4f20347",
+  "externalModelCalls": 0,
+  "directSqlStateEdits": false,
+  "controlledClock": false,
+  "sourceHashes": {
+    "clients/godot/command_evidence.gd": "660018b6d01a554acce57a81ad560731fce2e9930b452fe8cd4db48941f05e22",
+    "clients/godot/main.gd": "57349c061c84168e16514ae99723fa80e96b5992508750ca8751f16945dcf4d7",
+    "clients/godot/material_panel.gd": "39624af0442670059f6408b73b46cf21eaefb2aa0b75b19828194bba9a48cc3c",
+    "clients/godot/pending_store.gd": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/world_client.gd": "f6bd6296495dbc8410e64adf6b8b9ee187517463bc0f2c28af0ba88df2825a63",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "ebf2271dd1541216ec7f0785600032e18607e1b027a95a5100f41f37395535d2",
+    "clients/godot/main.tscn": "58496e2c5357a2774f2a70f19d0dcb9a015167d8bf9849dc68f4f20a7841e6b1",
+    "clients/godot/project.godot": "ed3b839787f7a622d816c95b092e7487679e627b1f4673938b3936e27db3c424",
+    "tests/material_access_godot.py": "6524e3378b1fffe71d3b55feed4749bf32ab89b3f047acec6e0d998173b84f9e",
+    "tests/godot/material_access.gd": "c1b5babb9169ae4f5e3495ff99f0683dde28e480db934a1c17328b093ca7ca03"
+  },
+  "additionalShaderHash": "b5de02167c429ce338fff61bb0ad180aa4d2d1b7c5c1e96f3cbce3f4ba88631b"
+}

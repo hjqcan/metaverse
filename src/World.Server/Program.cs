@@ -10,6 +10,11 @@ if (args.Length > 0)
 {
     try
     {
+        if (args.Length == 3 && args[0] == "enable-material-source" && args[1] == "--instance")
+        {
+            Console.WriteLine(database.EnableMaterialSource(args[2]) ? "材料来源已在原实例开启。" : "材料来源已经开启，原进度保持。");
+            return 0;
+        }
         if (args.Length != 7 || args[0] != "issue-session")
             throw new ArgumentException("用法：issue-session --actor a1 --ttl-seconds 86400 --output <path>");
         var options = new Dictionary<string, string>(StringComparer.Ordinal);
@@ -29,17 +34,21 @@ if (args.Length > 0)
     }
     catch (Exception ex) when (ex is ArgumentException or IOException or SqliteException or InvalidOperationException)
     {
-        Console.Error.WriteLine("会话签发失败：" + ex.GetType().Name);
+        Console.Error.WriteLine("离线管理失败：" + ex.GetType().Name);
         return 1;
     }
 }
 
 database.Initialize();
+using var materialClock = database.Scenario.SupportsMaterialAccess ? new MaterialServiceClock(database) : null;
+var service = new WorldService(database, configuration, materialClock);
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
     Args = [], ContentRootPath = configuration.ContentRoot,
     WebRootPath = Path.Combine(configuration.ContentRoot, "wwwroot")
 });
+builder.Services.AddSingleton(service);
+if (database.Scenario.SupportsMaterialAccess) builder.Services.AddHostedService<MaterialClockWorker>();
 builder.WebHost.ConfigureKestrel(options =>
 {
     options.AddServerHeader = false;
@@ -49,7 +58,6 @@ builder.WebHost.ConfigureKestrel(options =>
     else options.Listen(IPAddress.Parse(uri.DnsSafeHost), uri.Port);
 });
 var app = builder.Build();
-var service = new WorldService(database, configuration);
 
 app.Use(async (context, next) =>
 {
@@ -98,7 +106,8 @@ if (database.Scenario.SupportsContinuous)
         if (context.Request.Path is { Value: "/" or "/index.html" })
         {
             context.Response.ContentType = "text/html; charset=utf-8";
-            var nativeCommand = database.Scenario.SupportsTransfer ? "npm run start:godot:cooperation" : "npm run start:godot";
+            var nativeCommand = database.Scenario.SupportsMaterialAccess ? "npm run start:godot:material-access"
+                : database.Scenario.SupportsTransfer ? "npm run start:godot:cooperation" : "npm run start:godot";
             var cooperation = database.Scenario.SupportsTransfer ? "<p>走近另一位居民，选择「赠送木材」，确认收件人与数量后交付。</p>" : "";
             await context.Response.WriteAsync($$"""
                 <!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width">

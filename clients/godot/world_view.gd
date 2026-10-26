@@ -361,6 +361,25 @@ func _person(id: String) -> Node3D:
 	_caption(root, "", Vector3(0,1.9,0), Color.WHITE).name = "Nameplate"
 	return root
 
+func _material_source(source: Dictionary) -> void:
+	var center := Vector2(source.position[0], source.position[1])
+	var y := height_at(center.x, center.y) + 0.05
+	var tint := material(Color("a4bb6b") if source.active else Color("a6946a"))
+	for side in [-1, 1]:
+		var horizontal := BoxMesh.new()
+		horizontal.size = Vector3(2.04, 0.025, 0.065)
+		mesh(objects, horizontal, Vector3(center.x, y, center.y + side), tint)
+		var vertical := BoxMesh.new()
+		vertical.size = Vector3(0.065, 0.025, 2.04)
+		mesh(objects, vertical, Vector3(center.x + side, y, center.y), tint)
+	for i in int(source.stockWood):
+		var log_mesh := BoxMesh.new()
+		log_mesh.size = Vector3(0.46, 0.12, 0.16)
+		mesh(objects, log_mesh, Vector3(center.x - 0.3 + (i % 2) * 0.6, y + 0.08 + (i / 2) * 0.14, center.y), trunk_material)
+	var caption := _caption(objects, "采集区 · %d 木材\n保留地，不能建造" % source.stockWood,
+		Vector3(center.x, y + 0.15, center.y + 1.8), Color("e7e9b5"))
+	caption.font_size = 28
+
 func update_world(observation: Dictionary, connection_changed := false) -> void:
 	var instance: String = observation.world.get("instanceId", "")
 	if connection_changed or instance != world_instance:
@@ -371,12 +390,15 @@ func update_world(observation: Dictionary, connection_changed := false) -> void:
 	if not initialized:
 		_landscape(observation)
 		focus = Vector3(observation.self.position[0],0,observation.self.position[1])
-	var stamp = JSON.stringify([observation.resourceNodes,observation.entities])
+	var source: Dictionary = observation.get("materialAccess", {})
+	var stamp = JSON.stringify([observation.resourceNodes,observation.entities,source.get("active"),source.get("stockWood")])
 	if stamp != object_stamp:
 		object_stamp = stamp
 		_clear_children(objects)
 		tree_nodes.clear()
 		structure_labels.clear()
+		if not source.is_empty():
+			_material_source(source)
 		for tree in observation.resourceNodes:
 			tree_nodes[tree.nodeId] = _tree(objects,Vector2(tree.position[0],tree.position[1]),tree.nodeId,tree.remainingWood)
 		for entity in observation.entities:

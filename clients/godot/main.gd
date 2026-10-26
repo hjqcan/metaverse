@@ -4,6 +4,7 @@ const Client = preload("res://world_client.gd")
 const View = preload("res://world_view.gd")
 const Navigation = preload("res://world_navigation.gd")
 const TransferPanel = preload("res://transfer_panel.gd")
+const MaterialPanel = preload("res://material_panel.gd")
 var client: Node
 var navigation: Node
 var world_view: SubViewportContainer
@@ -18,6 +19,7 @@ var retry_button: Button
 var transfer_button: Button
 var transfer_panel: PanelContainer
 var transfer_history: Label
+var material_panel: PanelContainer
 var url_input: LineEdit
 var token_input: LineEdit
 var connection_panel: PanelContainer
@@ -121,6 +123,12 @@ func _build_ui() -> void:
 	inventory_label = _text(info,"正在进入世界…",16,Color("e6c98a"))
 	transfer_history = _text(info,"",13,Color("b7c2a4"))
 	transfer_history.hide()
+	material_panel = MaterialPanel.new()
+	material_panel.position = Vector2(24, 250)
+	material_panel.add_theme_stylebox_override("panel", _style(Color(0.09,0.15,0.12,0.94)))
+	root.add_child(material_panel)
+	material_panel.action_requested.connect(_material_action)
+	material_panel.destination_requested.connect(func(point: Vector2): _plan_walk(point, ""))
 	var controls = VBoxContainer.new()
 	controls.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
 	controls.offset_left = -190
@@ -223,6 +231,7 @@ func _render() -> void:
 	transfer_button.visible = Client.Evidence.transfer_supported(observation)
 	transfer_button.disabled = not ready
 	transfer_panel.update_world(observation, ready)
+	material_panel.update_world(observation, ready)
 	if not transfer_button.visible:
 		transfer_panel.hide()
 	transfer_history.visible = transfer_button.visible
@@ -276,6 +285,12 @@ func _render() -> void:
 			if client.last_receipt.result.action == "transfer":
 				status_label.text = "已向 %s 赠送 %d 木材" % [client.last_receipt.result.recipientActorId, client.last_receipt.result.quantity]
 				transfer_panel.hide()
+			elif client.last_receipt.result.action == "reserve_material":
+				status_label.text = "已加入采集队列。授予后到采集区领取。"
+			elif client.last_receipt.result.action == "cancel_reservation":
+				status_label.text = "预约已取消，已采木材仍保留。"
+			elif client.last_receipt.result.action == "harvest_material":
+				status_label.text = "采集完成  +1 木材"
 			else:
 				status_label.text = "采集完成  +1 木材" if client.last_receipt.result.action == "gather" else "建造完成"
 			message_until = Time.get_ticks_msec()/1000.0+2
@@ -363,6 +378,11 @@ func _hovered(point: Vector2) -> void:
 func _placement_valid(point: Vector2, recipe: String) -> bool:
 	var bridge = recipe == "bridge.v1"
 	var half = Vector2(2.4,0.8) if bridge else Vector2.ONE
+	if Client.Evidence.material_supported(client.observation):
+		var exclusion: Array = client.observation.materialAccess.buildExclusion
+		if point.x + half.x > exclusion[0] and point.x - half.x < exclusion[2] \
+			and point.y + half.y > exclusion[1] and point.y - half.y < exclusion[3]:
+			return false
 	if position_2d().distance_to(point)>3.2 or point.x<half.x or point.y<half.y or point.x>32-half.x or point.y>24-half.y:
 		return false
 	if not bridge:
@@ -418,6 +438,11 @@ func _transfer(recipient: String, amount: int) -> void:
 	_stop_walk()
 	input_suspended = true
 	await client.send_action({"type": "transfer", "recipientActorId": recipient, "resource": "wood", "quantity": amount})
+
+func _material_action(action: Dictionary) -> void:
+	_stop_walk()
+	input_suspended = true
+	await client.send_action(action)
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo or get_viewport().gui_get_focus_owner() is LineEdit:

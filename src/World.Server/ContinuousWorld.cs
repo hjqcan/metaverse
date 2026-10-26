@@ -130,6 +130,14 @@ internal sealed partial class WorldService
         body["recipes"] = new[] { new { id = "platform.v1", definitionId = "platform", woodCost = 3 }, new { id = "bridge.v1", definitionId = "bridge", woodCost = 6 } };
         body["gathering"] = new { version = 1, quantityPerAction = 1 }; body["depot"] = new { wood = 0, available = false };
         body["resourceAudit"] = new { issuedWood = state.IssuedWood, wildWood, depotWood = 0, inventoryWood, embodiedWood, conserved = wildWood + inventoryWood + embodiedWood == state.IssuedWood };
+        if (Scenario.SupportsMaterialAccess)
+        {
+            var source = MaterialSourceRules.Read(c, t);
+            body["resourceAudit"] = new { initialWood = 12, issuedWood = state.IssuedWood, generatedWood = source.GeneratedWood,
+                sourceWood = source.StockWood, wildWood, depotWood = 0, inventoryWood, embodiedWood,
+                conserved = wildWood + source.StockWood + inventoryWood + embodiedWood == state.IssuedWood && state.IssuedWood == 12 + source.GeneratedWood };
+            BindMaterialAccess(body, c, t, identity);
+        }
         if (Scenario.SupportsTransfer) BindTransfers(body, c, t, identity.ActorId);
         BindObservation(body, instance);
         return Protocol.Reply(200, body).WithInstance(instance);
@@ -142,6 +150,7 @@ internal sealed partial class WorldService
         var trees = ReadResourceNodes(c, t); var entities = ReadStructures(c, t);
         if (action.Type == "gather")
         {
+            if (Scenario.SupportsMaterialAccess && actor.Wood >= 12) return (422, new("INVENTORY_CAPACITY_EXCEEDED", "本人木材库存已满"));
             var node = trees.SingleOrDefault(n => n.NodeId == action.NodeId);
             if (node is null) return (404, new("RESOURCE_NOT_FOUND", "资源节点不存在"));
             if (node.RemainingWood == 0) return (422, new("RESOURCE_DEPLETED", "木材已采空"));
@@ -151,6 +160,8 @@ internal sealed partial class WorldService
         }
         if (action.Type != "build") return (422, new("ACTION_UNAVAILABLE", "连续荒野暂不支持此动作"));
         var x = action.TargetX; var z = action.TargetY; var bridge = action.RecipeId == "bridge.v1"; var hx = bridge ? 2.4 : 1; var hz = bridge ? 0.8 : 1;
+        if (Scenario.SupportsMaterialAccess && x + hx > 27 && x - hx < 29 && z + hz > 9 && z - hz < 11)
+            return (409, new("AREA_OCCUPIED", "采集区始终保留，不能在其中建造"));
         if (x - hx < 0 || x + hx > 32 || z - hz < 0 || z + hz > 24 || ContinuousWorld.Distance(actor.X, actor.Y, x, z) > ContinuousWorld.BuildReach)
             return (422, new("UNREACHABLE", "建造占地须在地图内，中心距居民不超过 3.2 米"));
         if (bridge && Math.Abs(x - ContinuousWorld.RiverX(z)) > 0.08) return (422, new("UNREACHABLE", "桥中心须对齐河道中心线"));

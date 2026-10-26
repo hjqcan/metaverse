@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "scenario": "wilderness-material-access-v1",
+  "instancePreserved": true,
+  "initialSourceInactive": true,
+  "offlineEnable": true,
+  "r10LandingCommand": true,
+  "inventory": 0,
+  "actualModelCalls": 0,
+  "serviceStopped": true
+}

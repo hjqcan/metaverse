@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "testsRun": 2,
+  "tests": [
+    {
+      "test": "__main__.MaterialClockAcceptance.test_01_get_is_read_only_while_writer_is_locked_across_production_boundary",
+      "passed": true,
+      "seconds": 11.519189851009287
+    },
+    {
+      "test": "__main__.MaterialClockAcceptance.test_02_queued_before_process_pause_gets_full_lease_from_actual_resume_time",
+      "passed": true,
+      "seconds": 12.879093653988093
+    }
+  ],
+  "actualModelCalls": 0,
+  "clock": "real Stopwatch; SQLite lock or SIGSTOP only, no time/material row edits",
+  "dllSha256": "11c0478324d11476dfce3f37bb7d6cf5281ec91fbfb9b36444a114ccbfc2b502",
+  "sourceSha256": {
+    "tests/material_access_api.py": "51588b7f79b9d353625b2246d709da62ef20914be77f8aa62525c3ac27ea1a17",
+    "tests/material_access_time_api.py": "fdb93904421ab9241c446570a892a3d15037b50dce4e09968208858e4fcfe852",
+    "src/World.Server/ContinuousWorld.cs": "a52d234c27dabb19b5dfcb3ef4b077647508edc47617b074c7faefea6bfcdff3",
+    "src/World.Server/EntryGuide.cs": "097a08ad3f90f72e25743708e4f9a32e1cf2baec401c275bf7001a92655f3e8d",
+    "src/World.Server/MaterialAccess.cs": "2d3579095e5586adbf1a7954bf3b5b0b40b1e76125684e077fc9171fa111600d",
+    "src/World.Server/MaterialServiceClock.cs": "cc6b2b7e6a9040bd37fcb2edfc216266ed44171094ad4442917077d7e22f128f",
+    "src/World.Server/MaterialTransfer.cs": "413db75abfec5f98f7fc35344c7820ffd45b5f10c05f889918e0155e194befe1",
+    "src/World.Server/Program.cs": "2c40de52e8501093d790778b900016e2a20ed21acd82b7eea7b0f0ab76f350bc",
+    "src/World.Server/Protocol.cs": "809b0c9431ea403d34efcc5c30ef66855308ff59b74d900bfa5af63d9472a22d",
+    "src/World.Server/ServerConfiguration.cs": "8b33f7b3aae70229397362d0571769198303507712accd624ecedb1320eea8d1",
+    "src/World.Server/WorldDatabase.cs": "6b78848189df9867908d004f9c450d89977694d2fcec0cde47e83849b351bac3",
+    "src/World.Server/WorldInstance.cs": "f865654d13b63ac9659fa119353b5e32b303484eab49215bb7796a49a5b3fd1b",
+    "src/World.Server/WorldScenario.cs": "ea63aa8b79740cc1a603447dcbc8ae808f3632460db87bc9df6145f2003ff816",
+    "src/World.Server/WorldService.cs": "207ea946a234ea30d2d2cd6892b473653c85345a253defee676d4c5ae15ca23a"
+  },
+  "sourceUnchanged": true,
+  "failureDetails": []
+}

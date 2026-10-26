@@ -15,7 +15,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--url", default="http://127.0.0.1:5081")
     parser.add_argument("--access-file", type=Path, default=Path(".local/passage/access.json"))
-    parser.add_argument("--actor", choices=("a1", "a2"), required=True)
+    parser.add_argument("--actor", choices=("a1", "a1_alias", "a2", "a3"), required=True)
     selection = parser.add_mutually_exclusive_group(required=True)
     selection.add_argument("--account", help="Pinned account alias from agent_accounts.py; one real GPT-6 choice")
     selection.add_argument("--fixed-reference", action="store_true", help="Use the deterministic cost reference; no model calls")
@@ -27,7 +27,11 @@ def main():
     if args.state.resolve() == args.output.resolve():
         parser.error("State and report paths must differ")
     spec = json.loads(args.spec.read_text())
-    token = json.loads(args.access_file.read_text())["sessions"][args.actor]["token"]
+    sessions = json.loads(args.access_file.read_text()).get('sessions', {})
+    session = sessions.get(args.actor)
+    if not isinstance(session, dict) or not isinstance(session.get('token'), str) or not session['token']:
+        parser.error('The selected actor has no session in the supplied access file')
+    token = session['token']
     choose = choose_lowest_cost if args.fixed_reference else CodexGoalSelector(args.account, evidence_dir=args.state.parent / "decisions")
     report = run_mission(WorldClient(args.url, token), spec, args.state, choose, max_steps=args.max_steps)
     args.output.parent.mkdir(parents=True, exist_ok=True)

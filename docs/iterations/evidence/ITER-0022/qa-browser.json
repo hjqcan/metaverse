@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "legacy_report_hides_material_and_query_sections",
+      "passed": true
+    },
+    {
+      "name": "own_actual_cli_matches_harvest_build_query_counts",
+      "passed": true
+    },
+    {
+      "name": "actual_paused_reservation_claims_no_harvest_or_build",
+      "passed": true
+    },
+    {
+      "name": "actual_expired_unsent_original_stays_blocked_unbuilt",
+      "passed": true
+    },
+    {
+      "name": "actual_query_exhausted_unknown_never_becomes_harvest_fact",
+      "passed": true
+    },
+    {
+      "name": "actual_unused_material_permission_needs_no_query_budget",
+      "passed": true
+    },
+    {
+      "name": "own_mobile_report_readable_and_no_horizontal_overflow",
+      "passed": true
+    },
+    {
+      "name": "read_only_no_world_requests_or_errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "worldRequests": [],
+  "staticStopped": true,
+  "externalModelCalls": 0
+}

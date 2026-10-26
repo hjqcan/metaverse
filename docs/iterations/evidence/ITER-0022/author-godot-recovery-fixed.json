@@ -1,0 +1,376 @@
+{
+  "passed": true,
+  "actualModelCalls": 0,
+  "groups": 9,
+  "assertions": 75,
+  "results": [
+    {
+      "name": "ui",
+      "checks": [
+        {
+          "name": "actual r10 adapter authenticated",
+          "passed": true
+        },
+        {
+          "name": "source request shown for unfunded resident",
+          "passed": true
+        },
+        {
+          "name": "empty source footprint excluded in placement preview",
+          "passed": true
+        },
+        {
+          "name": "mouse request settled through original event",
+          "passed": true
+        },
+        {
+          "name": "rendered queued",
+          "passed": true
+        },
+        {
+          "name": "real production grants original reservation",
+          "passed": true
+        },
+        {
+          "name": "grant keeps original reservation identity",
+          "passed": true
+        },
+        {
+          "name": "actual walk reaches nonblocking source",
+          "passed": true
+        },
+        {
+          "name": "harvest button enabled for original owner 0",
+          "passed": true
+        },
+        {
+          "name": "harvest receipt settled 0",
+          "passed": true
+        },
+        {
+          "name": "harvest button enabled for original owner 1",
+          "passed": true
+        },
+        {
+          "name": "harvest receipt settled 1",
+          "passed": true
+        },
+        {
+          "name": "harvest button enabled for original owner 2",
+          "passed": true
+        },
+        {
+          "name": "harvest receipt settled 2",
+          "passed": true
+        },
+        {
+          "name": "three actual harvests fund own construction",
+          "passed": true
+        },
+        {
+          "name": "original builder uses source wood for platform",
+          "passed": true
+        },
+        {
+          "name": "completed build clears durable original and restores controls",
+          "passed": true
+        },
+        {
+          "name": "fresh observation keeps completed client ready",
+          "passed": true
+        },
+        {
+          "name": "platform author confirmed from actual observation",
+          "passed": true
+        },
+        {
+          "name": "source reservation remains after stock consumed",
+          "passed": true
+        },
+        {
+          "name": "rendered built",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "reserve-corrupt",
+      "checks": [
+        {
+          "name": "r10 native adapter connected",
+          "passed": true
+        },
+        {
+          "name": "unknown r10 action keeps version4 original record",
+          "passed": true
+        },
+        {
+          "name": "version4 record remains valid after disk JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "missing sourceId retains original",
+          "passed": true
+        },
+        {
+          "name": "missing reservationId retains original",
+          "passed": true
+        },
+        {
+          "name": "missing queueSequence retains original",
+          "passed": true
+        },
+        {
+          "name": "missing requestedAtMs retains original",
+          "passed": true
+        },
+        {
+          "name": "unrelated reservation cannot settle original",
+          "passed": true
+        },
+        {
+          "name": "r10 record cannot masquerade as old record format",
+          "passed": true
+        },
+        {
+          "name": "original actor bound into source evidence",
+          "passed": true
+        },
+        {
+          "name": "original authoritative receipt and reference settle",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "harvest-corrupt",
+      "checks": [
+        {
+          "name": "r10 native adapter connected",
+          "passed": true
+        },
+        {
+          "name": "unknown r10 action keeps version4 original record",
+          "passed": true
+        },
+        {
+          "name": "version4 record remains valid after disk JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "missing sourceId retains original",
+          "passed": true
+        },
+        {
+          "name": "missing reservationId retains original",
+          "passed": true
+        },
+        {
+          "name": "missing remainingBefore retains original",
+          "passed": true
+        },
+        {
+          "name": "missing remaining retains original",
+          "passed": true
+        },
+        {
+          "name": "missing inventoryWoodBefore retains original",
+          "passed": true
+        },
+        {
+          "name": "missing inventoryWood retains original",
+          "passed": true
+        },
+        {
+          "name": "unrelated reservation cannot settle original",
+          "passed": true
+        },
+        {
+          "name": "r10 record cannot masquerade as old record format",
+          "passed": true
+        },
+        {
+          "name": "original actor bound into source evidence",
+          "passed": true
+        },
+        {
+          "name": "original authoritative receipt and reference settle",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "reserve-before",
+      "checks": [
+        {
+          "name": "r10 native adapter connected",
+          "passed": true
+        },
+        {
+          "name": "unknown r10 action keeps version4 original record",
+          "passed": true
+        },
+        {
+          "name": "version4 record remains valid after disk JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "fresh client settles original r10 action and disk record",
+          "passed": true
+        },
+        {
+          "name": "original request retained one qualification",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "reserve-after",
+      "checks": [
+        {
+          "name": "r10 native adapter connected",
+          "passed": true
+        },
+        {
+          "name": "unknown r10 action keeps version4 original record",
+          "passed": true
+        },
+        {
+          "name": "version4 record remains valid after disk JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "fresh client settles original r10 action and disk record",
+          "passed": true
+        },
+        {
+          "name": "original request retained one qualification",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "harvest-before",
+      "checks": [
+        {
+          "name": "r10 native adapter connected",
+          "passed": true
+        },
+        {
+          "name": "unknown r10 action keeps version4 original record",
+          "passed": true
+        },
+        {
+          "name": "version4 record remains valid after disk JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "fresh client settles original r10 action and disk record",
+          "passed": true
+        },
+        {
+          "name": "interrupted harvest occurs exactly once",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "harvest-after",
+      "checks": [
+        {
+          "name": "r10 native adapter connected",
+          "passed": true
+        },
+        {
+          "name": "unknown r10 action keeps version4 original record",
+          "passed": true
+        },
+        {
+          "name": "version4 record remains valid after disk JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "fresh client settles original r10 action and disk record",
+          "passed": true
+        },
+        {
+          "name": "interrupted harvest occurs exactly once",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "cancel-before",
+      "checks": [
+        {
+          "name": "r10 native adapter connected",
+          "passed": true
+        },
+        {
+          "name": "unknown r10 action keeps version4 original record",
+          "passed": true
+        },
+        {
+          "name": "version4 record remains valid after disk JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "fresh client settles original r10 action and disk record",
+          "passed": true
+        },
+        {
+          "name": "original cancellation retained",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "cancel-after",
+      "checks": [
+        {
+          "name": "r10 native adapter connected",
+          "passed": true
+        },
+        {
+          "name": "unknown r10 action keeps version4 original record",
+          "passed": true
+        },
+        {
+          "name": "version4 record remains valid after disk JSON number conversion",
+          "passed": true
+        },
+        {
+          "name": "fresh client settles original r10 action and disk record",
+          "passed": true
+        },
+        {
+          "name": "original cancellation retained",
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "sourceSha256": {
+    "clients/godot/command_evidence.gd": "660018b6d01a554acce57a81ad560731fce2e9930b452fe8cd4db48941f05e22",
+    "clients/godot/main.gd": "57349c061c84168e16514ae99723fa80e96b5992508750ca8751f16945dcf4d7",
+    "clients/godot/material_panel.gd": "39624af0442670059f6408b73b46cf21eaefb2aa0b75b19828194bba9a48cc3c",
+    "clients/godot/pending_store.gd": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+    "clients/godot/transfer_panel.gd": "08874384f22aa13dbab7041dac346829f22d180e279f75d518b4d5bd43308a66",
+    "clients/godot/world_client.gd": "f6bd6296495dbc8410e64adf6b8b9ee187517463bc0f2c28af0ba88df2825a63",
+    "clients/godot/world_navigation.gd": "7f3f7134f821d2b56373c6bd19ab20b96d6b73d693b09209934a012379e066ec",
+    "clients/godot/world_view.gd": "76894c40d47f7258a3f1014b02c177b087557d6e14fc70eb0d54fbfe7359b770",
+    "tests/material_access_godot.py": "6524e3378b1fffe71d3b55feed4749bf32ab89b3f047acec6e0d998173b84f9e",
+    "tests/godot/material_access.gd": "c1b5babb9169ae4f5e3495ff99f0683dde28e480db934a1c17328b093ca7ca03"
+  },
+  "sourceUnchanged": true,
+  "dllSha256": "11c0478324d11476dfce3f37bb7d6cf5281ec91fbfb9b36444a114ccbfc2b502"
+}

@@ -1,0 +1,539 @@
+{
+  "passed": true,
+  "checkedAtUtc": "2026-10-26T04:49:33.327756+00:00",
+  "candidateSource": ".local/iter0022/final-source-manifest.json",
+  "manifestSha256": "c18d6eced6d6aa77323beb8987e00c354e6257001792d2d468e31d6a050a9df6",
+  "baseCommit": "f947a8aa5aadfd2ae7a1d47bc99ef57bad1f5561",
+  "finalCommitNotYetSupplied": true,
+  "finalSourceSnapshot": "/home/wangjunfeng/文档/Workspace/metaverse/.local/qa/20261026-test-agent/entry-final-source-20261026T044933325787Z",
+  "filesChecked": 47,
+  "coverage": [
+    {
+      "file": "README.md",
+      "sha256": "296edd4c03a1d766886a392ff3d9659e56bb7aab7607d01056975a3855427a6c",
+      "coverage": "documentation reviewed",
+      "frozenManifest": null
+    },
+    {
+      "file": "clients/godot/README.md",
+      "sha256": "560a35860462e4983971fc1e12035755e65402f0cb6928eed030285180e78f9d",
+      "coverage": "documentation reviewed",
+      "frozenManifest": null
+    },
+    {
+      "file": "clients/godot/command_evidence.gd",
+      "sha256": "660018b6d01a554acce57a81ad560731fce2e9930b452fe8cd4db48941f05e22",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-godot-v2-frozen.json"
+    },
+    {
+      "file": "clients/godot/main.gd",
+      "sha256": "57349c061c84168e16514ae99723fa80e96b5992508750ca8751f16945dcf4d7",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-godot-v2-frozen.json"
+    },
+    {
+      "file": "clients/godot/material_panel.gd",
+      "sha256": "39624af0442670059f6408b73b46cf21eaefb2aa0b75b19828194bba9a48cc3c",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-godot-v2-frozen.json"
+    },
+    {
+      "file": "clients/godot/material_panel.gd.uid",
+      "sha256": "11d1f3a8e23adbb914447a13040fd8d312c47948a11e8d5de4be63874a5e1167",
+      "coverage": "Godot generated script identity metadata",
+      "frozenManifest": null
+    },
+    {
+      "file": "clients/godot/pending_store.gd",
+      "sha256": "fa6cea187edb0dc2caaa40a6fd3a823a3369ad5f8136b24ebff6d3b4310c8dc1",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-godot-v2-frozen.json"
+    },
+    {
+      "file": "clients/godot/world_client.gd",
+      "sha256": "f6bd6296495dbc8410e64adf6b8b9ee187517463bc0f2c28af0ba88df2825a63",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-godot-v2-frozen.json"
+    },
+    {
+      "file": "clients/godot/world_view.gd",
+      "sha256": "ebf2271dd1541216ec7f0785600032e18607e1b027a95a5100f41f37395535d2",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-godot-v2-frozen.json"
+    },
+    {
+      "file": "docs/00-project-charter.md",
+      "sha256": "e20aee31946fd16a5f65ff4fd79de0924e76979d744367be1ee25dbf6bd0306a",
+      "coverage": "documentation reviewed",
+      "frozenManifest": null
+    },
+    {
+      "file": "docs/09-decisions-and-open-questions.md",
+      "sha256": "1096075388b3ae88124b780744faf63008f0d835e8567eca4ec917e1ba2c9aa3",
+      "coverage": "documentation reviewed",
+      "frozenManifest": null
+    },
+    {
+      "file": "docs/contracts/material-access-v1.md",
+      "sha256": "d46dad32bb3520d44ed7dbcee29b19a54e6f52440f0f890753cd7f9953b506b5",
+      "coverage": "documentation reviewed",
+      "frozenManifest": null
+    },
+    {
+      "file": "docs/iterations/ITER-0022-results.md",
+      "sha256": "5c84dff6fb8f92c19756429adf35db0d5b925dafb666fa836bc98bec1a9e0bbc",
+      "coverage": "documentation reviewed",
+      "frozenManifest": null
+    },
+    {
+      "file": "docs/proposals/ITER-0022-material-access.md",
+      "sha256": "28fa3a537d895fba714263f4f9630ac9b65de45f9cee963bb3a8435710a6591d",
+      "coverage": "documentation reviewed",
+      "frozenManifest": null
+    },
+    {
+      "file": "docs/research/2026-10-26-continuous/14-material-source-adoption.md",
+      "sha256": "8f9cd00574f2c8bc0393294c71bb45b27580c9efdf78b9a7b7229e820ccb99ab",
+      "coverage": "documentation reviewed",
+      "frozenManifest": null
+    },
+    {
+      "file": "docs/research/2026-10-26-continuous/15-next-after-bounded-entry.md",
+      "sha256": "f8581f05ff33969d85c5b1c1dc29f947173db8834e96eab6a2dcd1ddfbb55788",
+      "coverage": "documentation reviewed",
+      "frozenManifest": null
+    },
+    {
+      "file": "package.json",
+      "sha256": "1a381aa936df83d8bb6f790c410c1d21d5229df541d47f833e10b012bf41b773",
+      "coverage": "launch or test wiring read-only reviewed; no independent launch execution claimed",
+      "frozenManifest": null
+    },
+    {
+      "file": "scripts/check.py",
+      "sha256": "bb00108b7a22d0f2ffd63a7904f19dc9a04f2c8347c3a30c3b43705c3f640f47",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-python-frozen.json"
+    },
+    {
+      "file": "scripts/command_preconditions.py",
+      "sha256": "c8da1f3edcd7499739f02bea27c1ec213e34dc1ed64b7b5ff88f908f640ea440",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-python-frozen.json"
+    },
+    {
+      "file": "scripts/continuous_navigation.py",
+      "sha256": "0303f9ade6ce90e48a85fbf8e5a5aaff145ca0a305562cee4c0d0bb1cb21e578",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-python-frozen.json"
+    },
+    {
+      "file": "scripts/resident_construction.py",
+      "sha256": "eef4aa235fb0fdf2428b17005381074bb1f773f3ac21d600b2c095e96c1b6411",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-python-frozen.json"
+    },
+    {
+      "file": "scripts/resident_material_access.py",
+      "sha256": "0e9aa7bc9bfd89bc65270a0cc49fd8a2c128cdaff2fc95b6dcde3d56ad081d68",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-python-frozen.json"
+    },
+    {
+      "file": "scripts/resident_mission.py",
+      "sha256": "3dd915be5cf53132b3d09bc3fdca9b5a698e9c7d494ea098e0eb435635d7189d",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-python-frozen.json"
+    },
+    {
+      "file": "scripts/resident_transfer.py",
+      "sha256": "957067bc33585e1fb5f7f9b21b703aa1c8decf8f4148fcb2fe24e4ce50329a83",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-python-frozen.json"
+    },
+    {
+      "file": "scripts/run_godot_material_access.sh",
+      "sha256": "db46124d0f6e4ba9aa90afb01c801c4cdb01ab43a6a9878310077621bd5b3921",
+      "coverage": "launch or test wiring read-only reviewed; no independent launch execution claimed",
+      "frozenManifest": null
+    },
+    {
+      "file": "scripts/run_material_access.sh",
+      "sha256": "0ceea0b8e2775ddcd9f9309a643e545f7d799b62685974c1fd57d2fa0265b508",
+      "coverage": "launch or test wiring read-only reviewed; no independent launch execution claimed",
+      "frozenManifest": null
+    },
+    {
+      "file": "scripts/run_resident.py",
+      "sha256": "3c517466e6ab985d99d1572a2cad7075bebf2c763e22cca7481326a92c3791cf",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-python-frozen.json"
+    },
+    {
+      "file": "scripts/wilderness_materials.py",
+      "sha256": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-python-frozen.json"
+    },
+    {
+      "file": "src/World.Server/ContinuousWorld.cs",
+      "sha256": "a52d234c27dabb19b5dfcb3ef4b077647508edc47617b074c7faefea6bfcdff3",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-core-v2-frozen.json"
+    },
+    {
+      "file": "src/World.Server/MaterialAccess.cs",
+      "sha256": "2d3579095e5586adbf1a7954bf3b5b0b40b1e76125684e077fc9171fa111600d",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-core-v2-frozen.json"
+    },
+    {
+      "file": "src/World.Server/MaterialServiceClock.cs",
+      "sha256": "cc6b2b7e6a9040bd37fcb2edfc216266ed44171094ad4442917077d7e22f128f",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-core-v2-frozen.json"
+    },
+    {
+      "file": "src/World.Server/Program.cs",
+      "sha256": "1b9bfef75fdd5b55013ec1c0d64c0c8cf03fc2f6a223974bbc5ac842032ebe60",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-core-v2-frozen.json"
+    },
+    {
+      "file": "src/World.Server/Protocol.cs",
+      "sha256": "809b0c9431ea403d34efcc5c30ef66855308ff59b74d900bfa5af63d9472a22d",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-core-v2-frozen.json"
+    },
+    {
+      "file": "src/World.Server/WorldDatabase.cs",
+      "sha256": "6b78848189df9867908d004f9c450d89977694d2fcec0cde47e83849b351bac3",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-core-v2-frozen.json"
+    },
+    {
+      "file": "src/World.Server/WorldScenario.cs",
+      "sha256": "ea63aa8b79740cc1a603447dcbc8ae808f3632460db87bc9df6145f2003ff816",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-core-v2-frozen.json"
+    },
+    {
+      "file": "src/World.Server/WorldService.cs",
+      "sha256": "207ea946a234ea30d2d2cd6892b473653c85345a253defee676d4c5ae15ca23a",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-core-v2-frozen.json"
+    },
+    {
+      "file": "src/World.Server/wwwroot/material-report.js",
+      "sha256": "087db4b4b5e6e8193b0b7c4ade00797d4f1b6e31d55ec22cac891bd1bdf47efa",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-web-v2-frozen.json"
+    },
+    {
+      "file": "src/World.Server/wwwroot/resident.html",
+      "sha256": "ddb32d79320cda42707ac1fa6c15e281e161b823e9d0b4a295b36fa0d0aed3d0",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-web-v2-frozen.json"
+    },
+    {
+      "file": "src/World.Server/wwwroot/resident.js",
+      "sha256": "a949e38be64ae243b105a040da94f767635f0c3993ff3a22aecdcb5e97b86042",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-web-v2-frozen.json"
+    },
+    {
+      "file": "tests/README.md",
+      "sha256": "df84d08e829ee78fd93022057883f138b521915b6a4835caf331cbc60d71ba3a",
+      "coverage": "documentation reviewed",
+      "frozenManifest": null
+    },
+    {
+      "file": "tests/browser/material-resident.mjs",
+      "sha256": "b50186b747a498e5ab55c4ccdf3568fcd46e616ff6b32b063ed5f271807e868a",
+      "coverage": "author test source; aggregate result and hash audited, not independently rerun",
+      "frozenManifest": null
+    },
+    {
+      "file": "tests/fixtures/material-access-platform.json",
+      "sha256": "4be419aa7bad271c5bc2adf915124d2ab5ab6ca9abc87ba10fc1cecbb45011f3",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-python-frozen.json"
+    },
+    {
+      "file": "tests/godot/material_access.gd",
+      "sha256": "c1b5babb9169ae4f5e3495ff99f0683dde28e480db934a1c17328b093ca7ca03",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-godot-v2-frozen.json"
+    },
+    {
+      "file": "tests/material_access_api.py",
+      "sha256": "71ccde5bbfeaffc590f7799d19345e33100c6911fe54eaeb39e1e83426c06413",
+      "coverage": "author test source; aggregate result and hash audited, not independently rerun",
+      "frozenManifest": null
+    },
+    {
+      "file": "tests/material_access_godot.py",
+      "sha256": "6524e3378b1fffe71d3b55feed4749bf32ab89b3f047acec6e0d998173b84f9e",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-godot-v2-frozen.json"
+    },
+    {
+      "file": "tests/material_access_mission_api.py",
+      "sha256": "03c90a5d6bea028667dca8c617299832231187af87869ad64234807397357568",
+      "coverage": "exact independently captured candidate",
+      "frozenManifest": "entry-python-frozen.json"
+    },
+    {
+      "file": "tests/material_access_time_api.py",
+      "sha256": "fdb93904421ab9241c446570a892a3d15037b50dce4e09968208858e4fcfe852",
+      "coverage": "author test source; aggregate result and hash audited, not independently rerun",
+      "frozenManifest": null
+    }
+  ],
+  "archivedOriginalCopiesChecked": 36,
+  "archiveEvidence": [
+    {
+      "file": "author-api-first.json",
+      "source": ".local/iter0022/api/20261026T042127Z-276090/results.json",
+      "sha256": "1103e7151706696bd62f67ade854da6b192efd241f22beaf23f2af5799e0b46b"
+    },
+    {
+      "file": "author-api-fault-recheck.json",
+      "source": ".local/iter0022/api/20261026T042652Z-50fa4f/results.json",
+      "sha256": "6b76cd9f2c2f575cb03a09fd5a693a62d504b6e6d8b22fb33fc78843e66ec388"
+    },
+    {
+      "file": "author-time.json",
+      "source": ".local/iter0022/time/20261026T042433Z-3bb8dd/results.json",
+      "sha256": "c2f5acb402cbda74f83aa203e979503f151460b310f6457f1e45b65445ecceef"
+    },
+    {
+      "file": "author-godot-first-recovery.json",
+      "source": ".local/iter0022/godot/20261026T042700Z-dceafc/results.json",
+      "sha256": "2d776df3cedc100b7fc5373bf5abca85eda917bea6560590c72b3600af0efe1d"
+    },
+    {
+      "file": "author-godot-recovery-fixed.json",
+      "source": ".local/iter0022/godot/20261026T042809Z-241de8/results.json",
+      "sha256": "988b66f2190dce74dc373831d7bc0cc9dd44d32345aa843e8f491532bd4a8d61"
+    },
+    {
+      "file": "author-godot-combined.json",
+      "source": ".local/iter0022/final-godot-runs.json",
+      "sha256": "6b1f5f278a43644b05e796d20aba303e57671be03e628332e5ba01a0e600fd43"
+    },
+    {
+      "file": "author-godot-label-final.json",
+      "source": ".local/iter0022/godot/20261026T044049Z-5a0a95/results.json",
+      "sha256": "34ffa81d3acf24b7ff3849acdf99c1c113361aa5f252abc596105a841bd5d7b4"
+    },
+    {
+      "file": "author-launch.json",
+      "source": ".local/iter0022/launch-a41680d4/results.json",
+      "sha256": "b151f7587cd277c3ea93f63662cc3e37ec60ef35ec9ec753af50e95f0735a32b"
+    },
+    {
+      "file": "worker-handoff.json",
+      "source": ".local/build-agent2/iter0022-handoff.json",
+      "sha256": "ac4e0f2056aa6662dfce29fba74be41e1664315fa610cd57d8241c84e8c6e39f"
+    },
+    {
+      "file": "worker-eight.json",
+      "source": ".local/iter0022/python/20261026T042924Z-2672a1/results.json",
+      "sha256": "677418168bc3c50086f2be32cd97c3687f336f99063e88c0707acbc57accfba5"
+    },
+    {
+      "file": "worker-final-four.json",
+      "source": ".local/iter0022/python/20261026T043254Z-99e2a7/results.json",
+      "sha256": "33a0b058be9b3948584e4f83f18ebbd05fcc7c9fb6c6921caf15c1fe6ed77f0f"
+    },
+    {
+      "file": "qa-core.json",
+      "source": ".local/qa/20261026-test-agent/entry-http-20261026T042557872761Z/results.json",
+      "sha256": "ba5e1e49194f8924260e026d06958630ddd9889e6020bc21fd466fced07750d3"
+    },
+    {
+      "file": "qa-boundary-first.json",
+      "source": ".local/qa/20261026-test-agent/entry-boundaries-20261026T043039284331Z/results.json",
+      "sha256": "2737e34e9ae4d528ac565639fe9a446efa7b38251a543cabc9523c0f2919fe60"
+    },
+    {
+      "file": "qa-boundary-recovery.json",
+      "source": ".local/qa/20261026-test-agent/entry-boundaries-20261026T043242626247Z/results.json",
+      "sha256": "b1350df47cd2b239ed52f948caaf02585bb7b7c06d3e4e7de2fb53e5bbb8502b"
+    },
+    {
+      "file": "qa-boundary-legacy-final.json",
+      "source": ".local/qa/20261026-test-agent/entry-boundaries-20261026T043452836416Z/results.json",
+      "sha256": "c54c869064448a411952aac50cbabb4371b571a97e75215d78ae20b96bb61df6"
+    },
+    {
+      "file": "qa-godot-first.json",
+      "source": ".local/qa/20261026-test-agent/entry-godot-20261026T043618229528Z/results.json",
+      "sha256": "f16d47406050440c807dcae48092d87ca91076a1f1134746aa887c08c5e4bbdd"
+    },
+    {
+      "file": "qa-godot-events-ui-final.json",
+      "source": ".local/qa/20261026-test-agent/entry-godot-20261026T043708607242Z/results.json",
+      "sha256": "efe7d5c58cd0a424931dbe6bb2050255cba316dafa3c3ae969249b0b1e7ca47c"
+    },
+    {
+      "file": "godot-material-final.png",
+      "source": ".local/iter0022/godot/20261026T044049Z-5a0a95/test_01_initial_identity_inactive_protocol_and_offline_activation_lock-ui-world/ui-built.png",
+      "sha256": "88d6ea0a63a86c5529e79cfd303f52d7752eb054305e364490fe4d6db6173f71"
+    },
+    {
+      "file": "godot-material-queued.png",
+      "source": ".local/iter0022/godot/20261026T044049Z-5a0a95/test_01_initial_identity_inactive_protocol_and_offline_activation_lock-ui-world/ui-queued.png",
+      "sha256": "44f55b4406c3a31ed956f9dadd78db44b3633e0028349a4fd1f9d142f204e883"
+    },
+    {
+      "file": "author-full-first.json",
+      "source": ".local/checks/20261026T043525Z-3f0fe3/results.json",
+      "sha256": "39d07742e4635a871b2064c22213aa6f99a9334c04405bf074c63346c2017e2b"
+    },
+    {
+      "file": "author-browser-generator-first.json",
+      "source": ".local/iter0022/browser/2026-10-26T04-43-55-806Z/results.json",
+      "sha256": "00224867c0bef8085e9d68e5086ed5d563325cb0a9b40487c25c9d4c2b3b0e2c"
+    },
+    {
+      "file": "author-browser-final.json",
+      "source": ".local/iter0022/browser/2026-10-26T04-44-14-532Z/results.json",
+      "sha256": "f934b274caa0c5cc2c6ee76e2b521d6a39f9dd7f6d2a4e879982ff214e0c5140"
+    },
+    {
+      "file": "author-api-final.json",
+      "source": ".local/iter0022/api/20261026T043955Z-6af505/results.json",
+      "sha256": "6b12fac2a2f4610b02d7ce2b6159b256ce7bc405388e386f932a0b56a304f159"
+    },
+    {
+      "file": "author-time-final.json",
+      "source": ".local/iter0022/time/20261026T044017Z-7aabe8/results.json",
+      "sha256": "aa7a9854e84ae8e6e4918a1a33c591678f48922ff02a6ec5abf890d032edaad1"
+    },
+    {
+      "file": "author-python-final.json",
+      "source": ".local/iter0022/python/20261026T044041Z-1195ac/results.json",
+      "sha256": "abfc1a289d2a215bb3ee95de56c2e50b3ebdd95414cfe2751b9e88bcaeaf0959"
+    },
+    {
+      "file": "qa-summary.json",
+      "source": ".local/qa/20261026-test-agent/entry-independent-acceptance.json",
+      "sha256": "a9f023fab0bfd9281537d4daf2acd9a9515c1105c6ed70c1568fdb34b06e5262"
+    },
+    {
+      "file": "qa-python-cli-records.json",
+      "source": ".local/qa/20261026-test-agent/entry-python-20261026T043853281771Z/results.json",
+      "sha256": "466e2e91db4241d5d85b1ae37a323c0931ff95b489129b6a7061f2f4a337ca3f"
+    },
+    {
+      "file": "qa-python-budget.json",
+      "source": ".local/qa/20261026-test-agent/entry-python-20261026T044002691532Z/results.json",
+      "sha256": "57a54e3f33a79c49762b702415e520e88edf18ca463231a54df7cfca170f0b92"
+    },
+    {
+      "file": "qa-python-expired-original-history.json",
+      "source": ".local/qa/20261026-test-agent/entry-python-20261026T044219576308Z/results.json",
+      "sha256": "a31e607c421654e90cd58e00cd7e9cf42696209e5e226fa72b707a3858eb4c37"
+    },
+    {
+      "file": "qa-python-unused-permission.json",
+      "source": ".local/qa/20261026-test-agent/entry-python-20261026T044102343219Z/results.json",
+      "sha256": "aee1b57a087f62f05ac33cea1f418a5f5b031db061e1e93614704ebde03c5286"
+    },
+    {
+      "file": "qa-browser.json",
+      "source": ".local/qa/20261026-test-agent/entry-web-v2-20261026T044102288554Z/results.json",
+      "sha256": "a32a2b5d591ef95318d39586c65289ed17b7c99361697f1361b89389ecc991f1"
+    },
+    {
+      "file": "qa-godot-label-final.json",
+      "source": ".local/qa/20261026-test-agent/entry-godot-20261026T044339456302Z/results.json",
+      "sha256": "95afe3ee139b30801a146e433e2470865a38cbb493e57b24ac582dce9da90e57"
+    },
+    {
+      "file": "report-material-desktop.png",
+      "source": ".local/iter0022/browser/2026-10-26T04-44-14-532Z/material-desktop.png",
+      "sha256": "b10103ae2edf9fdfa64d63637dbae7de5bcf784dec90327493b8271c73879bcd"
+    },
+    {
+      "file": "report-material-mobile.png",
+      "source": ".local/iter0022/browser/2026-10-26T04-44-14-532Z/material-mobile.png",
+      "sha256": "7f2479228be053be16d55cd57ac8d571cc27565011dc0f86e842c66e1e4f08a6"
+    },
+    {
+      "file": "author-final-composite.json",
+      "source": ".local/iter0022/final-composite.json",
+      "sha256": "745f0f2433f632176cd255d4817d88d0cf9461d58130a026af74a48979e0cf66"
+    },
+    {
+      "file": "candidate-source.json",
+      "source": ".local/iter0022/final-source-manifest.json",
+      "sha256": "c18d6eced6d6aa77323beb8987e00c354e6257001792d2d468e31d6a050a9df6"
+    }
+  ],
+  "authorTotalsVerifiedFromOriginalResults": {
+    "httpSuites": 23,
+    "httpTests": 278,
+    "browserSuites": 17,
+    "browserTests": 162,
+    "godotSuites": 8,
+    "godotGroups": 50,
+    "godotAssertions": 705,
+    "godotCaptionRerunAssertions": 21
+  },
+  "authorFullAggregateIndependentlyRerun": false,
+  "authorFirstFullRunFailedThenTargetedBrowserPassPreserved": true,
+  "independentPassed": {
+    "coreGroups": 10,
+    "godotGroups": 6,
+    "pythonGroups": 7,
+    "chromeChecks": 8,
+    "godotFinalV2UiAssertions": 21
+  },
+  "independentSummaryFrozen": "entry-independent-acceptance.json",
+  "noBusinessReruns": true,
+  "testerProductWrites": false,
+  "publicEvidenceFiles": {
+    "docs/iterations/evidence/ITER-0022/candidate-source.json": "c18d6eced6d6aa77323beb8987e00c354e6257001792d2d468e31d6a050a9df6",
+    "docs/iterations/evidence/ITER-0022/author-launch.json": "b151f7587cd277c3ea93f63662cc3e37ec60ef35ec9ec753af50e95f0735a32b",
+    "docs/iterations/evidence/ITER-0022/author-browser-final.json": "f934b274caa0c5cc2c6ee76e2b521d6a39f9dd7f6d2a4e879982ff214e0c5140",
+    "docs/iterations/evidence/ITER-0022/qa-python-unused-permission.json": "aee1b57a087f62f05ac33cea1f418a5f5b031db061e1e93614704ebde03c5286",
+    "docs/iterations/evidence/ITER-0022/author-time-final.json": "aa7a9854e84ae8e6e4918a1a33c591678f48922ff02a6ec5abf890d032edaad1",
+    "docs/iterations/evidence/ITER-0022/provenance.json": "a8573780532c9392ecc03c400c45e4b8964ae7b8e062b2efe2b05d8c7e6a555b",
+    "docs/iterations/evidence/ITER-0022/qa-python-cli-records.json": "466e2e91db4241d5d85b1ae37a323c0931ff95b489129b6a7061f2f4a337ca3f",
+    "docs/iterations/evidence/ITER-0022/author-godot-combined.json": "6b1f5f278a43644b05e796d20aba303e57671be03e628332e5ba01a0e600fd43",
+    "docs/iterations/evidence/ITER-0022/author-api-fault-recheck.json": "6b76cd9f2c2f575cb03a09fd5a693a62d504b6e6d8b22fb33fc78843e66ec388",
+    "docs/iterations/evidence/ITER-0022/godot-material-final.png": "88d6ea0a63a86c5529e79cfd303f52d7752eb054305e364490fe4d6db6173f71",
+    "docs/iterations/evidence/ITER-0022/author-godot-recovery-fixed.json": "988b66f2190dce74dc373831d7bc0cc9dd44d32345aa843e8f491532bd4a8d61",
+    "docs/iterations/evidence/ITER-0022/author-full-first.json": "39d07742e4635a871b2064c22213aa6f99a9334c04405bf074c63346c2017e2b",
+    "docs/iterations/evidence/ITER-0022/godot-material-queued.png": "44f55b4406c3a31ed956f9dadd78db44b3633e0028349a4fd1f9d142f204e883",
+    "docs/iterations/evidence/ITER-0022/qa-godot-label-final.json": "95afe3ee139b30801a146e433e2470865a38cbb493e57b24ac582dce9da90e57",
+    "docs/iterations/evidence/ITER-0022/qa-summary.json": "a9f023fab0bfd9281537d4daf2acd9a9515c1105c6ed70c1568fdb34b06e5262",
+    "docs/iterations/evidence/ITER-0022/author-api-first.json": "1103e7151706696bd62f67ade854da6b192efd241f22beaf23f2af5799e0b46b",
+    "docs/iterations/evidence/ITER-0022/qa-godot-first.json": "f16d47406050440c807dcae48092d87ca91076a1f1134746aa887c08c5e4bbdd",
+    "docs/iterations/evidence/ITER-0022/qa-boundary-recovery.json": "b1350df47cd2b239ed52f948caaf02585bb7b7c06d3e4e7de2fb53e5bbb8502b",
+    "docs/iterations/evidence/ITER-0022/author-api-final.json": "6b12fac2a2f4610b02d7ce2b6159b256ce7bc405388e386f932a0b56a304f159",
+    "docs/iterations/evidence/ITER-0022/report-material-mobile.png": "7f2479228be053be16d55cd57ac8d571cc27565011dc0f86e842c66e1e4f08a6",
+    "docs/iterations/evidence/ITER-0022/qa-browser.json": "a32a2b5d591ef95318d39586c65289ed17b7c99361697f1361b89389ecc991f1",
+    "docs/iterations/evidence/ITER-0022/qa-python-budget.json": "57a54e3f33a79c49762b702415e520e88edf18ca463231a54df7cfca170f0b92",
+    "docs/iterations/evidence/ITER-0022/qa-boundary-legacy-final.json": "c54c869064448a411952aac50cbabb4371b571a97e75215d78ae20b96bb61df6",
+    "docs/iterations/evidence/ITER-0022/qa-core.json": "ba5e1e49194f8924260e026d06958630ddd9889e6020bc21fd466fced07750d3",
+    "docs/iterations/evidence/ITER-0022/README.md": "99a35a706c3ebc066275a6d778ccb552fe47fc050792327a8615226e12140034",
+    "docs/iterations/evidence/ITER-0022/qa-godot-events-ui-final.json": "efe7d5c58cd0a424931dbe6bb2050255cba316dafa3c3ae969249b0b1e7ca47c",
+    "docs/iterations/evidence/ITER-0022/qa-boundary-first.json": "2737e34e9ae4d528ac565639fe9a446efa7b38251a543cabc9523c0f2919fe60",
+    "docs/iterations/evidence/ITER-0022/worker-eight.json": "677418168bc3c50086f2be32cd97c3687f336f99063e88c0707acbc57accfba5",
+    "docs/iterations/evidence/ITER-0022/report-material-desktop.png": "b10103ae2edf9fdfa64d63637dbae7de5bcf784dec90327493b8271c73879bcd",
+    "docs/iterations/evidence/ITER-0022/author-godot-label-final.json": "34ffa81d3acf24b7ff3849acdf99c1c113361aa5f252abc596105a841bd5d7b4",
+    "docs/iterations/evidence/ITER-0022/worker-handoff.json": "ac4e0f2056aa6662dfce29fba74be41e1664315fa610cd57d8241c84e8c6e39f",
+    "docs/iterations/evidence/ITER-0022/qa-python-expired-original-history.json": "a31e607c421654e90cd58e00cd7e9cf42696209e5e226fa72b707a3858eb4c37",
+    "docs/iterations/evidence/ITER-0022/author-python-final.json": "abfc1a289d2a215bb3ee95de56c2e50b3ebdd95414cfe2751b9e88bcaeaf0959",
+    "docs/iterations/evidence/ITER-0022/author-godot-first-recovery.json": "2d776df3cedc100b7fc5373bf5abca85eda917bea6560590c72b3600af0efe1d",
+    "docs/iterations/evidence/ITER-0022/worker-final-four.json": "33a0b058be9b3948584e4f83f18ebbd05fcc7c9fb6c6921caf15c1fe6ed77f0f",
+    "docs/iterations/evidence/ITER-0022/author-time.json": "c2f5acb402cbda74f83aa203e979503f151460b310f6457f1e45b65445ecceef",
+    "docs/iterations/evidence/ITER-0022/author-final-composite.json": "745f0f2433f632176cd255d4817d88d0cf9461d58130a026af74a48979e0cf66",
+    "docs/iterations/evidence/ITER-0022/author-browser-generator-first.json": "00224867c0bef8085e9d68e5086ed5d563325cb0a9b40487c25c9d4c2b3b0e2c"
+  }
+}

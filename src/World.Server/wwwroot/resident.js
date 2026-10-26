@@ -15,7 +15,7 @@
   };
   const providers = { "codex-exec": "模型决策", "fixed-reference": "固定策略基线", "test-double": "测试替身 · 非真实模型" };
   const structures = { "platform.v1": { label: "平台", definition: "platform", wood: 3 }, "bridge.v1": { label: "木桥", definition: "bridge", wood: 6 } };
-  const actionNames = { walk: "行走", move: "移动", claim: "领取木材", gather: "采集木材", transfer: "赠送木材", build: "建造", visit: "到访", postcard: "分享手记", mosaic: "绘制画布", mosaic_propose: "提出修改建议", mosaic_review: "审阅修改建议", observe: "观察", wait: "等待" };
+  const actionNames = { reserve_material: "预约材料", harvest_material: "按原预约领取", walk: "行走", move: "移动", claim: "领取木材", gather: "采集木材", transfer: "赠送木材", build: "建造", visit: "到访", postcard: "分享手记", mosaic: "绘制画布", mosaic_propose: "提出修改建议", mosaic_review: "审阅修改建议", observe: "观察", wait: "等待" };
   const stepStatuses = { committed: "已提交", rejected: "已拒绝", unknown: "结果未知", pending: "待确认", failed: "失败" };
   const reasonNames = { round_trip_verified: "已核验到达目标并返回原起点", max_steps: "本次分段步数已到，等待恢复" };
   let report = null;
@@ -54,12 +54,12 @@
     const free = continuous(w), maxCommands = free ? 1000 : 100;
     const actorState = m.preconditionMode === "actor-state-v1";
     require(m.preconditionMode === undefined || m.preconditionMode === null || actorState, "任务的动作前置模式不受支持。");
-    require(!actorState || free && ["r8", "r9"].includes(m.rulesVersion) && /^w_[0-9a-f]{32}$/.test(m.worldInstanceId)
+    require(!actorState || free && ["r8", "r9", "r10"].includes(m.rulesVersion) && /^w_[0-9a-f]{32}$/.test(m.worldInstanceId)
       && w.instanceId === m.worldInstanceId, "按居民状态执行的报告必须绑定原连续世界实例。");
     const cell = (value) => Array.isArray(value) && value.length === 2 && value.every(free ? number : integer) && value[0] < w.width && value[1] < w.height;
-    require(!free || ["r8", "r9"].includes(m.rulesVersion) && m.arrivalTolerance === .06, "连续坐标报告需要连续规则与 0.06 米到达容差。");
+    require(!free || ["r8", "r9", "r10"].includes(m.rulesVersion) && m.arrivalTolerance === .06, "连续坐标报告需要连续规则与 0.06 米到达容差。");
     require(!free || (m.rulesVersion === "r8" && w.scenarioId === undefined)
-      || w.scenarioId === ({ r8: "wilderness-continuous-v1", r9: "wilderness-cooperation-v1" })[m.rulesVersion], "报告场景与原任务规则不一致。");
+      || w.scenarioId === ({ r8: "wilderness-continuous-v1", r9: "wilderness-cooperation-v1", r10: "wilderness-material-access-v1" })[m.rulesVersion], "报告场景与原任务规则不一致。");
     require(cell(m.origin), "任务起点不是有效图内坐标。");
     require(m.goal === null || (object(m.goal) && string(m.goal.id) && string(m.goal.label) && cell(m.goal.target)), "任务目标格式不正确；未选择目标时应为 null。");
     require(m.goal?.activityId === undefined || string(m.goal.activityId), "活动目标编号格式不正确。");
@@ -70,7 +70,7 @@
     require(m.allowTransfer === undefined || typeof m.allowTransfer === "boolean", "赠送权限应为布尔值。");
     const transferSpec = t => object(t) && string(t.recipientActorId) && /^[A-Za-z0-9_-]{1,128}$/.test(t.recipientActorId)
       && t.resource === "wood" && integer(t.quantity) && t.quantity >= 1 && t.quantity <= 12;
-    require(m.goal?.transfer === undefined || m.rulesVersion === "r9" && transferSpec(m.goal.transfer)
+    require(m.goal?.transfer === undefined || ["r9", "r10"].includes(m.rulesVersion) && transferSpec(m.goal.transfer)
       && m.goal.transfer.recipientActorId !== m.actorId
       && !m.goal.activityId && !m.goal.buildRecipeId, "赠送目标需要另一位收件人、木材数量和独立会面点。");
     require(m.paintMosaic === undefined || typeof m.paintMosaic === "boolean", "画布创作要求应为布尔值。");
@@ -127,7 +127,7 @@
     require(w.activities === undefined || (Array.isArray(w.activities) && w.activities.every((a) => object(a) && string(a.id) && string(a.label) && cell(a.position))), "地图活动地点格式不正确。");
     require(w.mosaic === undefined || w.mosaic === null || mosaic.validBoard(w.mosaic), "画布快照格式不正确。");
     require(w.mosaicProposals === undefined || (Array.isArray(w.mosaicProposals) && w.mosaicProposals.every(consent.validProposal)), "提议快照格式不正确。");
-    require(w.recentTransfers === undefined || m.rulesVersion === "r9" && object(w.recentTransfers)
+    require(w.recentTransfers === undefined || ["r9", "r10"].includes(m.rulesVersion) && object(w.recentTransfers)
       && w.recentTransfers.limit === 20 && typeof w.recentTransfers.truncated === "boolean"
       && Array.isArray(w.recentTransfers.items) && w.recentTransfers.items.length <= 20
       && w.recentTransfers.items.every((e, i, all) => transferSpec(e) && e.type === "woodTransferred"
@@ -145,7 +145,7 @@
       require(step.inventoryWood === null || integer(step.inventoryWood), `${prefix}的木材库存格式不正确。`);
       if (actorState) {
         require(step.preconditionMode === m.preconditionMode && integer(step.expectedStateVersion)
-          && (["walk", "gather", "build"].includes(step.action.type) || m.rulesVersion === "r9" && step.action.type === "transfer"), `${prefix}缺少原命令的前置模式或观察版本。`);
+          && (["walk", "gather", "build"].includes(step.action.type) || ["r9", "r10"].includes(m.rulesVersion) && step.action.type === "transfer" || m.rulesVersion === "r10" && window.MaterialReport.action(step.action)), `${prefix}缺少原命令的前置模式或观察版本。`);
         if (["committed", "rejected"].includes(step.status)) {
           const execution = step.execution;
           require(object(execution) && execution.preconditionMode === m.preconditionMode
@@ -168,7 +168,7 @@
       if (step.action.recipeId !== undefined) require(string(step.action.recipeId), `${prefix}的配方格式不正确。`);
       if (step.action.activityId !== undefined) require(string(step.action.activityId), `${prefix}的活动编号格式不正确。`);
       if (step.action.type === "gather") require(string(step.action.nodeId) && step.action.nodeId.length > 0, `${prefix}缺少采集来源。`);
-      if (step.action.type === "transfer") require(m.rulesVersion === "r9" && transferSpec(step.action), `${prefix}缺少原收件人或赠送数量。`);
+      if (step.action.type === "transfer") require(["r9", "r10"].includes(m.rulesVersion) && transferSpec(step.action), `${prefix}缺少原收件人或赠送数量。`);
       if (step.entityId !== undefined) require(string(step.entityId) && step.entityId.length > 0, `${prefix}的设施编号格式不正确。`);
       if (step.action.type === "postcard") require(string(step.action.visitCommandId) && postcardText(step.action.text), `${prefix}的手记或到访关联格式不正确。`);
       if (["mosaic", "mosaic_propose"].includes(step.action.type)) require(string(step.action.visitCommandId) && integer(step.action.expectedMosaicRevision) && mosaic.validPatch(step.action.patch), `${prefix}的画布修改格式不正确。`);
@@ -177,6 +177,7 @@
       for (const key of ["dx", "dy"]) if (step.action[key] !== undefined) require(Number.isSafeInteger(step.action[key]) && Math.abs(step.action[key]) <= 1, `${prefix}的移动偏移格式不正确。`);
     });
     require(string(feedback.summary) && [feedback.issues, feedback.suggestions].every((v) => Array.isArray(v) && v.every(string)), "执行反馈须包含 summary 及字符串数组 issues、suggestions。");
+    window.MaterialReport.validate(data, require);
     return data;
   }
 
@@ -354,10 +355,19 @@
     $("returned").dataset.verified = String(f.returned);
     put("verified-at", f.verifiedAtUtc ? `${new Date(f.verifiedAtUtc).toISOString().replace("T", " ").replace(".000Z", " UTC").replace(/Z$/, " UTC")}` : "未记录核实时间");
     put("state-versions", `${f.startStateVersion ?? "未知"} → ${f.endStateVersion ?? "未知"}`);
-    put("created-summary", `${f.woodGathered === undefined ? "" : `采集 ${f.woodGathered} · 领取 `}${f.woodClaimed} 单位木材${m.rulesVersion === "r9" ? ` · 赠送 ${f.woodTransferred ?? 0}` : ""} / ${f.createdEntityIds.length} 个设施`);
+    put("created-summary", `${f.woodGathered === undefined ? "" : `采集 ${f.woodGathered} · 领取 `}${f.woodClaimed} 单位木材${m.rulesVersion === "r10" ? ` · 预约领取 ${f.materialWoodHarvested ?? 0}` : ""}${["r9", "r10"].includes(m.rulesVersion) ? ` · 赠送 ${f.woodTransferred ?? 0}` : ""} / ${f.createdEntityIds.length} 个设施`);
+    const material = window.MaterialReport.assess(data);
+    $("material-fact").hidden = !material.uses;
+    $("material-fact").dataset.verified = String(material.verified);
+    put("material-fact", material.uses ? material.verified
+      ? "材料入口领取已核实：原预约 → 亲自领取 3 木材；建造另行确认。"
+      : material.reserved && material.consistent ? `已确认原预约 · 领取 ${material.count} / 3 木材；尚未全部领取。`
+      : "尚未核实本任务材料领取；排队、余额或来源存量不能代替原领取事实。" : "");
+    $("query-budget-item").hidden = b.limits.queries === undefined;
     const warnings = [];
+    if (!material.consistent) warnings.push("材料入口汇总与原预约、领取步骤或身份不一致。");
     const cuts = data.steps.filter((s) => s.action.type === "gather" && s.status === "committed").length;
-    const gatheringConsistent = (f.woodGathered ?? 0) === cuts && (cuts === 0 || m.allowGather === true && ["r7", "r8", "r9"].includes(m.rulesVersion));
+    const gatheringConsistent = (f.woodGathered ?? 0) === cuts && (cuts === 0 || m.allowGather === true && ["r7", "r8", "r9", "r10"].includes(m.rulesVersion));
     const transferConsistent = (f.woodTransferred ?? 0) === giftSteps.reduce((sum, s) => sum + s.action.quantity, 0)
       && (giftSteps.length === 0 || transferVerified);
     const committedPositions = data.steps.filter(s => s.status === "committed" && s.position).map(s => s.position);
@@ -366,7 +376,7 @@
       && data.steps.slice(data.steps.findIndex(s => s.commandId === built.commandId))
         .some(s => s.status === "committed" && s.position && near(s.position, m.goal.target));
     const walkConsistent = !continuous(data.world) || m.goal && [m.origin, ...committedPositions].some(p => near(p, m.goal.target)) && near(committedPositions.at(-1) || m.origin, m.origin) && !data.steps.some(s => s.status === "committed" && s.blocked === true);
-    const incomplete = !walkConsistent || !constructionVisited || !gatheringConsistent || !transferConsistent || !f.goalReached || !f.returned || !m.goal || requiresTransfer && !transferVerified || requiresConstruction && !constructionVerified || requiresActivity && !activityVerified || requiresPostcard && !postcardVerified || requiresMosaic && !mosaicVerified || (m.proposeMosaic || m.reviewMosaicProposal) && !consentVerified;
+    const incomplete = material.uses && !material.verified || !walkConsistent || !constructionVisited || !gatheringConsistent || !transferConsistent || !f.goalReached || !f.returned || !m.goal || requiresTransfer && !transferVerified || requiresConstruction && !constructionVerified || requiresActivity && !activityVerified || requiresPostcard && !postcardVerified || requiresMosaic && !mosaicVerified || (m.proposeMosaic || m.reviewMosaicProposal) && !consentVerified;
     if (m.status === "completed" && incomplete) warnings.push("报告标记为已完成，但到达、返回、目标、到访或本次创作事实不完整，不能据此认定任务成功。");
     if (d && m.goal && d.goalId !== m.goal.id) warnings.push("模型选择与执行目标编号不一致，请复核原始报告。");
     if (d?.provider.kind === "test-double") warnings.push("这份报告使用测试替身，不是一次真实模型运行；仅供客户端或执行器测试。");
@@ -374,14 +384,14 @@
     if (!transferConsistent) warnings.push("赠送汇总与原交付步骤、身份或任务权限不一致，请复核原始记录。");
     if (m.status === "completed" && !walkConsistent) warnings.push("连续行走记录未支持在 0.06 米内到达并返回，或包含碰撞截停。");
     if (m.status === "completed" && constructionVerified && !constructionVisited) warnings.push("建设完成后的记录未支持到达设施中心。");
-    for (const [key, prefix] of [["commands", "command"], ["wood", "wood"], ["modelCalls", "model"], ["seconds", "seconds"]]) {
+    for (const [key, prefix] of [["commands", "command"], ["wood", "wood"], ["modelCalls", "model"], ["seconds", "seconds"], ...(b.limits.queries === undefined ? [] : [["queries", "queries"]])]) {
       put(`${prefix}-budget`, `${formatNumber(b.used[key])} / ${formatNumber(b.limits[key])}`);
       const progress = $(`${prefix}-progress`);
       progress.max = b.limits[key] || 1;
       progress.value = Math.min(b.used[key], progress.max);
       progress.setAttribute("aria-valuetext", `已用 ${formatNumber(b.used[key])}，上限 ${formatNumber(b.limits[key])}`);
       progress.parentElement.dataset.over = String(b.used[key] > b.limits[key]);
-      if (b.used[key] > b.limits[key]) warnings.push(`${{ commands: "命令", wood: "木材", modelCalls: "模型调用", seconds: "时间" }[key]}累计值超过报告上限，请复核执行记录。`);
+      if (b.used[key] > b.limits[key]) warnings.push(`${{ commands: "命令", wood: "木材", modelCalls: "模型调用", seconds: "时间", queries: "查询" }[key]}累计值超过报告上限，请复核执行记录。`);
     }
     put("report-warning", warnings.join(" "));
     $("report-warning").hidden = warnings.length === 0;

@@ -17,7 +17,8 @@ def valid_goal(value):
 
 def supported(observed):
     capability = observed.get('materialTransfer')
-    return (observed.get('rulesVersion') == 'r9' and observed.get('world', {}).get('scenarioId') == 'wilderness-cooperation-v1'
+    expected = {'r9': 'wilderness-cooperation-v1', 'r10': 'wilderness-material-access-v1'}.get(observed.get('rulesVersion'))
+    return (expected is not None and observed.get('world', {}).get('scenarioId') == expected
             and isinstance(capability, dict) and type(capability.get('version')) is int
             and capability.get('recipientConfirmation') is False and capability == CAPABILITY)
 
@@ -77,7 +78,7 @@ def validate_saved(state):
     action = request['action']
     if (mission.get('allowTransfer') is not True or spec.get('allowTransfer') is not True
             or not isinstance(goal, dict) or goal not in spec['goals'] or not valid_goal(goal.get('transfer'))
-            or action != {'type': 'transfer', **goal['transfer']} or request.get('rulesVersion') != 'r9'
+            or action != {'type': 'transfer', **goal['transfer']} or request.get('rulesVersion') not in ('r9', 'r10')
             or request.get('preconditionMode') != ACTOR_STATE or not valid_before(pending.get('transferBefore'))
             or type(pending.get('woodCost')) is not int or pending['woodCost'] != action['quantity']
             or action['recipientActorId'] == mission['actorId']):
@@ -90,7 +91,7 @@ def validate_saved(state):
 
 def evidence(receipt, intent, actor, before, instance):
     action, result = intent['action'], receipt.get('result')
-    if (not valid_before(before) or not isinstance(result, dict) or intent.get('rulesVersion') != 'r9'
+    if (not valid_before(before) or not isinstance(result, dict) or intent.get('rulesVersion') not in ('r9', 'r10')
             or receipt.get('rulesVersion') != intent['rulesVersion'] or type(receipt.get('schemaVersion')) is not int
             or receipt['schemaVersion'] != 1 or receipt.get('commandId') != intent['commandId']
             or not isinstance(receipt.get('identity'), dict)

@@ -1,0 +1,187 @@
+{
+  "author-api-first.json": {
+    "source": ".local/iter0022/api/20261026T042127Z-276090/results.json",
+    "sha256": "1103e7151706696bd62f67ade854da6b192efd241f22beaf23f2af5799e0b46b",
+    "copy": "exact"
+  },
+  "author-api-fault-recheck.json": {
+    "source": ".local/iter0022/api/20261026T042652Z-50fa4f/results.json",
+    "sha256": "6b76cd9f2c2f575cb03a09fd5a693a62d504b6e6d8b22fb33fc78843e66ec388",
+    "copy": "exact"
+  },
+  "author-time.json": {
+    "source": ".local/iter0022/time/20261026T042433Z-3bb8dd/results.json",
+    "sha256": "c2f5acb402cbda74f83aa203e979503f151460b310f6457f1e45b65445ecceef",
+    "copy": "exact"
+  },
+  "author-godot-first-recovery.json": {
+    "source": ".local/iter0022/godot/20261026T042700Z-dceafc/results.json",
+    "sha256": "2d776df3cedc100b7fc5373bf5abca85eda917bea6560590c72b3600af0efe1d",
+    "copy": "exact"
+  },
+  "author-godot-recovery-fixed.json": {
+    "source": ".local/iter0022/godot/20261026T042809Z-241de8/results.json",
+    "sha256": "988b66f2190dce74dc373831d7bc0cc9dd44d32345aa843e8f491532bd4a8d61",
+    "copy": "exact"
+  },
+  "author-godot-combined.json": {
+    "source": ".local/iter0022/final-godot-runs.json",
+    "sha256": "6b1f5f278a43644b05e796d20aba303e57671be03e628332e5ba01a0e600fd43",
+    "copy": "exact"
+  },
+  "author-godot-label-final.json": {
+    "source": ".local/iter0022/godot/20261026T044049Z-5a0a95/results.json",
+    "sha256": "34ffa81d3acf24b7ff3849acdf99c1c113361aa5f252abc596105a841bd5d7b4",
+    "copy": "exact"
+  },
+  "author-launch.json": {
+    "source": ".local/iter0022/launch-a41680d4/results.json",
+    "sha256": "b151f7587cd277c3ea93f63662cc3e37ec60ef35ec9ec753af50e95f0735a32b",
+    "copy": "exact"
+  },
+  "worker-handoff.json": {
+    "source": ".local/build-agent2/iter0022-handoff.json",
+    "sha256": "ac4e0f2056aa6662dfce29fba74be41e1664315fa610cd57d8241c84e8c6e39f",
+    "copy": "exact"
+  },
+  "worker-eight.json": {
+    "source": ".local/iter0022/python/20261026T042924Z-2672a1/results.json",
+    "sha256": "677418168bc3c50086f2be32cd97c3687f336f99063e88c0707acbc57accfba5",
+    "copy": "exact"
+  },
+  "worker-final-four.json": {
+    "source": ".local/iter0022/python/20261026T043254Z-99e2a7/results.json",
+    "sha256": "33a0b058be9b3948584e4f83f18ebbd05fcc7c9fb6c6921caf15c1fe6ed77f0f",
+    "copy": "exact"
+  },
+  "qa-core.json": {
+    "source": ".local/qa/20261026-test-agent/entry-http-20261026T042557872761Z/results.json",
+    "sha256": "ba5e1e49194f8924260e026d06958630ddd9889e6020bc21fd466fced07750d3",
+    "copy": "exact"
+  },
+  "qa-boundary-first.json": {
+    "source": ".local/qa/20261026-test-agent/entry-boundaries-20261026T043039284331Z/results.json",
+    "sha256": "2737e34e9ae4d528ac565639fe9a446efa7b38251a543cabc9523c0f2919fe60",
+    "copy": "exact"
+  },
+  "qa-boundary-recovery.json": {
+    "source": ".local/qa/20261026-test-agent/entry-boundaries-20261026T043242626247Z/results.json",
+    "sha256": "b1350df47cd2b239ed52f948caaf02585bb7b7c06d3e4e7de2fb53e5bbb8502b",
+    "copy": "exact"
+  },
+  "qa-boundary-legacy-final.json": {
+    "source": ".local/qa/20261026-test-agent/entry-boundaries-20261026T043452836416Z/results.json",
+    "sha256": "c54c869064448a411952aac50cbabb4371b571a97e75215d78ae20b96bb61df6",
+    "copy": "exact"
+  },
+  "qa-godot-first.json": {
+    "source": ".local/qa/20261026-test-agent/entry-godot-20261026T043618229528Z/results.json",
+    "sha256": "f16d47406050440c807dcae48092d87ca91076a1f1134746aa887c08c5e4bbdd",
+    "copy": "exact"
+  },
+  "qa-godot-events-ui-final.json": {
+    "source": ".local/qa/20261026-test-agent/entry-godot-20261026T043708607242Z/results.json",
+    "sha256": "efe7d5c58cd0a424931dbe6bb2050255cba316dafa3c3ae969249b0b1e7ca47c",
+    "copy": "exact"
+  },
+  "godot-material-final.png": {
+    "source": ".local/iter0022/godot/20261026T044049Z-5a0a95/test_01_initial_identity_inactive_protocol_and_offline_activation_lock-ui-world/ui-built.png",
+    "sha256": "88d6ea0a63a86c5529e79cfd303f52d7752eb054305e364490fe4d6db6173f71",
+    "copy": "exact"
+  },
+  "godot-material-queued.png": {
+    "source": ".local/iter0022/godot/20261026T044049Z-5a0a95/test_01_initial_identity_inactive_protocol_and_offline_activation_lock-ui-world/ui-queued.png",
+    "sha256": "44f55b4406c3a31ed956f9dadd78db44b3633e0028349a4fd1f9d142f204e883",
+    "copy": "exact"
+  },
+  "author-full-first.json": {
+    "source": ".local/checks/20261026T043525Z-3f0fe3/results.json",
+    "sha256": "39d07742e4635a871b2064c22213aa6f99a9334c04405bf074c63346c2017e2b",
+    "copy": "exact"
+  },
+  "author-browser-generator-first.json": {
+    "source": ".local/iter0022/browser/2026-10-26T04-43-55-806Z/results.json",
+    "sha256": "00224867c0bef8085e9d68e5086ed5d563325cb0a9b40487c25c9d4c2b3b0e2c",
+    "copy": "exact"
+  },
+  "author-browser-final.json": {
+    "source": ".local/iter0022/browser/2026-10-26T04-44-14-532Z/results.json",
+    "sha256": "f934b274caa0c5cc2c6ee76e2b521d6a39f9dd7f6d2a4e879982ff214e0c5140",
+    "copy": "exact"
+  },
+  "author-api-final.json": {
+    "source": ".local/iter0022/api/20261026T043955Z-6af505/results.json",
+    "sha256": "6b12fac2a2f4610b02d7ce2b6159b256ce7bc405388e386f932a0b56a304f159",
+    "copy": "exact"
+  },
+  "author-time-final.json": {
+    "source": ".local/iter0022/time/20261026T044017Z-7aabe8/results.json",
+    "sha256": "aa7a9854e84ae8e6e4918a1a33c591678f48922ff02a6ec5abf890d032edaad1",
+    "copy": "exact"
+  },
+  "author-python-final.json": {
+    "source": ".local/iter0022/python/20261026T044041Z-1195ac/results.json",
+    "sha256": "abfc1a289d2a215bb3ee95de56c2e50b3ebdd95414cfe2751b9e88bcaeaf0959",
+    "copy": "exact"
+  },
+  "qa-summary.json": {
+    "source": ".local/qa/20261026-test-agent/entry-independent-acceptance.json",
+    "sha256": "a9f023fab0bfd9281537d4daf2acd9a9515c1105c6ed70c1568fdb34b06e5262",
+    "copy": "exact"
+  },
+  "qa-python-cli-records.json": {
+    "source": ".local/qa/20261026-test-agent/entry-python-20261026T043853281771Z/results.json",
+    "sha256": "466e2e91db4241d5d85b1ae37a323c0931ff95b489129b6a7061f2f4a337ca3f",
+    "copy": "exact"
+  },
+  "qa-python-budget.json": {
+    "source": ".local/qa/20261026-test-agent/entry-python-20261026T044002691532Z/results.json",
+    "sha256": "57a54e3f33a79c49762b702415e520e88edf18ca463231a54df7cfca170f0b92",
+    "copy": "exact"
+  },
+  "qa-python-expired-original-history.json": {
+    "source": ".local/qa/20261026-test-agent/entry-python-20261026T044219576308Z/results.json",
+    "sha256": "a31e607c421654e90cd58e00cd7e9cf42696209e5e226fa72b707a3858eb4c37",
+    "copy": "exact"
+  },
+  "qa-python-unused-permission.json": {
+    "source": ".local/qa/20261026-test-agent/entry-python-20261026T044102343219Z/results.json",
+    "sha256": "aee1b57a087f62f05ac33cea1f418a5f5b031db061e1e93614704ebde03c5286",
+    "copy": "exact"
+  },
+  "qa-browser.json": {
+    "source": ".local/qa/20261026-test-agent/entry-web-v2-20261026T044102288554Z/results.json",
+    "sha256": "a32a2b5d591ef95318d39586c65289ed17b7c99361697f1361b89389ecc991f1",
+    "copy": "exact"
+  },
+  "qa-godot-label-final.json": {
+    "source": ".local/qa/20261026-test-agent/entry-godot-20261026T044339456302Z/results.json",
+    "sha256": "95afe3ee139b30801a146e433e2470865a38cbb493e57b24ac582dce9da90e57",
+    "copy": "exact"
+  },
+  "report-material-desktop.png": {
+    "source": ".local/iter0022/browser/2026-10-26T04-44-14-532Z/material-desktop.png",
+    "sha256": "b10103ae2edf9fdfa64d63637dbae7de5bcf784dec90327493b8271c73879bcd",
+    "copy": "exact"
+  },
+  "report-material-mobile.png": {
+    "source": ".local/iter0022/browser/2026-10-26T04-44-14-532Z/material-mobile.png",
+    "sha256": "7f2479228be053be16d55cd57ac8d571cc27565011dc0f86e842c66e1e4f08a6",
+    "copy": "exact"
+  },
+  "author-final-composite.json": {
+    "source": ".local/iter0022/final-composite.json",
+    "sha256": "745f0f2433f632176cd255d4817d88d0cf9461d58130a026af74a48979e0cf66",
+    "copy": "exact"
+  },
+  "candidate-source.json": {
+    "source": ".local/iter0022/final-source-manifest.json",
+    "sha256": "c18d6eced6d6aa77323beb8987e00c354e6257001792d2d468e31d6a050a9df6",
+    "copy": "exact"
+  },
+  "qa-final-source.json": {
+    "source": ".local/qa/20261026-test-agent/entry-final-source-audit.json",
+    "sha256": "8ee0eb7f5b61152510e8c8040b7ab699080973220e1469ddac5175a01c2a6a84",
+    "copy": "exact"
+  }
+}

@@ -53,15 +53,18 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
         }
 
         Scenario = configuration.RequestedScenario ?? WorldScenario.Wilderness;
-        Run(connection, transaction, Scenario.SupportsTransfer ? SchemaV9 : Scenario.SupportsContinuous ? SchemaV8 : Scenario.SupportsGathering ? SchemaV7 : Scenario.SupportsMosaicConsent ? SchemaV6 : Scenario.SupportsMosaic ? SchemaV5 : Scenario.SupportsPostcards ? SchemaV4 : Scenario.SupportsActivities ? SchemaV3 : SchemaV2);
+        Run(connection, transaction, Scenario.SupportsMaterialAccess ? SchemaV10 : Scenario.SupportsTransfer ? SchemaV9 : Scenario.SupportsContinuous ? SchemaV8 : Scenario.SupportsGathering ? SchemaV7 : Scenario.SupportsMosaicConsent ? SchemaV6 : Scenario.SupportsMosaic ? SchemaV5 : Scenario.SupportsPostcards ? SchemaV4 : Scenario.SupportsActivities ? SchemaV3 : SchemaV2);
         if (Scenario.SupportsContinuous) WorldInstance.Create(connection, transaction);
         InstanceId = WorldInstance.Read(connection, transaction);
         Run(connection, transaction, """
             INSERT INTO worlds(id,scenario_id,rules_version,state_version,issued_wood,depot_wood) VALUES($world,$scenario,$rules,0,12,$depot);
-            INSERT INTO residents(world_id,actor_id,operator_id,x,y,wood) VALUES($world,'a1','local-operator',$a1x,$a1y,0),($world,'a2','local-operator',$a2x,$a2y,0);
+            INSERT INTO residents(world_id,actor_id,operator_id,x,y,wood) VALUES($world,'a1','local-operator',$a1x,$a1y,0),($world,'a2',$a2operator,$a2x,$a2y,0);
             INSERT INTO recipes(id,definition_id,definition_version,rules_version,wood_cost) VALUES('platform.v1','platform',1,$rules,3);
             """, ("$world", Protocol.WorldId), ("$scenario", Scenario.Id), ("$rules", Scenario.RulesVersion),
+            ("$a2operator", Scenario.SupportsMaterialAccess ? "declared-late" : "local-operator"),
             ("$a1x", Scenario.SupportsContinuous ? 5 : 1), ("$a1y", Scenario.SupportsContinuous ? 7 : 1), ("$depot", Scenario.SupportsGathering ? 0 : 12), ("$a2x", Scenario.SupportsContinuous ? 26 : Scenario.SupportsGathering ? 6 : 1), ("$a2y", Scenario.SupportsContinuous ? 17 : Scenario.SupportsGathering ? 6 : 2));
+        if (Scenario.SupportsMaterialAccess)
+            Run(connection, transaction, "INSERT INTO residents(world_id,actor_id,operator_id,x,y,wood) VALUES($world,'a1_alias','local-operator',5,7,0),($world,'a3','declared-third',27,10,0)", ("$world", Protocol.WorldId));
         if (Scenario.SupportsRecipe("bridge.v1"))
             Run(connection, transaction, """
                 INSERT INTO recipes(id,definition_id,definition_version,rules_version,wood_cost) VALUES('bridge.v1','bridge',1,$rules,$bridgeCost)
@@ -85,7 +88,7 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
         }
         var seed = JsonSerializer.Serialize(new { seq = 1, stateVersion = 0, commandId = (string?)null,
             actorId = (string?)null, type = "worldSeeded", quantity = 12,
-            source = Scenario.SupportsTransfer ? "ITER-0020 initial wild wood" : Scenario.SupportsContinuous ? "ITER-0014 initial wild wood" : Scenario.SupportsGathering ? "ITER-0010 initial wild wood" : Scenario == WorldScenario.Foundation ? "ITER-0001 initial allocation" :
+            source = Scenario.SupportsMaterialAccess ? "ITER-0022 initial wild wood" : Scenario.SupportsTransfer ? "ITER-0020 initial wild wood" : Scenario.SupportsContinuous ? "ITER-0014 initial wild wood" : Scenario.SupportsGathering ? "ITER-0010 initial wild wood" : Scenario == WorldScenario.Foundation ? "ITER-0001 initial allocation" :
                 Scenario.SupportsMosaicConsent ? "ITER-0007 initial allocation" :
                 Scenario.SupportsMosaic ? "ITER-0006 initial allocation" :
                 Scenario.SupportsPostcards ? "ITER-0005 initial allocation" :
@@ -101,6 +104,8 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
             ["a1"] = NewSession(connection, transaction, "a1", 86400),
             ["a2"] = NewSession(connection, transaction, "a2", 86400)
         };
+        if (Scenario.SupportsMaterialAccess)
+            foreach (var actor in new[] { "a1_alias", "a3" }) sessions[actor] = NewSession(connection, transaction, actor, 86400);
         var accessPath = System.IO.Path.Combine(configuration.DataDirectory, "access.json");
         if (File.Exists(accessPath)) throw new InvalidOperationException("新世界目录已有 access.json，拒绝覆盖凭据");
         var temporaryPath = accessPath + "." + Guid.NewGuid().ToString("N") + ".tmp";
@@ -120,7 +125,7 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
 
     private WorldScenario ReadScenario(SqliteConnection connection, SqliteTransaction transaction, long schemaVersion)
     {
-        if (schemaVersion is not (1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9)) throw new InvalidOperationException("不支持的数据库版本");
+        if (schemaVersion is not (1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9 or 10)) throw new InvalidOperationException("不支持的数据库版本");
         // v1 predates scenario persistence and is always the original world. Do not migrate it,
         // rewrite historical objects/receipts, or infer a different world from environment values.
         using var command = Command(connection, transaction, schemaVersion == 1
@@ -159,7 +164,7 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
 
     public void IssueSession(string actor, long ttlSeconds, string output)
     {
-        if (actor is not ("a1" or "a2")) throw new ArgumentException("actor 必须为 a1 或 a2");
+        if (!Protocol.ValidCommandId(actor)) throw new ArgumentException("actor 格式无效");
         // Validate expiry and output before touching the current session.
         _ = DateTimeOffset.UtcNow.AddSeconds(ttlSeconds);
         output = System.IO.Path.GetFullPath(output);
@@ -171,6 +176,8 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
             using var transaction = connection.BeginTransaction(deferred: false);
             Scenario = ReadScenario(connection, transaction, Scalar(connection, transaction, "PRAGMA user_version"));
             _ = WorldInstance.Read(connection, transaction);
+            if (Scalar(connection, transaction, "SELECT count(*) FROM residents WHERE actor_id=$actor", ("$actor", actor)) != 1)
+                throw new ArgumentException("actor 不在原世界名册中");
             Run(connection, transaction, "UPDATE sessions SET revoked=1 WHERE world_id=$world AND actor_id=$actor AND revoked=0",
                 ("$world", Protocol.WorldId), ("$actor", actor));
             var session = NewSession(connection, transaction, actor, ttlSeconds);
@@ -179,6 +186,27 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
             File.Move(temporaryPath, output, overwrite: true);
         }
         finally { if (File.Exists(temporaryPath)) File.Delete(temporaryPath); }
+    }
+
+    public bool EnableMaterialSource(string expectedInstance)
+    {
+        if (!WorldInstance.Valid(expectedInstance)) throw new ArgumentException("必须指定原世界实例身份");
+        // Opening an existing database first avoids creating a candidate as a side effect.
+        using var connection = Open();
+        using var ownership = new FileStream(Path + ".material-clock.lock", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
+        using var transaction = connection.BeginTransaction(deferred: false);
+        Scenario = ReadScenario(connection, transaction, Scalar(connection, transaction, "PRAGMA user_version"));
+        if (!Scenario.SupportsMaterialAccess) throw new InvalidOperationException("只有r10候选支持开启材料来源");
+        if (WorldInstance.Read(connection, transaction) != expectedInstance) throw new ArgumentException("实例身份不匹配");
+        var source = MaterialSourceRules.Read(connection, transaction);
+        if (source.Active) return false;
+        Run(connection, transaction, "UPDATE material_source SET active=1,enabled_at_ms=service_ms,next_production_ms=$next WHERE id=1", ("$next", checked(source.ServiceMs + MaterialSourceRules.IntervalMs)));
+        MaterialSourceRules.EnvironmentEvent(connection, transaction, "materialSourceEnabled", source.ServiceMs,
+            ("inputBudget", MaterialSourceRules.InputBudget), ("capacity", MaterialSourceRules.Capacity),
+            ("productionIntervalMs", MaterialSourceRules.IntervalMs), ("reservationQuantity", MaterialSourceRules.Quantity),
+            ("leaseMs", MaterialSourceRules.LeaseMs), ("position", MaterialSourceRules.Position), ("buildExclusion", MaterialSourceRules.BuildExclusion));
+        transaction.Commit();
+        return true;
     }
 
     private static SessionAccess NewSession(SqliteConnection connection, SqliteTransaction transaction, string actor, long ttlSeconds)
@@ -313,6 +341,11 @@ internal sealed class WorldDatabase(ServerConfiguration configuration)
     private static readonly string SchemaV9 = SchemaV8
         .Replace("'wilderness-continuous-v1'", "'wilderness-cooperation-v1'").Replace("'r8'", "'r9'")
         .Replace("PRAGMA user_version=8;", "PRAGMA user_version=9;");
+
+    private static readonly string SchemaV10 = SchemaV9
+        .Replace("'wilderness-cooperation-v1'", "'wilderness-material-access-v1'").Replace("'r9'", "'r10'")
+        .Replace("CHECK(issued_wood=12)", "CHECK(typeof(issued_wood)='integer' AND issued_wood BETWEEN 12 AND 24)")
+        .Replace("PRAGMA user_version=9;", "PRAGMA user_version=10;") + MaterialSourceRules.Schema;
 
     private const string MosaicSchema = """
 

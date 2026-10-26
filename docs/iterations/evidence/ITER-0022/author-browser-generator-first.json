@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "testsRun": 1,
+  "results": [
+    {
+      "name": "run",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: test_01_same_instance_refusal_cli_platform_and_restart (unittest.loader._FailedTest.test_01_same_instance_refusal_cli_platform_and_restart) ... ERROR\n\n======================================================================\nERROR: test_01_same_instance_refusal_cli_platform_and_restart (unittest.loader._FailedTest.test_01_same_instance_refusal_cli_platform_and_restart)\n----------------------------------------------------------------------\nAttributeError: module '__main__' has no attribute 'test_01_same_instance_refusal_cli_platform_and_restart'\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n\n\n1 !== 0\n\n    at file:///home/wangjunfeng/%E6%96%87%E6%A1%A3/Workspace/metaverse/tests/browser/material-resident.mjs:37:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+    }
+  ],
+  "errors": [],
+  "worldRequests": [],
+  "actualModelCalls": 0
+}

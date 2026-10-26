@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="resident.css">
   <script src="mosaic.js" defer></script>
   <script src="consent.js" defer></script>
+  <script src="material-report.js" defer></script>
   <script src="resident.js" defer></script>
 </head>
 <body>
@@ -67,6 +68,7 @@
             <p id="activity-fact" class="activity-fact" hidden></p>
             <p id="construction-fact" class="activity-fact" hidden></p>
             <p id="transfer-fact" class="activity-fact" hidden></p>
+            <p id="material-fact" class="activity-fact" hidden></p>
             <p id="recent-transfers" class="activity-fact" hidden></p>
             <div id="postcard-fact-panel" class="postcard-fact-panel" hidden><p id="postcard-fact" class="activity-fact"></p><blockquote id="postcard-shared-text"></blockquote></div>
             <dl class="fact-details"><div><dt>核实时间</dt><dd id="verified-at"></dd></div><div><dt>状态版本</dt><dd id="state-versions"></dd></div><div><dt>材料来源 / 新建设施</dt><dd id="created-summary"></dd></div></dl>
@@ -98,6 +100,7 @@
             <div class="budget-item"><span>木材支出</span><strong id="wood-budget"></strong><progress id="wood-progress" aria-label="木材支出预算使用量" max="1" value="0"></progress><small>建造消耗与赠送的木材</small></div>
             <div class="budget-item"><span id="model-budget-label">模型调用</span><strong id="model-budget"></strong><progress id="model-progress" aria-label="目标选择预算使用量" max="1" value="0"></progress><small id="model-budget-note">高层目标选择</small></div>
             <div class="budget-item"><span>累计耗时</span><strong id="seconds-budget"></strong><progress id="seconds-progress" aria-label="时间预算使用量" max="1" value="0"></progress><small>秒 · 执行器记录</small></div>
+            <div id="query-budget-item" class="budget-item" hidden><span>世界查询</span><strong id="queries-budget"></strong><progress id="queries-progress" aria-label="查询预算使用量" max="1" value="0"></progress><small>观察、原回执与预约事件查询</small></div>
           </div>
         </section>
 

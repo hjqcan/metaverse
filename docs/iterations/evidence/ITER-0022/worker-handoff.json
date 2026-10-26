@@ -1,0 +1,121 @@
+{
+  "recordedAtUtc": "2026-10-26T04:34:04.696501+00:00",
+  "role": "build-agent2",
+  "validationLevel": "builder-self-check",
+  "scope": [
+    "scripts/resident_mission.py",
+    "scripts/command_preconditions.py",
+    "scripts/continuous_navigation.py",
+    "scripts/resident_construction.py",
+    "scripts/resident_transfer.py",
+    "scripts/wilderness_materials.py",
+    "scripts/run_resident.py",
+    "scripts/resident_material_access.py",
+    "tests/material_access_mission_api.py",
+    "tests/fixtures/material-access-platform.json"
+  ],
+  "fileSha256": {
+    "scripts/resident_mission.py": "3dd915be5cf53132b3d09bc3fdca9b5a698e9c7d494ea098e0eb435635d7189d",
+    "scripts/command_preconditions.py": "c8da1f3edcd7499739f02bea27c1ec213e34dc1ed64b7b5ff88f908f640ea440",
+    "scripts/continuous_navigation.py": "0303f9ade6ce90e48a85fbf8e5a5aaff145ca0a305562cee4c0d0bb1cb21e578",
+    "scripts/resident_construction.py": "eef4aa235fb0fdf2428b17005381074bb1f773f3ac21d600b2c095e96c1b6411",
+    "scripts/resident_transfer.py": "957067bc33585e1fb5f7f9b21b703aa1c8decf8f4148fcb2fe24e4ce50329a83",
+    "scripts/wilderness_materials.py": "c96e3d4e4381755ffad4bc67d52db2ea959f7c232004c5cb37a95a40f21170c6",
+    "scripts/run_resident.py": "3c517466e6ab985d99d1572a2cad7075bebf2c763e22cca7481326a92c3791cf",
+    "scripts/resident_material_access.py": "0e9aa7bc9bfd89bc65270a0cc49fd8a2c128cdaff2fc95b6dcde3d56ad081d68",
+    "tests/material_access_mission_api.py": "03c90a5d6bea028667dca8c617299832231187af87869ad64234807397357568",
+    "tests/fixtures/material-access-platform.json": "4be419aa7bad271c5bc2adf915124d2ab5ab6ca9abc87ba10fc1cecbb45011f3"
+  },
+  "coreDll": ".local/iter0022/core-v1/bin/World.Server.dll",
+  "coreDllSha256": "11c0478324d11476dfce3f37bb7d6cf5281ec91fbfb9b36444a114ccbfc2b502",
+  "results": {
+    "newFlowEight": {
+      "path": ".local/iter0022/python/20261026T042924Z-2672a1/results.json",
+      "sha256": "677418168bc3c50086f2be32cd97c3687f336f99063e88c0707acbc57accfba5"
+    },
+    "finalGuardsAndRecoveryFour": {
+      "path": ".local/iter0022/python/20261026T043254Z-99e2a7/results.json",
+      "sha256": "33a0b058be9b3948584e4f83f18ebbd05fcc7c9fb6c6921caf15c1fe6ed77f0f"
+    },
+    "r8OriginalEvidenceFive": {
+      "path": ".local/iter0019/python/20261026T042943Z-a032b8/results.json",
+      "sha256": "81d26aa2c32e83b51d0292d56444e8110de1418736cd57b8648fa8a5ebe764f2"
+    },
+    "r9TransferEvidenceTwo": {
+      "path": ".local/iter0020/python/20261026T043108Z-e4f6ab/results.json",
+      "sha256": "697e131e692ac02bde6ff4d9ede7c4bc95a5f00a0d8e47f41dd8e9c9b6b3ec14"
+    }
+  },
+  "coverage": "11 distinct new material mission cases; 7 legacy r8/r9 cases. First 8 ran before final narrow guards; final 4 recheck saved permissions and add event history, query exhaustion and harvest corruption. Coordinator owns final full regression.",
+  "actualModelCalls": 0,
+  "cli": {
+    "path": ".local/iter0022/python/20261026T042924Z-2672a1/test_01_same_instance_refusal_cli_platform_and_restart-world/cli-report.json",
+    "status": "completed",
+    "used": {
+      "commands": 28,
+      "wood": 3,
+      "modelCalls": 1,
+      "seconds": 15.762473344802856,
+      "queries": 44
+    },
+    "origin": [
+      26,
+      17
+    ],
+    "instance": "w_9eaaa2ba42954358af047051f9eb8dbc",
+    "actor": "a2",
+    "provider": {
+      "kind": "fixed-reference",
+      "model": "least-cost-v1",
+      "usage": {}
+    },
+    "originalReservation": {
+      "worldInstanceId": "w_9eaaa2ba42954358af047051f9eb8dbc",
+      "actorId": "a2",
+      "operatorId": "declared-late",
+      "sourceId": "wood-source-east",
+      "stateVersion": 80,
+      "eventCursor": 81,
+      "reservationId": "mbc6f811a38324d7a918d35e5f9f21cdc",
+      "queueSequence": 1,
+      "requestedAtMs": 39173,
+      "requestCommandId": "9a77b25df01348dc8e682d31d89eeca0"
+    },
+    "audit": {
+      "initialWood": 12,
+      "generatedWood": 3,
+      "sourceWood": 0,
+      "wildWood": 0,
+      "inventoryWood": 6,
+      "embodiedWood": 9,
+      "earlyActorWood": 6,
+      "platformOwner": "a2",
+      "integrity": "ok",
+      "conserved": true
+    }
+  },
+  "schema": {
+    "permission": "allowMaterialAccess=true plus allowBuild=true",
+    "goal": {
+      "materialAccess": {
+        "sourceId": "wood-source-east",
+        "quantity": 3
+      },
+      "buildRecipeId": "platform.v1"
+    },
+    "queries": "Required integer 1..5000 in budgets; every attempted observation, receipt and reserve event GET is charged before transport and persisted. Exhaustion retains pending; changing original spec is rejected.",
+    "facts": [
+      "materialReservation",
+      "materialWoodHarvested",
+      "materialHarvests"
+    ],
+    "legacyModelCalls": "used.modelCalls=1 counts one fixed selector invocation; external model calls=0"
+  },
+  "recovery": "Original instance/actor/command/reservation and before facts remain pinned. Reserve ID verified against its original materialReserved event, including beyond recent 20. Harvest verifies original remaining and inventory changes, not renewable stock. Expired/cancelled/unavailable original reservation stops without requeue.",
+  "reviewFix": "Persisted allowBuild/allowGather/allowTransfer must match original spec. Added strict harvest eventCursor and material rejection operator identity checks.",
+  "services": "All dedicated services stopped; /proc checked against all five evidence run data directories; no matches.",
+  "notExecuted": "Independent QA and coordinator final integrated full regression are not claimed here.",
+  "committed": false,
+  "pushed": false,
+  "ownership": "Ready to transfer these 10 paths to root build agent; no other shared files edited."
+}

@@ -7,7 +7,7 @@ namespace World.Server;
 internal sealed class InjectedFailure : Exception;
 internal sealed record MosaicInboxQuery(string Scope, string Status, long? Before, int Limit);
 
-internal sealed partial class WorldService(WorldDatabase database, ServerConfiguration configuration)
+internal sealed partial class WorldService(WorldDatabase database, ServerConfiguration configuration, MaterialServiceClock? materialClock = null)
 {
     private WorldScenario Scenario => database.Scenario;
 
@@ -237,11 +237,13 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
             var current = ReadState(connection, transaction);
             return Protocol.Error(Scenario.RulesVersion, 409, "IDEMPOTENCY_CONFLICT", "命令 ID 已用于不同参数", identity, current.Version, current.Cursor, request.CommandId).WithInstance(instance);
         }
+        if (Scenario.SupportsMaterialAccess)
+            MaterialSourceRules.Advance(connection, transaction, materialClock?.Now ?? throw new InvalidOperationException("缺少材料服务时钟"));
         var state = ReadState(connection, transaction);
         var actor = ReadActor(connection, transaction, identity.ActorId);
         var action = request.Action;
-        var fault = configuration.FaultsEnabled && action.Type is "claim" or "gather" or "build" or "transfer" or "visit" or "postcard" or "mosaic" or "mosaic_propose" or "mosaic_review" ? requestedFault : null;
-        var rejection = Validate(connection, transaction, request, state, actor, identity.ActorId, instance);
+        var fault = configuration.FaultsEnabled && action.Type is "claim" or "gather" or "build" or "transfer" or "reserve_material" or "cancel_reservation" or "harvest_material" or "visit" or "postcard" or "mosaic" or "mosaic_propose" or "mosaic_review" ? requestedFault : null;
+        var rejection = Validate(connection, transaction, request, state, actor, identity, instance);
         if (rejection is not null)
         {
             var body = Protocol.Envelope(Scenario.RulesVersion, identity, state.Version, state.Cursor, request.CommandId, rejection.Value.Error);
@@ -262,6 +264,11 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         long quantity = 0;
         switch (action.Type)
         {
+            case "reserve_material":
+            case "cancel_reservation":
+            case "harvest_material":
+                (result, worldEvent, source, destination, quantity) = ApplyMaterialAccess(connection, transaction, request, identity, actor, version, cursor, fault);
+                break;
             case "walk":
                 var walked = WalkContinuous(connection, transaction, actor, identity.ActorId, action.TargetX, action.TargetY);
                 result = new { action = "walk", position = walked.Position, blocked = walked.Blocked };
@@ -440,8 +447,9 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
     }
 
     private (int Status, ApiError Error)? Validate(SqliteConnection connection, SqliteTransaction transaction,
-        WorldCommand request, State state, Actor actor, string actorId, string? instance)
+        WorldCommand request, State state, Actor actor, Identity identity, string? instance)
     {
+        var actorId = identity.ActorId;
         if (request.RulesVersion != Scenario.RulesVersion)
             return (409, new("RULES_VERSION_MISMATCH", "规则版本不匹配，请重新观察"));
         if (request.PreconditionMode is null)
@@ -452,7 +460,8 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         else
         {
             if (instance is null || !Scenario.SupportsContinuous ||
-                !(request.Action.Type is "walk" or "gather" or "build" || Scenario.SupportsTransfer && request.Action.Type == "transfer"))
+                !(request.Action.Type is "walk" or "gather" or "build" || Scenario.SupportsTransfer && request.Action.Type == "transfer" ||
+                    Scenario.SupportsMaterialAccess && request.Action.Type is "reserve_material" or "cancel_reservation" or "harvest_material"))
                 return (422, new("PRECONDITION_MODE_UNAVAILABLE", "当前世界或动作不支持这个前置条件模式"));
             if (request.ExpectedStateVersion > state.Version)
                 return (409, new("STATE_VERSION_AHEAD", "观察版本超过当前世界，请重新观察"));
@@ -466,6 +475,8 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
                 return (409, new("STALE_ACTOR_STATE", "这位居民的状态已变化，请重新观察"));
         }
         var action = request.Action;
+        if (action.Type is "reserve_material" or "cancel_reservation" or "harvest_material")
+            return ValidateMaterialAccess(connection, transaction, action, actor, identity);
         if (action.Type == "transfer") return ValidateTransfer(connection, transaction, action, actor, actorId);
         if (Scenario.SupportsContinuous) return ValidateContinuous(connection, transaction, action, actor);
         if (action.Type == "move")
@@ -677,7 +688,7 @@ internal sealed partial class WorldService(WorldDatabase database, ServerConfigu
         if (instance is null) return;
         body["world"] = WithFields(body["world"]!, ("instanceId", instance));
         body["commandBinding"] = new { version = 1, required = true, header = WorldInstance.Header };
-        if (body["rulesVersion"] is "r8" or "r9")
+        if (body["rulesVersion"] is "r8" or "r9" or "r10")
             body["commandConcurrency"] = new { version = 1, supportedModes = new[] { Protocol.ActorStateMode } };
     }
 

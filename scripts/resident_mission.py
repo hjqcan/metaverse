@@ -28,6 +28,7 @@ import continuous_navigation as continuous
 import resident_construction as construction
 import command_preconditions as preconditions
 import resident_transfer as transfer
+import resident_material_access as material
 
 
 def _utc():
@@ -41,7 +42,7 @@ def _integer(value, low, high):
 def _spec(value):
     required = {"missionId", "objective", "goals", "allowBuild", "budgets"}
     if (not isinstance(value, dict) or not required <= set(value)
-            or set(value) - required - {"allowGather", "allowTransfer", "sharePostcard", "paintMosaic", "proposeMosaic", "reviewMosaicProposal"}):
+            or set(value) - required - {"allowGather", "allowTransfer", "allowMaterialAccess", "sharePostcard", "paintMosaic", "proposeMosaic", "reviewMosaicProposal"}):
         raise ValueError("Invalid mission spec fields")
     if not isinstance(value["missionId"], str) or not re.fullmatch(r"[A-Za-z0-9_-]{1,64}", value["missionId"]):
         raise ValueError("Invalid missionId")
@@ -53,6 +54,8 @@ def _spec(value):
         raise ValueError("allowGather must be boolean")
     if 'allowTransfer' in value and type(value['allowTransfer']) is not bool:
         raise ValueError('allowTransfer must be boolean')
+    if 'allowMaterialAccess' in value and type(value['allowMaterialAccess']) is not bool:
+        raise ValueError('allowMaterialAccess must be boolean')
     if "sharePostcard" in value and type(value["sharePostcard"]) is not bool:
         raise ValueError("sharePostcard must be boolean")
     if "paintMosaic" in value and type(value["paintMosaic"]) is not bool:
@@ -72,8 +75,12 @@ def _spec(value):
     ids = set()
     for goal in goals:
         if (not isinstance(goal, dict) or not {'id', 'label', 'target'} <= set(goal)
-                or set(goal) - {'id', 'label', 'target', 'activityId', 'buildRecipeId', 'transfer'}):
+                or set(goal) - {'id', 'label', 'target', 'activityId', 'buildRecipeId', 'transfer', 'materialAccess'}):
             raise ValueError("Invalid goal fields")
+        if 'materialAccess' in goal and (not material.valid_goal(goal['materialAccess'])
+                or value.get('allowMaterialAccess') is not True or not value['allowBuild']
+                or goal.get('buildRecipeId') != 'platform.v1' or any(k in goal for k in ('activityId', 'transfer'))):
+            raise ValueError('Material access requires an explicit three-wood source goal, platform and permission')
         if 'transfer' in goal and (not transfer.valid_goal(goal['transfer']) or value.get('allowTransfer') is not True
                                    or any(k in goal for k in ('activityId', 'buildRecipeId'))):
             raise ValueError('Transfer goals require explicit recipient, quantity, permission and a separate meeting point')
@@ -97,6 +104,10 @@ def _spec(value):
             raise ValueError("Goal target must be two nonnegative finite coordinates")
     budget = value["budgets"]
     bounds = {"commands": (1, 1000), "wood": (0, 12), "seconds": (1, 600), "modelCalls": (1, 1)}
+    if any('materialAccess' in goal for goal in goals):
+        if not all('materialAccess' in goal for goal in goals):
+            raise ValueError('Material access tasks require explicit material goals throughout')
+        bounds['queries'] = (1, 5000)
     if not isinstance(budget, dict) or set(budget) != set(bounds):
         raise ValueError("Invalid budgets")
     if any(not _integer(budget[key], *limits) for key, limits in bounds.items()):
@@ -170,6 +181,9 @@ def _public(observed, share_postcard=False, paint_mosaic=False, consent=False):
         public['materialTransfer'] = deepcopy(observed['materialTransfer'])
         public['residents'] = [{'actorId': r['actorId'], 'position': deepcopy(r['position'])} for r in observed['residents']]
         world['recentTransfers'] = deepcopy(observed['recentTransfers'])
+    if material.supported(observed):
+        public['materialAccess'] = deepcopy(observed['materialAccess'])
+        world['materialAccess'] = deepcopy(observed['materialAccess'])
     entry = public_entry_guide(observed)
     if entry is not None:
         public["entryGuide"] = entry
@@ -203,6 +217,9 @@ def _validate_goals(spec, observed):
                 or any(not isinstance(observed["self"].get(k), list) for k in ("mosaicProposals", "mosaicReviews"))):
             raise ValueError("invalid_mosaic_consent_capability")
     for goal in spec["goals"]:
+        if 'materialAccess' in goal and (not material.supported(observed)
+                                         or preconditions.select_mode(observed) != preconditions.ACTOR_STATE):
+            raise ValueError('Material access requires the protected r10 capability and declared actor')
         if 'buildRecipeId' in goal and not free_movement:
             raise ValueError('Explicit construction goals require a continuous world')
         if 'transfer' in goal and (not transfer.supported(observed) or preconditions.select_mode(observed) is None
@@ -350,7 +367,8 @@ def _route_info(observed, target, allow_build, allow_gather=False):
 def _context(spec, observed):
     candidates = []
     for goal in spec["goals"]:
-        info = (transfer.plan(observed, goal, spec['allowBuild'], spec.get('allowGather', False)) if 'transfer' in goal else
+        info = (material.plan(observed, goal) if 'materialAccess' in goal else
+                transfer.plan(observed, goal, spec['allowBuild'], spec.get('allowGather', False)) if 'transfer' in goal else
                 construction.plan(observed, goal, spec.get('allowGather', False)) if 'buildRecipeId' in goal
                 else _route_info(observed, goal["target"], spec["allowBuild"], spec.get("allowGather", False)))
         activity = next((a for a in observed.get("activities", []) if a["id"] == goal.get("activityId")), None)
@@ -468,6 +486,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
         mode = preconditions.saved_mode(state) if state is not None else None
         if state is not None:
             transfer.validate_saved(state)
+            material.validate_saved(state)
 
         def report():
             result = deepcopy({k: v for k, v in state.items() if k != "_state"})
@@ -476,6 +495,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             result["mission"].setdefault("allowGather", spec.get("allowGather", False))
             result['mission'].setdefault('allowBuild', spec['allowBuild'])
             result['mission'].setdefault('allowTransfer', spec.get('allowTransfer', False))
+            result['mission'].setdefault('allowMaterialAccess', spec.get('allowMaterialAccess', False))
             result['facts'].setdefault('transferCompleted', False)
             result['facts'].setdefault('transfer', None)
             result['facts'].setdefault('woodTransferred', 0)
@@ -503,6 +523,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
 
         def finish(status, reason):
             state["mission"].update(status=status, reason=reason)
+            if (status == 'blocked' and any('materialAccess' in g for g in spec['goals'])
+                    and (reason.startswith('material_reservation_') or reason.startswith('command_rejected:'))):
+                state['_state']['materialAccessTerminal'] = True
             summary = "已核验活动到访与返回" if state["facts"].get("activityCompleted") else "已核验到达与返回"
             if state["facts"].get("postcardShared"):
                 summary = "已核验活动到访、共同手记分享与返回"
@@ -527,8 +550,16 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                     "rulesVersion": observed["rulesVersion"], "instanceId": observed['world'].get('instanceId'),
                     "bindingVersion": 1 if observed['world'].get('instanceId') is not None else 0}
 
+        def query(call):
+            if state is not None and 'queries' in state['budget']['limits']:
+                if state['budget']['used']['queries'] >= state['budget']['limits']['queries']:
+                    raise material.QueryBudget()
+                state['budget']['used']['queries'] += 1
+                save()  # Charge attempts before transport; a restart cannot replenish reads.
+            return call()
+
         def observe():
-            observed = client.observe()
+            observed = query(client.observe)
             actual, original = bind(observed), state['_state']['binding']
             if any(actual[k] != original.get(k) for k in ('worldId', 'actorId', 'rulesVersion', 'instanceId')):
                 raise ValueError("State belongs to a different world, actor or rules version")
@@ -540,7 +571,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
 
         # Terminal reports are historical reads. In particular a canvas conflict
         # cannot restart the journey, reselect, or send a replacement drawing.
-        if state is not None and (state["mission"]["status"] in ("completed", "decision_failed")
+        if state is not None and (state.get('_state', {}).get('materialAccessTerminal') is True
+                                  or state["mission"]["status"] in ("completed", "decision_failed")
                                   or (state["mission"]["status"] == "blocked"
                                       and (state["mission"]["reason"] in ("command_rejected:MOSAIC_CHANGED",
                                                                            "command_rejected:STALE_ACTOR_STATE")
@@ -557,6 +589,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             if state is not None:
                 client.bind_instance(instance)
             observed = observe() if state else client.observe()
+        except material.QueryBudget:
+            return finish('budget_exhausted', 'queries')
         except (OSError, RuntimeError) as error:
             if state is None:
                 raise
@@ -579,6 +613,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                                  "allowBuild": spec['allowBuild'],
                                  "allowGather": spec.get("allowGather", False),
                                  "allowTransfer": spec.get("allowTransfer", False),
+                                 "allowMaterialAccess": spec.get("allowMaterialAccess", False),
                                  "arrivalTolerance": continuous.ARRIVAL_TOLERANCE if continuous.continuous(observed) else 0,
                                  "sharePostcard": spec.get("sharePostcard", False),
                                  "paintMosaic": spec.get("paintMosaic", False),
@@ -590,7 +625,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                                  "rulesVersion": observed["rulesVersion"], "origin": deepcopy(observed["self"]["position"]),
                                  "goal": None, "status": "running", "reason": "awaiting_decision"},
                      "decision": None, "budget": {"limits": deepcopy(spec["budgets"]),
-                                                  "used": {"commands": 0, "wood": 0, "modelCalls": 0, "seconds": 0}},
+                                                  "used": {"commands": 0, "wood": 0, "modelCalls": 0, "seconds": 0,
+                                                           **({'queries': 1} if 'queries' in spec['budgets'] else {})}},
                      "facts": {"goalReached": False, "returned": True,
                                "activityCompleted": False, "activityVisit": None,
                                "postcardShared": False, "postcard": None,
@@ -615,6 +651,10 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
         facts.setdefault('transferCompleted', False)
         facts.setdefault('transfer', None)
         facts.setdefault('woodTransferred', 0)
+        if any('materialAccess' in g for g in spec['goals']):
+            facts.setdefault('materialReservation', None)
+            facts.setdefault('materialWoodHarvested', 0)
+            facts.setdefault('materialHarvests', [])
         facts.setdefault("activityCompleted", False)
         facts.setdefault("activityVisit", None)
         facts.setdefault("postcardShared", False)
@@ -670,6 +710,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
         while True:
             try:
                 observed = observe()
+            except material.QueryBudget:
+                return finish('budget_exhausted', 'queries')
             except (OSError, RuntimeError) as error:
                 return finish("unknown", "observation_unavailable:" + type(error).__name__)
             record_observation(observed)
@@ -699,7 +741,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                     return finish("budget_exhausted", "commands")
                 returning = ready_to_return
                 target = state["mission"]["origin"] if returning else goal["target"]
-                info = (transfer.plan(observed, goal, spec['allowBuild'], spec.get('allowGather', False)) if needs_transfer else
+                info = (material.plan(observed, goal, facts) if needs_construction and 'materialAccess' in goal else
+                        transfer.plan(observed, goal, spec['allowBuild'], spec.get('allowGather', False)) if needs_transfer else
                         construction.plan(observed, goal, spec.get('allowGather', False)) if needs_construction
                         else _route_info(observed, target, spec['allowBuild'] and 'buildRecipeId' not in goal,
                                          spec.get('allowGather', False)))
@@ -711,6 +754,11 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                     return finish("blocked", info["reason"])
                 if used["wood"] + info["wood"] > limits["wood"]:
                     return finish("budget_exhausted", "wood")
+                if info.get('waiting'):
+                    state['mission'].update(status='running', reason='waiting_original_material_reservation')
+                    save()
+                    time.sleep(min(1., max(0., limits['seconds'] - used['seconds'])))
+                    continue
                 position = observed["self"]["position"]
                 shortage = max(0, info["wood"] - observed["self"]["inventory"]["wood"])
                 cost = 0
@@ -777,6 +825,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 if mode is not None:
                     intent['preconditionMode'] = mode
                 pending = {"request": intent, "woodCost": cost}
+                if action['type'] in material.ACTIONS:
+                    pending['materialBefore'] = material.before(observed, facts.get('materialReservation'))
                 if action['type'] == 'transfer':
                     pending['transferBefore'] = {'position': deepcopy(position), 'inventoryWood': observed['self']['inventory']['wood']}
                 if continuous.continuous(observed) and action['type'] == 'build':
@@ -872,7 +922,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             receipt_query = recovery
             try:
                 if recovery:
-                    status, result = client.request("GET", client.prefix + "/commands/" + intent["commandId"])
+                    status, result = query(lambda: client.request("GET", client.prefix + "/commands/" + intent["commandId"]))
                     if status == 404 and isinstance(result, dict) and (result.get("error") or {}).get("code") == "COMMAND_NOT_FOUND":
                         # A confirmed absent original submission may not accept a stale base.
                         # Query errors never reach this branch or justify a replacement ID.
@@ -889,6 +939,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                         status, result = client.command(deepcopy(intent))
                 else:
                     status, result = client.command(deepcopy(intent))
+            except material.QueryBudget:
+                return finish('budget_exhausted', 'queries_pending_retained')
             except (OSError, RuntimeError, ValueError) as error:
                 step["status"] = "unknown"
                 return finish("unknown", "pending_command_retained:" + type(error).__name__)
@@ -900,8 +952,9 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             committed = (status == 200 and isinstance(result, dict) and result.get("status") == "committed"
                          and result.get("commandId") == intent["commandId"] and not error)
             rejected = (400 <= status < 500 and isinstance(error, dict) and error.get("mutated") is False
-                        and status not in (412, 428) and (status != 404 or (intent['action']['type'] == 'transfer'
-                            and error.get('code') == 'RESIDENT_NOT_FOUND' and result.get('status') == 'rejected'
+                        and status not in (412, 428) and (status != 404 or ((intent['action']['type'] == 'transfer'
+                            and error.get('code') == 'RESIDENT_NOT_FOUND' or intent['action']['type'] in material.ACTIONS
+                            and error.get('code') in ('RESERVATION_NOT_FOUND', 'MATERIAL_SOURCE_NOT_FOUND')) and result.get('status') == 'rejected'
                             and result.get('commandId') == intent['commandId']))
                         and error.get("code") not in ("IDEMPOTENCY_CONFLICT", "INVALID_WORLD_INSTANCE",
                                                      "WORLD_INSTANCE_REQUIRED", "WORLD_INSTANCE_MISMATCH", "WORLD_INSTANCE_UNAVAILABLE")
@@ -912,11 +965,14 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 # A proxy/query error that resembles STALE_STATE cannot settle it.
                 rejected = (rejected and result.get("status") == "rejected"
                             and result.get("commandId") == intent["commandId"])
-            if (intent["action"]["type"] in ("gather", "walk", "transfer") or 'constructionBefore' in pending) and rejected:
+            if (intent["action"]["type"] in ("gather", "walk", "transfer", *material.ACTIONS) or 'constructionBefore' in pending) and rejected:
                 rejected = (result.get("status") == "rejected" and result.get("commandId") == intent["commandId"]
                             and isinstance(result.get("identity"), dict)
                             and result["identity"].get("actorId") == state["mission"]["actorId"]
                             and result.get("schemaVersion") == 1 and result.get("rulesVersion") == intent['rulesVersion'])
+            if intent['action']['type'] in material.ACTIONS and rejected:
+                rejected = (type(result.get('schemaVersion')) is int
+                            and result['identity'].get('operatorId') == pending['materialBefore']['operatorId'])
             if not committed and not rejected:
                 step["status"] = "unknown"
                 return finish("unknown", "unconfirmed_receipt")
@@ -928,7 +984,36 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 if not isinstance(result_action, dict) or result_action.get("action") != intent["action"]["type"]:
                     step["status"] = "unknown"
                     return finish("unknown", "unexpected_receipt_action")
-                if intent['action']['type'] == 'walk':
+                if intent['action']['type'] in material.ACTIONS:
+                    event = None
+                    if intent['action']['type'] == 'reserve_material':
+                        cursor = result.get('eventCursor')
+                        if preconditions.integer(cursor) and cursor > 0:
+                            try:
+                                event_status, envelope = query(lambda: client.request('GET', client.prefix + '/events?after=' + str(cursor - 1)))
+                            except material.QueryBudget:
+                                return finish('budget_exhausted', 'queries_pending_retained')
+                            except (OSError, RuntimeError, ValueError):
+                                step['status'] = 'unknown'
+                                return finish('unknown', 'material_event_unavailable')
+                            if (event_status == 200 and isinstance(envelope, dict) and envelope.get('rulesVersion') == 'r10'
+                                    and isinstance(envelope.get('identity'), dict)
+                                    and envelope['identity'].get('actorId') == state['mission']['actorId']
+                                    and isinstance(envelope.get('events'), list) and envelope['events']):
+                                event = envelope['events'][0]
+                    record = material.evidence(result, intent, state['mission']['actorId'], pending.get('materialBefore'),
+                                               state['mission']['worldInstanceId'], event)
+                    if record is None:
+                        step['status'] = 'unknown'
+                        return finish('unknown', 'unconfirmed_material_receipt')
+                    if intent['action']['type'] == 'reserve_material':
+                        facts['materialReservation'] = record
+                    else:
+                        facts['materialWoodHarvested'] += 1
+                        facts['materialHarvests'].append(record)
+                    step['materialEvidence'] = deepcopy(record)
+                    step['evidenceSource'] = 'command_receipt_and_original_event' if event else 'command_receipt'
+                elif intent['action']['type'] == 'walk':
                     if not continuous.valid_walk_receipt(result, intent, state['mission']['actorId'], pending.get('walkBefore')):
                         step['status'] = 'unknown'
                         return finish('unknown', 'unconfirmed_walk_receipt')
@@ -952,6 +1037,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 elif 'constructionBefore' in pending:
                     try:
                         after_build = observe()
+                    except material.QueryBudget:
+                        return finish('budget_exhausted', 'queries_pending_retained')
                     except (OSError, RuntimeError, ValueError):
                         step['status'] = 'unknown'
                         return finish('unknown', 'construction_observation_unavailable')

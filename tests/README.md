@@ -232,3 +232,13 @@ Godot入口另含 `python3 tests/actor_state_godot.py`（6组、43断言）和 `
 `node tests/browser/transfer-resident.mjs` 用真实任务报告执行11项Chrome检查，包含赠送与建造分列、自赠和会面点矛盾、旧报告及390px。可用 `TRANSFER_REPORT_DIR` 指向已完成测试的 `sender-report.json` / `recipient-report.json` 所在目录；否则脚本生成真实任务报告。
 
 `python3 tests/transfer_godot.py` 已加入 `npm run test:godot`；5组35断言覆盖真实鼠标／键盘赠送、接收后建造、入账停止、损坏回执和提交前后退出恢复，证据位于 `.local/iter0020/godot/`。合并旧套件为41组630断言；原始输入夹具失败和专项复验分别保留。独立测试Agent、研究反例及构建者CLI自检分列于[结果报告](../docs/iterations/ITER-0020-results.md)，不能互相代替。
+
+## ITER-0022 有界材料入口
+
+普通回归增加 `tests/material_access_api.py`（8项）、`tests/material_access_time_api.py`（2项）与 `tests/material_access_mission_api.py`（11项），通过真实HTTP、SQLite与单调服务时间验证来源预算、FIFO、已知别名、部分领取到期、离线、原命令故障和实际本人平台。预算与期限不用SQL改值加速，因此耗时包含真实10秒／60秒等待。
+
+`tests/browser/material-resident.mjs` 的8项Chrome检查使用真实CLI产出的报告，包含材料事实／建造分列、查询预算、原预约关联、损坏报告保留上一份和390px；可设置 `MATERIAL_REPORT_FILE` 复用已完成报告。没有输入文件时脚本会在隔离实例中运行真实固定任务生成一份，不调用模型。
+
+`tests/material_access_godot.py` 已加入 `npm run test:godot`。9组75断言覆盖实际鼠标预约、行走领取和建造、损坏回执、reserve／harvest／cancel提交前后丢响应、新进程恢复、磁盘JSON版本往返和恢复后继续操作。专项全集可用 `npm run test:material-access`，与普通回归重叠，无需同时重复运行。
+
+新证据在 `.local/iter0022/`；worker自检与独立QA分别列于[ITER-0022结果](../docs/iterations/ITER-0022-results.md)。所有模型调用0，来源不证明无限供给或独立现实身份。正常时钟、SQLite写锁／SIGSTOP探针、故障退出和早期失败修正均分别保留。
