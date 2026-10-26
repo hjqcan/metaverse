@@ -1,0 +1,8 @@
+{
+  "missionId": "wilderness-builder",
+  "objective": "从空手开局采集建桥所需木材，连通彼岸供后来者使用，到对岸后返回原起点。",
+  "goals": [{"id": "far-bank", "label": "对岸林地", "target": [6, 1]}],
+  "allowBuild": true,
+  "allowGather": true,
+  "budgets": {"commands": 60, "wood": 6, "seconds": 600, "modelCalls": 1}
+}

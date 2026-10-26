@@ -1,0 +1,1754 @@
+{
+  "iteration": "ITER-0015",
+  "recordedAtUtc": "2026-10-26T02:16:12.291386+00:00",
+  "passed": true,
+  "totals": {
+    "http": 178,
+    "chrome": 126
+  },
+  "actualModelCalls": 0,
+  "decisionSources": [
+    "test-double",
+    "fixed-reference"
+  ],
+  "aggregate": ".local/checks/20261026T021200Z-572956/results.json",
+  "suites": [
+    {
+      "name": "http-foundation",
+      "evidence": ".local/iter0001/api/20261026T101201-e4305e/results.json",
+      "passed": true,
+      "testsRun": 17,
+      "tests": [
+        {
+          "test": "__main__.FoundationAcceptance.test_01_initial_identity_and_world_boundary",
+          "passed": true,
+          "seconds": 0.27095762896351516
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_02_move_rejects_wall_boundary_and_invalid_shape",
+          "passed": true,
+          "seconds": 0.3589071679743938
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_03_finite_source_build_and_stable_rejection",
+          "passed": true,
+          "seconds": 0.4071468509500846
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_04_parallel_duplicates_and_normalized_payload",
+          "passed": true,
+          "seconds": 1.3143342090188526
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_05_compete_for_last_material",
+          "passed": true,
+          "seconds": 0.5810529040172696
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_06_compete_for_build_cell",
+          "passed": true,
+          "seconds": 0.5479687000042759
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_07_identity_override_revoke_and_renew",
+          "passed": true,
+          "seconds": 1.2738893380155787
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_08_expired_session",
+          "passed": true,
+          "seconds": 0.7337978970026597
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_09_restart_preserves_world_and_receipts",
+          "passed": true,
+          "seconds": 0.81461765099084
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_10_events_are_ordered_and_paginated",
+          "passed": true,
+          "seconds": 1.2760775619535707
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_11_exception_rolls_back_and_original_id_retries",
+          "passed": true,
+          "seconds": 0.37600090401247144
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_12_exit_before_commit",
+          "passed": true,
+          "seconds": 0.6517463240306824
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_13_exit_after_commit_before_response",
+          "passed": true,
+          "seconds": 0.6669272630242631
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_14_fault_injection_is_disabled_by_default",
+          "passed": true,
+          "seconds": 0.5477686349768192
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_15_fixed_resident_reaches_goal_without_work",
+          "passed": true,
+          "seconds": 0.33587042801082134
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_16_same_id_in_different_actor_scopes",
+          "passed": true,
+          "seconds": 0.3154507110011764
+        },
+        {
+          "test": "__main__.FoundationAcceptance.test_17_separate_candidates_do_not_share_tokens_or_assets",
+          "passed": true,
+          "seconds": 0.5719326700200327
+        }
+      ]
+    },
+    {
+      "name": "http-passage",
+      "evidence": ".local/iter0002/api/20261026T101201-ab48bf/results.json",
+      "passed": true,
+      "testsRun": 13,
+      "tests": [
+        {
+          "test": "__main__.PassageAcceptance.test_01_water_blocks_goal_and_walk_only_control",
+          "passed": true,
+          "seconds": 0.263896853022743
+        },
+        {
+          "test": "__main__.PassageAcceptance.test_02_progressive_bridge_changes_reachability",
+          "passed": true,
+          "seconds": 0.5752470750012435
+        },
+        {
+          "test": "__main__.PassageAcceptance.test_03_invalid_construction_and_insufficient_material",
+          "passed": true,
+          "seconds": 0.5463644289993681
+        },
+        {
+          "test": "__main__.PassageAcceptance.test_04_parallel_duplicate_bridge_and_parameter_conflict",
+          "passed": true,
+          "seconds": 0.8584761100355536
+        },
+        {
+          "test": "__main__.PassageAcceptance.test_05_two_actors_compete_for_same_water_cell",
+          "passed": true,
+          "seconds": 0.6920676979934797
+        },
+        {
+          "test": "__main__.PassageAcceptance.test_06_failure_after_debit_rolls_back_bridge",
+          "passed": true,
+          "seconds": 0.430741960008163
+        },
+        {
+          "test": "__main__.PassageAcceptance.test_07_bridge_exit_before_commit",
+          "passed": true,
+          "seconds": 0.8497410700074397
+        },
+        {
+          "test": "__main__.PassageAcceptance.test_08_bridge_exit_after_commit",
+          "passed": true,
+          "seconds": 0.8332180459983647
+        },
+        {
+          "test": "__main__.PassageAcceptance.test_09_scenario_persists_and_cannot_be_reinterpreted",
+          "passed": true,
+          "seconds": 2.32403926103143
+        },
+        {
+          "test": "__main__.PassageAcceptance.test_10_populated_schema_v1_keeps_original_facts",
+          "passed": true,
+          "seconds": 1.006437314033974
+        },
+        {
+          "test": "__main__.PassageAcceptance.test_11_fixed_builder_and_free_traveler_comparison",
+          "passed": true,
+          "seconds": 0.5930559110129252
+        },
+        {
+          "test": "__main__.PassageAcceptance.test_12_rules_rejection_and_all_state_envelopes",
+          "passed": true,
+          "seconds": 0.39307583501795307
+        },
+        {
+          "test": "__main__.PassageAcceptance.test_13_resident_unknown_bridge_recovers_same_trip_and_id",
+          "passed": true,
+          "seconds": 1.9342361589660868
+        }
+      ]
+    },
+    {
+      "name": "http-resident_mission",
+      "evidence": ".local/iter0003/api/20261026T101201-b632df/results.json",
+      "passed": true,
+      "testsRun": 14,
+      "tests": [
+        {
+          "test": "__main__.MissionAcceptance.test_01_builder_verified_and_completed_resume_is_noop",
+          "passed": true,
+          "seconds": 0.5204180809669197
+        },
+        {
+          "test": "__main__.MissionAcceptance.test_02_pause_resume_retains_full_task_and_cumulative_budget",
+          "passed": true,
+          "seconds": 1.001478185004089
+        },
+        {
+          "test": "__main__.MissionAcceptance.test_03_command_budget_never_resets_on_resume",
+          "passed": true,
+          "seconds": 0.38814617501338944
+        },
+        {
+          "test": "__main__.MissionAcceptance.test_04_material_budget_is_not_bypassed_by_existing_inventory",
+          "passed": true,
+          "seconds": 0.3771241690265015
+        },
+        {
+          "test": "__main__.MissionAcceptance.test_05_unlisted_goal_is_rejected_before_any_world_action",
+          "passed": true,
+          "seconds": 0.3457884659874253
+        },
+        {
+          "test": "__main__.MissionAcceptance.test_06_model_failure_does_not_retry_or_change_world",
+          "passed": true,
+          "seconds": 0.33224691200302914
+        },
+        {
+          "test": "__main__.MissionAcceptance.test_07_invalid_spec_boolean_budget_and_duplicate_goals",
+          "passed": true,
+          "seconds": 0.35624082398135215
+        },
+        {
+          "test": "__main__.MissionAcceptance.test_08_bridge_commit_then_service_exit_recovers_original_id",
+          "passed": true,
+          "seconds": 1.009370511979796
+        },
+        {
+          "test": "__main__.MissionAcceptance.test_09_process_exit_after_receipt_before_local_settlement",
+          "passed": true,
+          "seconds": 0.6866955279838294
+        },
+        {
+          "test": "__main__.MissionAcceptance.test_10_identity_and_spec_binding_cannot_be_replaced",
+          "passed": true,
+          "seconds": 0.4436729769804515
+        },
+        {
+          "test": "__main__.MissionAcceptance.test_11_same_state_file_is_mutually_exclusive_across_processes",
+          "passed": true,
+          "seconds": 2.7463214169838466
+        },
+        {
+          "test": "__main__.MissionAcceptance.test_12_elapsed_budget_survives_pause",
+          "passed": true,
+          "seconds": 1.47062790900236
+        },
+        {
+          "test": "__main__.MissionAcceptance.test_13_context_has_no_credentials_and_free_traveler_uses_public_work",
+          "passed": true,
+          "seconds": 0.543152705009561
+        },
+        {
+          "test": "__main__.MissionAcceptance.test_14_query_routing_error_cannot_reject_original_pending_command",
+          "passed": true,
+          "seconds": 0.47561060200678185
+        }
+      ]
+    },
+    {
+      "name": "http-activities",
+      "evidence": ".local/iter0004/api/20261026T101212-01e9ba/results.json",
+      "passed": true,
+      "testsRun": 15,
+      "tests": [
+        {
+          "test": "__main__.ActivityAcceptance.test_01_catalog_and_identity_private_visits",
+          "passed": true,
+          "seconds": 0.2597965449676849
+        },
+        {
+          "test": "__main__.ActivityAcceptance.test_02_not_at_unknown_and_invalid_visit_never_change_world",
+          "passed": true,
+          "seconds": 0.3350619339616969
+        },
+        {
+          "test": "__main__.ActivityAcceptance.test_03_visit_transaction_idempotence_and_other_actor_scope",
+          "passed": true,
+          "seconds": 0.5806610430008732
+        },
+        {
+          "test": "__main__.ActivityAcceptance.test_04_concurrent_same_visit_id_creates_one_record",
+          "passed": true,
+          "seconds": 0.5273832650273107
+        },
+        {
+          "test": "__main__.ActivityAcceptance.test_05_visit_exit_before_commit_is_atomic",
+          "passed": true,
+          "seconds": 0.6515292969997972
+        },
+        {
+          "test": "__main__.ActivityAcceptance.test_06_visit_exit_after_commit_keeps_original_receipt",
+          "passed": true,
+          "seconds": 0.6130065759643912
+        },
+        {
+          "test": "__main__.ActivityAcceptance.test_07_arrival_without_visit_is_not_activity_completion",
+          "passed": true,
+          "seconds": 0.35738450300414115
+        },
+        {
+          "test": "__main__.ActivityAcceptance.test_08_activity_roundtrip_completed_resume_noop",
+          "passed": true,
+          "seconds": 0.41269940696656704
+        },
+        {
+          "test": "__main__.ActivityAcceptance.test_09_pending_visit_after_service_exit_recovers_same_task",
+          "passed": true,
+          "seconds": 0.6178697319701314
+        },
+        {
+          "test": "__main__.ActivityAcceptance.test_10_previous_visit_cannot_complete_new_mission",
+          "passed": true,
+          "seconds": 0.4804123920039274
+        },
+        {
+          "test": "__main__.ActivityAcceptance.test_11_invalid_catalog_binding_precedes_choice_and_actions",
+          "passed": true,
+          "seconds": 0.298659638967365
+        },
+        {
+          "test": "__main__.ActivityAcceptance.test_12_cost_baseline_uses_feasibility_and_counts_visit",
+          "passed": true,
+          "seconds": 0.3705294330138713
+        },
+        {
+          "test": "__main__.ActivityAcceptance.test_13_wrong_activity_in_success_receipt_retains_pending",
+          "passed": true,
+          "seconds": 0.4252773810294457
+        },
+        {
+          "test": "__main__.ActivityAcceptance.test_14_existing_schema2_world_unchanged_and_visit_unavailable",
+          "passed": true,
+          "seconds": 0.7820990500040352
+        },
+        {
+          "test": "__main__.ActivityAcceptance.test_15_recent_visits_are_ordered_bounded_and_without_rewards",
+          "passed": true,
+          "seconds": 0.8122315690270625
+        }
+      ]
+    },
+    {
+      "name": "http-postcards",
+      "evidence": ".local/iter0005/api/20261026T101212-4de5e4/results.json",
+      "passed": true,
+      "testsRun": 17,
+      "tests": [
+        {
+          "test": "__main__.PostcardAcceptance.test_01_author_public_read_and_restart",
+          "passed": true,
+          "seconds": 0.5998893529758789
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_02_location_visit_and_identity_constraints",
+          "passed": true,
+          "seconds": 0.4389996869722381
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_03_original_id_and_one_share_per_visit",
+          "passed": true,
+          "seconds": 0.3475995460175909
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_04_concurrent_original_id_commits_once",
+          "passed": true,
+          "seconds": 0.5228245640173554
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_05_before_commit_exit_rolls_back",
+          "passed": true,
+          "seconds": 0.6793540270300582
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_06_after_commit_exit_preserves_original",
+          "passed": true,
+          "seconds": 0.6367510220152326
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_07_unicode_scalars_and_invalid_content",
+          "passed": true,
+          "seconds": 0.3870869430247694
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_08_task_budget_stops_after_visit_before_share",
+          "passed": true,
+          "seconds": 0.39136788999894634
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_09_pause_share_and_complete_resume_noop",
+          "passed": true,
+          "seconds": 0.4610381879610941
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_10_task_after_commit_exit_recovers_same_share",
+          "passed": true,
+          "seconds": 0.6604042109684087
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_11_previous_share_cannot_complete_new_task",
+          "passed": true,
+          "seconds": 0.5207410349976271
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_12_unmatched_share_evidence_keeps_pending",
+          "passed": true,
+          "seconds": 0.38897041499149054
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_13_query_failure_is_not_original_rejection",
+          "passed": true,
+          "seconds": 0.4470073020202108
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_14_capability_and_goal_validation_before_model",
+          "passed": true,
+          "seconds": 0.6574083379819058
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_15_missing_draft_fails_without_world_action_and_old_spec_still_runs",
+          "passed": true,
+          "seconds": 0.4154773289919831
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_16_existing_populated_schema3_world_is_unchanged",
+          "passed": true,
+          "seconds": 0.7828598400228657
+        },
+        {
+          "test": "__main__.PostcardAcceptance.test_17_recent_feeds_and_model_context_are_bounded",
+          "passed": true,
+          "seconds": 1.6509230909869075
+        }
+      ]
+    },
+    {
+      "name": "http-mosaic",
+      "evidence": ".local/iter0006/api/20261026T101213-55f277/results.json",
+      "passed": true,
+      "testsRun": 17,
+      "tests": [
+        {
+          "test": "__main__.MosaicAcceptance.test_01_public_tiles_authorship_restart_and_immutable_history",
+          "passed": true,
+          "seconds": 0.6176737020141445
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_02_location_identity_visit_and_independent_postcard_slots",
+          "passed": true,
+          "seconds": 0.4721901119919494
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_03_original_id_patch_order_and_one_edit_per_visit",
+          "passed": true,
+          "seconds": 0.4080551380175166
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_04_parallel_duplicate_and_two_authors_cannot_lose_update",
+          "passed": true,
+          "seconds": 0.6380818219622597
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_05_atomic_batch_strict_shape_and_same_color_reject",
+          "passed": true,
+          "seconds": 0.3876735169906169
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_06_before_commit_exit_rolls_back_entire_patch",
+          "passed": true,
+          "seconds": 0.6068768120021559
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_07_after_commit_exit_retains_entire_patch",
+          "passed": true,
+          "seconds": 0.6207323009730317
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_08_budget_stops_after_visit_before_paint",
+          "passed": true,
+          "seconds": 0.3933765330002643
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_09_pause_resume_uses_one_decision_and_completed_is_noop",
+          "passed": true,
+          "seconds": 0.43325053696753457
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_10_after_commit_exit_task_recovers_original_edit",
+          "passed": true,
+          "seconds": 0.7403861209750175
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_11_old_edit_never_completes_new_task",
+          "passed": true,
+          "seconds": 0.5399397580185905
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_12_wrong_evidence_and_query_failure_keep_original_pending",
+          "passed": true,
+          "seconds": 0.46592376299668103
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_13_changed_board_stops_frozen_draft_without_overwrite",
+          "passed": true,
+          "seconds": 0.47407176200067624
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_14_capabilities_bad_goals_and_invalid_draft_fail_before_actions",
+          "passed": true,
+          "seconds": 0.6245569359743968
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_15_populated_r4_unchanged_and_postcards_still_work_on_r5",
+          "passed": true,
+          "seconds": 0.7238160530105233
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_16_bounded_public_own_history_and_public_model_context",
+          "passed": true,
+          "seconds": 2.393293820961844
+        },
+        {
+          "test": "__main__.MosaicAcceptance.test_17_committed_edit_remains_true_after_later_overwrite",
+          "passed": true,
+          "seconds": 0.6897154559846967
+        }
+      ]
+    },
+    {
+      "name": "http-consent",
+      "evidence": ".local/iter0007/api/20261026T101220-5144d9/results.json",
+      "passed": true,
+      "testsRun": 19,
+      "tests": [
+        {
+          "test": "__main__.ConsentAcceptance.test_01_proposal_is_public_immutable_and_does_not_paint",
+          "passed": true,
+          "seconds": 0.708330380031839
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_02_direct_edit_requires_consent_including_erased_foreign_cells",
+          "passed": true,
+          "seconds": 0.5378398859756999
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_03_proposal_shape_target_visit_and_one_per_visit",
+          "passed": true,
+          "seconds": 0.5279460989986546
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_04_accept_preserves_proposer_and_records_actual_reviewer_edit",
+          "passed": true,
+          "seconds": 0.87838109099539
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_05_reject_does_not_paint_and_cannot_be_reopened",
+          "passed": true,
+          "seconds": 0.6941486680298112
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_06_only_target_can_review_and_requires_own_visit",
+          "passed": true,
+          "seconds": 0.7736728320014663
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_07_stale_accept_fails_but_stale_reject_is_allowed",
+          "passed": true,
+          "seconds": 0.8726170449517667
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_08_concurrent_reviews_have_only_one_terminal_decision",
+          "passed": true,
+          "seconds": 1.0078807270037942
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_09_before_commit_exit_rolls_back_review_and_all_tiles",
+          "passed": true,
+          "seconds": 1.3573235329822637
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_10_after_commit_exit_retains_review_and_all_tiles",
+          "passed": true,
+          "seconds": 1.4555070140049793
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_11_proposer_pause_resume_and_budget_visit_only",
+          "passed": true,
+          "seconds": 1.0196069719968364
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_12_reviewer_accept_and_reject_reports_distinguish_actual_paint",
+          "passed": true,
+          "seconds": 1.6004796820343472
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_13_lost_review_commit_recovers_original_once",
+          "passed": true,
+          "seconds": 1.6493525260011666
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_14_stale_frozen_review_stops_without_new_decision",
+          "passed": true,
+          "seconds": 1.071638797991909
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_15_wrong_receipt_and_query_failure_keep_original_pending",
+          "passed": true,
+          "seconds": 0.8564967860002071
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_16_capabilities_and_bad_draft_fail_before_world_actions",
+          "passed": true,
+          "seconds": 0.5510851709987037
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_17_populated_r5_stays_unchanged_with_original_overwrite_rules",
+          "passed": true,
+          "seconds": 1.211960637010634
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_18_history_limits_preserve_complete_database",
+          "passed": true,
+          "seconds": 7.541233296971768
+        },
+        {
+          "test": "__main__.ConsentAcceptance.test_19_world_stale_retries_only_settled_attempt_with_same_frozen_decision",
+          "passed": true,
+          "seconds": 0.6683331030071713
+        }
+      ]
+    },
+    {
+      "name": "http-inbox",
+      "evidence": ".local/iter0008/api/20261026T101222-235621/results.json",
+      "passed": true,
+      "testsRun": 17,
+      "tests": [
+        {
+          "test": "__main__.InboxAcceptance.test_01_oldest_pending_survives_recent_50_and_own_100_limits",
+          "passed": true,
+          "seconds": 10.792855980980676
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_02_scope_is_derived_from_authenticated_resident",
+          "passed": true,
+          "seconds": 0.9618653289508075
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_03_status_counts_and_cursor_are_independent",
+          "passed": true,
+          "seconds": 1.8616137339849956
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_04_get_and_errors_leave_complete_logical_database_unchanged",
+          "passed": true,
+          "seconds": 0.7693302200059406
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_05_strict_query_and_detail_path_validation",
+          "passed": true,
+          "seconds": 0.786068071029149
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_06_new_insert_does_not_repeat_or_skip_older_page",
+          "passed": true,
+          "seconds": 1.2170787610230036
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_07_review_changes_filter_and_detail_but_not_proposal_order",
+          "passed": true,
+          "seconds": 0.536594396980945
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_08_read_is_public_but_review_authority_and_authentication_remain",
+          "passed": true,
+          "seconds": 0.5091844190028496
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_09_populated_r6_is_read_without_migration_or_logical_changes",
+          "passed": true,
+          "seconds": 0.8935865659732372
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_10_old_scenarios_reject_new_reads_without_querying_absent_tables",
+          "passed": true,
+          "seconds": 2.0719490890041925
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_11_new_task_reads_original_older_proposal_before_single_choice",
+          "passed": true,
+          "seconds": 3.5378156430087984
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_12_lookup_failure_cannot_fallback_to_recent_list_or_call_model",
+          "passed": true,
+          "seconds": 0.5393124399706721
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_13_wrong_lookup_identity_reference_and_evidence_fail_before_choice",
+          "passed": true,
+          "seconds": 0.6141016549663618
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_14_newer_detail_refreshes_observation_without_replacing_original",
+          "passed": true,
+          "seconds": 0.49357559700729325
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_15_old_service_capability_absence_preserves_existing_review_path",
+          "passed": true,
+          "seconds": 0.5372922110254876
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_16_resume_and_completed_task_do_not_lookup_again",
+          "passed": true,
+          "seconds": 0.8400024899747223
+        },
+        {
+          "test": "__main__.InboxAcceptance.test_17_malformed_capability_and_reference_do_not_start_task",
+          "passed": true,
+          "seconds": 0.4867673149565235
+        }
+      ]
+    },
+    {
+      "name": "http-entry_guide",
+      "evidence": ".local/iter0009/api/20261026T101224-973e48/results.json",
+      "passed": true,
+      "testsRun": 9,
+      "tests": [
+        {
+          "test": "__main__.EntryAcceptance.test_01_unbuilt_recipe_does_not_claim_existing_access",
+          "passed": true,
+          "seconds": 0.39605242700781673
+        },
+        {
+          "test": "__main__.EntryAcceptance.test_02_one_bridge_is_not_a_complete_route",
+          "passed": true,
+          "seconds": 0.6033709170296788
+        },
+        {
+          "test": "__main__.EntryAcceptance.test_03_later_resident_reuses_actual_bridges_without_material_or_rebuilding",
+          "passed": true,
+          "seconds": 0.873380912002176
+        },
+        {
+          "test": "__main__.EntryAcceptance.test_04_here_zero_steps_and_identity_specific_routes",
+          "passed": true,
+          "seconds": 0.5363862999947742
+        },
+        {
+          "test": "__main__.EntryAcceptance.test_05_empty_shared_stock_is_reported_but_free_participation_remains",
+          "passed": true,
+          "seconds": 0.6635577220004052
+        },
+        {
+          "test": "__main__.EntryAcceptance.test_06_reading_and_restart_leave_complete_logical_database_unchanged",
+          "passed": true,
+          "seconds": 1.1186032020486891
+        },
+        {
+          "test": "__main__.EntryAcceptance.test_07_old_scenarios_and_populated_database_keep_rules_and_materials",
+          "passed": true,
+          "seconds": 3.239362891006749
+        },
+        {
+          "test": "__main__.EntryAcceptance.test_08_public_model_input_uses_whitelist_and_legacy_service_remains_usable",
+          "passed": true,
+          "seconds": 0.7936979020014405
+        },
+        {
+          "test": "__main__.EntryAcceptance.test_09_new_task_receives_same_guide_before_actions",
+          "passed": true,
+          "seconds": 0.8122207400156185
+        }
+      ]
+    },
+    {
+      "name": "http-wilderness",
+      "evidence": ".local/iter0010/api/20261026T101233-c7497e/results.json",
+      "passed": true,
+      "testsRun": 16,
+      "tests": [
+        {
+          "test": "__main__.WildernessAcceptance.test_01_scattered_empty_hands_natural_sources_and_no_prefabricated_services",
+          "passed": true,
+          "seconds": 0.43663347500842065
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_02_public_claim_and_build_without_collected_wood_are_rejected",
+          "passed": true,
+          "seconds": 0.43341275001876056
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_03_gather_depletes_source_unblocks_land_and_build_spends_actual_inventory",
+          "passed": true,
+          "seconds": 0.41844308003783226
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_04_distance_unknown_node_strict_fields_and_identity",
+          "passed": true,
+          "seconds": 0.38312482699984685
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_05_original_command_replay_has_one_receipt_and_changed_node_conflicts",
+          "passed": true,
+          "seconds": 0.8279216469964013
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_06_failure_after_tree_debit_rolls_back_every_material_fact",
+          "passed": true,
+          "seconds": 0.35897814703639597
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_07_exit_before_commit_keeps_tree_and_inventory_atomic",
+          "passed": true,
+          "seconds": 0.7372552729793824
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_08_exit_after_commit_recovers_original_cut_once",
+          "passed": true,
+          "seconds": 0.8611681580077857
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_09_two_actors_compete_for_final_unit",
+          "passed": true,
+          "seconds": 0.7485905889770947
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_10_collection_builds_shared_bridge_and_other_resident_reuses_it",
+          "passed": true,
+          "seconds": 0.630551709968131
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_11_restart_never_refills_depleted_trees_or_resets_scattered_residents",
+          "passed": true,
+          "seconds": 0.5971079800510779
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_12_guide_routes_respect_live_trees_and_update_after_felling",
+          "passed": true,
+          "seconds": 0.3761240530293435
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_13_old_scenarios_and_populated_r6_are_not_migrated_or_given_trees",
+          "passed": true,
+          "seconds": 2.6382877019932494
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_14_public_context_has_natural_sources_without_claiming_automatic_collection",
+          "passed": true,
+          "seconds": 0.30876553495181724
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_15_completed_wood_sources_do_not_regenerate_and_unsupported_creative_services_stay_absent",
+          "passed": true,
+          "seconds": 0.8160392030258663
+        },
+        {
+          "test": "__main__.WildernessAcceptance.test_16_fresh_unspecified_world_defaults_to_wilderness",
+          "passed": true,
+          "seconds": 0.8150324010057375
+        }
+      ]
+    },
+    {
+      "name": "http-wilderness_mission",
+      "evidence": ".local/iter0013/api/20261026T021245Z-48f1d8/results.json",
+      "passed": true,
+      "testsRun": 13,
+      "tests": [
+        {
+          "test": "__main__.WildernessMissionAcceptance.test_01_empty_hands_build_bridge_and_later_resident_reuses_without_harvesting",
+          "passed": true,
+          "seconds": 0.7450145150069147
+        },
+        {
+          "test": "__main__.WildernessMissionAcceptance.test_02_absent_permission_preserves_legacy_no_gather_behavior",
+          "passed": true,
+          "seconds": 0.33772102900547907
+        },
+        {
+          "test": "__main__.WildernessMissionAcceptance.test_03_wood_budget_blocks_before_collecting_and_commands_survive_resume",
+          "passed": true,
+          "seconds": 0.37407979095587507
+        },
+        {
+          "test": "__main__.WildernessMissionAcceptance.test_04_unreachable_sources_are_not_counted_as_available_supply",
+          "passed": true,
+          "seconds": 0.34473358700051904
+        },
+        {
+          "test": "__main__.WildernessMissionAcceptance.test_05_preexisting_inventory_only_collects_the_remaining_shortage",
+          "passed": true,
+          "seconds": 0.6171727949986234
+        },
+        {
+          "test": "__main__.WildernessMissionAcceptance.test_06_exit_after_cut_commit_recovers_original_once",
+          "passed": true,
+          "seconds": 0.9410264549660496
+        },
+        {
+          "test": "__main__.WildernessMissionAcceptance.test_07_exit_before_commit_retries_same_cut",
+          "passed": true,
+          "seconds": 0.8601605289732106
+        },
+        {
+          "test": "__main__.WildernessMissionAcceptance.test_08_wrong_node_receipt_stays_pending_until_original_is_recovered",
+          "passed": true,
+          "seconds": 0.6677419220213778
+        },
+        {
+          "test": "__main__.WildernessMissionAcceptance.test_09_stale_cut_replans_only_after_confirmed_rejection",
+          "passed": true,
+          "seconds": 0.611736275954172
+        },
+        {
+          "test": "__main__.WildernessMissionAcceptance.test_10_process_exit_after_cut_receipt_before_local_settlement",
+          "passed": true,
+          "seconds": 0.7147468859911896
+        },
+        {
+          "test": "__main__.WildernessMissionAcceptance.test_11_permission_and_identity_binding_survive_pause",
+          "passed": true,
+          "seconds": 0.8966603029984981
+        },
+        {
+          "test": "__main__.WildernessMissionAcceptance.test_12_planning_is_readonly_and_untrusted_extra_fields_are_not_exposed",
+          "passed": true,
+          "seconds": 0.3061790710198693
+        },
+        {
+          "test": "__main__.WildernessMissionAcceptance.test_13_fixed_reference_cli_exports_actual_gather_report_without_models",
+          "passed": true,
+          "seconds": 0.6964597750338726
+        }
+      ]
+    },
+    {
+      "name": "http-continuous_mission",
+      "evidence": ".local/iter0015/api/20261026T021245Z-ba008f/results.json",
+      "passed": true,
+      "testsRun": 11,
+      "tests": [
+        {
+          "test": "__main__.ContinuousMissionAcceptance.test_01_fractional_target_obstacle_detour_and_return",
+          "passed": true,
+          "seconds": 10.304801571008284
+        },
+        {
+          "test": "__main__.ContinuousMissionAcceptance.test_02_lost_walk_response_recovers_original_position_once",
+          "passed": true,
+          "seconds": 3.974974740005564
+        },
+        {
+          "test": "__main__.ContinuousMissionAcceptance.test_03_wrong_walk_receipt_cannot_confirm_a_teleport",
+          "passed": true,
+          "seconds": 3.6319312269915827
+        },
+        {
+          "test": "__main__.ContinuousMissionAcceptance.test_04_actual_gather_bridge_crossing_and_later_resident_reuse",
+          "passed": true,
+          "seconds": 85.88717529596761
+        },
+        {
+          "test": "__main__.ContinuousMissionAcceptance.test_05_budget_and_gather_permission_prevent_material_actions",
+          "passed": true,
+          "seconds": 0.8393694930127822
+        },
+        {
+          "test": "__main__.ContinuousMissionAcceptance.test_06_pause_preserves_identity_permissions_and_command_budget",
+          "passed": true,
+          "seconds": 3.853172041999642
+        },
+        {
+          "test": "__main__.ContinuousMissionAcceptance.test_07_query_identity_version_and_collision_evidence",
+          "passed": true,
+          "seconds": 3.4492314359522425
+        },
+        {
+          "test": "__main__.ContinuousMissionAcceptance.test_08_fixed_reference_cli_exports_fractional_report",
+          "passed": true,
+          "seconds": 9.880336930975318
+        },
+        {
+          "test": "__main__.ContinuousMissionAcceptance.test_09_actual_collision_receipt_stops_without_claiming_arrival",
+          "passed": true,
+          "seconds": 6.898678586003371
+        },
+        {
+          "test": "__main__.ContinuousMissionAcceptance.test_10_stale_walk_replans_after_authoritative_rejection",
+          "passed": true,
+          "seconds": 3.795913576032035
+        },
+        {
+          "test": "__main__.ContinuousMissionAcceptance.test_11_planning_time_counts_before_any_material_mutation",
+          "passed": true,
+          "seconds": 0.4340474160271697
+        }
+      ]
+    },
+    {
+      "name": "browser-foundation",
+      "evidence": ".local/iter0001/browser/2026-10-26T02-12-50-552Z/results.json",
+      "passed": true,
+      "testsRun": 10,
+      "tests": [
+        {
+          "name": "connect_claim_build_and_reject",
+          "passed": true,
+          "milliseconds": 723
+        },
+        {
+          "name": "human_navigation_and_wall_rejection",
+          "passed": true,
+          "milliseconds": 506
+        },
+        {
+          "name": "fixed_resident_and_shared_observation",
+          "passed": true,
+          "milliseconds": 1611
+        },
+        {
+          "name": "keyboard_after_button_focus_and_input_isolation",
+          "passed": true,
+          "milliseconds": 624
+        },
+        {
+          "name": "offline_then_fresh_snapshot",
+          "passed": true,
+          "milliseconds": 170
+        },
+        {
+          "name": "committed_response_lost_then_query",
+          "passed": true,
+          "milliseconds": 313
+        },
+        {
+          "name": "not_sent_404_then_same_command_retry",
+          "passed": true,
+          "milliseconds": 378
+        },
+        {
+          "name": "service_restart_preserves_visible_world",
+          "passed": true,
+          "milliseconds": 2948
+        },
+        {
+          "name": "mobile_layout_and_accessible_controls",
+          "passed": true,
+          "milliseconds": 365
+        },
+        {
+          "name": "revocation_clears_browser_access",
+          "passed": true,
+          "milliseconds": 1159
+        }
+      ]
+    },
+    {
+      "name": "browser-passage",
+      "evidence": ".local/iter0002/browser/2026-10-26T02-12-53-293Z/results.json",
+      "passed": true,
+      "testsRun": 8,
+      "tests": [
+        {
+          "name": "passage_connect_recipes_and_land_rejection",
+          "passed": true,
+          "milliseconds": 544
+        },
+        {
+          "name": "river_blocks_movement_and_platform_cannot_pave_water",
+          "passed": true,
+          "milliseconds": 425
+        },
+        {
+          "name": "first_bridge_is_walkable_but_second_water_cell_blocks",
+          "passed": true,
+          "milliseconds": 340
+        },
+        {
+          "name": "second_bridge_lost_response_reload_queries_original_receipt",
+          "passed": true,
+          "milliseconds": 396
+        },
+        {
+          "name": "human_crosses_and_returns_other_resident_uses_free_bridge",
+          "passed": true,
+          "milliseconds": 2295
+        },
+        {
+          "name": "restart_retains_bridge_ids_and_live_ui",
+          "passed": true,
+          "milliseconds": 3045
+        },
+        {
+          "name": "recipe_keyboard_does_not_move_actor",
+          "passed": true,
+          "milliseconds": 361
+        },
+        {
+          "name": "mobile_water_bridge_selection_and_layout",
+          "passed": true,
+          "milliseconds": 385
+        }
+      ]
+    },
+    {
+      "name": "browser-resident",
+      "evidence": ".local/iter0003/browser/2026-10-26T02-13-00-087Z/results.json",
+      "passed": true,
+      "testsRun": 8,
+      "tests": [
+        {
+          "name": "actual_gpt6_builder_report_facts_usage_actions",
+          "passed": true,
+          "milliseconds": 258
+        },
+        {
+          "name": "keyboard_and_step_position_replay_of_actual_report",
+          "passed": true,
+          "milliseconds": 48
+        },
+        {
+          "name": "actual_traveler_uses_existing_bridges_without_materials",
+          "passed": true,
+          "milliseconds": 61
+        },
+        {
+          "name": "actual_http_paused_and_decision_failed_records",
+          "passed": true,
+          "milliseconds": 20
+        },
+        {
+          "name": "adversarial_text_and_false_completion_not_rendered_as_success",
+          "passed": true,
+          "milliseconds": 14
+        },
+        {
+          "name": "invalid_json_schema_steps_and_size_preserve_valid_report",
+          "passed": true,
+          "milliseconds": 216
+        },
+        {
+          "name": "default_missing_report_still_allows_actual_file_import",
+          "passed": true,
+          "milliseconds": 163
+        },
+        {
+          "name": "mobile_390px_actual_report_no_overflow_or_world_calls",
+          "passed": true,
+          "milliseconds": 217
+        }
+      ]
+    },
+    {
+      "name": "browser-activities",
+      "evidence": ".local/iter0004/browser/2026-10-26T02-13-01-764Z/results.json",
+      "passed": true,
+      "testsRun": 10,
+      "tests": [
+        {
+          "name": "three_live_activities_and_select_keyboard_isolation",
+          "passed": true,
+          "milliseconds": 299
+        },
+        {
+          "name": "human_walk_and_visit_commit_real_fact_without_resources",
+          "passed": true,
+          "milliseconds": 337
+        },
+        {
+          "name": "actual_stale_visit_rejection_is_shown_and_never_written",
+          "passed": true,
+          "milliseconds": 128
+        },
+        {
+          "name": "lost_visit_response_reload_recovers_original_id_once",
+          "passed": true,
+          "milliseconds": 278
+        },
+        {
+          "name": "server_restart_retains_live_visit_history",
+          "passed": true,
+          "milliseconds": 2903
+        },
+        {
+          "name": "mobile_world_catalog_and_controls_390px",
+          "passed": true,
+          "milliseconds": 314
+        },
+        {
+          "name": "actual_gpt6_activity_report_requires_verified_visit",
+          "passed": true,
+          "milliseconds": 149
+        },
+        {
+          "name": "paired_evidence_shows_purpose_mismatch_and_real_call_counts",
+          "passed": true,
+          "milliseconds": 248
+        },
+        {
+          "name": "arrival_only_forged_completion_and_legacy_report_separated",
+          "passed": true,
+          "milliseconds": 26
+        },
+        {
+          "name": "mobile_comparison_no_overflow_or_live_world_requests",
+          "passed": true,
+          "milliseconds": 300
+        }
+      ]
+    },
+    {
+      "name": "browser-postcards",
+      "evidence": ".local/iter0005/browser/2026-10-26T02-13-01-802Z/results.json",
+      "passed": true,
+      "testsRun": 12,
+      "tests": [
+        {
+          "name": "public_notice_draft_persists_polling_and_keyboard_does_not_move",
+          "passed": true,
+          "milliseconds": 2009
+        },
+        {
+          "name": "human_visit_and_share_create_public_fact_and_clear_only_after_success",
+          "passed": true,
+          "milliseconds": 367
+        },
+        {
+          "name": "another_resident_reads_shared_text_and_place_filter_is_real",
+          "passed": true,
+          "milliseconds": 1576
+        },
+        {
+          "name": "unicode_limit_counts_scalars_and_preserves_draft_by_place",
+          "passed": true,
+          "milliseconds": 79
+        },
+        {
+          "name": "actual_stale_share_rejection_preserves_draft",
+          "passed": true,
+          "milliseconds": 122
+        },
+        {
+          "name": "lost_share_response_reload_recovers_same_id_once",
+          "passed": true,
+          "milliseconds": 358
+        },
+        {
+          "name": "server_restart_preserves_public_and_author_records",
+          "passed": true,
+          "milliseconds": 2858
+        },
+        {
+          "name": "unsent_drafts_are_isolated_between_actor_logins",
+          "passed": true,
+          "milliseconds": 178
+        },
+        {
+          "name": "mobile_world_read_and_write_layout_390px",
+          "passed": true,
+          "milliseconds": 389
+        },
+        {
+          "name": "actual_two_gpt6_reports_separate_draft_and_confirmed_share",
+          "passed": true,
+          "milliseconds": 355
+        },
+        {
+          "name": "visit_only_and_forged_share_never_show_completed_and_legacy_still_loads",
+          "passed": true,
+          "milliseconds": 46
+        },
+        {
+          "name": "mobile_report_no_overflow_javascript_errors_or_world_requests",
+          "passed": true,
+          "milliseconds": 227
+        }
+      ]
+    },
+    {
+      "name": "browser-mosaic",
+      "evidence": ".local/iter0006/browser/2026-10-26T02-13-07-411Z/results.json",
+      "passed": true,
+      "testsRun": 12,
+      "tests": [
+        {
+          "name": "draft_is_separate_keyboard_does_not_move_and_poll_keeps_colors",
+          "passed": true,
+          "milliseconds": 2134
+        },
+        {
+          "name": "human_visit_publishes_batch_with_author_and_clears_draft",
+          "passed": true,
+          "milliseconds": 580
+        },
+        {
+          "name": "second_human_reads_and_continues_actual_shared_picture",
+          "passed": true,
+          "milliseconds": 1468
+        },
+        {
+          "name": "eight_cell_limit_draft_reload_and_actor_isolation",
+          "passed": true,
+          "milliseconds": 646
+        },
+        {
+          "name": "concurrent_board_revision_keeps_old_draft_and_never_overwrites",
+          "passed": true,
+          "milliseconds": 1561
+        },
+        {
+          "name": "real_world_stale_rejection_preserves_unpublished_patch",
+          "passed": true,
+          "milliseconds": 275
+        },
+        {
+          "name": "lost_commit_response_reload_recovers_original_patch_once",
+          "passed": true,
+          "milliseconds": 381
+        },
+        {
+          "name": "server_restart_preserves_picture_and_edit_sources",
+          "passed": true,
+          "milliseconds": 2863
+        },
+        {
+          "name": "mobile_world_picture_editor_layout_390px",
+          "passed": true,
+          "milliseconds": 364
+        },
+        {
+          "name": "actual_model_reports_show_proposal_confirmed_edit_and_shared_picture",
+          "passed": true,
+          "milliseconds": 322
+        },
+        {
+          "name": "forged_patch_and_visit_only_cannot_claim_completed_and_old_reports_work",
+          "passed": true,
+          "milliseconds": 37
+        },
+        {
+          "name": "mobile_actual_report_layout_390px",
+          "passed": true,
+          "milliseconds": 214
+        }
+      ]
+    },
+    {
+      "name": "browser-consent",
+      "evidence": ".local/iter0007/browser/2026-10-26T02-13-11-044Z/results.json",
+      "passed": true,
+      "testsRun": 11,
+      "tests": [
+        {
+          "name": "original_author_creates_picture_through_shared_interface",
+          "passed": true,
+          "milliseconds": 1218
+        },
+        {
+          "name": "peer_proposal_draft_survives_poll_reload_and_cannot_paint_directly",
+          "passed": true,
+          "milliseconds": 2844
+        },
+        {
+          "name": "target_accepts_after_own_visit_and_both_contributions_are_attributed",
+          "passed": true,
+          "milliseconds": 401
+        },
+        {
+          "name": "reject_keeps_picture_and_renders_proposal_text_literally",
+          "passed": true,
+          "milliseconds": 1635
+        },
+        {
+          "name": "mixed_draft_is_split_and_stale_proposal_cannot_overwrite_new_picture",
+          "passed": true,
+          "milliseconds": 3437
+        },
+        {
+          "name": "lost_accept_response_reload_recovers_original_review_once",
+          "passed": true,
+          "milliseconds": 1937
+        },
+        {
+          "name": "restart_preserves_proposals_reviews_and_picture",
+          "passed": true,
+          "milliseconds": 313
+        },
+        {
+          "name": "mobile_world_negotiation_layout_390px",
+          "passed": true,
+          "milliseconds": 542
+        },
+        {
+          "name": "actual_reports_separate_proposed_reviewed_and_painted_facts",
+          "passed": true,
+          "milliseconds": 342
+        },
+        {
+          "name": "forged_review_rejected_report_and_legacy_report_remain_distinct",
+          "passed": true,
+          "milliseconds": 81
+        },
+        {
+          "name": "mobile_actual_review_report_layout_390px",
+          "passed": true,
+          "milliseconds": 221
+        }
+      ]
+    },
+    {
+      "name": "browser-inbox",
+      "evidence": ".local/iter0008/browser/2026-10-26T02-13-18-929Z/results.json",
+      "passed": true,
+      "testsRun": 13,
+      "tests": [
+        {
+          "name": "default_inbox_finds_oldest_pending_beyond_recent_50_without_world_commands",
+          "passed": true,
+          "milliseconds": 260
+        },
+        {
+          "name": "scope_status_cursor_pages_remain_stable_when_new_record_arrives",
+          "passed": true,
+          "milliseconds": 1808
+        },
+        {
+          "name": "reason_dom_focus_and_selection_survive_poll_and_new_proposal",
+          "passed": true,
+          "milliseconds": 1266
+        },
+        {
+          "name": "onsite_visit_shortcut_and_failed_reads_preserve_list_and_disable_review",
+          "passed": true,
+          "milliseconds": 708
+        },
+        {
+          "name": "late_filter_response_cannot_replace_current_pending_page",
+          "passed": true,
+          "milliseconds": 539
+        },
+        {
+          "name": "identity_switch_ignores_late_response_and_isolates_draft_and_filters",
+          "passed": true,
+          "milliseconds": 679
+        },
+        {
+          "name": "original_older_proposal_accepts_once_and_history_exposes_confirmed_result",
+          "passed": true,
+          "milliseconds": 448
+        },
+        {
+          "name": "legacy_r6_service_uses_recent50_and_explicitly_marks_incomplete_scope",
+          "passed": true,
+          "milliseconds": 2021
+        },
+        {
+          "name": "lost_reject_response_and_reload_recover_original_command_without_resubmit",
+          "passed": true,
+          "milliseconds": 254
+        },
+        {
+          "name": "restart_preserves_inbox_counts_and_original_details",
+          "passed": true,
+          "milliseconds": 508
+        },
+        {
+          "name": "mobile_inbox_and_history_controls_fit_390px",
+          "passed": true,
+          "milliseconds": 331
+        },
+        {
+          "name": "actual_report_verifies_original_older_proposal_without_recent_list_membership",
+          "passed": true,
+          "milliseconds": 429
+        },
+        {
+          "name": "mobile_actual_inbox_review_report_fits_390px",
+          "passed": true,
+          "milliseconds": 211
+        }
+      ]
+    },
+    {
+      "name": "browser-consent-experience",
+      "evidence": ".local/consent-experience/browser/2026-10-26T02-13-24-679Z/results.json",
+      "passed": true,
+      "testsRun": 8,
+      "tests": [
+        {
+          "name": "fresh_proposal_compares_live_picture_and_exact_change_without_mutation",
+          "passed": true,
+          "milliseconds": 257
+        },
+        {
+          "name": "reason_errors_explain_disabled_submission_and_preserve_unicode_count",
+          "passed": true,
+          "milliseconds": 122
+        },
+        {
+          "name": "comparison_refresh_preserves_review_focus_selection_and_draft",
+          "passed": true,
+          "milliseconds": 1220
+        },
+        {
+          "name": "accepted_picture_is_confirmed_history_without_unpublished_markers",
+          "passed": true,
+          "milliseconds": 1823
+        },
+        {
+          "name": "expired_state_is_visible_offsite_to_both_authors_and_never_auto_rejects",
+          "passed": true,
+          "milliseconds": 1634
+        },
+        {
+          "name": "rejected_proposal_labels_unapplied_colors_and_preserves_picture",
+          "passed": true,
+          "milliseconds": 1524
+        },
+        {
+          "name": "later_changes_do_not_rewrite_confirmed_edit_or_confuse_current_picture",
+          "passed": true,
+          "milliseconds": 1550
+        },
+        {
+          "name": "mobile_comparison_has_readable_labels_and_no_horizontal_overflow",
+          "passed": true,
+          "milliseconds": 83
+        }
+      ]
+    },
+    {
+      "name": "browser-entry",
+      "evidence": ".local/iter0009/browser/2026-10-26T02-13-31-621Z/results.json",
+      "passed": true,
+      "testsRun": 10,
+      "tests": [
+        {
+          "name": "arrival_shows_actual_routes_and_selection_does_not_act",
+          "passed": true,
+          "milliseconds": 674
+        },
+        {
+          "name": "one_built_bridge_stays_blocked_then_complete_route_becomes_available",
+          "passed": true,
+          "milliseconds": 2603
+        },
+        {
+          "name": "newcomer_first_connection_uses_existing_bridges_and_returns_without_work",
+          "passed": true,
+          "milliseconds": 1964
+        },
+        {
+          "name": "exhausted_public_stock_is_honest_about_building_and_free_creative_options",
+          "passed": true,
+          "milliseconds": 1775
+        },
+        {
+          "name": "failed_observation_marks_old_guide_and_disables_selection_until_recovery",
+          "passed": true,
+          "milliseconds": 2782
+        },
+        {
+          "name": "identity_switch_refreshes_own_materials_and_disconnect_clears_guide",
+          "passed": true,
+          "milliseconds": 251
+        },
+        {
+          "name": "malformed_route_is_not_shown_as_confirmed_access",
+          "passed": true,
+          "milliseconds": 3290
+        },
+        {
+          "name": "legacy_service_without_guide_preserves_existing_interface",
+          "passed": true,
+          "milliseconds": 229
+        },
+        {
+          "name": "restart_keeps_same_guide_and_world_state",
+          "passed": true,
+          "milliseconds": 488
+        },
+        {
+          "name": "mobile_arrival_390px_routes_and_access_controls_are_readable",
+          "passed": true,
+          "milliseconds": 482
+        }
+      ]
+    },
+    {
+      "name": "browser-wilderness",
+      "evidence": ".local/iter0010/browser/2026-10-26T02-13-34-259Z/results.json",
+      "passed": true,
+      "testsRun": 11,
+      "tests": [
+        {
+          "name": "empty_hands_scattered_residents_trees_and_no_depot_or_ready_made_creative_services",
+          "passed": true,
+          "milliseconds": 497
+        },
+        {
+          "name": "selecting_tree_does_not_harvest_and_distance_gates_cutting",
+          "passed": true,
+          "milliseconds": 24
+        },
+        {
+          "name": "real_cut_reduces_tree_and_credits_only_current_resident",
+          "passed": true,
+          "milliseconds": 76
+        },
+        {
+          "name": "version_conflict_does_not_double_credit_and_new_cut_uses_new_command",
+          "passed": true,
+          "milliseconds": 240
+        },
+        {
+          "name": "collected_wood_builds_real_platform_on_cleared_tree_ground",
+          "passed": true,
+          "milliseconds": 287
+        },
+        {
+          "name": "other_scattered_identity_starts_empty_and_sees_previous_work",
+          "passed": true,
+          "milliseconds": 163
+        },
+        {
+          "name": "lost_committed_cut_response_reload_recovers_original_id_once",
+          "passed": true,
+          "milliseconds": 257
+        },
+        {
+          "name": "mismatched_cut_receipt_stays_unresolved_until_original_receipt_is_queried",
+          "passed": true,
+          "milliseconds": 211
+        },
+        {
+          "name": "observation_failure_keeps_known_materials_and_pauses_cutting",
+          "passed": true,
+          "milliseconds": 2985
+        },
+        {
+          "name": "restart_preserves_tree_stumps_materials_and_resident_positions",
+          "passed": true,
+          "milliseconds": 308
+        },
+        {
+          "name": "mobile_390px_tree_selection_cut_and_material_labels_are_usable",
+          "passed": true,
+          "milliseconds": 429
+        }
+      ]
+    },
+    {
+      "name": "browser-wilderness-resident",
+      "evidence": ".local/iter0013/browser/2026-10-26T02-13-40-382Z/results.json",
+      "passed": true,
+      "testsRun": 6,
+      "tests": [
+        {
+          "name": "actual_fixed_reference_gather_and_bridge_facts",
+          "passed": true
+        },
+        {
+          "name": "gather_replay_retains_resident_position",
+          "passed": true
+        },
+        {
+          "name": "unknown_cut_is_not_counted_as_collected",
+          "passed": true
+        },
+        {
+          "name": "mismatched_gather_total_cannot_present_verified_completion",
+          "passed": true
+        },
+        {
+          "name": "invalid_source_rejected_during_import",
+          "passed": true
+        },
+        {
+          "name": "390px_material_summary_and_readonly_report",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "browser-continuous-resident",
+      "evidence": ".local/iter0015/browser/2026-10-26T02-13-42-098Z/results.json",
+      "passed": true,
+      "testsRun": 7,
+      "tests": [
+        {
+          "name": "actual_continuous_cli_report_and_meter_coordinates",
+          "passed": true
+        },
+        {
+          "name": "fractional_replay_uses_confirmed_position_and_natural_geometry",
+          "passed": true
+        },
+        {
+          "name": "unknown_walk_does_not_turn_target_into_confirmed_position",
+          "passed": true
+        },
+        {
+          "name": "completion_requires_actual_arrival_and_return_trace",
+          "passed": true
+        },
+        {
+          "name": "invalid_continuous_geometry_retains_previous_report",
+          "passed": true
+        },
+        {
+          "name": "actual_bridge_report_has_r8_gather_facts_and_full_footprint",
+          "passed": true
+        },
+        {
+          "name": "390px_continuous_map_readonly_without_overflow",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "finalR7GatherTypeRecheck": ".local/iter0013/api/20261026T021435Z-6152c0/results.json",
+  "build": "0 warnings, 0 errors",
+  "syntaxAndDiffCheck": true,
+  "allOwnTestServicesStopped": true,
+  "sourceSha256": {
+    "scripts/continuous_navigation.py": "e158eff635fbaa0a67146b9ab00d6c3e48cb5f43a684335ffdca5216983db749",
+    "scripts/resident_mission.py": "0c119e64be865074a0324ccf560b9531f0829fb984da3654344fae8d016a785c",
+    "scripts/wilderness_materials.py": "f9e231ef1eb30dddd7efddee06bd7c8a98dbbe1fe0b8b01a172e503573361ec4",
+    "scripts/run_resident.py": "735e383aa13aa68a79ecb9e94f434de280485fe4636a4ed03dbf0ee7422c30aa",
+    "scripts/check.py": "a77ee62ea0e2bd2452f7d04d5eb99e7607051f7ee64199982886389da6234308",
+    "src/World.Server/wwwroot/resident.js": "c64b2c128ad844b47e473d8dabd260c9aa9ca66d418fe98d773637ce1669c781",
+    "src/World.Server/wwwroot/resident.html": "7cdede50b86ae6e6e47a7ebea75ab53916fb3fb3a5ed7b46ec7357338cba4aa8",
+    "tests/continuous_mission_api.py": "696078512a5c8c5d943bf8a6fd31da147e6fdb1a01f35bcd029a01576f1b83f4",
+    "tests/browser/continuous-resident.mjs": "5595afa3f1b1b269638182ae9551e29e81fe36a2a09d33a04384c18af47055bf",
+    "examples/continuous/builder.json": "804221f303a91a556ba868fb01185f92d2c3cb5112ae8f9a16f5b27a76fa6b54",
+    "examples/continuous/traveler.json": "b34ca0340fd5e501be820624e59a736d04739d895daf73c39151aa99baa92c83",
+    "examples/continuous/walk.json": "476d924974912231609ad7eeb97920d606a609aa13c6bc990a67fea4b57728db"
+  },
+  "compiledServerSha256": "2f12afb1e370c628fad397739a28b4192aae8b46cb2dd96a0391434f0c488b1e",
+  "publishedBuilderTravelerSource": ".local/iter0015/api/20261026T020955Z-880bfb/test_04_actual_gather_bridge_crossing_and_later_resident_reuse/reports.json",
+  "failuresAndCorrections": [
+    {
+      "evidence": ".local/iter0015/api/20261026T020715Z-b18114/results.json",
+      "reason": "Initial public observation omitted top-level entities required by continuous planner; fixed before world mutations."
+    },
+    {
+      "evidence": ".local/iter0015/api/20261026T020854Z-e3dd7b",
+      "reason": "Interrupted slow exhaustive bridge/collection candidate planning before commands. Changed heuristic search to first reachable candidate in distance order. No pass claimed for interrupted run."
+    }
+  ]
+}

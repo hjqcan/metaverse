@@ -1,0 +1,22 @@
+{
+  "missionId": "continuous-builder",
+  "objective": "采集够用的木材，在河上造一座公共桥，前往对岸林地后返回。",
+  "goals": [
+    {
+      "id": "destination",
+      "label": "对岸林地",
+      "target": [
+        26.2,
+        7.4
+      ]
+    }
+  ],
+  "allowBuild": true,
+  "allowGather": true,
+  "budgets": {
+    "commands": 200,
+    "wood": 6,
+    "seconds": 600,
+    "modelCalls": 1
+  }
+}

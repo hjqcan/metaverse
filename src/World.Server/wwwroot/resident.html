@@ -25,7 +25,7 @@
       </section>
 
       <section class="import-card" aria-label="加载任务报告">
-        <div><label class="import-title" for="report-file">打开一份任务报告</label><p id="file-help">JSON · 最大 2 MiB · 至多 100 步。导入的文件仅在此页面读取。</p></div>
+        <div><label class="import-title" for="report-file">打开一份任务报告</label><p id="file-help">JSON · 最大 2 MiB。导入的文件仅在此页面读取。</p></div>
         <div class="import-actions"><input id="report-file" type="file" accept=".json,application/json" aria-describedby="file-help load-message"><button id="load-demo" type="button" class="button">加载运行样例</button></div>
       </section>
       <p id="load-message" class="load-message" role="status" aria-live="polite">正在读取本地运行样例，也可以直接导入自己的报告。</p>
@@ -66,7 +66,7 @@
             <div class="fact-pair"><div><span>曾到达目标</span><strong id="goal-reached"></strong></div><div><span>已返回原起点</span><strong id="returned"></strong></div></div>
             <p id="activity-fact" class="activity-fact" hidden></p>
             <div id="postcard-fact-panel" class="postcard-fact-panel" hidden><p id="postcard-fact" class="activity-fact"></p><blockquote id="postcard-shared-text"></blockquote></div>
-            <dl class="fact-details"><div><dt>核实时间</dt><dd id="verified-at"></dd></div><div><dt>状态版本</dt><dd id="state-versions"></dd></div><div><dt>领取 / 新建设施</dt><dd id="created-summary"></dd></div></dl>
+            <dl class="fact-details"><div><dt>核实时间</dt><dd id="verified-at"></dd></div><div><dt>状态版本</dt><dd id="state-versions"></dd></div><div><dt>材料来源 / 新建设施</dt><dd id="created-summary"></dd></div></dl>
             <p class="evidence-note">来自导入报告的执行事实，页面不连接世界重新核验。</p>
           </section>
         </div>
@@ -92,7 +92,7 @@
           <div class="section-heading"><h2 id="budget-title">一路的累计开销</h2><span class="section-note">已用 / 任务上限 · 暂停不重置</span></div>
           <div class="budget-grid">
             <div class="budget-item"><span>世界命令</span><strong id="command-budget"></strong><progress id="command-progress" aria-label="命令预算使用量" max="1" value="0"></progress><small>重试原命令不重复计数</small></div>
-            <div class="budget-item"><span>建造木材</span><strong id="wood-budget"></strong><progress id="wood-progress" aria-label="建造木材预算使用量" max="1" value="0"></progress><small>实际消耗，不是领取数量</small></div>
+            <div class="budget-item"><span>建造木材</span><strong id="wood-budget"></strong><progress id="wood-progress" aria-label="建造木材预算使用量" max="1" value="0"></progress><small>建造实际消耗的木材</small></div>
             <div class="budget-item"><span id="model-budget-label">模型调用</span><strong id="model-budget"></strong><progress id="model-progress" aria-label="目标选择预算使用量" max="1" value="0"></progress><small id="model-budget-note">高层目标选择</small></div>
             <div class="budget-item"><span>累计耗时</span><strong id="seconds-budget"></strong><progress id="seconds-progress" aria-label="时间预算使用量" max="1" value="0"></progress><small>秒 · 执行器记录</small></div>
           </div>

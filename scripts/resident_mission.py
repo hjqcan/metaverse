@@ -23,6 +23,8 @@ from mosaic_patch import canonical_patch, public_mosaic, validate_mosaic, patch_
 from mosaic_consent import public_proposal, proposal_evidence, review_evidence
 from mosaic_inbox import review_input
 from entry_guide import public_entry_guide
+from wilderness_materials import collection_plan, valid_gather_receipt
+import continuous_navigation as continuous
 
 
 def _utc():
@@ -36,7 +38,7 @@ def _integer(value, low, high):
 def _spec(value):
     required = {"missionId", "objective", "goals", "allowBuild", "budgets"}
     if (not isinstance(value, dict) or not required <= set(value)
-            or set(value) - required - {"sharePostcard", "paintMosaic", "proposeMosaic", "reviewMosaicProposal"}):
+            or set(value) - required - {"allowGather", "sharePostcard", "paintMosaic", "proposeMosaic", "reviewMosaicProposal"}):
         raise ValueError("Invalid mission spec fields")
     if not isinstance(value["missionId"], str) or not re.fullmatch(r"[A-Za-z0-9_-]{1,64}", value["missionId"]):
         raise ValueError("Invalid missionId")
@@ -44,6 +46,8 @@ def _spec(value):
         raise ValueError("Invalid objective")
     if type(value["allowBuild"]) is not bool:
         raise ValueError("allowBuild must be boolean")
+    if "allowGather" in value and type(value["allowGather"]) is not bool:
+        raise ValueError("allowGather must be boolean")
     if "sharePostcard" in value and type(value["sharePostcard"]) is not bool:
         raise ValueError("sharePostcard must be boolean")
     if "paintMosaic" in value and type(value["paintMosaic"]) is not bool:
@@ -77,10 +81,10 @@ def _spec(value):
             raise ValueError("Goal label must be nonempty")
         ids.add(goal["id"])
         if (not isinstance(goal["target"], list) or len(goal["target"]) != 2
-                or any(type(n) is not int or n < 0 for n in goal["target"])):
-            raise ValueError("Goal target must be two nonnegative integers")
+                or any(not continuous.finite(n) or n < 0 for n in goal["target"])):
+            raise ValueError("Goal target must be two nonnegative finite coordinates")
     budget = value["budgets"]
-    bounds = {"commands": (1, 100), "wood": (0, 12), "seconds": (1, 600), "modelCalls": (1, 1)}
+    bounds = {"commands": (1, 1000), "wood": (0, 12), "seconds": (1, 600), "modelCalls": (1, 1)}
     if not isinstance(budget, dict) or set(budget) != set(bounds):
         raise ValueError("Invalid budgets")
     if any(not _integer(budget[key], *limits) for key, limits in bounds.items()):
@@ -124,7 +128,7 @@ def _save(path, state):
 def _public(observed, share_postcard=False, paint_mosaic=False, consent=False):
     """No session identity, credentials, private peer inventory or client fields."""
     world = {key: deepcopy(observed["world"][key])
-             for key in ("id", "width", "height", "blocked", "water", "goal") if key in observed["world"]}
+             for key in ("id", "width", "height", "blocked", "water", "goal", "coordinateSystem", "bounds") if key in observed["world"]}
     world["entities"] = [{key: deepcopy(entity[key]) for key in (
         "entityId", "definitionId", "definitionVersion", "rulesVersion", "ownerActorId", "position", "embodiedWood")
         if key in entity} for entity in observed.get("entities", [])]
@@ -135,7 +139,7 @@ def _public(observed, share_postcard=False, paint_mosaic=False, consent=False):
     public = {"rulesVersion": observed["rulesVersion"], "stateVersion": observed["stateVersion"],
             "self": {"actorId": observed["self"]["actorId"], "position": deepcopy(observed["self"]["position"]),
                      "inventory": {"wood": observed["self"]["inventory"]["wood"]}},
-            "world": world, "depot": {key: deepcopy(observed["depot"][key]) for key in ("position", "wood")},
+            "world": world, "depot": {key: deepcopy(observed["depot"][key]) for key in ("position", "wood") if key in observed["depot"]},
             "recipes": [{key: recipe[key] for key in ("id", "woodCost")} for recipe in observed.get("recipes", [])],
             "activities": activities}
     if observed.get('gathering', {}).get('version') == 1:
@@ -144,6 +148,12 @@ def _public(observed, share_postcard=False, paint_mosaic=False, consent=False):
                                    ('nodeId', 'kind', 'position', 'initialWood', 'remainingWood')}
                                   for node in observed.get('resourceNodes', [])]
         public['depot']['available'] = observed['depot'].get('available', True)
+    if continuous.continuous(observed):
+        public['entities'] = deepcopy(world['entities'])
+        public['movement'] = {key: observed['movement'][key] for key in ('version', 'kind', 'speed', 'radius', 'maxStepDistance', 'gatherReach', 'buildReach')}
+        public['terrain'] = continuous.public_geometry(observed)
+        world['terrain'] = deepcopy(public['terrain'])
+        world['resourceNodes'] = deepcopy(public['resourceNodes'])
     entry = public_entry_guide(observed)
     if entry is not None:
         public["entryGuide"] = entry
@@ -158,6 +168,11 @@ def _public(observed, share_postcard=False, paint_mosaic=False, consent=False):
 
 
 def _validate_goals(spec, observed):
+    free_movement = continuous.continuous(observed)
+    if free_movement:
+        continuous.validate_observation(observed)
+    elif spec['budgets']['commands'] > 100 or any(type(n) is not int for goal in spec['goals'] for n in goal['target']):
+        raise ValueError('Legacy grid missions require integer goals and at most 100 commands')
     if spec.get("sharePostcard") and observed.get("rulesVersion") not in ("r4", "r5", "r6"):
         raise ValueError("Postcard sharing requires rulesVersion r4, r5 or r6")
     if spec.get("paintMosaic"):
@@ -270,7 +285,9 @@ def _mosaic_edit(value, intent, goal, actor_id, visit, decision):
         "patch", "stateVersion", "paintedAtUtc", "position")}
 
 
-def _route_info(observed, target, allow_build):
+def _route_info(observed, target, allow_build, allow_gather=False):
+    if continuous.continuous(observed):
+        return continuous.route_info(observed, target, allow_build, allow_gather)
     route = plan(observed, target, allow_build)
     if route is None:
         return {"reason": "no_route", "cells": [], "bridges": None, "wood": None, "commands": None}
@@ -281,6 +298,21 @@ def _route_info(observed, target, allow_build):
     wood = bridges * recipe["woodCost"] if bridges else 0
     shortage = max(0, wood - observed["self"]["inventory"]["wood"])
     reason, detour = None, 0
+    if shortage and allow_gather and observed.get("gathering"):
+        collecting = collection_plan(observed, shortage)
+        if collecting["reason"]:
+            return {"reason": collecting["reason"], "cells": cells, "bridges": bridges,
+                    "wood": wood, "commands": None}
+        forecast = collecting["forecast"]
+        onward = plan(forecast, target, allow_build)
+        if onward is None:
+            return {"reason": "no_route", "cells": [], "bridges": bridges, "wood": wood, "commands": None}
+        forecast["world"]["blocked"] = [p for p in forecast["world"]["blocked"] if tuple(p) not in onward[0]]
+        forecast["self"]["position"] = list(target)
+        back = plan(forecast, observed["self"]["position"], False)
+        return {"reason": None if back is not None else "no_return_route", "cells": cells,
+                "bridges": bridges, "wood": wood, "collection": collecting["actions"],
+                "commands": len(collecting["actions"]) + len(onward[0]) + onward[1] + (len(back[0]) if back else 0)}
     if shortage > observed["depot"]["wood"]:
         reason = "natural_material_collection_required" if observed.get("gathering") else "insufficient_public_material"
     elif shortage and sum(abs(a-b) for a, b in zip(observed["self"]["position"], observed["depot"]["position"])) > 1:
@@ -297,7 +329,7 @@ def _route_info(observed, target, allow_build):
 def _context(spec, observed):
     candidates = []
     for goal in spec["goals"]:
-        info = _route_info(observed, goal["target"], spec["allowBuild"])
+        info = _route_info(observed, goal["target"], spec["allowBuild"], spec.get("allowGather", False))
         activity = next((a for a in observed.get("activities", []) if a["id"] == goal.get("activityId")), None)
         if activity is not None and info["commands"] is not None:
             info["commands"] += 1
@@ -383,8 +415,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
     receipt queries do not consume the mission's command budget.
     """
     spec = _spec(spec)
-    if max_steps is not None and not _integer(max_steps, 0, 100):
-        raise ValueError("max_steps must be an integer from 0 to 100, or None")
+    if max_steps is not None and not _integer(max_steps, 0, 1000):
+        raise ValueError("max_steps must be an integer from 0 to 1000, or None")
     path = Path(state_path).resolve()
     with _lock(path):
         state = json.loads(path.read_text()) if path.exists() else None
@@ -398,6 +430,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             result = deepcopy({k: v for k, v in state.items() if k != "_state"})
             # Historical terminal files remain untouched, including their timestamps.
             result["mission"].setdefault("sharePostcard", spec.get("sharePostcard", False))
+            result["mission"].setdefault("allowGather", spec.get("allowGather", False))
+            result["facts"].setdefault("woodGathered", 0)
             result["mission"].setdefault("paintMosaic", spec.get("paintMosaic", False))
             result["mission"].setdefault("proposeMosaic", spec.get("proposeMosaic", False))
             result["mission"].setdefault("reviewMosaicProposal", deepcopy(spec.get("reviewMosaicProposal")))
@@ -462,6 +496,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 raise
             return finish("unknown", "observation_unavailable:" + type(error).__name__)
         _validate_goals(spec, observed)
+        if not continuous.continuous(observed) and max_steps is not None and max_steps > 100:
+            raise ValueError('Legacy grid missions allow at most 100 steps per invocation')
         if state is None:
             proposal = None
             if spec.get("reviewMosaicProposal"):
@@ -473,6 +509,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 public["mosaicProposal"] = proposal
             state = {"schemaVersion": 1, "kind": "resident-mission-report",
                      "mission": {"id": spec["missionId"], "objective": spec["objective"],
+                                 "allowGather": spec.get("allowGather", False),
+                                 "arrivalTolerance": continuous.ARRIVAL_TOLERANCE if continuous.continuous(observed) else 0,
                                  "sharePostcard": spec.get("sharePostcard", False),
                                  "paintMosaic": spec.get("paintMosaic", False),
                                  "proposeMosaic": spec.get("proposeMosaic", False),
@@ -499,6 +537,7 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             save()
 
         used, limits, facts = state["budget"]["used"], state["budget"]["limits"], state["facts"]
+        facts.setdefault("woodGathered", 0)
         facts.setdefault("activityCompleted", False)
         facts.setdefault("activityVisit", None)
         facts.setdefault("postcardShared", False)
@@ -512,9 +551,10 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
         def record_observation(observed):
             position = observed["self"]["position"]
             goal = state["mission"]["goal"]
-            if goal and position == goal["target"]:
+            reached = continuous.near if continuous.continuous(observed) else lambda a, b: a == b
+            if goal and reached(position, goal["target"]):
                 facts["goalReached"] = True
-            facts["returned"] = position == state["mission"]["origin"]
+            facts["returned"] = reached(position, state["mission"]["origin"])
             facts["endStateVersion"] = observed["stateVersion"]
             facts["verifiedAtUtc"] = _utc()
             public = _public(observed, spec.get("sharePostcard", False), spec.get("paintMosaic", False))
@@ -580,7 +620,11 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                     return finish("budget_exhausted", "commands")
                 returning = ready_to_return
                 target = state["mission"]["origin"] if returning else goal["target"]
-                info = _route_info(observed, target, spec["allowBuild"])
+                info = _route_info(observed, target, spec["allowBuild"], spec.get("allowGather", False))
+                if continuous.continuous(observed):
+                    save()  # Geometric planning is part of the wall-time budget.
+                    if used['seconds'] >= limits['seconds']:
+                        return finish('budget_exhausted', 'seconds')
                 if info["reason"]:
                     return finish("blocked", info["reason"])
                 if used["wood"] + info["wood"] > limits["wood"]:
@@ -588,7 +632,16 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 position = observed["self"]["position"]
                 shortage = max(0, info["wood"] - observed["self"]["inventory"]["wood"])
                 cost = 0
-                if needs_visit and position == goal["target"]:
+                if continuous.continuous(observed) and info.get('nextAction'):
+                    action, reason = deepcopy(info['nextAction']), info['nextReason']
+                    if action['type'] == 'build':
+                        cost = next(r['woodCost'] for r in observed['recipes'] if r['id'] == action['recipeId'])
+                    if action['type'] == 'walk':
+                        time.sleep(observed['movement']['maxStepDistance'] / observed['movement']['speed'] + .005)
+                        save()
+                        if used['seconds'] >= limits['seconds']:
+                            return finish('budget_exhausted', 'seconds')
+                elif needs_visit and position == goal["target"]:
                     action, reason = {"type": "visit", "activityId": goal["activityId"]}, "在已选活动地点确认到访"
                 elif needs_postcard and position == goal["target"]:
                     action = {"type": "postcard", "activityId": goal["activityId"],
@@ -617,7 +670,10 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                     reason = "在已确认到访的花园提交原提议的审阅决定"
                 elif shortage:
                     depot = observed["depot"]["position"]
-                    if sum(abs(a-b) for a, b in zip(position, depot)) <= 1:
+                    if info.get("collection"):
+                        action = deepcopy(info["collection"][0])
+                        reason = "采集剩余桥梁所需木材" if action["type"] == "gather" else "走到可达树木旁补足建桥材料"
+                    elif sum(abs(a-b) for a, b in zip(position, depot)) <= 1:
                         action, reason = {"type": "claim", "quantity": shortage}, "为剩余桥梁补足材料"
                     else:
                         nxt = plan(observed, depot, False)[0][0]
@@ -635,6 +691,13 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 intent = {"schemaVersion": 1, "rulesVersion": observed["rulesVersion"], "commandId": uuid.uuid4().hex,
                           "expectedStateVersion": observed["stateVersion"], "action": action}
                 pending = {"request": intent, "woodCost": cost}
+                if action['type'] == 'walk':
+                    pending['walkBefore'] = {'position': deepcopy(position), 'maxStepDistance': observed['movement']['maxStepDistance']}
+                if action["type"] == "gather":
+                    node = next(n for n in observed["resourceNodes"] if n["nodeId"] == action["nodeId"])
+                    pending["gatherBefore"] = {"position": deepcopy(node["position"]),
+                                              "remainingWood": node["remainingWood"],
+                                              "inventoryWood": observed["self"]["inventory"]["wood"]}
                 state["_state"]["pending"] = pending
                 used["commands"] += 1
                 state["steps"].append({"index": used["commands"], "commandId": intent["commandId"],
@@ -752,6 +815,11 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 # A proxy/query error that resembles STALE_STATE cannot settle it.
                 rejected = (rejected and result.get("status") == "rejected"
                             and result.get("commandId") == intent["commandId"])
+            if intent["action"]["type"] in ("gather", "walk") and rejected:
+                rejected = (result.get("status") == "rejected" and result.get("commandId") == intent["commandId"]
+                            and isinstance(result.get("identity"), dict)
+                            and result["identity"].get("actorId") == state["mission"]["actorId"]
+                            and result.get("schemaVersion") == 1 and result.get("rulesVersion") == intent['rulesVersion'])
             if not committed and not rejected:
                 step["status"] = "unknown"
                 return finish("unknown", "unconfirmed_receipt")
@@ -760,7 +828,20 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
                 if not isinstance(result_action, dict) or result_action.get("action") != intent["action"]["type"]:
                     step["status"] = "unknown"
                     return finish("unknown", "unexpected_receipt_action")
-                if intent["action"]["type"] == "visit":
+                if intent['action']['type'] == 'walk':
+                    if not continuous.valid_walk_receipt(result, intent, state['mission']['actorId'], pending.get('walkBefore')):
+                        step['status'] = 'unknown'
+                        return finish('unknown', 'unconfirmed_walk_receipt')
+                    step['position'] = deepcopy(result_action['position'])
+                    step['blocked'] = result_action['blocked']
+                    step['evidenceSource'] = 'command_receipt'
+                elif intent["action"]["type"] == "gather":
+                    if not valid_gather_receipt(result, intent, state["mission"]["actorId"], pending.get("gatherBefore")):
+                        step["status"] = "unknown"
+                        return finish("unknown", "unconfirmed_gather_receipt")
+                    facts["woodGathered"] += 1
+                    step["evidenceSource"] = "command_receipt"
+                elif intent["action"]["type"] == "visit":
                     visit = _activity_visit({**result_action, "commandId": result["commandId"],
                                              "stateVersion": result.get("stateVersion")}, intent, goal)
                     if visit is None:
@@ -816,6 +897,8 @@ def run_mission(client, spec, state_path, choose, *, max_steps=None):
             state["_state"]["pending"] = None
             save()
             handled += 1
+            if committed and intent['action']['type'] == 'walk' and result_action['blocked']:
+                return finish('blocked', 'movement_collision')
             retryable = ("STALE_STATE",) if consent_validator else ("STALE_STATE", "CELL_OCCUPIED")
             if rejected and error.get("code") not in retryable:
                 return finish("blocked", "command_rejected:" + str(error.get("code")))

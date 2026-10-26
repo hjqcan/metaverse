@@ -35,4 +35,19 @@ button.mosaic-cell:disabled { cursor: default; opacity: 1; }
 
 .entry-card{grid-column:1/-1;padding:24px}.entry-card>p{line-height:1.7}.entry-places{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0}.entry-place{min-width:0;border:1px solid var(--line,#d9dfd0);background:#f0f3e8;border-radius:14px;padding:18px}.entry-place h3{margin:0 0 10px;font-size:1rem}.entry-place p{line-height:1.65;font-size:.86rem}.entry-place[data-reachable="false"]{background:#f4f0e6}.entry-place details{margin:12px 0;color:#5e6b5d;font-size:.83rem}.entry-place summary{cursor:pointer}.entry-route{overflow-wrap:anywhere}.entry-materials{border-top:1px solid var(--line,#d9dfd0);padding-top:14px}@media(max-width:700px){.entry-card{padding:20px}.entry-places{grid-template-columns:1fr}.entry-place{padding:16px}}
 
+/* Keep the live picture beside the proposal, and distinguish history from a draft. */
+.consent-entry{grid-template-columns:minmax(240px,300px) minmax(0,1fr)}
+.consent-comparison{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-content:start}
+.consent-visual{margin:0;min-width:0}
+.consent-visual figcaption{font-size:12px;font-weight:600;line-height:1.7;margin-bottom:8px}
+.consent-entry .mosaic-grid{width:100%;margin:0;gap:3px;padding:6px}
+.consent-entry .consent-preview-note{grid-column:1/-1;font-size:11px;color:var(--muted);margin:0}
+.consent-changes{padding-left:18px;margin:12px 0;font-size:12px;line-height:1.8;overflow-wrap:anywhere}
+.consent-state[data-state=accepted]{color:#37654a}
+.consent-state[data-state=stale],.consent-state[data-state=rejected]{color:#91632e}
+.consent-preview .mosaic-cell[data-confirmed=true]{outline:2px solid #37654a;outline-offset:-2px}
+.consent-review-text[aria-invalid=true],#proposal-text[aria-invalid=true]{border-color:#a34a32}
+#proposal-count[data-invalid=true]{color:#a34a32;line-height:1.8}
+@media(max-width:680px){.consent-entry{grid-template-columns:1fr}.consent-comparison{max-width:360px}.consent-visual figcaption{font-size:11px}}
+
 #gather-node{width:100%;margin-top:6px}#gather-hint{margin:10px 0 14px}.tree-dot{background:#3b7252;box-shadow:0 2px 0 #8b6844}

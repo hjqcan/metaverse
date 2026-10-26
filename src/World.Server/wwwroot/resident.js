@@ -14,7 +14,7 @@
     decision_failed: ["目标选择失败", "error"],
   };
   const providers = { "codex-exec": "模型决策", "fixed-reference": "固定策略基线", "test-double": "测试替身 · 非真实模型" };
-  const actionNames = { move: "移动", claim: "领取木材", build: "建造", visit: "到访", postcard: "分享手记", mosaic: "绘制画布", mosaic_propose: "提出修改建议", mosaic_review: "审阅修改建议", observe: "观察", wait: "等待" };
+  const actionNames = { walk: "行走", move: "移动", claim: "领取木材", gather: "采集木材", build: "建造", visit: "到访", postcard: "分享手记", mosaic: "绘制画布", mosaic_propose: "提出修改建议", mosaic_review: "审阅修改建议", observe: "观察", wait: "等待" };
   const stepStatuses = { committed: "已提交", rejected: "已拒绝", unknown: "结果未知", pending: "待确认", failed: "失败" };
   const reasonNames = { round_trip_verified: "已核验到达目标并返回原起点", max_steps: "本次分段步数已到，等待恢复" };
   let report = null;
@@ -28,7 +28,8 @@
   const string = (value) => typeof value === "string";
   const postcardText = (value) => string(value) && Array.from(value).length >= 1 && Array.from(value).length <= 160 && /[^\p{White_Space}]/u.test(value) && !/[\p{Cc}\p{Cs}]/u.test(value);
   const same = (a, b) => a[0] === b[0] && a[1] === b[1];
-  const coord = (point) => `(${point[0]}, ${point[1]})`;
+  const coord = (point) => `(${formatNumber(point[0])}, ${formatNumber(point[1])})`;
+  const continuous = (world) => world.coordinateSystem === "continuous-xz";
   const formatNumber = (value) => new Intl.NumberFormat("zh-CN", { maximumFractionDigits: 2 }).format(value);
   const put = (id, value) => { $(id).textContent = value; };
   function require(value, message) { if (!value) throw new Error(message); }
@@ -49,11 +50,14 @@
     require([m.actorId, m.worldId, m.rulesVersion, m.reason].every(string), "任务身份、世界、规则版本或状态原因格式不正确。");
     require(Object.hasOwn(statuses, m.status), "报告包含不支持的任务状态。");
     require(integer(w.width) && integer(w.height) && w.width >= 1 && w.height >= 1 && w.width <= 128 && w.height <= 128, "地图尺寸应为 1—128 的整数。");
-    const cell = (value) => Array.isArray(value) && value.length === 2 && value.every(integer) && value[0] < w.width && value[1] < w.height;
-    require(cell(m.origin), "任务起点不是图内整数坐标。");
+    const free = continuous(w), maxCommands = free ? 1000 : 100;
+    const cell = (value) => Array.isArray(value) && value.length === 2 && value.every(free ? number : integer) && value[0] < w.width && value[1] < w.height;
+    require(!free || m.rulesVersion === "r8" && m.arrivalTolerance === .06, "连续坐标报告需要 r8 规则与 0.06 米到达容差。");
+    require(cell(m.origin), "任务起点不是有效图内坐标。");
     require(m.goal === null || (object(m.goal) && string(m.goal.id) && string(m.goal.label) && cell(m.goal.target)), "任务目标格式不正确；未选择目标时应为 null。");
     require(m.goal?.activityId === undefined || string(m.goal.activityId), "活动目标编号格式不正确。");
     require(m.sharePostcard === undefined || typeof m.sharePostcard === "boolean", "任务分享要求应为布尔值。");
+    require(m.allowGather === undefined || typeof m.allowGather === "boolean", "采集权限应为布尔值。");
     require(m.paintMosaic === undefined || typeof m.paintMosaic === "boolean", "画布创作要求应为布尔值。");
     require(m.proposeMosaic === undefined || typeof m.proposeMosaic === "boolean", "提议要求应为布尔值。");
     require(m.reviewMosaicProposal === undefined || m.reviewMosaicProposal === null || (object(m.reviewMosaicProposal) && string(m.reviewMosaicProposal.proposalActorId) && string(m.reviewMosaicProposal.proposalCommandId)), "审阅提议引用不完整。");
@@ -70,8 +74,9 @@
     require(f.mosaicReview === undefined || f.mosaicReview === null || consent.validReview(f.mosaicReview), "审阅记录不完整。");
     require(object(b.limits) && object(b.used), "预算必须包含 limits 与 used。");
     require(["commands", "wood", "modelCalls"].every((key) => integer(b.limits[key]) && integer(b.used[key])) && number(b.limits.seconds) && number(b.used.seconds), "预算上限与累计值必须是非负数字，次数和木材必须是整数。");
-    require(b.limits.commands >= 1 && b.limits.commands <= 100 && b.limits.wood <= 12 && b.limits.modelCalls === 1 && integer(b.limits.seconds) && b.limits.seconds >= 1 && b.limits.seconds <= 600, "任务预算上限不符合契约（命令 1—100、木材 0—12、时间 1—600 秒、模型调用 1 次）。");
+    require(b.limits.commands >= 1 && b.limits.commands <= maxCommands && b.limits.wood <= 12 && b.limits.modelCalls === 1 && integer(b.limits.seconds) && b.limits.seconds >= 1 && b.limits.seconds <= 600, `任务预算上限不符合契约（命令 1—${maxCommands}、木材 0—12、时间 1—600 秒、目标选择 1 次）。`);
     require(typeof f.goalReached === "boolean" && typeof f.returned === "boolean" && integer(f.woodClaimed), "到达、返回或领取木材事实的类型不正确。");
+    require(f.woodGathered === undefined || integer(f.woodGathered), "采集木材事实须为非负整数。");
     require(f.activityCompleted === undefined || typeof f.activityCompleted === "boolean", "到访完成事实应为布尔值。");
     require(f.activityVisit === undefined || f.activityVisit === null || (object(f.activityVisit) && string(f.activityVisit.activityId) && string(f.activityVisit.commandId) && integer(f.activityVisit.stateVersion) && cell(f.activityVisit.position) && string(f.activityVisit.visitedAtUtc) && Number.isFinite(Date.parse(f.activityVisit.visitedAtUtc))), "到访回执记录不完整。");
     require(f.postcardShared === undefined || typeof f.postcardShared === "boolean", "手记分享事实应为布尔值。");
@@ -82,26 +87,34 @@
     require([f.startStateVersion, f.endStateVersion].every((v) => v === null || integer(v)), "状态版本必须为非负整数或 null。");
     require(f.verifiedAtUtc === null || (string(f.verifiedAtUtc) && Number.isFinite(Date.parse(f.verifiedAtUtc))), "核实时间须为有效时间字符串或 null。");
     require(Array.isArray(f.createdEntityIds) && f.createdEntityIds.every(string), "新建设施编号应为字符串数组。");
-    require(Array.isArray(w.water) && w.water.every(cell) && Array.isArray(w.blocked) && w.blocked.every(cell), "水面或阻挡位置不是图内整数坐标。");
+    if (free) {
+      const vertex = (p) => Array.isArray(p) && p.length === 2 && p.every(number) && p[0] <= w.width && p[1] <= w.height;
+      require(Array.isArray(w.bounds) && same(w.bounds.slice(0, 2), [0, 0]) && same(w.bounds.slice(2), [w.width, w.height]), "连续地图边界不正确。");
+      require(object(w.terrain) && w.terrain.version === 1 && object(w.terrain.river) && Array.isArray(w.terrain.river.polygon) && w.terrain.river.polygon.length >= 3 && w.terrain.river.polygon.every(vertex), "连续河道几何不正确。");
+      require(Array.isArray(w.terrain.obstacles) && w.terrain.obstacles.every(o => object(o) && cell(o.position) && number(o.radius) && o.radius > 0), "连续障碍几何不正确。");
+      require(Array.isArray(w.resourceNodes) && w.resourceNodes.every(n => object(n) && string(n.nodeId) && cell(n.position) && integer(n.initialWood) && integer(n.remainingWood) && n.remainingWood <= n.initialWood), "自然资源记录不正确。");
+    } else require(Array.isArray(w.water) && w.water.every(cell) && Array.isArray(w.blocked) && w.blocked.every(cell), "水面或阻挡位置不是图内整数坐标。");
     require(Array.isArray(w.entities) && w.entities.every((e) => object(e) && cell(e.position) && string(e.entityId) && string(e.definitionId)), "地图设施须包含 entityId、definitionId 与图内 position。");
     require(w.activities === undefined || (Array.isArray(w.activities) && w.activities.every((a) => object(a) && string(a.id) && string(a.label) && cell(a.position))), "地图活动地点格式不正确。");
     require(w.mosaic === undefined || w.mosaic === null || mosaic.validBoard(w.mosaic), "画布快照格式不正确。");
     require(w.mosaicProposals === undefined || (Array.isArray(w.mosaicProposals) && w.mosaicProposals.every(consent.validProposal)), "提议快照格式不正确。");
-    require(Array.isArray(data.steps) && data.steps.length <= 100, "步骤必须是数组，最多允许 100 条。");
+    require(Array.isArray(data.steps) && data.steps.length <= maxCommands, `步骤必须是数组，最多允许 ${maxCommands} 条。`);
     data.steps.forEach((step, i) => {
       const prefix = `第 ${i + 1} 条步骤`;
       require(object(step) && integer(step.index) && step.index >= 1 && (i === 0 || step.index > data.steps[i - 1].index), `${prefix}的序号须为递增的正整数。`);
       require(string(step.commandId) && object(step.action) && string(step.action.type) && string(step.reason) && string(step.status), `${prefix}缺少命令、动作、原因或状态。`);
-      require(step.position === null || cell(step.position), `${prefix}的位置应为图内整数坐标或 null。`);
+      require(step.position === null || cell(step.position), `${prefix}的位置应为有效图内坐标或 null。`);
       require(step.stateVersion === null || integer(step.stateVersion), `${prefix}的状态版本格式不正确。`);
       require(step.inventoryWood === null || integer(step.inventoryWood), `${prefix}的木材库存格式不正确。`);
       if (step.action.quantity !== undefined) require(integer(step.action.quantity), `${prefix}的材料数量须为非负整数。`);
       if (step.action.position !== undefined) require(cell(step.action.position), `${prefix}的动作位置不是图内整数坐标。`);
-      if (step.action.at !== undefined) require(cell(step.action.at), `${prefix}的建造位置不是图内整数坐标。`);
+      if (step.action.at !== undefined) require(cell(step.action.at), `${prefix}的建造位置不是有效图内坐标。`);
+      if (step.action.type === "walk") require(free && cell(step.action.to) && (step.blocked === undefined || typeof step.blocked === "boolean"), `${prefix}的连续行走目标或碰撞结果不正确。`);
       if (step.action.direction !== undefined) require(string(step.action.direction), `${prefix}的移动方向格式不正确。`);
       if (step.action.definitionId !== undefined) require(string(step.action.definitionId), `${prefix}的配方编号格式不正确。`);
       if (step.action.recipeId !== undefined) require(string(step.action.recipeId), `${prefix}的配方格式不正确。`);
       if (step.action.activityId !== undefined) require(string(step.action.activityId), `${prefix}的活动编号格式不正确。`);
+      if (step.action.type === "gather") require(string(step.action.nodeId) && step.action.nodeId.length > 0, `${prefix}缺少采集来源。`);
       if (step.action.type === "postcard") require(string(step.action.visitCommandId) && postcardText(step.action.text), `${prefix}的手记或到访关联格式不正确。`);
       if (["mosaic", "mosaic_propose"].includes(step.action.type)) require(string(step.action.visitCommandId) && integer(step.action.expectedMosaicRevision) && mosaic.validPatch(step.action.patch), `${prefix}的画布修改格式不正确。`);
       if (step.action.type === "mosaic_propose") require(consent.text(step.action.text), `${prefix}的提议理由格式不正确。`);
@@ -193,7 +206,7 @@
     put("model-name", d ? `模型 / 策略：${d.provider.model || "未记录"}` : "未记录模型或策略");
     const tokenFields = d ? [["inputTokens", "input_tokens", "输入"], ["outputTokens", "output_tokens", "输出"], ["cachedInputTokens", "cached_input_tokens", "缓存输入"]]
       .map(([key, alternate, label]) => [d.provider.usage[key] ?? d.provider.usage[alternate], label]).filter(([value]) => integer(value)) : [];
-    put("model-usage", tokenFields.length ? tokenFields.map(([value, label]) => `${label} ${formatNumber(value)} token`).join(" · ") : "未提供 token 用量");
+    put("model-usage", d?.provider.kind === "fixed-reference" ? "固定策略 · 无模型 token 消耗" : tokenFields.length ? tokenFields.map(([value, label]) => `${label} ${formatNumber(value)} token`).join(" · ") : "未提供 token 用量");
     put("goal-reached", f.goalReached ? "已到达" : "未核实到达");
     put("returned", f.returned ? f.goalReached ? "已返回" : "位于原起点" : "尚未返回");
     const requiresActivity = Boolean(m.goal?.activityId);
@@ -244,18 +257,26 @@
       put("mosaic-final-note", data.world.mosaic ? `当前格子的最后作者：${[...new Set(data.world.mosaic.cells.filter((c) => c.authorActorId).map((c) => c.authorActorId))].join("、") || "无人"}。` : "报告没有保存结束画布。");
     }
     const consentVerified = renderConsentReport(data, activityVerified);
+    if (d?.provider.kind === "fixed-reference") put("decision-boundary", "目标由固定策略选择，路径与行动由确定性执行器处理；完成事实以记录中的世界响应为准。");
     put("model-budget-label", d?.provider.kind === "fixed-reference" ? "目标选择次数" : "模型调用");
     put("model-budget-note", d?.provider.kind === "fixed-reference" ? "固定策略 · 外部模型 0 次" : "高层目标选择");
     $("goal-reached").dataset.verified = String(f.goalReached);
     $("returned").dataset.verified = String(f.returned);
     put("verified-at", f.verifiedAtUtc ? `${new Date(f.verifiedAtUtc).toISOString().replace("T", " ").replace(".000Z", " UTC").replace(/Z$/, " UTC")}` : "未记录核实时间");
     put("state-versions", `${f.startStateVersion ?? "未知"} → ${f.endStateVersion ?? "未知"}`);
-    put("created-summary", `${f.woodClaimed} 单位木材 / ${f.createdEntityIds.length} 个设施`);
+    put("created-summary", `${f.woodGathered === undefined ? "" : `采集 ${f.woodGathered} · 领取 `}${f.woodClaimed} 单位木材 / ${f.createdEntityIds.length} 个设施`);
     const warnings = [];
-    const incomplete = !f.goalReached || !f.returned || !m.goal || requiresActivity && !activityVerified || requiresPostcard && !postcardVerified || requiresMosaic && !mosaicVerified || (m.proposeMosaic || m.reviewMosaicProposal) && !consentVerified;
+    const cuts = data.steps.filter((s) => s.action.type === "gather" && s.status === "committed").length;
+    const gatheringConsistent = (f.woodGathered ?? 0) === cuts && (cuts === 0 || m.allowGather === true && ["r7", "r8"].includes(m.rulesVersion));
+    const committedPositions = data.steps.filter(s => s.status === "committed" && s.position).map(s => s.position);
+    const near = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]) <= .06;
+    const walkConsistent = !continuous(data.world) || m.goal && [m.origin, ...committedPositions].some(p => near(p, m.goal.target)) && near(committedPositions.at(-1) || m.origin, m.origin) && !data.steps.some(s => s.status === "committed" && s.blocked === true);
+    const incomplete = !walkConsistent || !gatheringConsistent || !f.goalReached || !f.returned || !m.goal || requiresActivity && !activityVerified || requiresPostcard && !postcardVerified || requiresMosaic && !mosaicVerified || (m.proposeMosaic || m.reviewMosaicProposal) && !consentVerified;
     if (m.status === "completed" && incomplete) warnings.push("报告标记为已完成，但到达、返回、目标、到访或本次创作事实不完整，不能据此认定任务成功。");
     if (d && m.goal && d.goalId !== m.goal.id) warnings.push("模型选择与执行目标编号不一致，请复核原始报告。");
     if (d?.provider.kind === "test-double") warnings.push("这份报告使用测试替身，不是一次真实模型运行；仅供客户端或执行器测试。");
+    if (!gatheringConsistent) warnings.push("采集汇总与原采集步骤或任务权限不一致，请复核原始记录。");
+    if (m.status === "completed" && !walkConsistent) warnings.push("连续行走记录未支持在 0.06 米内到达并返回，或包含碰撞截停。");
     for (const [key, prefix] of [["commands", "command"], ["wood", "wood"], ["modelCalls", "model"], ["seconds", "seconds"]]) {
       put(`${prefix}-budget`, `${formatNumber(b.used[key])} / ${formatNumber(b.limits[key])}`);
       const progress = $(`${prefix}-progress`);
@@ -284,7 +305,9 @@
       $("feedback-lists").append(section);
     }
     const w = data.world;
-    put("map-summary", `${w.width} × ${w.height}。起点 ${coord(m.origin)}；目标 ${m.goal ? coord(m.goal.target) : "未选择"}。水面：${w.water.map(coord).join("、") || "无"}。阻挡：${w.blocked.map(coord).join("、") || "无"}。设施：${w.entities.map((e) => `${e.definitionId} ${coord(e.position)}`).join("、") || "无"}。`);
+    put("map-summary", continuous(w)
+      ? `${w.width} × ${w.height} 米 · 连续自然地形。起点 ${coord(m.origin)}；目标 ${m.goal ? coord(m.goal.target) : "未选择"}；到达容差 0.06 米。地形与资源显示结束快照，轨迹按步骤回看。设施：${w.entities.map(e => `${e.definitionId} ${coord(e.position)}`).join("、") || "无"}。`
+      : `${w.width} × ${w.height}。起点 ${coord(m.origin)}；目标 ${m.goal ? coord(m.goal.target) : "未选择"}。水面：${w.water.map(coord).join("、") || "无"}。阻挡：${w.blocked.map(coord).join("、") || "无"}。设施：${w.entities.map((e) => `${e.definitionId} ${coord(e.position)}`).join("、") || "无"}。`);
     $("replay-slider").max = String(data.steps.length);
     $("replay-slider").disabled = data.steps.length === 0;
     selectStep(data.steps.length);
@@ -341,6 +364,8 @@
     const label = actionNames[action.type] || action.type;
     if (["visit", "postcard", "mosaic", "mosaic_propose", "mosaic_review"].includes(action.type)) return `${label} · ${report.world.activities?.find((a) => a.id === action.activityId)?.label || action.activityId || "活动地点"}`;
     if (action.type === "claim" && action.quantity !== undefined) return `${label} · ${action.quantity} 单位`;
+    if (action.type === "gather") return `${label} · ${action.nodeId}`;
+    if (action.type === "walk") return `${label} · 朝 ${coord(action.to)} 米`;
     if (action.type === "move" && action.direction) return `${label} · ${{ up: "向上", down: "向下", left: "向左", right: "向右", north: "向北", south: "向南", west: "向西", east: "向东" }[action.direction] || action.direction}`;
     if (action.type === "move" && Number.isSafeInteger(action.dx) && Number.isSafeInteger(action.dy)) return `${label} · ${{ "1,0": "向右", "-1,0": "向左", "0,1": "向下", "0,-1": "向上" }[`${action.dx},${action.dy}`] || `偏移 (${action.dx}, ${action.dy})`}`;
     if (action.type === "build") {
@@ -387,7 +412,7 @@
     const step = report.steps[index - 1];
     put("replay-counter", index === 0 ? "任务起点" : `${index} / ${report.steps.length}`);
     const description = step ? `第 ${step.index} 步 · ${actionLabel(step.action)} · ${stepStatuses[step.status] || step.status} · ${step.position ? `记录位置 ${coord(step.position)}` : "位置未记录"}${["pending", "unknown"].includes(step.status) ? "（动作结果未确认）" : ""}` : `任务开始 · 起点 ${coord(report.mission.origin)}`;
-    put("replay-description", description);
+    put("replay-description", description + (step?.blocked ? " · 碰撞截停" : ""));
     $("replay-slider").setAttribute("aria-valuetext", description);
     $("replay-canvas").setAttribute("aria-label", `历史地图，${description}`);
     stepButtons.forEach((button, i) => {
@@ -404,13 +429,35 @@
     const { world: w, mission: m, steps } = report;
     const inset = 34, size = 652, cellSize = size / Math.max(w.width, w.height);
     const offsetX = inset + (size - w.width * cellSize) / 2, offsetY = inset + (size - w.height * cellSize) / 2;
-    const center = (p) => [offsetX + (p[0] + 0.5) * cellSize, offsetY + (p[1] + 0.5) * cellSize];
+    const free = continuous(w), shift = free ? 0 : .5;
+    const center = (p) => [offsetX + (p[0] + shift) * cellSize, offsetY + (p[1] + shift) * cellSize];
     ctx.clearRect(0, 0, 720, 720);
     ctx.fillStyle = "#edf1e5";
     ctx.fillRect(0, 0, 720, 720);
-    const water = new Set(w.water.map((p) => p.join(",")));
-    const blocked = new Set(w.blocked.map((p) => p.join(",")));
-    for (let y = 0; y < w.height; y++) {
+    const water = new Set((w.water || []).map((p) => p.join(",")));
+    const blocked = new Set((w.blocked || []).map((p) => p.join(",")));
+    if (free) {
+      ctx.fillStyle = "#dce5cd"; ctx.fillRect(offsetX, offsetY, w.width * cellSize, w.height * cellSize);
+      ctx.fillStyle = "#afd0d2"; ctx.beginPath();
+      w.terrain.river.polygon.forEach((p, i) => i ? ctx.lineTo(...center(p)) : ctx.moveTo(...center(p)));
+      ctx.closePath(); ctx.fill();
+      ctx.strokeStyle = "#8ebbc0"; ctx.lineWidth = 2; ctx.stroke();
+      for (const rock of w.terrain.obstacles) {
+        const [x, y] = center(rock.position);
+        ctx.fillStyle = "#8e987f"; ctx.beginPath(); ctx.arc(x, y, rock.radius * cellSize, 0, Math.PI * 2); ctx.fill();
+      }
+      for (const tree of w.resourceNodes) {
+        const [x, y] = center(tree.position), alive = tree.remainingWood > 0;
+        ctx.fillStyle = alive ? "#567e4f" : "#a18a65";
+        ctx.beginPath(); ctx.arc(x, y, (alive ? .65 : .22) * cellSize, 0, Math.PI * 2); ctx.fill();
+        if (alive) { ctx.fillStyle = "#f6f8ef"; ctx.font = "12px system-ui"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(String(tree.remainingWood), x, y); }
+      }
+      ctx.strokeStyle = "#6c7b5f"; ctx.lineWidth = 2; ctx.beginPath();
+      ctx.moveTo(offsetX, offsetY + w.height * cellSize + 16); ctx.lineTo(offsetX + 5 * cellSize, offsetY + w.height * cellSize + 16); ctx.stroke();
+      ctx.fillStyle = "#6c7b5f"; ctx.font = "13px system-ui"; ctx.textAlign = "left";
+      ctx.fillText("5 米", offsetX, offsetY + w.height * cellSize + 34);
+    }
+    for (let y = 0; !free && y < w.height; y++) {
       for (let x = 0; x < w.width; x++) {
         const key = `${x},${y}`, px = offsetX + x * cellSize, py = offsetY + y * cellSize;
         ctx.fillStyle = water.has(key) ? (x + y) % 2 ? "#afd0d2" : "#b9d8d7" : (x + y) % 2 ? "#dce5cd" : "#e4ead6";
@@ -428,17 +475,19 @@
         }
       }
     }
-    if (w.width <= 20 && w.height <= 20) {
+    if (!free && w.width <= 20 && w.height <= 20) {
       ctx.fillStyle = "#6c7b5f"; ctx.font = "13px system-ui"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
       for (let x = 0; x < w.width; x++) ctx.fillText(String(x), offsetX + (x + .5) * cellSize, offsetY - 16);
       for (let y = 0; y < w.height; y++) ctx.fillText(String(y), offsetX - 16, offsetY + (y + .5) * cellSize);
     }
     for (const entity of w.entities) {
       const [x, y] = center(entity.position);
-      ctx.fillStyle = "#bd9966"; ctx.fillRect(x - cellSize * .38, y - cellSize * .3, cellSize * .76, cellSize * .6);
+      const halfX = free ? entity.definitionId === "bridge" ? 2.4 : 1 : .38;
+      const halfY = free ? entity.definitionId === "bridge" ? .8 : 1 : .3;
+      ctx.fillStyle = "#bd9966"; ctx.fillRect(x - cellSize * halfX, y - cellSize * halfY, cellSize * halfX * 2, cellSize * halfY * 2);
       ctx.strokeStyle = "#8e704c"; ctx.lineWidth = Math.max(1, cellSize * .025);
       for (let j = -2; j <= 2; j++) {
-        ctx.beginPath(); ctx.moveTo(x + j * cellSize * .13, y - cellSize * .29); ctx.lineTo(x + j * cellSize * .13, y + cellSize * .29); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(x + j * cellSize * halfX / 3, y - cellSize * halfY); ctx.lineTo(x + j * cellSize * halfX / 3, y + cellSize * halfY); ctx.stroke();
       }
     }
     ctx.strokeStyle = "#53784dcc"; ctx.lineWidth = Math.max(2, cellSize * .055); ctx.lineJoin = "round"; ctx.setLineDash([7, 6]);
@@ -446,7 +495,7 @@
     let last = m.origin;
     ctx.moveTo(...center(last));
     for (const step of steps.slice(0, index)) {
-      if (!step.position) { last = null; continue; }
+      if (!step.position || free && step.status !== "committed") { last = null; continue; }
       if (last) ctx.lineTo(...center(step.position));
       else ctx.moveTo(...center(step.position));
       last = step.position;

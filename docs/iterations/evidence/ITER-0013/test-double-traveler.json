@@ -1,0 +1,650 @@
+{
+  "schemaVersion": 1,
+  "kind": "resident-mission-report",
+  "mission": {
+    "id": "later-resident",
+    "objective": "优先连通彼岸供他人使用，完成后回到原始起点。",
+    "allowGather": false,
+    "sharePostcard": false,
+    "paintMosaic": false,
+    "proposeMosaic": false,
+    "reviewMosaicProposal": null,
+    "actorId": "a2",
+    "worldId": "foundation-01",
+    "rulesVersion": "r7",
+    "origin": [
+      6,
+      6
+    ],
+    "goal": {
+      "id": "far-bank",
+      "label": "对岸已有通路",
+      "target": [
+        1,
+        1
+      ]
+    },
+    "status": "completed",
+    "reason": "round_trip_verified"
+  },
+  "decision": {
+    "goalId": "far-bank",
+    "reason": "测试替身选择，不能计为模型推理。",
+    "provider": {
+      "kind": "test-double",
+      "model": "none",
+      "usage": {}
+    }
+  },
+  "budget": {
+    "limits": {
+      "commands": 50,
+      "wood": 0,
+      "seconds": 600,
+      "modelCalls": 1
+    },
+    "used": {
+      "commands": 20,
+      "wood": 0,
+      "modelCalls": 1,
+      "seconds": 0.14482712745666504
+    }
+  },
+  "facts": {
+    "goalReached": true,
+    "returned": true,
+    "activityCompleted": false,
+    "activityVisit": null,
+    "postcardShared": false,
+    "postcard": null,
+    "mosaicPainted": false,
+    "mosaicEdit": null,
+    "mosaicProposed": false,
+    "mosaicProposal": null,
+    "mosaicReviewed": false,
+    "mosaicReview": null,
+    "startStateVersion": 34,
+    "endStateVersion": 54,
+    "woodClaimed": 0,
+    "createdEntityIds": [],
+    "verifiedAtUtc": "2026-10-26T01:55:07.609561+00:00",
+    "woodGathered": 0
+  },
+  "steps": [
+    {
+      "index": 1,
+      "commandId": "60dce566e8bd4063a552ebe73924a30b",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 35,
+      "position": [
+        6,
+        5
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 2,
+      "commandId": "7fa3ebd65dd14d42aa86aa371b4a8b7e",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 36,
+      "position": [
+        6,
+        4
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 3,
+      "commandId": "3fa6375db9bf47358b1a282f0e2c2ab5",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 37,
+      "position": [
+        6,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 4,
+      "commandId": "b4a8db8b940b488fa0896112df695ebd",
+      "action": {
+        "type": "move",
+        "dx": -1,
+        "dy": 0
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 38,
+      "position": [
+        5,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 5,
+      "commandId": "6802aca5a6494bab9e306c00a7ff710d",
+      "action": {
+        "type": "move",
+        "dx": -1,
+        "dy": 0
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 39,
+      "position": [
+        4,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 6,
+      "commandId": "5776b716990743dfb92663910aff9eb8",
+      "action": {
+        "type": "move",
+        "dx": -1,
+        "dy": 0
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 40,
+      "position": [
+        3,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 7,
+      "commandId": "bff6d3c167b64cda9eb5c3594d24ecc2",
+      "action": {
+        "type": "move",
+        "dx": -1,
+        "dy": 0
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 41,
+      "position": [
+        2,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 8,
+      "commandId": "8c7421f3217f4f258e1af1d7f219b352",
+      "action": {
+        "type": "move",
+        "dx": -1,
+        "dy": 0
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 42,
+      "position": [
+        1,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 9,
+      "commandId": "1c7282ecf4324001bbd71b42127aae6b",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 43,
+      "position": [
+        1,
+        2
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 10,
+      "commandId": "ad043bc92afb4f83b8aa05727ede2761",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": -1
+      },
+      "reason": "前往已选目标",
+      "status": "committed",
+      "stateVersion": 44,
+      "position": [
+        1,
+        1
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 11,
+      "commandId": "db9664fe74ec4fe896d1e7736d4b2323",
+      "action": {
+        "type": "move",
+        "dx": 1,
+        "dy": 0
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 45,
+      "position": [
+        2,
+        1
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 12,
+      "commandId": "e9dc51c8f116429e946fa2d2fde95cba",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 46,
+      "position": [
+        2,
+        2
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 13,
+      "commandId": "10310217aa7248b5b4b151c98ab1350c",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 47,
+      "position": [
+        2,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 14,
+      "commandId": "f19bec58802942ec8134ebe3c58a8fbf",
+      "action": {
+        "type": "move",
+        "dx": 1,
+        "dy": 0
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 48,
+      "position": [
+        3,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 15,
+      "commandId": "8a419173e1d343a089a48940e0d4eaed",
+      "action": {
+        "type": "move",
+        "dx": 1,
+        "dy": 0
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 49,
+      "position": [
+        4,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 16,
+      "commandId": "1481d0f07c114339b7c0824eb7acda2f",
+      "action": {
+        "type": "move",
+        "dx": 1,
+        "dy": 0
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 50,
+      "position": [
+        5,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 17,
+      "commandId": "4527043b1b174bf49c0635ae59fcdb7e",
+      "action": {
+        "type": "move",
+        "dx": 1,
+        "dy": 0
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 51,
+      "position": [
+        6,
+        3
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 18,
+      "commandId": "f46090d13b844fd2ac61f31ba700b07d",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 52,
+      "position": [
+        6,
+        4
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 19,
+      "commandId": "fcc923bf3c3d44d2aa995da65f8a7a9c",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 53,
+      "position": [
+        6,
+        5
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    },
+    {
+      "index": 20,
+      "commandId": "cae0a9c1516a40bb8e980cfd1e3df398",
+      "action": {
+        "type": "move",
+        "dx": 0,
+        "dy": 1
+      },
+      "reason": "返回原起点",
+      "status": "committed",
+      "stateVersion": 54,
+      "position": [
+        6,
+        6
+      ],
+      "inventoryWood": 0,
+      "httpStatus": 200
+    }
+  ],
+  "feedback": {
+    "summary": "已核验到达与返回",
+    "issues": [],
+    "suggestions": []
+  },
+  "world": {
+    "id": "foundation-01",
+    "width": 8,
+    "height": 8,
+    "blocked": [
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        7,
+        6
+      ]
+    ],
+    "water": [
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "goal": [
+      6,
+      1
+    ],
+    "entities": [
+      {
+        "entityId": "e6d4f58c29c7d48e18419d0973ae730df",
+        "definitionId": "bridge",
+        "definitionVersion": 1,
+        "rulesVersion": "r7",
+        "ownerActorId": "a1",
+        "position": [
+          5,
+          3
+        ],
+        "embodiedWood": 3
+      },
+      {
+        "entityId": "ef59996a0614e4a2db47cb90b010db219",
+        "definitionId": "bridge",
+        "definitionVersion": 1,
+        "rulesVersion": "r7",
+        "ownerActorId": "a1",
+        "position": [
+          4,
+          3
+        ],
+        "embodiedWood": 3
+      }
+    ],
+    "activities": [
+      {
+        "id": "garden",
+        "label": "林间空地",
+        "position": [
+          1,
+          6
+        ],
+        "description": "树木之间的空地，没有现成建筑；可探索，也可在空地搭建。"
+      },
+      {
+        "id": "riverwalk",
+        "label": "河岸",
+        "position": [
+          2,
+          5
+        ],
+        "description": "自然河岸的一片林地，可在附近采集木材。"
+      },
+      {
+        "id": "lookout",
+        "label": "对岸林地",
+        "position": [
+          6,
+          1
+        ],
+        "description": "河对岸的原野；两岸居民可以采集木材，逐步造桥相见。"
+      }
+    ],
+    "mosaic": null,
+    "mosaicProposals": []
+  }
+}

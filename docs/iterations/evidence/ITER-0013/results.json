@@ -1,0 +1,170 @@
+{
+  "recordedAtUtc": "2026-10-26T01:57:34.887359+00:00",
+  "scope": "wilderness-resident; shared dirty checkout, no commit or deployment",
+  "passed": true,
+  "httpTests": 167,
+  "browserTests": 119,
+  "actualModelCalls": 0,
+  "decisionSources": [
+    "fixed-reference",
+    "test-double"
+  ],
+  "iterationServicesStopped": true,
+  "suites": [
+    {
+      "name": "http-activities",
+      "passed": true,
+      "count": 15,
+      "evidence": ".local/iter0004/api/20261026T095441-f34c8a/results.json"
+    },
+    {
+      "name": "http-consent",
+      "passed": true,
+      "count": 19,
+      "evidence": ".local/iter0007/api/20261026T095448-75c6e8/results.json"
+    },
+    {
+      "name": "http-entry_guide",
+      "passed": true,
+      "count": 9,
+      "evidence": ".local/iter0009/api/20261026T095452-2a77af/results.json"
+    },
+    {
+      "name": "http-foundation",
+      "passed": true,
+      "count": 17,
+      "evidence": ".local/iter0001/api/20261026T095432-970e09/results.json"
+    },
+    {
+      "name": "http-inbox",
+      "passed": true,
+      "count": 17,
+      "evidence": ".local/iter0008/api/20261026T095451-44ac24/results.json"
+    },
+    {
+      "name": "http-mosaic",
+      "passed": true,
+      "count": 17,
+      "evidence": ".local/iter0006/api/20261026T095442-87bd27/results.json"
+    },
+    {
+      "name": "http-passage",
+      "passed": true,
+      "count": 13,
+      "evidence": ".local/iter0002/api/20261026T095432-51061d/results.json"
+    },
+    {
+      "name": "http-postcards",
+      "passed": true,
+      "count": 17,
+      "evidence": ".local/iter0005/api/20261026T095442-de9a98/results.json"
+    },
+    {
+      "name": "http-resident_mission",
+      "passed": true,
+      "count": 14,
+      "evidence": ".local/iter0003/api/20261026T095432-384249/results.json"
+    },
+    {
+      "name": "http-wilderness",
+      "passed": true,
+      "count": 16,
+      "evidence": ".local/iter0010/api/20261026T095458-fb86f4/results.json"
+    },
+    {
+      "name": "http-wilderness_mission",
+      "passed": true,
+      "count": 13,
+      "evidence": ".local/iter0013/api/20261026T015506Z-b964f8/results.json"
+    },
+    {
+      "name": "browser-foundation",
+      "passed": true,
+      "count": 10,
+      "evidence": ".local/iter0001/browser/2026-10-26T01-55-52-337Z/results.json"
+    },
+    {
+      "name": "browser-passage",
+      "passed": true,
+      "count": 8,
+      "evidence": ".local/iter0002/browser/2026-10-26T01-55-52-329Z/results.json"
+    },
+    {
+      "name": "browser-resident",
+      "passed": true,
+      "count": 8,
+      "evidence": ".local/iter0003/browser/2026-10-26T01-56-54-119Z/results.json"
+    },
+    {
+      "name": "browser-activities",
+      "passed": true,
+      "count": 10,
+      "evidence": ".local/iter0004/browser/2026-10-26T01-55-54-138Z/results.json"
+    },
+    {
+      "name": "browser-postcards",
+      "passed": true,
+      "count": 12,
+      "evidence": ".local/iter0005/browser/2026-10-26T01-55-59-844Z/results.json"
+    },
+    {
+      "name": "browser-mosaic",
+      "passed": true,
+      "count": 12,
+      "evidence": ".local/iter0006/browser/2026-10-26T01-56-01-059Z/results.json"
+    },
+    {
+      "name": "browser-consent",
+      "passed": true,
+      "count": 11,
+      "evidence": ".local/iter0007/browser/2026-10-26T01-56-01-748Z/results.json"
+    },
+    {
+      "name": "browser-inbox",
+      "passed": true,
+      "count": 13,
+      "evidence": ".local/iter0008/browser/2026-10-26T01-56-08-983Z/results.json"
+    },
+    {
+      "name": "browser-consent-experience",
+      "passed": true,
+      "count": 8,
+      "evidence": ".local/consent-experience/browser/2026-10-26T01-56-12-583Z/results.json"
+    },
+    {
+      "name": "browser-entry",
+      "passed": true,
+      "count": 10,
+      "evidence": ".local/iter0009/browser/2026-10-26T01-56-16-655Z/results.json"
+    },
+    {
+      "name": "browser-wilderness",
+      "passed": true,
+      "count": 11,
+      "evidence": ".local/iter0010/browser/2026-10-26T01-56-21-594Z/results.json"
+    },
+    {
+      "name": "browser-wilderness-resident",
+      "passed": true,
+      "count": 6,
+      "evidence": ".local/iter0013/browser/2026-10-26T01-56-54-118Z/results.json"
+    }
+  ],
+  "sourceSha256": {
+    "scripts/resident_mission.py": "e1bd49f417e2081a51b2a7b77ae071bc5775aabec5340e85717abdf7a0e4f1f4",
+    "scripts/wilderness_materials.py": "bc424007c959e8246b5e6bf013cfe8a0cea4876a776dc2c5453f61fe8e2a6f2a",
+    "scripts/run_resident.py": "735e383aa13aa68a79ecb9e94f434de280485fe4636a4ed03dbf0ee7422c30aa",
+    "scripts/check.py": "996a4781788afaeb616ea70e02730b094eecabc5d862cd4d3e9c6adc437ea003",
+    "src/World.Server/wwwroot/resident.js": "4f5cf5df71acdb7fc266d114e7fe030151b14141d54f3e9e9e8e35e4f41f0373",
+    "src/World.Server/wwwroot/resident.html": "4953c6c9e3913990e9d08d38aa287dcd3646f0556d7cc817abe520d509fef6f5",
+    "tests/wilderness_mission_api.py": "af5794e74ec77b9f063ae00f139ec796fc370f3e412b572c9abc2b16dacace5a",
+    "tests/browser/wilderness-resident.mjs": "16baab82644d46b9c5a9f821ce5ae8de69b6290985333410e0334837a177b305",
+    "examples/wilderness/builder.json": "2136192bc8255f6631f30459bcff26f257e2eace95ce9db2c739e5b0be75c4ec",
+    "examples/wilderness/traveler.json": "dd9222c1bc5d5990a32b930e12d0117e0edf342e93b37937845c03f7bc1c0658"
+  },
+  "initialIssues": [
+    "Two new test fixtures omitted the existing intent helper; corrected test setup.",
+    "Legacy browser report summary label changed; restored original text for reports without woodGathered.",
+    "The first aggregate runner ended without a summary after HTTP completion; all browser suites subsequently completed in a new dedicated run."
+  ]
+}

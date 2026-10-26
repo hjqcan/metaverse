@@ -1,0 +1,22 @@
+{
+  "missionId": "continuous-traveler",
+  "objective": "从东岸沿已有公共桥前往西岸林地，不采集、不建造，最后返回自己的起点。",
+  "goals": [
+    {
+      "id": "destination",
+      "label": "西岸林地",
+      "target": [
+        5.1,
+        7.2
+      ]
+    }
+  ],
+  "allowBuild": false,
+  "allowGather": false,
+  "budgets": {
+    "commands": 200,
+    "wood": 0,
+    "seconds": 600,
+    "modelCalls": 1
+  }
+}

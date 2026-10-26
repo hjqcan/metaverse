@@ -1,0 +1,8 @@
+{
+  "missionId": "wilderness-traveler",
+  "objective": "使用前人建成的公共桥走到对岸后返回出生位置，不采集、不建造。",
+  "goals": [{"id": "west-bank", "label": "西岸空地", "target": [1, 1]}],
+  "allowBuild": false,
+  "allowGather": false,
+  "budgets": {"commands": 60, "wood": 0, "seconds": 600, "modelCalls": 1}
+}

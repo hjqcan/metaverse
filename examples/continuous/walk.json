@@ -1,0 +1,22 @@
+{
+  "missionId": "continuous-walker",
+  "objective": "沿自然地形绕开树木，抵达林间目标后返回原起点。",
+  "goals": [
+    {
+      "id": "destination",
+      "label": "林间空地",
+      "target": [
+        8.25,
+        7.35
+      ]
+    }
+  ],
+  "allowBuild": false,
+  "allowGather": false,
+  "budgets": {
+    "commands": 200,
+    "wood": 0,
+    "seconds": 600,
+    "modelCalls": 1
+  }
+}

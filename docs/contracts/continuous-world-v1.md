@@ -1,6 +1,6 @@
 # 连续自然地图 v1（r8，ITER-0014）
 
-实现位置：`src/World.Server/ContinuousWorld.cs`、`WorldService.cs`、`Protocol.cs`；Godot 客户端在 `clients/godot/`。Python Agent 由另一会话接入，此轮不修改它的文件。
+实现位置：`src/World.Server/ContinuousWorld.cs`、`WorldService.cs`、`Protocol.cs`；Godot 客户端在 `clients/godot/`。Python Agent 的导航、采集建桥、原命令恢复与报告见[连续居民契约](continuous-resident-v1.md)。
 
 场景 `wilderness-continuous-v1`，规则 `r8`，存储版本 8；独立预览 `http://127.0.0.1:5089`，数据 `.local/continuous`。旧 r1—r7 数据和接口保留。接口前缀仍为 `/v1/worlds/foundation-01`，身份、命令原 ID、事务回执、资源账本规则沿用原契约。
 

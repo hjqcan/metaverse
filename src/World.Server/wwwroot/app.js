@@ -865,7 +865,11 @@
     if (proposalDraftKey !== nextTextKey) { proposalDraftKey = nextTextKey; try { ui["proposal-text"].value = sessionStorage.getItem(nextTextKey) || ""; } catch { storageError = true; } }
     ui["proposal-compose"].hidden = mode.kind !== "proposal";
     ui["proposal-text"].disabled = Boolean(pending || commandBusy);
-    ui["proposal-count"].textContent = `${Array.from(ui["proposal-text"].value).length} / 160 字`;
+    const proposalTextIssue = consent.textIssue(ui["proposal-text"].value);
+    const proposalTextInvalid = Boolean(ui["proposal-text"].value && proposalTextIssue);
+    ui["proposal-text"].setAttribute("aria-invalid", String(proposalTextInvalid));
+    ui["proposal-count"].dataset.invalid = String(proposalTextInvalid);
+    ui["proposal-count"].textContent = `${Array.from(ui["proposal-text"].value).length} / 160 字${proposalTextInvalid ? ` · ${proposalTextIssue}` : ""}`;
     ui["mosaic-public-note"].textContent = isConsent() ? "本人和无人署名的格子可以直接画；修改他人留下的格子，要先由对方同意。将鼠标停在格子上查看最后作者。" : "向这个世界的居民公开，之后也能被别人修改。将鼠标停在格子上可查看最后作者。";
     ui["mosaic-publish"].textContent = mode.kind === "proposal" ? "提交修改提议" : "发表这次绘制";
     const at = sameCell(observation.self.position, [1, 6]), visit = mode.kind === "proposal" ? unusedProposalVisit() : unusedMosaicVisit();
@@ -878,7 +882,7 @@
         : !at ? "你可以先画草图。走到花园 (1, 6)，在下方记录到访后发表。"
           : !visit ? "先在下方记录一次花园到访；每次到访可以发表一次绘制。"
             : !mosaicDraft ? "选色并点击格子，最多改 8 格。虚线只表示草图，不改变共同画布。"
-              : mode.kind === "proposal" ? `这份草图会发给居民 ${mode.target}。写明修改理由后提交，尚不会改变画布。` : "已到访花园，可以发表。绘制不消耗木材，也不发放奖励。";
+              : mode.kind === "proposal" ? `这份草图会发给居民 ${mode.target}，提交后还需对方决定，尚不会改变画布。${proposalTextIssue}` : "已到访花园，可以发表。绘制不消耗木材，也不发放奖励。";
   }
 
   function unusedProposalVisit() {
@@ -925,11 +929,18 @@
       if (!article) {
         article = make("article", "consent-entry");
         article.dataset.proposer = proposal.authorActorId; article.dataset.command = proposal.commandId;
-        const preview = make("div", "mosaic-grid"), body = make("div", "consent-body");
+        const comparison = make("div", "consent-comparison"), body = make("div", "consent-body");
+        const currentFigure = make("figure", "consent-visual"), proposedFigure = make("figure", "consent-visual");
+        const currentLabel = make("figcaption", ""), previewLabel = make("figcaption", "");
+        const current = make("div", "mosaic-grid consent-current"), preview = make("div", "mosaic-grid consent-preview");
+        const previewNote = make("p", "consent-preview-note");
+        currentFigure.append(currentLabel, current); proposedFigure.append(previewLabel, preview);
+        comparison.append(currentFigure, proposedFigure, previewNote);
         const title = make("h3", ""), meta = make("p", "mosaic-meta"), original = make("p", "consent-copy");
         const state = make("p", "consent-state"), reviewedText = make("p", "consent-copy");
-        body.append(title, meta, original, state, reviewedText);
-        article._inboxView = { preview, title, meta, original, state, reviewedText };
+        const changes = make("ul", "consent-changes");
+        body.append(title, state, meta, original, changes, reviewedText);
+        article._inboxView = { current, currentLabel, preview, previewLabel, previewNote, changes, title, meta, original, state, reviewedText };
         if (proposal.targetActorId === identity.actorId) {
           const actor = identity.actorId, key = reviewDraftKey(actor, proposal.authorActorId, proposal.commandId);
           const form = make("div", "consent-review"), label = make("label", "consent-review-label", "你的决定与理由");
@@ -939,6 +950,7 @@
           try { input.value = sessionStorage.getItem(key) || ""; } catch { storageError = true; }
           input.addEventListener("input", () => { if (identity?.actorId === actor) storageSet(key, input.value || null); renderConsent(); });
           const hint = make("p", "consent-review-hint"); hint.setAttribute("role", "status");
+          hint.id = `${input.id}-hint`; input.setAttribute("aria-describedby", hint.id);
           form.append(label, input, hint);
           for (const decision of ["accept", "reject"]) {
             const button = make("button", `button ${decision === "accept" ? "primary" : "quiet"}`, decision === "accept" ? "同意并改图" : "拒绝，保留原图");
@@ -955,23 +967,41 @@
           }
           body.append(form); Object.assign(article._inboxView, { form, input, hint });
         }
-        article.append(preview, body);
+        article.append(comparison, body);
       }
       const view = article._inboxView, review = proposal.review;
-      mosaic.renderBoard(view.preview, mosaic.emptyCells(), { patch: proposal.patch });
+      const presentation = consent.presentation(proposal, observation.mosaic);
+      view.currentLabel.textContent = `当前画布 · 第 ${observation.mosaic.revision} 版`;
+      view.previewLabel.textContent = presentation.label;
+      view.previewNote.textContent = presentation.note;
+      mosaic.renderBoard(view.current, observation.mosaic.cells);
+      mosaic.renderBoard(view.preview, presentation.cells, { patch: presentation.patch });
+      view.current.setAttribute("aria-label", `${view.currentLabel.textContent}。${view.current.getAttribute("aria-label")}`);
+      view.preview.setAttribute("aria-label", `${presentation.label}。${view.preview.getAttribute("aria-label")}`);
+      for (const cell of view.preview.children)
+        cell.dataset.confirmed = String(review?.decision === "accept" && proposal.patch.some((p) => p.x === Number(cell.dataset.x) && p.y === Number(cell.dataset.y)));
+      view.changes.replaceChildren(...presentation.changes.map((change) => make("li", "", change)));
       view.title.textContent = `居民 ${proposal.authorActorId} → 居民 ${proposal.targetActorId}`;
-      view.meta.textContent = `建议改 ${proposal.patch.length} 格 · 基于画布第 ${proposal.baseRevision} 版 · 提议版本 ${proposal.stateVersion} · 虚线只是提议`;
+      view.meta.textContent = `建议改 ${proposal.patch.length} 格 · 基于画布第 ${proposal.baseRevision} 版 · 提议版本 ${proposal.stateVersion}`;
       view.original.textContent = proposal.text;
-      view.state.textContent = review ? review.decision === "accept" ? `已同意并改图 · 由居民 ${review.authorActorId} 提交 · 画布第 ${review.mosaicEdit.revision} 版` : `已拒绝 · 居民 ${review.authorActorId} 保留了原图` : "等待对方决定 · 共同画布尚未因此改变";
+      view.state.dataset.state = review ? review.decision === "accept" ? "accepted" : "rejected" : presentation.stale ? "stale" : "pending";
+      view.state.textContent = review ? review.decision === "accept" ? `已同意并改图 · 由居民 ${review.authorActorId} 提交 · 画布第 ${review.mosaicEdit.revision} 版` : `已拒绝 · 居民 ${review.authorActorId} 保留了原图`
+        : presentation.stale ? `已过期，尚未决定 · 画布已从第 ${proposal.baseRevision} 版变为第 ${observation.mosaic.revision} 版，只能拒绝，不能同意`
+          : presentation.awaiting ? "等待画布同步 · 暂不能判断是否可同意"
+          : `${proposal.targetActorId === identity.actorId ? "等待你的决定" : `等待居民 ${proposal.targetActorId} 决定`} · 尚未改图`;
       view.reviewedText.hidden = !review; view.reviewedText.textContent = review?.text || "";
       if (view.input) {
         const stale = proposal.baseRevision !== observation.mosaic.revision;
         const available = ready && canAct() && !review && at && latestGardenVisit() && consent.text(view.input.value);
         view.form.hidden = Boolean(review);
         view.input.disabled = Boolean(pending || commandBusy);
+        const reasonIssue = consent.textIssue(view.input.value);
+        view.input.setAttribute("aria-invalid", String(Boolean(view.input.value && reasonIssue)));
         view.form.querySelector('[data-review="accept"]').disabled = !available || stale || !unusedMosaicVisit();
         view.form.querySelector('[data-review="reject"]').disabled = !available;
-        view.hint.textContent = pending ? "正在确认原决定，请等待。" : !ready ? "收件箱尚未更新，审阅已暂停；已输入的理由保留。" : !canAct() ? "世界观察尚未就绪，审阅已暂停。" : !at ? "走到花园并使用上方按钮记录到访后作出决定。" : !latestGardenVisit() ? "先使用上方按钮记录一次花园到访。" : stale ? "画布已经变化：这份提议只能拒绝，不能覆盖新图。" : !unusedMosaicVisit() ? "本次绘制名额已用；同意前需记录新的到访，仍可拒绝。" : `理由 ${Array.from(view.input.value).length} / 160 字。只有同意才会改变图案。`;
+        view.hint.textContent = pending ? "正在确认原决定，请等待。" : !ready ? "收件箱尚未更新，审阅已暂停；已输入的理由保留。" : !canAct() ? "世界观察尚未就绪，审阅已暂停。"
+          : view.input.value && reasonIssue ? `理由 ${Array.from(view.input.value).length} / 160 字。${reasonIssue}`
+            : !at ? "走到花园并使用上方按钮记录到访后作出决定。" : !latestGardenVisit() ? "先使用上方按钮记录一次花园到访。" : stale ? "画布已经变化：这份提议只能拒绝，不能覆盖新图。" : !unusedMosaicVisit() ? "本次绘制名额已用；同意前需记录新的到访，仍可拒绝。" : `理由 ${Array.from(view.input.value).length} / 160 字。${reasonIssue || "只有同意才会改变图案。"}`;
       }
       desired.push(article);
     }

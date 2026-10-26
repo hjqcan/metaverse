@@ -1,0 +1,41 @@
+{
+  "suite": "continuous-resident-chrome",
+  "passed": true,
+  "recordedAtUtc": "2026-10-26T02:13:53.112Z",
+  "actualModelCalls": 0,
+  "browser": "152.0.7977.82",
+  "javascriptErrors": [],
+  "worldRequests": [],
+  "port": 32969,
+  "serviceStopped": true,
+  "tests": [
+    {
+      "name": "actual_continuous_cli_report_and_meter_coordinates",
+      "passed": true
+    },
+    {
+      "name": "fractional_replay_uses_confirmed_position_and_natural_geometry",
+      "passed": true
+    },
+    {
+      "name": "unknown_walk_does_not_turn_target_into_confirmed_position",
+      "passed": true
+    },
+    {
+      "name": "completion_requires_actual_arrival_and_return_trace",
+      "passed": true
+    },
+    {
+      "name": "invalid_continuous_geometry_retains_previous_report",
+      "passed": true
+    },
+    {
+      "name": "actual_bridge_report_has_r8_gather_facts_and_full_footprint",
+      "passed": true
+    },
+    {
+      "name": "390px_continuous_map_readonly_without_overflow",
+      "passed": true
+    }
+  ]
+}
